@@ -1,0 +1,89 @@
+{
+  "domain": "bayer.com",
+  "base_domain": "bayer.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "smtpmx01.bayer.de",
+        "addresses": [
+          "212.64.225.102"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "smtpmx02.bayer.de",
+        "addresses": [
+          "212.64.225.103"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "smtpmx03.bayer.de",
+        "addresses": [
+          "212.64.225.104"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "smtpmx04.bayer.de",
+        "addresses": [
+          "212.64.225.123"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "smtpmx05.bayer.de",
+        "addresses": [
+          "212.64.225.124"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "smtpmx06.bayer.de",
+        "addresses": [
+          "212.64.225.126"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "smtpmx01.bayer.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)",
+      "SSL/TLS is not supported on smtpmx02.bayer.de",
+      "SSL/TLS is not supported on smtpmx03.bayer.de",
+      "SSL/TLS is not supported on smtpmx04.bayer.de",
+      "SSL/TLS is not supported on smtpmx05.bayer.de",
+      "SSL/TLS is not supported on smtpmx06.bayer.de"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

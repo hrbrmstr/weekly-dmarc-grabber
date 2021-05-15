@@ -1,0 +1,103 @@
+{
+  "domain": "shell.com",
+  "base_domain": "shell.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.shell.com",
+      "dns1.shell.com",
+      "dns2.shell.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "shell-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.5.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "shell-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=reject; fo=1; pct=100; ruf=mailto:SITI-Cyberdefence-DMARC-Analysis@shell.com; rua=mailto:SITI-Cyberdefence-DMARC-Analysis@shell.com",
+    "valid": true,
+    "location": "shell.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "SITI-Cyberdefence-DMARC-Analysis@shell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "SITI-Cyberdefence-DMARC-Analysis@shell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

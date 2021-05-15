@@ -1,0 +1,56 @@
+{
+  "domain": "mediclinic.com",
+  "base_domain": "mediclinic.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "titan.is.co.za",
+      "demeter.is.co.za",
+      "jupiter.is.co.za"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-1.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-2.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "za-smtp-inbound-1.mimecast.co.za: Connection timed out",
+      "SSL/TLS is not supported on za-smtp-inbound-2.mimecast.co.za"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.7 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

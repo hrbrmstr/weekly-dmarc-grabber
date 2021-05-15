@@ -1,0 +1,112 @@
+{
+  "domain": "walmart.com",
+  "base_domain": "walmart.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdnswm2.ultradns.net",
+      "pdnswm3.ultradns.org",
+      "pdnswm4.ultradns.org",
+      "pdnswm5.ultradns.info",
+      "pdnswm6.ultradns.co.uk",
+      "a3-64.akam.net",
+      "a22-67.akam.net",
+      "a1-185.akam.net",
+      "a5-65.akam.net",
+      "a10-66.akam.net",
+      "a8-66.akam.net",
+      "pdnswm1.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-000c7201.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.86"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-000c7201.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.86"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-000c7201.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-000c7201.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "walmart.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - All nameservers failed to answer the query emaildefense.proofpoint.com. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

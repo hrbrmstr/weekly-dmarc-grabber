@@ -1,0 +1,88 @@
+{
+  "domain": "expeditors.com",
+  "base_domain": "expeditors.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.expeditors.com",
+      "ns2-auth.sprintlink.net",
+      "ns.expeditors.com",
+      "ns3-auth.sprintlink.net",
+      "ns1-auth.sprintlink.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "expeditors-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.138",
+          "104.47.59.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on expeditors-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:smtp-out.expeditors.com include:spf.protection.outlook.com include:mktomail.com include:_spf.concurcompleat.com include:_spf.elasticemail.com ip4:13.64.235.155 ip4:13.64.239.115 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;aspf=r;adkim=r",
+    "valid": true,
+    "location": "expeditors.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

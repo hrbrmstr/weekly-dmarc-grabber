@@ -1,0 +1,133 @@
+{
+  "domain": "freenet.ag",
+  "base_domain": "freenet.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.roka.net",
+      "ns1.freenet.de",
+      "ns2.roka.net",
+      "ns2.freenet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "esa1.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.253"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "esa2.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.254"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "esa3.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.90"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "esa4.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.91"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on esa1.md.c3s2.iphmx.com",
+      "SSL/TLS is not supported on esa2.md.c3s2.iphmx.com",
+      "SSL/TLS is not supported on esa3.md.c3s2.iphmx.com",
+      "SSL/TLS is not supported on esa4.md.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:f8a6a6bf@mxtoolbox.dmarc-report.com; ruf=mailto:f8a6a6bf@forensics.dmarc-report.com;",
+    "valid": true,
+    "location": "freenet.ag",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f8a6a6bf@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f8a6a6bf@forensics.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

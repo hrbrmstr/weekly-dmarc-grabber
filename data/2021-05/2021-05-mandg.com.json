@@ -1,0 +1,85 @@
+{
+  "domain": "mandg.com",
+  "base_domain": "mandg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.aggregated@mandg.com; ruf=mailto:dmarc.forensics@mandg.com; fo=s; aspf=s;",
+    "valid": true,
+    "location": "mandg.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc.aggregated@mandg.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc.aggregated@mandg.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.forensics@mandg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

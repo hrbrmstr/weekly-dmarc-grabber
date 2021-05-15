@@ -1,0 +1,90 @@
+{
+  "domain": "3m.com",
+  "base_domain": "3m.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pigseye.mmm.com",
+      "ns.3m.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": "v=spf1 include:%{d}.cd.spf-protect.dmp.cisco.com exists:%{i}._i.%{d}._d.espf.dmp.cisco.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.cd.spf-protect.dmp.cisco.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; ri=3600; rua=mailto:3m@rua.dmp.cisco.com; ruf=mailto:3m@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "3m.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3m@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3m@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "domain": "osram.com",
+  "base_domain": "osram.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "osram-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.5.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "osram-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 3.3 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; aspf=r; adkim=r; fo=1; ri=84600; rua=mailto:dmarc@osram.com; ruf=mailto:dmarc@osram.com",
+    "valid": true,
+    "location": "osram.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 84600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@osram.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@osram.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

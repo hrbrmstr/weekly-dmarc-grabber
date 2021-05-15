@@ -1,0 +1,49 @@
+{
+  "domain": "suss.com",
+  "base_domain": "suss.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns22.worldnic.com",
+      "ns21.worldnic.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgar.suss.com",
+        "addresses": [
+          "62.157.168.251"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mailstf.suss.com",
+        "addresses": [
+          "89.106.223.130"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mailgar.suss.com: Connection timed out",
+      "SSL/TLS is not supported on mailstf.suss.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

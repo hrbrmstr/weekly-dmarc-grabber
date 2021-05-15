@@ -1,0 +1,114 @@
+{
+  "domain": "insight.com",
+  "base_domain": "insight.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.insight.com",
+      "ns1.insight.com",
+      "ns2.insight.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3834-14.iphmx.com",
+        "addresses": [
+          "139.138.35.236",
+          "139.138.57.108"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc3834-14.iphmx.com",
+        "addresses": [
+          "139.138.35.236",
+          "139.138.57.108"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc3834-14.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc3834-14.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:insight-enterprises@rua.dmp.cisco.com; ruf=mailto:insight-enterprises@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "insight.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "insight-enterprises@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "insight-enterprises@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

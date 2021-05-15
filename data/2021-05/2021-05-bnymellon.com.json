@@ -1,0 +1,124 @@
+{
+  "domain": "bnymellon.com",
+  "base_domain": "bnymellon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "zoe.ns.cloudflare.com",
+      "seth.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9bny.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.102",
+          "67.219.246.111",
+          "67.219.246.198",
+          "67.219.246.207",
+          "67.219.246.81",
+          "67.219.247.64",
+          "67.219.250.102",
+          "67.219.250.111",
+          "67.219.250.198",
+          "67.219.250.207",
+          "67.219.250.81",
+          "67.219.251.64"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9bnya.us.messagelabs.com",
+        "addresses": [
+          "52.72.52.173",
+          "54.174.78.117"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster9bny.us.messagelabs.com",
+      "STARTTLS is not supported on cluster9bnya.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster9bnya.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:bny-mellon@rua.agari.com; ruf=mailto:bny-mellon@ruf.agari.com",
+    "valid": true,
+    "location": "bnymellon.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bny-mellon@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bny-mellon@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
