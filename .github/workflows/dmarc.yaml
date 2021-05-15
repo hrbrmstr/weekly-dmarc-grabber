@@ -1,0 +1,44 @@
+name: Check DMARC status of a list of domains
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '27 5 * * *'
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+
+    - name: Configure pip caching
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install Python dependencies
+      run: pip install checkdmarc
+
+    - name: Gather DMARC data
+      run: |-
+        outdir=$(date +'%Y-%m')
+        datestamp=$(date +'%Y-%m')
+        if [ ! -d "data/${outdir}" ] ; then mkdir -p "data/${outdir}"; fi
+        xargs --arg-file=input/doms -I@ bash -c "checkdmarc -f=JSON -o=data/${outdir}/${datestamp}-@.json @"
+
+    - name: Commit and push if it changed
+      run: |-
+        git config user.name "Automated"
+        git config user.email "actions@users.noreply.github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -m "Latest data: ${timestamp}" || exit 0
+        git push
