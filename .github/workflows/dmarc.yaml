@@ -9,6 +9,7 @@ on:
 jobs:
   scheduled:
     runs-on: ubuntu-latest
+
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -29,8 +30,8 @@ jobs:
 
     - name: Setup R
       uses: r-lib/actions/setup-r@v1
-        with:
-          r-version: "4.0.5"
+      with:
+        r-version: "4.0.5"
 
     - name: Gather DMARC data
       run: |-
