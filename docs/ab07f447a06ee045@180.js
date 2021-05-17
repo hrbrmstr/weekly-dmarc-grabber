@@ -106,7 +106,7 @@ md`# DMARC Processor Commonalities`
 900
 )});
   main.variable(observer("grph")).define("grph", ["d3"], function(d3){return(
-d3.json("https://hrbrmstr.github.io/gha-test/processors.json")
+d3.json("https://hrbrmstr.github.io/weekly-dmarc-grabber/processors.json")
 )});
   main.variable(observer("d3")).define("d3", ["require"], function(require){return(
 require("d3")
