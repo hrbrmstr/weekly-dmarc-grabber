@@ -14,6 +14,9 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
+    - name: Install Ubuntu dependencies
+      run: sudo apt install -y libcurl4-openssl-dev libgmp-dev libxml2-dev libglpk-dev
+
     - name: Setup Python
       uses: actions/setup-python@v2
 
@@ -35,7 +38,7 @@ jobs:
         http-user-agent: "R/4.0.5 R (4.0.5 x86_64-pc-linux-gnu x86_64 linux-gnu)"
 
     - name: Install packages
-      run: R -e 'install.packages(c("igraph", "urltools", "stringi", "jsonlite", "d3r", "tidyverse"), Ncpus=4, repos="https://packagemanager.rstudio.com/all/__linux__/focal/latest")'
+      run: R -e 'install.packages(c("igraph", "urltools", "stringi", "jsonlite", "d3r", "tibble", "purrr", "tidyr", "dplyr"), Ncpus=4, repos="https://packagemanager.rstudio.com/all/__linux__/focal/latest")'
 
     - name: Gather DMARC data
       run: |-

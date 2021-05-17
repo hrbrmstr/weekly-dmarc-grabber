@@ -3,7 +3,10 @@ library(urltools, include.only = "suffix_extract")
 library(stringi, include.only = "stri_match_first_regex")
 library(jsonlite, include.only = "fromJSON")
 library(d3r, include.only = "d3_igraph")
-library(tidyverse)
+library(tibble)
+library(purrr)
+library(tidyr)
+library(dplyr)
 
 apex_domain <- function(fqdn) {
   .x <- suffix_extract(fqdn)[, c("domain", "suffix")]
