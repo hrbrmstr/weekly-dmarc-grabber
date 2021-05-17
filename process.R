@@ -1,3 +1,5 @@
+.libPaths("cache")
+
 library(igraph, include.only = c("graph_from_data_frame", "degree", "V", "V<-"))
 library(urltools, include.only = "suffix_extract")
 library(stringi, include.only = "stri_match_first_regex")
