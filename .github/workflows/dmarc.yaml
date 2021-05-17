@@ -1,7 +1,6 @@
 name: Check DMARC status of a list of domains
 
 on:
-  push:
   workflow_dispatch:
   schedule:
     - cron: '27 5 * * 4'
@@ -42,12 +41,11 @@ jobs:
 
     - name: Gather DMARC data
       run: |-
-        ls
-        # outdir="$(date +'%Y-%m')/$(date +'%Y-%m-%d')"
-        # datestamp=$(date +'%Y-%m-%d')
-        # echo "data/${outdir}/${datestamp}" > latest
-        # if [ ! -d "data/${outdir}" ] ; then mkdir -p "data/${outdir}"; fi
-        # xargs --max-procs=0 --arg-file=input/doms -I@ bash -c "checkdmarc -f=JSON -o=data/${outdir}/${datestamp}-@.json @"
+        outdir="$(date +'%Y-%m')/$(date +'%Y-%m-%d')"
+        datestamp=$(date +'%Y-%m-%d')
+        echo "data/${outdir}/${datestamp}" > latest
+        if [ ! -d "data/${outdir}" ] ; then mkdir -p "data/${outdir}"; fi
+        xargs --max-procs=0 --arg-file=input/doms -I@ bash -c "checkdmarc -f=JSON -o=data/${outdir}/${datestamp}-@.json @"
         R --silent --no-echo --file=process.R
 
     - name: Commit and push if it changed
