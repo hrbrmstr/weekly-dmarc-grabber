@@ -23,7 +23,7 @@ jobs:
         http-user-agent: "R/4.0.5 R (4.0.5 x86_64-pc-linux-gnu x86_64 linux-gnu)"
 
     - name: Process DMARC Data
-       R --silent --no-echo --file=process.R
+      run: R --silent --no-echo --file=process.R
 
     - name: Commit and push if it changed
       run: |-
