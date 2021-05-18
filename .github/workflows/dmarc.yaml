@@ -30,25 +30,13 @@ jobs:
     - name: Install Python dependencies
       run: pip install checkdmarc
 
-        # name: Setup R
-      # uses: r-lib/actions/setup-r@v1
-        # with:
-        #   r-version: "4.0.5"
-    #   http-user-agent: "R/4.0.5 R (4.0.5 x86_64-pc-linux-gnu x86_64 linux-gnu)"
-
-    # - name: Install packages
-    #   run: R -e 'install.packages(c("igraph", "urltools", "stringi", "jsonlite", "d3r", "tibble", "purrr", "tidyr", "dplyr"), Ncpus=4, repos="https://packagemanager.rstudio.com/all/__linux__/focal/latest")'
-
     - name: Gather DMARC data
       run: |-
         outdir="$(date +'%Y-%m')/$(date +'%Y-%m-%d')"
         datestamp=$(date +'%Y-%m-%d')
-        echo "data/${outdir}/${datestamp}" > latest
+        echo "data/${outdir}" > latest
         if [ ! -d "data/${outdir}" ] ; then mkdir -p "data/${outdir}"; fi
         xargs --max-procs=0 --arg-file=input/doms -I@ bash -c "checkdmarc -f=JSON -o=data/${outdir}/${datestamp}-@.json @"
-
-    #- name: Process DMARC Data
-    #    R --silent --no-echo --file=process.R
 
     - name: Commit and push if it changed
       run: |-
