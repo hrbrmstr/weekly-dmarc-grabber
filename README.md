@@ -1,3 +1,5 @@
+[![Check DMARC status of a list of domains](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml/badge.svg)](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml)
+
 # Weekly DMARC Grabber
 
 ![](https://rud.is/dl/dmarc-rua-network.png)
