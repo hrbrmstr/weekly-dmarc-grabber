@@ -1,0 +1,136 @@
+{
+  "domain": "jti.co.jp",
+  "base_domain": "jti.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.jtnet.ad.jp",
+      "ns.jtnet.ad.jp",
+      "ns3.jtnet.ad.jp",
+      "ns1.jtnet.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "jti-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.92.36",
+          "104.47.93.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on jti-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:168.245.116.88 ip4:149.72.247.208 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 ip4:168.245.116.88 ip4:149.72.247.208 -all"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "168.245.116.88",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.72.247.208",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:1mpftc7i@ag.eu.dmarcian.com,mailto:1mpftc7i@ag.eu.dmarcadvisor.com; ruf=mailto:1mpftc7i@fr.eu.dmarcian.com,mailto:1mpftc7i@fr.eu.dmarcadvisor.com; fo=1;",
+    "valid": true,
+    "location": "jti.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1mpftc7i@ag.eu.dmarcian.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "1mpftc7i@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1mpftc7i@fr.eu.dmarcian.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "1mpftc7i@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

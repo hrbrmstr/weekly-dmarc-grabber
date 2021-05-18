@@ -1,0 +1,77 @@
+{
+  "domain": "secunet.com",
+  "base_domain": "secunet.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.ns.secunet.com",
+      "a.ns.secunet.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "a.mx.secunet.com",
+        "addresses": [
+          "62.96.220.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "b.mx.secunet.com",
+        "addresses": [
+          "62.96.220.37"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on a.mx.secunet.com",
+      "SSL/TLS is not supported on b.mx.secunet.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:62.96.220.36 ip4:62.96.220.37 ip4:62.96.220.44 ip4:62.96.220.49 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "62.96.220.36",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.37",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.49",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

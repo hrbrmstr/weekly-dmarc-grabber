@@ -1,0 +1,67 @@
+{
+  "domain": "osakagas.co.jp",
+  "base_domain": "osakagas.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns21.inetvass.com",
+      "ns22.inetvass.com",
+      "ns01.osakagas.co.jp",
+      "ns03.osakagas.co.jp",
+      "ns02.osakagas.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.106",
+          "67.219.246.108",
+          "67.219.246.192",
+          "67.219.246.202",
+          "67.219.246.204",
+          "67.219.246.96",
+          "67.219.250.106",
+          "67.219.250.108",
+          "67.219.250.192",
+          "67.219.250.202",
+          "67.219.250.204",
+          "67.219.250.96"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "34.232.7.110",
+          "50.16.59.252",
+          "54.243.155.31"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "STARTTLS is not supported on cluster1a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.osakagas.co.jp include:spf2.osakagas.co.jp include:spf3.osakagas.co.jp include:spf4.osakagas.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query salesforce.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

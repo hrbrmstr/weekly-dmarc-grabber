@@ -1,0 +1,115 @@
+{
+  "domain": "ecotel.de",
+  "base_domain": "ecotel.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.ns.ecotel.net",
+      "x.ns.ecotel.net",
+      "c.ns.ecotel.net",
+      "a.ns.ecotel.net",
+      "y.ns.ecotel.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.ecotel.de",
+        "addresses": [
+          "62.26.210.98",
+          "62.26.210.99"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx.ecotel.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx.ecotel.de'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:62.26.210.0/24 ip4:62.27.91.110/32 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "62.26.210.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.27.91.110/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@ecotel.de; sp=none; fo=1; adkim=r; aspf=r",
+    "valid": true,
+    "location": "ecotel.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@ecotel.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

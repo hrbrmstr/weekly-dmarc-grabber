@@ -1,0 +1,64 @@
+{
+  "domain": "saisoncard.co.jp",
+  "base_domain": "saisoncard.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.dhs.jtidc.jp",
+      "ns2.dhs.jtidc.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.194",
+          "67.219.246.195",
+          "67.219.246.82",
+          "67.219.246.98",
+          "67.219.246.99",
+          "67.219.247.65",
+          "67.219.250.194",
+          "67.219.250.195",
+          "67.219.250.82",
+          "67.219.250.98",
+          "67.219.250.99",
+          "67.219.251.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "34.232.7.110",
+          "50.16.59.252",
+          "54.243.155.31"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "STARTTLS is not supported on cluster5a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.saisoncard.co.jp include:smp.ne.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.saisoncard.co.jp\n\nv=spf1 include:spf.saisoncard.co.jp ~all"
+  }
+}
