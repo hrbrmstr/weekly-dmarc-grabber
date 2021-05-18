@@ -1,4 +1,4 @@
-name: Check DMARC status of a list of domains
+name: Visualize latest DMARC run
 
 on:
   workflow_dispatch:
@@ -18,9 +18,9 @@ jobs:
 
     - name: Setup R
       uses: r-lib/actions/setup-r@v1
-        with:
-          r-version: "4.0.5"
-          http-user-agent: "R/4.0.5 R (4.0.5 x86_64-pc-linux-gnu x86_64 linux-gnu)"
+      with:
+        r-version: "4.0.5"
+        http-user-agent: "R/4.0.5 R (4.0.5 x86_64-pc-linux-gnu x86_64 linux-gnu)"
 
     - name: Process DMARC Data
        R --silent --no-echo --file=process.R
@@ -31,5 +31,5 @@ jobs:
         git config user.email "actions@users.noreply.github.com"
         git add -A
         timestamp=$(date -u)
-        git commit -m "Latest data: ${timestamp}" || exit 0
+        git commit -m "Update vis: ${timestamp}" || exit 0
         git push
