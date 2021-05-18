@@ -46,7 +46,9 @@ jobs:
         echo "data/${outdir}/${datestamp}" > latest
         if [ ! -d "data/${outdir}" ] ; then mkdir -p "data/${outdir}"; fi
         xargs --max-procs=0 --arg-file=input/doms -I@ bash -c "checkdmarc -f=JSON -o=data/${outdir}/${datestamp}-@.json @"
-        R --silent --no-echo --file=process.R
+
+    #- name: Process DMARC Data
+    #    R --silent --no-echo --file=process.R
 
     - name: Commit and push if it changed
       run: |-
