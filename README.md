@@ -1,4 +1,4 @@
-[![Check DMARC status of a list of domains](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml/badge.svg)](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml)
+[![Check DMARC status of a list of domains](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml/badge.svg)](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/dmarc.yaml) [![Visualize latest DMARC run](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/vis.yaml/badge.svg)](https://github.com/hrbrmstr/weekly-dmarc-grabber/actions/workflows/vis.yaml)
 
 # Weekly DMARC Grabber
 
