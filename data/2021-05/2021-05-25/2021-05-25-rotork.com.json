@@ -1,0 +1,209 @@
+{
+  "domain": "rotork.com",
+  "base_domain": "rotork.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns51.constellix.net",
+      "ns41.constellix.net",
+      "ns21.constellix.com",
+      "ns61.constellix.net",
+      "ns31.constellix.com",
+      "ns11.constellix.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=mail.rotork.com",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "mail.rotork.com",
+        "record": "v=spf1 include:eu._netblocks.mimecast.com ~all",
+        "dns_lookups": 1,
+        "parsed": {
+          "pass": [],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "eu._netblocks.mimecast.com",
+              "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ~all",
+              "dns_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "195.130.217.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "91.220.42.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "146.101.78.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "207.82.80.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.167.81.0/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "193.7.207.0/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.167.75.0/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "185.58.85.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "185.58.86.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "193.7.206.0/25",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "softfail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:f8058725723a586@rep.dmarcanalyzer.com; ruf=mailto:f8058725723a586@for.dmarcanalyzer.com; fo=1; ",
+    "valid": true,
+    "location": "rotork.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f8058725723a586@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f8058725723a586@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

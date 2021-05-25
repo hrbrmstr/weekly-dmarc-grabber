@@ -1,0 +1,40 @@
+{
+  "domain": "alstria.de",
+  "base_domain": "alstria.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "josh.ns.cloudflare.com",
+      "adel.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "alstria-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.10.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on alstria-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.alstria.de\n\nv=spf1 a mx ip4:2.207.160.17  include:spf.protection.outlook.com include:servers.mcsv.net -all"
+  }
+}

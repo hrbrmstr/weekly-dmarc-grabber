@@ -1,0 +1,50 @@
+{
+  "domain": "chugai-pharm.co.jp",
+  "base_domain": "chugai-pharm.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns8.chugai-pharm.co.jp",
+      "ns7.chugai-pharm.co.jp",
+      "tokio.mind.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ns.chugai-pharm.co.jp",
+        "addresses": [
+          "202.228.50.64"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "ns6.chugai-pharm.co.jp",
+        "addresses": [
+          "202.228.50.65"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "ns.chugai-pharm.co.jp: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1129)",
+      "ns6.chugai-pharm.co.jp: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query chugai-pharm.co.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

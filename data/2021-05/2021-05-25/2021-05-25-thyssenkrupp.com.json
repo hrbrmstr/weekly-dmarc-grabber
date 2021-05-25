@@ -1,0 +1,103 @@
+{
+  "domain": "thyssenkrupp.com",
+  "base_domain": "thyssenkrupp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.inwx.de",
+      "dekre01al0002.tkagit.com",
+      "dekre01al0003.tkagit.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxtls.expurgate.net",
+        "addresses": [
+          "194.145.224.120",
+          "194.145.224.121",
+          "194.145.224.122",
+          "194.145.224.123",
+          "194.145.224.124",
+          "194.145.224.125",
+          "195.190.135.120",
+          "195.190.135.121",
+          "195.190.135.122",
+          "195.190.135.123",
+          "195.190.135.124",
+          "195.190.135.125"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxtls.expurgate.net"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query thyssenkrupp.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:rua.dmarc@thyssenkrupp.com;adkim=r;aspf=r",
+    "valid": true,
+    "location": "thyssenkrupp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "rua.dmarc@thyssenkrupp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

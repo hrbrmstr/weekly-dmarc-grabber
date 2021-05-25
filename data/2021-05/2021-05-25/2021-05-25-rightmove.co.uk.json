@@ -1,0 +1,124 @@
+{
+  "domain": "rightmove.co.uk",
+  "base_domain": "rightmove.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.rightmove.co.uk",
+      "ns2.rightmove.co.uk",
+      "ns3.rightmove.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "rightmove-co-uk.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.8.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "sophos.rightmove.co.uk",
+        "addresses": [
+          "87.127.202.248"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "sophos01.rightmove.co.uk",
+        "addresses": [
+          "188.39.113.149"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on rightmove-co-uk.mail.protection.outlook.com",
+      "sophos.rightmove.co.uk: Connection timed out",
+      "sophos01.rightmove.co.uk: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:188.39.80.45/32 ip4:188.39.113.149/32 ip4:185.220.163.199/32 ip4:185.220.163.200/32 ip4:54.229.2.165/32 ip4:52.30.130.201/32 include:silverpop.com include:spf.protection.outlook.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query silverpop.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:fa041efaabf2236@rep.dmarcanalyzer.com; ruf=mailto:fa041efaabf2236@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "rightmove.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fa041efaabf2236@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fa041efaabf2236@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

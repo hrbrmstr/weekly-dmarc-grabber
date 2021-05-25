@@ -1,0 +1,110 @@
+{
+  "domain": "cancom.de",
+  "base_domain": "cancom.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-06.azure-dns.info",
+      "ns3-06.azure-dns.org",
+      "ns2-06.azure-dns.net",
+      "ns1-06.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.cancom.de",
+        "addresses": [
+          "193.158.85.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.cancom.de",
+        "addresses": [
+          "193.158.85.52"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 193.158.85.53 is fax.cancom.de, but the A/AAAA DNS records for fax.cancom.de do not resolve to 193.158.85.53",
+      "SSL/TLS is not supported on mx1.cancom.de",
+      "SSL/TLS is not supported on mx2.cancom.de"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-rua@cancom.de; ruf=mailto:dmarc-ruf@cancom.de.net; fo=1; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400; sp=none",
+    "valid": true,
+    "location": "cancom.de",
+    "warnings": [
+      "cancom.de.net does not indicate that it accepts DMARC reports about cancom.de - Authorization record not found: cancom.de._report._dmarc.cancom.de.net IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@cancom.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc-ruf@cancom.de.net",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "domain": "eversource.com",
+  "base_domain": "eversource.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nubdns2.nu.com",
+      "dnsb.nstar.com",
+      "nubdns3.nu.com",
+      "dnsa.nstar.com",
+      "nuwdns1.nu.com",
+      "nubdns1.nu.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0018e401.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0018e401.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.114"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0a-0018e401.pphosted.com",
+        "addresses": [
+          "67.231.149.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0b-0018e401.pphosted.com",
+        "addresses": [
+          "67.231.157.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0018e401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0018e401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mx0a-0018e401.pphosted.com",
+      "SSL/TLS is not supported on mx0b-0018e401.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query eversource.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:security_dmarc_rua@eversource.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:security_dmarc_ruf@eversource.com;",
+    "valid": true,
+    "location": "eversource.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:security_dmarc_rua@eversource.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:security_dmarc_ruf@eversource.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "domain": "gateway-re.de",
+  "base_domain": "gateway-re.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.agenturserver.co",
+      "ns01.agenturserver.it",
+      "ns01.agenturserver.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01a.skyfillers.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx01b.skyfillers.com",
+        "addresses": [
+          "94.100.134.10"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx01c.skyfillers.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "mx01d.skyfillers.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01a.skyfillers.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx01a.skyfillers.com'. (_ssl.c:1129)",
+      "mx01b.skyfillers.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx01b.skyfillers.com'. (_ssl.c:1129)",
+      "mx01c.skyfillers.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx01c.skyfillers.com'. (_ssl.c:1129)",
+      "mx01d.skyfillers.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx01d.skyfillers.com'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:83.246.65.0/24 ip4:217.64.175.0/24 ip4:94.100.128.0/20 include:mailing.eqs.com ?all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "88.217.133.35",
+          "mechanism": "a"
+        },
+        {
+          "value": "mx01a.skyfillers.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx01b.skyfillers.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx01c.skyfillers.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx01d.skyfillers.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "83.246.65.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.64.175.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "94.100.128.0/20",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "domain": "aramark.com",
+  "base_domain": "aramark.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "surge.aramark.com",
+      "ns7.dnsmadeeasy.com",
+      "ns6.dnsmadeeasy.com",
+      "ns5.dnsmadeeasy.com",
+      "burst.aramark.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "aramark-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "aramark-com.mail.protection.outlook.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aramark-com.mail.protection.outlook.com",
+      "Hostname aramark-com.mail.protection.outlook.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:aramark@rua.agari.com; ruf=mailto:aramark@ruf.agari.com",
+    "valid": true,
+    "location": "aramark.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aramark@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aramark@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

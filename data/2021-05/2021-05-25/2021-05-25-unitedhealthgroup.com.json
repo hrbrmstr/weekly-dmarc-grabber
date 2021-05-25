@@ -1,0 +1,465 @@
+{
+  "domain": "unitedhealthgroup.com",
+  "base_domain": "unitedhealthgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns4.ultradns.org",
+      "edns4.ultradns.biz",
+      "edns4.ultradns.com",
+      "edns4.ultradns.net",
+      "epla1.corpnamesvcs.com",
+      "epla2.corpnamesvcs.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.corpmailsvcs.com",
+        "addresses": [
+          "198.203.174.9"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail10.corpmailsvcs.com",
+        "addresses": [
+          "198.203.176.100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail11.corpmailsvcs.com",
+        "addresses": [
+          "198.203.176.101"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail128.corpmailsvcs.com",
+        "addresses": [
+          "149.111.143.32"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail131.corpmailsvcs.com",
+        "addresses": [
+          "149.111.143.38"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail17.corpmailsvcs.com",
+        "addresses": [
+          "149.111.143.49"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.corpmailsvcs.com",
+        "addresses": [
+          "198.203.174.10"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail20.corpmailsvcs.com",
+        "addresses": [
+          "149.111.205.54"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail21.corpmailsvcs.com",
+        "addresses": [
+          "149.111.205.57"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail27.corpmailsvcs.com",
+        "addresses": [
+          "149.111.205.104"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail30.corpmailsvcs.com",
+        "addresses": [
+          "149.111.205.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail33.corpmailsvcs.com",
+        "addresses": [
+          "149.111.205.86"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail1.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail10.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail11.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail128.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail131.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail17.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail2.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail20.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail21.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail27.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail30.corpmailsvcs.com",
+      "SSL/TLS is not supported on mail33.corpmailsvcs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:res.cisco.com include:_spfv4.corpmailsvcs.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "res.cisco.com",
+          "record": "v=spf1 mx:res.cisco.com exists:%{i}.spf.res.cisco.com -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "esa1.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa2.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa3.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa4.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "%{i}.spf.res.cisco.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spfv4.corpmailsvcs.com",
+          "record": "v=spf1 include:_spfv4fw.corpmailsvcs.com include:_spfv4corpms.corpmailsvcs.com include:_spfv4rnh.corpmailsvcs.com include:_spfv4comm.corpmailsvcs.com ~all",
+          "dns_lookups": 4,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spfv4fw.corpmailsvcs.com",
+                "record": "v=spf1 ip4:198.203.175.175 ip4:198.203.177.177 ip4:198.203.181.181 ip4:198.203.175.135 ip4:149.111.210.33 ip4:168.183.135.33 ip4:149.111.155.33 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.203.175.175",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.177.177",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.181.181",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.175.135",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.210.33",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "168.183.135.33",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.155.33",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spfv4corpms.corpmailsvcs.com",
+                "record": "v=spf1 ip4:198.203.174.9 ip4:198.203.174.10 ip4:198.203.174.11 ip4:198.203.176.100 ip4:198.203.176.101 ip4:149.111.205.54 ip4:149.111.205.57 ip4:149.111.205.65 ip4:149.111.143.32 ip4:149.111.205.104 ip4:149.111.143.38 ip4:149.111.205.86 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.203.174.9",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.174.10",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.174.11",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.176.100",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.203.176.101",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.54",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.57",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.65",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.143.32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.104",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.143.38",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.86",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spfv4rnh.corpmailsvcs.com",
+                "record": "v=spf1 ip4:149.111.205.30 ip4:149.111.205.35 ip4:149.111.205.75 ip4:149.111.141.231 ip4:149.111.141.241 ip4:149.111.143.21 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "149.111.205.30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.35",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.75",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.141.231",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.141.241",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.143.21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spfv4comm.corpmailsvcs.com",
+                "record": "v=spf1 ip4:149.111.143.24 ip4:149.111.205.78 ip4:149.111.141.233 ip4:149.111.205.33 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "149.111.143.24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.78",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.141.233",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.111.205.33",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; ri=3600; rua=mailto:unitedhealthgroup@rua.agari.com;ruf=mailto:unitedhealthgroup@ruf.agari.com",
+    "valid": true,
+    "location": "unitedhealthgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "unitedhealthgroup@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "unitedhealthgroup@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}
