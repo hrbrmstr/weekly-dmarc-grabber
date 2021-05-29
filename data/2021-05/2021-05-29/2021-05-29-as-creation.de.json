@@ -1,0 +1,71 @@
+{
+  "domain": "as-creation.de",
+  "base_domain": "as-creation.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "anycast1.irondns.net",
+      "ns17.knipp.net",
+      "ns3.knipp.de",
+      "ns2.knipp.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.as-creation.de",
+        "addresses": [
+          "195.145.210.141"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mail2.as-creation.de a:common.as-creation-hosting.de ip4:195.253.76.111 ip4:109.232.171.64 -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.as-creation.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "195.253.76.111",
+          "mechanism": "a"
+        },
+        {
+          "value": "109.232.171.64",
+          "mechanism": "a"
+        },
+        {
+          "value": "195.253.76.111",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "109.232.171.64",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

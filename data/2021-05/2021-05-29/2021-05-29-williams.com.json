@@ -1,0 +1,103 @@
+{
+  "domain": "williams.com",
+  "base_domain": "williams.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.williams.com",
+      "ns1.williams.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00188a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00188a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.118"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00188a01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00188a01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@williams.com; pct=5",
+    "valid": true,
+    "location": "williams.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@williams.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 5,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

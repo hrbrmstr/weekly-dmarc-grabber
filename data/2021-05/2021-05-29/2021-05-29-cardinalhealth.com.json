@@ -1,0 +1,115 @@
+{
+  "domain": "cardinalhealth.com",
+  "base_domain": "cardinalhealth.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns8.cardinalhealth.com",
+      "ns7.cardinalhealth.com",
+      "ns6.cardinalhealth.com",
+      "ns5.cardinalhealth.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2781-64.iphmx.com",
+        "addresses": [
+          "216.71.143.52",
+          "216.71.148.142"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2781-64.iphmx.com",
+        "addresses": [
+          "216.71.143.52",
+          "216.71.148.142"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc2781-64.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc2781-64.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query cardinalhealth.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@cardinalhealth.com; ruf=mailto:dmarcreports@cardinalhealth.com",
+    "valid": true,
+    "location": "cardinalhealth.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@cardinalhealth.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@cardinalhealth.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

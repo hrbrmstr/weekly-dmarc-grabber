@@ -1,0 +1,394 @@
+{
+  "domain": "netwealth.com.au",
+  "base_domain": "netwealth.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1764.awsdns-28.co.uk",
+      "ns-1526.awsdns-62.org",
+      "ns-635.awsdns-15.net",
+      "ns-272.awsdns-34.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:nwawsmon01.netwealth.com.au ip4:180.189.28.109 ip4:203.134.124.34 ip4:129.33.239.215 include:au._netblocks.mimecast.com include:spf.netwealth.com.au -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "52.63.36.110",
+          "mechanism": "a"
+        },
+        {
+          "value": "180.189.28.109",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.134.124.34",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "129.33.239.215",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "au._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:103.13.69.0/24 ip4:124.47.150.0/24 ip4:124.47.189.0/24 ip4:103.96.23.0/24 ip4:180.189.28.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.13.69.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.150.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.189.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.23.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.189.28.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.netwealth.com.au",
+          "record": "v=spf1 ip4:52.63.36.110 ip4:203.134.124.34 ip4:110.175.218.70 ip4:205.201.128.0/20 ip4:198.2.128.0/18 a:mail.formsexpress.com.au a:iguana2.com include:mail.zendesk.com include:appiancloud.com include:amazonses.com include:spf2.netwealth.com.au -all",
+          "dns_lookups": 6,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.63.36.110",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.134.124.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "110.175.218.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "119.17.169.170",
+                "mechanism": "a"
+              },
+              {
+                "value": "103.1.184.60",
+                "mechanism": "a"
+              },
+              {
+                "value": "207.148.80.216",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "mail.zendesk.com",
+                "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.151.192.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.12.80.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "188.172.128.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.161.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.198.0.0/18",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "appiancloud.com",
+                "record": "v=spf1 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf2.netwealth.com.au",
+                "record": "v=spf1 ip4:103.113.169.30 ip4:54.206.25.87 ip4:54.206.25.97 ip4:52.64.142.168 ip4:54.252.186.129 ip4:103.113.169.42 ip4:74.121.51.139 ip4:203.32.185.0/24 ip4:103.3.196.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.113.169.30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.206.25.87",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.206.25.97",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.64.142.168",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.252.186.129",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.113.169.42",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.121.51.139",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.32.185.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.3.196.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:DMARC_Info@netwealth.com.au; ruf=mailto:DMARC_Info@netwealth.com.au; fo=1; adkim=r; aspf=r; pct=100; rf=afrf; ri=3600; sp=reject",
+    "valid": true,
+    "location": "netwealth.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_Info@netwealth.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_Info@netwealth.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "hhla.de",
+  "base_domain": "hhla.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.net",
+      "ns.udag.de",
+      "ns.udag.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mail1.hhla.de",
+        "addresses": [
+          "194.169.216.167"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "mail2.hhla.de",
+        "addresses": [
+          "194.169.216.168"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.hhla.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)",
+      "mail2.hhla.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query hhla.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

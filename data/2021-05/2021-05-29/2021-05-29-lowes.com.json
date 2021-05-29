@@ -1,0 +1,117 @@
+{
+  "domain": "lowes.com",
+  "base_domain": "lowes.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usc5.akam.net",
+      "use4.akam.net",
+      "ns1-216.akam.net",
+      "use2.akam.net",
+      "eur2.akam.net",
+      "ns1-42.akam.net",
+      "asia1.akam.net",
+      "use1.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00308801.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.82"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00308801.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.82"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00308801.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00308801.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:lowes@rua.agari.com; ruf=mailto:lowes@ruf.agari.com",
+    "valid": true,
+    "location": "lowes.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "lowes@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "lowes@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

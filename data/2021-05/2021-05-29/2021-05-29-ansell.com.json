@@ -1,0 +1,115 @@
+{
+  "domain": "ansell.com",
+  "base_domain": "ansell.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-03.azure-dns.info",
+      "ns3-03.azure-dns.org",
+      "ns2-03.azure-dns.net",
+      "ns1-03.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "esa1.ansell.iphmx.com",
+        "addresses": [
+          "68.232.146.112"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "esa2.ansell.iphmx.com",
+        "addresses": [
+          "68.232.148.152"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on esa1.ansell.iphmx.com",
+      "SSL/TLS is not supported on esa1.ansell.iphmx.com",
+      "STARTTLS is not supported on esa2.ansell.iphmx.com",
+      "SSL/TLS is not supported on esa2.ansell.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc.agr@ansell.com; ruf=mailto:dmarc.ifr@ansell.com; fo=1;",
+    "valid": true,
+    "location": "ansell.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.agr@ansell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.ifr@ansell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

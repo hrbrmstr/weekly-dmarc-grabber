@@ -1,0 +1,105 @@
+{
+  "domain": "newyorklife.com",
+  "base_domain": "newyorklife.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.customer.level3.net",
+      "dbru.br.ns.els-gms.att.net",
+      "dmtu.mt.ns.els-gms.att.net",
+      "ns3.level3.net",
+      "ns4.level3.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp.sd.newyorklife.com",
+        "addresses": [
+          "206.210.19.232"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 206.210.19.232 is smtp.sd.newyorklife.com, but the A/AAAA DNS records for smtp.sd.newyorklife.com do not resolve to 206.210.19.232",
+      "SSL/TLS is not supported on smtp.sd.newyorklife.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com; fo=1",
+    "valid": true,
+    "location": "newyorklife.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

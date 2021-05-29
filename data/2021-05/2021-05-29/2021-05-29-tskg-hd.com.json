@@ -1,0 +1,181 @@
+{
+  "domain": "tskg-hd.com",
+  "base_domain": "tskg-hd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.s-idc.net",
+      "ns2.s-idc.net",
+      "ns1.s-idc.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.82",
+          "67.219.246.98",
+          "67.219.246.99",
+          "67.219.250.194",
+          "67.219.250.195",
+          "67.219.250.82",
+          "67.219.250.98",
+          "67.219.250.99",
+          "67.219.251.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 8,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "34.194.215.64",
+          "52.20.164.34",
+          "52.72.52.173"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "STARTTLS is not supported on cluster5a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.15.39.39 include:spf01.email.s-idc.net ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.15.39.39",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf01.email.s-idc.net",
+          "record": "v=spf1 include:spf02.email.s-idc.net include:spf01.nmail.s-idc.net ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf02.email.s-idc.net",
+                "record": "v=spf1 ip4:58.89.214.200/29 ip4:58.89.214.224/28 ip4:61.208.133.64/29 ip4:210.160.40.34 ip4:210.164.31.112/28 ip4:58.89.214.216/29 ip4:210.161.5.128/28 ip4:211.123.209.24 ip4:58.89.214.152/29 ip4:58.89.214.245 ip4:58.89.214.246 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "58.89.214.200/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.224/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.208.133.64/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.160.40.34",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.164.31.112/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.216/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.161.5.128/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "211.123.209.24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.152/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.245",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.246",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf01.nmail.s-idc.net",
+                "record": "v=spf1 ip4:210.162.150.32/27 ip4:210.161.178.0/28 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "210.162.150.32/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.161.178.0/28",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

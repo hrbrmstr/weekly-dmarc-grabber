@@ -1,0 +1,196 @@
+{
+  "domain": "shi.co.jp",
+  "base_domain": "shi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-tk012.ocn.ad.jp",
+      "ns.shi.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.82",
+          "67.219.246.98",
+          "67.219.246.99",
+          "67.219.250.194",
+          "67.219.250.195",
+          "67.219.250.82",
+          "67.219.250.98",
+          "67.219.250.99",
+          "67.219.251.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "34.194.215.64",
+          "52.20.164.34",
+          "52.72.52.173"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "STARTTLS is not supported on cluster5a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.shi.co.jp include:spf.messagelabs.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.shi.co.jp",
+          "record": "v=spf1 ip4:160.186.100.4 ip4:160.186.100.2 ip4:160.186.10.30 ip4:160.186.10.35 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "160.186.100.4",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.186.100.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.186.10.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.186.10.35",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

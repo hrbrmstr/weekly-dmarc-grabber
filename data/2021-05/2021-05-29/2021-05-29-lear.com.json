@@ -1,0 +1,50 @@
+{
+  "domain": "lear.com",
+  "base_domain": "lear.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.lear.com",
+      "ns3.lear.com",
+      "ns2.lear.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002d5103.gslb.pphosted.com",
+        "addresses": [
+          "143.55.144.23"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002d5103.gslb.pphosted.com",
+        "addresses": [
+          "143.55.144.23"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002d5103.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002d5103.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query lear.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

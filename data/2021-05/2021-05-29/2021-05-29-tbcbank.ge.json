@@ -1,0 +1,127 @@
+{
+  "domain": "tbcbank.ge",
+  "base_domain": "tbcbank.ge",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-365.awsdns-45.com",
+      "ns-1294.awsdns-33.org",
+      "ns-1750.awsdns-26.co.uk",
+      "ns-646.awsdns-16.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.tbcbank.com.ge",
+        "addresses": [
+          "193.104.20.75"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.tbcbank.com.ge"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:193.104.20.69/32 ip4:193.104.20.75/32 ip4:193.104.20.118/32 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "193.104.20.69/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.104.20.75/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.104.20.118/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:postmaster@tbcbank.ge;ruf=mailto:postmaster@tbcbank.ge; fo=1",
+    "valid": true,
+    "location": "tbcbank.ge",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@tbcbank.ge",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@tbcbank.ge",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

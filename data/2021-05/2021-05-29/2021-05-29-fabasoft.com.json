@@ -1,0 +1,125 @@
+{
+  "domain": "fabasoft.com",
+  "base_domain": "fabasoft.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.fra.auth.colt.net",
+      "ns0.lon.auth.colt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "All nameservers failed to answer the query 220.159.123.80.in-addr.arpa. IN PTR: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "spf": {
+    "record": "v=spf1 ip4:192.84.221.0/24 ip4:194.247.47.0/24 ip4:213.95.138.0/27 ip4:80.123.159.220/32 ip4:213.173.183.128/27 ip6:2001:67c:1933:2c5:0:1c58:ac80:6031/48 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "192.84.221.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.247.47.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.95.138.0/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "80.123.159.220/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.173.183.128/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "2001:67c:1933:2c5:0:1c58:ac80:6031/48",
+          "mechanism": "ip6"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua_fabasoft@fabasoft.com; ruf=mailto:dmarc_ruf_fabasoft@fabasoft.com",
+    "valid": true,
+    "location": "fabasoft.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua_fabasoft@fabasoft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf_fabasoft@fabasoft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
