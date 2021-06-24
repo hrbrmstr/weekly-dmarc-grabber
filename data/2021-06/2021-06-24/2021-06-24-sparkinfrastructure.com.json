@@ -1,0 +1,578 @@
+{
+  "domain": "sparkinfrastructure.com",
+  "base_domain": "sparkinfrastructure.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.mydi.com.au",
+      "ns0.mydi.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "sparkinfrastructure.in.tmes-anz.trendmicro.com",
+        "addresses": [
+          "13.238.202.140",
+          "13.238.202.141",
+          "13.238.202.142"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "in.hes.trendmicro.com",
+        "addresses": [
+          "54.219.191.20",
+          "54.219.191.21"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on sparkinfrastructure.in.tmes-anz.trendmicro.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 54.219.191.20 is california-eips1.hes.trendmicro.com, but the A/AAAA DNS records for california-eips1.hes.trendmicro.com do not resolve to 54.219.191.20",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 54.219.191.21 is california-eips1.hes.trendmicro.com, but the A/AAAA DNS records for california-eips1.hes.trendmicro.com do not resolve to 54.219.191.21",
+      "SSL/TLS is not supported on in.hes.trendmicro.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:27.100.1.2  include:spf.protection.outlook.com include:spf.hes.trendmicro.com include:miraqle.com include:mailrelay.t1cloud.com include:spf.tmes.trendmicro.com -all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "sparkinfrastructure.in.tmes-anz.trendmicro.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "in.hes.trendmicro.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "27.100.1.2",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.hes.trendmicro.com",
+          "record": "v=spf1 ip4:54.219.191.0/25 ip4:54.219.188.0/26 ip4:52.58.62.192/26 ip4:52.58.63.0/25 ip4:13.56.21.0/28 ip4:54.67.23.0 ip4:54.183.100.2 ip4:54.67.38.140 ip4:54.183.104.170 ip4:54.67.7.209 ip4:54.67.111.2 ip4:54.86.63.64/26 include:2.hes.trendmicro.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.219.191.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.219.188.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.58.62.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.58.63.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.56.21.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.67.23.0",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.183.100.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.67.38.140",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.183.104.170",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.67.7.209",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.67.111.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.86.63.64/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "2.hes.trendmicro.com",
+                "record": "v=spf1 ip4:3.125.63.15 ip4:3.125.130.26 ip4:3.125.147.66 ip4:35.157.237.138 ip4:52.52.93.55 ip4:52.53.78.77 ip4:54.153.50.22 ip4:54.177.15.73 ip4:18.185.208.159 ip4:3.125.163.125 ip4:3.125.164.248 ip4:3.125.73.37 include:1.hes.trendmicro.com ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "3.125.63.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.125.130.26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.125.147.66",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.157.237.138",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.52.93.55",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.53.78.77",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.153.50.22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.177.15.73",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.185.208.159",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.125.163.125",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.125.164.248",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.125.73.37",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "1.hes.trendmicro.com",
+                      "record": "v=spf1 ip4:54.67.61.126 ip4:54.183.116.9 ip4:54.183.91.12 ip4:54.67.87.78 ip4:54.193.4.136 ip4:54.193.56.124 ip4:52.28.255.96 ip4:52.29.98.130 ip4:52.29.207.245 ip4:52.28.67.190 ip4:3.122.124.169 ip4:52.48.127.192/26 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "54.67.61.126",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.183.116.9",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.183.91.12",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.67.87.78",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.193.4.136",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.193.56.124",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.28.255.96",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.29.98.130",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.29.207.245",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.28.67.190",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "3.122.124.169",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.48.127.192/26",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "miraqle.com",
+          "record": "v=spf1 ip4:203.41.57.144 ip4:203.41.57.145 ip4:203.38.232.46 ip4:203.41.57.147 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "203.41.57.144",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.41.57.145",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.38.232.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.41.57.147",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailrelay.t1cloud.com",
+          "record": "v=spf1 ip4:54.206.1.219 ip4:54.252.191.67 ip4:52.19.235.69 ip4:52.19.41.236 ip4:13.54.130.0 ip4:3.105.94.134 ip4:34.252.205.76 ip4:18.200.192.158 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.206.1.219",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.252.191.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.19.235.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.19.41.236",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.54.130.0",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.105.94.134",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.252.205.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.200.192.158",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.tmes.trendmicro.com",
+          "record": "v=spf1 ip4:18.208.22.64/26 ip4:18.208.22.128/25 ip4:18.185.115.128/26 ip4:18.185.115.0/25 ip4:13.238.202.0/25 ip4:13.238.202.128/26 ip4:18.176.203.128/26 ip4:18.176.203.192/26 ip4:18.177.156.0/26 ip4:18.177.156.64/26 include:spfb.tmes.trendmicro.com  ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "18.208.22.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.208.22.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.177.156.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.177.156.64/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfb.tmes.trendmicro.com",
+                "record": "v=spf1 ip4:18.188.9.192/26 ip4:18.188.239.128/26 ip4:34.253.238.128/26 ip4:34.253.238.192/26 ip4:18.197.208.213 ip4:18.184.15.245 ip4:18.197.37.28 ip4:35.157.33.67 ip4:3.121.19.15 ip4:3.123.213.180 ip4:3.126.205.42 ip4:18.158.139.138 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "18.188.9.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.188.239.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.197.208.213",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.184.15.245",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.197.37.28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.157.33.67",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.121.19.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.123.213.180",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.126.205.42",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.158.139.138",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

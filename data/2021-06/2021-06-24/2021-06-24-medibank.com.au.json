@@ -1,0 +1,113 @@
+{
+  "domain": "medibank.com.au",
+  "base_domain": "medibank.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.medibank.com.au",
+      "ns3.medibank.com.au",
+      "ns2.medibank.com.au",
+      "ns1.medibank.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.188"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.188"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0021ed01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0021ed01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:itoperations@medibank.com.au;ruf=mailto:itoperations@medibank.com.au",
+    "valid": true,
+    "location": "medibank.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

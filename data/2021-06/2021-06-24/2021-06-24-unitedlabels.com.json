@@ -1,0 +1,41 @@
+{
+  "domain": "unitedlabels.com",
+  "base_domain": "unitedlabels.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "third-dns.netcup.net",
+      "second-dns.netcup.net",
+      "root-dns.netcup.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.unitedlabels.com",
+        "addresses": [
+          "217.9.56.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.unitedlabels.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ptr ip4:217.9.56.0/29 include:servers.mcsv.net include:spf.smtp2go.com include:eu.sparkpostmail.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
