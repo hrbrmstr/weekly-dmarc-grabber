@@ -1,0 +1,53 @@
+{
+  "domain": "promedicus.com.au",
+  "base_domain": "promedicus.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.melbourneit.net",
+      "ns2.melbourneit.net",
+      "ns1.melbourneit.net",
+      "ns4.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mail2.promed.com.au",
+        "addresses": [
+          "59.100.24.70"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx.promed.com.au",
+        "addresses": [
+          "59.100.24.70"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 59.100.24.70 is 59-100-24-70.mel.static-ipl.aapt.com.au, but the A/AAAA DNS records for 59-100-24-70.mel.static-ipl.aapt.com.au do not resolve to 59.100.24.70",
+      "mail2.promed.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1129)",
+      "mx.promed.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "promedicus.com.au does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

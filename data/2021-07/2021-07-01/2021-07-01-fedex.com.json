@@ -1,0 +1,127 @@
+{
+  "domain": "fedex.com",
+  "base_domain": "fedex.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "kate.fedex.com",
+      "land.fedex.com",
+      "use5.akam.net",
+      "grace.fedex.com",
+      "pdns1.cscdns.net",
+      "pdns2.cscdns.net",
+      "ns1-193.akam.net",
+      "ns1-244.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mapper.gslb.fedex.com",
+        "addresses": [
+          "204.135.242.200"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "smtp.dmz.fedex.com",
+        "addresses": [
+          "199.81.212.145",
+          "199.81.212.146",
+          "199.81.212.147",
+          "199.81.212.148",
+          "199.81.212.185",
+          "199.81.212.186",
+          "199.81.212.187",
+          "199.81.212.188",
+          "199.81.212.189",
+          "199.81.212.190",
+          "204.135.8.163",
+          "204.135.8.164",
+          "204.135.8.165",
+          "204.135.8.166",
+          "204.135.8.93",
+          "204.135.8.94",
+          "204.135.8.95",
+          "204.135.8.96",
+          "204.135.8.97",
+          "204.135.8.98"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mapper.gslb.fedex.com: Connection refused",
+      "SSL/TLS is not supported on smtp.dmz.fedex.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_agg@auth.returnpath.net,mailto:dmarc@fedex.com; ruf=mailto:dmarc_afrf@auth.returnpath.net,mailto:dmarc@fedex.com; fo=1",
+    "valid": true,
+    "location": "fedex.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - All nameservers failed to answer the query auth.returnpath.net. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net,mailto:dmarc@fedex.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net,mailto:dmarc@fedex.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

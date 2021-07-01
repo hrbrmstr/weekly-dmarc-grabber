@@ -1,0 +1,165 @@
+{
+  "domain": "gd.com",
+  "base_domain": "gd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.gendyn.com",
+      "ns2.gendyn.com",
+      "ns1.gendyn.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-003f2702.gslb.pphosted.com",
+        "addresses": [
+          "67.231.155.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-003f2702.gslb.pphosted.com",
+        "addresses": [
+          "67.231.147.100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-003f2702.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-003f2702.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:192.48.40.23 ip4:192.48.40.25 ip4:137.173.4.10 include:_spf.q4press.com include:spf-003f2702.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "192.48.40.23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.48.40.25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "137.173.4.10",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.q4press.com",
+          "record": "v=spf1 a:web.q4press.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "13.57.137.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.142.131",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.163.18",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.240.21",
+                "mechanism": "a"
+              },
+              {
+                "value": "168.245.55.252",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.208.74.172",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.223.8.0",
+                "mechanism": "a"
+              },
+              {
+                "value": "35.168.82.240",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.23.113.139",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.55.39.176",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.177.118.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.208.86.47",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-003f2702.pphosted.com",
+          "record": "v=spf1 ip4:67.231.155.100 ip4:67.231.147.100",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.155.100",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.147.100",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

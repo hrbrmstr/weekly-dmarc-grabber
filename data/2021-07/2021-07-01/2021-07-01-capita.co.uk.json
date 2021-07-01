@@ -1,0 +1,111 @@
+{
+  "domain": "capita.co.uk",
+  "base_domain": "capita.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.cscdns.net",
+      "dns2.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster-a.mailcontrol.com",
+        "addresses": [
+          "85.115.52.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "cluster-b.mailcontrol.com",
+        "addresses": [
+          "85.115.56.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "cluster-d.mailcontrol.com",
+        "addresses": [
+          "85.115.60.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster-a.mailcontrol.com",
+      "SSL/TLS is not supported on cluster-b.mailcontrol.com",
+      "SSL/TLS is not supported on cluster-d.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:smb-dmarc-notifications@capita.co.uk; aspf=r; adkim=r",
+    "valid": true,
+    "location": "capita.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "smb-dmarc-notifications@capita.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

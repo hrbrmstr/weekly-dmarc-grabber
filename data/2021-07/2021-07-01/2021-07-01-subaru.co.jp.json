@@ -1,0 +1,63 @@
+{
+  "domain": "subaru.co.jp",
+  "base_domain": "subaru.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a9-66.akam.net",
+      "a4-67.akam.net",
+      "a5-64.akam.net",
+      "a8-65.akam.net",
+      "a1-169.akam.net",
+      "a10-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail1.subaru-fhi.co.jp",
+        "addresses": [
+          "210.162.51.195"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.subaru-fhi.co.jp",
+        "addresses": [
+          "210.162.51.195"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 99,
+        "hostname": "mail5.subaru-fhi.co.jp",
+        "addresses": [
+          "210.162.51.194"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.subaru-fhi.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)",
+      "mail2.subaru-fhi.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)",
+      "mail5.subaru-fhi.co.jp: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "subaru.co.jp does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

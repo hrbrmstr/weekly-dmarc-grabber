@@ -1,0 +1,127 @@
+{
+  "domain": "emcorgroup.com",
+  "base_domain": "emcorgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns73.ultradns.biz",
+      "pdns73.ultradns.org",
+      "pdns73.ultradns.com",
+      "pdns73.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0015e101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.16"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0015e101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.148.16"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0015e101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0015e101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "%{ir}.%{v}.%{d}.spf.has.pphosted.com",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:rua-import-18100@sendforensics.com",
+    "valid": true,
+    "location": "emcorgroup.com",
+    "warnings": [
+      "sendforensics.com does not indicate that it accepts DMARC reports about emcorgroup.com - Authorization record not found: emcorgroup.com._report._dmarc.sendforensics.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:rua-import-18100@sendforensics.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

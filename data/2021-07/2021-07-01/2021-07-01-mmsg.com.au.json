@@ -1,0 +1,103 @@
+{
+  "domain": "mmsg.com.au",
+  "base_domain": "mmsg.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.uecomm.net.au",
+      "ns2.uecomm.net.au",
+      "ns3.uecomm.net.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "filter1.mmsg-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.202.243.228",
+          "34.208.153.28",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.162.207",
+          "34.237.180.102",
+          "34.237.181.146"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "filter2.mmsg-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.202.243.228",
+          "34.208.153.28",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.162.207",
+          "34.237.180.102",
+          "34.237.181.146"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "filter3.mmsg-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.202.243.228",
+          "34.208.153.28",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.162.207",
+          "34.237.180.102",
+          "34.237.181.146"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "filter1.mmsg-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter1.mmsg-1.mailguard.com.au'. (_ssl.c:1129)",
+      "filter2.mmsg-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter2.mmsg-1.mailguard.com.au'. (_ssl.c:1129)",
+      "filter3.mmsg-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter3.mmsg-1.mailguard.com.au'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.v6send.net include:spf.protection.outlook.com include:customer.mailguard.com.au include:mktomail.com include:spf.mandrillapp.com include:_spf.catch-e.com.au  ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

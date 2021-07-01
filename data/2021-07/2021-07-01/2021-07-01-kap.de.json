@@ -1,0 +1,113 @@
+{
+  "domain": "kap.de",
+  "base_domain": "kap.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns82.domaincontrol.com",
+      "ns81.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.itnovum.com",
+        "addresses": [
+          "195.158.58.130"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.itnovum.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:185.64.113.77 include:spf.mailjet.com include:mailing.eqs.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [
+      "Duplicate include: spf.mailjet.com"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.itnovum.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "185.64.113.77",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.mailjet.com",
+          "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "87.253.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.189.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.211.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.250.236.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": [
+            "Duplicate include: spf.mailjet.com"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "domain": "cybg.com",
+  "base_domain": "cybg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.p76.dynect.net",
+      "ns3.p76.dynect.net",
+      "ns2.p76.dynect.net",
+      "ns1.p76.dynect.net",
+      "ns2.cybg.com",
+      "ns1.cybg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.eu.messagelabs.com",
+        "addresses": [
+          "46.226.52.106",
+          "46.226.52.193",
+          "46.226.52.202",
+          "46.226.52.97",
+          "85.158.142.106",
+          "85.158.142.196",
+          "85.158.142.202",
+          "85.158.142.97"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.eu.messagelabs.com",
+        "addresses": [
+          "18.196.166.243",
+          "3.67.45.48"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.eu.messagelabs.com",
+      "STARTTLS is not supported on cluster1a.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=86400; rua=mailto:clydesdale-bank-plc@rua.agari.com; ruf=mailto:clydesdale-bank-plc@ruf.agari.com",
+    "valid": true,
+    "location": "cybg.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "clydesdale-bank-plc@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "clydesdale-bank-plc@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

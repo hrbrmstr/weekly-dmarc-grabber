@@ -1,0 +1,98 @@
+{
+  "domain": "amd.com",
+  "base_domain": "amd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0241.secondary.cloudflare.com",
+      "ns0117.secondary.cloudflare.com",
+      "a26-64.akam.net",
+      "a28-64.akam.net",
+      "a1-155.akam.net",
+      "a8-65.akam.net",
+      "a5-64.akam.net",
+      "a13-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 2,
+        "hostname": "amd-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.138",
+          "104.47.58.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on amd-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query amd.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "amd.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

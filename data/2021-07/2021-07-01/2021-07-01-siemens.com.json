@@ -1,0 +1,108 @@
+{
+  "domain": "siemens.com",
+  "base_domain": "siemens.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ext2.siemens.net",
+      "ns-ext2.siemens.de",
+      "ns-ext2.siemens.com.sg",
+      "ns-ext2.siemens.com",
+      "ns-596.awsdns-10.net",
+      "ns-499.awsdns-62.com",
+      "ns-1741.awsdns-25.co.uk",
+      "ns-1201.awsdns-22.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "siemens-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.1.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on siemens-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; pct=100; rua=mailto:DMARC01.cert@siemens.com; ruf=mailto:DMARC02.cert@siemens.com; aspf=r",
+    "valid": true,
+    "location": "siemens.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC01.cert@siemens.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC02.cert@siemens.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}
