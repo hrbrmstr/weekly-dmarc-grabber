@@ -1,0 +1,49 @@
+{
+  "domain": "voya.com",
+  "base_domain": "voya.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.voya.net",
+      "ns1.voya.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-003b3601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.134.158"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-003b3601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.138.158"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-003b3601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-003b3601.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query voya.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "domain": "aluminalimited.com",
+  "base_domain": "aluminalimited.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.ayudahosting.com.au",
+      "ns2.ayudahosting.com.au",
+      "ns1.ayudahosting.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 25,
+        "hostname": "mail.aluminalimited.com",
+        "addresses": [
+          "203.42.248.162"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.aluminalimited.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:ma01c02.ayudahosting.com.au a:mail.aluminalimited.com a:al13.aluminalimited.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.aluminalimited.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "116.240.207.60",
+          "mechanism": "a"
+        },
+        {
+          "value": "203.42.248.162",
+          "mechanism": "a"
+        },
+        {
+          "value": "110.142.193.138",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@ayuda.com.au; ruf=mailto:dmarc@ayuda.com.au; fo=s; adkim=r; aspf=r",
+    "valid": true,
+    "location": "aluminalimited.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@ayuda.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@ayuda.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

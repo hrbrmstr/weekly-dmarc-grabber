@@ -1,0 +1,109 @@
+{
+  "domain": "fanniemae.com",
+  "base_domain": "fanniemae.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.fanniemae.com",
+      "pdns111.ultradns.org",
+      "pdns111.ultradns.biz",
+      "pdns111.ultradns.com",
+      "pdns111.ultradns.net",
+      "ns2.fanniemae.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3413-83.iphmx.com",
+        "addresses": [
+          "139.138.57.254",
+          "216.71.147.157"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc3413-83.iphmx.com",
+        "addresses": [
+          "139.138.57.254",
+          "216.71.147.157"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx1.hc3413-83.iphmx.com",
+      "SSL/TLS is not supported on mx1.hc3413-83.iphmx.com",
+      "STARTTLS is not supported on mx2.hc3413-83.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc3413-83.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query fanniemae.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; rua=mailto:dmarc_agg@vali.email; fo=1",
+    "valid": true,
+    "location": "fanniemae.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "domain": "hollyfrontier.com",
+  "base_domain": "hollyfrontier.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns02.domaincontrol.com",
+      "pdns01.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hollyfrontier.com",
+        "addresses": [
+          "38.84.32.123"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hollyfrontier.com",
+        "addresses": [
+          "38.84.32.124"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx3.hollyfrontier.com",
+        "addresses": [
+          "38.84.63.123"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx4.hollyfrontier.com",
+        "addresses": [
+          "38.84.63.124"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 38.84.32.123 is mx2.hollycorp.com, but the A/AAAA DNS records for mx2.hollycorp.com do not resolve to 38.84.32.123",
+      "STARTTLS is not supported on mx1.hollyfrontier.com",
+      "SSL/TLS is not supported on mx1.hollyfrontier.com",
+      "The reverse DNS of 38.84.32.124 is mx1.hollycorp.com, but the A/AAAA DNS records for mx1.hollycorp.com do not resolve to 38.84.32.124",
+      "STARTTLS is not supported on mx2.hollyfrontier.com",
+      "SSL/TLS is not supported on mx2.hollyfrontier.com",
+      "38.84.63.123 does not have any reverse DNS (PTR) records",
+      "mx3.hollyfrontier.com: Connection timed out",
+      "38.84.63.124 does not have any reverse DNS (PTR) records",
+      "mx4.hollyfrontier.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

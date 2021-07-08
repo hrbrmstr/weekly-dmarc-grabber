@@ -1,0 +1,113 @@
+{
+  "domain": "daimler.com",
+  "base_domain": "daimler.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.corpinter.de",
+      "ns3.corpinter.net",
+      "ns2.corpinter.de",
+      "ns1.corpinter.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "one.mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.25"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "two.mail-in.daimler.com",
+        "addresses": [
+          "141.113.8.25"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.26"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "one.mail-in.daimler.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "two.mail-in.daimler.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mail-in.daimler.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:weacxe0d@ag.eu.dmarcadvisor.com;",
+    "valid": true,
+    "location": "daimler.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "weacxe0d@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

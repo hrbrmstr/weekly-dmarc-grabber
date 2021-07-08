@@ -1,0 +1,59 @@
+{
+  "domain": "yaskawa.co.jp",
+  "base_domain": "yaskawa.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.yaskawa.co.jp",
+      "dns3.odn.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 200,
+        "hostname": "cluster6.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.100",
+          "67.219.246.109",
+          "67.219.246.196",
+          "67.219.246.205",
+          "67.219.250.100",
+          "67.219.250.109",
+          "67.219.250.196",
+          "67.219.250.205"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 400,
+        "hostname": "cluster6a.us.messagelabs.com",
+        "addresses": [
+          "3.211.120.104",
+          "52.21.102.115"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster6.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "STARTTLS is not supported on cluster6a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster6a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.list-finder.jp include:spf.protection.outlook.com include:spf.playbackmail.com include:aspmx.pardot.com include:_spf.bownow.jp ip4:134.237.251.0/24 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query spf.playbackmail.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

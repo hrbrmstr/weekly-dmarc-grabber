@@ -1,0 +1,48 @@
+{
+  "domain": "asahi-kasei.co.jp",
+  "base_domain": "asahi-kasei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ak10.asahi-kasei.co.jp",
+      "ak.asahi-kasei.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "egw00.asahi-kasei.co.jp",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "egwdr01.asahi-kasei.co.jp",
+        "addresses": [
+          "153.149.107.26"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "egw00.asahi-kasei.co.jp: Could not connect:  SMTP error code 554 - Not allowed",
+      "egwdr01.asahi-kasei.co.jp: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "asahi-kasei.co.jp does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
