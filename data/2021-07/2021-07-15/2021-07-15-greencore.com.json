@@ -1,0 +1,41 @@
+{
+  "domain": "greencore.com",
+  "base_domain": "greencore.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mccoy.netzoomi.net",
+      "ns4.netzoomi.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "greencore-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.10.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on greencore-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:sharepointonline.com ip4:85.133.82.149 ip4:217.68.16.12 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query sharepointonline.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "domain": "seaboardcorp.com",
+  "base_domain": "seaboardcorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.dnsmadeeasy.com",
+      "ns0.dnsmadeeasy.com",
+      "ns3.dnsmadeeasy.com",
+      "ns4.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00166602.gslb.pphosted.com",
+        "addresses": [
+          "67.231.148.95"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00166602.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.94"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00166602.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00166602.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query seaboardcorp.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:DMARC@seaboardfoods.com;  adkim=r; aspf=r; rf= afrf; pct=100; ri= 86400;",
+    "valid": false,
+    "location": "seaboardcorp.com",
+    "error": " afrf is not a valid option for the DMARC rf tag"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "domain": "progress-werk.de",
+  "base_domain": "progress-werk.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pns.dtag.de",
+      "secondary000.dtag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "srvmailrelay.progress-werk.de",
+        "addresses": [
+          "62.157.112.3"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on srvmailrelay.progress-werk.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:62.157.112.3/32 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "srvmailrelay.progress-werk.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "62.157.112.3/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

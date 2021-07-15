@@ -1,0 +1,111 @@
+{
+  "domain": "bmwgroup.com",
+  "base_domain": "bmwgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.m-online.net",
+      "ns3.m-online.net",
+      "ns.bmw.de",
+      "ns2.m-online.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc324-48.eu.iphmx.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc324-48.eu.iphmx.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "All nameservers failed to answer the query mx1.hc324-48.eu.iphmx.com. IN AAAA: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      "mx1.hc324-48.eu.iphmx.com: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "mx2.hc324-48.eu.iphmx.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:bgm.aggregate@bmwgroup.com; ruf=mailto:bgm.forensic@bmwgroup.com",
+    "valid": true,
+    "location": "bmwgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bgm.aggregate@bmwgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bgm.forensic@bmwgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

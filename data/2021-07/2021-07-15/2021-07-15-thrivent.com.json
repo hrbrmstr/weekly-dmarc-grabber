@@ -1,0 +1,116 @@
+{
+  "domain": "thrivent.com",
+  "base_domain": "thrivent.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tfl-dns-03.thrivent.com",
+      "tfl-dns-01.thrivent.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "irnprt001.thrivent.com",
+        "addresses": [
+          "64.214.85.30"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "irnprt002.thrivent.com",
+        "addresses": [
+          "64.211.58.30"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on irnprt001.thrivent.com",
+      "SSL/TLS is not supported on irnprt002.thrivent.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query thrivent.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:boxucsupport@thrivent.com,mailto:thrivent-financial@rua.agari.com;ruf=mailto:thrivent-financial@ruf.agari.com",
+    "valid": true,
+    "location": "thrivent.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "boxucsupport@thrivent.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "thrivent-financial@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "thrivent-financial@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
