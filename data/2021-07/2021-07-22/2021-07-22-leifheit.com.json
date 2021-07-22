@@ -1,0 +1,61 @@
+{
+  "domain": "leifheit.com",
+  "base_domain": "leifheit.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail02.leifheit.de",
+        "addresses": [
+          "212.185.169.35"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.leifheit.de",
+        "addresses": [
+          "212.185.169.34"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mail03.leifheit.de",
+        "addresses": [
+          "85.22.154.164"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail02.leifheit.de: Connection refused",
+      "mail.leifheit.de: Connection timed out",
+      "The reverse DNS of 85.22.154.164 is mail.leifheit.de, but the A/AAAA DNS records for mail.leifheit.de do not resolve to 85.22.154.164",
+      "mail03.leifheit.de: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

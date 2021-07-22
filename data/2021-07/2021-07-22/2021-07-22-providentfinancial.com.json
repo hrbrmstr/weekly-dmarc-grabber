@@ -1,0 +1,94 @@
+{
+  "domain": "providentfinancial.com",
+  "base_domain": "providentfinancial.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.cscdns.net",
+      "dns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "providentfinancial-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on providentfinancial-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1  ip4:77.111.213.7/32 ip4:77.111.213.8/32 ip4:77.111.213.39/32 include:spf.protection.outlook.com include:pf01.exaliahosting.com include:fallback.mail.uk.uu.net -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain pf01.exaliahosting.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarc@provident.co.uk; ruf=mailto:dmarc_fail@provident.co.uk",
+    "valid": true,
+    "location": "providentfinancial.com",
+    "warnings": [
+      "provident.co.uk does not indicate that it accepts DMARC reports about providentfinancial.com - Authorization record not found: providentfinancial.com._report._dmarc.provident.co.uk IN TXT \"v=DMARC1\"",
+      "provident.co.uk does not indicate that it accepts DMARC reports about providentfinancial.com - Authorization record not found: providentfinancial.com._report._dmarc.provident.co.uk IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc@provident.co.uk",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_fail@provident.co.uk",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

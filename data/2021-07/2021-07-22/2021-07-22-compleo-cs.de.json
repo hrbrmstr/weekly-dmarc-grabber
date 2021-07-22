@@ -1,0 +1,63 @@
+{
+  "domain": "compleo-cs.de",
+  "base_domain": "compleo-cs.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.inwx.eu",
+      "ns2.inwx.de",
+      "ns.inwx.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx-01-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [
+          "18.194.102.147",
+          "52.58.154.181"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 110,
+        "hostname": "mx-02-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [
+          "18.194.102.147",
+          "52.58.154.181"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "compleocs-de01i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.18.202",
+          "104.47.22.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx-01-eu-central-1.prod.hydra.sophos.com",
+      "SSL/TLS is not supported on mx-02-eu-central-1.prod.hydra.sophos.com",
+      "SSL/TLS is not supported on compleocs-de01i.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

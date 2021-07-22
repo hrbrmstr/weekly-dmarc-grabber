@@ -1,0 +1,55 @@
+{
+  "domain": "rsac.com",
+  "base_domain": "rsac.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "trey.ns.cloudflare.com",
+      "iris.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.rsac.iphmx.com",
+        "addresses": [
+          "68.232.131.81",
+          "68.232.137.96",
+          "68.232.142.172",
+          "68.232.148.75"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.rsac.iphmx.com",
+        "addresses": [
+          "68.232.131.81",
+          "68.232.137.96",
+          "68.232.142.172",
+          "68.232.148.75"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.rsac.iphmx.com",
+      "SSL/TLS is not supported on mx2.rsac.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query rsac.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

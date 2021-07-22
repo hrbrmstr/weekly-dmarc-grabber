@@ -1,0 +1,118 @@
+{
+  "domain": "angloamerican.com",
+  "base_domain": "angloamerican.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.bt.net",
+      "ns1.bt.net",
+      "ns0.bt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-1.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-2.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on za-smtp-inbound-1.mimecast.co.za",
+      "SSL/TLS is not supported on za-smtp-inbound-2.mimecast.co.za"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query angloamerican.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:07011f233254679@rep.dmarcanalyzer.com; ruf=mailto:07011f233254679@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "angloamerican.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "07011f233254679@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "07011f233254679@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
