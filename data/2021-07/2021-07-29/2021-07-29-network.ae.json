@@ -1,0 +1,111 @@
+{
+  "domain": "network.ae",
+  "base_domain": "network.ae",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a4-65.akam.net",
+      "a13-66.akam.net",
+      "a1-193.akam.net",
+      "a3-65.akam.net",
+      "a18-67.akam.net",
+      "a26-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004da001.gslb.pphosted.com",
+        "addresses": [
+          "185.132.181.91"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004da001.gslb.pphosted.com",
+        "addresses": [
+          "185.183.28.231"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-004da001.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-004da001.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;pct=100;fo=1;ri=86400;rua=mailto:rua.ni@progist.in;ruf=mailto:ruf.dmarc@network.global",
+    "valid": true,
+    "location": "network.ae",
+    "warnings": [
+      "network.global does not indicate that it accepts DMARC reports about network.ae - Authorization record not found: network.ae._report._dmarc.network.global IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "rua.ni@progist.in",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:ruf.dmarc@network.global",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

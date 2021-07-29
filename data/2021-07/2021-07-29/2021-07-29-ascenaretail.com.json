@@ -1,0 +1,105 @@
+{
+  "domain": "ascenaretail.com",
+  "base_domain": "ascenaretail.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1.netsynergy.com",
+      "ns-2.netsynergy.com",
+      "ns-3.netsynergy.com",
+      "ns-4.netsynergy.com",
+      "ns-5.netsynergy.com",
+      "ns-6.netsynergy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00217301.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.155"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00217301.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.155"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00217301.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00217301.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc@ascenaretail.com",
+    "valid": true,
+    "location": "ascenaretail.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@ascenaretail.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

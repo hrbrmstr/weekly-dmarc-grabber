@@ -1,0 +1,143 @@
+{
+  "domain": "talktalkgroup.com",
+  "base_domain": "talktalkgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ds2.opaltelecom.net",
+      "ds1.opaltelecom.net",
+      "ds0.opaltelecom.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.talktalkplc.com",
+        "addresses": [
+          "62.24.202.82"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.talktalkplc.com",
+        "addresses": [
+          "62.24.202.83"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx3.talktalkplc.com",
+        "addresses": [
+          "62.24.139.14"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx4.talktalkplc.com",
+        "addresses": [
+          "62.24.139.15"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.talktalkplc.com",
+      "SSL/TLS is not supported on mx2.talktalkplc.com",
+      "SSL/TLS is not supported on mx3.talktalkplc.com",
+      "SSL/TLS is not supported on mx4.talktalkplc.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=talktalkplc.com",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; fo=1; ri=3600; rua=mailto:1cf493e1@inbox.ondmarc.com,mailto:xmjbvred@ag.dmarcian-eu.com; ruf=mailto:1cf493e1@inbox.ondmarc.com,mailto:xmjbvred@fr.dmarcian-eu.com;",
+    "valid": true,
+    "location": "talktalkgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1cf493e1@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "xmjbvred@ag.dmarcian-eu.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1cf493e1@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "xmjbvred@fr.dmarcian-eu.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

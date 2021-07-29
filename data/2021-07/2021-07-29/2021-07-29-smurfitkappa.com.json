@@ -1,0 +1,136 @@
+{
+  "domain": "smurfitkappa.com",
+  "base_domain": "smurfitkappa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.markmonitor.com",
+      "ns6.markmonitor.com",
+      "ns3.markmonitor.com",
+      "ns5.markmonitor.com",
+      "ns2.markmonitor.com",
+      "ns7.markmonitor.com",
+      "ns1.markmonitor.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cust11744-1-in.mailcontrol.com",
+        "addresses": [
+          "85.115.52.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "cust11744-2-in.mailcontrol.com",
+        "addresses": [
+          "85.115.60.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "cust11744-4-in.mailcontrol.com",
+        "addresses": [
+          "85.115.54.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cust11744-3.in.mailcontrol.com",
+        "addresses": [
+          "208.87.234.190"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cust11744-1-in.mailcontrol.com",
+      "SSL/TLS is not supported on cust11744-2-in.mailcontrol.com",
+      "SSL/TLS is not supported on cust11744-4-in.mailcontrol.com",
+      "cust11744-3.in.mailcontrol.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'cust11744-3.in.mailcontrol.com'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:d2457e076b15997@rep.dmarcanalyzer.com; ruf=mailto:d2457e076b15997@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "smurfitkappa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d2457e076b15997@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d2457e076b15997@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

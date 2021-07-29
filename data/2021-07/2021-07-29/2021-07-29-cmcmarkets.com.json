@@ -1,0 +1,114 @@
+{
+  "domain": "cmcmarkets.com",
+  "base_domain": "cmcmarkets.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns7.cmcnet.net",
+      "ns8.cmcnet.net",
+      "ns6.cmcnet.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.cmcmarkets.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.43",
+          "68.232.139.35"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.cmcmarkets.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.43",
+          "68.232.139.35"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.cmcmarkets.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.cmcmarkets.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:DMARC.Aggregate@cmcmarkets.com; ruf=mailto:DMARC.Forensics@cmcmarkets.com; sp=none; fo=1; ri=300",
+    "valid": true,
+    "location": "cmcmarkets.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC.Aggregate@cmcmarkets.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC.Forensics@cmcmarkets.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 300,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

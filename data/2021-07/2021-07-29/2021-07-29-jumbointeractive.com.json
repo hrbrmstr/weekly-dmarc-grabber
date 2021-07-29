@@ -1,0 +1,105 @@
+{
+  "domain": "jumbointeractive.com",
+  "base_domain": "jumbointeractive.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.benon.com",
+      "ns1.benon.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": "v=spf1 ip4:203.221.177.0/24 a mx ptr ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [
+      "The ptr mechanism should not be used - https://tools.ietf.org/html/rfc7208#section-5.5"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "203.221.177.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.221.177.44",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail.benon.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "",
+          "mechanism": "ptr"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@benon.com",
+    "valid": true,
+    "location": "jumbointeractive.com",
+    "warnings": [
+      "benon.com does not indicate that it accepts DMARC reports about jumbointeractive.com - Authorization record not found: jumbointeractive.com._report._dmarc.benon.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc@benon.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

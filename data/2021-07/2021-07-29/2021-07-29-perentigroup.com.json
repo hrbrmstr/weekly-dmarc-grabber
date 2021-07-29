@@ -1,0 +1,368 @@
+{
+  "domain": "perentigroup.com",
+  "base_domain": "perentigroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1981.awsdns-55.co.uk",
+      "ns-1077.awsdns-06.org",
+      "ns-326.awsdns-40.com",
+      "ns-623.awsdns-13.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00380e01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.28.250"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00380e01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.28.250"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00380e01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00380e01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.perentigroup.com include:spf2.perentigroup.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.perentigroup.com",
+          "record": "v=spf1 include:spf.au.exclaimer.net include:spf-00380e01.pphosted.com include:spf.protection.outlook.com include:miraqle.com ~all",
+          "dns_lookups": 5,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.au.exclaimer.net",
+                "record": "v=spf1 ip4:104.210.80.79 ip4:13.70.157.244 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "104.210.80.79",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.70.157.244",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-00380e01.pphosted.com",
+                "record": "v=spf1 ip4:185.132.181.111 ip4:185.183.28.250",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "185.132.181.111",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.183.28.250",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/48",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spfd.protection.outlook.com",
+                      "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "51.4.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "20.47.149.138/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.4.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0400::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0400::/64",
+                            "mechanism": "ip6"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "miraqle.com",
+                "record": "v=spf1 ip4:203.41.57.144 ip4:203.41.57.145 ip4:203.38.232.46 ip4:203.41.57.147 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "203.41.57.144",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.41.57.145",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.38.232.46",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.41.57.147",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.perentigroup.com",
+          "record": "v=spf1 ip4:203.161.117.210 ip4:52.212.21.24 ip4:41.66.204.119 ip4:203.82.211.129 ip4:54.153.156.1 ip4:203.153.233.0/27 ip4:165.228.33.234/32 ip4:13.75.166.10 ip4:203.47.16.114 ip4:203.153.233.212 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "203.161.117.210",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.212.21.24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.66.204.119",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.82.211.129",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.153.156.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.153.233.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.228.33.234/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.75.166.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.47.16.114",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.153.233.212",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;fo=1;rua=mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "perentigroup.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

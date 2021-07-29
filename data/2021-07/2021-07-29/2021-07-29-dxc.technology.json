@@ -1,0 +1,118 @@
+{
+  "domain": "dxc.technology",
+  "base_domain": "dxc.technology",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cscdnscph002d.csc.com",
+      "cscdnssyd002d.csc.com",
+      "cscdnsklm002d.csc.com",
+      "cscdnshyd002d.csc.com",
+      "cscdnscdc002d.csc.com",
+      "cscdnsndc002d.csc.com",
+      "cscdnsnoi002d.csc.com",
+      "cscdnsmds002d.csc.com",
+      "cscdnsmel002d.csc.com",
+      "cscdnssng002d.csc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.107",
+          "67.219.246.193",
+          "67.219.246.203",
+          "67.219.246.97",
+          "67.219.250.107",
+          "67.219.250.193",
+          "67.219.250.203",
+          "67.219.250.97"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.us.messagelabs.com",
+        "addresses": [
+          "34.199.123.124",
+          "34.239.54.75"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster4.us.messagelabs.com",
+      "STARTTLS is not supported on cluster4a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster4a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=reject; rua=mailto:dmarc_agg@emailfraudprotect.email",
+    "valid": true,
+    "location": "dxc.technology",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@emailfraudprotect.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

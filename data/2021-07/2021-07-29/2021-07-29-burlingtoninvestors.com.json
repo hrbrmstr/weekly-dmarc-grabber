@@ -1,0 +1,105 @@
+{
+  "domain": "burlingtoninvestors.com",
+  "base_domain": "burlingtoninvestors.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.p08.dynect.net",
+      "ns2.p08.dynect.net",
+      "ns3.p08.dynect.net",
+      "ns1.p08.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "mailhost3.coat.com",
+        "addresses": [
+          "148.163.145.41"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "mailhost4.coat.com",
+        "addresses": [
+          "148.163.141.42"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailhost3.coat.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mailhost3.coat.com'. (_ssl.c:1129)",
+      "mailhost4.coat.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mailhost4.coat.com'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:204.194.87.57 ip4:204.194.86.53 ip4:204.194.83.32 ip4:64.70.86.62 include:spf-00013201.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "204.194.87.57",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.194.86.53",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.194.83.32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "64.70.86.62",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00013201.pphosted.com",
+          "record": "v=spf1 ip4:148.163.141.42 ip4:148.163.145.41",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.141.42",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.145.41",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

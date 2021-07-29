@@ -1,0 +1,115 @@
+{
+  "domain": "aviva.com",
+  "base_domain": "aviva.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.cscdns.net",
+      "dns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "46.226.52.104",
+          "46.226.52.108",
+          "46.226.52.194",
+          "46.226.52.200",
+          "46.226.52.204",
+          "46.226.52.98",
+          "85.158.142.104",
+          "85.158.142.108",
+          "85.158.142.194",
+          "85.158.142.201",
+          "85.158.142.204",
+          "85.158.142.98"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "18.157.59.168",
+          "3.67.205.42"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.eu.messagelabs.com",
+      "STARTTLS is not supported on cluster8a.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "aviva.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

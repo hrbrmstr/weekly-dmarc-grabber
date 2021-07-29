@@ -1,0 +1,121 @@
+{
+  "domain": "ramsayhealth.com.au",
+  "base_domain": "ramsayhealth.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a10-64.akam.net",
+      "a1-161.akam.net",
+      "a8-64.akam.net",
+      "a7-67.akam.net",
+      "a4-66.akam.net",
+      "a3-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:0ab4582d4969955@rep.dmarcanalyzer.com; ruf=mailto:0ab4582d4969955@for.dmarcanalyzer.com; pct=100; fo=1;",
+    "valid": true,
+    "location": "ramsayhealth.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0ab4582d4969955@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0ab4582d4969955@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

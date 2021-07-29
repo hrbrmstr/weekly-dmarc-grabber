@@ -1,0 +1,125 @@
+{
+  "domain": "ferrexpo.com",
+  "base_domain": "ferrexpo.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.registrar-servers.com",
+      "pdns1.registrar-servers.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": "v=spf1 ip4:194.153.128.156/32 ip4:195.245.81.3/32 ip4:185.117.165.35/32 ip4:194.153.128.252/32 include:u18282421.wl172.sendgrid.net mx -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "194.153.128.156/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.245.81.3/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.117.165.35/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.153.128.252/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "webmail.ferrexpo.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "u18282421.wl172.sendgrid.net",
+          "record": "v=spf1 ip4:198.21.0.172 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "198.21.0.172",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject;",
+    "valid": true,
+    "location": "ferrexpo.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "domain": "smm.co.jp",
+  "base_domain": "smm.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.mss.stnet.co.jp",
+      "ns.smm.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:210.157.229.224/28 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.157.229.224/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.smm.co.jp\n\nv=spf1 +ip4:210.157.229.224/28 ~all"
+  }
+}
