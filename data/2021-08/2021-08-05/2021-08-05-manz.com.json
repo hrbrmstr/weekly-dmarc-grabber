@@ -1,0 +1,71 @@
+{
+  "domain": "manz.com",
+  "base_domain": "manz.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns42.digiwerk.de",
+      "ns24.digiwerk.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail03.manz.com",
+        "addresses": [
+          "212.21.172.227"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail03.manz.com: Could not connect:  SMTP error code 550"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:78.46.0.199 ip4:212.21.172.227 ip4:188.40.7.97 -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "188.40.7.97",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail03.manz.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "78.46.0.199",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.21.172.227",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "188.40.7.97",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

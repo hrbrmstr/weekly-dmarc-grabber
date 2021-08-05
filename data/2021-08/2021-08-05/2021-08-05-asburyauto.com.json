@@ -1,0 +1,59 @@
+{
+  "domain": "asburyauto.com",
+  "base_domain": "asburyauto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns08.domaincontrol.com",
+      "pdns07.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on us-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on us-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query asburyauto.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:db744c1f1cf6536@rep.dmarcanalyzer.com; ruf=mailto:db744c1f1cf6536@for.dmarcanalyzer.com; pct=100; sp=none; fo=0:1:d:s;",
+    "valid": false,
+    "location": "asburyauto.com",
+    "error": "fo DMARC tag options 0 and 1 are mutually exclusive"
+  }
+}

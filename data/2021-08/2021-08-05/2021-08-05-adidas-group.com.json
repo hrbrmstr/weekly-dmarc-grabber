@@ -1,0 +1,93 @@
+{
+  "domain": "adidas-group.com",
+  "base_domain": "adidas-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "sec2.rcode0.net",
+      "sec1.rcode0.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "adidasgroup-com01e.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.1.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on adidasgroup-com01e.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "adidas-group.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - All nameservers failed to answer the query emaildefense.proofpoint.com. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

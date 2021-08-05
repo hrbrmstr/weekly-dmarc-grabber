@@ -1,0 +1,104 @@
+{
+  "domain": "verizon.com",
+  "base_domain": "verizon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.edgecastdns.net",
+      "ns2.edgecastdns.net",
+      "ns3.edgecastdns.net",
+      "ns4.edgecastdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 15,
+        "hostname": "mxa-0024a201.gslb.pphosted.com",
+        "addresses": [
+          "148.163.153.92"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 15,
+        "hostname": "mxb-0024a201.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.93"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0024a201.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0024a201.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net; rf=afrf; pct=100",
+    "valid": true,
+    "location": "verizon.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - All nameservers failed to answer the query auth.returnpath.net. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

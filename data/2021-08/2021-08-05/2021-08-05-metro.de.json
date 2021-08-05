@@ -1,0 +1,92 @@
+{
+  "domain": "metro.de",
+  "base_domain": "metro.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.f5cloudservices.com",
+      "ns2.f5cloudservices.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "smtp.metro.info",
+        "addresses": [
+          "164.139.39.7",
+          "164.61.234.135"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "smtp.metro.info: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:metro@rua.dmp.cisco.com",
+    "valid": true,
+    "location": "metro.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "metro@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

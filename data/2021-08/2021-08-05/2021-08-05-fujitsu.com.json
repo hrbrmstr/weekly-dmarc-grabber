@@ -1,0 +1,100 @@
+{
+  "domain": "fujitsu.com",
+  "base_domain": "fujitsu.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a22-65.akam.net",
+      "a4-67.akam.net",
+      "a3-66.akam.net",
+      "a1-171.akam.net",
+      "a5-64.akam.net",
+      "a10-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "All nameservers failed to answer the query fujitsu.com. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; fo=1; rua=mailto:fj-rmc-rua@dl.jp.fujitsu.com,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:fj-rmc-ruf@dl.jp.fujitsu.com",
+    "valid": true,
+    "location": "fujitsu.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fj-rmc-rua@dl.jp.fujitsu.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fj-rmc-ruf@dl.jp.fujitsu.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

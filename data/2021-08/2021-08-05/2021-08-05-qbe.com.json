@@ -1,0 +1,114 @@
+{
+  "domain": "qbe.com",
+  "base_domain": "qbe.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-117.akam.net",
+      "a22-66.akam.net",
+      "a11-64.akam.net",
+      "a3-65.akam.net",
+      "a26-66.akam.net",
+      "a10-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.101",
+          "67.219.246.110",
+          "67.219.246.197",
+          "67.219.246.206",
+          "67.219.250.101",
+          "67.219.250.110",
+          "67.219.250.197",
+          "67.219.250.206"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.us.messagelabs.com",
+        "addresses": [
+          "34.233.150.202",
+          "54.160.41.177"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster8.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "STARTTLS is not supported on cluster8a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:secops@qbe.com",
+    "valid": true,
+    "location": "qbe.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "secops@qbe.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

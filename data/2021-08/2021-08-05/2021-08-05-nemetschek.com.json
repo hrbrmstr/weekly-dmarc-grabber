@@ -1,0 +1,49 @@
+{
+  "domain": "nemetschek.com",
+  "base_domain": "nemetschek.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nameserver-2-io.maxcluster.net",
+      "nameserver-1-io.maxcluster.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "email-01.nemetschek.com",
+        "addresses": [
+          "212.204.68.72"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "email-02.nemetschek.com",
+        "addresses": [
+          "212.204.68.73"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "email-01.nemetschek.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "email-02.nemetschek.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  }
+}

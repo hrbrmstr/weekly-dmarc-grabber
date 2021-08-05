@@ -1,0 +1,218 @@
+{
+  "domain": "saracen.com.au",
+  "base_domain": "saracen.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-03.azure-dns.com",
+      "ns2-03.azure-dns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "saracen-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on saracen-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:52.243.79.35 a:hr_emails.actionhrm.mx include:spf.protection.outlook.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "52.243.79.35",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "159.135.227.150",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=reject;pct=100;adkim=r;aspf=r;rua=mailto:dmarc_rua@saracen.com.au;ruf=mailto:dmarc_rua@saracen.com.au;ri=86400;fo=1",
+    "valid": true,
+    "location": "saracen.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@saracen.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@saracen.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

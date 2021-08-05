@@ -1,0 +1,134 @@
+{
+  "domain": "gm.com",
+  "base_domain": "gm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsx4.gm.com",
+      "nsx3.gm.com",
+      "nsx2.gm.com",
+      "nsx1.gm.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.imr.gm.com",
+        "addresses": [
+          "198.208.68.62",
+          "198.208.68.70",
+          "198.208.69.107",
+          "198.208.69.108",
+          "198.208.69.109"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.imr.gm.com",
+        "addresses": [
+          "198.208.56.255",
+          "198.208.56.35",
+          "198.208.57.85",
+          "198.208.57.86",
+          "198.208.57.87"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;ri=3600;rua=mailto:gm@rua.dmp.cisco.com,mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_agg@vali.email;ruf=mailto:gm@ruf.dmp.cisco.com,mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "gm.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "gm@rua.dmp.cisco.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "gm@ruf.dmp.cisco.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

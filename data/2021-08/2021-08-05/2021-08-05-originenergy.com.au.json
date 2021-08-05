@@ -1,0 +1,123 @@
+{
+  "domain": "originenergy.com.au",
+  "base_domain": "originenergy.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1747.awsdns-26.co.uk",
+      "ns-54.awsdns-06.com",
+      "ns-998.awsdns-60.net",
+      "ns-1282.awsdns-32.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.hc965-15.c3s2.iphmx.com",
+        "addresses": [
+          "216.71.136.250",
+          "216.71.139.14",
+          "216.71.139.15",
+          "216.71.159.160",
+          "216.71.159.166",
+          "216.71.159.168"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.hc965-15.c3s2.iphmx.com",
+        "addresses": [
+          "216.71.136.250",
+          "216.71.139.14",
+          "216.71.139.15",
+          "216.71.159.160",
+          "216.71.159.166",
+          "216.71.159.168"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc965-15.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.hc965-15.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:origin-energy@rua.agari.com; ruf=mailto:origin-energy@ruf.agari.com",
+    "valid": true,
+    "location": "originenergy.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "origin-energy@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "origin-energy@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
