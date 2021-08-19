@@ -1,0 +1,116 @@
+{
+  "domain": "jtcgroup.com",
+  "base_domain": "jtcgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "e.itconsult-dns.biz",
+      "d.itconsult-dns.co.uk",
+      "a.itconsult-dns.net",
+      "c.itconsult-dns.je",
+      "b.itconsult-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query jtcgroup.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:049dc1200371489@rep.dmarcanalyzer.com; ruf=mailto:049dc1200371489@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "jtcgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

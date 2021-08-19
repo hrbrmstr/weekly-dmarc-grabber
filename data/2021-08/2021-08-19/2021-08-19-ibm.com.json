@@ -1,0 +1,108 @@
+{
+  "domain": "ibm.com",
+  "base_domain": "ibm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usc2.akam.net",
+      "eur2.akam.net",
+      "ns1-99.akam.net",
+      "ns1-206.akam.net",
+      "asia3.akam.net",
+      "usc3.akam.net",
+      "eur5.akam.net",
+      "usw2.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx0a-001b2d01.pphosted.com",
+        "addresses": [
+          "148.163.156.1"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx0b-001b2d01.pphosted.com",
+        "addresses": [
+          "148.163.158.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-001b2d01.pphosted.com",
+      "SSL/TLS is not supported on mx0b-001b2d01.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "ibm.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

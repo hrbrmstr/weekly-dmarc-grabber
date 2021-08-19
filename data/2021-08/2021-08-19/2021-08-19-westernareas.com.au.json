@@ -1,0 +1,69 @@
+{
+  "domain": "westernareas.com.au",
+  "base_domain": "westernareas.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.server-cpanel.com",
+      "ns1.server-cpanel.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mail.westernareas.com.au",
+        "addresses": [
+          "110.145.151.154"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.westernareas.com.au: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a +mx +ip4:203.210.102.62 +mx:mail.westernareas.com.au +ip4:110.145.151.154 -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "mail.westernareas.com.au does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "43.250.140.11",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail.westernareas.com.au",
+          "mechanism": "mx"
+        },
+        {
+          "value": "203.210.102.62",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "110.145.151.154",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

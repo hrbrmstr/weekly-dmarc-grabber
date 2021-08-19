@@ -1,0 +1,113 @@
+{
+  "domain": "nationwide.com",
+  "base_domain": "nationwide.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2638-63.iphmx.com",
+        "addresses": [
+          "216.71.149.195",
+          "68.232.149.72"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2638-63.iphmx.com",
+        "addresses": [
+          "216.71.149.195",
+          "68.232.149.72"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc2638-63.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.hc2638-63.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:dmarcrua@nationwide.com;ruf=mailto:dmarcruf@nationwide.com",
+    "valid": true,
+    "location": "nationwide.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcrua@nationwide.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcruf@nationwide.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

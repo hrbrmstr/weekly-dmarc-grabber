@@ -1,0 +1,112 @@
+{
+  "domain": "perpetual.com.au",
+  "base_domain": "perpetual.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.perpetual.com.au",
+      "dns0.optus.net.au",
+      "dns4.perpetual.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.102",
+          "67.219.246.111",
+          "67.219.246.198",
+          "67.219.246.207",
+          "67.219.246.81",
+          "67.219.250.111",
+          "67.219.250.198",
+          "67.219.250.207",
+          "67.219.250.81"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9a.us.messagelabs.com",
+        "addresses": [
+          "3.227.150.164",
+          "52.2.240.34"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster9.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "STARTTLS is not supported on cluster9a.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster9a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none; rua=mailto:dmarc@perpetual.com.au",
+    "valid": true,
+    "location": "perpetual.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@perpetual.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

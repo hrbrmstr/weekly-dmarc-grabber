@@ -1,0 +1,95 @@
+{
+  "domain": "alsglobal.com",
+  "base_domain": "alsglobal.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.easydns.net",
+      "dns1.easydns.com",
+      "dns3.easydns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "alsglobal-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.71.202 is mail-me3aus010202.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-me3aus010202.inbound.protection.outlook.com do not resolve to 104.47.71.202",
+      "SSL/TLS is not supported on alsglobal-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query alsglobal.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "alsglobal.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

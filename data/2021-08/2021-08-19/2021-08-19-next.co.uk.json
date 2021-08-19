@@ -1,0 +1,139 @@
+{
+  "domain": "next.co.uk",
+  "base_domain": "next.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.emea.email.fireeyecloud.com",
+        "addresses": [
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.emea.email.fireeyecloud.com",
+        "addresses": [
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.emea.email.fireeyecloud.com",
+        "addresses": [
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.emea.email.fireeyecloud.com",
+        "addresses": [
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on primary.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt1.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.emea.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; fo=1; ri=3600; rua=mailto:b47e7205@inbox.ondmarc.com; ruf=mailto:b47e7205@inbox.ondmarc.com;",
+    "valid": true,
+    "location": "next.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "b47e7205@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "b47e7205@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

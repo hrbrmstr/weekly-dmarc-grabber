@@ -1,0 +1,213 @@
+{
+  "domain": "mmc.com",
+  "base_domain": "mmc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns02.mmc.com",
+      "ns01.mmc.com",
+      "ns03.mmc.com",
+      "ns04.mmc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx07.marsh.com",
+        "addresses": [
+          "205.156.137.65"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx08.marsh.com",
+        "addresses": [
+          "205.156.137.118"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx09.marsh.com",
+        "addresses": [
+          "205.156.137.119"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx10.marsh.com",
+        "addresses": [
+          "205.156.137.70"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx11.marsh.com",
+        "addresses": [
+          "205.156.137.71"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx12.marsh.com",
+        "addresses": [
+          "205.156.137.72"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx13.marsh.com",
+        "addresses": [
+          "205.156.137.73"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx50.marsh.com",
+        "addresses": [
+          "168.168.42.23"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx51.marsh.com",
+        "addresses": [
+          "168.168.42.24"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx52.marsh.com",
+        "addresses": [
+          "168.168.42.40"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx53.marsh.com",
+        "addresses": [
+          "168.168.42.41"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx54.marsh.com",
+        "addresses": [
+          "168.168.42.96"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx55.marsh.com",
+        "addresses": [
+          "168.168.42.35"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx07.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx08.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx09.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx10.marsh.com: Connection refused",
+      "mx11.marsh.com: Connection refused",
+      "mx12.marsh.com: Connection refused",
+      "mx13.marsh.com: Connection refused",
+      "mx50.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx51.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx52.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx53.marsh.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx54.marsh.com: Connection refused",
+      "mx55.marsh.com: Connection refused"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query mmc.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_agg@vali.email; fo=1; ri=3600",
+    "valid": true,
+    "location": "mmc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

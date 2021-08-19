@@ -1,0 +1,104 @@
+{
+  "domain": "corteva.com",
+  "base_domain": "corteva.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns216.ultradns.com",
+      "pdns216.ultradns.biz",
+      "pdns216.ultradns.org",
+      "pdns216.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-0024af01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.140"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-0024af01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.140"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0024af01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0024af01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; fo=1; ri=86400; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_support@corteva.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_support@corteva.com",
+    "valid": true,
+    "location": "corteva.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_support@corteva.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_support@corteva.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

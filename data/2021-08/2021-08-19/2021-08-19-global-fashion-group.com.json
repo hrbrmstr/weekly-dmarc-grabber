@@ -1,0 +1,138 @@
+{
+  "domain": "global-fashion-group.com",
+  "base_domain": "global-fashion-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "diva.ns.cloudflare.com",
+      "max.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.206.27",
+          "2607:f8b0:400d:c0e::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1b",
+          "64.233.186.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.27",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "209.85.202.26",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1b does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query global-fashion-group.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc@global-fashion-group.com; fo=1; aspf=r; adkim=r",
+    "valid": true,
+    "location": "global-fashion-group.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@global-fashion-group.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}
