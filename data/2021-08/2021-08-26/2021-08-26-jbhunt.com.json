@@ -1,0 +1,51 @@
+{
+  "domain": "jbhunt.com",
+  "base_domain": "jbhunt.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-02.azure-dns.com",
+      "ns2-02.azure-dns.net",
+      "ns3-02.azure-dns.org",
+      "ns4-02.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx0a-00134e01.pphosted.com",
+        "addresses": [
+          "148.163.146.17"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx0b-00134e01.pphosted.com",
+        "addresses": [
+          "148.163.143.212"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-00134e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-00134e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=0:1:d:s; rua=mailto:DMARC.Notifications@jbhunt.com; ruf=mailto:DMARC.Notifications@jbhunt.com",
+    "valid": false,
+    "location": "jbhunt.com",
+    "error": "fo DMARC tag options 0 and 1 are mutually exclusive"
+  }
+}

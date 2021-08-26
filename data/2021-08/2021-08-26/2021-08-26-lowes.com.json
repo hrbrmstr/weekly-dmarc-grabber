@@ -1,0 +1,55 @@
+{
+  "domain": "lowes.com",
+  "base_domain": "lowes.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "use1.akam.net",
+      "asia1.akam.net",
+      "ns1-42.akam.net",
+      "eur2.akam.net",
+      "use2.akam.net",
+      "ns1-216.akam.net",
+      "use4.akam.net",
+      "usc5.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00308801.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.82"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00308801.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.82"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00308801.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00308801.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query lowes.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

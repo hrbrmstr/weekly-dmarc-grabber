@@ -1,0 +1,148 @@
+{
+  "domain": "rentokil-initial.com",
+  "base_domain": "rentokil-initial.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ha3.markmonitor.zone",
+      "ha1.markmonitor.zone",
+      "ha2.markmonitor.zone",
+      "ha4.markmonitor.zone"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "142.250.138.27",
+          "2607:f8b0:4023:1006::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.26",
+          "2607:f8b0:4001:c56::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.26",
+          "2607:f8b0:4023:1::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "173.194.77.27",
+          "2607:f8b0:4023:401::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "173.194.219.26",
+          "2607:f8b0:4002:c03::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The domain rw-in-f27.1e100.net does not exist",
+      "The reverse DNS of 142.250.138.27 is rw-in-f27.1e100.net, but the A/AAAA DNS records for rw-in-f27.1e100.net do not resolve to 142.250.138.27",
+      "The domain rw-in-f27.1e100.net does not exist",
+      "The reverse DNS of 2607:f8b0:4023:1006::1b is rw-in-f27.1e100.net, but the A/AAAA DNS records for rw-in-f27.1e100.net do not resolve to 2607:f8b0:4023:1006::1b",
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "The domain gc-in-f27.1e100.net does not exist",
+      "The reverse DNS of 173.194.77.27 is gc-in-f27.1e100.net, but the A/AAAA DNS records for gc-in-f27.1e100.net do not resolve to 173.194.77.27",
+      "The domain gc-in-f27.1e100.net does not exist",
+      "The reverse DNS of 2607:f8b0:4023:401::1b is gc-in-f27.1e100.net, but the A/AAAA DNS records for gc-in-f27.1e100.net do not resolve to 2607:f8b0:4023:401::1b",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;pct=0;fo=1;ri=3600;rua=mailto:da7e8798@inbox.ondmarc.com",
+    "valid": true,
+    "location": "rentokil-initial.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 0,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "da7e8798@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

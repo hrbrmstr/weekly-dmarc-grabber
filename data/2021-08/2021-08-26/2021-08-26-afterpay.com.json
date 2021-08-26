@@ -1,0 +1,158 @@
+{
+  "domain": "afterpay.com",
+  "base_domain": "afterpay.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "logan.ns.cloudflare.com",
+      "pat.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "142.250.138.26",
+          "2607:f8b0:4023:1006::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.27",
+          "2607:f8b0:4001:c56::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.27",
+          "2607:f8b0:4023:1::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "173.194.77.26",
+          "2607:f8b0:4023:401::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "173.194.219.27",
+          "2607:f8b0:4002:c03::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The domain rw-in-f26.1e100.net does not exist",
+      "The reverse DNS of 142.250.138.26 is rw-in-f26.1e100.net, but the A/AAAA DNS records for rw-in-f26.1e100.net do not resolve to 142.250.138.26",
+      "The domain rw-in-f27.1e100.net does not exist",
+      "The reverse DNS of 2607:f8b0:4023:1006::1b is rw-in-f27.1e100.net, but the A/AAAA DNS records for rw-in-f27.1e100.net do not resolve to 2607:f8b0:4023:1006::1b",
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "The domain ma-in-f27.1e100.net does not exist",
+      "The reverse DNS of 172.253.113.27 is ma-in-f27.1e100.net, but the A/AAAA DNS records for ma-in-f27.1e100.net do not resolve to 172.253.113.27",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "2607:f8b0:4023:401::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; pct=100; rua=mailto:dmarc_agg@vali.email,mailto:ffccc570bbe9970@rep.dmarcanalyzer.com; ruf=mailto:ffccc570bbe9970@for.dmarcanalyzer.com;",
+    "valid": true,
+    "location": "afterpay.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ffccc570bbe9970@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ffccc570bbe9970@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}
