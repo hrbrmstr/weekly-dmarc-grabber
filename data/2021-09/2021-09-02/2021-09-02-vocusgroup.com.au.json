@@ -1,0 +1,53 @@
+{
+  "domain": "vocusgroup.com.au",
+  "base_domain": "vocusgroup.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns03.vocus.net.au",
+      "ns02.vocus.net.au",
+      "ns01.vocus.net.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp01.vocus.com.au",
+        "addresses": [
+          "202.138.49.66"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "smtp02.vocus.com.au",
+        "addresses": [
+          "202.138.49.67"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 202.138.49.66 is smtp01.vocus.com.au, but the A/AAAA DNS records for smtp01.vocus.com.au do not resolve to 202.138.49.66",
+      "SSL/TLS is not supported on smtp01.vocus.com.au",
+      "SSL/TLS is not supported on smtp02.vocus.com.au"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:local._spf.vocus.net include:additional._spf.vocus.net ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

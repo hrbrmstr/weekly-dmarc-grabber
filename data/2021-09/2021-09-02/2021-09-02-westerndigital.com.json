@@ -1,0 +1,141 @@
+{
+  "domain": "westerndigital.com",
+  "base_domain": "westerndigital.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ans2.wdc.com",
+      "ans1.wdc.com",
+      "ns2.wdc.com",
+      "ns1.wdc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hgst.iphmx.com",
+        "addresses": [
+          "216.71.153.141",
+          "216.71.153.144",
+          "216.71.154.42",
+          "216.71.154.45",
+          "68.232.141.245",
+          "68.232.143.124"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hgst.iphmx.com",
+        "addresses": [
+          "216.71.153.141",
+          "216.71.153.144",
+          "216.71.154.42",
+          "216.71.154.45",
+          "68.232.141.245",
+          "68.232.143.124"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 216.71.153.141 is esa3.hgst.iphmx.com, but the A/AAAA DNS records for esa3.hgst.iphmx.com do not resolve to 216.71.153.141",
+      "mx1.hgst.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)",
+      "mx2.hgst.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:206.189.206.152 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "206.189.206.152",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:dmarcreports@westerndigital.com;ruf=mailto:dmarcreports@westerndigital.com",
+    "valid": true,
+    "location": "westerndigital.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@westerndigital.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@westerndigital.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

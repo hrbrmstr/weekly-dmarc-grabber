@@ -1,0 +1,63 @@
+{
+  "domain": "ricoh.co.jp",
+  "base_domain": "ricoh.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.jp.ricoh.com",
+      "ns1.jp.ricoh.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-gw1.jp.ricoh.com",
+        "addresses": [
+          "133.139.20.60"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail-gw1.jp.ricoh.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.248.73.0/24 ip4:133.139.20.0/24 ip4:133.139.88.0/24 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.248.73.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.139.20.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.139.88.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

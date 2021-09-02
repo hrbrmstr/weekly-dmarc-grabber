@@ -1,0 +1,51 @@
+{
+  "domain": "babcockinternational.com",
+  "base_domain": "babcockinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001c8e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.185"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001c8e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.185"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-001c8e01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-001c8e01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query babcockinternational.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:~DMARCReporting@babcockinternational.com; ruf=mailto:~DMARCReporting@babcockinternational.com",
+    "valid": false,
+    "location": "babcockinternational.com",
+    "error": "Error: Expected end_of_statement or ; at position 35 in: v=DMARC1; p=none; fo=1; rua=mailto:~DMARCReporting@babcockinternational.com; ruf=mailto:~DMARCReporting@babcockinternational.com"
+  }
+}

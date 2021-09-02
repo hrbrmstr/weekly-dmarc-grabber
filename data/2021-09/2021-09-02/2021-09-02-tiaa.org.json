@@ -1,0 +1,112 @@
+{
+  "domain": "tiaa.org",
+  "base_domain": "tiaa.org",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsb.tiaa-cref.org",
+      "nss.tiaa-cref.org",
+      "cltb.tiaa-cref.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cobmc1m4isea01.tiaa-cref.org",
+        "addresses": [
+          "143.165.144.33"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "nc89acb01isea01.tiaa-cref.org",
+        "addresses": [
+          "143.165.49.33"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cobmc1m4isea01.tiaa-cref.org: Connection timed out",
+      "nc89acb01isea01.tiaa-cref.org: encoding with 'idna' codec failed (SMTPError: Connection timed out)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.5 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:tiaa@rua.agari.com; ruf=mailto:tiaa@ruf.agari.com",
+    "valid": true,
+    "location": "tiaa.org",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

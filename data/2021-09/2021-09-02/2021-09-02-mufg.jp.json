@@ -1,0 +1,100 @@
+{
+  "domain": "mufg.jp",
+  "base_domain": "mufg.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.mss.mind.ne.jp",
+      "a5-66.akam.net",
+      "a8-67.akam.net",
+      "a26-65.akam.net",
+      "a1-10.akam.net",
+      "tokio.mind.ad.jp",
+      "a16-64.akam.net",
+      "a11-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "msgwe.bk.mufg.jp",
+        "addresses": [
+          "52.194.125.165",
+          "52.194.39.249"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "msgww.bk.mufg.jp",
+        "addresses": [
+          "13.208.120.106"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on msgwe.bk.mufg.jp",
+      "SSL/TLS is not supported on msgww.bk.mufg.jp"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=900",
+    "valid": true,
+    "location": "mufg.jp",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 900,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

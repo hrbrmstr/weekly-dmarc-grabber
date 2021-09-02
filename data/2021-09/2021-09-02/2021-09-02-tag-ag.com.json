@@ -1,0 +1,315 @@
+{
+  "domain": "tag-ag.com",
+  "base_domain": "tag-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.kcs-netz.de",
+      "ns1.kcs-netz.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailin2.tag-ag.com",
+        "addresses": [
+          "46.228.205.99"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailin3.tag-ag.com",
+        "addresses": [
+          "213.61.90.91"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailin4.tag-ag.com",
+        "addresses": [
+          "217.110.13.18"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailin2.tag-ag.com: Connection timed out",
+      "mailin3.tag-ag.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailin4.tag-ag.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:213.179.66.67 ip4:213.61.90.91 ip4:217.110.13.18 ip4:213.179.68.141 ip4:213.179.68.144 ip4:46.228.205.99 include:spf.eqs-externaladdress.com include:mx-spf.eqs-service.com include:mailing.eqs.com include:agenturserver.de include:spf.mailjet.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [
+      "spf.eqs-externaladdress.com does not have any MX records",
+      "mx-spf.eqs-service.com does not have any MX records",
+      "Duplicate include: spf.mailjet.com"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "213.179.66.67",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.61.90.91",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.110.13.18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.179.68.141",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.179.68.144",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "46.228.205.99",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.eqs-externaladdress.com",
+          "record": "v=spf1 ip4:212.18.1.50 ip4:212.18.21.82 mx -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.1.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.21.82",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "spf.eqs-externaladdress.com does not have any MX records"
+          ]
+        },
+        {
+          "domain": "mx-spf.eqs-service.com",
+          "record": "v=spf1 ip4:212.18.19.53 ip4:212.18.19.58 mx -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.19.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.19.58",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "mx-spf.eqs-service.com does not have any MX records"
+          ]
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "agenturserver.de",
+          "record": "v=spf1 ip4:188.94.249.248/29 ip4:188.94.250.248/29 ip4:188.94.251.248/29 ip4:188.94.252.252/30 ip4:185.15.192.32/27 ip4:178.16.56.32/27 ip4:185.15.192.32/28 ip4:153.92.196.160/28 ip4:37.202.1.52/30 ip4:37.202.6.52/30 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "188.94.249.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.250.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.251.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.252.252/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.16.56.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.92.196.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.1.52/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.6.52/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; fo=1:d:s; rua=mailto:dmarc@tag-ag.com",
+    "valid": true,
+    "location": "tag-ag.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1",
+          "d",
+          "s"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@tag-ag.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

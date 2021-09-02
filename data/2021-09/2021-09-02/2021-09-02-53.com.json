@@ -1,0 +1,126 @@
+{
+  "domain": "53.com",
+  "base_domain": "53.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-66.akam.net",
+      "a10-65.akam.net",
+      "a7-65.akam.net",
+      "a1-80.akam.net",
+      "a14-67.akam.net",
+      "a24-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw3.53.com",
+        "addresses": [
+          "216.82.180.40"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgw5.53.com",
+        "addresses": [
+          "216.82.180.36"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgw7.53.com",
+        "addresses": [
+          "216.131.54.31"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgw9.53.com",
+        "addresses": [
+          "216.131.54.100"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailgw3.53.com: Connection timed out",
+      "mailgw5.53.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailgw7.53.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailgw9.53.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.2 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; pct=100; ri=3600; rua=mailto:fifththird-dmarc@datafeeds.phishlabs.com; ruf=mailto:fifththird-dmarc@datafeeds.phishlabs.com",
+    "valid": true,
+    "location": "53.com",
+    "warnings": [
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about 53.com - Authorization record not found: 53.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\"",
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about 53.com - Authorization record not found: 53.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:fifththird-dmarc@datafeeds.phishlabs.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:fifththird-dmarc@datafeeds.phishlabs.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}
