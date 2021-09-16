@@ -1,0 +1,115 @@
+{
+  "domain": "playtech.com",
+  "base_domain": "playtech.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns6.ultradns.co.uk",
+      "pdns5.ultradns.info",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns4.ultradns.org",
+      "pdns3.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "cust56684-1-in.mailcontrol.com",
+        "addresses": [
+          "85.115.56.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "cust56684-2-in.mailcontrol.com",
+        "addresses": [
+          "85.115.58.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cust56684-1-in.mailcontrol.com",
+      "SSL/TLS is not supported on cust56684-2-in.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; fo=1; ri=3600; rua=mailto:dmarc.reports@playtech.com; ruf=mailto:dmarc.reports@playtech.com;",
+    "valid": true,
+    "location": "playtech.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reports@playtech.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reports@playtech.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

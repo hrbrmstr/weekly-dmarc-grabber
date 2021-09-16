@@ -1,0 +1,420 @@
+{
+  "domain": "recruit-holdings.co.jp",
+  "base_domain": "recruit-holdings.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-327.awsdns-40.com",
+      "ns-1776.awsdns-30.co.uk",
+      "ns-1298.awsdns-34.org",
+      "ns-706.awsdns-24.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.x.recruit.co.jp",
+        "addresses": [
+          "160.17.13.10"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "160.17.13.10 does not have any reverse DNS (PTR) records",
+      "mx.x.recruit.co.jp: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:x.recruit.co.jp ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "x.recruit.co.jp",
+          "record": "v=spf1 include:spf01.x.recruit.co.jp include:spf02.x.recruit.co.jp include:spf-bma.rec.mpme.jp include:spf.tricorn.net ~all",
+          "dns_lookups": 7,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf01.x.recruit.co.jp",
+                "record": "v=spf1 +ip4:160.17.0.0/16 +ip4:112.78.115.67 +ip4:117.120.54.64 +ip4:202.218.145.184 +ip4:202.248.172.32/27 +ip4:119.18.216.192/26 +ip4:124.108.34.0/24 +ip4:216.255.229.141 +ip4:180.131.141.0/24 include:spf.maildealer.jp include:spf.curumeru.jp ~all",
+                "dns_lookups": 2,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "160.17.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.78.115.67",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.54.64",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.218.145.184",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.248.172.32/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "119.18.216.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "124.108.34.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.255.229.141",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.131.141.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spf.maildealer.jp",
+                      "record": "v=spf1 ip4:180.147.237.124/32 ip4:219.122.254.254/32 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "180.147.237.124/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "219.122.254.254/32",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    },
+                    {
+                      "domain": "spf.curumeru.jp",
+                      "record": "v=spf1 ip4:180.211.84.128/26 ip4:180.211.84.192/26 ip4:180.211.86.0/25 ip4:180.211.87.0/26 ip4:116.197.174.0/26 ip4:116.197.173.192/26 ip4:116.197.174.64/26 ip4:180.211.87.128/26 ip4:116.197.171.128/27 ip4:116.197.175.96/27 ip4:103.120.185.192/26 ip4:58.191.37.0/24 ip4:58.191.38.0/24 ip4:58.191.39.0/24 ip4:218.251.75.0/24 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "180.211.84.128/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "180.211.84.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "180.211.86.0/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "180.211.87.0/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "116.197.174.0/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "116.197.173.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "116.197.174.64/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "180.211.87.128/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "116.197.171.128/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "116.197.175.96/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "103.120.185.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "58.191.37.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "58.191.38.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "58.191.39.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "218.251.75.0/24",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf02.x.recruit.co.jp",
+                "record": "v=spf1 +ip4:133.194.0.0/16 +ip4:210.148.164.0/23 +ip4:202.221.0.0/24 +ip4:202.32.52.0/23 +ip4:202.217.46.0/24 +ip4:61.121.198.88 +ip4:175.41.140.60 +ip4:175.41.140.81 +ip4:58.138.182.0/24 +ip4:202.177.195.2 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "133.194.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.148.164.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.221.0.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.32.52.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.217.46.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.121.198.88",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "175.41.140.60",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "175.41.140.81",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.138.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.177.195.2",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-bma.rec.mpme.jp",
+                "record": "v=spf1 ip4:106.186.67.0/24 ip4:106.186.92.192/26 ip4:125.29.57.64/26 ip4:106.185.82.0/23 ip4:106.185.84.0/23 ip4:106.185.96.0/22 ip4:106.185.100.0/23 ip4:18.180.53.0/24 ip4:106.184.19.0/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "106.186.67.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.186.92.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "125.29.57.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.82.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.84.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.96.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.100.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.180.53.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.184.19.0/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.tricorn.net",
+                "record": "v=spf1 include:spf1.tricorn.net ip4:202.218.77.128/25 ip4:203.183.233.128/25 ip4:203.183.236.0/24 ip4:203.183.137.128/25 ip4:61.195.171.0/27 ip4:202.230.13.128/25 ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "202.218.77.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.183.233.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.183.236.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.183.137.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.195.171.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.230.13.128/25",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spf1.tricorn.net",
+                      "record": "v=spf1 ip4:211.10.12.192/26 ip4:202.218.125.64/26 ip4:203.183.50.128/25 ip4:202.234.6.128/25 ip4:210.129.210.0/25 ip4:202.218.77.0/25 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "211.10.12.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "202.218.125.64/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "203.183.50.128/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "202.234.6.128/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "210.129.210.0/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "202.218.77.0/25",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

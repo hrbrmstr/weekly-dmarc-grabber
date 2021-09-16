@@ -1,0 +1,125 @@
+{
+  "domain": "merckgroup.com",
+  "base_domain": "merckgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns02.brandshelter.net",
+      "ns01.brandshelter.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.eu.messagelabs.com",
+        "addresses": [
+          "46.226.52.106",
+          "46.226.52.193",
+          "46.226.52.202",
+          "46.226.52.97",
+          "85.158.142.106",
+          "85.158.142.196",
+          "85.158.142.202",
+          "85.158.142.97"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.eu.messagelabs.com",
+        "addresses": [
+          "18.198.150.196",
+          "3.66.114.34"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster1.eu.messagelabs.com: Could not connect:  SMTP error code 450",
+      "STARTTLS is not supported on cluster1a.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; fo=1; rua=mailto:b4wunsj437@rua.powerdmarc.com, mailto:dmarc-report@merckgroup.com; ruf=mailto:dmarc-report@merckgroup.com",
+    "valid": true,
+    "location": "merckgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "b4wunsj437@rua.powerdmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

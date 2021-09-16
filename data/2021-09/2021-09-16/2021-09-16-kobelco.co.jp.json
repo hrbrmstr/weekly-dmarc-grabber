@@ -1,0 +1,99 @@
+{
+  "domain": "kobelco.co.jp",
+  "base_domain": "kobelco.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nst1.kobelco.co.jp",
+      "ns1.kobelco.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "ms1.kobelco.co.jp",
+        "addresses": [
+          "211.12.26.151"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "ms2.kobelco.co.jp",
+        "addresses": [
+          "121.83.203.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 80,
+        "hostname": "mst1.kobelco.co.jp",
+        "addresses": [
+          "210.254.100.134"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "ms1.kobelco.co.jp: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1129)",
+      "ms2.kobelco.co.jp: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:1129)",
+      "mst1.kobelco.co.jp: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:121.83.203.96/27 ip4:211.12.26.128/26 ip4:211.2.167.160/27 ip4:210.254.100.128/28 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "ms1.kobelco.co.jp",
+          "mechanism": "mx"
+        },
+        {
+          "value": "ms2.kobelco.co.jp",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mst1.kobelco.co.jp",
+          "mechanism": "mx"
+        },
+        {
+          "value": "121.83.203.96/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.12.26.128/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.2.167.160/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.254.100.128/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

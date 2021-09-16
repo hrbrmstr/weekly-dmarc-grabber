@@ -1,0 +1,125 @@
+{
+  "domain": "aveva.com",
+  "base_domain": "aveva.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns5.ultradns.info",
+      "pdns4.ultradns.org",
+      "pdns1.ultradns.net",
+      "pdns3.ultradns.org",
+      "pdns2.ultradns.net",
+      "pdns6.ultradns.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query aveva.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:aveva@rua.agari.com; ruf=mailto:aveva@ruf.agari.com",
+    "valid": true,
+    "location": "aveva.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aveva@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aveva@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "domain": "hamborner.de",
+  "base_domain": "hamborner.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.globvill.ruhr",
+      "dns.globvill.de",
+      "dns.voerde.globvill.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bdw-service.de",
+        "addresses": [
+          "185.155.190.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.bdw-service.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mail.bdw-service.de a:mail2.bdw-service.de ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.bdw-service.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "185.155.190.164",
+          "mechanism": "a"
+        },
+        {
+          "value": "185.155.190.165",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

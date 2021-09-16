@@ -1,0 +1,103 @@
+{
+  "domain": "normagroup.com",
+  "base_domain": "normagroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.k-k.de",
+      "dns.globvill.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "normagroup-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.2.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on normagroup-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx exists:%{i}.spf.normagroup.com include:spf.protection.outlook.com include:spf1.normagroup.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; ruf=mailto:DMARC.Administrators@normagroup.com; rua=mailto:DMARC.Administrators@normagroup.com; fo=1; ri=84600",
+    "valid": true,
+    "location": "normagroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC.Administrators@normagroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC.Administrators@normagroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 84600,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

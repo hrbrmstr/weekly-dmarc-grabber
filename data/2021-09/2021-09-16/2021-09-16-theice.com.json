@@ -1,0 +1,127 @@
+{
+  "domain": "theice.com",
+  "base_domain": "theice.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.p05.dynect.net",
+      "ns3.p05.dynect.net",
+      "ns2.p05.dynect.net",
+      "ns4.p05.dynect.net",
+      "edns1.ultradns.com",
+      "edns1.ultradns.net",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.theice.iphmx.com",
+        "addresses": [
+          "216.71.150.54",
+          "216.71.154.163",
+          "68.232.130.224",
+          "68.232.141.177",
+          "68.232.143.134",
+          "68.232.148.65"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.theice.iphmx.com",
+        "addresses": [
+          "216.71.150.54",
+          "216.71.154.163",
+          "68.232.130.224",
+          "68.232.141.177",
+          "68.232.143.134",
+          "68.232.148.65"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.theice.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.theice.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc-reports@ice.com; ruf=mailto:dmarc-forensics@ice.com; fo=1;",
+    "valid": true,
+    "location": "theice.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@ice.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensics@ice.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

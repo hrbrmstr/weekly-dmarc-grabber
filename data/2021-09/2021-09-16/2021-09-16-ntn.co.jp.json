@@ -1,0 +1,103 @@
+{
+  "domain": "ntn.co.jp",
+  "base_domain": "ntn.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.ntn.co.jp",
+      "ns02.ntn.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mgw05.ntn.co.jp",
+        "addresses": [
+          "211.16.245.161"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mgw06.ntn.co.jp",
+        "addresses": [
+          "211.16.245.162"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mgw05.ntn.co.jp",
+      "SSL/TLS is not supported on mgw05.ntn.co.jp",
+      "STARTTLS is not supported on mgw06.ntn.co.jp",
+      "SSL/TLS is not supported on mgw06.ntn.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:211.16.245.161/32 ip4:211.16.245.162/32 ip4:60.56.230.97/32 ip4:60.56.230.98/32 ip4:211.16.245.170/32 ip4:211.16.245.171/32 ip4:60.56.230.106/32 ip4:60.56.230.107/32 ip4:202.239.104.0/24 ip4:219.122.187.106/32 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "211.16.245.161/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.16.245.162/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.230.97/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.230.98/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.16.245.170/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.16.245.171/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.230.106/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.230.107/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.239.104.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "219.122.187.106/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "domain": "commscope.com",
+  "base_domain": "commscope.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.commscope.com",
+      "ns2.commscope.com",
+      "ns1.commscope.com",
+      "ns1.andrew.com",
+      "ns2.andrew.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.commscope.iphmx.com",
+        "addresses": [
+          "68.232.142.174",
+          "68.232.148.72"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.commscope.iphmx.com",
+        "addresses": [
+          "68.232.142.174",
+          "68.232.148.72"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.commscope.iphmx.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 68.232.142.174 is esa.commscope.iphmx.com, but the A/AAAA DNS records for esa.commscope.iphmx.com do not resolve to 68.232.142.174",
+      "SSL/TLS is not supported on mx2.commscope.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:ryafobpc@ag.dmarcian.com; ruf=mailto:ryafobpc@fr.dmarcian.com;",
+    "valid": true,
+    "location": "commscope.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ryafobpc@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ryafobpc@fr.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

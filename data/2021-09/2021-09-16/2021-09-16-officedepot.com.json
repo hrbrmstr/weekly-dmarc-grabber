@@ -1,0 +1,103 @@
+{
+  "domain": "officedepot.com",
+  "base_domain": "officedepot.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.ultradns.net",
+      "udns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns2.ultradns.net",
+      "pdns3.ultradns.org",
+      "pdns4.ultradns.org",
+      "pdns5.ultradns.info",
+      "pdns6.ultradns.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "officedepot-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on officedepot-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email,mailto:oddmarc@officedepot.com",
+    "valid": true,
+    "location": "officedepot.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "oddmarc@officedepot.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}
