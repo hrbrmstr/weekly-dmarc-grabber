@@ -1,0 +1,104 @@
+{
+  "domain": "jbhunt.com",
+  "base_domain": "jbhunt.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-02.azure-dns.info",
+      "ns3-02.azure-dns.org",
+      "ns2-02.azure-dns.net",
+      "ns1-02.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx0a-00134e01.pphosted.com",
+        "addresses": [
+          "148.163.146.17"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx0b-00134e01.pphosted.com",
+        "addresses": [
+          "148.163.143.212"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-00134e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-00134e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:DMARC.Notifications@jbhunt.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:DMARC.Notifications@jbhunt.com",
+    "valid": true,
+    "location": "jbhunt.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:DMARC.Notifications@jbhunt.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:DMARC.Notifications@jbhunt.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

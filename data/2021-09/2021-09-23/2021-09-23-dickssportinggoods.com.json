@@ -1,0 +1,99 @@
+{
+  "domain": "dickssportinggoods.com",
+  "base_domain": "dickssportinggoods.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.domainnetwork.com",
+      "ns2.domainnetwork.se",
+      "ns.domainnetwork.se"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00228b01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.159.194"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00228b01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.157.194"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00228b01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00228b01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=10;ri=86400;ruf=mailto:dmarcreports@dcsg.com;fo=1",
+    "valid": true,
+    "location": "dickssportinggoods.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found",
+      "dcsg.com does not indicate that it accepts DMARC reports about dickssportinggoods.com - Authorization record not found: dickssportinggoods.com._report._dmarc.dcsg.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 10,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarcreports@dcsg.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

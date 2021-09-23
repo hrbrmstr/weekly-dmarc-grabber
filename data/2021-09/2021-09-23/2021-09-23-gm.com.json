@@ -1,0 +1,59 @@
+{
+  "domain": "gm.com",
+  "base_domain": "gm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsx4.gm.com",
+      "nsx3.gm.com",
+      "nsx2.gm.com",
+      "nsx1.gm.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.imr.gm.com",
+        "addresses": [
+          "198.208.68.62",
+          "198.208.68.70",
+          "198.208.69.107",
+          "198.208.69.108",
+          "198.208.69.109"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.imr.gm.com",
+        "addresses": [
+          "198.208.56.255",
+          "198.208.56.35",
+          "198.208.57.85",
+          "198.208.57.86",
+          "198.208.57.87"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.gm.com\n\n"
+  }
+}

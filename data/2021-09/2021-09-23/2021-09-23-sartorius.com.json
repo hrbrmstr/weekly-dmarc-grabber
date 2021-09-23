@@ -1,0 +1,111 @@
+{
+  "domain": "sartorius.com",
+  "base_domain": "sartorius.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.eurodns.com",
+      "ns3.eurodns.com",
+      "ns2.eurodns.com",
+      "ns1.eurodns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "sartorius-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on sartorius-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=75; sp=reject; rua=mailto:24075288@inbox.ondmarc.com,mailto:dmarc-rua@sartorius.com; ruf=mailto:24075288@inbox.ondmarc.com; adkim=r; aspf=r; fo=0; rf=afrf; ri=3600",
+    "valid": true,
+    "location": "sartorius.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 75,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "24075288@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@sartorius.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "24075288@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      }
+    }
+  }
+}

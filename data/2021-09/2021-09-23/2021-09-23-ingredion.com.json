@@ -1,0 +1,49 @@
+{
+  "domain": "ingredion.com",
+  "base_domain": "ingredion.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsntc.ps.net",
+      "nsptc.ps.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004a4b01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.183"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004a4b01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.183"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-004a4b01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-004a4b01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query ingredion.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

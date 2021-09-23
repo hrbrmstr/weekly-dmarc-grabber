@@ -1,0 +1,91 @@
+{
+  "domain": "jnj.com",
+  "base_domain": "jnj.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.jnj.com",
+      "ns5.jnj.com",
+      "ns3.jnj.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": "v=spf1 include:%{d}.ce.spf-protect.dmp.cisco.com exists:%{i}._i.%{d}._d.espf.dmp.cisco.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.ce.spf-protect.dmp.cisco.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=quarantine; fo=1; ri=3600; rua=mailto:jnj@rua.dmp.cisco.com; ruf=mailto:jnj@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "jnj.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jnj@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jnj@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "domain": "uniper.energy",
+  "base_domain": "uniper.energy",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.uniperdns.net",
+      "ns1.uniperdns.net",
+      "ns2.uniperdns.net",
+      "ns4.uniperdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "uniper-energy.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.10.36",
+          "104.47.8.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on uniper-energy.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:re+vj2zvukageq@dmarc.postmarkapp.com; sp=none; aspf=r",
+    "valid": true,
+    "location": "uniper.energy",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "re+vj2zvukageq@dmarc.postmarkapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

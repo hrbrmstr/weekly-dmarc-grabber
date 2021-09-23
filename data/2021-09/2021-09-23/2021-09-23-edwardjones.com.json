@@ -1,0 +1,164 @@
+{
+  "domain": "edwardjones.com",
+  "base_domain": "edwardjones.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nspgdns-1.edwardjones.com",
+      "tspgdns-1.edwardjones.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "napasmss-1.edwardjones.com",
+        "addresses": [
+          "167.80.136.76"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "napsmgs-2.edwardjones.com",
+        "addresses": [
+          "167.80.137.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "tapasmss-1.edwardjones.com",
+        "addresses": [
+          "167.80.104.76"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "tapsmgs-2.edwardjones.com",
+        "addresses": [
+          "167.80.105.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "napsmgs-1.edwardjones.com",
+        "addresses": [
+          "167.80.136.189"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "tapsmgs-1.edwardjones.com",
+        "addresses": [
+          "167.80.104.189"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "napasmss-1.edwardjones.com: Could not connect:  SMTP error code 450",
+      "napsmgs-2.edwardjones.com: Could not connect:  SMTP error code 450",
+      "tapasmss-1.edwardjones.com: Could not connect:  SMTP error code 450",
+      "tapsmgs-2.edwardjones.com: Could not connect:  SMTP error code 450",
+      "napsmgs-1.edwardjones.com: Could not connect:  SMTP error code 450",
+      "tapsmgs-1.edwardjones.com: Could not connect:  SMTP error code 450"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;sp=none;pct=100;rua=mailto:jdmrcrpt@edwardjones.com,mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:jdmcfrpt@edwardjones.com,mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "edwardjones.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - All nameservers failed to answer the query emaildefense.proofpoint.com. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jdmrcrpt@edwardjones.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jdmcfrpt@edwardjones.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

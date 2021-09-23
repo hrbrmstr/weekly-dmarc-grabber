@@ -1,0 +1,53 @@
+{
+  "domain": "ovb.eu",
+  "base_domain": "ovb.eu",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.knipp.de",
+      "ns1.pallas.com",
+      "ns2.pallas.com",
+      "ns4.pallas.com",
+      "ns3.pallas.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.pallas-security.com",
+        "addresses": [
+          "194.45.33.62"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.pallas-security.com",
+        "addresses": [
+          "212.29.46.62"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.pallas-security.com",
+      "SSL/TLS is not supported on mx2.pallas-security.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:pallas.com include:news.ovb.email ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

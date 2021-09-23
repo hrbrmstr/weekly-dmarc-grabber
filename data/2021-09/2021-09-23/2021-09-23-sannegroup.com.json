@@ -1,0 +1,52 @@
+{
+  "domain": "sannegroup.com",
+  "base_domain": "sannegroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.phase8.net",
+      "ns1.phase8.net",
+      "ns2.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query sannegroup.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

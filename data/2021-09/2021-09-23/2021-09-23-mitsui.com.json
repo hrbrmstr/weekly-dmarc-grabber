@@ -1,0 +1,57 @@
+{
+  "domain": "mitsui.com",
+  "base_domain": "mitsui.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tkacu126.mitsui.co.jp",
+      "tkacu125.mitsui.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.107",
+          "67.219.246.193",
+          "67.219.246.203",
+          "67.219.246.97",
+          "67.219.250.107",
+          "67.219.250.193",
+          "67.219.250.203",
+          "67.219.250.97"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.us.messagelabs.com",
+        "addresses": [
+          "3.221.112.160",
+          "52.2.32.120"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster4.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster4a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

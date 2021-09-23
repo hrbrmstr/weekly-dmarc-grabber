@@ -1,0 +1,112 @@
+{
+  "domain": "tiaa.org",
+  "base_domain": "tiaa.org",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nss.tiaa-cref.org",
+      "cltb.tiaa-cref.org",
+      "nsb.tiaa-cref.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cobmc1m4isea01.tiaa-cref.org",
+        "addresses": [
+          "143.165.144.33"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "nc89acb01isea01.tiaa-cref.org",
+        "addresses": [
+          "143.165.49.33"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cobmc1m4isea01.tiaa-cref.org: Could not connect:  SMTP error code 554 - Not allowed",
+      "nc89acb01isea01.tiaa-cref.org: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query tiaa.org. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:tiaa@rua.agari.com; ruf=mailto:tiaa@ruf.agari.com",
+    "valid": true,
+    "location": "tiaa.org",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

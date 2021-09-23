@@ -1,0 +1,133 @@
+{
+  "domain": "manz.com",
+  "base_domain": "manz.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns42.digiwerk.de",
+      "ns24.digiwerk.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail03.manz.com",
+        "addresses": [
+          "212.21.172.227"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail03.manz.com: Could not connect:  SMTP error code 550"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:78.46.0.199 ip4:212.21.172.227 ip4:188.40.7.97 -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "188.40.7.97",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail03.manz.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "78.46.0.199",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.21.172.227",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "188.40.7.97",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; pct=100; rua=mailto:dmarc-aggregate@manz.com; ruf=mailto:dmarc-forensik@manz.com; aspf=r",
+    "valid": true,
+    "location": "manz.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-aggregate@manz.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensik@manz.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}
