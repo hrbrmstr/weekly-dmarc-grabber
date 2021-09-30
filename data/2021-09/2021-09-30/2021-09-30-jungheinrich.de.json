@@ -1,0 +1,50 @@
+{
+  "domain": "jungheinrich.de",
+  "base_domain": "jungheinrich.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.gopas-solutions.de",
+      "ns.gopas.net",
+      "ns.gopas.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jh-mail01.jh-group.net",
+        "addresses": [
+          "31.216.132.80"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "jh-mail02.jh-group.net",
+        "addresses": [
+          "31.216.132.82"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on jh-mail01.jh-group.net",
+      "SSL/TLS is not supported on jh-mail02.jh-group.net"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query jungheinrich.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

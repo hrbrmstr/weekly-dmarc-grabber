@@ -1,0 +1,114 @@
+{
+  "domain": "webjetlimited.com",
+  "base_domain": "webjetlimited.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns109.ultradns.org",
+      "pdns109.ultradns.biz",
+      "pdns109.ultradns.com",
+      "pdns109.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:svc_dmarc@webbeds.com,mailto:itadmin@webjet.com.au,mailto:dmarc_agg@vali.email; ruf=mailto:svc_dmarc@webbeds.com,mailto:dmarc_agg@vali.email;",
+    "valid": true,
+    "location": "webjetlimited.com",
+    "warnings": [
+      "webbeds.com does not indicate that it accepts DMARC reports about webjetlimited.com - Authorization record not found: webjetlimited.com._report._dmarc.webbeds.com IN TXT \"v=DMARC1\"",
+      "webbeds.com does not indicate that it accepts DMARC reports about webjetlimited.com - Authorization record not found: webjetlimited.com._report._dmarc.webbeds.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:svc_dmarc@webbeds.com,mailto:itadmin@webjet.com.au,mailto:dmarc_agg@vali.email",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:svc_dmarc@webbeds.com,mailto:dmarc_agg@vali.email",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

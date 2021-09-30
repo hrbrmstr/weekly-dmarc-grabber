@@ -1,0 +1,239 @@
+{
+  "domain": "alleghany.com",
+  "base_domain": "alleghany.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns76.worldnic.com",
+      "ns75.worldnic.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mail2.alleghany.com",
+        "addresses": [
+          "38.108.192.107"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mail1.alleghany.com",
+        "addresses": [
+          "198.46.104.44"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 60,
+        "hostname": "mx1.dnsmadeeasy.com",
+        "addresses": [
+          "208.80.120.10",
+          "208.80.120.11"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 70,
+        "hostname": "mx2.dnsmadeeasy.com",
+        "addresses": [
+          "208.94.150.201"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 80,
+        "hostname": "mx3.dnsmadeeasy.com",
+        "addresses": [
+          "208.94.150.197"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 89,
+        "hostname": "bakmail.alleghany.com",
+        "addresses": [
+          "8.30.196.70"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 90,
+        "hostname": "ess2.alleghany.com",
+        "addresses": [
+          "8.30.196.69"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 38.108.192.107 is Mail1.alleghany.com, but the A/AAAA DNS records for Mail1.alleghany.com do not resolve to 38.108.192.107",
+      "The reverse DNS of 38.108.192.107 is roundwoodasset.com, but the A/AAAA DNS records for roundwoodasset.com do not resolve to 38.108.192.107",
+      "The reverse DNS of 38.108.192.107 is Alleghanycc.com, but the A/AAAA DNS records for Alleghanycc.com do not resolve to 38.108.192.107",
+      "mail2.alleghany.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mail1.alleghany.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "SSL/TLS is not supported on mx1.dnsmadeeasy.com",
+      "SSL/TLS is not supported on mx2.dnsmadeeasy.com",
+      "SSL/TLS is not supported on mx3.dnsmadeeasy.com",
+      "bakmail.alleghany.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "8.30.196.69 does not have any reverse DNS (PTR) records",
+      "ess2.alleghany.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:192.254.121.248 include:_spf.psm.knowbe4.com include:_phishspf.knowbe4.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail2.alleghany.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail1.alleghany.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx1.dnsmadeeasy.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.dnsmadeeasy.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx3.dnsmadeeasy.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "bakmail.alleghany.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "ess2.alleghany.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "192.254.121.248",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.psm.knowbe4.com",
+          "record": "v=spf1 ip4:23.21.109.197 ip4:23.21.109.212 ip4:147.160.167.14 ip4:147.160.167.15 ip4:52.49.235.189 ip4:52.49.201.246 ip4:15.223.105.218 ip4:15.222.152.119 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.21.109.197",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.21.109.212",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.160.167.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.160.167.15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.235.189",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.201.246",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.223.105.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.222.152.119",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_phishspf.knowbe4.com",
+          "record": "v=spf1 ip4:23.21.109.212 ip4:23.21.109.197 ip4:52.49.201.246 ip4:52.49.235.189 ip4:54.172.84.90 ip4:147.160.167.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.21.109.212",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.21.109.197",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.201.246",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.235.189",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.172.84.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.160.167.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.alleghany.com\n\nv=spf1 mx ip4:192.254.121.248 include:_spf.psm.knowbe4.com include:_phishspf.knowbe4.com ~all"
+  }
+}

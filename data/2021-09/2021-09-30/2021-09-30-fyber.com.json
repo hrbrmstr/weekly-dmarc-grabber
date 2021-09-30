@@ -1,0 +1,141 @@
+{
+  "domain": "fyber.com",
+  "base_domain": "fyber.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.dnsmadeeasy.com",
+      "ns0.dnsmadeeasy.com",
+      "ns3.dnsmadeeasy.com",
+      "ns4.dnsmadeeasy.com",
+      "ns1.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "209.85.201.27",
+          "2607:f8b0:400d:c0c::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1b",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.26",
+          "2a00:1450:400b:c00::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "209.85.202.26",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1b does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:security@fyber.com",
+    "valid": true,
+    "location": "fyber.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "security@fyber.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

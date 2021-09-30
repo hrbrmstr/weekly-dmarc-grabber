@@ -1,0 +1,121 @@
+{
+  "domain": "aroundtown.de",
+  "base_domain": "aroundtown.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "alice.ns.cloudflare.com",
+      "earl.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004b4301.gslb.pphosted.com",
+        "addresses": [
+          "185.132.182.245"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004b4301.gslb.pphosted.com",
+        "addresses": [
+          "185.183.30.50"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-004b4301.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-004b4301.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:ef99b1c7fd@rua.easydmarc.com,mailto:it@aroundtown.de;ruf=mailto:ef99b1c7fd@ruf.easydmarc.com,mailto:it@aroundtown.de;fo=1",
+    "valid": true,
+    "location": "aroundtown.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ef99b1c7fd@rua.easydmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "it@aroundtown.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ef99b1c7fd@ruf.easydmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "it@aroundtown.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

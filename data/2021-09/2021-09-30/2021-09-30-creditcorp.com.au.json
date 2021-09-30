@@ -1,0 +1,105 @@
+{
+  "domain": "creditcorp.com.au",
+  "base_domain": "creditcorp.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-916.awsdns-50.net",
+      "ns-335.awsdns-41.com",
+      "ns-1680.awsdns-18.co.uk",
+      "ns-1492.awsdns-58.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.creditcorp.com.au",
+        "addresses": [
+          "103.67.155.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.creditcorp.com.au",
+        "addresses": [
+          "103.67.155.6"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.creditcorp.com.au",
+      "SSL/TLS is not supported on mx2.creditcorp.com.au"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:103.67.155.4/30 include:mktomail.com include:bingmail.com.au -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:ed5a67678174422@rep.dmarcanalyzer.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:ed5a67678174422@for.dmarcanalyzer.com",
+    "valid": true,
+    "location": "creditcorp.com.au",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:ed5a67678174422@rep.dmarcanalyzer.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:ed5a67678174422@for.dmarcanalyzer.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

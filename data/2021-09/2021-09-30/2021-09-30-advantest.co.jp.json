@@ -1,0 +1,179 @@
+{
+  "domain": "advantest.co.jp",
+  "base_domain": "advantest.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.center.web.ad.jp",
+      "mx1.advantest.co.jp",
+      "mx2.advantest.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.advantest.co.jp",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.advantest.co.jp",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "mx1.advantest.co.jp: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "STARTTLS is not supported on mx2.advantest.co.jp",
+      "SSL/TLS is not supported on mx2.advantest.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:61.121.102.64/26 include:spf.list-finder.jp ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "61.121.102.64/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.list-finder.jp",
+          "record": "v=spf1 ip4:103.239.16.8/29 ip4:103.239.16.16/29 ip4:103.239.16.24/29 ip4:103.239.16.32/29 ip4:103.239.16.40/29 ip4:103.239.16.96/29 ip4:103.239.16.104/29 ip4:103.239.16.112/29 ip4:52.193.161.140 ip4:54.238.138.18 ip4:52.192.185.134 ip4:3.115.118.190 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.239.16.8/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.16/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.24/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.32/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.40/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.96/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.104/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.239.16.112/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.193.161.140",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.238.138.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.192.185.134",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.115.118.190",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:postmaster@advantest.co.jp",
+    "valid": true,
+    "location": "advantest.co.jp",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address postmaster@advantest.co.jp - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:postmaster@advantest.co.jp",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

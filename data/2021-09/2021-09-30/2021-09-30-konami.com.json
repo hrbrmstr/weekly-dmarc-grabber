@@ -1,0 +1,107 @@
+{
+  "domain": "konami.com",
+  "base_domain": "konami.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mx5.konami.co.jp",
+      "mx4.konami.co.jp",
+      "mx3.konami.co.jp",
+      "mx2.konami.co.jp",
+      "mx1.konami.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "konami-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.92.36",
+          "104.47.93.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on konami-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:_spf-a.konami.com include:_spf-b.konami.com include:_spf-c.konami.com include:_spf-d.konami.com include:_spf-e.konami.com include:_spf-f.konami.com include:_spf-g.konami.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarc_report@konami.com; ruf=mailto:dmarc_report@konami.com; fo=1",
+    "valid": true,
+    "location": "konami.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_report@konami.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_report@konami.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

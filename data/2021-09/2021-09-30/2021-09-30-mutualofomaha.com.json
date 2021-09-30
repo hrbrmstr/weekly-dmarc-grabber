@@ -1,0 +1,50 @@
+{
+  "domain": "mutualofomaha.com",
+  "base_domain": "mutualofomaha.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.mutualofomaha.com",
+      "ns3.mutualofomaha.com",
+      "ns2.mutualofomaha.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster-g.mailcontrol.com",
+        "addresses": [
+          "208.87.233.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "cluster-h.mailcontrol.com",
+        "addresses": [
+          "208.87.234.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster-g.mailcontrol.com",
+      "SSL/TLS is not supported on cluster-h.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

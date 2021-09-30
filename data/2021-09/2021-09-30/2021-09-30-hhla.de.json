@@ -1,0 +1,50 @@
+{
+  "domain": "hhla.de",
+  "base_domain": "hhla.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mail1.hhla.de",
+        "addresses": [
+          "194.169.216.167"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "mail2.hhla.de",
+        "addresses": [
+          "194.169.216.168"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail1.hhla.de",
+      "SSL/TLS is not supported on mail2.hhla.de"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "domain": "crestnicholson.com",
+  "base_domain": "crestnicholson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.star.co.uk",
+      "dns0.star.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "eu-smtp-inbound-2.mimecast.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a ip4:80.168.113.0/28 ip4:194.74.253.10 ip4:13.93.47.254 ip4:13.93.47.215 ip4:152.114.220.10 ip4:20.49.186.44 include:customers.clickdimensions.com include:eu._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "20.56.12.210",
+          "mechanism": "a"
+        },
+        {
+          "value": "80.168.113.0/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.74.253.10",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "13.93.47.254",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "13.93.47.215",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "152.114.220.10",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "20.49.186.44",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "customers.clickdimensions.com",
+          "record": "v=spf1 include:_spf.messagegears.net include:_spf.eu.messagegears.net ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.messagegears.net",
+                "record": "v=spf1 ip4:135.84.216.0/22 ip4:66.240.227.0/24 ip4:63.143.59.128/25 ip4:63.143.57.128/25 ip4:216.98.158.0/24 ip4:74.63.212.0/24 ip4:52.200.59.0/24 ip4:34.245.210.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "135.84.216.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.240.227.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "63.143.59.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "63.143.57.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.98.158.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.63.212.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.200.59.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.245.210.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.eu.messagegears.net",
+                "record": "v=spf1 ip4:34.245.210.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "34.245.210.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

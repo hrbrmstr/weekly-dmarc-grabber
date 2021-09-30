@@ -1,0 +1,105 @@
+{
+  "domain": "wellsfargo.com",
+  "base_domain": "wellsfargo.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsz.wf.com",
+      "nsy.wf.com",
+      "nsx.wellsfargo.com",
+      "nsa.wellsfargo.com",
+      "nsc.wellsfargo.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00004003.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.101"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00004003.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.101"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00004003.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00004003.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net; rf=afrf; pct=100",
+    "valid": true,
+    "location": "wellsfargo.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

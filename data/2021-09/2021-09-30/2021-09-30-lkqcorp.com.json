@@ -1,0 +1,114 @@
+{
+  "domain": "lkqcorp.com",
+  "base_domain": "lkqcorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.easydns.ca",
+      "dns2.easydns.net",
+      "dns1.easydns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0019e001.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.239"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0019e001.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.239"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0019e001.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0019e001.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a include:spf.aristotle.com include:spf-0019e001.pphosted.com include:spf_omcs.oracleoutsourcing.com include:mailgun.org mx:mail.lkqcorp.com mx:mail1.lkqcorp.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "lkqcorp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

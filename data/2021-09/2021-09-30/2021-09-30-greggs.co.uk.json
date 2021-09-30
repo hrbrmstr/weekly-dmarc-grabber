@@ -1,0 +1,128 @@
+{
+  "domain": "greggs.co.uk",
+  "base_domain": "greggs.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.star.co.uk",
+      "dns0.star.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:eu._netblocks.mimecast.com",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

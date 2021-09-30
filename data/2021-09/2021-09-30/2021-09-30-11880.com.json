@@ -1,0 +1,131 @@
+{
+  "domain": "11880.com",
+  "base_domain": "11880.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "arnold.ns.cloudflare.com",
+      "zoe.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "esn-mail.11880.com",
+        "addresses": [
+          "212.144.20.200"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "nb-mail.11880.com",
+        "addresses": [
+          "82.193.235.133"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "esn2-mail.11880.com",
+        "addresses": [
+          "145.253.105.179"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "hro-mail.11880.com",
+        "addresses": [
+          "82.193.251.34"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "esn-mail.11880.com: Connection timed out",
+      "nb-mail.11880.com: Connection timed out",
+      "SSL/TLS is not supported on esn2-mail.11880.com",
+      "SSL/TLS is not supported on hro-mail.11880.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-reports@11880.com; ruf=mailto:dmarc-reports@11880.com",
+    "valid": true,
+    "location": "11880.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@11880.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@11880.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

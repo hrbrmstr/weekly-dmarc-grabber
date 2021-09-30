@@ -1,0 +1,58 @@
+{
+  "domain": "standardlifeaberdeen.com",
+  "base_domain": "standardlifeaberdeen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The DNS operation timed out after 3.8 seconds"
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "eu-smtp-inbound-2.mimecast.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:eu._netblocks.mimecast.com include:spf1.standardlifeaberdeen.com include:spf2.standardlifeaberdeen.com include:efrontcloud.com ip4:52.6.190.130 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 14/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 14
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
