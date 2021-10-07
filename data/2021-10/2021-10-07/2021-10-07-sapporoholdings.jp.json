@@ -1,0 +1,115 @@
+{
+  "domain": "sapporoholdings.jp",
+  "base_domain": "sapporoholdings.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-465.awsdns-58.com",
+      "ns-1759.awsdns-27.co.uk",
+      "ns-1021.awsdns-63.net",
+      "ns-1336.awsdns-39.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "All nameservers failed to answer the query . IN A: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      ": Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.sapporobeer.jp ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "The domain sapporomta.sapporobeer.jp does not exist",
+      "The domain sapporosendmail.sapporobeer.jp does not exist"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.sapporobeer.jp",
+          "record": "v=spf1 ip4:52.197.124.245/32 ip4:18.176.126.71/32 ip4:210.128.155.0/24 ip4:18.182.106.51/32 ip4:52.69.241.236/32 ip4:18.182.68.140/32 ip4:54.95.149.96/32 ip4:18.182.130.223/32 ip4:18.179.252.91/32 ip4:13.114.2.161/32 a:sapporomta.sapporobeer.jp a:sapporosendmail.sapporobeer.jp ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.197.124.245/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.126.71/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.128.155.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.182.106.51/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.69.241.236/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.182.68.140/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.95.149.96/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.182.130.223/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.179.252.91/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.114.2.161/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": [
+            "The domain sapporomta.sapporobeer.jp does not exist",
+            "The domain sapporosendmail.sapporobeer.jp does not exist"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

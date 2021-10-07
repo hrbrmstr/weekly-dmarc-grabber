@@ -1,0 +1,147 @@
+{
+  "domain": "global-fashion-group.com",
+  "base_domain": "global-fashion-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "diva.ns.cloudflare.com",
+      "max.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "142.250.113.26",
+          "2607:f8b0:4023:1000::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.27",
+          "2607:f8b0:4001:c56::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.27",
+          "2607:f8b0:4023:1::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "142.250.152.27",
+          "2607:f8b0:4001:c56::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "172.253.113.26",
+          "2607:f8b0:4023:1::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "inbound-smtp.eu-west-1.amazonaws.com",
+        "addresses": [
+          "54.239.39.100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com",
+      "The reverse DNS of 54.239.39.100 is inbound-smtp.eu-west-1.amazonaws.com, but the A/AAAA DNS records for inbound-smtp.eu-west-1.amazonaws.com do not resolve to 54.239.39.100",
+      "SSL/TLS is not supported on inbound-smtp.eu-west-1.amazonaws.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmarc@global-fashion-group.com; fo=1; aspf=r; adkim=r",
+    "valid": true,
+    "location": "global-fashion-group.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@global-fashion-group.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "domain": "dteenergy.com",
+  "base_domain": "dteenergy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.dteenergy.com",
+      "ns3.dteenergy.com",
+      "ns2.dteenergy.com",
+      "ns4.dteenergy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.101",
+          "67.219.246.110",
+          "67.219.246.197",
+          "67.219.246.206",
+          "67.219.250.101",
+          "67.219.250.110",
+          "67.219.250.197",
+          "67.219.250.206"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.us.messagelabs.com",
+        "addresses": [
+          "35.174.128.138",
+          "44.196.210.76",
+          "52.20.43.165"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster8.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster8a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email;",
+    "valid": true,
+    "location": "dteenergy.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

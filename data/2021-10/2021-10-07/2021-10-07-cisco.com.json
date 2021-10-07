@@ -1,0 +1,136 @@
+{
+  "domain": "cisco.com",
+  "base_domain": "cisco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.cisco.com",
+      "ns1.cisco.com",
+      "ns3.cisco.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "rcdn-mx-01.cisco.com",
+        "addresses": [
+          "72.163.7.166"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alln-mx-01.cisco.com",
+        "addresses": [
+          "173.37.147.230",
+          "2001:420:1201:6::ad25:93e6"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "aer-mx-01.cisco.com",
+        "addresses": [
+          "173.38.212.150",
+          "2001:420:4621::ad26:d496"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on rcdn-mx-01.cisco.com",
+      "SSL/TLS is not supported on alln-mx-01.cisco.com",
+      "SSL/TLS is not supported on aer-mx-01.cisco.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query cisco.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=0; fo=1; ri=3600; rua=mailto:cisco@rua.agari.com,mailto:ynldvgsr@ag.dmarcian.com; ruf=mailto:cisco@ruf.agari.com,mailto:ynldvgsr@fr.dmarcian.com;",
+    "valid": true,
+    "location": "cisco.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 0,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cisco@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ynldvgsr@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cisco@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ynldvgsr@fr.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

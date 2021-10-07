@@ -1,0 +1,42 @@
+{
+  "domain": "otsuka.com",
+  "base_domain": "otsuka.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1269.awsdns-30.org",
+      "ns-1782.awsdns-30.co.uk",
+      "ns-340.awsdns-42.com",
+      "ns-728.awsdns-27.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "otsuka-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.92.36",
+          "104.47.93.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "otsuka-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query otsuka.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; pct=100; p=none; rua=mailto:soc_us@oneotsuka.onmicrosoft.com; ruf=mailto:soc_us@oneotsuka.onmicrosoft.com; fo=1",
+    "valid": false,
+    "location": "otsuka.com",
+    "error": "the p tag must immediately follow the v tag"
+  }
+}

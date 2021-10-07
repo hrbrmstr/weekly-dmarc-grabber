@@ -1,0 +1,50 @@
+{
+  "domain": "kimberly-clark.com",
+  "base_domain": "kimberly-clark.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.kcc.com",
+      "ns1.kcc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002d0701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.151.143"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002d0701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.151.143"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002d0701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002d0701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:kcc.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query kcc.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "domain": "psi.de",
+  "base_domain": "psi.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gate2.psi.de",
+      "gate1.psi.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "46.226.52.102",
+          "46.226.52.195",
+          "46.226.52.198",
+          "46.226.52.99",
+          "85.158.142.102",
+          "85.158.142.192",
+          "85.158.142.198",
+          "85.158.142.99"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 30,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 90,
+        "hostname": "gate1.psi.de",
+        "addresses": [
+          "194.115.214.187"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 91,
+        "hostname": "gate2.psi.de",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 92,
+        "hostname": "gate3.psi.de",
+        "addresses": [
+          "194.115.214.186"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster3.eu.messagelabs.com: Could not connect:  SMTP error code 450",
+      "Hostname cluster3.eu.messagelabs.com is listed in multiple MX records",
+      "gate1.psi.de: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "gate2.psi.de: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 194.115.214.186 is gate3.psi.de, but the A/AAAA DNS records for gate3.psi.de do not resolve to 194.115.214.186",
+      "STARTTLS is not supported on gate3.psi.de",
+      "SSL/TLS is not supported on gate3.psi.de"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "domain": "tepco.co.jp",
+  "base_domain": "tepco.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tdns3.tepco.co.jp",
+      "tepcogw.tepco.co.jp",
+      "tdns4.tepco.co.jp",
+      "tdns2.tepco.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx2.tepco.co.jp",
+        "addresses": [
+          "111.87.71.106"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx4.tepco.co.jp",
+        "addresses": [
+          "111.87.68.106"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx2.tepco.co.jp",
+      "SSL/TLS is not supported on mx2.tepco.co.jp",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 111.87.68.106 is mx4.tgn.or.jp, but the A/AAAA DNS records for mx4.tgn.or.jp do not resolve to 111.87.68.106",
+      "STARTTLS is not supported on mx4.tepco.co.jp",
+      "SSL/TLS is not supported on mx4.tepco.co.jp"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "domain": "drhorton.com",
+  "base_domain": "drhorton.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns10.dnsmadeeasy.com",
+      "ns14.dnsmadeeasy.com",
+      "ns11.dnsmadeeasy.com",
+      "ns13.dnsmadeeasy.com",
+      "ns12.dnsmadeeasy.com",
+      "ns15.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "prpt.drhorton.com",
+        "addresses": [
+          "199.36.189.241",
+          "199.36.189.242",
+          "199.36.191.241",
+          "199.36.191.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "199.36.189.241 does not have any reverse DNS (PTR) records",
+      "199.36.189.242 does not have any reverse DNS (PTR) records",
+      "199.36.191.241 does not have any reverse DNS (PTR) records",
+      "199.36.191.242 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on prpt.drhorton.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:exchangedmarc@drhorton.com; ruf=mailto:exchangedmarc@drhorton.com",
+    "valid": true,
+    "location": "drhorton.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "exchangedmarc@drhorton.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "exchangedmarc@drhorton.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

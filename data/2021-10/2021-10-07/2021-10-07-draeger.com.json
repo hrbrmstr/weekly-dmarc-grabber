@@ -1,0 +1,106 @@
+{
+  "domain": "draeger.com",
+  "base_domain": "draeger.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.lemarit.de",
+      "ns2.lemarit.net",
+      "ns1.lemarit.net",
+      "ns2.lemarit.de",
+      "ns1.lemarit.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "draeger.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.5.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on draeger.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-i.draeger.com include:spf-e.draeger.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query spf-e.draeger.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:f2819a7f2f00782@rep.dmarcanalyzer.com; ruf=mailto:f2819a7f2f00782@for.dmarcanalyzer.com; fo=1",
+    "valid": true,
+    "location": "draeger.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f2819a7f2f00782@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f2819a7f2f00782@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "domain": "hvpe.com",
+  "base_domain": "hvpe.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns36.domaincontrol.com",
+      "ns35.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "smtp.secureserver.net",
+        "addresses": [
+          "68.178.213.203",
+          "68.178.213.37",
+          "72.167.238.29"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailstore1.secureserver.net",
+        "addresses": [
+          "68.178.213.243",
+          "68.178.213.244",
+          "72.167.238.32"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "smtp.secureserver.net: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailstore1.secureserver.net: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "hvpe.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
