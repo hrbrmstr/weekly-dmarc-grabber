@@ -1,0 +1,166 @@
+{
+  "domain": "magellangroup.com.au",
+  "base_domain": "magellangroup.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.melbourneit.net",
+      "ns3.melbourneit.net",
+      "ns2.melbourneit.net",
+      "ns1.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "filter1.magell-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.137.250",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.54.220.210",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.193.97.194",
+          "34.202.243.228",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.180.102"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "filter2.magell-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.137.250",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.54.220.210",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.193.97.194",
+          "34.202.243.228",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.180.102"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "filter3.magell-1.mailguard.com.au",
+        "addresses": [
+          "13.210.103.163",
+          "13.210.137.250",
+          "13.210.145.47",
+          "13.210.160.215",
+          "13.210.175.152",
+          "13.210.188.175",
+          "13.237.161.183",
+          "13.54.220.210",
+          "13.55.209.247",
+          "13.55.52.35",
+          "34.193.97.194",
+          "34.202.243.228",
+          "34.215.211.69",
+          "34.215.223.119",
+          "34.237.180.102"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "filter1.magell-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter1.magell-1.mailguard.com.au'. (_ssl.c:1129)",
+      "filter2.magell-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter2.magell-1.mailguard.com.au'. (_ssl.c:1129)",
+      "filter3.magell-1.mailguard.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'filter3.magell-1.mailguard.com.au'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:_netblocks.eloqua.com include:customer.mailguard.com.au include:spf.diligent.com ip4:202.8.64.10 ip4:149.28.170.46 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:quarantine@magellangroup.com.au; ruf=mailto:quarantine@magellangroup.com.au;",
+    "valid": true,
+    "location": "magellangroup.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "quarantine@magellangroup.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "quarantine@magellangroup.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

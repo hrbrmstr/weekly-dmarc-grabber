@@ -1,0 +1,60 @@
+{
+  "domain": "mitsui-kinzoku.co.jp",
+  "base_domain": "mitsui-kinzoku.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "01.dnsv.jp",
+      "02.dnsv.jp",
+      "04.dnsv.jp",
+      "03.dnsv.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster6.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.100",
+          "67.219.246.109",
+          "67.219.246.196",
+          "67.219.246.205",
+          "67.219.250.100",
+          "67.219.250.109",
+          "67.219.250.196",
+          "67.219.250.205"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster6a.us.messagelabs.com",
+        "addresses": [
+          "35.174.128.138",
+          "44.196.210.76",
+          "52.20.43.165"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster6.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster6a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "mitsui-kinzoku.co.jp does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

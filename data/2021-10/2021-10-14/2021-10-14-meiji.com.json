@@ -1,0 +1,110 @@
+{
+  "domain": "meiji.com",
+  "base_domain": "meiji.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns102.meiji.co.jp",
+      "ns101.meiji.co.jp",
+      "ns102.sinfony.ad.jp",
+      "ns101.sinfony.ad.jp",
+      "ns01.sinfony.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.175"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.175"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00532c02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00532c02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.217.34.0/26 ip4:202.213.237.64/27 ip4:202.78.217.150 include:spf-00532c02.pphosted.com mx ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.217.34.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.213.237.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.78.217.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "mxa-00532c02.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-00532c02.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00532c02.pphosted.com",
+          "record": "v=spf1 ip4:205.220.177.175 ip4:205.220.165.175",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.177.175",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.175",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "domain": "evonik.com",
+  "base_domain": "evonik.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.evonik.com",
+      "qdns2.degussa.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "mailin-ip2.evonik.com",
+        "addresses": [
+          "149.216.91.185",
+          "2a01:4bc0:900:1000::185"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "mailin-ip4.evonik.com",
+        "addresses": [
+          "149.216.91.211",
+          "2a01:4bc0:900:1000::211"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "mailin-ip5.evonik.com",
+        "addresses": [
+          "149.216.91.222",
+          "2a01:4bc0:900:1000::222"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailin-ip2.evonik.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mailin-ip4.evonik.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mailin-ip5.evonik.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; adkim=r; aspf=r; fo=1; pct=100; rf=afrf; ri=86400; rua=mailto:asmphrl1@ag.eu.dmarcadvisor.com; ruf=mailto:asmphrl1@fr.eu.dmarcadvisor.com",
+    "valid": true,
+    "location": "evonik.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "asmphrl1@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "asmphrl1@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      }
+    }
+  }
+}

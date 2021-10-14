@@ -1,0 +1,121 @@
+{
+  "domain": "hdsupply.com",
+  "base_domain": "hdsupply.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "laura.ns.cloudflare.com",
+      "arnold.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2281-59.iphmx.com",
+        "addresses": [
+          "216.71.150.229",
+          "216.71.155.244",
+          "68.232.129.12",
+          "68.232.135.16"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2281-59.iphmx.com",
+        "addresses": [
+          "216.71.150.229",
+          "216.71.155.244",
+          "68.232.129.12",
+          "68.232.135.16"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx1.hc2281-59.iphmx.com",
+      "SSL/TLS is not supported on mx1.hc2281-59.iphmx.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 216.71.150.229 is esa3.hc2281-59.iphmx.com, but the A/AAAA DNS records for esa3.hc2281-59.iphmx.com do not resolve to 216.71.150.229",
+      "STARTTLS is not supported on mx2.hc2281-59.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc2281-59.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_rua@hdsupply.com; ruf=mailto:dmarc_ruf@hdsupply.com",
+    "valid": true,
+    "location": "hdsupply.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@hdsupply.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@hdsupply.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

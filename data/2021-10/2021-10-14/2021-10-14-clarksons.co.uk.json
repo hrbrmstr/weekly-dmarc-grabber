@@ -1,0 +1,54 @@
+{
+  "domain": "clarksons.co.uk",
+  "base_domain": "clarksons.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.p23.dynect.net",
+      "ns1.p23.dynect.net",
+      "ns4.p23.dynect.net",
+      "ns2.p23.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp1.clarksons.co.uk",
+        "addresses": [
+          "213.133.153.113"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp2.clarksons.co.uk",
+        "addresses": [
+          "213.133.153.114"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "213.133.153.113 does not have any reverse DNS (PTR) records",
+      "smtp1.clarksons.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp1.clarksons.co.uk'. (_ssl.c:1129)",
+      "213.133.153.114 does not have any reverse DNS (PTR) records",
+      "smtp2.clarksons.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp2.clarksons.co.uk'. (_ssl.c:1129)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=clarksons.com",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "domain": "apachecorp.com",
+  "base_domain": "apachecorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.dnsmadeeasy.com",
+      "ns3.dnsmadeeasy.com",
+      "ns4.dnsmadeeasy.com",
+      "ns1.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0002cc01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.159.66"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0002cc01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.157.66"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0002cc01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0002cc01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query apachecorp.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.apachecorp.com\n\nMS=ms55030122"
+  }
+}
