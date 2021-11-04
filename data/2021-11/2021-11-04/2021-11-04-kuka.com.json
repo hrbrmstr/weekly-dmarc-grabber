@@ -1,0 +1,50 @@
+{
+  "domain": "kuka.com",
+  "base_domain": "kuka.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.managed-ns.de",
+      "a.managed-ns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.kuka.com",
+        "addresses": [
+          "213.179.131.106"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx2.kuka.com",
+        "addresses": [
+          "213.179.129.13"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.kuka.com",
+      "SSL/TLS is not supported on mx2.kuka.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.protection.outlook.com include:_spf.salesforce.com include:spf.de.umantis.com include:spf.mailjet.com include:cust-spf.exacttarget.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

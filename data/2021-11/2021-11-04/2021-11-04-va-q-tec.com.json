@@ -1,0 +1,39 @@
+{
+  "domain": "va-q-tec.com",
+  "base_domain": "va-q-tec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns72.domaincontrol.com",
+      "ns71.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.va-q-tec.com",
+        "addresses": [
+          "87.190.7.90"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.va-q-tec.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query va-q-tec.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; rua=mailto:dmarc@mailinblue.com!10m; ruf=mailto:dmarc@mailinblue.com!10m; rf",
+    "valid": false,
+    "location": "va-q-tec.com",
+    "error": "Error: Expected tag_value at position 101 in: v=DMARC1; p=none; sp=none; rua=mailto:dmarc@mailinblue.com!10m; ruf=mailto:dmarc@mailinblue.com!10m; rf"
+  }
+}

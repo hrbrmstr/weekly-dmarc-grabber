@@ -1,0 +1,90 @@
+{
+  "domain": "sei.co.jp",
+  "base_domain": "sei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "seigate.sei.co.jp",
+      "gemini.starnet.ad.jp",
+      "seigate-y.sei.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "seimgex1.sei.co.jp",
+        "addresses": [
+          "219.106.230.205"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "seimgex2.sei.co.jp",
+        "addresses": [
+          "60.56.229.4"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "seimgex3.sei.co.jp",
+        "addresses": [
+          "219.106.230.205"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "seimgex4.sei.co.jp",
+        "addresses": [
+          "60.56.229.2"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "seimgex1.sei.co.jp: Connection timed out",
+      "SSL/TLS is not supported on seimgex2.sei.co.jp",
+      "SSL/TLS is not supported on seimgex3.sei.co.jp",
+      "SSL/TLS is not supported on seimgex4.sei.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:219.106.230.200/29 +ip4:60.56.229.0/28 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "219.106.230.200/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.229.0/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.sei.co.jp\n\nv=spf1 +ip4:219.106.230.200/29 +ip4:60.56.229.0/28 ~all"
+  }
+}

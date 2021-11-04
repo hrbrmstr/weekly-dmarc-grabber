@@ -1,0 +1,104 @@
+{
+  "domain": "signatureaviation.com",
+  "base_domain": "signatureaviation.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.no-ip.com",
+      "ns1.no-ip.com",
+      "ns2.no-ip.com",
+      "ns3.no-ip.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "signatureaviation-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.10",
+          "104.47.74.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on signatureaviation-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:ms365_dmarc_notifications@bbaaviation.com; ruf=mailto:ms365_dmarc_notifications@bbaaviation.com; rf=afrf; fo=1; pct=100; ri=86400; adkim=r; aspf=r",
+    "valid": true,
+    "location": "signatureaviation.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ms365_dmarc_notifications@bbaaviation.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ms365_dmarc_notifications@bbaaviation.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

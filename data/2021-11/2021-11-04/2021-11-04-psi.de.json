@@ -1,0 +1,169 @@
+{
+  "domain": "psi.de",
+  "base_domain": "psi.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gate1.psi.de",
+      "gate2.psi.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "195.245.231.64",
+          "195.245.231.73",
+          "46.226.52.102",
+          "46.226.52.195",
+          "46.226.52.198",
+          "46.226.52.99",
+          "85.158.142.102",
+          "85.158.142.192",
+          "85.158.142.198",
+          "85.158.142.99"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 30,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 90,
+        "hostname": "gate1.psi.de",
+        "addresses": [
+          "194.115.214.187"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 91,
+        "hostname": "gate2.psi.de",
+        "addresses": [
+          "192.109.111.186"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 92,
+        "hostname": "gate3.psi.de",
+        "addresses": [
+          "194.115.214.186"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster3.eu.messagelabs.com",
+      "Hostname cluster3.eu.messagelabs.com is listed in multiple MX records",
+      "gate1.psi.de: Connection timed out",
+      "192.109.111.186 does not have any reverse DNS (PTR) records",
+      "gate2.psi.de: Connection timed out",
+      "STARTTLS is not supported on gate3.psi.de",
+      "SSL/TLS is not supported on gate3.psi.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:194.115.214.186 ip4:192.109.111.186 ip4:194.115.214.187 mx include:spf.academymaker.de -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "194.115.214.186",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.109.111.186",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.115.214.187",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate1.psi.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate2.psi.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate3.psi.de",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.academymaker.de",
+          "record": "v=spf1 ip4:80.82.213.24 ip4:80.82.213.38 ip4:80.82.213.175 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "80.82.213.24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.82.213.38",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.82.213.175",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

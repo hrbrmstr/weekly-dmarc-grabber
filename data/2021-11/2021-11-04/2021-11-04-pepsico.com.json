@@ -1,0 +1,109 @@
+{
+  "domain": "pepsico.com",
+  "base_domain": "pepsico.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.pbsg.com",
+      "ns2.pbsg.com",
+      "ns4.pbsg.com",
+      "ns1.pbsg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.pepsico.com",
+        "addresses": [
+          "204.136.64.90"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mail.pepsico.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.pepsico.com",
+      "Hostname mail.pepsico.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:itdmarcnotifications@pepsico.com; ruf=mailto:itdmarcnotifications@pepsico.com; rf=afrf; pct=100",
+    "valid": true,
+    "location": "pepsico.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "itdmarcnotifications@pepsico.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "itdmarcnotifications@pepsico.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
