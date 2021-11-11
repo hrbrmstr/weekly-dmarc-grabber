@@ -1,0 +1,62 @@
+{
+  "domain": "workspacegroup.co.uk",
+  "base_domain": "workspacegroup.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.securepod.com",
+      "ns0.securepod.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 1,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "ms23750313.msv1.invalid",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "The DNS operation timed out after 2.4 seconds",
+      "eu-smtp-inbound-2.mimecast.com: Connection timed out",
+      "All nameservers failed to answer the query ms23750313.msv1.invalid. IN A: Server 127.0.0.53 UDP port 53 answered SERVFAIL. Consider using a TXT record to validate domain ownership in Office 365 instead.",
+      "ms23750313.msv1.invalid: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "workspacegroup.co.uk does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

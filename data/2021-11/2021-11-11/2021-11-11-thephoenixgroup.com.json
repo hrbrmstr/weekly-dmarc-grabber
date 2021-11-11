@@ -1,0 +1,123 @@
+{
+  "domain": "thephoenixgroup.com",
+  "base_domain": "thephoenixgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.2 seconds",
+      "The reverse DNS of 195.130.217.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.241",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 91.220.42.211 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.211",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 91.220.42.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.241",
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "eu-smtp-inbound-2.mimecast.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query thephoenixgroup.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com",
+    "valid": true,
+    "location": "thephoenixgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

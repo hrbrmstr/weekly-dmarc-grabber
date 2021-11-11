@@ -1,0 +1,152 @@
+{
+  "domain": "3m.com",
+  "base_domain": "3m.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pigseye.mmm.com",
+      "ns.3m.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3069-42.iphmx.com",
+        "addresses": [
+          "139.138.33.103",
+          "139.138.33.104",
+          "139.138.33.111",
+          "139.138.33.180",
+          "139.138.33.25",
+          "139.138.33.26",
+          "139.138.33.29",
+          "139.138.33.39",
+          "139.138.33.40",
+          "139.138.33.44",
+          "139.138.56.200",
+          "139.138.56.201",
+          "139.138.56.206",
+          "139.138.56.207",
+          "139.138.56.217",
+          "139.138.57.157",
+          "139.138.57.158",
+          "139.138.57.50",
+          "139.138.57.51",
+          "139.138.57.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc3069-42.iphmx.com",
+        "addresses": [
+          "139.138.33.103",
+          "139.138.33.104",
+          "139.138.33.111",
+          "139.138.33.180",
+          "139.138.33.25",
+          "139.138.33.26",
+          "139.138.33.29",
+          "139.138.33.39",
+          "139.138.33.40",
+          "139.138.33.44",
+          "139.138.56.200",
+          "139.138.56.201",
+          "139.138.56.206",
+          "139.138.56.207",
+          "139.138.56.217",
+          "139.138.57.157",
+          "139.138.57.158",
+          "139.138.57.50",
+          "139.138.57.51",
+          "139.138.57.65"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc3069-42.iphmx.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 139.138.57.65 is esa19.hc3069-42.iphmx.com, but the A/AAAA DNS records for esa19.hc3069-42.iphmx.com do not resolve to 139.138.57.65",
+      "SSL/TLS is not supported on mx2.hc3069-42.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{d}.cd.spf-protect.dmp.cisco.com exists:%{i}._i.%{d}._d.espf.dmp.cisco.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.cd.spf-protect.dmp.cisco.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; ri=3600; rua=mailto:3m@rua.dmp.cisco.com; ruf=mailto:3m@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "3m.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3m@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3m@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

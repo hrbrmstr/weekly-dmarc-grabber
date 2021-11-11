@@ -1,0 +1,160 @@
+{
+  "domain": "nittsu.co.jp",
+  "base_domain": "nittsu.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a6-66.akam.net",
+      "a1-105.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx11.nittsu.co.jp",
+        "addresses": [
+          "18.177.3.11"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx12.nittsu.co.jp",
+        "addresses": [
+          "3.115.136.239"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx13.nittsu.co.jp",
+        "addresses": [
+          "18.176.191.58"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx14.nittsu.co.jp",
+        "addresses": [
+          "18.177.39.214"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx11.nittsu.co.jp: Connection timed out",
+      "mx12.nittsu.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)",
+      "mx13.nittsu.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)",
+      "mx14.nittsu.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:210.142.7.66 +ip4:210.142.7.70 +include:spf.nittsu.co.jp +include:spf.securemx.jp ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.142.7.66",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.142.7.70",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.nittsu.co.jp",
+          "record": "v=spf1 +ip4:18.177.3.11 +ip4:3.115.136.239 +ip4:18.176.191.58 +ip4:18.177.39.214 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "18.177.3.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.115.136.239",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.191.58",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.177.39.214",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.securemx.jp",
+          "record": "v=spf1 ip4:210.130.202.128/29 ip4:210.130.202.48/29 ip4:210.130.202.152/29 ip4:210.130.202.160/28 ip6:2001:240:bb81::4:1000/119 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.130.202.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.48/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.152/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:240:bb81::4:1000/119",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

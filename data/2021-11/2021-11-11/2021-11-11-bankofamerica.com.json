@@ -1,0 +1,115 @@
+{
+  "domain": "bankofamerica.com",
+  "base_domain": "bankofamerica.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns10.bac.com",
+      "ns11.bac.com",
+      "ns12.bac.com",
+      "ns6.bac.com",
+      "ns7.bac.com",
+      "ns8.bac.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0000ec05.gslb.pphosted.com",
+        "addresses": [
+          "208.84.65.230"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0000ec05.gslb.pphosted.com",
+        "addresses": [
+          "208.86.201.225"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0000ec05.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0000ec05.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:auth.report_ns@bankofamerica.com; ruf=mailto:bankofamerica@ruf.agari.com",
+    "valid": true,
+    "location": "bankofamerica.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "auth.report_ns@bankofamerica.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bankofamerica@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "domain": "daimler.com",
+  "base_domain": "daimler.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.corpinter.de",
+      "ns2.corpinter.de",
+      "ns1.corpinter.net",
+      "ns3.corpinter.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "one.mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.25"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "two.mail-in.daimler.com",
+        "addresses": [
+          "141.113.8.25"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on one.mail-in.daimler.com",
+      "SSL/TLS is not supported on two.mail-in.daimler.com",
+      "SSL/TLS is not supported on mail-in.daimler.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=50; rua=mailto:weacxe0d@ag.eu.dmarcadvisor.com;",
+    "valid": true,
+    "location": "daimler.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 50,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "weacxe0d@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

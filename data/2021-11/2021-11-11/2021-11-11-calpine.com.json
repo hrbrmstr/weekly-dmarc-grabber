@@ -1,0 +1,106 @@
+{
+  "domain": "calpine.com",
+  "base_domain": "calpine.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-07.azure-dns.info",
+      "ns3-07.azure-dns.org",
+      "ns2-07.azure-dns.net",
+      "ns1-07.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "calpine-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.138",
+          "104.47.74.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.74.10 is mail-bn8nam080010.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-bn8nam080010.inbound.protection.outlook.com do not resolve to 104.47.74.10",
+      "SSL/TLS is not supported on calpine-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query calpine.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarcreports@calpine.com; ruf=mailto:dmarcreports@calpine.com",
+    "valid": true,
+    "location": "calpine.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@calpine.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@calpine.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

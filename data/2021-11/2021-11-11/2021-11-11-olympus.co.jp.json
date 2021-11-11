@@ -1,0 +1,49 @@
+{
+  "domain": "olympus.co.jp",
+  "base_domain": "olympus.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.olympus.co.jp",
+      "dns-a.iij.ad.jp",
+      "ns.olympus.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mxgate01.olympus.co.jp",
+        "addresses": [
+          "138.107.12.111"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 150,
+        "hostname": "mxgate02.olympus.co.jp",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxgate01.olympus.co.jp: Connection timed out",
+      "The DNS operation timed out after 4.4 seconds",
+      "mxgate02.olympus.co.jp: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 3.0 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.olympus.co.jp\n\nv=spf1 +ip4:138.107.12.0/24 +ip4:138.107.21.0/24 +ip4:210.198.28.10 +ip4:210.198.28.11 +a:mail01.medicaltown.net +a:mail02.medicaltown.net +a:mail03.medicaltown.net include:webcas.net ~all"
+  }
+}

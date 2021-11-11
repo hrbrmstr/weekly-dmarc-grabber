@@ -1,0 +1,107 @@
+{
+  "domain": "kazminerals.com",
+  "base_domain": "kazminerals.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.123-reg.co.uk",
+      "ns2.123-reg.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "kazminerals-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.10.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "kazminerals-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.3 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=reject;pct=100;rua=mailto:fnc6jgnx@ag.ap.dmarcian.com, mailto:9q8s7jpu@ag.ap.dmarcian.com;ruf=mailto:ruf@kazminerals.com;fo=1;adkim=s;aspf=s",
+    "valid": true,
+    "location": "kazminerals.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fnc6jgnx@ag.ap.dmarcian.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "9q8s7jpu@ag.ap.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ruf@kazminerals.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "dowa.co.jp",
+  "base_domain": "dowa.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mns01.ucom.ne.jp",
+      "mns02.ucom.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "tky-1b-mail1.dowa.co.jp",
+        "addresses": [
+          "122.210.136.163"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "tky-1b-mail2.dowa.co.jp",
+        "addresses": [
+          "122.210.136.164"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "tky-1b-mail1.dowa.co.jp: Connection timed out",
+      "STARTTLS is not supported on tky-1b-mail2.dowa.co.jp",
+      "SSL/TLS is not supported on tky-1b-mail2.dowa.co.jp"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "dowa.co.jp does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

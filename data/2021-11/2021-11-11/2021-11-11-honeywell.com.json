@@ -1,0 +1,102 @@
+{
+  "domain": "honeywell.com",
+  "base_domain": "honeywell.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "elliot.ns.cloudflare.com",
+      "magnolia.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "honeywell-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.59.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on honeywell-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; adkim=r; aspf=r; fo=1; pct=100; rf=afrf; ri=3600; rua=mailto:honeywell@rua.agari.com; ruf=mailto:honeywell@ruf.agari.com",
+    "valid": true,
+    "location": "honeywell.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "honeywell@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "honeywell@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      }
+    }
+  }
+}

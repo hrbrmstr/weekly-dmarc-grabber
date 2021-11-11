@@ -1,0 +1,184 @@
+{
+  "domain": "group1auto.com",
+  "base_domain": "group1auto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gp1maindns-b.group1auto.com",
+      "gp1maindns-a.group1auto.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent1.group1auto.com",
+        "addresses": [
+          "50.231.25.154"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent2.group1auto.com",
+        "addresses": [
+          "50.231.25.155"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent3.group1auto.com",
+        "addresses": [
+          "50.231.25.156"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent4.group1auto.com",
+        "addresses": [
+          "50.231.25.157"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent1.group1auto.com",
+        "addresses": [
+          "64.143.220.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent2.group1auto.com",
+        "addresses": [
+          "64.143.220.222"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent3.group1auto.com",
+        "addresses": [
+          "64.143.220.223"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent4.group1auto.com",
+        "addresses": [
+          "64.143.220.224"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent5.group1auto.com",
+        "addresses": [
+          "64.143.220.226"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "pp-secure.group1auto.com",
+        "addresses": [
+          "64.143.220.225"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on bsc-ppagent1.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent2.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent3.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent4.group1auto.com",
+      "SSL/TLS is not supported on pp-agent1.group1auto.com",
+      "pp-agent2.group1auto.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "SSL/TLS is not supported on pp-agent3.group1auto.com",
+      "SSL/TLS is not supported on pp-agent4.group1auto.com",
+      "The reverse DNS of 64.143.220.226 is group1auto.com, but the A/AAAA DNS records for group1auto.com do not resolve to 64.143.220.226",
+      "SSL/TLS is not supported on pp-agent5.group1auto.com",
+      "The reverse DNS of 64.143.220.225 is group1auto.com, but the A/AAAA DNS records for group1auto.com do not resolve to 64.143.220.225",
+      "SSL/TLS is not supported on pp-secure.group1auto.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.2 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "group1auto.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

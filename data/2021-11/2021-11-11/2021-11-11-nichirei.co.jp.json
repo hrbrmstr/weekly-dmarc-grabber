@@ -1,0 +1,42 @@
+{
+  "domain": "nichirei.co.jp",
+  "base_domain": "nichirei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "s025vnid11.nichirei.co.jp",
+      "s038vnid11.nichirei.co.jp",
+      "s026vnid12.nichirei.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "nichirei-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.92.36",
+          "104.47.93.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "nichirei-co-jp.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-a.nichirei.co.jp include:spf-b.nichirei.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query spf.ecbeing.co.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1 ; p=none ; rua=mailto:nichireifoods_ml@senshu-g.co.jp; ruf=mailto:nichireifoods_ml@senshu-g.co.jp;",
+    "valid": false,
+    "location": "nichirei.co.jp",
+    "error": "Error: Expected version_tag at position 0 in: v=DMARC1 ; p=none ; rua=mailto:nichireifoods_ml@senshu-g.co.jp; ruf=mailto:nichireifoods_ml@senshu-g.co.jp;"
+  }
+}
