@@ -1,0 +1,146 @@
+{
+  "domain": "artnet.de",
+  "base_domain": "artnet.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "duke.ns.cloudflare.com",
+      "pam.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "142.250.114.26",
+          "2607:f8b0:4023:1002::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.26",
+          "2607:f8b0:4001:c56::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.26",
+          "2607:f8b0:4023:1::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "142.250.152.27",
+          "2607:f8b0:4001:c56::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "172.253.113.27",
+          "2607:f8b0:4023:1::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query artnet.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;rua=mailto:d8ea6d2a@mxtoolbox.dmarc-report.com;ruf=mailto:d8ea6d2a@forensics.dmarc-report.com;fo=1;pct=100",
+    "valid": true,
+    "location": "artnet.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d8ea6d2a@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d8ea6d2a@forensics.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

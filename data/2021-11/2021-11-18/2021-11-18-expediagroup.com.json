@@ -1,0 +1,125 @@
+{
+  "domain": "expediagroup.com",
+  "base_domain": "expediagroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns1.ultradns.net",
+      "pdns2.ultradns.net",
+      "pdns3.ultradns.org",
+      "pdns4.ultradns.org",
+      "pdns5.ultradns.info",
+      "pdns6.ultradns.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailcorp.expedia.com",
+        "addresses": [
+          "173.209.86.18"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1a.expedia.com",
+        "addresses": [
+          "216.251.112.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1b.expedia.com",
+        "addresses": [
+          "216.251.112.223"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailcorp.expedia.com",
+      "SSL/TLS is not supported on mx1a.expedia.com",
+      "SSL/TLS is not supported on mx1b.expedia.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:expedia@rua.netcraft.com ; ruf=mailto:expedia@ruf.netcraft.com",
+    "valid": true,
+    "location": "expediagroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "expedia@rua.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "expedia@ruf.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

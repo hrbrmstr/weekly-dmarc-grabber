@@ -1,0 +1,121 @@
+{
+  "domain": "ferratum.com",
+  "base_domain": "ferratum.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns14.dnsmadeeasy.com",
+      "ns13.dnsmadeeasy.com",
+      "ns12.dnsmadeeasy.com",
+      "ns11.dnsmadeeasy.com",
+      "ns10.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.eu.messagelabs.com",
+        "addresses": [
+          "195.245.231.69",
+          "195.245.231.72",
+          "195.245.231.75",
+          "46.226.52.101",
+          "46.226.52.103",
+          "46.226.52.107",
+          "46.226.52.197",
+          "46.226.52.199",
+          "46.226.52.203",
+          "85.158.142.101",
+          "85.158.142.103",
+          "85.158.142.107",
+          "85.158.142.193",
+          "85.158.142.200",
+          "85.158.142.203"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.eu.messagelabs.com",
+        "addresses": [
+          "3.124.201.23",
+          "3.125.75.191"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine;pct=5;rua=mailto:postmaster@ferratum.com",
+    "valid": true,
+    "location": "ferratum.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 5,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@ferratum.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

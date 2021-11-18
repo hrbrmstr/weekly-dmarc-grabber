@@ -1,0 +1,50 @@
+{
+  "domain": "deag.de",
+  "base_domain": "deag.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.arcor-ip.de",
+      "ns3.arcor-ip.de",
+      "ns1.arcor-ip.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "deagmx2.deag.de",
+        "addresses": [
+          "195.50.136.227"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "mail01.bluemoon-entertainment.at",
+        "addresses": [
+          "195.50.136.227"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "deagmx2.deag.de: SSL error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:997)",
+      "mail01.bluemoon-entertainment.at: SSL error: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "deag.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

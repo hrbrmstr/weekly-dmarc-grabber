@@ -1,0 +1,132 @@
+{
+  "domain": "ti.com",
+  "base_domain": "ti.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nssg.ti.com",
+      "nsde.ti.com",
+      "ns4.ti.com",
+      "ns3.ti.com",
+      "ns-d.pnap.net",
+      "ns-c.pnap.net",
+      "ns-b.pnap.net",
+      "ns-a.pnap.net",
+      "ns.ti.com",
+      "ns2.ti.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.194",
+          "67.219.246.195",
+          "67.219.246.82",
+          "67.219.246.98",
+          "67.219.246.99",
+          "67.219.247.195",
+          "67.219.247.99",
+          "67.219.250.194",
+          "67.219.250.195",
+          "67.219.250.82",
+          "67.219.250.98",
+          "67.219.250.99"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "3.233.40.190",
+          "54.210.240.248",
+          "54.236.118.167"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;sp=none;rua=mailto:dmarc-aggr@ti.com;ruf=mailto:dmarc-for@ti.com;fo=0",
+    "valid": true,
+    "location": "ti.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-aggr@ti.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-for@ti.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

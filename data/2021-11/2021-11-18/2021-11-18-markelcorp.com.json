@@ -1,0 +1,103 @@
+{
+  "domain": "markelcorp.com",
+  "base_domain": "markelcorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns3.ultradns.org",
+      "edns3.ultradns.biz",
+      "edns3.ultradns.net",
+      "edns3.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "cluster-g.mailcontrol.com",
+        "addresses": [
+          "208.87.233.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "cluster-h.mailcontrol.com",
+        "addresses": [
+          "208.87.234.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster-g.mailcontrol.com",
+      "SSL/TLS is not supported on cluster-h.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:6vlzrhmt@ag.dmarcian.com;",
+    "valid": true,
+    "location": "markelcorp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "6vlzrhmt@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

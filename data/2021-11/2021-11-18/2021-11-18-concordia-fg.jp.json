@@ -1,0 +1,47 @@
+{
+  "domain": "concordia-fg.jp",
+  "base_domain": "concordia-fg.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-66.akam.net",
+      "a6-64.akam.net",
+      "a9-66.akam.net",
+      "a1-187.akam.net",
+      "a14-67.akam.net",
+      "a8-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:18.178.93.33/32 +ip4:54.168.166.233/32 include:mx.securemx.jp ?all",
+    "valid": false,
+    "warnings": [],
+    "error": "mx.securemx.jp does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

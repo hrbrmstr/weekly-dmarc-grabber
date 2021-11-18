@@ -1,0 +1,122 @@
+{
+  "domain": "aviglobal.co.uk",
+  "base_domain": "aviglobal.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.systemdns.com",
+      "ns2.systemdns.com",
+      "ns1.systemdns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "195.245.231.64",
+          "195.245.231.73",
+          "46.226.52.102",
+          "46.226.52.195",
+          "46.226.52.198",
+          "46.226.52.99",
+          "85.158.142.102",
+          "85.158.142.192",
+          "85.158.142.198",
+          "85.158.142.99"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3a.eu.messagelabs.com",
+        "addresses": [
+          "3.124.201.23",
+          "3.125.75.191"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster3.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster3a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "aviglobal.co.uk has multiple SPF TXT records"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:fb23c94cf80f728@rep.dmarcanalyzer.com; ruf=mailto:fb23c94cf80f728@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "aviglobal.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb23c94cf80f728@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb23c94cf80f728@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

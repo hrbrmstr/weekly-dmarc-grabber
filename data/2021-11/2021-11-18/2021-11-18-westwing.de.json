@@ -1,0 +1,104 @@
+{
+  "domain": "westwing.de",
+  "base_domain": "westwing.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1971.awsdns-54.co.uk",
+      "ns-1373.awsdns-43.org",
+      "ns-1002.awsdns-61.net",
+      "ns-181.awsdns-22.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "westwing-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.1.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on westwing-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query westwing.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:sjqtlgn5@ag.eu.dmarcian.com; ruf=mailto:sjqtlgn5@fr.eu.dmarcian.com;pct=100",
+    "valid": true,
+    "location": "westwing.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "sjqtlgn5@ag.eu.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "sjqtlgn5@fr.eu.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

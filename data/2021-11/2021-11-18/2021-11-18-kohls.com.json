@@ -1,0 +1,127 @@
+{
+  "domain": "kohls.com",
+  "base_domain": "kohls.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a8-66.akam.net",
+      "a11-67.akam.net",
+      "a6-65.akam.net",
+      "a12-64.akam.net",
+      "a1-236.akam.net",
+      "a9-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mx1.kohlsinbound.iphmx.com",
+        "addresses": [
+          "68.232.129.145",
+          "68.232.130.161",
+          "68.232.130.18",
+          "68.232.135.126",
+          "68.232.135.228",
+          "68.232.135.64",
+          "68.232.142.10",
+          "68.232.142.237",
+          "68.232.142.241",
+          "68.232.143.146",
+          "68.232.148.172",
+          "68.232.148.173"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 1,
+        "hostname": "mx2.kohlsinbound.iphmx.com",
+        "addresses": [
+          "68.232.129.145",
+          "68.232.130.161",
+          "68.232.130.18",
+          "68.232.135.126",
+          "68.232.135.228",
+          "68.232.135.64",
+          "68.232.142.10",
+          "68.232.142.237",
+          "68.232.142.241",
+          "68.232.143.146",
+          "68.232.148.172",
+          "68.232.148.173"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.kohlsinbound.iphmx.com",
+      "SSL/TLS is not supported on mx2.kohlsinbound.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query kohls.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc@kohls.com",
+    "valid": true,
+    "location": "kohls.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@kohls.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
