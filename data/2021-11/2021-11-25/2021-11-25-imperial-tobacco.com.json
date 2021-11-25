@@ -1,0 +1,65 @@
+{
+  "domain": "imperial-tobacco.com",
+  "base_domain": "imperial-tobacco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.ipmanagerinc.net",
+      "dns2.ipmanagerinc.net",
+      "dns1.ipmanagerinc.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.hc1200-83.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.36.123",
+          "139.138.36.75",
+          "139.138.36.76",
+          "139.138.36.77",
+          "139.138.62.254",
+          "139.138.63.101",
+          "139.138.63.102",
+          "139.138.63.11"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc1200-83.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.36.123",
+          "139.138.36.75",
+          "139.138.36.76",
+          "139.138.36.77",
+          "139.138.62.254",
+          "139.138.63.101",
+          "139.138.63.102",
+          "139.138.63.11"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc1200-83.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1200-83.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.imptob.com include:spf2.imptob.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

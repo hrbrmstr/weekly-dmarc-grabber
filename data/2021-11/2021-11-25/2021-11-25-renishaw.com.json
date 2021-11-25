@@ -1,0 +1,111 @@
+{
+  "domain": "renishaw.com",
+  "base_domain": "renishaw.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "canterbury.renishaw.com",
+      "ns1.bt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "renishaw-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.8.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.9.36 is mail-ve1eur030036.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-ve1eur030036.inbound.protection.outlook.com do not resolve to 104.47.9.36",
+      "SSL/TLS is not supported on renishaw-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_agg@vali.email,mailto:8e1f20543db7378@rep.dmarcanalyzer.com; ruf=mailto:dmarc@renishaw.com",
+    "valid": true,
+    "location": "renishaw.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address 8e1f20543db7378@rep.dmarcanalyzer.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "8e1f20543db7378@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@renishaw.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

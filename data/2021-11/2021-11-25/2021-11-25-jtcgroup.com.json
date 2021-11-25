@@ -1,0 +1,120 @@
+{
+  "domain": "jtcgroup.com",
+  "base_domain": "jtcgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a.itconsult-dns.net",
+      "e.itconsult-dns.biz",
+      "b.itconsult-dns.org",
+      "d.itconsult-dns.co.uk",
+      "c.itconsult-dns.je"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [
+          "213.167.75.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 213.167.75.36 is je-smtp-inbound-2.mimecast-offshore.com, but the A/AAAA DNS records for je-smtp-inbound-2.mimecast-offshore.com do not resolve to 213.167.75.36",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 213.167.81.36 is je-smtp-inbound-2.mimecast-offshore.com, but the A/AAAA DNS records for je-smtp-inbound-2.mimecast-offshore.com do not resolve to 213.167.81.36",
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:049dc1200371489@rep.dmarcanalyzer.com; ruf=mailto:049dc1200371489@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "jtcgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

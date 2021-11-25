@@ -1,0 +1,127 @@
+{
+  "domain": "dmgmori.com",
+  "base_domain": "dmgmori.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.xc-ns.de",
+      "ns5.xc-ns.de",
+      "ns2.xc-ns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.106",
+          "67.219.250.108",
+          "67.219.250.192",
+          "67.219.250.202",
+          "67.219.250.204",
+          "67.219.250.96"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "3.233.40.190",
+          "34.231.11.79",
+          "35.174.162.180"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 67.219.247.106 is mail630.messagelabs.com, but the A/AAAA DNS records for mail630.messagelabs.com do not resolve to 67.219.247.106",
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:rua-dmarc@dmgmori.com; ruf=mailto:ruf-dmarc@dmgmori.com; fo=1; adkim=r; aspf=s; sp=none;",
+    "valid": true,
+    "location": "dmgmori.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "rua-dmarc@dmgmori.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ruf-dmarc@dmgmori.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

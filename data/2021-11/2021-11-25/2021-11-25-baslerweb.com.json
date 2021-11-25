@@ -1,0 +1,41 @@
+{
+  "domain": "baslerweb.com",
+  "base_domain": "baslerweb.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "baslerweb-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on baslerweb-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query baslerweb.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; adkim=s; aspf=s; rua=mailto:postmaster@baslerweb.com; ruf=mailto:postmaster@baslerweb.com; fo=0:1:d:s;",
+    "valid": false,
+    "location": "baslerweb.com",
+    "error": "fo DMARC tag options 0 and 1 are mutually exclusive"
+  }
+}

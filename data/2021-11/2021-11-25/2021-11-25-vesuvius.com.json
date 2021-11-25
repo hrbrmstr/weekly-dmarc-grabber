@@ -1,0 +1,43 @@
+{
+  "domain": "vesuvius.com",
+  "base_domain": "vesuvius.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-02.azure-dns.info",
+      "ns3-02.azure-dns.org",
+      "ns2-01.azure-dns.net",
+      "ns1-01.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "vesuvius-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.110",
+          "104.47.56.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on vesuvius-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:spf.protection.outlook.com ip4:217.67.108.73 ip4:173.209.225.73 ip4:202.111.33.103 ip4:173.209.225.76 ip4:46.245.221.5 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

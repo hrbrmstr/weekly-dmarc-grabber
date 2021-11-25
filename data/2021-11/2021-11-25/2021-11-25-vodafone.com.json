@@ -1,0 +1,126 @@
+{
+  "domain": "vodafone.com",
+  "base_domain": "vodafone.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.vodafone.com",
+      "ns3.vodafone.com",
+      "ns1.vodafone.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.200",
+          "195.245.230.201",
+          "195.245.230.202",
+          "195.245.231.69",
+          "195.245.231.72",
+          "195.245.231.75",
+          "85.158.142.101",
+          "85.158.142.103",
+          "85.158.142.107",
+          "85.158.142.193",
+          "85.158.142.200",
+          "85.158.142.203"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.eu.messagelabs.com",
+        "addresses": [
+          "18.197.9.17",
+          "35.158.176.178"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.6 seconds",
+      "The reverse DNS of 85.158.142.193 is mail238.messagelabs.com, but the A/AAAA DNS records for mail238.messagelabs.com do not resolve to 85.158.142.193",
+      "cluster5.eu.messagelabs.com: Connection timed out",
+      "SSL/TLS is not supported on cluster5a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:adeeb5c538f9684@rep.dmarcanalyzer.com; ruf=mailto:adeeb5c538f9684@for.dmarcanalyzer.com; pct=100; sp=none; fo=1",
+    "valid": true,
+    "location": "vodafone.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

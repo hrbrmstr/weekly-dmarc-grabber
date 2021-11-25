@@ -1,0 +1,77 @@
+{
+  "domain": "boeing.com",
+  "base_domain": "boeing.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "phxdnsxp01.dns.boeing.net",
+      "qnydnsxp01.dns.boeing.net",
+      "cltdnsxp01.dns.boeing.net",
+      "cltdnsxp02.dns.boeing.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query boeing.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:dmarcreports@boeing.com",
+    "valid": true,
+    "location": "boeing.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarcreports@boeing.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarcreports@boeing.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

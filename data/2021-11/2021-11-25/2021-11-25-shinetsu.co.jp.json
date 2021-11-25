@@ -1,0 +1,75 @@
+{
+  "domain": "shinetsu.co.jp",
+  "base_domain": "shinetsu.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-kg022.ocn.ad.jp",
+      "ns2.shinetsu.co.jp",
+      "ns.shinetsu.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.shinetsu.co.jp ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.shinetsu.co.jp",
+          "record": "v=spf1 ip4:210.163.37.128/26 ip4:61.200.19.0/26 ip4:180.233.135.128/26 ip4:101.102.159.224/27 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.163.37.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.200.19.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.233.135.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "101.102.159.224/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

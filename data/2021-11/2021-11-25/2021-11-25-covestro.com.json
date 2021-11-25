@@ -1,0 +1,58 @@
+{
+  "domain": "covestro.com",
+  "base_domain": "covestro.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtpmx01.covestro.com",
+        "addresses": [
+          "94.100.251.184"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpmx02.covestro.com",
+        "addresses": [
+          "94.100.251.185"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "smtpmx03.covestro.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smtpmx01.covestro.com",
+      "smtpmx02.covestro.com: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "smtpmx03.covestro.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

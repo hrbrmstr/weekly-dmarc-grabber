@@ -1,0 +1,137 @@
+{
+  "domain": "standardchartered.com",
+  "base_domain": "standardchartered.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a8-66.akam.net",
+      "a4-64.akam.net",
+      "a1-244.akam.net",
+      "a6-65.akam.net",
+      "a3-67.akam.net",
+      "a9-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.209",
+          "67.219.246.216",
+          "67.219.247.193",
+          "67.219.247.97",
+          "67.219.250.107",
+          "67.219.250.193",
+          "67.219.250.203",
+          "67.219.250.97"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.us.messagelabs.com",
+        "addresses": [
+          "3.233.40.190",
+          "34.231.11.79",
+          "35.174.162.180"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 67.219.250.203 is mail351.messagelabs.com, but the A/AAAA DNS records for mail351.messagelabs.com do not resolve to 67.219.250.203",
+      "SSL/TLS is not supported on cluster4.us.messagelabs.com",
+      "cluster4a.us.messagelabs.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:int01._spf.sc.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:dmarc-sc.rua@sc.com,mailto:sc@rua.netcraft.com; ruf=mailto:dmarc-sc.ruf@sc.com,mailto:sc@ruf.netcraft.com",
+    "valid": true,
+    "location": "standardchartered.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-sc.rua@sc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "sc@rua.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-sc.ruf@sc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "sc@ruf.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

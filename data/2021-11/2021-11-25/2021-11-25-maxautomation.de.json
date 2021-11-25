@@ -1,0 +1,50 @@
+{
+  "domain": "maxautomation.de",
+  "base_domain": "maxautomation.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.agenturserver.it",
+      "ns01.agenturserver.co",
+      "ns01.agenturserver.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.maxautomation.com",
+        "addresses": [
+          "212.2.69.194"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail2.maxautomation.com",
+        "addresses": [
+          "212.2.69.195"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.maxautomation.com: Connection timed out",
+      "mail2.maxautomation.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail2.maxautomation.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "maxautomation.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

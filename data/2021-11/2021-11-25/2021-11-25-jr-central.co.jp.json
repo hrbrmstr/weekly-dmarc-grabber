@@ -1,0 +1,56 @@
+{
+  "domain": "jr-central.co.jp",
+  "base_domain": "jr-central.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a5-65.akam.net",
+      "a16-66.akam.net",
+      "a24-64.akam.net",
+      "a18-67.akam.net",
+      "a7-66.akam.net",
+      "a1-147.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.jr-central.co.jp",
+        "addresses": [
+          "192.218.66.6"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx02.jr-central.co.jp",
+        "addresses": [
+          "192.218.66.8"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx01.jr-central.co.jp",
+      "SSL/TLS is not supported on mx01.jr-central.co.jp",
+      "STARTTLS is not supported on mx02.jr-central.co.jp",
+      "SSL/TLS is not supported on mx02.jr-central.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:192.218.66.0/24 include:spf.ecbeing.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

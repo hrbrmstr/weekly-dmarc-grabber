@@ -1,0 +1,43 @@
+{
+  "domain": "nisshin.com",
+  "base_domain": "nisshin.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns07.mesh.ad.jp",
+      "ns06.mesh.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "nisshin-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.92.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.92.36 is mail-os2jpn010036.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-os2jpn010036.inbound.protection.outlook.com do not resolve to 104.47.92.36",
+      "SSL/TLS is not supported on nisshin-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.227.102.175 ip4:210.227.102.176 ip4:210.227.102.163 include:aspmx.pardot.com include:spf.protection.outlook.com include:spf.mta.hdems.com include:_spf.cmsod.jp include:saaske.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

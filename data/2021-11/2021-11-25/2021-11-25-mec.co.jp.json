@@ -1,0 +1,96 @@
+{
+  "domain": "mec.co.jp",
+  "base_domain": "mec.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.mec.co.jp",
+      "ns1.mec.co.jp",
+      "ns4.mec.co.jp",
+      "ns2.mec.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mec-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.93.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.93.36 is mail-ty1jpn010036.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-ty1jpn010036.inbound.protection.outlook.com do not resolve to 104.47.93.36",
+      "SSL/TLS is not supported on mec-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:resiclub@mec.co.jp",
+    "valid": true,
+    "location": "mec.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "resiclub@mec.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

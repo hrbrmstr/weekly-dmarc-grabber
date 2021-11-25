@@ -1,0 +1,84 @@
+{
+  "domain": "yuden.co.jp",
+  "base_domain": "yuden.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns018-hfutddtqgd2g0ab6.h.d-53.info",
+      "ns018-hfutddtqgd2g0ab6.h.d-53.net",
+      "ns018-hfutddtqgd2g0ab6.h.d-53.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mta1.mail.yuden.co.jp",
+        "addresses": [
+          "210.237.180.201"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mta2.mail.yuden.co.jp",
+        "addresses": [
+          "210.237.180.202"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mta3.mail.yuden.co.jp",
+        "addresses": [
+          "211.127.242.34"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mta1.mail.yuden.co.jp: Connection timed out",
+      "SSL/TLS is not supported on mta2.mail.yuden.co.jp",
+      "SSL/TLS is not supported on mta3.mail.yuden.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.237.180.192/26 ip4:210.238.12.0/24 ip4:211.127.242.33/29 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.237.180.192/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.238.12.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.127.242.33/29",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
