@@ -1,0 +1,133 @@
+{
+  "domain": "carsales.com.au",
+  "base_domain": "carsales.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1907.awsdns-46.co.uk",
+      "ns-1142.awsdns-14.org",
+      "ns-696.awsdns-23.net",
+      "ns-114.awsdns-14.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 103.13.69.26 is au-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for au-smtp-inbound-1.mimecast.com do not resolve to 103.13.69.26",
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 124.47.150.122 is au-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for au-smtp-inbound-2.mimecast.com do not resolve to 124.47.150.122",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query carsales.com.au. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none;  rua=mailto:87ff8b53a45f113@rep.dmarcanalyzer.com,mailto:5f9f642406583@ag.dmarcly.com; ruf=mailto:87ff8b53a45f113@for.dmarcanalyzer.com,mailto:5f9f642406583@fo.dmarcly.com; fo=1;",
+    "valid": true,
+    "location": "carsales.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "87ff8b53a45f113@rep.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "5f9f642406583@ag.dmarcly.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "87ff8b53a45f113@for.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "5f9f642406583@fo.dmarcly.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

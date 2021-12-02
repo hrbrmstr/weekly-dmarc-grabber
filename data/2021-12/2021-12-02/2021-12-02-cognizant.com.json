@@ -1,0 +1,121 @@
+{
+  "domain": "cognizant.com",
+  "base_domain": "cognizant.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.cognizant.com",
+      "ns3.cognizant.com",
+      "ns4.cognizant.com",
+      "ns1.cognizant.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "cognizant-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.26.10",
+          "104.47.26.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cognizant-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; aspf=r; fo=1; pct=100; rua=mailto:cognizant@rua.agari.com,mailto:re+ykzcdxptmnx@dmarc.postmarkapp.com,mailto:dmarcanalyzer@Cognizant.com; ruf=mailto:cognizant@ruf.agari.com,mailto:dmarcanalyzer@Cognizant.com",
+    "valid": true,
+    "location": "cognizant.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cognizant@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "re+ykzcdxptmnx@dmarc.postmarkapp.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcanalyzer@Cognizant.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cognizant@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcanalyzer@Cognizant.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

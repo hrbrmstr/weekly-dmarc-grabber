@@ -1,0 +1,149 @@
+{
+  "domain": "lockheedmartin.com",
+  "base_domain": "lockheedmartin.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.lmco.com",
+      "ns3.lmco.com",
+      "ns1.lmco.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailfi01.lmco.com",
+        "addresses": [
+          "192.31.106.9"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailfi02.lmco.com",
+        "addresses": [
+          "192.31.106.10"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailfi03.lmco.com",
+        "addresses": [
+          "192.31.106.11"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailfi04.lmco.com",
+        "addresses": [
+          "192.35.35.9"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailfi05.lmco.com",
+        "addresses": [
+          "192.35.35.10"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailfi06.lmco.com",
+        "addresses": [
+          "192.35.35.11"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailfi01.lmco.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailfi02.lmco.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailfi03.lmco.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailfi04.lmco.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailfi05.lmco.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailfi06.lmco.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=reject;rua=mailto:lm-rua.dmarc@lmco.com",
+    "valid": true,
+    "location": "lockheedmartin.com",
+    "warnings": [
+      "lmco.com does not indicate that it accepts DMARC reports about lockheedmartin.com - Authorization record not found: lockheedmartin.com._report._dmarc.lmco.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:lm-rua.dmarc@lmco.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

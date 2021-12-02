@@ -1,0 +1,50 @@
+{
+  "domain": "costagroup.com.au",
+  "base_domain": "costagroup.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.tti.net.au",
+      "ns2.tti.net.au",
+      "ns.tti.net.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0037cc01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.135.231"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0037cc01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.139.231"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0037cc01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-0037cc01.gslb.pphosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query costagroup.com.au. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  }
+}

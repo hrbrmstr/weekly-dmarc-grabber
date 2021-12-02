@@ -1,0 +1,55 @@
+{
+  "domain": "kline.co.jp",
+  "base_domain": "kline.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.genie.ne.jp",
+      "ns1.genie.ne.jp",
+      "ns2.genie.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "cluster8.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.218",
+          "67.219.247.197",
+          "67.219.250.214"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "cluster8a.us.messagelabs.com",
+        "addresses": [
+          "34.199.101.66",
+          "44.198.115.56",
+          "52.87.120.250"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:_spf.genie.ne.jp include:_spf.fireeyecloud.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

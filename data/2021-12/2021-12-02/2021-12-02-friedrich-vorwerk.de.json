@@ -1,0 +1,50 @@
+{
+  "domain": "friedrich-vorwerk.de",
+  "base_domain": "friedrich-vorwerk.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.stratoserver.net",
+      "ns3.stratoserver.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.friedrich-vorwerk.de",
+        "addresses": [
+          "80.228.15.194"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "relay.rzone.de",
+        "addresses": [
+          "81.169.145.96"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx01.friedrich-vorwerk.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)",
+      "SSL/TLS is not supported on relay.rzone.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:80.228.15.194 include:mailing.eqs.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  }
+}

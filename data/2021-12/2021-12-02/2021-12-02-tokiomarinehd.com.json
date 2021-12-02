@@ -1,0 +1,65 @@
+{
+  "domain": "tokiomarinehd.com",
+  "base_domain": "tokiomarinehd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.tokiomarinehd.com",
+      "a10-67.akam.net",
+      "a1-180.akam.net",
+      "a7-66.akam.net",
+      "a2-64.akam.net",
+      "a4-65.akam.net",
+      "a9-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "34.199.101.66",
+          "44.198.115.56",
+          "52.87.120.250"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a:cms.tokiomarinehd.com include:spf.tmnf.jp include:smp.ne.jp -all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query smp.ne.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "domain": "mvv.de",
+  "base_domain": "mvv.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.stadtwerke-ingolstadt.de",
+      "abel-2.mvv.de",
+      "abel-1.mvv.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx12a.antispameurope.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx12b.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx12c.antispameurope.com",
+        "addresses": [
+          "94.100.134.10"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx12d.antispameurope.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx12a.antispameurope.com",
+      "SSL/TLS is not supported on mx12b.antispameurope.com",
+      "SSL/TLS is not supported on mx12c.antispameurope.com",
+      "SSL/TLS is not supported on mx12d.antispameurope.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query mvv.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

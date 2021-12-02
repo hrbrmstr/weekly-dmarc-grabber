@@ -1,0 +1,113 @@
+{
+  "domain": "entergy.com",
+  "base_domain": "entergy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.jms.entergy.com",
+      "ns.roc.entergy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "symmail1.no.entergy.com",
+        "addresses": [
+          "198.8.7.67"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "symmail2.no.entergy.com",
+        "addresses": [
+          "198.8.7.68"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "symmail3.roc.entergy.com",
+        "addresses": [
+          "198.8.6.67"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "symmail4.roc.entergy.com",
+        "addresses": [
+          "198.8.6.68"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on symmail1.no.entergy.com",
+      "symmail2.no.entergy.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "SSL/TLS is not supported on symmail3.roc.entergy.com",
+      "SSL/TLS is not supported on symmail4.roc.entergy.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject;",
+    "valid": true,
+    "location": "entergy.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

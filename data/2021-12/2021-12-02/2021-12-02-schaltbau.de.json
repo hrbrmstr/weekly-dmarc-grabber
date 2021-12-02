@@ -1,0 +1,104 @@
+{
+  "domain": "schaltbau.de",
+  "base_domain": "schaltbau.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.de",
+      "ns.udag.net",
+      "ns.udag.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-in02.eu.retarus.com",
+        "addresses": [
+          "94.199.89.39"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail2.schaltbau.de",
+        "addresses": [
+          "80.149.247.100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx-in02.eu.retarus.com: Connection timed out",
+      "80.149.247.100 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mail2.schaltbau.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:_spf.retarus.com include:mailing.eqs.com  include:portalmail.assentcompliance.com include:FRYP281MB0342.DEUP281.PROD.OUTLOOK.COM -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain fryp281mb0342.deup281.prod.outlook.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; aspf=s; rua=mailto:dmarc@schaltbau.de",
+    "valid": true,
+    "location": "schaltbau.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@schaltbau.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

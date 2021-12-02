@@ -1,0 +1,61 @@
+{
+  "domain": "schaeffler.com",
+  "base_domain": "schaeffler.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.lemarit.net",
+      "ns.ina.de",
+      "ns4.lemarit.de",
+      "ns2.ina.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-1.schaeffler.com",
+        "addresses": [
+          "85.115.60.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail-3.schaeffler.com",
+        "addresses": [
+          "85.115.54.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mail-2.schaeffler.com",
+        "addresses": [
+          "85.115.58.190"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail-1.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-1.schaeffler.com'. (_ssl.c:997)",
+      "mail-3.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-3.schaeffler.com'. (_ssl.c:997)",
+      "mail-2.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-2.schaeffler.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "domain": "sekisuihouse.co.jp",
+  "base_domain": "sekisuihouse.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.sekisuihouse.co.jp",
+      "ns2.sekisuihouse.co.jp",
+      "ns-tk011.ocn.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.211",
+          "67.219.246.212",
+          "67.219.247.195",
+          "67.219.247.99",
+          "67.219.250.217",
+          "67.219.250.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "34.199.101.66",
+          "44.198.115.56",
+          "52.87.120.250"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.sekisuihouse.co.jp\n\nv=spf1 redirect=sekisuihouse.co.jp"
+  }
+}

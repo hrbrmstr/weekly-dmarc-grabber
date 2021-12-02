@@ -1,0 +1,41 @@
+{
+  "domain": "bvb.de",
+  "base_domain": "bvb.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "salvador.ns.cloudflare.com",
+      "elisa.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bvb.de",
+        "addresses": [
+          "5.147.249.215"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 5.147.249.215 is mail.bvb.de, but the A/AAAA DNS records for mail.bvb.de do not resolve to 5.147.249.215",
+      "mail.bvb.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

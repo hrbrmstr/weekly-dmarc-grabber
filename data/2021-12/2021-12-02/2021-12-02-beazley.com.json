@@ -1,0 +1,111 @@
+{
+  "domain": "beazley.com",
+  "base_domain": "beazley.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.uk.colt.net",
+      "ns1.uk.colt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.195",
+          "195.245.230.198",
+          "195.245.231.66",
+          "195.245.231.71",
+          "85.158.142.104",
+          "85.158.142.108",
+          "85.158.142.194",
+          "85.158.142.201",
+          "85.158.142.204",
+          "85.158.142.98"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "3.122.4.88",
+          "52.28.202.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster8.eu.messagelabs.com: Connection timed out",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email; fo=s",
+    "valid": true,
+    "location": "beazley.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}
