@@ -1,0 +1,77 @@
+{
+  "domain": "westerndigital.com",
+  "base_domain": "westerndigital.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ans2.wdc.com",
+      "ans1.wdc.com",
+      "ns2.wdc.com",
+      "ns1.wdc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hgst.iphmx.com",
+        "addresses": [
+          "216.71.153.141",
+          "216.71.153.144",
+          "216.71.154.42",
+          "216.71.154.45",
+          "68.232.141.245",
+          "68.232.143.124"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hgst.iphmx.com",
+        "addresses": [
+          "216.71.153.141",
+          "216.71.153.144",
+          "216.71.154.42",
+          "216.71.154.45",
+          "68.232.141.245",
+          "68.232.143.124"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hgst.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)",
+      "mx2.hgst.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:206.189.206.152 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "206.189.206.152",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Multiple DMARC policy records are not permitted - https://tools.ietf.org/html/rfc7489#section-6.6.3"
+  }
+}

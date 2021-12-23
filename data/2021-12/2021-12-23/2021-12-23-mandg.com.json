@@ -1,0 +1,133 @@
+{
+  "domain": "mandg.com",
+  "base_domain": "mandg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.hc1445-87.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.60.53",
+          "68.232.152.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.hc1445-87.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.60.53",
+          "68.232.152.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp1.prudential.co.uk",
+        "addresses": [
+          "80.247.58.20"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp4.prudential.co.uk",
+        "addresses": [
+          "80.247.59.51"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc1445-87.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1445-87.c3s2.iphmx.com",
+      "SSL/TLS is not supported on smtp1.prudential.co.uk",
+      "SSL/TLS is not supported on smtp4.prudential.co.uk"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.aggregated@mandg.com; ruf=mailto:dmarc.forensics@mandg.com; fo=s; aspf=s;",
+    "valid": true,
+    "location": "mandg.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.aggregated@mandg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.forensics@mandg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "domain": "rhoen-klinikum-ag.com",
+  "base_domain": "rhoen-klinikum-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.telekom.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.rhoen-klinikum-ag.com",
+        "addresses": [
+          "194.25.45.9"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.rhoen-klinikum-ag.com",
+        "addresses": [
+          "194.25.45.40"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mforward.dtag.de",
+        "addresses": [
+          "194.25.242.123"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.rhoen-klinikum-ag.com",
+      "SSL/TLS is not supported on mail2.rhoen-klinikum-ag.com",
+      "mforward.dtag.de: Could not connect:  SMTP error code 450"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.3 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

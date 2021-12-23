@@ -1,0 +1,87 @@
+{
+  "domain": "tpgtelecom.com.au",
+  "base_domain": "tpgtelecom.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.tpgi.com.au",
+      "ns1.tpgi.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.51",
+          "3.93.93.52",
+          "3.93.93.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.51",
+          "3.93.93.52",
+          "3.93.93.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.51",
+          "3.93.93.52",
+          "3.93.93.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.51",
+          "3.93.93.52",
+          "3.93.93.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "asav.tpgtelecom.com.au",
+        "addresses": [
+          "27.32.28.130"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on primary.us.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt1.us.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.us.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.us.email.fireeyecloud.com",
+      "asav.tpgtelecom.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query tpgtelecom.com.au. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

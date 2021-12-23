@@ -1,0 +1,312 @@
+{
+  "domain": "standardchartered.com",
+  "base_domain": "standardchartered.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a8-66.akam.net",
+      "a4-64.akam.net",
+      "a1-244.akam.net",
+      "a6-65.akam.net",
+      "a3-67.akam.net",
+      "a9-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.209",
+          "67.219.246.216",
+          "67.219.247.193",
+          "67.219.247.97",
+          "67.219.250.211",
+          "67.219.250.216"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.us.messagelabs.com",
+        "addresses": [
+          "44.198.115.56",
+          "54.81.159.29",
+          "54.81.237.72"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster4.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster4a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:int01._spf.sc.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "int01._spf.sc.com",
+          "record": "v=spf1 ip4:203.191.3.152 ip4:203.191.3.153 ip4:203.191.3.159 ip4:203.191.3.160 ip4:203.191.3.163 ip4:203.191.3.164 ip4:203.191.3.190 ip4:203.191.3.191 ip4:203.191.3.192 ip4:203.191.3.193 ip4:211.32.160.65 ip4:211.32.160.151 ip4:203.191.3.155 ip4:203.191.3.154 ip4:211.32.160.238 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "203.191.3.152",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.153",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.159",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.160",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.163",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.190",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.191",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.192",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.193",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "211.32.160.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "211.32.160.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.155",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.3.154",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "211.32.160.238",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:dmarc-sc.rua@sc.com,mailto:sc@rua.netcraft.com; ruf=mailto:dmarc-sc.ruf@sc.com,mailto:sc@ruf.netcraft.com",
+    "valid": true,
+    "location": "standardchartered.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-sc.rua@sc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "sc@rua.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-sc.ruf@sc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "sc@ruf.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

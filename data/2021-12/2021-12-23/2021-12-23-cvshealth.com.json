@@ -1,0 +1,123 @@
+{
+  "domain": "cvshealth.com",
+  "base_domain": "cvshealth.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a18-67.akam.net",
+      "a7-64.akam.net",
+      "a13-65.akam.net",
+      "a8-65.akam.net",
+      "a14-66.akam.net",
+      "a1-84.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.6 seconds",
+      "The reverse DNS of 205.139.110.141 is us-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-2.mimecast.com do not resolve to 205.139.110.141",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 205.139.110.141 is us-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-1.mimecast.com do not resolve to 205.139.110.141",
+      "SSL/TLS is not supported on us-smtp-inbound-1.mimecast.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "SSL/TLS is not supported on us-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:aetna@rua.agari.com; ruf=mailto:aetna@ruf.agari.com",
+    "valid": true,
+    "location": "cvshealth.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aetna@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aetna@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

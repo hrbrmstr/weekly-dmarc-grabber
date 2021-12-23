@@ -1,0 +1,50 @@
+{
+  "domain": "tokiomarinehd.com",
+  "base_domain": "tokiomarinehd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.tokiomarinehd.com",
+      "a10-67.akam.net",
+      "a1-180.akam.net",
+      "a7-66.akam.net",
+      "a2-64.akam.net",
+      "a4-65.akam.net",
+      "a9-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 210.130.202.97 is mx30.securemx.jp, but the A/AAAA DNS records for mx30.securemx.jp do not resolve to 210.130.202.97",
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a:cms.tokiomarinehd.com include:spf.tmnf.jp include:smp.ne.jp -all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query smp.ne.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "domain": "nichirei.co.jp",
+  "base_domain": "nichirei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "s025vnid11.nichirei.co.jp",
+      "s026vnid12.nichirei.co.jp",
+      "s038vnid11.nichirei.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "nichirei-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on nichirei-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-a.nichirei.co.jp include:spf-b.nichirei.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1 ; p=none ; rua=mailto:nichireifoods_ml@senshu-g.co.jp; ruf=mailto:nichireifoods_ml@senshu-g.co.jp;",
+    "valid": false,
+    "location": "nichirei.co.jp",
+    "error": "Error: Expected version_tag at position 0 in: v=DMARC1 ; p=none ; rua=mailto:nichireifoods_ml@senshu-g.co.jp; ruf=mailto:nichireifoods_ml@senshu-g.co.jp;"
+  }
+}

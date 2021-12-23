@@ -1,0 +1,146 @@
+{
+  "domain": "infineon.com",
+  "base_domain": "infineon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp11.infineon.com",
+        "addresses": [
+          "217.10.52.105",
+          "2a00:18f0:1e00:4::5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp14.infineon.com",
+        "addresses": [
+          "217.10.52.160",
+          "2a00:18f0:1e00:4::6"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp2.infineon.com",
+        "addresses": [
+          "217.10.52.18",
+          "2a00:18f0:1e00:4::4"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "smtp1.infineon.com",
+        "addresses": [
+          "2001:df1:6000:4::4",
+          "203.161.181.12"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "smtp21.infineon.com",
+        "addresses": [
+          "172.96.128.23",
+          "2620:e:2000:4::4"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smtp11.infineon.com",
+      "SSL/TLS is not supported on smtp14.infineon.com",
+      "SSL/TLS is not supported on smtp2.infineon.com",
+      "SSL/TLS is not supported on smtp1.infineon.com",
+      "SSL/TLS is not supported on smtp21.infineon.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:mailrua-reports@infineon.com; ruf=mailto:mailruf-reports@infineon.com; fo=1;",
+    "valid": true,
+    "location": "infineon.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailrua-reports@infineon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailruf-reports@infineon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

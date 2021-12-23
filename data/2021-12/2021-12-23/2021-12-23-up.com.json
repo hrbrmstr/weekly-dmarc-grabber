@@ -1,0 +1,49 @@
+{
+  "domain": "up.com",
+  "base_domain": "up.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "eth0.omhqp13d10.uprr.com",
+      "eth0.omsdp13d11.uprr.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "vx-cseg-01.omhq.uprr.com",
+        "addresses": [
+          "198.47.234.1"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "vx-cseg-03.omsd.uprr.com",
+        "addresses": [
+          "45.54.253.129"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "vx-cseg-01.omhq.uprr.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "vx-cseg-03.omsd.uprr.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: EE certificate key too weak (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

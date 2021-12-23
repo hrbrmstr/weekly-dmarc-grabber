@@ -1,0 +1,205 @@
+{
+  "domain": "nemetschek.com",
+  "base_domain": "nemetschek.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nameserver-2-io.maxcluster.net",
+      "nameserver-1-io.maxcluster.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "email-01.nemetschek.com",
+        "addresses": [
+          "212.204.68.72"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "email-02.nemetschek.com",
+        "addresses": [
+          "212.204.68.73"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on email-01.nemetschek.com",
+      "SSL/TLS is not supported on email-02.nemetschek.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.mailjet.com include:_spf.rexx-suite.com include:mailing.eqs.com include:spf.eu.exclaimer.net ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [
+      "Duplicate include: spf.mailjet.com"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "email-01.nemetschek.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "email-02.nemetschek.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.mailjet.com",
+          "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "87.253.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.189.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.211.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.250.236.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.rexx-suite.com",
+          "record": "v=spf1 a:mx01.rexx-systems.de ip4:92.51.187.64/27 ip4:83.169.51.224/27 ip4:80.237.187.32/28 ip4:91.250.74.128/27 ip4:87.230.74.128/28 ip4:91.250.95.64/26 ip4:85.25.89.0/24 -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.25.89.5",
+                "mechanism": "a"
+              },
+              {
+                "value": "92.51.187.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.169.51.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.237.187.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.74.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "87.230.74.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.95.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.25.89.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": [
+            "Duplicate include: spf.mailjet.com"
+          ]
+        },
+        {
+          "domain": "spf.eu.exclaimer.net",
+          "record": "v=spf1 ip4:104.40.229.156 ip4:52.169.0.179 ip4:20.50.220.144/28 ip4:40.127.253.48/28 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "104.40.229.156",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.169.0.179",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.50.220.144/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.127.253.48/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

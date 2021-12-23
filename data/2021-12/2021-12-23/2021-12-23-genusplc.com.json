@@ -1,0 +1,51 @@
+{
+  "domain": "genusplc.com",
+  "base_domain": "genusplc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns14.domaincontrol.com",
+      "pdns13.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004f4302.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.152"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004f4302.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.152"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-004f4302.gslb.pphosted.com: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 185.183.31.152 is mx08-004f4302.pphosted.com, but the A/AAAA DNS records for mx08-004f4302.pphosted.com do not resolve to 185.183.31.152",
+      "SSL/TLS is not supported on mxb-004f4302.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query genusplc.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
