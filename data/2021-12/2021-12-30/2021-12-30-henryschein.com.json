@@ -1,0 +1,106 @@
+{
+  "domain": "henryschein.com",
+  "base_domain": "henryschein.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a11-67.akam.net",
+      "a1-118.akam.net",
+      "a13-64.akam.net",
+      "a26-66.akam.net",
+      "a16-65.akam.net",
+      "a4-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001d3a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.152.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001d3a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-001d3a01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-001d3a01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query henryschein.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "henryschein.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

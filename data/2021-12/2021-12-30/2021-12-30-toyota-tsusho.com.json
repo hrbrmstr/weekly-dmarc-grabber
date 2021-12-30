@@ -1,0 +1,103 @@
+{
+  "domain": "toyota-tsusho.com",
+  "base_domain": "toyota-tsusho.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ttc2.toyotsu.co.jp",
+      "majesta.tns.ne.jp",
+      "royal.tns.ne.jp",
+      "ttc1.toyotsu.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mxa-002f0901.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.83"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mxb-002f0901.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.83"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002f0901.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002f0901.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query toyota-tsusho.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:tsys00001-ra@dmarc25.jp; sp=none",
+    "valid": true,
+    "location": "toyota-tsusho.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tsys00001-ra@dmarc25.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

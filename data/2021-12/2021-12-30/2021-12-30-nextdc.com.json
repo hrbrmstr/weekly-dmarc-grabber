@@ -1,0 +1,103 @@
+{
+  "domain": "nextdc.com",
+  "base_domain": "nextdc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "glen.ns.cloudflare.com",
+      "elma.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "nextdc-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on nextdc-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:103.3.217.134 ip4:103.3.219.134 ip4:103.3.217.245 ip4:103.3.217.156 ip4:103.3.217.158 ip4:103.3.219.156 ip4:103.3.219.158 include:spf.protection.outlook.com include:spf.messagelabs.com include:spf.dynect.net include:mail.identity.nextdc.com include:_spf.salesforce.com include:emsd1.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; rua=mailto:mailauth-reports@nextdc.com; ruf=mailto:mailauth-reports@nextdc.com; fo=1; adkim=s; aspf=r",
+    "valid": true,
+    "location": "nextdc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth-reports@nextdc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth-reports@nextdc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

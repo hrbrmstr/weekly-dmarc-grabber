@@ -1,0 +1,115 @@
+{
+  "domain": "jgc.com",
+  "base_domain": "jgc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-04.azure-dns.com",
+      "ns2-04.azure-dns.net",
+      "ns3-04.azure-dns.org",
+      "ns4-04.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc642-55.ap.iphmx.com",
+        "addresses": [
+          "139.138.29.43",
+          "207.54.83.178"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc642-55.ap.iphmx.com",
+        "addresses": [
+          "139.138.29.43",
+          "207.54.83.178"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc642-55.ap.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc642-55.ap.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:postmaster@jgc.com; ruf=mailto:postmaster@jgc.com",
+    "valid": true,
+    "location": "jgc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@jgc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@jgc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

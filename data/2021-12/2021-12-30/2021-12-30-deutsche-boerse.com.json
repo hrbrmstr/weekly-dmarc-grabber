@@ -1,0 +1,124 @@
+{
+  "domain": "deutsche-boerse.com",
+  "base_domain": "deutsche-boerse.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.dbgdns.lu",
+      "b.dbgdns.de",
+      "a.dbgdns.lu",
+      "a.dbgdns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mail12.deutsche-boerse.com",
+        "addresses": [
+          "193.29.81.254"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mail13.deutsche-boerse.com",
+        "addresses": [
+          "193.29.81.253"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail10.clearstream.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail11.clearstream.com",
+        "addresses": [
+          "194.36.229.254"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mail12.deutsche-boerse.com",
+      "SSL/TLS is not supported on mail12.deutsche-boerse.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 193.29.81.253 is mail13.deutsche-boerse.com, but the A/AAAA DNS records for mail13.deutsche-boerse.com do not resolve to 193.29.81.253",
+      "STARTTLS is not supported on mail13.deutsche-boerse.com",
+      "SSL/TLS is not supported on mail13.deutsche-boerse.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "mail10.clearstream.com: Connection timed out",
+      "STARTTLS is not supported on mail11.clearstream.com",
+      "SSL/TLS is not supported on mail11.clearstream.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; ruf=mailto:email.security@clearstream.com; fo=0",
+    "valid": true,
+    "location": "deutsche-boerse.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found",
+      "clearstream.com does not indicate that it accepts DMARC reports about deutsche-boerse.com - Authorization record not found: deutsche-boerse.com._report._dmarc.clearstream.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:email.security@clearstream.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

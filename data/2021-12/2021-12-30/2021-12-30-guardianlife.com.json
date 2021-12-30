@@ -1,0 +1,133 @@
+{
+  "domain": "guardianlife.com",
+  "base_domain": "guardianlife.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns99.ultradns.org",
+      "pdns99.ultradns.biz",
+      "pdns99.ultradns.com",
+      "pdns99.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-00220101.pphosted.com",
+        "addresses": [
+          "148.163.148.248"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-00220101.pphosted.com",
+        "addresses": [
+          "148.163.152.248"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxa-00220101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.248"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxb-00220101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.248"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-00220101.pphosted.com",
+      "SSL/TLS is not supported on mx0b-00220101.pphosted.com",
+      "SSL/TLS is not supported on mxa-00220101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00220101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine; pct=100; rua=mailto:DMARC@glic.com; ruf=mailto:DMARC_RUF@glic.com",
+    "valid": true,
+    "location": "guardianlife.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC@glic.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_RUF@glic.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

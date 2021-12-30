@@ -1,0 +1,128 @@
+{
+  "domain": "qurateretail.com",
+  "base_domain": "qurateretail.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.qvc.com",
+      "ns2.qvc.com",
+      "ns1.qvc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx1.hsn.iphmx.com",
+        "addresses": [
+          "207.54.84.213",
+          "207.54.84.214",
+          "207.54.95.125",
+          "207.54.95.161",
+          "68.232.137.176",
+          "68.232.140.128",
+          "68.232.140.129",
+          "68.232.145.225"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mx2.hsn.iphmx.com",
+        "addresses": [
+          "207.54.84.213",
+          "207.54.84.214",
+          "207.54.95.125",
+          "207.54.95.161",
+          "68.232.137.176",
+          "68.232.140.128",
+          "68.232.140.129",
+          "68.232.145.225"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 207.54.84.214 is esa8.hsn.iphmx.com, but the A/AAAA DNS records for esa8.hsn.iphmx.com do not resolve to 207.54.84.214",
+      "SSL/TLS is not supported on mx1.hsn.iphmx.com",
+      "SSL/TLS is not supported on mx2.hsn.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;ri=3600;rua=mailto:qurate@rua.dmp.cisco.com;ruf=mailto:qurate@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "qurateretail.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "qurate@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "qurate@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

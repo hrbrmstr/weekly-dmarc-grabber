@@ -1,0 +1,119 @@
+{
+  "domain": "smith-nephew.com",
+  "base_domain": "smith-nephew.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns1.ultradns.com",
+      "edns1.ultradns.net",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "smithnephew-com01c.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.57.138",
+          "104.47.58.138"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smithandnephew.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.57.138",
+          "104.47.58.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.58.138 is mail-bn8nam110138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-bn8nam110138.inbound.protection.outlook.com do not resolve to 104.47.58.138",
+      "SSL/TLS is not supported on smithnephew-com01c.mail.protection.outlook.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.57.138 is mail-dm6nam110138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-dm6nam110138.inbound.protection.outlook.com do not resolve to 104.47.57.138",
+      "SSL/TLS is not supported on smithandnephew.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;pct=100;ri=86400;rua=mailto:dmarc@smith-nephew.com;ruf=mailto:dmarc@smith-nephew.com",
+    "valid": true,
+    "location": "smith-nephew.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@smith-nephew.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@smith-nephew.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

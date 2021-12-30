@@ -1,0 +1,128 @@
+{
+  "domain": "ti.com",
+  "base_domain": "ti.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nssg.ti.com",
+      "nsde.ti.com",
+      "ns4.ti.com",
+      "ns3.ti.com",
+      "ns-d.pnap.net",
+      "ns-c.pnap.net",
+      "ns-b.pnap.net",
+      "ns-a.pnap.net",
+      "ns.ti.com",
+      "ns2.ti.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.211",
+          "67.219.246.212",
+          "67.219.247.195",
+          "67.219.247.99",
+          "67.219.250.217",
+          "67.219.250.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "34.225.49.16",
+          "44.198.115.56",
+          "54.83.87.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 67.219.250.221 is mail637.messagelabs.com, but the A/AAAA DNS records for mail637.messagelabs.com do not resolve to 67.219.250.221",
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query ti.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;sp=none;rua=mailto:dmarc-aggr@ti.com;ruf=mailto:dmarc-for@ti.com;fo=0",
+    "valid": true,
+    "location": "ti.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-aggr@ti.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-for@ti.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

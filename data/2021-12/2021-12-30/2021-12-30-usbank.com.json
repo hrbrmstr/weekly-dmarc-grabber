@@ -1,0 +1,112 @@
+{
+  "domain": "usbank.com",
+  "base_domain": "usbank.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.usbank.com",
+      "ns3.usbank.com",
+      "ns4.usbank.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00256501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.57"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00256501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.57"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00256501.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00256501.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;rua=mailto:us-bank@rua.agari.com;ruf=mailto:us-bank@ruf.agari.com;fo=1",
+    "valid": true,
+    "location": "usbank.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "us-bank@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "us-bank@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "domain": "murray-intl.co.uk",
+  "base_domain": "murray-intl.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "relay1.netnames.net",
+        "addresses": [
+          "185.26.230.83"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "relay2.netnames.net",
+        "addresses": [
+          "185.26.230.89"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 185.26.230.83 is relay1.netnames.net, but the A/AAAA DNS records for relay1.netnames.net do not resolve to 185.26.230.83",
+      "STARTTLS is not supported on relay1.netnames.net",
+      "SSL/TLS is not supported on relay1.netnames.net",
+      "STARTTLS is not supported on relay2.netnames.net",
+      "SSL/TLS is not supported on relay2.netnames.net"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "murray-intl.co.uk does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

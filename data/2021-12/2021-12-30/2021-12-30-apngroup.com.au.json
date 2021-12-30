@@ -1,0 +1,125 @@
+{
+  "domain": "apngroup.com.au",
+  "base_domain": "apngroup.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.partnerconsole.net",
+      "ns2.partnerconsole.net",
+      "ns1.partnerconsole.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 124.47.150.122 is au-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for au-smtp-inbound-2.mimecast.com do not resolve to 124.47.150.122",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 124.47.150.26 is au-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for au-smtp-inbound-2.mimecast.com do not resolve to 124.47.150.26",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_netblocks.mimecast.com include:customers.clickdimensions.com ip4:20.190.126.98 ~all",
+    "valid": false,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: "
+    ],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:pweston@apngroup.com.au; ruf=mailto:pweston@apngroup.com.au; sp=none; pct=100; ri=86400",
+    "valid": true,
+    "location": "apngroup.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "pweston@apngroup.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "pweston@apngroup.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

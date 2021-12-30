@@ -1,0 +1,98 @@
+{
+  "domain": "stabilus.com",
+  "base_domain": "stabilus.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ip01-in.stabilus.com",
+        "addresses": [
+          "193.23.230.68"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "ip02-in.stabilus.com",
+        "addresses": [
+          "193.23.230.69"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "ip01-in.stabilus.com: Connection timed out",
+      "SSL/TLS is not supported on ip02-in.stabilus.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@stabilus.com;",
+    "valid": true,
+    "location": "stabilus.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@stabilus.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

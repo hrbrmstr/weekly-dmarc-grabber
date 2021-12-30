@@ -1,0 +1,126 @@
+{
+  "domain": "barclays.com",
+  "base_domain": "barclays.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.barcap.com",
+      "ns3.barcap.com",
+      "ns7.barcap.com",
+      "a1-71.akam.net",
+      "a12-64.akam.net",
+      "a11-67.akam.net",
+      "a9-66.akam.net",
+      "a18-65.akam.net",
+      "a10-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.193",
+          "195.245.230.199",
+          "195.245.231.64",
+          "195.245.231.73",
+          "85.158.142.209",
+          "85.158.142.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3a.eu.messagelabs.com",
+        "addresses": [
+          "3.121.61.253",
+          "3.66.251.165"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 195.245.230.199 is mail583.messagelabs.com, but the A/AAAA DNS records for mail583.messagelabs.com do not resolve to 195.245.230.199",
+      "SSL/TLS is not supported on cluster3.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster3a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=3600;rua=mailto:barclays@rua.agari.com;ruf=mailto:barclays@ruf.agari.com",
+    "valid": true,
+    "location": "barclays.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "barclays@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "barclays@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

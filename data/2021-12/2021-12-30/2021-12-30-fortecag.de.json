@@ -1,0 +1,67 @@
+{
+  "domain": "fortecag.de",
+  "base_domain": "fortecag.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.trendware.de",
+      "ns2.trendware.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.mas.t-systems-service.com",
+        "addresses": [
+          "217.150.155.10",
+          "217.150.155.12",
+          "46.29.101.1",
+          "46.29.101.2"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.mas.t-systems-service.com",
+        "addresses": [
+          "217.150.155.10",
+          "217.150.155.12",
+          "46.29.101.1",
+          "46.29.101.2"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx3.mas.t-systems-service.com",
+        "addresses": [
+          "94.100.254.155"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.mas.t-systems-service.com: Connection timed out",
+      "mx2.mas.t-systems-service.com: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 94.100.254.155 is ffm-mta01.mas.t-systems-service.com, but the A/AAAA DNS records for ffm-mta01.mas.t-systems-service.com do not resolve to 94.100.254.155",
+      "SSL/TLS is not supported on mx3.mas.t-systems-service.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

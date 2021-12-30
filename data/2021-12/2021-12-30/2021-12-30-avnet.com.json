@@ -1,0 +1,131 @@
+{
+  "domain": "avnet.com",
+  "base_domain": "avnet.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-67.akam.net",
+      "a1-13.akam.net",
+      "a5-66.akam.net",
+      "a14-64.akam.net",
+      "a22-65.akam.net",
+      "a12-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "smtp1.avnet.com",
+        "addresses": [
+          "12.9.139.121"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp2.avnet.com",
+        "addresses": [
+          "12.9.139.122"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp3.avnet.com",
+        "addresses": [
+          "12.9.139.123"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea1.avnet.com",
+        "addresses": [
+          "193.34.102.163"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea2.avnet.com",
+        "addresses": [
+          "193.34.102.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smtp1.avnet.com",
+      "SSL/TLS is not supported on smtp2.avnet.com",
+      "SSL/TLS is not supported on smtp3.avnet.com",
+      "SSL/TLS is not supported on smtpemea1.avnet.com",
+      "SSL/TLS is not supported on smtpemea2.avnet.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:dmarc@avnet.eu",
+    "valid": true,
+    "location": "avnet.com",
+    "warnings": [
+      "avnet.eu does not indicate that it accepts DMARC reports about avnet.com - Authorization record not found: avnet.com._report._dmarc.avnet.eu IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc@avnet.eu",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

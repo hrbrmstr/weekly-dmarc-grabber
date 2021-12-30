@@ -1,0 +1,108 @@
+{
+  "domain": "dcc.ie",
+  "base_domain": "dcc.ie",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth01.ns.eircom.net",
+      "auth03.ns.eircom.net",
+      "auth02.ns.eircom.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "dcc-ie.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on dcc-ie.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:support@dcc.ie,mailto:dmarc_agg@vali.email; ruf=mailto:support@dcc.ie; sp=none; ri=86400",
+    "valid": true,
+    "location": "dcc.ie",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "support@dcc.ie",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "support@dcc.ie",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

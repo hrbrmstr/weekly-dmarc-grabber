@@ -1,0 +1,49 @@
+{
+  "domain": "data-modul.com",
+  "base_domain": "data-modul.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.telekom.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail2.data-modul.de",
+        "addresses": [
+          "212.185.162.42"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.data-modul.de",
+        "addresses": [
+          "212.184.205.171"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail2.data-modul.de: Connection timed out",
+      "mail.data-modul.de: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "data-modul.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

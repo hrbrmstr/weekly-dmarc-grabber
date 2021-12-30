@@ -1,0 +1,99 @@
+{
+  "domain": "marksandspencer.com",
+  "base_domain": "marksandspencer.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a14-66.akam.net",
+      "a18-64.akam.net",
+      "a13-65.akam.net",
+      "a1-102.akam.net",
+      "a7-66.akam.net",
+      "a2-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "marksandspencer-com.mail.eo.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.2.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.3 seconds",
+      "The reverse DNS of 104.47.0.36 is mail-he1eur010036.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-he1eur010036.inbound.protection.outlook.com do not resolve to 104.47.0.36",
+      "SSL/TLS is not supported on marksandspencer-com.mail.eo.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query marksandspencer.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.RUA_reports@marks-and-spencer.com; ruf=mailto:dmarc.RUF_reports@marks-and-spencer.com; pct=100",
+    "valid": true,
+    "location": "marksandspencer.com",
+    "warnings": [
+      "marks-and-spencer.com does not indicate that it accepts DMARC reports about marksandspencer.com - Authorization record not found: marksandspencer.com._report._dmarc.marks-and-spencer.com IN TXT \"v=DMARC1\"",
+      "marks-and-spencer.com does not indicate that it accepts DMARC reports about marksandspencer.com - Authorization record not found: marksandspencer.com._report._dmarc.marks-and-spencer.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc.RUA_reports@marks-and-spencer.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc.RUF_reports@marks-and-spencer.com",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

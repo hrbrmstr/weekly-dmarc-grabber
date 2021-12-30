@@ -1,0 +1,91 @@
+{
+  "domain": "oreillyauto.com",
+  "base_domain": "oreillyauto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a5-66.akam.net",
+      "a2-66.akam.net",
+      "a1-49.akam.net",
+      "a24-64.akam.net",
+      "a22-67.akam.net",
+      "a3-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "oreillyauto.com.e0040.g0004.ng0089.im.emailsecurity.trendmicro.com",
+        "addresses": [
+          "150.70.178.57"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "oreillyauto.com.e0040.g0004.pg0089.im.emailsecurity.trendmicro.com",
+        "addresses": [
+          "150.70.178.57"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "oreillyauto.com.e0040.g0004.sg0089.im.emailsecurity.trendmicro.com",
+        "addresses": [
+          "150.70.178.57"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "oreillyauto.com.e0040.g0004.ng0089.im.emailsecurity.trendmicro.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'oreillyauto.com.e0040.g0004.ng0089.im.emailsecurity.trendmicro.com'. (_ssl.c:997)",
+      "oreillyauto.com.e0040.g0004.pg0089.im.emailsecurity.trendmicro.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'oreillyauto.com.e0040.g0004.pg0089.im.emailsecurity.trendmicro.com'. (_ssl.c:997)",
+      "oreillyauto.com.e0040.g0004.sg0089.im.emailsecurity.trendmicro.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'oreillyauto.com.e0040.g0004.sg0089.im.emailsecurity.trendmicro.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:208.70.182.0/23 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "oreillyauto.com.e0040.g0004.ng0089.im.emailsecurity.trendmicro.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "oreillyauto.com.e0040.g0004.pg0089.im.emailsecurity.trendmicro.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "oreillyauto.com.e0040.g0004.sg0089.im.emailsecurity.trendmicro.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "208.70.182.0/23",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

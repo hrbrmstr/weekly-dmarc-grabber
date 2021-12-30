@@ -1,0 +1,51 @@
+{
+  "domain": "wm.com",
+  "base_domain": "wm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "alpputl002.wm.com",
+      "hlpputl001.wm.com",
+      "alpputl001.wm.com",
+      "hlpputl002.wm.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0000b702.gslb.pphosted.com",
+        "addresses": [
+          "148.163.154.216"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0000b702.gslb.pphosted.com",
+        "addresses": [
+          "148.163.154.216"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-0000b702.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-0000b702.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query wm.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

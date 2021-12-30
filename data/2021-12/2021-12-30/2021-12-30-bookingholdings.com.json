@@ -1,0 +1,170 @@
+{
+  "domain": "bookingholdings.com",
+  "base_domain": "bookingholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns4.p09.nsone.net",
+      "dns3.p09.nsone.net",
+      "dns2.p09.nsone.net",
+      "dns1.p09.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mailstream-east.mxrecord.io",
+        "addresses": [
+          "23.20.113.33",
+          "44.196.220.15",
+          "52.7.47.97"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 1,
+        "hostname": "mailstream-west.mxrecord.io",
+        "addresses": [
+          "35.164.179.171",
+          "35.81.245.136",
+          "52.88.99.25"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.26",
+          "2607:f8b0:4001:c56::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.26",
+          "2607:f8b0:4023:1::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "173.194.77.27",
+          "2607:f8b0:4023:401::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "173.194.219.27",
+          "2607:f8b0:4002:c03::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mailstream-east.mxrecord.io: Connection timed out",
+      "SSL/TLS is not supported on mailstream-west.mxrecord.io",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "SSL/TLS is not supported on aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:dmarcstats@priceline.com;ruf=mailto:dmarcmessages@priceline.com",
+    "valid": true,
+    "location": "bookingholdings.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcstats@priceline.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcmessages@priceline.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

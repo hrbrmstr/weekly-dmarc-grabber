@@ -1,0 +1,104 @@
+{
+  "domain": "bms.com",
+  "base_domain": "bms.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.bms.com",
+      "ns3.bms.com",
+      "ns2.bms.com",
+      "ns1.bms.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bms-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.110",
+          "104.47.57.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on bms-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:bms@rua.agari.com; ruf=mailto:bms@ruf.agari.com",
+    "valid": true,
+    "location": "bms.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bms@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bms@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

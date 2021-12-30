@@ -1,0 +1,59 @@
+{
+  "domain": "yumchina.com",
+  "base_domain": "yumchina.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "vip2.alidns.com",
+      "vip1.alidns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx5.yumchina.com",
+        "addresses": [
+          "120.92.179.255"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx5.yumchina.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:110.43.128.35 ip4:120.92.179.255 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "110.43.128.35",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "120.92.179.255",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  }
+}

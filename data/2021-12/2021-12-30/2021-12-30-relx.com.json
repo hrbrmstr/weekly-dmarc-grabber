@@ -1,0 +1,105 @@
+{
+  "domain": "relx.com",
+  "base_domain": "relx.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.reedelsevier.com",
+      "ns2.reedelsevier.com",
+      "ns1.reedelsevier.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "relx-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.57.138",
+          "104.47.58.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.57.138 is mail-dm6nam110138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-dm6nam110138.inbound.protection.outlook.com do not resolve to 104.47.57.138",
+      "SSL/TLS is not supported on relx-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query relx.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:reed-elsevier@rua.agari.com; ruf=mailto:reed-elsevier@ruf.agari.com",
+    "valid": true,
+    "location": "relx.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "reed-elsevier@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "reed-elsevier@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

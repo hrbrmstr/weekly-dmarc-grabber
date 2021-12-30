@@ -1,0 +1,96 @@
+{
+  "domain": "unilever.com",
+  "base_domain": "unilever.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns88.unilever.com",
+      "dns04.unilever.com",
+      "dns01.unilever.com",
+      "dns02.unilever.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "unilever-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.2.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.0.36 is mail-he1eur010036.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-he1eur010036.inbound.protection.outlook.com do not resolve to 104.47.0.36",
+      "SSL/TLS is not supported on unilever-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc@unilever.com; fo=0; adkim=r; aspf=r; pct=100; rf=afrf; sp=none",
+    "valid": true,
+    "location": "unilever.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@unilever.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

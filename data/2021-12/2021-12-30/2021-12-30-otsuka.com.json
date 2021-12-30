@@ -1,0 +1,44 @@
+{
+  "domain": "otsuka.com",
+  "base_domain": "otsuka.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1269.awsdns-30.org",
+      "ns-1782.awsdns-30.co.uk",
+      "ns-340.awsdns-42.com",
+      "ns-728.awsdns-27.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "otsuka-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.23.74 is mail-os0jpn010074.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-os0jpn010074.inbound.protection.outlook.com do not resolve to 104.47.23.74",
+      "SSL/TLS is not supported on otsuka-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; pct=100; p=none; rua=mailto:soc_us@oneotsuka.onmicrosoft.com; ruf=mailto:soc_us@oneotsuka.onmicrosoft.com; fo=1",
+    "valid": false,
+    "location": "otsuka.com",
+    "error": "the p tag must immediately follow the v tag"
+  }
+}

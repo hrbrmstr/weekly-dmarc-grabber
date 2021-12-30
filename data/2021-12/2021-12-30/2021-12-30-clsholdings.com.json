@@ -1,0 +1,115 @@
+{
+  "domain": "clsholdings.com",
+  "base_domain": "clsholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns34.worldnic.com",
+      "ns33.worldnic.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "The DNS operation timed out after 2.1 seconds",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_netblocks.mimecast.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; fo=1; ri=3600; rua=mailto:0b956e16@inbox.ondmarc.com; ruf=mailto:0b956e16@inbox.ondmarc.com,mailto:dmarc@clsholdings.com;",
+    "valid": true,
+    "location": "clsholdings.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0b956e16@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0b956e16@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@clsholdings.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}
