@@ -1,0 +1,105 @@
+{
+  "domain": "northerntrust.com",
+  "base_domain": "northerntrust.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns1.ultradns.com",
+      "edns1.ultradns.net",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00185f01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.83"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00185f01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.83"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00185f01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00185f01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-00185f01.pphosted.com include:spf-00185f02.pphosted.com include:_extmail.ntrs.com include:cust-spf.exacttarget.com include:app.sgizmo.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "All nameservers failed to answer the query cust-spf.exacttarget.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net,mailto:northern-trust@rua.agari.com; ruf=mailto:dmarc_afrf@auth.returnpath.net,mailto:northern-trust@ruf.agari.com",
+    "valid": true,
+    "location": "northerntrust.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net,mailto:northern-trust@rua.agari.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net,mailto:northern-trust@ruf.agari.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

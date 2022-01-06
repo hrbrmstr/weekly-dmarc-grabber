@@ -1,0 +1,56 @@
+{
+  "domain": "takashimaya.co.jp",
+  "base_domain": "takashimaya.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns101-1.jp1.ecl.ntt.com",
+      "dns101-4.sg1.ecl.ntt.com",
+      "dns101-3.us1.ecl.ntt.com",
+      "dns101-2.uk1.ecl.ntt.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 3,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 8,
+        "hostname": "mx.sendgrid.net",
+        "addresses": [
+          "167.89.115.46",
+          "167.89.123.50"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp",
+      "SSL/TLS is not supported on mx.sendgrid.net"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-bma.mpme.jp ip4:202.221.136.0/25 +ip4:202.247.30.13 +ip4:202.247.30.15 +ip4:42.125.252.226 include:smp.ne.jp include:spf.probance.jp include:spf.securemx.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

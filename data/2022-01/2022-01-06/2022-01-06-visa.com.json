@@ -1,0 +1,126 @@
+{
+  "domain": "visa.com",
+  "base_domain": "visa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-190.akam.net",
+      "a10-64.akam.net",
+      "a2-65.akam.net",
+      "a9-64.akam.net",
+      "ns0210.secondary.cloudflare.com",
+      "ns0090.secondary.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "portal1i.visa.com",
+        "addresses": [
+          "198.241.159.109"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal2i.visa.com",
+        "addresses": [
+          "198.241.174.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal3i.visa.com",
+        "addresses": [
+          "198.241.159.89"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal4i.visa.com",
+        "addresses": [
+          "198.241.174.183"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on portal1i.visa.com",
+      "SSL/TLS is not supported on portal2i.visa.com",
+      "SSL/TLS is not supported on portal3i.visa.com",
+      "SSL/TLS is not supported on portal4i.visa.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net; rf=afrf;",
+    "valid": true,
+    "location": "visa.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - All nameservers failed to answer the query auth.returnpath.net. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

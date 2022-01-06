@@ -1,0 +1,119 @@
+{
+  "domain": "directlinegroup.com",
+  "base_domain": "directlinegroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ha3.markmonitor.zone",
+      "ha1.markmonitor.zone",
+      "ha2.markmonitor.zone",
+      "ha4.markmonitor.zone"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.195",
+          "195.245.230.198",
+          "195.245.231.66",
+          "195.245.231.71",
+          "85.158.142.211",
+          "85.158.142.216"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "35.157.113.106",
+          "52.29.136.252"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; rua=mailto:ab50f916656a016@rep.dmarcanalyzer.com; ruf=mailto:ab50f916656a016@for.dmarcanalyzer.com",
+    "valid": true,
+    "location": "directlinegroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ab50f916656a016@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ab50f916656a016@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

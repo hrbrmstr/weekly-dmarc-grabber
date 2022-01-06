@@ -1,0 +1,127 @@
+{
+  "domain": "aa.com",
+  "base_domain": "aa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usw2.akam.net",
+      "asia2.akam.net",
+      "ns1-118.akam.net",
+      "ns1-149.akam.net",
+      "asia3.akam.net",
+      "eur5.akam.net",
+      "eur6.akam.net",
+      "asia4.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-0032eb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.178.6"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-0032eb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.166.6"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0032eb01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-0032eb01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; fo=1; ri=3600; rua=mailto:american@rua.agari.com,mailto:dmarc@aa.com; ruf=mailto:american@ruf.agari.com,mailto:dmarc@aa.com",
+    "valid": true,
+    "location": "aa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "american@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@aa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "american@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@aa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

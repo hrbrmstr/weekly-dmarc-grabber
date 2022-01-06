@@ -1,0 +1,145 @@
+{
+  "domain": "sherwin-williams.com",
+  "base_domain": "sherwin-williams.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.sherwin.com",
+      "ns3.level3.net",
+      "ns4.level3.net",
+      "ns1.sherwin.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "emhost60.sherwin.com",
+        "addresses": [
+          "148.141.224.160"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "emhost61.sherwin.com",
+        "addresses": [
+          "148.141.224.161"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "emhost62.sherwin.com",
+        "addresses": [
+          "148.141.224.162"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "emhost63.sherwin.com",
+        "addresses": [
+          "148.141.224.163"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "emhost64.sherwin.com",
+        "addresses": [
+          "148.141.224.164"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "emhost65.sherwin.com",
+        "addresses": [
+          "148.141.224.165"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "emhost60.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "emhost61.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "emhost62.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "emhost63.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "emhost64.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "emhost65.sherwin.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:148.141.0.0/16 include:spf.protection.outlook.com include:cust.wombatsecurity.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;rua=mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "sherwin-williams.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

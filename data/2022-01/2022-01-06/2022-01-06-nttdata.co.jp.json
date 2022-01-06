@@ -1,0 +1,52 @@
+{
+  "domain": "nttdata.co.jp",
+  "base_domain": "nttdata.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.via.or.jp",
+      "ns6.intervia.ad.jp",
+      "ms0.nttdata.co.jp",
+      "ms1.nttdata.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004b5d03.gslb.pphosted.com",
+        "addresses": [
+          "91.207.212.177"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004b5d03.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-004b5d03.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-004b5d03.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:163.135.193.192/26 +ip4:122.1.79.160/29 include:spf01.nttdata.co.jp include:mktomail.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

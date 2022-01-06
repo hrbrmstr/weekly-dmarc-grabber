@@ -1,0 +1,60 @@
+{
+  "domain": "mhi.co.jp",
+  "base_domain": "mhi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "kobens.mhi.co.jp",
+      "mhins.mhi.co.jp",
+      "dns-a.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "34.225.49.16",
+          "44.198.115.56",
+          "54.83.87.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
