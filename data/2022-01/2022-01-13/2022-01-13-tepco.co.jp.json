@@ -1,0 +1,53 @@
+{
+  "domain": "tepco.co.jp",
+  "base_domain": "tepco.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tdns3.tepco.co.jp",
+      "tdns2.tepco.co.jp",
+      "tdns4.tepco.co.jp",
+      "tepcogw.tepco.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx2.tepco.co.jp",
+        "addresses": [
+          "111.87.71.106"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx4.tepco.co.jp",
+        "addresses": [
+          "111.87.68.106"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx2.tepco.co.jp",
+      "SSL/TLS is not supported on mx2.tepco.co.jp",
+      "STARTTLS is not supported on mx4.tepco.co.jp",
+      "SSL/TLS is not supported on mx4.tepco.co.jp"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query tepco.co.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

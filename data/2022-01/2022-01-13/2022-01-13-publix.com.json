@@ -1,0 +1,108 @@
+{
+  "domain": "publix.com",
+  "base_domain": "publix.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-66.akam.net",
+      "a28-64.akam.net",
+      "a3-65.akam.net",
+      "a1-147.akam.net",
+      "a6-66.akam.net",
+      "a20-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "publix-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 104.47.66.10 is mail-mw2nam120010.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-mw2nam120010.inbound.protection.outlook.com do not resolve to 104.47.66.10",
+      "SSL/TLS is not supported on publix-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:secops@publix.com; ruf=mailto:secops@publix.com",
+    "valid": true,
+    "location": "publix.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "secops@publix.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "secops@publix.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

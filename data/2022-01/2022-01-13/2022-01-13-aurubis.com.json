@@ -1,0 +1,49 @@
+{
+  "domain": "aurubis.com",
+  "base_domain": "aurubis.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth54.ns.de.uu.net",
+      "auth04.ns.de.uu.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail3.aurubis.com",
+        "addresses": [
+          "152.194.64.171"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail4.aurubis.com",
+        "addresses": [
+          "152.194.64.172"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail3.aurubis.com",
+      "SSL/TLS is not supported on mail4.aurubis.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc@aurubis.com; PCT=100; adkim=r; aspf=r; sp=reject",
+    "valid": false,
+    "location": "aurubis.com",
+    "error": "Error: Expected tag_value at position 54 in: v=DMARC1; p=quarantine; rua=mailto:dmarc@aurubis.com; PCT=100; adkim=r; aspf=r; sp=reject"
+  }
+}

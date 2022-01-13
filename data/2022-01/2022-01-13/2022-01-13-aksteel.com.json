@@ -1,0 +1,256 @@
+{
+  "domain": "aksteel.com",
+  "base_domain": "aksteel.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.level3.net",
+      "ns4.level3.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00186501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.59"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxb-00186501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.59"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00186501.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00186501.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:spfext.zapproved.com include:email-od.com ip4:174.129.192.189 include:spf-00186501.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "174.129.192.189",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfext.zapproved.com",
+          "record": "v=spf1 ip4:52.5.134.202 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.5.134.202",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "email-od.com",
+          "record": "v=spf1 ip4:142.0.176.0/20 ip4:204.232.162.112/28 ip4:204.232.180.112/29 ip4:204.232.180.128/29 ip4:69.20.119.216/29 ip4:76.12.109.192/27 ip4:67.59.141.128/28 ip4:209.41.176.224/28 ip4:69.48.230.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "142.0.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.162.112/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.180.112/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.180.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.20.119.216/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.12.109.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.59.141.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.41.176.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.48.230.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-00186501.pphosted.com",
+          "record": "v=spf1 ip4:67.231.157.59 ip4:67.231.149.63",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.157.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.149.63",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "domain": "cropenergies.de",
+  "base_domain": "cropenergies.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns10.managed-ip.com",
+      "ns9.managed-ip.com",
+      "ns11.managed-ip.info",
+      "ns12.managed-ip.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.suedzucker.de",
+        "addresses": [
+          "80.156.76.2"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.suedzucker.de",
+        "addresses": [
+          "80.156.76.3"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.suedzucker.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)",
+      "mail2.suedzucker.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.sendinblue.com mx ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail1.suedzucker.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail2.suedzucker.de",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.sendinblue.com",
+          "record": "v=spf1 ip4:185.41.28.0/22 ip4:94.143.16.0/21 ip4:185.24.144.0/22 ip4:153.92.224.0/19 ip4:213.32.128.0/18 ip4:185.107.232.0/22 ip4:77.32.128.0/18 ip4:77.32.192.0/19 ip4:212.146.192.0/18 ip4:172.246.0.0/18 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.41.28.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.143.16.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.24.144.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.92.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.32.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.107.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "77.32.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "77.32.192.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.146.192.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "172.246.0.0/18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

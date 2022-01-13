@@ -1,0 +1,116 @@
+{
+  "domain": "bunzl.com",
+  "base_domain": "bunzl.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.194",
+          "195.245.231.77",
+          "85.158.142.208"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9a.eu.messagelabs.com",
+        "addresses": [
+          "18.185.169.49",
+          "3.124.15.88"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster9.eu.messagelabs.com: Connection timed out",
+      "SSL/TLS is not supported on cluster9a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:cc3102b2a21c569@rep.dmarcanalyzer.com; ruf=mailto:cc3102b2a21c569@rep.dmarcanalyzer.com",
+    "valid": true,
+    "location": "bunzl.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cc3102b2a21c569@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cc3102b2a21c569@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

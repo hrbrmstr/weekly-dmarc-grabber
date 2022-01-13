@@ -1,0 +1,115 @@
+{
+  "domain": "investec.com",
+  "base_domain": "investec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-1.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-2.mimecast.co.za",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The DNS operation timed out after 2.1 seconds",
+      "The reverse DNS of 41.74.193.201 is za-smtp-inbound-1.mimecast.co.za, but the A/AAAA DNS records for za-smtp-inbound-1.mimecast.co.za do not resolve to 41.74.193.201",
+      "za-smtp-inbound-1.mimecast.co.za: Connection timed out",
+      "The DNS operation timed out after 2.1 seconds",
+      "SSL/TLS is not supported on za-smtp-inbound-2.mimecast.co.za"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:a0c168b1c618365@rep.dmarcanalyzer.com;ruf=mailto:a0c168b1c618365@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "investec.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0c168b1c618365@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0c168b1c618365@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

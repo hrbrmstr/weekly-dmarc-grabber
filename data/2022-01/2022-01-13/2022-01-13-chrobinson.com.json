@@ -1,0 +1,115 @@
+{
+  "domain": "chrobinson.com",
+  "base_domain": "chrobinson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.chrobinson.com",
+      "ns1.chrobinson.com",
+      "ns2.chrobinson.com",
+      "ns3.chrobinson.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc4187-23.iphmx.com",
+        "addresses": [
+          "68.232.131.35",
+          "68.232.137.233"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc4187-23.iphmx.com",
+        "addresses": [
+          "68.232.131.35",
+          "68.232.137.233"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc4187-23.iphmx.com: Connection timed out",
+      "mx2.hc4187-23.iphmx.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.3 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=3600;rua=mailto:ch-robinson-worldwide@rua.dmp.cisco.com;ruf=mailto:ch-robinson-worldwide@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "chrobinson.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ch-robinson-worldwide@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ch-robinson-worldwide@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

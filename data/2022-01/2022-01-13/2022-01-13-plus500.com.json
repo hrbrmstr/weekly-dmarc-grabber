@@ -1,0 +1,147 @@
+{
+  "domain": "plus500.com",
+  "base_domain": "plus500.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.rackspace.com",
+      "ns2.rackspace.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.68.27",
+          "2607:f8b0:400d:c0c::1b"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1b",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.26",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1a",
+          "64.233.184.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "142.250.153.27",
+          "2a00:1450:4013:c16::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "aspmx.l.google.com: Connection timed out",
+      "2800:3f0:4003:c00::1b does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query plus500.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:hzb4n3vf@ag.dmarcian.com; ruf=mailto:hzb4n3vf@fr.dmarcian.com",
+    "valid": true,
+    "location": "plus500.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "hzb4n3vf@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "hzb4n3vf@fr.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

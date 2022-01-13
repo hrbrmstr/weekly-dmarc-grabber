@@ -1,0 +1,105 @@
+{
+  "domain": "nec.com",
+  "base_domain": "nec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "TYO267.gate.nec.co.jp",
+      "TYO265.gate.nec.co.jp",
+      "TYO200.gate.nec.co.jp",
+      "dns4.dion.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.hc221-79.ap.iphmx.com",
+        "addresses": [
+          "139.138.31.200",
+          "139.138.42.21"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.hc221-79.ap.iphmx.com",
+        "addresses": [
+          "139.138.31.200",
+          "139.138.42.21"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc221-79.ap.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)",
+      "mx2.hc221-79.ap.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:nec00001-ra@dmarc25.jp",
+    "valid": true,
+    "location": "nec.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "nec00001-ra@dmarc25.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

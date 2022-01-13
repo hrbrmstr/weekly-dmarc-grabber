@@ -1,0 +1,115 @@
+{
+  "domain": "libertymutual.com",
+  "base_domain": "libertymutual.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a22-67.akam.net",
+      "a9-65.akam.net",
+      "a11-65.akam.net",
+      "a28-64.akam.net",
+      "a12-66.akam.net",
+      "a1-32.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-kdc.lmig.com",
+        "addresses": [
+          "136.184.104.11"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-pdc.lmig.com",
+        "addresses": [
+          "136.184.72.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx-kdc.lmig.com",
+      "SSL/TLS is not supported on mx-pdc.lmig.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query libertymutual.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; pct=100; ri=3600; rua=mailto:lm_rua@libertymutual.com; ruf=mailto:lm_ruf@libertymutual.com",
+    "valid": true,
+    "location": "libertymutual.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "lm_rua@libertymutual.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "lm_ruf@libertymutual.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

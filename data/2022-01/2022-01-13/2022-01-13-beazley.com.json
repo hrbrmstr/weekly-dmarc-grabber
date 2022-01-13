@@ -1,0 +1,118 @@
+{
+  "domain": "beazley.com",
+  "base_domain": "beazley.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.uk.colt.net",
+      "ns1.uk.colt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "beazley-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.5.36"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.195",
+          "195.245.230.198",
+          "195.245.231.66",
+          "195.245.231.71",
+          "85.158.142.211",
+          "85.158.142.216"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "18.185.169.49",
+          "3.124.15.88"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "beazley-com.mail.protection.outlook.com: Connection timed out",
+      "SSL/TLS is not supported on cluster8.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query beazley.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email; fo=s",
+    "valid": true,
+    "location": "beazley.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

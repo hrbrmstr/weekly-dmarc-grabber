@@ -1,0 +1,121 @@
+{
+  "domain": "netapp.com",
+  "base_domain": "netapp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net",
+      "ns060.netapp.com",
+      "ns100.netapp.com",
+      "ns0140.netapp.com",
+      "ns040.netapp.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.netapp.iphmx.com",
+        "addresses": [
+          "216.71.144.53",
+          "216.71.144.81",
+          "216.71.148.125",
+          "216.71.148.128"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.netapp.iphmx.com",
+        "addresses": [
+          "216.71.144.53",
+          "216.71.144.81",
+          "216.71.148.125",
+          "216.71.148.128"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.netapp.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.netapp.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.2 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;fo=1;pct=100;ri=86400;rua=mailto:dmarcrep@netapp.com;ruf=mailto:dmarcfr@netapp.com",
+    "valid": true,
+    "location": "netapp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcrep@netapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcfr@netapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

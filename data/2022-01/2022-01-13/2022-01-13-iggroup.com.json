@@ -1,0 +1,111 @@
+{
+  "domain": "iggroup.com",
+  "base_domain": "iggroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns4.p09.nsone.net",
+      "dns3.p09.nsone.net",
+      "dns2.p09.nsone.net",
+      "dns1.p09.nsone.net",
+      "ns1.marketdatasystems.com",
+      "ns0.marketdatasystems.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail01.iggroup.net",
+        "addresses": [
+          "193.30.41.44"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail02.iggroup.net",
+        "addresses": [
+          "195.234.39.54"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail01.iggroup.net: Connection timed out",
+      "mail02.iggroup.net: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The DNS operation timed out after 2.2 seconds"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email; ruf=mailto:support.msad@ig.com;",
+    "valid": true,
+    "location": "iggroup.com",
+    "warnings": [
+      "ig.com does not indicate that it accepts DMARC reports about iggroup.com - Authorization record not found: iggroup.com._report._dmarc.ig.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:support.msad@ig.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "domain": "teamviewer.com",
+  "base_domain": "teamviewer.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tv-ns5.teamviewer.com",
+      "tv-ns4.teamviewer.com",
+      "tv-ns3.teamviewer.com",
+      "tv-ns2.teamviewer.com",
+      "tv-ns1.teamviewer.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query teamviewer.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net,mailto:rua_dmarc@teamviewer.com; ruf=mailto:dmarc_afrf@auth.returnpath.net,mailto:ruf_dmarc@teamviewer.com; pct=100;",
+    "valid": true,
+    "location": "teamviewer.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_agg@auth.returnpath.net - The DNS operation timed out after 2.1 seconds",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_afrf@auth.returnpath.net - The DNS operation timed out after 2.1 seconds"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_agg@auth.returnpath.net,mailto:rua_dmarc@teamviewer.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_afrf@auth.returnpath.net,mailto:ruf_dmarc@teamviewer.com",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

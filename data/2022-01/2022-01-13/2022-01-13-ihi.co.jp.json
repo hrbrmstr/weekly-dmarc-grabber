@@ -1,0 +1,149 @@
+{
+  "domain": "ihi.co.jp",
+  "base_domain": "ihi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ihins4.ihi.co.jp",
+      "ihidans.ihi.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002efe01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.143.173"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002efe01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.143.173"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002efe01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002efe01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:ihins3.ihi.co.jp include:ihins4.ihi.co.jp include:ihimfw1.ihi.co.jp include:spf-002efe01.pphosted.com ?all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "ihins3.ihi.co.jp",
+          "record": "v=spf1 +ip4:202.248.84.136 ?all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "202.248.84.136",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ihins4.ihi.co.jp",
+          "record": "v=spf1 +ip4:124.211.25.27 ?all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "124.211.25.27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ihimfw1.ihi.co.jp",
+          "record": "v=spf1 +ip4:202.248.84.135 ?all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "202.248.84.135",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-002efe01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.143.173 ip4:148.163.147.223",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.143.173",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.147.223",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.ihi.co.jp\n\nv=spf1 include:ihins3.ihi.co.jp include:ihins4.ihi.co.jp include:ihimfw1.ihi.co.jp include:spf-002efe01.pphosted.com ?all"
+  }
+}

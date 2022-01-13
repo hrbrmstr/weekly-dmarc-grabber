@@ -1,0 +1,42 @@
+{
+  "domain": "snt.at",
+  "base_domain": "snt.at",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "hydrogen.ns.hetzner.com",
+      "helium.ns.hetzner.de",
+      "oxygen.ns.hetzner.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "snt-at.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.12.36",
+          "104.47.13.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on snt-at.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.snt.at include:_spf.ingrammicro.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The DNS operation timed out after 2.1 seconds"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
