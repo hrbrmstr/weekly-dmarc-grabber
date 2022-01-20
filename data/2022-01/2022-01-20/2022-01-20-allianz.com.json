@@ -1,0 +1,105 @@
+{
+  "domain": "allianz.com",
+  "base_domain": "allianz.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.az-ip.net",
+      "ns5.az-ip.net",
+      "ns4.allianz.de",
+      "ns3.allianz.de",
+      "ns2.allianz.com",
+      "ns1.allianz.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00137205.gslb.pphosted.com",
+        "addresses": [
+          "185.183.30.34"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00137205.gslb.pphosted.com",
+        "addresses": [
+          "185.183.30.34"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00137205.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00137205.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:Rua-allianz@allianz.com",
+    "valid": true,
+    "location": "allianz.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "Rua-allianz@allianz.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

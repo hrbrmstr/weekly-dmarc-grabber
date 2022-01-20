@@ -1,0 +1,52 @@
+{
+  "domain": "indus.de",
+  "base_domain": "indus.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsd6.schlundtech.de",
+      "nsc6.schlundtech.de",
+      "nsb6.schlundtech.de",
+      "nsa6.schlundtech.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail2.indus.de",
+        "addresses": [
+          "194.25.175.194"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.indus.de",
+        "addresses": [
+          "194.25.175.195"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail2.indus.de: HELO error: (501, b'Syntax error in parameters or arguments')",
+      "194.25.175.195 does not have any reverse DNS (PTR) records",
+      "mail.indus.de: HELO error: (501, b'Syntax error in parameters or arguments')"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

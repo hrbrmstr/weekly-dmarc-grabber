@@ -1,0 +1,145 @@
+{
+  "domain": "lancashiregroup.com",
+  "base_domain": "lancashiregroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.sotaconnect.net",
+      "ns1.sotaconnect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "lon-smtp-p001.lancashiregroup.com",
+        "addresses": [
+          "193.240.143.228"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.lancashiregroup.com",
+        "addresses": [
+          "185.66.20.8"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "193.240.143.228 does not have any reverse DNS (PTR) records",
+      "lon-smtp-p001.lancashiregroup.com: Connection timed out",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.211 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 195.130.217.211",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.201 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.201",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.201 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 91.220.42.201",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.241",
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com",
+      "mail.lancashiregroup.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:193.240.143.224/28 ip4:200.10.166.144/28 ip4:185.66.20.0/22 ip4:185.171.200.33 include:eu._netblocks.mimecast.com include:mail.zendesk.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:ecfc8b7b82a9994@rep.dmarcanalyzer.com; ruf=mailto:ecfc8b7b82a9994@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "lancashiregroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ecfc8b7b82a9994@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ecfc8b7b82a9994@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

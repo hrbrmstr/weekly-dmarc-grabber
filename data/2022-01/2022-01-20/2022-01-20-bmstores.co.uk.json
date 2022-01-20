@@ -1,0 +1,207 @@
+{
+  "domain": "bmstores.co.uk",
+  "base_domain": "bmstores.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.ukfast.net",
+      "ns0.ukfast.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc1743-78.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.37.94",
+          "207.54.90.33"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc1743-78.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.37.94",
+          "207.54.90.33"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc1743-78.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1743-78.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:217.33.100.116 ip4:159.253.210.207 include:eu._netblocks.mimecast.com include:_spf.eploy.net include:servers.mcsv.net exists:%{i}.spf.hc1743-78.c3s2.iphmx.com -all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.hc1743-78.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.hc1743-78.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "217.33.100.116",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "159.253.210.207",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "%{i}.spf.hc1743-78.c3s2.iphmx.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.eploy.net",
+          "record": "v=spf1 ip4:51.104.253.96/27 ip4:40.81.144.187 ip4:69.169.231.52/31 ip4:23.249.219.163 ip4:23.249.219.164 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.104.253.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.81.144.187",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.231.52/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.219.163",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.219.164",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "hcahealthcare.com",
+  "base_domain": "hcahealthcare.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.medcity.net",
+      "ns1.medcity.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtpa.mail.medcity.net",
+        "addresses": [
+          "199.91.33.184"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpb.mail.medcity.net",
+        "addresses": [
+          "199.91.36.34"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "smtpa.mail.medcity.net: Could not connect:  SMTP error code 554 - Not allowed",
+      "smtpb.mail.medcity.net: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

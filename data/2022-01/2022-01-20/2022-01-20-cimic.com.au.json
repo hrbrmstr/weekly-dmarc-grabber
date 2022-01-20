@@ -1,0 +1,117 @@
+{
+  "domain": "cimic.com.au",
+  "base_domain": "cimic.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-08.azure-dns.info",
+      "ns3-08.azure-dns.org",
+      "ns2-08.azure-dns.net",
+      "ns1-08.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.218",
+          "67.219.247.197",
+          "67.219.250.214"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.us.messagelabs.com",
+        "addresses": [
+          "34.225.49.16",
+          "44.198.115.56",
+          "54.83.87.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:c6c833dae479960@rep.dmarcanalyzer.com; ruf=mailto:c6c833dae479960@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "cimic.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "c6c833dae479960@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "c6c833dae479960@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "domain": "centamin.com",
+  "base_domain": "centamin.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.p28.dynect.net",
+      "ns2.p28.dynect.net",
+      "ns3.p28.dynect.net",
+      "ns1.p28.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "sukarimx1.centamin.com",
+        "addresses": [
+          "41.33.165.52"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 15,
+        "hostname": "sukarimx3.centamin.com",
+        "addresses": [
+          "45.240.58.252"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.centamin.com",
+        "addresses": [
+          "196.219.56.226"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on sukarimx1.centamin.com",
+      "SSL/TLS is not supported on sukarimx3.centamin.com",
+      "STARTTLS is not supported on mail.centamin.com",
+      "SSL/TLS is not supported on mail.centamin.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:41.33.165.52/32 ip4:81.10.97.116/32 ip4:45.240.58.252 ip4:196.219.56.226/32 a:SukariMX1.centamin.com a:mail.centamin.com a:SukariMX2.centamin.com include:spf.protection.outlook.com include:spf.emailsignatures365.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; sp=reject; fo=1; aspf=s; rua=mailto:Dmarc.report@centamin.com; ruf=mailto:Dmarc.report@centamin.com",
+    "valid": true,
+    "location": "centamin.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "Dmarc.report@centamin.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "Dmarc.report@centamin.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

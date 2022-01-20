@@ -1,0 +1,409 @@
+{
+  "domain": "pseg.com",
+  "base_domain": "pseg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns1.ultradns.org",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.net",
+      "edns1.ultradns.com",
+      "ns07.pseg.com",
+      "ns06.pseg.com",
+      "ns05.pseg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002aba01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.167"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002aba01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.154.104"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-002aba01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-002aba01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-002aba01.pphosted.com ip4:107.20.210.250 ip4:52.1.14.157 ip4:216.251.248.18 include:everbridge.net ip4:70.42.227.151 ip4:70.42.227.152 include:_spf.q4press.com include:pseg-mail.vrli.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "107.20.210.250",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.1.14.157",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.251.248.18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "70.42.227.151",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "70.42.227.152",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-002aba01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.154.104 ip4:148.163.150.167",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.154.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.150.167",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "everbridge.net",
+          "record": "v=spf1 include:spfprd1.everbridge.net include:spfstg1.everbridge.net -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfprd1.everbridge.net",
+                "record": "v=spf1 ip4:3.132.65.8/32 ip4:52.13.126.222/32 ip4:3.23.36.254/32 ip4:52.13.73.26/32 ip4:3.22.102.251/32 ip4:54.212.187.12/32 ip4:3.21.23.140/32 ip4:52.12.139.153/32 ip4:54.188.101.235/32 ip4:3.23.38.224/32 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "3.132.65.8/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.126.222/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.36.254/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.73.26/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.102.251/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.212.187.12/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.21.23.140/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.12.139.153/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.188.101.235/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.38.224/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spfstg1.everbridge.net",
+                "record": "v=spf1 ip4:54.202.102.78/32 ip4:54.189.43.109/32 ip4:44.224.52.248/32 ip4:54.185.77.73/32 ip4:3.23.73.147/32 ip4:3.137.48.253/32 ip4:3.20.31.152/32 ip4:3.22.59.195/32 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "54.202.102.78/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.189.43.109/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.224.52.248/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.185.77.73/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.73.147/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.137.48.253/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.20.31.152/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.59.195/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.q4press.com",
+          "record": "v=spf1 a:web.q4press.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "13.57.137.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.142.131",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.163.18",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.240.21",
+                "mechanism": "a"
+              },
+              {
+                "value": "168.245.55.252",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.208.74.172",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.223.8.0",
+                "mechanism": "a"
+              },
+              {
+                "value": "35.168.82.240",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.23.113.139",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.55.39.176",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.177.118.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.208.86.47",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "pseg-mail.vrli.com",
+          "record": "v=spf1 include:_spf-pseg-mail.vrli.com mx -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "pseg-mail.vrli.com",
+                "mechanism": "mx"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf-pseg-mail.vrli.com",
+                "record": "v=spf1 ip4:208.92.178.0/23 ip4:208.92.176.0/23 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "208.92.178.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.92.176.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "pseg.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

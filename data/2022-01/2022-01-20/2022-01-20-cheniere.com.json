@@ -1,0 +1,51 @@
+{
+  "domain": "cheniere.com",
+  "base_domain": "cheniere.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.cheniere.com",
+      "ns1-05.azure-dns.com",
+      "ns2.cheniere.com",
+      "ns1.cheniere.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001ae001.gslb.pphosted.com",
+        "addresses": [
+          "148.163.140.18"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001ae001.gslb.pphosted.com",
+        "addresses": [
+          "148.163.140.18"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-001ae001.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-001ae001.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

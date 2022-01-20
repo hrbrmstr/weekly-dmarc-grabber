@@ -1,0 +1,121 @@
+{
+  "domain": "tateandlyle.com",
+  "base_domain": "tateandlyle.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ha4.markmonitor.zone",
+      "ha2.markmonitor.zone",
+      "ha1.markmonitor.zone",
+      "ha3.markmonitor.zone"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2326-43.iphmx.com",
+        "addresses": [
+          "216.71.153.203",
+          "216.71.155.140"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc2326-43.iphmx.com",
+        "addresses": [
+          "216.71.153.203",
+          "216.71.155.140"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc2326-43.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc2326-43.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.dmp.cisco.com include:%{d}.8b.spf-protect.dmp.cisco.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.8b.spf-protect.dmp.cisco.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:tate-lyle@rua.dmp.cisco.com,mailto:dmarc@tateandlyle.com; ruf=mailto:tate-lyle@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "tateandlyle.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tate-lyle@rua.dmp.cisco.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@tateandlyle.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tate-lyle@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

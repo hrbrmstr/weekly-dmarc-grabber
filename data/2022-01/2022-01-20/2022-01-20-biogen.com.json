@@ -1,0 +1,146 @@
+{
+  "domain": "biogen.com",
+  "base_domain": "biogen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1947.awsdns-51.co.uk",
+      "ns-1062.awsdns-04.org",
+      "ns-992.awsdns-60.net",
+      "ns-446.awsdns-55.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-00209801.pphosted.com",
+        "addresses": [
+          "148.163.148.54"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-00209801.pphosted.com",
+        "addresses": [
+          "148.163.152.54"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mxa-00209801.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.54"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mxb-00209801.gslb.pphosted.com",
+        "addresses": [
+          "148.163.152.54"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-00209801.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-00209801.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxa-00209801.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00209801.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_u.biogen.com._spf.smart.ondmarc.com ~all",
+    "valid": false,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 include:amazonses.com"
+    ],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:8abf8234@inbox.ondmarc.com,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:8abf8234@inbox.ondmarc.com,mailto:dmarc_ruf@emaildefense.proofpoint.com;",
+    "valid": true,
+    "location": "biogen.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "8abf8234@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "8abf8234@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

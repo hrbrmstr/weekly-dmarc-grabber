@@ -1,0 +1,250 @@
+{
+  "domain": "metlife.com",
+  "base_domain": "metlife.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.metlife.com",
+      "ns2.metlife.com",
+      "ns1.edgecastdns.net",
+      "ns2.edgecastdns.net",
+      "ns3.edgecastdns.net",
+      "ns4.edgecastdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.metlife.com",
+        "addresses": [
+          "139.138.33.11",
+          "139.138.33.12",
+          "139.138.33.13",
+          "139.138.33.15",
+          "139.138.33.23",
+          "139.138.33.24",
+          "139.138.56.184",
+          "139.138.56.187",
+          "139.138.56.188",
+          "139.138.56.189",
+          "139.138.56.198",
+          "139.138.56.199",
+          "216.71.155.54",
+          "216.71.155.56",
+          "216.71.155.62",
+          "216.71.155.64",
+          "68.232.157.126",
+          "68.232.157.134",
+          "68.232.157.141",
+          "68.232.157.163"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.metlife.com",
+        "addresses": [
+          "139.138.33.11",
+          "139.138.33.12",
+          "139.138.33.13",
+          "139.138.33.15",
+          "139.138.33.23",
+          "139.138.33.24",
+          "139.138.56.184",
+          "139.138.56.187",
+          "139.138.56.188",
+          "139.138.56.189",
+          "139.138.56.198",
+          "139.138.56.199",
+          "216.71.155.54",
+          "216.71.155.56",
+          "216.71.155.62",
+          "216.71.155.64",
+          "68.232.157.126",
+          "68.232.157.134",
+          "68.232.157.141",
+          "68.232.157.163"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mx1.hc1983-11.iphmx.com",
+        "addresses": [
+          "139.138.33.11",
+          "139.138.33.12",
+          "139.138.33.13",
+          "139.138.33.15",
+          "139.138.33.23",
+          "139.138.33.24",
+          "139.138.56.184",
+          "139.138.56.187",
+          "139.138.56.188",
+          "139.138.56.189",
+          "139.138.56.198",
+          "139.138.56.199",
+          "216.71.155.54",
+          "216.71.155.56",
+          "216.71.155.62",
+          "216.71.155.64",
+          "68.232.157.126",
+          "68.232.157.134",
+          "68.232.157.141",
+          "68.232.157.163"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mx2.hc1983-11.iphmx.com",
+        "addresses": [
+          "139.138.33.11",
+          "139.138.33.12",
+          "139.138.33.13",
+          "139.138.33.15",
+          "139.138.33.23",
+          "139.138.33.24",
+          "139.138.56.184",
+          "139.138.56.187",
+          "139.138.56.188",
+          "139.138.56.189",
+          "139.138.56.198",
+          "139.138.56.199",
+          "216.71.155.54",
+          "216.71.155.56",
+          "216.71.155.62",
+          "216.71.155.64",
+          "68.232.157.126",
+          "68.232.157.134",
+          "68.232.157.141",
+          "68.232.157.163"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.metlife.com",
+      "SSL/TLS is not supported on mx2.metlife.com",
+      "mx1.hc1983-11.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx1.hc1983-11.iphmx.com'. (_ssl.c:997)",
+      "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 139.138.33.15 is esa16.hc1983-11.iphmx.com, but the A/AAAA DNS records for esa16.hc1983-11.iphmx.com do not resolve to 139.138.33.15",
+      "mx2.hc1983-11.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx2.hc1983-11.iphmx.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.metlife.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.metlife.com",
+          "record": "v=spf1 exists:%{i}.spf.hc1983-11.iphmx.com exists:%{i}.spf.hc1983-69.iphmx.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}.spf.hc1983-11.iphmx.com",
+                "mechanism": "exists"
+              },
+              {
+                "value": "%{i}.spf.hc1983-69.iphmx.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=3600;rua=mailto:metlife@rua.dmp.cisco.com;ruf=mailto:metlife@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "metlife.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "metlife@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "metlife@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}
