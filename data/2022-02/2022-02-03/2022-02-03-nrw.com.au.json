@@ -1,0 +1,118 @@
+{
+  "domain": "nrw.com.au",
+  "base_domain": "nrw.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.domainnetwork.se",
+      "ns3.domainnetwork.com",
+      "ns.domainnetwork.se"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:00133f3863e4392@rep.dmarcanalyzer.com; ruf=mailto:00133f3863e4392@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "nrw.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "00133f3863e4392@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "00133f3863e4392@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

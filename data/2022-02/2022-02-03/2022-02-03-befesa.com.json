@@ -1,0 +1,103 @@
+{
+  "domain": "befesa.com",
+  "base_domain": "befesa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.cscdns.net",
+      "dns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "befesa-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on befesa-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:50.199.185.101 ip4:205.242.233.34 ip4:205.242.233.55 ip4:13.80.179.199 ip4:193.28.97.84/32 ip4:194.147.133.36/32 ip4:188.95.0.38/32 ip4:188.95.7.6/32 include:_spf.psm.knowbe4.com include:ipreomail.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:admin@befesa.com; ruf=mailto:admin@befesa.com; fo=1",
+    "valid": true,
+    "location": "befesa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin@befesa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin@befesa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

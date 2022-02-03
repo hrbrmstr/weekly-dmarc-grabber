@@ -1,0 +1,89 @@
+{
+  "domain": "hella.com",
+  "base_domain": "hella.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "secondary006.dtag.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail4.hella.com",
+        "addresses": [
+          "209.206.38.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mail5.hella.com",
+        "addresses": [
+          "209.206.38.67"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail1.hella.com",
+        "addresses": [
+          "82.210.249.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.hella.com",
+        "addresses": [
+          "82.210.249.15"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail3.hella.com",
+        "addresses": [
+          "202.136.208.69"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 25,
+        "hostname": "mail6.hella.com",
+        "addresses": [
+          "202.136.208.70"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail4.hella.com",
+      "SSL/TLS is not supported on mail5.hella.com",
+      "mail1.hella.com: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)",
+      "mail2.hella.com: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)",
+      "mail3.hella.com: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)",
+      "SSL/TLS is not supported on mail6.hella.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "domain": "anz.com.au",
+  "base_domain": "anz.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a28-67.akam.net",
+      "a16-67.akam.net",
+      "a1-206.akam.net",
+      "a9-67.akam.net",
+      "a8-67.akam.net",
+      "a7-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com ip4:203.18.160.203 ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "203.18.160.203",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@anz.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "anz.com.au",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@anz.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

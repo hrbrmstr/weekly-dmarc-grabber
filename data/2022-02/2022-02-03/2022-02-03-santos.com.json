@@ -1,0 +1,119 @@
+{
+  "domain": "santos.com",
+  "base_domain": "santos.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1884.awsdns-43.co.uk",
+      "ns-1062.awsdns-04.org",
+      "ns-620.awsdns-13.net",
+      "ns-247.awsdns-30.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:0344ffca5441029@rep.dmarcanalyzer.com; ruf=mailto:0344ffca5441029@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "santos.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0344ffca5441029@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0344ffca5441029@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "domain": "mineralresources.com.au",
+  "base_domain": "mineralresources.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.melbourneit.net",
+      "ns3.melbourneit.net",
+      "ns2.melbourneit.net",
+      "ns1.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 3,
+        "hostname": "mx01.mrl.com.au",
+        "addresses": [
+          "49.255.53.201"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 4,
+        "hostname": "mx02.mrl.com.au",
+        "addresses": [
+          "49.255.53.202"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.mrl.com.au: Connection timed out",
+      "mx02.mrl.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx01.mrl.com.au",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx02.mrl.com.au",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

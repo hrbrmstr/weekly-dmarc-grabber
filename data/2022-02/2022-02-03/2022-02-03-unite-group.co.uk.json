@@ -1,0 +1,113 @@
+{
+  "domain": "unite-group.co.uk",
+  "base_domain": "unite-group.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1363.awsdns-42.org",
+      "ns-482.awsdns-60.com",
+      "ns-1686.awsdns-18.co.uk",
+      "ns-571.awsdns-07.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:re+teqz3nxzz6h@dmarc.postmarkapp.com; sp=none; aspf=r;",
+    "valid": true,
+    "location": "unite-group.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "re+teqz3nxzz6h@dmarc.postmarkapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "domain": "jetblue.com",
+  "base_domain": "jetblue.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns04.jetbluedns.com",
+      "ns03.jetbluedns.com",
+      "ns02.jetbluedns.com",
+      "ns01.jetbluedns.com",
+      "dns4.p08.nsone.net",
+      "dns3.p08.nsone.net",
+      "dns2.p08.nsone.net",
+      "dns1.p08.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jetblue-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.138",
+          "104.47.58.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on jetblue-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query jetblue.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:jetblue@rua.agari.com; ruf=mailto:jetblue@ruf.agari.com",
+    "valid": true,
+    "location": "jetblue.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "domain": "dechra.com",
+  "base_domain": "dechra.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.cscdns.net",
+      "dns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.194",
+          "195.245.231.77",
+          "85.158.142.208"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.eu.messagelabs.com",
+        "addresses": [
+          "18.192.151.200",
+          "3.71.139.39"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster4.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster4a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc-rua@dechra.com; ruf=mailto:dmarc-ruf@dechra.com;",
+    "valid": true,
+    "location": "dechra.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@dechra.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ruf@dechra.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

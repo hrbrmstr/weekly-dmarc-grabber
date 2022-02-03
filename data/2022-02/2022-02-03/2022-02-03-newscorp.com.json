@@ -1,0 +1,141 @@
+{
+  "domain": "newscorp.com",
+  "base_domain": "newscorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1522.awsdns-62.org",
+      "ns-1775.awsdns-29.co.uk",
+      "ns-990.awsdns-59.net",
+      "ns-358.awsdns-44.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.207.26",
+          "2607:f8b0:400d:c09::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.203.27",
+          "2a00:1450:400b:c03::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1b",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "209.85.203.26",
+          "2a00:1450:400b:c03::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "2800:3f0:4003:c00::1b does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "newscorp.com",
+    "warnings": [
+      "Failed to retrieve MX records for the domain of rua email address dmarc_rua@emaildefense.proofpoint.com - The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "Failed to retrieve MX records for the domain of ruf email address dmarc_ruf@emaildefense.proofpoint.com - All nameservers failed to answer the query emaildefense.proofpoint.com. IN MX: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc_rua@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:dmarc_ruf@emaildefense.proofpoint.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

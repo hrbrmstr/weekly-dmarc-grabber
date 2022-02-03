@@ -1,0 +1,149 @@
+{
+  "domain": "amada.co.jp",
+  "base_domain": "amada.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-926.awsdns-51.net",
+      "ns-1479.awsdns-56.org",
+      "ns-1637.awsdns-12.co.uk",
+      "ns-327.awsdns-40.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.206.27",
+          "2607:f8b0:400d:c04::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.203.26",
+          "2a00:1450:400b:c03::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1b",
+          "64.233.184.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "142.250.27.26",
+          "2a00:1450:4025:401::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query amada.co.jp. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;ruf=mailto:admin+dmarc_ruf@amada.co.jp;rua=mailto:admin+dmarc_rua@amada.co.jp;pct=100",
+    "valid": true,
+    "location": "amada.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin+dmarc_ruf@amada.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin+dmarc_rua@amada.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

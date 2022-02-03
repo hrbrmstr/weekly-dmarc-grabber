@@ -1,0 +1,103 @@
+{
+  "domain": "masco.com",
+  "base_domain": "masco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.p27.dynect.net",
+      "ns2.p27.dynect.net",
+      "ns3.p27.dynect.net",
+      "ns1.p27.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00541a01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.172.181"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00541a01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.160.182"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00541a01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00541a01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreporting@masco.com;",
+    "valid": true,
+    "location": "masco.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreporting@masco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

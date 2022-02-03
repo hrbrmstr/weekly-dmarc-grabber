@@ -1,0 +1,91 @@
+{
+  "domain": "haseko.co.jp",
+  "base_domain": "haseko.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns20.haseko.co.jp",
+      "ns10.haseko.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:digital-knowledge.sm.air.ne.jp ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "digital-knowledge.sm.air.ne.jp",
+          "record": "v=spf1 ip4:210.166.72.35 ip4:210.166.72.36 ip4:210.166.72.37 ip4:210.166.72.24 ip4:210.166.72.25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.166.72.35",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.166.72.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.166.72.37",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.166.72.24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.166.72.25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

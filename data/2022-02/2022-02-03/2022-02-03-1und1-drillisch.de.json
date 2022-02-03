@@ -1,0 +1,53 @@
+{
+  "domain": "1und1-drillisch.de",
+  "base_domain": "1und1-drillisch.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.drillisch.net",
+      "ns2.drillisch.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mxint01.1and1.com",
+        "addresses": [
+          "212.227.126.206",
+          "212.227.17.16"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mxint02.1and1.com",
+        "addresses": [
+          "212.227.126.207",
+          "212.227.17.17"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxint01.1and1.com",
+      "The resolution lifetime expired after 2.2 seconds: ",
+      "The reverse DNS of 212.227.17.17 is mxint02.1and1.com, but the A/AAAA DNS records for mxint02.1and1.com do not resolve to 212.227.17.17",
+      "SSL/TLS is not supported on mxint02.1and1.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query 1und1-drillisch.de. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

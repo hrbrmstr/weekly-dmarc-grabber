@@ -1,0 +1,50 @@
+{
+  "domain": "aareal-bank.com",
+  "base_domain": "aareal-bank.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw1.aareal-bank.com",
+        "addresses": [
+          "185.255.67.199"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgw2.aareal-bank.com",
+        "addresses": [
+          "185.255.67.200"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgw1.aareal-bank.com",
+      "SSL/TLS is not supported on mailgw2.aareal-bank.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "domain": "screen.co.jp",
+  "base_domain": "screen.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.omp.ne.jp",
+      "dns.screen.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00317101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.142.171"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00317101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.142.171"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00317101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00317101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;fo=1;ri=86400;rua=mailto:screen_rua@dm.easysol.net;ruf=mailto:screen_ruf@dm.easysol.net",
+    "valid": true,
+    "location": "screen.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "screen_rua@dm.easysol.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "screen_ruf@dm.easysol.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

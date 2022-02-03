@@ -1,0 +1,105 @@
+{
+  "domain": "technotrans.de",
+  "base_domain": "technotrans.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns18.domserver.de",
+      "ns17.domserver.de",
+      "ns16.domserver.de",
+      "ns15.domserver.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-in01.eu.retarus.com",
+        "addresses": [
+          "94.199.92.130"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-in02.eu.retarus.com",
+        "addresses": [
+          "94.199.89.39"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx-in01.eu.retarus.com: Connection timed out",
+      "mx-in02.eu.retarus.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; pct=100; ruf=mailto:postmaster@technotrans.de; adkim=r; aspf=r",
+    "valid": true,
+    "location": "technotrans.de",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@technotrans.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

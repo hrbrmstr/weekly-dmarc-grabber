@@ -1,0 +1,117 @@
+{
+  "domain": "tassal.com.au",
+  "base_domain": "tassal.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.tassal.com.au",
+      "ns2.tassal.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query tassal.com.au. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:sam.boyes@tassal.com.au; ruf=mailto:sam.boyes@tassal.com.au; fo=1",
+    "valid": true,
+    "location": "tassal.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "sam.boyes@tassal.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "sam.boyes@tassal.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

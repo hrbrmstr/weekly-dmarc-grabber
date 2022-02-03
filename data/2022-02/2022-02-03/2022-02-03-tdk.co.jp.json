@@ -1,0 +1,69 @@
+{
+  "domain": "tdk.co.jp",
+  "base_domain": "tdk.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "tdksf2.jp.tdk.com",
+        "addresses": [
+          "211.16.239.3"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "tdksf1.jp.tdk.com",
+        "addresses": [
+          "210.161.158.221"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "tdksf2.jp.tdk.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "tdksf1.jp.tdk.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.161.158.221 ip4:211.16.239.3 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.161.158.221",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.16.239.3",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

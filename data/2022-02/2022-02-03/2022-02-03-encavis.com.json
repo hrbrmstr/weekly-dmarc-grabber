@@ -1,0 +1,91 @@
+{
+  "domain": "encavis.com",
+  "base_domain": "encavis.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns26.domaincontrol.com",
+      "ns25.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.encavis.com",
+        "addresses": [
+          "149.233.16.130"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.encavis.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmac59@encavis.com; fo=1; adkim=s; aspf=s; rf=afrf; sp=none",
+    "valid": true,
+    "location": "encavis.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmac59@encavis.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

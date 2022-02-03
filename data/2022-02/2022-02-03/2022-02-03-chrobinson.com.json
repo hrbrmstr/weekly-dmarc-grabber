@@ -1,0 +1,115 @@
+{
+  "domain": "chrobinson.com",
+  "base_domain": "chrobinson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.chrobinson.com",
+      "ns1.chrobinson.com",
+      "ns2.chrobinson.com",
+      "ns3.chrobinson.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc4187-23.iphmx.com",
+        "addresses": [
+          "68.232.131.35",
+          "68.232.137.233"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc4187-23.iphmx.com",
+        "addresses": [
+          "68.232.131.35",
+          "68.232.137.233"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc4187-23.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc4187-23.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=3600;rua=mailto:ch-robinson-worldwide@rua.dmp.cisco.com;ruf=mailto:ch-robinson-worldwide@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "chrobinson.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ch-robinson-worldwide@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ch-robinson-worldwide@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

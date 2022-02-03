@@ -1,0 +1,94 @@
+{
+  "domain": "aurizon.com.au",
+  "base_domain": "aurizon.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3-08.azure-dns.org",
+      "ns1-08.azure-dns.com",
+      "ns2-08.azure-dns.net",
+      "ns4-08.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "aurizon-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aurizon-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query aurizon.com.au. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:qcexa1qo@ag.dmarcian-ap.com; adkim=s; aspf=s",
+    "valid": true,
+    "location": "aurizon.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "qcexa1qo@ag.dmarcian-ap.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

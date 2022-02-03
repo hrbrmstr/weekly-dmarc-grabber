@@ -1,0 +1,43 @@
+{
+  "domain": "accentro.ag",
+  "base_domain": "accentro.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-de.1and1-dns.org",
+      "ns-de.1and1-dns.biz",
+      "ns-de.1and1-dns.com",
+      "ns-de.1and1-dns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "accentro-ag.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.12.36",
+          "104.47.14.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on accentro-ag.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ptr ip4:87.193.149.18 include:elosmail.de include:elosmail.com include:fw.accentro.de include:spf.protection.outlook.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "elosmail.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
