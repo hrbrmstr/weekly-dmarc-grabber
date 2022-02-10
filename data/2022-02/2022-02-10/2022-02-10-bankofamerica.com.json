@@ -1,0 +1,185 @@
+{
+  "domain": "bankofamerica.com",
+  "base_domain": "bankofamerica.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns10.bac.com",
+      "ns11.bac.com",
+      "ns12.bac.com",
+      "ns6.bac.com",
+      "ns7.bac.com",
+      "ns8.bac.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0000ec05.gslb.pphosted.com",
+        "addresses": [
+          "208.86.201.225"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0000ec05.gslb.pphosted.com",
+        "addresses": [
+          "208.84.65.230"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0000ec05.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0000ec05.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_newspf.bankofamerica.com include:spf-0000ec08.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_newspf.bankofamerica.com",
+          "record": "v=spf1 ip4:171.159.137.178 ip4:171.161.41.178 ip4:171.159.227.167 ip4:171.161.147.155",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "171.159.137.178",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "171.161.41.178",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "171.159.227.167",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "171.161.147.155",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-0000ec08.pphosted.com",
+          "record": "v=spf1 ip4:148.163.158.107 ip4:148.163.156.110",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.158.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.156.110",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:auth.report_ns@bankofamerica.com; ruf=mailto:bankofamerica@ruf.agari.com",
+    "valid": true,
+    "location": "bankofamerica.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "auth.report_ns@bankofamerica.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bankofamerica@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

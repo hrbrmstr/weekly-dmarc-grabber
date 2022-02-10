@@ -1,0 +1,155 @@
+{
+  "domain": "duke-energy.com",
+  "base_domain": "duke-energy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns20.duke-energy.com",
+      "ns10.duke-energy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx10.duke-energy.com",
+        "addresses": [
+          "192.234.128.3"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx30.duke-energy.com",
+        "addresses": [
+          "192.234.125.3"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx10.duke-energy.com",
+      "SSL/TLS is not supported on mx30.duke-energy.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:cltmxim02a.duke-energy.com a:adcmxim02b.duke-energy.com a:wipesaout12-nat.duke-energy.com ip4:159.110.132.168 ip4:159.110.16.168 ip4:216.71.154.215 ip4:216.71.142.213 ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 a:cltmxim02a.duke-energy.com a:adcmxim02b.duke-energy.com a:cltmxim12a.duke-energy.com a:amsg0002o.progress-energy.com a:amsg0003o.progress-energy.com ~all"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "192.234.122.10",
+          "mechanism": "a"
+        },
+        {
+          "value": "192.234.127.10",
+          "mechanism": "a"
+        },
+        {
+          "value": "192.234.122.11",
+          "mechanism": "a"
+        },
+        {
+          "value": "192.234.127.11",
+          "mechanism": "a"
+        },
+        {
+          "value": "192.234.122.12",
+          "mechanism": "a"
+        },
+        {
+          "value": "192.234.127.12",
+          "mechanism": "a"
+        },
+        {
+          "value": "159.110.132.168",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "159.110.16.168",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.71.154.215",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.71.142.213",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:DMARC_Aggregate@duke-energy.com",
+    "valid": true,
+    "location": "duke-energy.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_Aggregate@duke-energy.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

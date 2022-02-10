@@ -1,0 +1,42 @@
+{
+  "domain": "ingeniacommunities.com.au",
+  "base_domain": "ingeniacommunities.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dolly.ns.cloudflare.com",
+      "adam.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1-eu1.ppe-hosted.com",
+        "addresses": [
+          "185.132.181.16",
+          "91.209.104.155"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1-eu1.ppe-hosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.mediusflow.com include:spf.emailsignatures365.com include:emailsyd.freshservice.com include:customers.clickdimensions.com include:spf.protection.outlook.com ip4:124.47.145.118/32 a:dispatch-eu.ppe-hosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "domain": "aareal-bank.com",
+  "base_domain": "aareal-bank.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw1.aareal-bank.com",
+        "addresses": [
+          "185.255.67.199"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgw2.aareal-bank.com",
+        "addresses": [
+          "185.255.67.200"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgw1.aareal-bank.com",
+      "SSL/TLS is not supported on mailgw2.aareal-bank.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:95.129.200.85 ip4:195.34.182.131 ip4:195.34.182.132 ip4:54.240.31.72 ip4:54.240.31.73 ip4:54.240.31.74 ip4:82.165.159.36 ip4:80.250.128.5 include:spf-inm.eqs-service.com include:spfa.myconvento.com include:mail0.mtpserver.net include:mail1.safesrv.de include:mail3.trustmail.online include:spf.mailjet.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "mail0.mtpserver.net does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

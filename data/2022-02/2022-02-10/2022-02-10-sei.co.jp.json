@@ -1,0 +1,48 @@
+{
+  "domain": "sei.co.jp",
+  "base_domain": "sei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gemini.starnet.ad.jp",
+      "seigate-y.sei.co.jp",
+      "seigate.sei.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:219.106.230.200/29 +ip4:60.56.229.0/28 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "219.106.230.200/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.56.229.0/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.sei.co.jp\n\nv=spf1 +ip4:219.106.230.200/29 +ip4:60.56.229.0/28 ~all"
+  }
+}

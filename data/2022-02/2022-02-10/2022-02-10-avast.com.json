@@ -1,0 +1,592 @@
+{
+  "domain": "avast.com",
+  "base_domain": "avast.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a20-66.akam.net",
+      "a13-65.akam.net",
+      "a1-182.akam.net",
+      "a26-67.akam.net",
+      "a6-67.akam.net",
+      "a11-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.205.27",
+          "2607:f8b0:400d:c02::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.203.27",
+          "2a00:1450:400b:c03::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1b",
+          "64.233.184.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "142.250.27.26",
+          "2a00:1450:4025:401::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=spfc.avast.com",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "spfc.avast.com",
+        "record": "v=spf1 ip4:104.47.0.0/17 ip4:107.20.210.250 ip4:108.177.8.0/21 ip4:108.177.96.0/19 ip4:130.211.0.0/22 ip4:172.217.0.0/19 ip4:172.217.128.0/19 ip4:172.217.160.0/20 ip4:172.217.192.0/19 ip4:172.217.32.0/20 ip4:172.253.112.0/20 include:spfc1.avast.com ~all",
+        "dns_lookups": 8,
+        "parsed": {
+          "pass": [
+            {
+              "value": "104.47.0.0/17",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "107.20.210.250",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "108.177.8.0/21",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "108.177.96.0/19",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "130.211.0.0/22",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.217.0.0/19",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.217.128.0/19",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.217.160.0/20",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.217.192.0/19",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.217.32.0/20",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "172.253.112.0/20",
+              "mechanism": "ip4"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "spfc1.avast.com",
+              "record": "v=spf1 ip4:172.253.56.0/21 ip4:173.194.0.0/16 ip4:174.137.46.0/24 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:195.74.76.111 ip4:206.24.49.0/24 ip4:209.85.128.0/17 ip4:212.108.29.10 ip4:212.108.29.11 include:spfc2.avast.com ~all",
+              "dns_lookups": 7,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "172.253.56.0/21",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "173.194.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "174.137.46.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "185.12.80.0/22",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "188.172.128.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "192.161.144.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "195.74.76.111",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "206.24.49.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "209.85.128.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "212.108.29.10",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "212.108.29.11",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "spfc2.avast.com",
+                    "record": "v=spf1 ip4:212.108.29.13 ip4:212.108.29.14 ip4:216.150.182.0/23 ip4:216.150.186.0/24 ip4:216.198.0.0/18 ip4:216.239.32.0/19 ip4:216.58.192.0/19 ip4:35.190.247.0/24 ip4:35.191.0.0/16 ip4:40.107.0.0/16 ip4:40.92.0.0/15 include:spfc3.avast.com ~all",
+                    "dns_lookups": 6,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "212.108.29.13",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "212.108.29.14",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "216.150.182.0/23",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "216.150.186.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "216.198.0.0/18",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "216.239.32.0/19",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "216.58.192.0/19",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "35.190.247.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "35.191.0.0/16",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "40.107.0.0/16",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "40.92.0.0/15",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [
+                        {
+                          "domain": "spfc3.avast.com",
+                          "record": "v=spf1 ip4:5.62.38.128 ip4:5.62.40.133 ip4:5.62.42.66 ip4:5.62.44.135 ip4:69.94.68.61 ip4:5.62.48.106 ip4:52.1.14.157 ip4:52.100.0.0/14 ip4:52.30.130.201 ip4:54.153.131.110 ip4:54.229.2.165 ip4:54.66.252.242 ip4:63.87.106.0/23 include:spfc4.avast.com ~all",
+                          "dns_lookups": 5,
+                          "parsed": {
+                            "pass": [
+                              {
+                                "value": "5.62.38.128",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "5.62.40.133",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "5.62.42.66",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "5.62.44.135",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "69.94.68.61",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "5.62.48.106",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "52.1.14.157",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "52.100.0.0/14",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "52.30.130.201",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "54.153.131.110",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "54.229.2.165",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "54.66.252.242",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "63.87.106.0/23",
+                                "mechanism": "ip4"
+                              }
+                            ],
+                            "neutral": [],
+                            "softfail": [],
+                            "fail": [],
+                            "include": [
+                              {
+                                "domain": "spfc4.avast.com",
+                                "record": "v=spf1 ip4:64.233.160.0/19 ip4:66.102.0.0/20 ip4:66.249.80.0/20 ip4:68.232.128.0/19 ip4:69.94.69.155 ip4:70.42.227.151 ip4:70.42.227.152 ip4:72.14.192.0/18 ip4:72.52.184.188 ip4:74.125.0.0/16 ip4:86.65.182.177 include:spfc5.avast.com ~all",
+                                "dns_lookups": 4,
+                                "parsed": {
+                                  "pass": [
+                                    {
+                                      "value": "64.233.160.0/19",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "66.102.0.0/20",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "66.249.80.0/20",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "68.232.128.0/19",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "69.94.69.155",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "70.42.227.151",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "70.42.227.152",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "72.14.192.0/18",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "72.52.184.188",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "74.125.0.0/16",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "86.65.182.177",
+                                      "mechanism": "ip4"
+                                    }
+                                  ],
+                                  "neutral": [],
+                                  "softfail": [],
+                                  "fail": [],
+                                  "include": [
+                                    {
+                                      "domain": "spfc5.avast.com",
+                                      "record": "v=spf1 ip4:86.65.182.187 ip4:91.213.143.0/24 ip4:94.100.165.29 ip4:94.100.165.49 ip4:96.46.150.192/27 ip6:2001:4860:4000::/36 ip6:2001:67c:284:1fe::/48 ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36 ip6:2800:3f0:4000::/36 include:spfc6.avast.com ~all",
+                                      "dns_lookups": 3,
+                                      "parsed": {
+                                        "pass": [
+                                          {
+                                            "value": "86.65.182.187",
+                                            "mechanism": "ip4"
+                                          },
+                                          {
+                                            "value": "91.213.143.0/24",
+                                            "mechanism": "ip4"
+                                          },
+                                          {
+                                            "value": "94.100.165.29",
+                                            "mechanism": "ip4"
+                                          },
+                                          {
+                                            "value": "94.100.165.49",
+                                            "mechanism": "ip4"
+                                          },
+                                          {
+                                            "value": "96.46.150.192/27",
+                                            "mechanism": "ip4"
+                                          },
+                                          {
+                                            "value": "2001:4860:4000::/36",
+                                            "mechanism": "ip6"
+                                          },
+                                          {
+                                            "value": "2001:67c:284:1fe::/48",
+                                            "mechanism": "ip6"
+                                          },
+                                          {
+                                            "value": "2404:6800:4000::/36",
+                                            "mechanism": "ip6"
+                                          },
+                                          {
+                                            "value": "2607:f8b0:4000::/36",
+                                            "mechanism": "ip6"
+                                          },
+                                          {
+                                            "value": "2800:3f0:4000::/36",
+                                            "mechanism": "ip6"
+                                          }
+                                        ],
+                                        "neutral": [],
+                                        "softfail": [],
+                                        "fail": [],
+                                        "include": [
+                                          {
+                                            "domain": "spfc6.avast.com",
+                                            "record": "v=spf1 ip6:2a00:1450:4000::/36 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 ip6:2c0f:fb50:4000::/36 ip4:212.158.143.88 exists:%{i}._spf.mta.salesforce.com exists:%{i}.spf.hc3608-11.iphmx.com ~all",
+                                            "dns_lookups": 2,
+                                            "parsed": {
+                                              "pass": [
+                                                {
+                                                  "value": "2a00:1450:4000::/36",
+                                                  "mechanism": "ip6"
+                                                },
+                                                {
+                                                  "value": "2a01:111:f400::/48",
+                                                  "mechanism": "ip6"
+                                                },
+                                                {
+                                                  "value": "2a01:111:f403::/48",
+                                                  "mechanism": "ip6"
+                                                },
+                                                {
+                                                  "value": "2c0f:fb50:4000::/36",
+                                                  "mechanism": "ip6"
+                                                },
+                                                {
+                                                  "value": "212.158.143.88",
+                                                  "mechanism": "ip4"
+                                                },
+                                                {
+                                                  "value": "%{i}._spf.mta.salesforce.com",
+                                                  "mechanism": "exists"
+                                                },
+                                                {
+                                                  "value": "%{i}.spf.hc3608-11.iphmx.com",
+                                                  "mechanism": "exists"
+                                                }
+                                              ],
+                                              "neutral": [],
+                                              "softfail": [],
+                                              "fail": [],
+                                              "include": [],
+                                              "redirect": null,
+                                              "exp": null,
+                                              "all": "softfail"
+                                            },
+                                            "warnings": []
+                                          }
+                                        ],
+                                        "redirect": null,
+                                        "exp": null,
+                                        "all": "softfail"
+                                      },
+                                      "warnings": []
+                                    }
+                                  ],
+                                  "redirect": null,
+                                  "exp": null,
+                                  "all": "softfail"
+                                },
+                                "warnings": []
+                              }
+                            ],
+                            "redirect": null,
+                            "exp": null,
+                            "all": "softfail"
+                          },
+                          "warnings": []
+                        }
+                      ],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "softfail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "softfail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:xwxaf-9347@rua.dmarc.emailanalyst.com,mailto:dmarcrua@avast.com; ruf=mailto:xwxaf-9347@ruf.dmarc.emailanalyst.com,mailto:dmarcruf@avast.com; adkim=r; aspf=r; ri=86400; fo=1; pct=100",
+    "valid": true,
+    "location": "avast.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "xwxaf-9347@rua.dmarc.emailanalyst.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcrua@avast.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "xwxaf-9347@ruf.dmarc.emailanalyst.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcruf@avast.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

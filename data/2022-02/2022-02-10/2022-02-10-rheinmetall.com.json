@@ -1,0 +1,197 @@
+{
+  "domain": "rheinmetall.com",
+  "base_domain": "rheinmetall.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.xc-ns.de",
+      "ns2.xc-ns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp1.asysbs.services",
+        "addresses": [
+          "213.61.254.52"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "smtp2.asysbs.services",
+        "addresses": [
+          "213.61.254.54"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smtp1.asysbs.services",
+      "SSL/TLS is not supported on smtp2.asysbs.services"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1  mx include:spfa.myconvento.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "smtp1.asysbs.services",
+          "mechanism": "mx"
+        },
+        {
+          "value": "smtp2.asysbs.services",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spfa.myconvento.com",
+          "record": "v=spf1 ip4:46.20.47.88 ip4:46.20.47.90 ip4:46.20.47.91 ip4:46.20.47.92 ip4:46.20.47.93 ip4:46.20.47.94 ip4:85.14.241.66 ip4:85.14.241.67 ip4:85.14.241.68 ip4:85.14.241.69 ip4:85.14.241.70 ip4:5.199.141.69",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "46.20.47.88",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.199.141.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:rua@rheinmetall.com; ruf=mailto:ruf@rheinmetall.com; fo=1;",
+    "valid": true,
+    "location": "rheinmetall.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "rua@rheinmetall.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ruf@rheinmetall.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

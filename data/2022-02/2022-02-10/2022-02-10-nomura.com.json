@@ -1,0 +1,616 @@
+{
+  "domain": "nomura.com",
+  "base_domain": "nomura.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns15.nomura.com",
+      "ns14.nomura.com",
+      "ns13.nomura.com",
+      "ns12.nomura.com",
+      "ns11.nomura.com",
+      "ns10.nomura.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00006802.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00006802.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.218"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00006802.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00006802.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.nomura.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.nomura.com",
+          "record": "v=spf1 include:spf-00006802.pphosted.com include:service-now.com ip4:70.42.38.10 ip4:62.73.159.10 ip4:27.111.189.78 ip4:94.247.100.170 ip4:91.135.229.50 ip4:83.138.173.144 ip4:84.45.15.6 ip4:213.129.90.105 ip4:213.129.90.104 include:spf1.nomura.com ~all",
+          "dns_lookups": 8,
+          "parsed": {
+            "pass": [
+              {
+                "value": "70.42.38.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.73.159.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.111.189.78",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.247.100.170",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.135.229.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.138.173.144",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "84.45.15.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.129.90.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.129.90.104",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-00006802.pphosted.com",
+                "record": "v=spf1 ip4:67.231.157.218 ip4:67.231.149.223",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "67.231.157.218",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.231.149.223",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "service-now.com",
+                "record": "v=spf1 a:b.spf.service-now.com a:c.spf.service-now.com a:d.spf.service-now.com ~all",
+                "dns_lookups": 3,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "149.96.5.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.5.209",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.5.3",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.5.6",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.5.7",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.6.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.6.209",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.6.3",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.6.6",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.6.7",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.136.28",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.140.28",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.0.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.1.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.2.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.3.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.13.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.14.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.136.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.136.28",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.137.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.137.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.139.145",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.139.22",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.139.23",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.139.24",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.140.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.140.28",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.141.145",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.141.22",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.141.23",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.141.24",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "37.98.232.12",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "37.98.232.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "37.98.232.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "37.98.234.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "37.98.235.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "103.23.64.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "103.23.65.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "103.23.66.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "103.23.67.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.104.16",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.104.17",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.105.16",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "148.139.105.17",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.1.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.132.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.133.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.194.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.195.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.2.26",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.220.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.96.221.2",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.136.28",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "199.91.140.28",
+                      "mechanism": "a"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf1.nomura.com",
+                "record": "v=spf1 ip4:198.178.38.25 ip4:198.178.40.25 ip4:69.25.22.185 ip4:69.25.22.179 ip4:161.202.230.163 ip4:161.202.230.160 ip4:161.202.230.161 ip4:64.74.170.29 ip4:64.74.170.2 ip4:64.74.170.3 ip4:152.114.220.10 ip4:208.185.229.0/24 include:spf2.nomura.com ~all",
+                "dns_lookups": 2,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.178.38.25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.178.40.25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.25.22.185",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.25.22.179",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.202.230.163",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.202.230.160",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.202.230.161",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.74.170.29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.74.170.2",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.74.170.3",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "152.114.220.10",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.185.229.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spf2.nomura.com",
+                      "record": "v=spf1 ip4:208.185.235.0/24 ip4:170.146.220.96/28 ip4:170.146.221.96/28 ip4:80.69.141.111 ip4:160.153.77.96 ip4:195.130.217.172 ip4:133.250.246.115 ip4:133.250.250.1 ip4:195.224.13.128/27 ip4:66.77.73.0/24 ip4:66.77.69.0/24 include:spf3.nomura.com ~all",
+                      "dns_lookups": 1,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "208.185.235.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "170.146.220.96/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "170.146.221.96/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "80.69.141.111",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "160.153.77.96",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "195.130.217.172",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "133.250.246.115",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "133.250.250.1",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "195.224.13.128/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "66.77.73.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "66.77.69.0/24",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [
+                          {
+                            "domain": "spf3.nomura.com",
+                            "record": "v=spf1 ip4:148.163.135.203 ip4:148.163.139.203 ip4:133.250.179.238 ip4:103.9.180.64 ip4:133.250.167.65 ip4:83.126.52.0/24 ip4:216.244.108.0/24 ~all",
+                            "dns_lookups": 0,
+                            "parsed": {
+                              "pass": [
+                                {
+                                  "value": "148.163.135.203",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "148.163.139.203",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "133.250.179.238",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "103.9.180.64",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "133.250.167.65",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "83.126.52.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "216.244.108.0/24",
+                                  "mechanism": "ip4"
+                                }
+                              ],
+                              "neutral": [],
+                              "softfail": [],
+                              "fail": [],
+                              "include": [],
+                              "redirect": null,
+                              "exp": null,
+                              "all": "softfail"
+                            },
+                            "warnings": []
+                          }
+                        ],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "nomura.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

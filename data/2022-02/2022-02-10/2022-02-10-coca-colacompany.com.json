@@ -1,0 +1,51 @@
+{
+  "domain": "coca-colacompany.com",
+  "base_domain": "coca-colacompany.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-09.azure-dns.com",
+      "ns2-09.azure-dns.net",
+      "ns3-09.azure-dns.org",
+      "ns4-09.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ns1.ko.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The domain ns1.ko.com does not exist",
+      "ns1.ko.com: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Multiple DMARC policy records are not permitted - https://tools.ietf.org/html/rfc7489#section-6.6.3"
+  }
+}

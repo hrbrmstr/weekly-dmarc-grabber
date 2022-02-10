@@ -1,0 +1,253 @@
+{
+  "domain": "mazda.co.jp",
+  "base_domain": "mazda.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.mazda.co.jp",
+      "ns-tk012.ocn.ad.jp",
+      "rx7.mazda.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "gw117177.fortimail.com",
+        "addresses": [
+          "209.52.117.177"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.154.137.152 ip4:210.154.137.153 ip4:52.193.81.146 ip4:133.162.73.239 ip4:133.162.74.21 a:cafeweb1.kcc.knowledgewing.com a:kcweb1.kcc.knowledgewing.com a:ncweb01.kcc.knowledgewing.com include:spf.messagelabs.com include:webcas.net ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [
+      "The domain kcweb1.kcc.knowledgewing.com does not exist"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.154.137.152",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.154.137.153",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.193.81.146",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.162.73.239",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.162.74.21",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.162.204.220",
+          "mechanism": "a"
+        },
+        {
+          "value": "133.162.74.21",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "webcas.net",
+          "record": "v=spf1 ip4:219.101.179.192/27 ip4:203.191.244.128/26 ip4:175.111.83.64/26 ip4:202.143.91.0/25 ip4:115.30.1.0/26 ip4:101.110.14.128/25 ip4:115.30.20.128/26 ip4:115.30.24.0/25 ip4:101.102.234.128/25 ip4:115.30.25.128/25 ip4:118.67.109.0/27 ip4:202.143.89.192/26 ip4:203.191.255.42/32 ip4:165.76.159.0/24 ip4:165.76.182.0/25 ip4:118.67.76.64/27 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "219.101.179.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.244.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "175.111.83.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.143.91.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.1.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "101.110.14.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.20.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.24.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "101.102.234.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.25.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.67.109.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.143.89.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.255.42/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.76.159.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.76.182.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.67.76.64/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.mazda.co.jp\n\nv=spf1 ip4:210.154.137.152 ip4:210.154.137.153 ip4:52.193.81.146 include:spf.messagelabs.com ~all"
+  }
+}
