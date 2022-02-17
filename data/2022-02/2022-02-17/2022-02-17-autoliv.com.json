@@ -1,0 +1,117 @@
+{
+  "domain": "autoliv.com",
+  "base_domain": "autoliv.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dmtu.mt.ns.els-gms.att.net",
+      "dbru.br.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.autoliv.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.178",
+          "68.232.151.179",
+          "68.232.152.133",
+          "68.232.152.161"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.autoliv.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.178",
+          "68.232.151.179",
+          "68.232.152.133",
+          "68.232.152.161"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.autoliv.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.autoliv.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:security@autoliv.com;ruf=mailto:security@autoliv.com;",
+    "valid": true,
+    "location": "autoliv.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "security@autoliv.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "security@autoliv.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

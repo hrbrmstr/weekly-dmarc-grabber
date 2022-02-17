@@ -1,0 +1,61 @@
+{
+  "domain": "teijin.co.jp",
+  "base_domain": "teijin.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1308.awsdns-35.org",
+      "ns-473.awsdns-59.com",
+      "ns-566.awsdns-06.net",
+      "ns-1714.awsdns-22.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:58.159.125.196 +ip4:27.121.6.140 +ip4:122.210.210.28 +ip4:60.32.89.92 +ip4:124.38.9.0/26 +ip4:42.125.234.128/26 include:spf.protection.outlook.com include:aspmx.pardot.com include:spf.haihaimail.jp include:mktomail.com  ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.teijin.co.jp\n\nv=spf1 +ip4:58.159.125.196 +ip4:27.121.6.140 +ip4:122.210.210.28 +ip4:60.32.89.92 +ip4:124.38.9.0/26 +ip4:42.125.234.128/26 ~all"
+  }
+}

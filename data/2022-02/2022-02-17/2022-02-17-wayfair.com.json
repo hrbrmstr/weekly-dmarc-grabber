@@ -1,0 +1,107 @@
+{
+  "domain": "wayfair.com",
+  "base_domain": "wayfair.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a16-64.akam.net",
+      "a1-100.akam.net",
+      "a13-67.akam.net",
+      "a22-65.akam.net",
+      "dns4.p02.nsone.net",
+      "dns3.p02.nsone.net",
+      "dns2.p02.nsone.net",
+      "dns1.p02.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00180701.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.181"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00180701.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.181"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00180701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00180701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc@wayfair.com; fo=1; pct=100; adkim=r; aspf=r",
+    "valid": true,
+    "location": "wayfair.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@wayfair.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

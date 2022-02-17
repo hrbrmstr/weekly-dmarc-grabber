@@ -1,0 +1,78 @@
+{
+  "domain": "deutsche-boerse.com",
+  "base_domain": "deutsche-boerse.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.dbgdns.lu",
+      "b.dbgdns.de",
+      "a.dbgdns.lu",
+      "a.dbgdns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query deutsche-boerse.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; ruf=mailto:email.security@clearstream.com; fo=0",
+    "valid": true,
+    "location": "deutsche-boerse.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found",
+      "clearstream.com does not indicate that it accepts DMARC reports about deutsche-boerse.com - Authorization record not found: deutsche-boerse.com._report._dmarc.clearstream.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:email.security@clearstream.com",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

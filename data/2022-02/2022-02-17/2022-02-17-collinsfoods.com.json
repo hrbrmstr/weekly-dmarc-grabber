@@ -1,0 +1,106 @@
+{
+  "domain": "collinsfoods.com",
+  "base_domain": "collinsfoods.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "donna.ns.cloudflare.com",
+      "bob.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "marshal.collinsfg.com.au",
+        "addresses": [
+          "203.57.4.5"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "marshal.collinsfg.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query collinsfoods.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:51d9a710@mxtoolbox.dmarc-report.com,mailto:re+az1ib9of9by@dmarc.postmarkapp.com; sp=none; aspf=r; ruf=mailto:51d9a710@forensics.dmarc-report.com",
+    "valid": true,
+    "location": "collinsfoods.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "51d9a710@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "re+az1ib9of9by@dmarc.postmarkapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "51d9a710@forensics.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

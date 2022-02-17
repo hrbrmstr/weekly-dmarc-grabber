@@ -1,0 +1,124 @@
+{
+  "domain": "volkswagen.de",
+  "base_domain": "volkswagen.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.xc-ns.de",
+      "ns2.volkswagen.de",
+      "ns1.volkswagen.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mr1.volkswagen.de",
+        "addresses": [
+          "194.114.62.75"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mr2.volkswagen.de",
+        "addresses": [
+          "194.114.62.76"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mr3.volkswagen.de",
+        "addresses": [
+          "194.114.62.77"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mr4.volkswagen.de",
+        "addresses": [
+          "194.114.62.78"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mr1.volkswagen.de: Connection timed out",
+      "mr2.volkswagen.de: Connection timed out",
+      "mr3.volkswagen.de: Connection timed out",
+      "mr4.volkswagen.de: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;ruf=mailto:dmarc_report@volkswagen.de;sp=none;fo=s",
+    "valid": true,
+    "location": "volkswagen.de",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_report@volkswagen.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

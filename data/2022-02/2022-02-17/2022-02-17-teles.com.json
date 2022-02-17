@@ -1,0 +1,76 @@
+{
+  "domain": "teles.com",
+  "base_domain": "teles.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailway25.teles.de",
+        "addresses": [
+          "195.4.13.25"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx.freenet.de",
+        "addresses": [
+          "195.4.92.210",
+          "195.4.92.211",
+          "195.4.92.212",
+          "195.4.92.213",
+          "2001:748:100:40::8:110",
+          "2001:748:100:40::8:111",
+          "2001:748:100:40::8:112",
+          "2001:748:100:40::8:113"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mailway25.teles.de: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:195.4.13.25 ip4:195.4.13.72 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "195.4.13.25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.4.13.72",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "domain": "pacific-metals.co.jp",
+  "base_domain": "pacific-metals.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.canonet.ne.jp",
+      "ns2.canonet.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.pacific-metals.co.jp",
+        "addresses": [
+          "210.134.165.66"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 210.134.165.66 is mx.canonet.ne.jp, but the A/AAAA DNS records for mx.canonet.ne.jp do not resolve to 210.134.165.66",
+      "STARTTLS is not supported on mx.pacific-metals.co.jp",
+      "SSL/TLS is not supported on mx.pacific-metals.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf01.canonet.ne.jp include:spf10.canonet.ne.jp ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf01.canonet.ne.jp",
+          "record": "v=spf1 ip4:210.134.164.0/28 ip4:210.134.165.0/24 ip4:210.134.166.0/25 ip4:210.134.168.0/24 ip4:210.134.169.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.134.164.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.165.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.166.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.168.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.169.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf10.canonet.ne.jp",
+          "record": "v=spf1 ip4:150.27.10.0/24 ip4:124.24.48.147 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "150.27.10.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.24.48.147",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

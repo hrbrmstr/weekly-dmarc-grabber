@@ -1,0 +1,60 @@
+{
+  "domain": "agc.com",
+  "base_domain": "agc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.agc.com",
+      "ns1.agc.com",
+      "ns4.ntt-webbp.com",
+      "ns3.ntt-webbp.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none ; rua=mailto:agc-ml.dmarcreport@agc.com; ruf=mailto:agc-ml.dmarcreport@agc.com",
+    "valid": false,
+    "location": "agc.com",
+    "error": "Tag p must have one of the following values: none,quarantine,reject - not none "
+  }
+}
