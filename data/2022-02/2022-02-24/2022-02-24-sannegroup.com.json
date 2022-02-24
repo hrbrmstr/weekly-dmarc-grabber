@@ -1,0 +1,106 @@
+{
+  "domain": "sannegroup.com",
+  "base_domain": "sannegroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.phase8.net",
+      "ns1.phase8.net",
+      "ns0.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "193.7.206.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [
+          "193.7.206.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "193.7.206.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "193.7.206.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@sannegroup.com",
+    "valid": true,
+    "location": "sannegroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@sannegroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

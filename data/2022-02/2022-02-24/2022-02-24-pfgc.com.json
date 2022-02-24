@@ -1,0 +1,107 @@
+{
+  "domain": "pfgc.com",
+  "base_domain": "pfgc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pfgns2.pfgc.com",
+      "pfgns1.pfgc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc1981-4.iphmx.com",
+        "addresses": [
+          "216.71.150.113",
+          "216.71.150.114",
+          "216.71.154.191",
+          "216.71.154.192"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc1981-4.iphmx.com",
+        "addresses": [
+          "216.71.150.113",
+          "216.71.150.114",
+          "216.71.154.191",
+          "216.71.154.192"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc1981-4.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1981-4.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:PFGDMARCReports@pfgc.com",
+    "valid": true,
+    "location": "pfgc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "PFGDMARCReports@pfgc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

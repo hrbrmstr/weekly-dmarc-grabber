@@ -1,0 +1,112 @@
+{
+  "domain": "bp.com",
+  "base_domain": "bp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.p08.dynect.net",
+      "ns0226.secondary.cloudflare.com",
+      "ns0065.secondary.cloudflare.com",
+      "ns4.p08.dynect.net",
+      "ns3.p08.dynect.net",
+      "ns2.p08.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.10.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on bp-com.mail.protection.outlook.com",
+      "Hostname bp-com.mail.protection.outlook.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; sp=none; rua=mailto:a0605431@inbox.ondmarc.com; ruf=mailto:a0605431@inbox.ondmarc.com; adkim=r; aspf=r; fo=0; rf=afrf; ri=3600",
+    "valid": true,
+    "location": "bp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0605431@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0605431@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      }
+    }
+  }
+}

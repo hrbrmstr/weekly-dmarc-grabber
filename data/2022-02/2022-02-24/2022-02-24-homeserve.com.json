@@ -1,0 +1,138 @@
+{
+  "domain": "homeserve.com",
+  "base_domain": "homeserve.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.phase8.net",
+      "ns1.phase8.net",
+      "ns0.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.200",
+          "195.245.230.201",
+          "195.245.230.202",
+          "195.245.231.69",
+          "195.245.231.72",
+          "195.245.231.75",
+          "85.158.142.210",
+          "85.158.142.214",
+          "85.158.142.215"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.eu.messagelabs.com",
+        "addresses": [
+          "34.253.63.114",
+          "46.137.95.199"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster5.eu.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster5a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; fo=1; ri=3600; rua=mailto:4f7037d3@inbox.ondmarc.com,mailto:dmarc@homeserve.com,mailto:rua.homeserve@emailauth.co.uk; ruf=mailto:4f7037d3@inbox.ondmarc.com,mailto:ruf.homeserve@emailauth.co.uk;",
+    "valid": true,
+    "location": "homeserve.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "4f7037d3@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@homeserve.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "rua.homeserve@emailauth.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "4f7037d3@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ruf.homeserve@emailauth.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

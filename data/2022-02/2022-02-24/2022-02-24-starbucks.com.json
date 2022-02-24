@@ -1,0 +1,133 @@
+{
+  "domain": "starbucks.com",
+  "base_domain": "starbucks.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx1.starbucks.iphmx.com",
+        "addresses": [
+          "216.71.145.149",
+          "216.71.153.134",
+          "216.71.153.140",
+          "216.71.153.232",
+          "216.71.154.37",
+          "216.71.154.41",
+          "216.71.155.186",
+          "68.232.141.201",
+          "68.232.141.202",
+          "68.232.143.94",
+          "68.232.143.95",
+          "68.232.145.77"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "mx2.starbucks.iphmx.com",
+        "addresses": [
+          "216.71.145.149",
+          "216.71.153.134",
+          "216.71.153.140",
+          "216.71.153.232",
+          "216.71.154.37",
+          "216.71.154.41",
+          "216.71.155.186",
+          "68.232.141.201",
+          "68.232.141.202",
+          "68.232.143.94",
+          "68.232.143.95",
+          "68.232.145.77"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.starbucks.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.starbucks.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; ri=3600; rua=mailto:aggrep@starbucks.com; ruf=mailto:authfail@starbucks.com;",
+    "valid": true,
+    "location": "starbucks.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aggrep@starbucks.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "authfail@starbucks.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "domain": "smth.jp",
+  "base_domain": "smth.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a20-65.akam.net",
+      "a1-105.akam.net",
+      "a5-66.akam.net",
+      "a9-64.akam.net",
+      "a8-67.akam.net",
+      "a10-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:61.200.25.128/26 +ip4:59.128.86.0/24 +ip4:106.186.216.0/26 +ip4:219.127.134.0/26 +ip4:113.157.255.0/24 +ip4:106.184.64.0/24 +ip4:101.110.36.32/27 include:spf.messagelabs.com +ip4:18.178.36.149 +ip4:18.182.157.138 +ip4:52.155.113.159 +ip4:52.155.114.14 +ip4:40.81.182.20 ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "61.200.25.128/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "59.128.86.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "106.186.216.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "219.127.134.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "113.157.255.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "106.184.64.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "101.110.36.32/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "18.178.36.149",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "18.182.157.138",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.155.113.159",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.155.114.14",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.81.182.20",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-rua@report.securemx.jp",
+    "valid": true,
+    "location": "smth.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@report.securemx.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

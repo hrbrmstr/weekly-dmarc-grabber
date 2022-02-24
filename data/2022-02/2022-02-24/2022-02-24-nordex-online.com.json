@@ -1,0 +1,52 @@
+{
+  "domain": "nordex-online.com",
+  "base_domain": "nordex-online.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "m.sec-ns.de",
+      "n.sec-ns.net",
+      "a.sec-ns.net",
+      "c.sec-ns.de",
+      "a.prim-ns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgate15.nordex-online.com",
+        "addresses": [
+          "195.179.65.115"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgate11.nordex-online.com",
+        "addresses": [
+          "195.179.65.111"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgate15.nordex-online.com",
+      "SSL/TLS is not supported on mailgate11.nordex-online.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

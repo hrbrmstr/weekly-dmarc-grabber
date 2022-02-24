@@ -1,0 +1,53 @@
+{
+  "domain": "888.com",
+  "base_domain": "888.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "sdns52.ultradns.biz",
+      "sdns52.ultradns.org",
+      "sdns52.ultradns.net",
+      "sdns52.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "smtpdub.888holdings.com",
+        "addresses": [
+          "217.147.127.113"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 9,
+        "hostname": "smtp.888holdings.com",
+        "addresses": [
+          "139.138.37.116",
+          "216.71.139.17"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on smtpdub.888holdings.com",
+      "SSL/TLS is not supported on smtpdub.888holdings.com",
+      "smtp.888holdings.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp.888holdings.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "domain": "unitika.co.jp",
+  "base_domain": "unitika.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns103-4.sg1.ecl.ntt.com",
+      "dns103-1.jp1.ecl.ntt.com",
+      "dns103-2.uk1.ecl.ntt.com",
+      "dns103-3.us1.ecl.ntt.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "unitika-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on unitika-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +mx include:spf.mail-cp.com include:spf.smktg.jp ip4:54.65.103.117 ip4:218.251.118.177 include:spf.protection.outlook.com include:spf.satorimail.net ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

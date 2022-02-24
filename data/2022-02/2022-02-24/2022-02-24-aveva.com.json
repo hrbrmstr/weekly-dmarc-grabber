@@ -1,0 +1,121 @@
+{
+  "domain": "aveva.com",
+  "base_domain": "aveva.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns6.ultradns.co.uk",
+      "pdns5.ultradns.info",
+      "pdns4.ultradns.org",
+      "pdns3.ultradns.org",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc1632-22.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.106",
+          "68.232.151.173",
+          "68.232.159.18",
+          "68.232.159.45"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc1632-22.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.106",
+          "68.232.151.173",
+          "68.232.159.18",
+          "68.232.159.45"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc1632-22.c3s2.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.hc1632-22.c3s2.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "All nameservers failed to answer the query aveva.com. IN TXT: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:aveva@rua.agari.com; ruf=mailto:aveva@ruf.agari.com",
+    "valid": true,
+    "location": "aveva.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aveva@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aveva@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

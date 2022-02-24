@@ -1,0 +1,41 @@
+{
+  "domain": "omron.co.jp",
+  "base_domain": "omron.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-b.iij.ad.jp",
+      "dns-c.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "omron-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on omron-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.securemx.jp include:spf-dr.securemx.jp include:spf.protection.outlook.com include:mktomail.com include:spf.smktg.jp ip4:202.229.47.17 ip4:202.248.238.12 ip4:54.65.236.240 ip4:59.190.130.234 ip4:211.9.124.185 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "domain": "steinhoffinternational.com",
+  "base_domain": "steinhoffinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "titan.is.co.za",
+      "demeter.is.co.za",
+      "jupiter.is.co.za"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 include:za._netblocks.mimecast.com include:_spf-securemail.synaq.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "za._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:41.74.192.0/22 ip4:41.74.200.0/23 ip4:41.74.196.0/22 ip4:41.74.204.0/23 ip4:41.74.206.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "41.74.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.200.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.204.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.206.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-securemail.synaq.com",
+          "record": "v=spf1 ip4:196.37.40.64/26 ip4:196.35.198.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "196.37.40.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "196.35.198.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; pct=100; ri=86400; rua=mailto:info@steinhoffinternational.com",
+    "valid": true,
+    "location": "steinhoffinternational.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "info@steinhoffinternational.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

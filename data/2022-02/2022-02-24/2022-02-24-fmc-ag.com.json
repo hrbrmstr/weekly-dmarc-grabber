@@ -1,0 +1,132 @@
+{
+  "domain": "fmc-ag.com",
+  "base_domain": "fmc-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns17.knipp.net",
+      "ns1.fresenius.de",
+      "ns3.knipp.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mgw4.fresenius.de",
+        "addresses": [
+          "193.41.37.193"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mgw5.fresenius.de",
+        "addresses": [
+          "193.41.37.194"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mgw6.fresenius.de",
+        "addresses": [
+          "193.41.37.74"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mgw7.fresenius.de",
+        "addresses": [
+          "193.41.37.75"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mgw4.fresenius.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mgw5.fresenius.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mgw6.fresenius.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mgw7.fresenius.de: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;ri=3600;rua=mailto:fresenius-se@rua.dmp.cisco.com;ruf=mailto:fresenius-se@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "fmc-ag.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fresenius-se@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fresenius-se@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

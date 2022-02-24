@@ -1,0 +1,52 @@
+{
+  "domain": "yaskawa.co.jp",
+  "base_domain": "yaskawa.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.yaskawa.co.jp",
+      "dns3.odn.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 200,
+        "hostname": "cluster6.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.217",
+          "67.219.247.196",
+          "67.219.250.213"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 400,
+        "hostname": "cluster6a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster6.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster6a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

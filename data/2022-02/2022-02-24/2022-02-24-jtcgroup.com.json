@@ -1,0 +1,120 @@
+{
+  "domain": "jtcgroup.com",
+  "base_domain": "jtcgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "e.itconsult-dns.biz",
+      "b.itconsult-dns.org",
+      "d.itconsult-dns.co.uk",
+      "c.itconsult-dns.je",
+      "a.itconsult-dns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "193.7.206.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [
+          "193.7.206.36",
+          "213.167.81.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "193.7.206.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "193.7.206.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.1 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:049dc1200371489@rep.dmarcanalyzer.com; ruf=mailto:049dc1200371489@for.dmarcanalyzer.com; pct=50; fo=1;",
+    "valid": true,
+    "location": "jtcgroup.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "049dc1200371489@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 50,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
