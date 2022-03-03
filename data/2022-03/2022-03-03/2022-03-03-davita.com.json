@@ -1,0 +1,55 @@
+{
+  "domain": "davita.com",
+  "base_domain": "davita.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-cloud-d1.googledomains.com",
+      "ns-cloud-d2.googledomains.com",
+      "ns-cloud-d3.googledomains.com",
+      "ns-cloud-d4.googledomains.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.davita.iphmx.com",
+        "addresses": [
+          "68.232.131.33",
+          "68.232.137.70"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.davita.iphmx.com",
+        "addresses": [
+          "68.232.131.33",
+          "68.232.137.70"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.davita.iphmx.com",
+      "SSL/TLS is not supported on mx2.davita.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.davita.iphmx.com include:icpbounce.com include:cmail1.com include:mktomail.com include:mta1.bayt.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

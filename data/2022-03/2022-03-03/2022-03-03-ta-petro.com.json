@@ -1,0 +1,236 @@
+{
+  "domain": "ta-petro.com",
+  "base_domain": "ta-petro.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns15.dnsmadeeasy.com",
+      "ns14.dnsmadeeasy.com",
+      "ns13.dnsmadeeasy.com",
+      "ns12.dnsmadeeasy.com",
+      "ns11.dnsmadeeasy.com",
+      "ns10.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-00250e01.pphosted.com",
+        "addresses": [
+          "148.163.149.193"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-00250e01.pphosted.com",
+        "addresses": [
+          "148.163.153.191"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-00250e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-00250e01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:65.161.33.0/24 ip4:209.190.189.160/27 ip4:24.142.138.210 ip4:206.210.87.52 include:spf-00250e01.pphosted.com include:_spf.q4press.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 ip4:209.190.189.160/27 ip4:24.142.138.210 ip4:206.210.87.52 include:spf-00250e01.pphosted.com include:_spf.q4press.com ~all"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "65.161.33.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.190.189.160/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "24.142.138.210",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "206.210.87.52",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00250e01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.149.193 ip4:148.163.153.191",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.149.193",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.153.191",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.q4press.com",
+          "record": "v=spf1 a:web.q4press.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "13.57.137.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.142.131",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.163.18",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.240.21",
+                "mechanism": "a"
+              },
+              {
+                "value": "168.245.55.252",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.208.74.172",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.223.8.0",
+                "mechanism": "a"
+              },
+              {
+                "value": "35.168.82.240",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.23.113.139",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.55.39.176",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.177.118.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.208.86.47",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "ta-petro.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

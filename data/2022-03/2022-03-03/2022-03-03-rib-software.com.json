@@ -1,0 +1,106 @@
+{
+  "domain": "rib-software.com",
+  "base_domain": "rib-software.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.rib.de",
+      "ns2.delink.de",
+      "ns4.delink.de",
+      "ns3.delink.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ribsoftware-com0i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.1.36",
+          "104.47.2.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "ribsoftware-com0i.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx a:er-mail.erecruiter.net ip4:91.203.200.74 ip4:91.203.203.243 ip4:93.159.111.52 ip4:80.243.52.13 ip4:62.225.167.14 ip4:62.225.166.12 ip4:194.156.197.31 include:sendgrid.net include:projectcentre.net include:spf.emailsignatures365.com include:spf.protection.outlook.com include:_spf.atlassian.net ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:postmaster@rib-software.com; ruf=mailto:postmaster@rib-software.com; fo=0; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400",
+    "valid": true,
+    "location": "rib-software.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@rib-software.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@rib-software.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
