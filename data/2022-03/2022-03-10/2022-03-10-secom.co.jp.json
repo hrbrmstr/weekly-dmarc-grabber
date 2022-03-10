@@ -1,0 +1,68 @@
+{
+  "domain": "secom.co.jp",
+  "base_domain": "secom.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a14-66.akam.net",
+      "a3-64.akam.net",
+      "ns05.secomtrust.net",
+      "ns02.secomtrust.net",
+      "a28-66.akam.net",
+      "a13-64.akam.net",
+      "a1-129.akam.net",
+      "a26-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 67.219.246.208 is mail690.messagelabs.com, but the A/AAAA DNS records for mail690.messagelabs.com do not resolve to 67.219.246.208",
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "cluster1a.us.messagelabs.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:61.114.178.240/28 ip4:61.114.178.96/27 ip4:61.114.183.144/29 ip4:61.114.177.16/28 ip4:210.169.218.128/26 ip4:121.50.58.0/27 ip4:121.50.58.64/26 ip4:180.233.135.0/27 ip4:165.100.120.0/24 include:spfmcs.biglobe.ne.jp include:spfmd.biglobe.ne.jp include:_spf.secomtrust.net include:spf.cnae.jp ip4:165.100.242.64/26 include:_spf1.secomtrust.net ip4:61.114.191.206 ip4:61.114.191.207 ip4:165.100.1.144/29 ip4:165.100.114.224 ip4:165.100.1.48/29 ip4:165.100.114.160 ip4:121.50.58.32/27 ip4:165.100.119.64/26 ip4:165.100.238.192/27 include:amazonses.com include:mail.zendesk.com include:spf.protection.outlook.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

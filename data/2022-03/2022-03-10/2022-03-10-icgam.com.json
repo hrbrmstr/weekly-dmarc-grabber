@@ -1,0 +1,122 @@
+{
+  "domain": "icgam.com",
+  "base_domain": "icgam.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.eurodns.com",
+      "ns3.eurodns.com",
+      "ns2.eurodns.com",
+      "ns1.eurodns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.201 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 195.130.217.201",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.211 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 195.130.217.211",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:54.240.50.159 ip4:87.241.36.226 ip4:213.136.59.124 include:_netblocks.mimecast.com include:_spf.atlassian.net ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:12de7ae80f88070@rep.dmarcanalyzer.com; ruf=mailto:12de7ae80f88070@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "icgam.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "12de7ae80f88070@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "12de7ae80f88070@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

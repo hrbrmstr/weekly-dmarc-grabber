@@ -1,0 +1,140 @@
+{
+  "domain": "ugicorp.com",
+  "base_domain": "ugicorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns39.domaincontrol.com",
+      "ns40.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-0024bf01.pphosted.com",
+        "addresses": [
+          "148.163.149.144"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-0024bf01.pphosted.com",
+        "addresses": [
+          "148.163.153.143"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-0024bf01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-0024bf01.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:smtp.ugicorp.com ip4:64.95.144.196 ip4:162.247.216.0/22 ip4:192.30.205.55 ip4:192.30.204.55 ip4:216.162.32.70 ip4:216.162.32.71 include:spf-0024bf01.pphosted.com  include:_spf.salesforce.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "148.163.149.144",
+          "mechanism": "a"
+        },
+        {
+          "value": "148.163.153.143",
+          "mechanism": "a"
+        },
+        {
+          "value": "64.95.144.196",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.247.216.0/22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.30.205.55",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.30.204.55",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.162.32.70",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.162.32.71",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0024bf01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.153.143 ip4:148.163.149.144",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.153.143",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.149.144",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

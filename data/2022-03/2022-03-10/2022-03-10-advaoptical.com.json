@@ -1,0 +1,169 @@
+{
+  "domain": "advaoptical.com",
+  "base_domain": "advaoptical.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth54.ns.de.uu.net",
+      "auth04.ns.de.uu.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail01.advaoptical.com",
+        "addresses": [
+          "91.217.199.20"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail02.advaoptical.com",
+        "addresses": [
+          "91.137.0.20"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail01.advaoptical.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mail02.advaoptical.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:gateway-3.inoc.com a:gateway-4.inoc.com ip4:104.41.226.221 ip4:40.70.147.12 include:_spf.salesforce.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail01.advaoptical.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail02.advaoptical.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "208.70.84.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "208.70.85.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "104.41.226.221",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.70.147.12",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "advaoptical.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "domain": "lamresearch.com",
+  "base_domain": "lamresearch.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-07.azure-dns.info",
+      "ns3-07.azure-dns.org",
+      "ns2-07.azure-dns.net",
+      "ns1-07.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "lamresearch-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.110",
+          "104.47.56.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on lamresearch-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:192.145.25.131 ip4:192.145.25.132 ip4:167.191.247.12 ip4:167.191.247.14 ip4:167.191.240.4 ip4:13.64.185.65 ip4:104.42.108.92 ip4:209.29.150.0/24 ip4:64.73.120.248/29 include:cust-spf.exacttarget.com include:spf.protection.outlook.com include:_spf.salesforce.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc.rua@lamresearch.com; ruf=mailto:dmarc.ruf@lamresearch.com",
+    "valid": true,
+    "location": "lamresearch.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.rua@lamresearch.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.ruf@lamresearch.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

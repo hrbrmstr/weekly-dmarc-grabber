@@ -1,0 +1,345 @@
+{
+  "domain": "mhi.co.jp",
+  "base_domain": "mhi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mhins.mhi.co.jp",
+      "dns-a.iij.ad.jp",
+      "kobens.mhi.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster1.us.messagelabs.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.mhi.co.jp include:spf2.mhi.co.jp include:spf3.mhi.co.jp include:spf4.mhi.co.jp include:spf5.mhi.co.jp include:spf.messagelabs.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.mhi.co.jp",
+          "record": "v=spf1 ip4:202.32.46.0/24 ip4:210.199.211.192/26 ip4:202.237.114.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "202.32.46.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.199.211.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.237.114.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.mhi.co.jp",
+          "record": "v=spf1 ip4:222.146.255.87/32 ip4:61.122.226.112/29 ip4:118.103.32.114/32 ip4:104.46.232.87/32 ip4:155.56.221.12/30 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "222.146.255.87/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.122.226.112/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.103.32.114/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.46.232.87/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.12/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf3.mhi.co.jp",
+          "record": "v=spf1 ip4:113.52.156.132/32 ip4:202.221.223.224/29 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "113.52.156.132/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.221.223.224/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf4.mhi.co.jp",
+          "record": "v=spf1 ip4:210.133.253.74/32 ip4:210.133.253.75/32 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.133.253.74/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.133.253.75/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf5.mhi.co.jp",
+          "record": "v=spf1 ip4:220.152.124.36/32 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "220.152.124.36/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; aspf=r; pct=100; rua=mailto:dmarc-rua@mhi.com",
+    "valid": true,
+    "location": "mhi.co.jp",
+    "warnings": [
+      "mhi.com does not indicate that it accepts DMARC reports about mhi.co.jp - Authorization record not found: mhi.co.jp._report._dmarc.mhi.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": "mailto:dmarc-rua@mhi.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

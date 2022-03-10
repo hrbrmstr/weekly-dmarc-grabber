@@ -1,0 +1,44 @@
+{
+  "domain": "alcoa.com",
+  "base_domain": "alcoa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns1.ultradns.org",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.net",
+      "edns1.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.51",
+          "3.93.93.52",
+          "3.93.93.53"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.us.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:142.79.177.0/24 ip4:142.79.179.0/24 ip4:32.66.32.107/32 ip4:32.66.32.108/30 include:spf.protection.outlook.com include:_spf.fireeyecloud.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

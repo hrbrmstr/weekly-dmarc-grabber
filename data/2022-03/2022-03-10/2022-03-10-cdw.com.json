@@ -1,0 +1,116 @@
+{
+  "domain": "cdw.com",
+  "base_domain": "cdw.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-66.akam.net",
+      "a11-65.akam.net",
+      "a12-67.akam.net",
+      "a22-65.akam.net",
+      "a2-66.akam.net",
+      "a1-183.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00220401.gslb.pphosted.com",
+        "addresses": [
+          "148.163.148.249"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00220401.gslb.pphosted.com",
+        "addresses": [
+          "148.163.152.249"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00220401.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00220401.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.qualtrics.com include:spf.mandrillapp.com include:spf-00220401.pphosted.com include:service-now.com include:6894268.spf04.hubspotemail.net include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "cdw.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

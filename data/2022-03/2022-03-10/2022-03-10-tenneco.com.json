@@ -1,0 +1,44 @@
+{
+  "domain": "tenneco.com",
+  "base_domain": "tenneco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.federalmogul.com",
+      "ns3.federalmogul.com",
+      "ns024.tenneco.com",
+      "ns023.tenneco.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "tenneco-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on tenneco-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:170.64.254.15 ip4:170.64.216.201 ip4:170.64.216.203 ip4:170.64.254.32 include:spf.protection.outlook.com include:spf-ext-a.tenneco.com include:spf-ext-b.tenneco.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

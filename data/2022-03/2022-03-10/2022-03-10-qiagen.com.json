@@ -1,0 +1,105 @@
+{
+  "domain": "qiagen.com",
+  "base_domain": "qiagen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5-2.qiagen.com",
+      "ns5-1.qiagen.com",
+      "ns4-1.qiagen.com",
+      "ns5.qiagen.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "qiagen-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.5.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on qiagen-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:91.226.248.0/23 ip4:62.180.227.160/27 ip4:74.123.88.0/22 ip4:149.72.148.111 ip4:18.196.215.67 ip4:103.229.216.142 ip4:31.210.63.14 ip4:112.140.39.30 ip4:54.240.54.239 ip4:54.240.54.240 ip4:54.240.54.241 include:spf.protection.outlook.com include:_trustedips1.eloqua.com include:_trustedips2.eloqua.com include:spf.mailjet.com include:_spf.salesforce.com include:email.prnewswire.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarc_agg@vali.email; ruf=mailto:ruf.dmarc@qiagen.com; fo=1",
+    "valid": true,
+    "location": "qiagen.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ruf.dmarc@qiagen.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

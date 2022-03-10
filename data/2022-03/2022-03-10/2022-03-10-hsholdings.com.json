@@ -1,0 +1,184 @@
+{
+  "domain": "hsholdings.com",
+  "base_domain": "hsholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1489.awsdns-58.org",
+      "ns-1787.awsdns-31.co.uk",
+      "ns-728.awsdns-27.net",
+      "ns-125.awsdns-15.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-006f6401.gslb.pphosted.com",
+        "addresses": [
+          "205.220.185.60"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-006f6401.gslb.pphosted.com",
+        "addresses": [
+          "205.220.185.60"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-006f6401.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-006f6401.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-006f6401.pphosted.com ip4:84.43.99.77 include:spf.eqs-externaladdress.com -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "spf.eqs-externaladdress.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "84.43.99.77",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-006f6401.pphosted.com",
+          "record": "v=spf1 ip4:205.220.185.60 ip4:143.55.144.12",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.185.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.55.144.12",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.eqs-externaladdress.com",
+          "record": "v=spf1 ip4:212.18.1.50 ip4:212.18.21.82 mx -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.1.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.21.82",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "spf.eqs-externaladdress.com does not have any MX records"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; rua=mailto:hsholdings-t@dmarc.report-uri.com; ruf=mailto:hsholdings-t@dmarc.report-uri.com; rf=afrf; pct=100; ri=86400",
+    "valid": true,
+    "location": "hsholdings.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "hsholdings-t@dmarc.report-uri.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "hsholdings-t@dmarc.report-uri.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

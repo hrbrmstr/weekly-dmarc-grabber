@@ -1,0 +1,101 @@
+{
+  "domain": "o-i.com",
+  "base_domain": "o-i.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-east.cerf.net",
+      "ns-west.cerf.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "oi-com0c.mail.protection.outlook.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on oi-com0c.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spf.o-i.com include:spf.datainterconnect.co.uk -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-ar@o-i.com; ruf=mailto:dmarc-fr@o-i.com",
+    "valid": true,
+    "location": "o-i.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ar@o-i.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-fr@o-i.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

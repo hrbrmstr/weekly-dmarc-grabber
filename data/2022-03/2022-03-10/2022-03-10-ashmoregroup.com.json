@@ -1,0 +1,259 @@
+{
+  "domain": "ashmoregroup.com",
+  "base_domain": "ashmoregroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 mx a:www.ashmoregroup.com a:mail2.ashmoregroup.com include:spf.messagelabs.com include:aspmx.pardot.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "cluster8.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster8a.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "54.247.79.157",
+          "mechanism": "a"
+        },
+        {
+          "value": "213.32.225.82",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:dmarc_rua@ashmoregroup.com",
+    "valid": true,
+    "location": "ashmoregroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@ashmoregroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

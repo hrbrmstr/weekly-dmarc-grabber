@@ -1,0 +1,95 @@
+{
+  "domain": "dana.com",
+  "base_domain": "dana.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.f5cloudservices.com",
+      "ns1.f5cloudservices.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 ip4:162.74.0.0/16 include:spf.protection.outlook.com ?ip4:64.238.211.94 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@emailfraudprotect.email,mailto:dmarc.reporting@dana.com; ruf=mailto:dmarc.reporting@dana.com",
+    "valid": true,
+    "location": "dana.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@emailfraudprotect.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reporting@dana.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reporting@dana.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "domain": "greggs.co.uk",
+  "base_domain": "greggs.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns0.star.co.uk",
+      "dns1.star.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "greggs-co-uk.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.20.36",
+          "104.47.21.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on greggs-co-uk.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ipv4:62.232.14.62 ipv4:62.232.18.30 include:eu._netblocks.mimecast.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "greggs.co.uk: Expected end_of_statement or mechanism at position 7 in: v=spf1 ipv4:62.232.14.62 ipv4:62.232.18.30 include:eu._netblocks.mimecast.com include:spf.protection.outlook.com -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:greggs-alerts@jumpsec.com",
+    "valid": true,
+    "location": "greggs.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "greggs-alerts@jumpsec.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

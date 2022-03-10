@@ -1,0 +1,129 @@
+{
+  "domain": "informa.com",
+  "base_domain": "informa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.safenames.com",
+      "dns2.safenames.net",
+      "dns3.safenames.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 205.139.110.141 is us-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-1.mimecast.com do not resolve to 205.139.110.141",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 205.139.110.221 is us-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-1.mimecast.com do not resolve to 205.139.110.221",
+      "SSL/TLS is not supported on us-smtp-inbound-1.mimecast.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 207.211.30.221 is us-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-1.mimecast.com do not resolve to 207.211.30.221",
+      "SSL/TLS is not supported on us-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:msgfocus.com include:us._netblocks.mimecast.com include:eu._netblocks.mimecast.com include:amazonses.com include:_spf.salesforce.com ip4:79.125.113.76/32 include:sendgrid.net ip4:52.17.204.38 ip4:198.245.93.103 ip4:5.79.14.152 ip4:52.19.108.181 ip4:34.252.12.130 ip4:54.154.148.112/32 ip4:54.72.222.84/32 ip4:141.145.10.172 ip4:52.191.236.195 ip4:52.6.112.187 ip4:52.208.33.50 ip4:212.58.25.52 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:1e775110e977985@rep.dmarcanalyzer.com; ruf=mailto:1e775110e977985@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "informa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1e775110e977985@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1e775110e977985@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

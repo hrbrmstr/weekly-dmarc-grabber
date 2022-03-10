@@ -1,0 +1,162 @@
+{
+  "domain": "americanexpress.com",
+  "base_domain": "americanexpress.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a8-64.akam.net",
+      "a24-67.akam.net",
+      "a22-66.akam.net",
+      "a13-65.akam.net",
+      "a1-196.akam.net",
+      "a9-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-0023b801.pphosted.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-0023b801.pphosted.com",
+        "addresses": [
+          "148.163.153.108"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "mx0a-0023b801.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-0023b801.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:63.241.217.23 ip4:74.125.149.0/24 ip4:74.125.150.0/24 ip4:66.119.44.14 ip4:66.119.44.13 ip4:66.244.67.0/24 ip4:199.3.18.4 ip4:148.173.88.0/26 ip4:148.173.96.128/26 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "63.241.217.23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "74.125.149.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "74.125.150.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.119.44.14",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.119.44.13",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.244.67.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.3.18.4",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.173.88.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.173.96.128/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;fo=1;rua=mailto:dmarc_agg@auth.returnpath.net;ruf=mailto:dmarc_afrf@auth.returnpath.net",
+    "valid": true,
+    "location": "americanexpress.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

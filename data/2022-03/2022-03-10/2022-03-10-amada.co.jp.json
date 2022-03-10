@@ -1,0 +1,150 @@
+{
+  "domain": "amada.co.jp",
+  "base_domain": "amada.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-926.awsdns-51.net",
+      "ns-1479.awsdns-56.org",
+      "ns-1637.awsdns-12.co.uk",
+      "ns-327.awsdns-40.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "173.194.205.26",
+          "2607:f8b0:400d:c0d::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2800:3f0:4003:c00::1a",
+          "64.233.186.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.27",
+          "2a00:1450:400b:c00::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1b",
+          "64.233.184.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "142.250.27.27",
+          "2a00:1450:4025:401::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "2800:3f0:4003:c00::1a does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.google.com include:aspmx.pardot.com include:spf.mta.hdems.com include:mdegg.maildealer.jp ip4:220.110.251.128/26 ip4:203.138.56.41 ip4:203.138.56.23 ip4:150.11.233.201 ip4:218.45.193.146 ip4:52.68.19.88 ip4:54.238.195.12 ip4:52.69.14.206 ip4:122.216.58.6 ip4:153.120.112.189 ip4:218.45.235.109 ip4:18.182.254.203 ip4:18.182.180.181 ip4:54.238.137.39 ip4:125.252.89.192/26 ip4:223.27.116.0/22 ip4:202.241.206.0/25 ip4:52.193.147.238 ip4:52.196.188.235 ip4:54.150.236.85 ip4:54.95.152.168 ip4:52.199.234.159 ip4:35.73.203.251 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;ruf=mailto:admin+dmarc_ruf@amada.co.jp;rua=mailto:admin+dmarc_rua@amada.co.jp;pct=100",
+    "valid": true,
+    "location": "amada.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin+dmarc_ruf@amada.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin+dmarc_rua@amada.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

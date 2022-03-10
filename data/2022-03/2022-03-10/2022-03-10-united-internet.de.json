@@ -1,0 +1,115 @@
+{
+  "domain": "united-internet.de",
+  "base_domain": "united-internet.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ui.ui-dns.biz",
+      "ns-ui.ui-dns.de",
+      "ns-ui.ui-dns.org",
+      "ns-ui.ui-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxint01.1and1.com",
+        "addresses": [
+          "212.227.126.206",
+          "212.227.17.16"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxint02.1and1.com",
+        "addresses": [
+          "212.227.126.207",
+          "212.227.17.17"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxint01.1and1.com",
+      "SSL/TLS is not supported on mxint02.1and1.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;sp=quarantine;pct=100;adkim=r;aspf=r;rua=mailto:7f750aff40@rua.easydmarc.eu;ruf=mailto:7f750aff40@ruf.easydmarc.eu;fo=1",
+    "valid": true,
+    "location": "united-internet.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "7f750aff40@rua.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "7f750aff40@ruf.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

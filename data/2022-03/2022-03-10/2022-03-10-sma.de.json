@@ -1,0 +1,96 @@
+{
+  "domain": "sma.de",
+  "base_domain": "sma.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.eurodns.com",
+      "ns2.eurodns.com",
+      "ns3.eurodns.com",
+      "ns4.eurodns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "sma-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.5.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on sma-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:62.157.91.9 ip4:76.14.140.26 ip4:62.157.182.115 ip4:54.240.4.4 ip4:194.176.121.23 ip4:82.135.58.65 ip4:82.135.58.28 a:mailout.sma.de include:_spf.salesforce.com include:mailing.eqs.com include:aspmx.pardot.com include:spf.protection.outlook.com include:spf.formdesk.com include:amazonses.com include:successfactors.eu ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email; fo=1;",
+    "valid": true,
+    "location": "sma.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

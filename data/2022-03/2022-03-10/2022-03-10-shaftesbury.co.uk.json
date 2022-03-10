@@ -1,0 +1,59 @@
+{
+  "domain": "shaftesbury.co.uk",
+  "base_domain": "shaftesbury.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns03.netcom.co.uk",
+      "ns02.netcom.co.uk",
+      "ns01.netcom.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.201 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.201",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.201 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 91.220.42.201",
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a +mx +ip4:185.53.59.71 +ip4:185.53.59.69 +ip4:217.72.171.73 +ip4:80.169.51.66 +ip4:130.0.82.140 +include:spf.protection.outlook.com +include:eu._netblocks.mimecast.com +include:spf.exclaimer.net ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

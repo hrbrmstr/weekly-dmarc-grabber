@@ -1,0 +1,143 @@
+{
+  "domain": "packagingcorp.com",
+  "base_domain": "packagingcorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns15.dnsmadeeasy.com",
+      "ns14.dnsmadeeasy.com",
+      "ns13.dnsmadeeasy.com",
+      "ns12.dnsmadeeasy.com",
+      "ns11.dnsmadeeasy.com",
+      "ns10.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 205.139.110.141 is us-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for us-smtp-inbound-2.mimecast.com do not resolve to 205.139.110.141",
+      "SSL/TLS is not supported on us-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on us-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:198.140.128.88 ip4:198.140.128.89 include:us._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "198.140.128.88",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.140.128.89",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "us._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:207.211.31.0/25 ip4:205.139.110.0/24 ip4:216.205.24.0/24 ip4:170.10.129.0/24 ip4:63.128.21.0/24 ip4:170.10.133.0/24 ip4:185.58.84.93/32 ip4:207.211.41.113/32 ip4:207.211.30.64/26 ip4:207.211.30.128/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "207.211.31.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.139.110.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.205.24.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.129.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.128.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.133.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.84.93/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.41.113/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.30.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.30.128/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

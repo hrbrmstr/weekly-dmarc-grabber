@@ -1,0 +1,498 @@
+{
+  "domain": "uhsinc.com",
+  "base_domain": "uhsinc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dbru.br.ns.els-gms.att.net",
+      "cmtu.mt.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "pod1.uhsinc.com",
+        "addresses": [
+          "205.220.165.151"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pod2.uhsinc.com",
+        "addresses": [
+          "205.220.177.151"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "pod1.uhsinc.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pod2.uhsinc.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-00117601.pphosted.com ip4:12.3.32.64 ip4:12.3.32.69 ip4:166.78.90.5 include:spf.constantcontact.com include:spf.cernerasp.com include:_spf.salesforce.com include:uhsinfo.com include:servers.mcsv.net ip4:216.187.65.178 ip4:216.187.65.179 ip4:168.75.50.130 ip4:168.75.50.131 ip4:40.84.28.29 ip4:75.78.105.153 ip4:75.78.105.151 ip4:75.78.176.152 ip4:75.78.176.153 include:sendgrid.net include:spfa.navexglobal.com ~all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "12.3.32.64",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.3.32.69",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "166.78.90.5",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.187.65.178",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.187.65.179",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "168.75.50.130",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "168.75.50.131",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.84.28.29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "75.78.105.153",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "75.78.105.151",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "75.78.176.152",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "75.78.176.153",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00117601.pphosted.com",
+          "record": "v=spf1 ip4:205.220.177.151 ip4:205.220.165.151",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.177.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.151",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.constantcontact.com",
+          "record": "v=spf1 ip4:208.75.120.0/22 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "208.75.120.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.cernerasp.com",
+          "record": "v=spf1 ip4:159.140.4.35 ip4:159.140.4.36 ip4:159.140.6.3 ip4:159.140.6.4 ip4:159.140.193.46 ip4:159.140.194.44 ip4:159.140.193.58 ip4:159.140.194.74 ip4:159.140.80.76 ip4:159.140.160.178 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "159.140.4.35",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.4.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.6.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.6.4",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.193.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.194.44",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.193.58",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.194.74",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.80.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.140.160.178",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "uhsinfo.com",
+          "record": "v=spf1 ip4:12.3.34.90 ip4:12.3.34.92 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "12.3.34.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.3.34.92",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "sendgrid.net",
+          "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.89.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.117.48.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.31.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.37.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.21.0.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.254.112.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.72.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.183.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "ab.sendgrid.net",
+                "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "223.165.113.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.115.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.118.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.120.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfa.navexglobal.com",
+          "record": "v=spf1 ip4:74.202.152.238 ip4:67.202.192.116 ip4:213.212.95.118 ip4:63.148.132.103 ip4:63.148.132.104 ip4:50.204.138.77 ip4:69.164.111.176 ip4:149.137.213.25 ip4:149.137.209.225 ip4:131.226.194.26 ip4:104.235.7.133",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "74.202.152.238",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.202.192.116",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.212.95.118",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.148.132.103",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.148.132.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.204.138.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.164.111.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.137.213.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.137.209.225",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "131.226.194.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.235.7.133",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "uhsinc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

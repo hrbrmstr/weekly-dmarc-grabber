@@ -1,0 +1,159 @@
+{
+  "domain": "tokuyama.co.jp",
+  "base_domain": "tokuyama.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns03.absonne.com",
+      "ns02.absonne.com",
+      "ns01.absonne.com",
+      "ns04.absonne.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "tokuyama.in.tmems-jp.trendmicro.com",
+        "addresses": [
+          "18.176.203.131",
+          "18.176.203.132",
+          "18.176.203.133"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on tokuyama.in.tmems-jp.trendmicro.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.tmes.trendmicro.com +ip4:103.28.165.197 ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "103.28.165.197",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.tmes.trendmicro.com",
+          "record": "v=spf1 ip4:18.208.22.64/26 ip4:18.208.22.128/25 ip4:18.185.115.128/26 ip4:18.185.115.0/25 ip4:13.238.202.0/25 ip4:13.238.202.128/26 ip4:18.176.203.128/25 ip4:13.213.174.128/25 ip4:18.177.156.0/25 ip4:13.213.220.0/25 include:spfb.tmes.trendmicro.com ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "18.208.22.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.208.22.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.213.174.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.177.156.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.213.220.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfb.tmes.trendmicro.com",
+                "record": "v=spf1 ip4:18.188.9.192/26 ip4:18.188.239.128/26 ip4:34.253.238.128/26 ip4:34.253.238.192/26 ip4:52.202.71.114 ip4:54.145.52.119 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "18.188.9.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.188.239.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.202.71.114",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.145.52.119",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

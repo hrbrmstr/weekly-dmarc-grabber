@@ -1,0 +1,95 @@
+{
+  "domain": "mec.co.jp",
+  "base_domain": "mec.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.mec.co.jp",
+      "ns1.mec.co.jp",
+      "ns4.mec.co.jp",
+      "ns2.mec.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mec-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mec-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:54.191.122.97 +ip4:52.40.63.9 +ip4:202.34.151.0/24 +ip4:106.187.104.0/27 +ip4:211.0.140.192/26 +a include:smp.ne.jp include:spf.list-finder.jp include:spf.protection.outlook.com include:spf.mta.hdems.com mx include:bmsend.com +ip4:203.137.166.58 +ip4:61.206.34.0/25 include:amazonses.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:resiclub@mec.co.jp",
+    "valid": true,
+    "location": "mec.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "resiclub@mec.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

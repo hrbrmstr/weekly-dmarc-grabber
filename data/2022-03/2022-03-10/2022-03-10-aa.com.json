@@ -1,0 +1,128 @@
+{
+  "domain": "aa.com",
+  "base_domain": "aa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usw2.akam.net",
+      "asia2.akam.net",
+      "ns1-118.akam.net",
+      "ns1-149.akam.net",
+      "asia3.akam.net",
+      "eur5.akam.net",
+      "eur6.akam.net",
+      "asia4.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-0032eb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.178.6"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-0032eb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.166.6"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0032eb01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-0032eb01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:169.55.103.7 ip4:169.55.103.8 ip4:23.103.224.0/19 ip4:206.191.224.0/19 ip4:40.103.0.0/16 ip4:169.44.200.37 ip4:169.44.200.38 ip4:136.147.176.0/20 ip4:13.111.0.0/18 ip4:70.42.227.151 ip4:70.42.227.152 ip4:146.20.91.152 ip4:146.20.91.153 ip4:66.48.80.132 ip4:204.232.172.40 ip4:161.47.34.7 ip4:108.166.43.0/24 ip4:173.203.2.22 ip4:12.104.201.5 ip4:146.20.91.153 ip4:146.20.91.152 ip4:91.198.224.29/32 ip4:194.37.255.29/32 include:spf.protection.outlook.com include:spf.aa.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.500 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; fo=1; ri=3600; rua=mailto:american@rua.agari.com,mailto:dmarc@aa.com; ruf=mailto:american@ruf.agari.com,mailto:dmarc@aa.com",
+    "valid": true,
+    "location": "aa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "american@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@aa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "american@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@aa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}
