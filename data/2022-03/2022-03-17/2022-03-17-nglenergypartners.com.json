@@ -1,0 +1,250 @@
+{
+  "domain": "nglenergypartners.com",
+  "base_domain": "nglenergypartners.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "carmelo.ns.cloudflare.com",
+      "noor.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail1.nglep.com",
+        "addresses": [
+          "174.78.65.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mail2.nglep.com",
+        "addresses": [
+          "216.24.132.33"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail1.nglep.com",
+      "SSL/TLS is not supported on mail2.nglep.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:174.78.66.64/27 ip4:174.78.65.32/27 ip4:64.207.226.216/29 ip4:38.109.142.64/27 ip4:216.24.132.144/29 ip4:216.24.132.32/29 ip4:209.177.160.0/20 include:us._netblocks.mimecast.com include:spf.protection.outlook.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail1.nglep.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail2.nglep.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "174.78.66.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "174.78.65.32/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "64.207.226.216/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "38.109.142.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.24.132.144/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.24.132.32/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.177.160.0/20",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "us._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:207.211.31.0/25 ip4:205.139.110.0/24 ip4:216.205.24.0/24 ip4:170.10.129.0/24 ip4:63.128.21.0/24 ip4:170.10.133.0/24 ip4:185.58.84.93/32 ip4:207.211.41.113/32 ip4:207.211.30.64/26 ip4:207.211.30.128/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "207.211.31.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.139.110.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.205.24.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.129.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.128.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.133.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.84.93/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.41.113/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.30.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.211.30.128/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

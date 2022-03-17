@@ -1,0 +1,456 @@
+{
+  "domain": "initse.com",
+  "base_domain": "initse.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.telemaxx.net",
+      "dns.init-ka.de",
+      "ns1.telemaxx.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0.init-ka.de",
+        "addresses": [
+          "85.115.11.148"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "txx-mailrelay01.telemaxx.net",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0.init-ka.de",
+      "The resolution lifetime expired after 2.200 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "STARTTLS is not supported on txx-mailrelay01.telemaxx.net",
+      "SSL/TLS is not supported on txx-mailrelay01.telemaxx.net"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx include:spf.lamapoll.de include:spf.nl2go.com include:spf.de.umantis.com include:mailing.eqs.com -all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "85.115.11.140",
+          "mechanism": "a"
+        },
+        {
+          "value": "mx0.init-ka.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "txx-mailrelay01.telemaxx.net",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.lamapoll.de",
+          "record": "v=spf1 ip4:85.214.186.3 ip4:85.214.175.9 ip4:85.214.175.12 ip4:81.169.197.121 ip4:144.76.219.7 ip4:78.46.229.100 ip4:78.47.87.211 ip4:168.119.138.125 ip4:144.76.93.254 ip4:159.69.79.204 ip4:157.90.6.185 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.214.186.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.214.175.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.214.175.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.169.197.121",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "144.76.219.7",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "78.46.229.100",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "78.47.87.211",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.119.138.125",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "144.76.93.254",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.69.79.204",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "157.90.6.185",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.nl2go.com",
+          "record": "v=spf1 include:spf1.nl2go.com include:spf2.nl2go.com include:spf3.nl2go.com ip4:88.198.181.208/28 ip4:88.198.96.0/27 ip4:178.63.169.208/28 ip4:88.198.249.64/28 ip4:46.4.145.64/28 ip4:178.63.165.160/28 ~all",
+          "dns_lookups": 3,
+          "parsed": {
+            "pass": [
+              {
+                "value": "88.198.181.208/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.198.96.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.63.169.208/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.198.249.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.4.145.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.63.165.160/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf1.nl2go.com",
+                "record": "v=spf1 ip4:78.46.88.157 ip4:62.138.82.64/26 ip4:62.138.86.8/29 ip4:62.138.91.0/29 ip4:62.138.120.184/29 ip4:62.138.121.0/26 ip4:46.4.133.24 ip4:176.9.2.230 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "78.46.88.157",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.82.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.86.8/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.91.0/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.120.184/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.121.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.4.133.24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "176.9.2.230",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf2.nl2go.com",
+                "record": "v=spf1 ip4:46.4.133.19 ip4:62.138.90.192/26 ip4:91.228.144.0/24 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "46.4.133.19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.138.90.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "91.228.144.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf3.nl2go.com",
+                "record": "v=spf1 ip4:185.182.80.48/29 ip4:185.182.80.144/29 ip4:185.182.80.248/29 ip4:185.182.83.240/29 ip4:78.47.39.96/28 ip4:78.46.88.146 ip4:78.46.88.156 ip4:213.239.217.189 ip4:78.46.114.185 ip4:176.9.2.231 ip4:46.4.133.23 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "185.182.80.48/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.182.80.144/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.182.80.248/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.182.83.240/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "78.47.39.96/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "78.46.88.146",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "78.46.88.156",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "213.239.217.189",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "78.46.114.185",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "176.9.2.231",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.4.133.23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.de.umantis.com",
+          "record": "v=spf1 ip4:213.198.99.210 ip4:213.198.99.211 ip4:81.25.202.82 ip4:185.238.12.20 ip4:185.238.12.21 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.198.99.210",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.198.99.211",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.25.202.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:mailadmin@initse.com; adkim=r; aspf=s",
+    "valid": true,
+    "location": "initse.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailadmin@initse.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

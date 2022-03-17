@@ -1,0 +1,115 @@
+{
+  "domain": "healius.com.au",
+  "base_domain": "healius.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-03.azure-dns.info",
+      "ns3-03.azure-dns.org",
+      "ns2-03.azure-dns.net",
+      "ns1-03.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "205.220.184.94"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.126"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0037a201.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0037a201.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0037a201.pphosted.com include:_spf.createsend.com include:servers.mcsv.net include:peoplepulse.com.au include:cmail19.com include:spf.surveymonkey.com include:mktomail.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 17/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 17
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:tluhg83a@ag.ap.dmarcian.com; ruf=mailto:dmarcfr@healius.com.au;",
+    "valid": true,
+    "location": "healius.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tluhg83a@ag.ap.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcfr@healius.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

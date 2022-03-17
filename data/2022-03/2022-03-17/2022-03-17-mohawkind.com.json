@@ -1,0 +1,117 @@
+{
+  "domain": "mohawkind.com",
+  "base_domain": "mohawkind.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns03.mohawkind.com",
+      "ns04.mohawkind.com",
+      "ns05.mohawkind.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3439-97.iphmx.com",
+        "addresses": [
+          "139.138.58.46",
+          "216.71.147.209"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc3439-97.iphmx.com",
+        "addresses": [
+          "139.138.58.46",
+          "216.71.147.209"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc3439-97.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc3439-97.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf_a.mohawkind.com include:cust-spf.exacttarget.com include:spf.mandrillapp.com include:amazonses.com ip4:72.249.24.20 ip4:23.253.197.137 ip4:13.108.0.0/14 ip4:96.43.144.0/20 ip4:136.146.0.0/15 ip4:204.14.232.0/21 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:166e38fc2dd5563@rep.dmarcanalyzer.com;ruf=mailto:166e38fc2dd5563@for.dmarcanalyzer.com;fo=1;",
+    "valid": true,
+    "location": "mohawkind.com",
+    "warnings": [
+      "DMARC record at root of mohawkind.com has no effect"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "166e38fc2dd5563@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "166e38fc2dd5563@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

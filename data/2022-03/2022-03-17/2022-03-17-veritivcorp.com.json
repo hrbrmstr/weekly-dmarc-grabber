@@ -1,0 +1,495 @@
+{
+  "domain": "veritivcorp.com",
+  "base_domain": "veritivcorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002d3901.gslb.pphosted.com",
+        "addresses": [
+          "148.163.151.183"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002d3901.gslb.pphosted.com",
+        "addresses": [
+          "148.163.155.131"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002d3901.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002d3901.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf1.veritivcorp.com include:_spf2.veritivcorp.com include:_spf3.veritivcorp.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf1.veritivcorp.com",
+          "record": "v=spf1 ip4:12.129.97.112/28 ip4:12.129.97.232/29 ip4:64.131.85.0/24 ip4:216.220.38.0/24 ip4:12.130.208.36 ip4:12.130.208.38 ip4:12.129.97.254 include:spf.protection.outlook.com ip4:72.3.160.106 ip4:72.3.160.105 ip4:72.32.141.117 ip4:72.3.160.107 ip4:50.56.23.137 ip4:50.56.23.138 ip4:72.3.160.104 ip4:50.56.23.140 ip4:67.192.1.242 ip4:50.56.23.141 ip4:166.78.229.109 ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "12.129.97.112/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.129.97.232/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.131.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.220.38.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.130.208.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.130.208.38",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.129.97.254",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.160.106",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.160.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.141.117",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.160.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.56.23.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.56.23.138",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.160.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.56.23.140",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.192.1.242",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.56.23.141",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "166.78.229.109",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/48",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spfd.protection.outlook.com",
+                      "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "51.4.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "20.47.149.138/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.4.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0400::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0400::/64",
+                            "mechanism": "ip6"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf2.veritivcorp.com",
+          "record": "v=spf1 ip4:65.50.209.75 ip4:72.32.129.160 ip4:72.32.141.120 ip4:50.56.23.139 ip4:67.192.1.243 ip4:72.32.141.121 ip4:52.1.96.230 ip4:52.5.119.169 ip4:52.20.128.29 ip4:52.20.155.14 ip4:40.71.35.61 include:_spf.salesforce.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "65.50.209.75",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.129.160",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.141.120",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.56.23.139",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.192.1.243",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.141.121",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.1.96.230",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.5.119.169",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.20.128.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.20.155.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.71.35.61",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.salesforce.com",
+                "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spf.mta.salesforce.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf3.veritivcorp.com",
+          "record": "v=spf1 ip4:23.253.137.59 ip4:104.130.123.154 ip4:162.27.43.119 ip4:104.130.122.9 ip4:199.115.76.0/24 ip4:216.74.162.13 ip4:216.74.162.14 ip4:170.204.22.156 ip4:170.204.20.13 include:spf-002d3901.pphosted.com include:emfluence.alight.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.253.137.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.123.154",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.27.43.119",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.122.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.115.76.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.13",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.204.22.156",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.204.20.13",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-002d3901.pphosted.com",
+                "record": "v=spf1 ip4:148.163.155.131 ip4:148.163.151.183",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "148.163.155.131",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.151.183",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "emfluence.alight.com",
+                "record": "v=spf1 ip4:208.74.99.118/31 ip4:208.74.99.86/32 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "208.74.99.118/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.74.99.86/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "veritivcorp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

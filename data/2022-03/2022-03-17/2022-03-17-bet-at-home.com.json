@@ -1,0 +1,117 @@
+{
+  "domain": "bet-at-home.com",
+  "base_domain": "bet-at-home.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns6.ultradns.co.uk",
+      "pdns5.ultradns.info",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns4.ultradns.org",
+      "pdns3.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bet-at-home.com",
+        "addresses": [
+          "185.91.3.2"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mail2.bet-at-home.com",
+        "addresses": [
+          "185.91.3.3"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.bet-at-home.com",
+      "SSL/TLS is not supported on mail2.bet-at-home.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:80.243.162.160/27 ip4:80.243.175.192/26 ip4:185.91.0.0/22 include:emarsys.net include:emsmtp.com include:mailing.eqs.com include:comm100.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 15/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 15
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; adkim=s; aspf=r; rua=mailto:dmarc-feedback@bet-at-home.com; ruf=mailto:dmarc-forensic@bet-at-home.com; rf=afrf; pct=100;",
+    "valid": true,
+    "location": "bet-at-home.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-feedback@bet-at-home.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensic@bet-at-home.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

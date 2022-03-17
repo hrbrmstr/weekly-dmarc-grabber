@@ -1,0 +1,367 @@
+{
+  "domain": "edwardjones.com",
+  "base_domain": "edwardjones.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nspgdns-1.edwardjones.com",
+      "tspgdns-1.edwardjones.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00355d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.196"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "napasmss-1.edwardjones.com",
+        "addresses": [
+          "167.80.136.76"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "tapasmss-1.edwardjones.com",
+        "addresses": [
+          "167.80.104.76"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mxb-00355d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.196"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "napsmgs-2.edwardjones.com",
+        "addresses": [
+          "167.80.137.14"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "tapsmgs-2.edwardjones.com",
+        "addresses": [
+          "167.80.105.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "napsmgs-1.edwardjones.com",
+        "addresses": [
+          "167.80.136.189"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "tapsmgs-1.edwardjones.com",
+        "addresses": [
+          "167.80.104.189"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00355d01.gslb.pphosted.com",
+      "SSL/TLS is not supported on napasmss-1.edwardjones.com",
+      "tapasmss-1.edwardjones.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on mxb-00355d01.gslb.pphosted.com",
+      "SSL/TLS is not supported on napsmgs-2.edwardjones.com",
+      "tapsmgs-2.edwardjones.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on napsmgs-1.edwardjones.com",
+      "SSL/TLS is not supported on tapsmgs-1.edwardjones.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.edwardjones.com include:mailgun.org include:_spf.acquia.com include:spf-00355d01.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.edwardjones.com",
+          "record": "v=spf1 ip4:167.80.0.0/16 ip4:205.220.177.40 ip4:205.220.165.40 ip4:198.21.5.148 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.80.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.177.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.21.5.148",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailgun.org",
+          "record": "v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.mailgun.org",
+                "record": "v=spf1 ip4:209.61.151.0/24 ip4:166.78.68.0/22 ip4:198.61.254.0/23 ip4:192.237.158.0/23 ip4:23.253.182.0/23 ip4:104.130.96.0/28 ip4:146.20.113.0/24 ip4:146.20.191.0/24 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:104.130.122.0/23 ip4:146.20.112.0/26 ip4:161.38.192.0/20 ip4:143.55.224.0/21 ip4:143.55.232.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "209.61.151.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "166.78.68.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.61.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.237.158.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.253.182.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.130.96.0/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.113.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.191.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.72.32.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.130.122.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.112.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.192.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.224.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.232.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.eu.mailgun.org",
+                "record": "v=spf1 ip4:141.193.32.0/23 ip4:159.135.140.80/29 ip4:159.135.132.128/25 ip4:161.38.204.0/22 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ip4:143.55.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "141.193.32.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.140.80/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.132.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.204.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.acquia.com",
+          "record": "v=spf1 ip4:23.253.203.171 ip4:104.130.70.233 ip4:104.130.219.135 ip4:104.130.219.250 ip4:104.130.198.37 ip4:23.253.213.135 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.253.203.171",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.70.233",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.219.135",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.219.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.198.37",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.213.135",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-00355d01.pphosted.com",
+          "record": "v=spf1 ip4:205.220.176.196 ip4:205.220.164.196",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.176.196",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.164.196",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo1;sp=none;pct=100;rua=mailto:mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": false,
+    "location": "edwardjones.com",
+    "error": "Error: Expected end_of_statement or tag_value at position 16 in: v=DMARC1;p=none;fo1;sp=none;pct=100;rua=mailto:mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:mailto:dmarc_ruf@emaildefense.proofpoint.com"
+  }
+}

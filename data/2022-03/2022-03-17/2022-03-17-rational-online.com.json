@@ -1,0 +1,106 @@
+{
+  "domain": "rational-online.com",
+  "base_domain": "rational-online.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-02.azure-dns.info",
+      "ns3-02.azure-dns.org",
+      "ns2-02.azure-dns.net",
+      "ns1-02.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "rationalonline-com02b.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.1.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "rationalonline-com02b.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx a:mail.rational-online.com ip4:20.52.32.68 ip4:185.101.112.0/24 include:spf.protection.outlook.com include:_spf.senders.dc.aeb.com include:spf.dnsentries.co.uk include:cust-spf.exacttarget.com include:spf1.rational-online.com ip4:208.86.201.91 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 16/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 16
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:re+xjhvuksjulv@dmarc.postmarkapp.com;ruf=mailto:abuse@rational-online.com;adkim=s;aspf=s",
+    "valid": true,
+    "location": "rational-online.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "re+xjhvuksjulv@dmarc.postmarkapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "abuse@rational-online.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

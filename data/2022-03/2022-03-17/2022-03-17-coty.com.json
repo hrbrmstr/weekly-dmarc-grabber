@@ -1,0 +1,106 @@
+{
+  "domain": "coty.com",
+  "base_domain": "coty.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.q4press.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.q4press.com",
+          "record": "v=spf1 a:web.q4press.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "13.57.137.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.142.131",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.163.18",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.72.240.21",
+                "mechanism": "a"
+              },
+              {
+                "value": "168.245.55.252",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.208.74.172",
+                "mechanism": "a"
+              },
+              {
+                "value": "3.223.8.0",
+                "mechanism": "a"
+              },
+              {
+                "value": "35.168.82.240",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.23.113.139",
+                "mechanism": "a"
+              },
+              {
+                "value": "52.55.39.176",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.177.118.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "54.208.86.47",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

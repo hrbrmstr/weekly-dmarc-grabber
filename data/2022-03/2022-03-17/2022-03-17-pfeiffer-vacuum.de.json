@@ -1,0 +1,283 @@
+{
+  "domain": "pfeiffer-vacuum.de",
+  "base_domain": "pfeiffer-vacuum.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.pfeiffer-vacuum.com",
+        "addresses": [
+          "87.190.28.215"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail3.pfeiffer-vacuum.com",
+        "addresses": [
+          "96.70.194.150"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.pfeiffer-vacuum.com: Connection timed out",
+      "mail3.pfeiffer-vacuum.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mx01.sylphen.com a:mx02.sylphen.com include:spfa.myconvento.com include:recruitmail.com include:spf.mailjet.com include:mailing.eqs.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [
+      "Duplicate include: spf.mailjet.com"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail1.pfeiffer-vacuum.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail3.pfeiffer-vacuum.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "62.27.36.38",
+          "mechanism": "a"
+        },
+        {
+          "value": "62.27.44.217",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spfa.myconvento.com",
+          "record": "v=spf1 ip4:46.20.47.88 ip4:46.20.47.90 ip4:46.20.47.91 ip4:46.20.47.92 ip4:46.20.47.93 ip4:46.20.47.94 ip4:85.14.241.66 ip4:85.14.241.67 ip4:85.14.241.68 ip4:85.14.241.69 ip4:85.14.241.70 ip4:5.199.141.69",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "46.20.47.88",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.199.141.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "recruitmail.com",
+          "record": "v=spf1 include:spf.recruitmail.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.recruitmail.com",
+                "record": "v=spf1 ip4:62.209.53.67 ip4:54.223.134.154 ip4:35.176.151.182 ip4:18.196.215.67 ip4:54.240.54.239 ip4:54.240.54.240 ip4:18.185.17.157 ip4:54.240.54.241 ip4:52.64.7.146 ip4:52.60.100.50 ip4:35.157.251.219 ip4:35.163.118.175 ip4:13.251.240.232 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "62.209.53.67",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.223.134.154",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.176.151.182",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.196.215.67",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.54.239",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.54.240",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.185.17.157",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.54.241",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.64.7.146",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.60.100.50",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.157.251.219",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.163.118.175",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.251.240.232",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mailjet.com",
+          "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "87.253.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.189.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.211.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.250.236.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": [
+            "Duplicate include: spf.mailjet.com"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "domain": "varta-ag.com",
+  "base_domain": "varta-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth02.ns.td-fn.net",
+      "auth01.ns.td-fn.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cust74139-1.in.mailcontrol.com",
+        "addresses": [
+          "85.115.56.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cust74139-2.in.mailcontrol.com",
+        "addresses": [
+          "85.115.58.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cust74139-1.in.mailcontrol.com: Connection timed out",
+      "SSL/TLS is not supported on cust74139-2.in.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:134.119.225.210/32 ip4:185.98.184.0/24 ip4:80.82.206.0/26 include:mailcontrol.com include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "134.119.225.210/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.98.184.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "80.82.206.0/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "mailcontrol.com",
+          "record": "v=spf1 ip4:85.115.32.0/19 ip4:86.111.216.0/21 ip4:116.50.56.0/21 ip4:208.87.232.0/21 ip4:196.216.238.0/23 ip4:192.151.176.0/20 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.115.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "86.111.216.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "116.50.56.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.87.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "196.216.238.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.151.176.0/20",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

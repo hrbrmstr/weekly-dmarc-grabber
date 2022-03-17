@@ -1,0 +1,149 @@
+{
+  "domain": "unitedrentals.com",
+  "base_domain": "unitedrentals.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "rmtu.mt.rs.els-gms.att.net",
+      "dbru.br.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mx1.hc3869-10.iphmx.com",
+        "addresses": [
+          "139.138.34.90",
+          "207.54.92.222"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc3869-10.iphmx.com",
+        "addresses": [
+          "139.138.34.90",
+          "207.54.92.222"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.hc3869-10.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.hc3869-10.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:esa.hc3869-10.iphmx.com -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "139.138.34.90",
+          "mechanism": "a"
+        },
+        {
+          "value": "139.138.34.92",
+          "mechanism": "a"
+        },
+        {
+          "value": "207.54.92.222",
+          "mechanism": "a"
+        },
+        {
+          "value": "207.54.92.223",
+          "mechanism": "a"
+        },
+        {
+          "value": "216.71.145.177",
+          "mechanism": "a"
+        },
+        {
+          "value": "216.71.147.178",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:united-rentals@rua.dmp.cisco.com; ruf=mailto:united-rentals@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "unitedrentals.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "united-rentals@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "united-rentals@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

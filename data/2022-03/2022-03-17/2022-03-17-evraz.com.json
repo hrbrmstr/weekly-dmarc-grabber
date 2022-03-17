@@ -1,0 +1,109 @@
+{
+  "domain": "evraz.com",
+  "base_domain": "evraz.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.evraz.com",
+      "ns2.evraz.com",
+      "ns1.evraz.com",
+      "dnsmaster.evraz.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 15,
+        "hostname": "mx1.hc46826.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.196",
+          "68.232.156.130"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 15,
+        "hostname": "mx2.hc46826.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.196",
+          "68.232.156.130"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc46826.c3s2.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)",
+      "mx2.hc46826.c3s2.iphmx.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +mx +ip4:194.85.178.0/24 +ip4:212.243.120.0/24 +ip4:40.127.172.228 +ip4:40.118.1.172 +ip4:89.253.226.184 +ip4:89.253.231.229 +ip4:95.163.211.28 +ip4:95.163.212.168 +ip4:95.163.208.187 -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.hc46826.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.hc46826.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "194.85.178.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.243.120.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.127.172.228",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.118.1.172",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "89.253.226.184",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "89.253.231.229",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "95.163.211.28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "95.163.212.168",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "95.163.208.187",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
