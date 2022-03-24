@@ -1,0 +1,327 @@
+{
+  "domain": "verizon.com",
+  "base_domain": "verizon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.edgecastdns.net",
+      "s2ns2.verizon.com",
+      "ns2.edgecastdns.net",
+      "s3ns3.verizon.com",
+      "s1ns1.verizon.com",
+      "ns4.edgecastdns.net",
+      "s4ns4.verizon.com",
+      "ns1.edgecastdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 15,
+        "hostname": "mxa-0024a201.gslb.pphosted.com",
+        "addresses": [
+          "148.163.153.92"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 15,
+        "hostname": "mxb-0024a201.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.93"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0024a201.gslb.pphosted.com",
+      "mxb-0024a201.gslb.pphosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:verizonwireless.com include:spf.ecrm.verizon.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "verizonwireless.com",
+          "record": "v=spf1 ip4:137.188.0.0/16 ip4:63.27.6.0/24 include:spf-0024a201.pphosted.com include:spf.verizonwireless.com include:spf.intl.verizon.com ~all",
+          "dns_lookups": 3,
+          "parsed": {
+            "pass": [
+              {
+                "value": "137.188.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.27.6.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-0024a201.pphosted.com",
+                "record": "v=spf1 ip4:148.163.149.93 ip4:148.163.153.92 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "148.163.149.93",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.153.92",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.verizonwireless.com",
+                "record": "v=spf1 ip4:162.115.0.0/16 ip4:140.108.26.0/24 ip4:199.249.25.0/24 ip4:69.78.0.0/16 ip4:66.174.0.0/16 ip4:199.74.155.0 ip4:206.127.27.11 ip4:204.93.64.116/30 ip4:204.93.80.116/30 ip4:204.93.95.57 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "162.115.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "140.108.26.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.249.25.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.78.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.174.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.74.155.0",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "206.127.27.11",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.93.64.116/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.93.80.116/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.93.95.57",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.intl.verizon.com",
+                "record": "v=spf1 ip4:193.131.254.22 ip4:62.191.128.210 ip4:146.188.97.43 ip4:146.188.102.26 ip4:146.188.102.27 ip4:202.130.139.21 ip4:202.95.98.237 ip4:203.166.79.21 ip4:203.166.79.23 ip4:203.166.79.24",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "193.131.254.22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.191.128.210",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.188.97.43",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.188.102.26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.188.102.27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.130.139.21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.95.98.237",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.166.79.21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.166.79.23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.166.79.24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.ecrm.verizon.com",
+          "record": "v=spf1 ip4:140.108.1.0/24 ip4:140.108.22.0/26 ip4:192.76.84.0/24 ip4:198.23.5.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "140.108.1.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.108.22.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.76.84.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.23.5.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net; rf=afrf; pct=100",
+    "valid": true,
+    "location": "verizon.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

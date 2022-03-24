@@ -1,0 +1,148 @@
+{
+  "domain": "de.bertrandt.com",
+  "base_domain": "bertrandt.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "heimdall1.bertrandt.com",
+        "addresses": [
+          "195.78.249.7"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "heimdall2.bertrandt.com",
+        "addresses": [
+          "195.78.249.8"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "heimdall1.bertrandt.com: Connection timed out",
+      "SSL/TLS is not supported on heimdall2.bertrandt.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:195.78.249.0/24 ip4:188.40.218.57 ip4:94.130.172.182 ip4:194.156.135.1 ip4:46.183.40.230 mx ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "195.78.249.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "188.40.218.57",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "94.130.172.182",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.156.135.1",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "46.183.40.230",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "heimdall1.bertrandt.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "heimdall2.bertrandt.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc.rua@bertrandt.com; ruf=mailto:dmarc.ruf@bertrandt.com",
+    "valid": true,
+    "location": "bertrandt.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.rua@bertrandt.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.ruf@bertrandt.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

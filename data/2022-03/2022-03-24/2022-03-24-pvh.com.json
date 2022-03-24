@@ -1,0 +1,211 @@
+{
+  "domain": "pvh.com",
+  "base_domain": "pvh.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ha3.markmonitor.zone",
+      "ha1.markmonitor.zone",
+      "ha2.markmonitor.zone",
+      "ha4.markmonitor.zone"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.pvh.iphmx.com",
+        "addresses": [
+          "207.54.86.20",
+          "216.71.143.29",
+          "68.232.131.158",
+          "68.232.137.22",
+          "68.232.137.30",
+          "68.232.141.76"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.pvh.iphmx.com",
+        "addresses": [
+          "207.54.86.20",
+          "216.71.143.29",
+          "68.232.131.158",
+          "68.232.137.22",
+          "68.232.137.30",
+          "68.232.141.76"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.pvh.iphmx.com: Connection timed out",
+      "mx2.pvh.iphmx.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:198.212.213.0/24 ip4:198.212.214.0/24 ip4:12.144.58.208/28 ip4:203.208.204.144/28 ip4:12.169.67.114/29 ip4:113.28.154.64/27 ip4:209.9.144.64/27 a:mx1.pvh.iphmx.com a:mx2.pvh.iphmx.com include:res.cisco.com ?all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.pvh.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.pvh.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "151.101.130.197",
+          "mechanism": "a"
+        },
+        {
+          "value": "151.101.194.197",
+          "mechanism": "a"
+        },
+        {
+          "value": "151.101.2.197",
+          "mechanism": "a"
+        },
+        {
+          "value": "151.101.66.197",
+          "mechanism": "a"
+        },
+        {
+          "value": "198.212.213.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.212.214.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.144.58.208/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.208.204.144/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.169.67.114/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "113.28.154.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.9.144.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "207.54.86.20",
+          "mechanism": "a"
+        },
+        {
+          "value": "216.71.143.29",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.131.158",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.137.22",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.137.30",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.141.76",
+          "mechanism": "a"
+        },
+        {
+          "value": "207.54.86.20",
+          "mechanism": "a"
+        },
+        {
+          "value": "216.71.143.29",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.131.158",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.137.22",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.137.30",
+          "mechanism": "a"
+        },
+        {
+          "value": "68.232.141.76",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "res.cisco.com",
+          "record": "v=spf1 mx:res.cisco.com exists:%{i}.spf.res.cisco.com -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "esa1.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa2.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa3.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "esa4.cres.iphmx.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "%{i}.spf.res.cisco.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

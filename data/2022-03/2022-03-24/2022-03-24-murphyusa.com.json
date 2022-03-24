@@ -1,0 +1,93 @@
+{
+  "domain": "murphyusa.com",
+  "base_domain": "murphyusa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2-07.azure-dns.net",
+      "ns1-07.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "murphyusa-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.110",
+          "104.47.57.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on murphyusa-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:208.86.168.7 ip4:135.84.68.123 ip4:206.152.14.54 ip:199.77.200.5 include:spf.protection.outlook.com include:spf.constantcontact.com include:_spf.ultipro.com include:cust-spf.exacttarget.com include:_spf.salesforce.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "murphyusa.com: Expected mechanism at position 60 in: v=spf1 ip4:208.86.168.7 ip4:135.84.68.123 ip4:206.152.14.54 ip:199.77.200.5 include:spf.protection.outlook.com include:spf.constantcontact.com include:_spf.ultipro.com include:cust-spf.exacttarget.com include:_spf.salesforce.com -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc@murphyusa.com",
+    "valid": true,
+    "location": "murphyusa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@murphyusa.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

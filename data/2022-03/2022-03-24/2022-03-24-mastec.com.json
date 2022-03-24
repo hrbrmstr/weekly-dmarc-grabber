@@ -1,0 +1,663 @@
+{
+  "domain": "mastec.com",
+  "base_domain": "mastec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1138.awsdns-14.org",
+      "ns-1897.awsdns-45.co.uk",
+      "ns-669.awsdns-19.net",
+      "ns-135.awsdns-16.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001ea102.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.158"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001ea102.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.158"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-001ea102.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-001ea102.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.mastec.com include:spf2.mastec.com include:spf3.mastec.com  include:spf4.mastec.com include:spf5.mastec.com include:spf6.mastec.com include:spf7.mastec.com include:spf8.mastec.com include:spf9.mastec.com  include:spf10.mastec.com -all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.mastec.com",
+          "record": "v=spf1 ip4:129.157.0.6 ip4:129.91.56.6 ip4:129.91.8.6 ip4:160.34.204.6 ip4:160.34.220.6 ip4:160.34.236.6 ip4:160.34.252.6 ip4:160.34.64.6 ip4:160.34.74.6 ip4:68.233.77.14 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "129.157.0.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.56.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.8.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.204.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.220.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.236.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.252.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.64.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.74.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.14",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.mastec.com",
+          "record": "v=spf1 ip4:63.160.171.196 ip4:38.72.101.129/29 ip4:38.80.165.8/29 ip4:38.80.165.16/29 ip4:192.254.121.248 ip4:148.163.154.96 ip4:148.163.150.158 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "63.160.171.196",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.72.101.129/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.80.165.8/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.80.165.16/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.254.121.248",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.154.96",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.150.158",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf3.mastec.com",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf4.mastec.com",
+          "record": "v=spf1 ip4:208.75.120.0/22 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "208.75.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.96.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.82.172.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf5.mastec.com",
+          "record": "v=spf1 ip4:23.21.109.212 ip4:23.21.109.197 ip4:52.49.201.246 ip4:52.49.235.189 ip4:54.172.84.90 ip4:147.160.167.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.21.109.212",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.21.109.197",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.201.246",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.235.189",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.172.84.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.160.167.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf6.mastec.com",
+          "record": "v=spf1 ip4:129.157.0.10 ip4:129.91.56.10 ip4:129.91.8.10 ip4:160.34.204.10 ip4:160.34.220.10 ip4:160.34.236.10 ip4:160.34.252.10 ip4:160.34.64.10 ip4:160.34.74.10 ip4:68.233.77.16 ip4:68.233.69.16 ip4:141.145.4.10 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "129.157.0.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.56.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.8.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.204.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.220.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.236.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.252.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.64.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.74.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.69.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.145.4.10",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf7.mastec.com",
+          "record": "v=spf1 ip4:129.157.0.14 ip4:129.91.56.14 ip4:129.91.8.14 ip4:160.34.204.14 ip4:160.34.220.14 ip4:160.34.236.14 ip4:160.34.252.14 ip4:160.34.64.14 ip4:160.34.74.14 ip4:68.233.69.18 ip4:68.233.77.18 ip4:141.145.4.14 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "129.157.0.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.56.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.8.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.204.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.220.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.236.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.252.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.64.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.74.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.69.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.145.4.14",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf8.mastec.com",
+          "record": "v=spf1 ip4:129.157.0.16 ip4:129.91.56.16 ip4:129.91.8.16 ip4:160.34.204.16 ip4:160.34.220.16 ip4:160.34.236.16 ip4:160.34.252.16 ip4:160.34.64.16 ip4:160.34.74.16 ip4:68.233.69.21 ip4:68.233.77.20 ip4:141.145.4.16 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "129.157.0.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.56.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.8.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.204.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.220.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.236.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.252.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.64.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.74.16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.69.21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.145.4.16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf9.mastec.com",
+          "record": "v=spf1 ip4:68.233.76.14 ip4:129.157.0.28 ip4:129.91.56.28 ip4:129.91.8.28 ip4:160.34.204.28 ip4:160.34.220.28 ip4:160.34.236.28 ip4:160.34.252.28 ip4:160.34.64.28 ip4:160.34.74.28 ip4:68.233.68.25 ip4:141.145.4.28 ip4:68.233.76.24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "68.233.76.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.157.0.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.56.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.8.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.204.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.220.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.236.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.252.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.64.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.74.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.68.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.145.4.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.76.24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf10.mastec.com",
+          "record": "v=spf1 ip4:129.157.0.22 ip4:129.157.0.26 ip4:68.233.69.25 ip4:68.233.76.6 ip4:68.233.77.25 ip4:68.233.69.14 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "129.157.0.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.157.0.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.69.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.76.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.69.14",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "mastec.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "domain": "hannover-re.com",
+  "base_domain": "hannover-re.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-856.awsdns-43.net",
+      "ns-216.awsdns-27.com",
+      "ns-1861.awsdns-40.co.uk",
+      "ns-1374.awsdns-43.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "de0mx.hannover-re.com",
+        "addresses": [
+          "194.15.243.181",
+          "194.15.243.182"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "de0mx001.hannover-re.com",
+        "addresses": [
+          "194.15.243.181"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "de0mx002.hannover-re.com",
+        "addresses": [
+          "194.15.243.182"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "mx03.htp-tel.de",
+        "addresses": [
+          "212.59.41.10"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de0mx.hannover-re.com",
+      "SSL/TLS is not supported on de0mx001.hannover-re.com",
+      "SSL/TLS is not supported on de0mx002.hannover-re.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:194.15.243.181/32 ip4:194.15.243.182/32 -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "de0mx.hannover-re.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "de0mx001.hannover-re.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "de0mx002.hannover-re.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx03.htp-tel.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "194.15.243.181/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.15.243.182/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-reports@hannover-re.com; pct=100; fo=1; sp=none;",
+    "valid": true,
+    "location": "hannover-re.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@hannover-re.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

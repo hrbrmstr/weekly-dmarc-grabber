@@ -1,0 +1,177 @@
+{
+  "domain": "parker.com",
+  "base_domain": "parker.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "wall2.parker.com",
+      "wall.parker.com",
+      "cmtu.mt.ns.els-gms.att.net",
+      "cbru.br.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002a1601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.82"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002a1601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.154.20"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail01.parker.com",
+        "addresses": [
+          "148.163.150.82"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail02.parker.com",
+        "addresses": [
+          "148.163.154.20"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-002a1601.gslb.pphosted.com: Connection timed out",
+      "mxb-002a1601.gslb.pphosted.com: Connection timed out",
+      "mail01.parker.com: Connection timed out",
+      "mail02.parker.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail02.parker.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:12.4.26.41 ip4:12.4.26.42 ip4:12.4.26.46 ip4:12.4.26.47 -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mxa-002a1601.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-002a1601.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail01.parker.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail02.parker.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "12.4.26.41",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.4.26.42",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.4.26.46",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.4.26.47",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=quarantine;rua=mailto:DMARC-Reports-Aggregate@parker.com;ruf=mailto:DMARC-Reports-Forensic@parker.com;fo=1;aspf=r;",
+    "valid": true,
+    "location": "parker.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC-Reports-Aggregate@parker.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC-Reports-Forensic@parker.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

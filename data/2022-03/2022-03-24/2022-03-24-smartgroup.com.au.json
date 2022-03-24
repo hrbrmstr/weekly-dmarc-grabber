@@ -1,0 +1,93 @@
+{
+  "domain": "smartgroup.com.au",
+  "base_domain": "smartgroup.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "kallie.ns.cloudflare.com",
+      "ram.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "smartgroup-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smartgroup-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:101.2.168.1 ip4:216.82.241.100/32 ip4:125.7.37.86 ip4:167.89.14.124/32 ip4:167.216.129.90/31 ip4:167.216.129.182/31 ip4:167.216.129.184/29 ip4:167.216.129.192/29 ip4:167.216.129.200/32 ip4:167.216.129.210/32 ip4:64.89.45.192/30 ip4:64.89.45.196/32 ip4:208.46.212.208/31 ip4:203.41.57.145/32 ip4:208.46.212.210/32 ip4:185.72.128.75/32 ip4:185.72.128.76/32 ip4:185.72.128.90/31 ip4:212.25.240.83/32 ip4:212.25.240.84/31 ip4:72.34.168.76/32 ip4:130.61.9.72/32 ip4:130.61.68.235/32 ip4:132.145.13.209/32 ip4:132.145.11.129/32 ip4:152.67.105.195/32 ip4:140.238.193.139/32 ip4:152.67.105.20/32 ip4:72.34.168.86/32 ip4:72.34.168.85/32 ip4:64.89.44.85/32 ip4:54.240.30.12 ip4:54.240.30.13 include:_spf.salesforce.com include:spf.protection.outlook.com include:_spf.createsend.com include:_netblocks.eloqua.com include:spf.mandrillapp.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:qgns8kcz@ag.ap.dmarcian.com;",
+    "valid": true,
+    "location": "smartgroup.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "qgns8kcz@ag.ap.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

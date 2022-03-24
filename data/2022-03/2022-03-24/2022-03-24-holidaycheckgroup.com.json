@@ -1,0 +1,228 @@
+{
+  "domain": "holidaycheckgroup.com",
+  "base_domain": "holidaycheckgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.noris.net",
+      "dns.noris.de",
+      "dns.noris.ch"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail05.hcg.ag",
+        "addresses": [
+          "212.23.252.103"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "mail02.hcg.ag",
+        "addresses": [
+          "212.23.252.114"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail05.hcg.ag: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)",
+      "mail02.hcg.ag: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf1.holidaycheck.com include:mailing.eqs.com -all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [
+      "spf1.holidaycheck.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail05.hcg.ag",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail02.hcg.ag",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.holidaycheck.com",
+          "record": "v=spf1 mx ip4:212.23.252.103 ip4:212.23.252.109 ip4:212.23.252.114 ip4:212.23.252.248 ip4:178.250.9.13 include:spf.mandrillapp.com -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.23.252.103",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.23.252.109",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.23.252.114",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.23.252.248",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.250.9.13",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mandrillapp.com",
+                "record": "v=spf1 ip4:198.2.128.0/24 ip4:198.2.132.0/22 ip4:198.2.136.0/23 ip4:198.2.145.0/24 ip4:198.2.186.0/23 ip4:205.201.131.128/25 ip4:205.201.134.128/25 ip4:205.201.136.0/23 ip4:205.201.139.0/24 ip4:198.2.177.0/24 ip4:198.2.178.0/23 ip4:198.2.180.0/24 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.2.128.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.132.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.136.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.145.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.186.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.201.131.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.201.134.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.201.136.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.201.139.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.177.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.178.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.2.180.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "spf1.holidaycheck.com does not have any MX records"
+          ]
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

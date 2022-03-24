@@ -1,0 +1,57 @@
+{
+  "domain": "nationalstorage.com.au",
+  "base_domain": "nationalstorage.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "christina.ns.cloudflare.com",
+      "alfred.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a +mx ip4:198.61.254.35 ip4:69.72.43.7 ip4:3.222.0.24 ip4:3.222.0.25 ip4:3.222.0.26 ip4:3.222.0.27 +ip4:103.235.116.1 +ip4:103.235.116.4 include:au._netblocks.mimecast.com include:spf.protection.outlook.com include:mailrelay.t1cloud.com include:spf.smtp2go.com include:sendgrid.net include:mailgun.org include:mail.zendesk.com include:mr.surveymonkeyuser.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

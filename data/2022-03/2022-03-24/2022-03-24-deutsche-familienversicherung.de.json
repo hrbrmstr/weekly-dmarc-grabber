@@ -1,0 +1,225 @@
+{
+  "domain": "deutsche-familienversicherung.de",
+  "base_domain": "deutsche-familienversicherung.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.net",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.deutsche-familienversicherung.de",
+        "addresses": [
+          "217.111.79.181"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "217.111.79.181 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mx.deutsche-familienversicherung.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx a:prod-dfvag-01.cust-mailrelay.plusline.net a:mail.dfv.ag a:prod-web.dfv-ag.plusline.de include:spf.dynect.net include:mailing.eqs.com ip4:82.98.67.89 ip4:217.111.79.128/25 ip4:195.182.60.0/24 ip4:212.19.45.181 ip4:212.19.46.25 -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "82.98.110.134",
+          "mechanism": "a"
+        },
+        {
+          "value": "mx.deutsche-familienversicherung.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "2a02:2e0:40d:16:d::11",
+          "mechanism": "a"
+        },
+        {
+          "value": "82.98.67.89",
+          "mechanism": "a"
+        },
+        {
+          "value": "217.111.79.222",
+          "mechanism": "a"
+        },
+        {
+          "value": "212.19.46.35",
+          "mechanism": "a"
+        },
+        {
+          "value": "2a02:2e0:40d:20::1",
+          "mechanism": "a"
+        },
+        {
+          "value": "2a02:2e0:40d:20::2",
+          "mechanism": "a"
+        },
+        {
+          "value": "2a02:2e0:40d:20::3",
+          "mechanism": "a"
+        },
+        {
+          "value": "82.98.67.89",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.111.79.128/25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.182.60.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.19.45.181",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.19.46.25",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.dynect.net",
+          "record": "v=spf1 ip4:208.76.56.0/21 ip4:216.146.32.0/20 ip4:80.231.25.0/24 ip4:80.231.219.0/24 ip4:103.11.200.0/22 ip4:199.19.0.0/21 ip4:204.13.248.0/22 ip4:208.78.68.0/22 ip4:162.88.36.0/23 ip4:162.88.4.0/23 ip4:162.88.24.0/24 ip4:162.88.28.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "208.76.56.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.146.32.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.231.25.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.231.219.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.11.200.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.19.0.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.13.248.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.78.68.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.88.36.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.88.4.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.88.24.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.88.28.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ?all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

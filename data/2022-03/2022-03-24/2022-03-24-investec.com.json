@@ -1,0 +1,56 @@
+{
+  "domain": "investec.com",
+  "base_domain": "investec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-1.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-2.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on za-smtp-inbound-1.mimecast.co.za",
+      "SSL/TLS is not supported on za-smtp-inbound-2.mimecast.co.za"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:196.4.18.127 ip4:196.4.18.128 ip4:196.4.0.229 ip4:196.4.0.238 ip4:129.41.167.75 include:za._netblocks.mimecast.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "domain": "bostonscientific.com",
+  "base_domain": "bostonscientific.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dmtu.mt.ns.els-gms.att.net",
+      "dbru.br.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.bsci.iphmx.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.bsci.iphmx.com",
+        "addresses": [
+          "68.232.146.177",
+          "68.232.148.129"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "mx1.bsci.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.bsci.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.bsci.iphmx.com ip4:204.155.22.71 ip4:204.155.16.159 ip4:70.42.227.151 ip4:70.42.227.152 include:cust-spf.exacttarget.com include:aspmx.pardot.com include:ses.onsolve.net include:spf.qb-feedback.com include:mailgun.org ip4:149.72.83.41 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none",
+    "valid": true,
+    "location": "bostonscientific.com",
+    "warnings": [
+      "DMARC record at root of bostonscientific.com has no effect",
+      "DMARC record at root of bostonscientific.com has no effect",
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

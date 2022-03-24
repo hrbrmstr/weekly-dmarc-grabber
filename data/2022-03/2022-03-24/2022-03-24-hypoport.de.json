@@ -1,0 +1,135 @@
+{
+  "domain": "hypoport.de",
+  "base_domain": "hypoport.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "d.ns14.net",
+      "c.ns14.net",
+      "b.ns14.net",
+      "a.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxes-1.it-hps.de",
+        "addresses": [
+          "62.153.127.130"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxes-2.it-hps.de",
+        "addresses": [
+          "62.153.127.131"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxir-2.it-hps.de",
+        "addresses": [
+          "62.156.146.31"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxir-1.it-hps.de",
+        "addresses": [
+          "62.156.146.30"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxes-1.it-hps.de: Connection timed out",
+      "SSL/TLS is not supported on mxes-2.it-hps.de",
+      "SSL/TLS is not supported on mxir-2.it-hps.de",
+      "SSL/TLS is not supported on mxir-1.it-hps.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:62.153.127.130 ip4:62.153.127.131 ip4:62.156.146.30 ip4:62.156.146.31 a:mxes-1.it-hps.de a:mxes-2.it-hps.de a:mxir-1.it-hps.de a:mxir-2.it-hps.de -all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mxes-1.it-hps.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxes-2.it-hps.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxir-2.it-hps.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxir-1.it-hps.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "62.156.146.1",
+          "mechanism": "a"
+        },
+        {
+          "value": "62.153.127.130",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.153.127.131",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.156.146.30",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.156.146.31",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.153.127.130",
+          "mechanism": "a"
+        },
+        {
+          "value": "62.153.127.131",
+          "mechanism": "a"
+        },
+        {
+          "value": "62.156.146.30",
+          "mechanism": "a"
+        },
+        {
+          "value": "62.156.146.31",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

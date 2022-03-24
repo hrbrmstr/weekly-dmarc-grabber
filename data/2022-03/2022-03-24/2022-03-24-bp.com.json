@@ -1,0 +1,51 @@
+{
+  "domain": "bp.com",
+  "base_domain": "bp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.p08.dynect.net",
+      "ns3.p08.dynect.net",
+      "ns2.p08.dynect.net",
+      "ns1.p08.dynect.net",
+      "ns0226.secondary.cloudflare.com",
+      "ns0065.secondary.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.8.36",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on bp-com.mail.protection.outlook.com",
+      "Hostname bp-com.mail.protection.outlook.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_u.bp.com._spf.smart.ondmarc.com exists:%{i}._spf.mta.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

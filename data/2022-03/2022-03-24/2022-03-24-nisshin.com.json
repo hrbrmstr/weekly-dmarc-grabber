@@ -1,0 +1,375 @@
+{
+  "domain": "nisshin.com",
+  "base_domain": "nisshin.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns07.mesh.ad.jp",
+      "ns06.mesh.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "nisshin-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on nisshin-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.227.102.175 ip4:210.227.102.176 ip4:210.227.102.163 +ip4:160.17.0.0/16 include:aspmx.pardot.com include:spf.protection.outlook.com include:spf.mta.hdems.com include:_spf.cmsod.jp include:saaske.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.227.102.175",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.227.102.176",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.227.102.163",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "160.17.0.0/16",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mta.hdems.com",
+          "record": "v=spf1 ip4:52.199.63.160/28 ip4:52.198.247.240/28 ip4:13.115.104.32/29 ip4:18.179.48.80/29 ip4:3.112.23.16/28 ip4:3.112.23.32/27 ip4:3.113.218.80/28 ip4:18.176.203.64/27 ip4:35.78.62.0/26 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.199.63.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.198.247.240/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.115.104.32/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.179.48.80/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.23.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.23.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.113.218.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.78.62.0/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.cmsod.jp",
+          "record": "v=spf1 ip4:176.32.89.74/32 ip4:13.230.186.132/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "176.32.89.74/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.230.186.132/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "saaske.com",
+          "record": "v=spf1 +ip4:54.64.253.252 +ip4:133.242.18.36 +ip4:52.69.232.85 +ip4:3.112.144.34 +ip4:3.113.123.30 include:mail.zendesk.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.64.253.252",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.242.18.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.69.232.85",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.144.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.113.123.30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "mail.zendesk.com",
+                "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.151.192.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.12.80.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "188.172.128.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.161.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.198.0.0/18",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

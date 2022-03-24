@@ -1,0 +1,470 @@
+{
+  "domain": "newcrest.com.au",
+  "base_domain": "newcrest.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.telstra.net",
+      "ns1.telstra.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-0026b501.pphosted.com",
+        "addresses": [
+          "67.231.144.166"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-0026b501.pphosted.com",
+        "addresses": [
+          "67.231.156.163"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-0026b501.pphosted.com",
+      "SSL/TLS is not supported on mx0b-0026b501.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:_spfa.newcrest.com.au include:_spfb.newcrest.com.au include:_spfc.newcrest.com.au include:spf-0026b501.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spfa.newcrest.com.au",
+          "record": "v=spf1 ip4:41.79.194.255 ip4:203.161.156.205 ip4:191.234.204.22 ip4:122.152.133.242 ip4:210.80.140.142 ip4:210.80.140.141 ip4:119.9.42.41 ip4:59.167.90.213 ip4:203.7.172.0/24 ip4:88.205.100.188/31 ip4:74.217.54.250/31 ip4:167.30.17.2 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "41.79.194.255",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.161.156.205",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "191.234.204.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "122.152.133.242",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.80.140.142",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.80.140.141",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "119.9.42.41",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.167.90.213",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.7.172.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.205.100.188/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.217.54.250/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.30.17.2",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spfb.newcrest.com.au",
+          "record": "v=spf1 ip4:50.204.34.230 ip4:208.76.133.46 ip4:52.64.92.107 ip4:167.89.38.80 ip4:167.89.46.198 ip4:35.189.10.234 ip4:13.210.153.139 ip4:209.52.119.218 include:spf.boreal-is.com -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "50.204.34.230",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.76.133.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.64.92.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.38.80",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.46.198",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.189.10.234",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.210.153.139",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.52.119.218",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.boreal-is.com",
+                "record": "v=spf1 exists:%{i}._spfa.boreal-is.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spfa.boreal-is.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spfc.newcrest.com.au",
+          "record": "v=spf1 ip4:58.162.151.200 ip4:213.9.75.60 ip4:213.9.75.59 ip4:74.213.23.164 ip4:70.42.29.119 ip4:70.42.28.27 ip4:70.42.28.28 ip4:74.121.167.29 ip4:74.121.167.30 ip4:203.7.174.30 include:miraqle.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "58.162.151.200",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.9.75.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.9.75.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.213.23.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.42.29.119",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.42.28.27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.42.28.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.121.167.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.121.167.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.7.174.30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "miraqle.com",
+                "record": "v=spf1 ip4:203.41.57.144 ip4:203.41.57.145 ip4:203.38.232.46 ip4:203.41.57.147 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "203.41.57.144",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.41.57.145",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.38.232.46",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.41.57.147",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-0026b501.pphosted.com",
+          "record": "v=spf1 ip4:67.231.156.163 ip4:67.231.144.166",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.156.163",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.144.166",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "newcrest.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
