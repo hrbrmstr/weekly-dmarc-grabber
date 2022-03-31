@@ -1,0 +1,129 @@
+{
+  "domain": "unum.com",
+  "base_domain": "unum.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1424.awsdns-50.org",
+      "ns-1613.awsdns-09.co.uk",
+      "ns-498.awsdns-62.com",
+      "ns-754.awsdns-30.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.213",
+          "67.219.246.219",
+          "67.219.247.111",
+          "67.219.247.207",
+          "67.219.250.219",
+          "67.219.250.220"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster9.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster9a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-004bf101.pphosted.com include:%{d}.42.spf-protect.agari.com exists:%{i}._i.%{d}._d.espf.agari.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.42.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:unum@rua.agari.com,mailto:rua_reports@unum.com; ruf=mailto:unum@ruf.agari.com,mailto:ruf_reports@unum.com",
+    "valid": true,
+    "location": "unum.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "unum@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "rua_reports@unum.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "unum@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ruf_reports@unum.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

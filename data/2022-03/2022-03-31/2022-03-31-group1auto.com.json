@@ -1,0 +1,120 @@
+{
+  "domain": "group1auto.com",
+  "base_domain": "group1auto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gp1maindns-c.group1auto.com",
+      "gp1maindns-b.group1auto.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent1.group1auto.com",
+        "addresses": [
+          "50.231.25.154"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent2.group1auto.com",
+        "addresses": [
+          "50.231.25.155"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent3.group1auto.com",
+        "addresses": [
+          "50.231.25.156"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent4.group1auto.com",
+        "addresses": [
+          "50.231.25.157"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent1.group1auto.com",
+        "addresses": [
+          "205.251.141.131"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent2.group1auto.com",
+        "addresses": [
+          "205.251.141.132"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent3.group1auto.com",
+        "addresses": [
+          "205.251.141.133"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent4.group1auto.com",
+        "addresses": [
+          "205.251.141.134"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "pp-secure.group1auto.com",
+        "addresses": [
+          "205.251.141.137"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on bsc-ppagent1.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent2.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent3.group1auto.com",
+      "SSL/TLS is not supported on bsc-ppagent4.group1auto.com",
+      "SSL/TLS is not supported on pp-agent1.group1auto.com",
+      "pp-agent2.group1auto.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "SSL/TLS is not supported on pp-agent3.group1auto.com",
+      "SSL/TLS is not supported on pp-agent4.group1auto.com",
+      "SSL/TLS is not supported on pp-secure.group1auto.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:205.251.141.130/26 ip4:50.231.25.129/26 ip4:66.129.126.137 ip4:136.179.128.0/23 ip4:170.76.175.0/24 ip4:207.187.164.0/24 include:_spf.hosting.cdkcrm.com include:mail.zendesk.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.200 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

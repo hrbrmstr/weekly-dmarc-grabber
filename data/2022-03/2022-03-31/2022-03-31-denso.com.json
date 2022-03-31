@@ -1,0 +1,40 @@
+{
+  "domain": "denso.com",
+  "base_domain": "denso.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 ip4:133.192.0.0/16 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "133.192.0.0/16",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:dmarc_agg@vali.email,EXO_O365_DmarcML@jp.denso.com; ruf=mailto:EXO_O365_DmarcML@jp.denso.com; fo=1",
+    "valid": false,
+    "location": "denso.com",
+    "error": "EXO_O365_DmarcML@jp.denso.com is not a valid DMARC report URI"
+  }
+}

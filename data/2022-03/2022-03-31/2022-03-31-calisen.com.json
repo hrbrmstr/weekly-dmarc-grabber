@@ -1,0 +1,41 @@
+{
+  "domain": "calisen.com",
+  "base_domain": "calisen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.bdm.microsoftonline.com",
+      "ns2.bdm.microsoftonline.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "calisen-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.0.36",
+          "104.47.1.36"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "calisen-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

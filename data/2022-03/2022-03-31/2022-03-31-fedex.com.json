@@ -1,0 +1,80 @@
+{
+  "domain": "fedex.com",
+  "base_domain": "fedex.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "kate.fedex.com",
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net",
+      "use5.akam.net",
+      "ns1-244.akam.net",
+      "ns1-193.akam.net",
+      "grace.fedex.com",
+      "land.fedex.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mapper.gslb.fedex.com",
+        "addresses": [
+          "204.135.242.200"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "smtp.dmz.fedex.com",
+        "addresses": [
+          "199.81.193.24",
+          "199.81.193.25",
+          "199.81.193.26",
+          "199.81.193.27",
+          "199.81.193.28",
+          "199.81.193.29",
+          "199.81.193.30",
+          "199.81.193.31",
+          "199.81.193.42",
+          "199.81.193.43",
+          "199.81.193.44",
+          "199.81.193.45",
+          "199.81.199.76",
+          "199.81.199.77",
+          "199.81.199.78",
+          "199.81.199.79",
+          "199.81.199.80",
+          "199.81.199.81",
+          "199.81.199.82",
+          "199.81.199.83",
+          "199.81.199.84",
+          "199.81.199.85",
+          "199.81.199.86"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mapper.gslb.fedex.com: Connection refused",
+      "smtp.dmz.fedex.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=_spf.infosec.fedex.com",
+    "valid": false,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 redirect=_spf.infosec.fedex.com"
+    ],
+    "error": "The resolution lifetime expired after 2.300 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

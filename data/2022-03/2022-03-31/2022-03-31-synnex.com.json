@@ -1,0 +1,77 @@
+{
+  "domain": "synnex.com",
+  "base_domain": "synnex.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.softlayer.com",
+      "ns1.softlayer.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.43",
+          "3.93.93.44",
+          "3.93.93.45"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.43",
+          "3.93.93.44",
+          "3.93.93.45"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.43",
+          "3.93.93.44",
+          "3.93.93.45"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.us.email.fireeyecloud.com",
+        "addresses": [
+          "3.93.93.43",
+          "3.93.93.44",
+          "3.93.93.45"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "primary.us.email.fireeyecloud.com: Connection timed out",
+      "alt1.us.email.fireeyecloud.com: Connection timed out",
+      "SSL/TLS is not supported on alt2.us.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.us.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

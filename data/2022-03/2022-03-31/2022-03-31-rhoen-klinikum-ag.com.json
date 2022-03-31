@@ -1,0 +1,99 @@
+{
+  "domain": "rhoen-klinikum-ag.com",
+  "base_domain": "rhoen-klinikum-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.telekom.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.rhoen-klinikum-ag.com",
+        "addresses": [
+          "194.25.45.9"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.rhoen-klinikum-ag.com",
+        "addresses": [
+          "194.25.45.40"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mforward.dtag.de",
+        "addresses": [
+          "194.25.242.123"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.rhoen-klinikum-ag.com",
+      "mail2.rhoen-klinikum-ag.com: Connection timed out",
+      "mforward.dtag.de: Could not connect:  SMTP error code 450"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx a:e-learning.rhoen-klinikum-ag.com ip4:52.178.135.21 ip4:185.125.237.64 ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "84.16.246.10",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail.rhoen-klinikum-ag.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail2.rhoen-klinikum-ag.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mforward.dtag.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "185.125.237.64",
+          "mechanism": "a"
+        },
+        {
+          "value": "52.178.135.21",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.125.237.64",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

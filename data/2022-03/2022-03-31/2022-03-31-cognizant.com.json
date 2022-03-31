@@ -1,0 +1,106 @@
+{
+  "domain": "cognizant.com",
+  "base_domain": "cognizant.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.cognizant.com",
+      "ns4.cognizant.com",
+      "ns1.cognizant.com",
+      "ns3.cognizant.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "cognizant-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.110.36",
+          "104.47.26.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "104.47.110.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on cognizant-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.b6.spf-protect.agari.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.b6.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; aspf=r; fo=1; pct=100; ri=3600; rua=mailto:cognizant@rua.agari.com; ruf=mailto:cognizant@ruf.agari.com",
+    "valid": true,
+    "location": "cognizant.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cognizant@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "cognizant@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

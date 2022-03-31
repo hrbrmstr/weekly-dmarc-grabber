@@ -1,0 +1,207 @@
+{
+  "domain": "goldmansachs.com",
+  "base_domain": "goldmansachs.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.gs.com",
+      "ns3.gs.com",
+      "ns1.gs360.net",
+      "ns1.goldmansachs.biz",
+      "ns1.goldmansachs.info",
+      "ns4.gs.com",
+      "ns5.gs.com",
+      "ns6.gs.com",
+      "ns7.gs.com",
+      "ns1.gs.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0014b501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.164"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0014b501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0014b501.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0014b501.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx include:_spf.gs.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "204.74.99.100",
+          "mechanism": "a"
+        },
+        {
+          "value": "mxa-0014b501.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-0014b501.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.gs.com",
+          "record": "v=spf1 ip4:199.99.47.104 ip4:204.4.178.104 ip4:199.99.47.107 ip4:207.17.46.128/26 ip4:12.47.208.192/27 include:spf-0014b501.pphosted.com ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.99.47.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.4.178.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.99.47.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.17.46.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.47.208.192/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-0014b501.pphosted.com",
+                "record": "v=spf1 ip4:67.231.156.164 ip4:67.231.148.165",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "67.231.156.164",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.231.148.165",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1",
+    "valid": true,
+    "location": "goldmansachs.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "domain": "hammerson.com",
+  "base_domain": "hammerson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 ip4:14.202.137.28/31 ip4:23.103.128.0/19 ip4:23.103.191.0/24 ip4:23.103.198.0/23 ip4:23.103.200.0/21 ip4:23.103.208.0/21 ip4:27.126.146.0/24 ip4:40.92.0.0/14 ip4:40.107.0.0/16 ip4:50.31.32.0/19 ip4:52.100.0.0/14 ip4:54.72.48.11 ip4:54.77.223.212 ip4:54.240.0.0/18 ip4:62.73.162.65 ip4:62.73.162.66/31 ip4:62.73.162.68/30 ip4:62.73.162.72/31 ip4:62.73.162.74 ip4:62.73.189.146 ip4:64.4.22.64/26 ip4:65.55.88.0/24 ip4:65.55.169.0/24 ip4:70.42.28.28 include:spf1.hammerson.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=50;rua=mailto:postmaster@hammerson.com",
+    "valid": true,
+    "location": "hammerson.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 50,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@hammerson.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

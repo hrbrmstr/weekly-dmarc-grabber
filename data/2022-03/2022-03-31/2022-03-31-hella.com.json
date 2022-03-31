@@ -1,0 +1,142 @@
+{
+  "domain": "hella.com",
+  "base_domain": "hella.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pns.dtag.de",
+      "secondary006.dtag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail4.hella.com",
+        "addresses": [
+          "209.206.38.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mail5.hella.com",
+        "addresses": [
+          "209.206.38.67"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail1.hella.com",
+        "addresses": [
+          "82.210.249.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.hella.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 15,
+        "hostname": "mail6.hella.com",
+        "addresses": [
+          "202.136.208.70"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail3.hella.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail4.hella.com",
+      "SSL/TLS is not supported on mail5.hella.com",
+      "mail1.hella.com: SSL error: [SSL: DH_KEY_TOO_SMALL] dh key too small (_ssl.c:997)",
+      "The domain mail2.hella.com does not exist",
+      "mail2.hella.com: DNS resolution failed",
+      "SSL/TLS is not supported on mail6.hella.com",
+      "The domain mail3.hella.com does not exist",
+      "mail3.hella.com: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:208.185.229.0/24 ip4:208.185.235.0/24 ip4:148.59.108.0/23 ip4:148.59.106.0/23 ip4:82.210.249.14 ip4:82.210.249.15 ip4:202.136.208.69 ip4:202.136.208.70 ip4:209.206.38.65 ip4:209.206.38.67 a:spf.Power365-eu.binarytree.com a:spf.power365.quest.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [
+      "spf.power365-eu.binarytree.com does not have any A/AAAA records",
+      "spf.power365.quest.com does not have any A/AAAA records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "208.185.229.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.185.235.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.59.108.0/23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.59.106.0/23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.210.249.14",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.210.249.15",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.136.208.69",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.136.208.70",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.206.38.65",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.206.38.67",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

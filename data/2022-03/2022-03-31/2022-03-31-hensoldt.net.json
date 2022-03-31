@@ -1,0 +1,71 @@
+{
+  "domain": "hensoldt.net",
+  "base_domain": "hensoldt.net",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "d.ns14.net",
+      "c.ns14.net",
+      "b.ns14.net",
+      "a.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.opt01.net",
+        "addresses": [
+          "185.161.152.136"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx02.opt01.net",
+        "addresses": [
+          "185.161.152.137"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.opt01.net: Connection timed out",
+      "mx02.opt01.net: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx01.opt01.net",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx02.opt01.net",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

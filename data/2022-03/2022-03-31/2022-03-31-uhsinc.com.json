@@ -1,0 +1,112 @@
+{
+  "domain": "uhsinc.com",
+  "base_domain": "uhsinc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dmtu.mt.ns.els-gms.att.net",
+      "dbru.br.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "pod1.uhsinc.com",
+        "addresses": [
+          "205.220.165.151"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pod2.uhsinc.com",
+        "addresses": [
+          "205.220.177.151"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "pod1.uhsinc.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'pod1.uhsinc.com'. (_ssl.c:997)",
+      "pod2.uhsinc.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'pod2.uhsinc.com'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ip4:205.220.177.151 ip4:205.220.165.151 ip4:12.3.34.90 ip4:12.3.34.92 ip4:12.3.32.64 ip4:12.3.32.69 ip4:166.78.90.5 include:spf.constantcontact.com include:spf.cernerasp.com include:_spf.salesforce.com include:servers.mcsv.net ip4:216.187.65.178 ip4:216.187.65.179 ip4:168.75.50.130 ip4:168.75.50.131 ip4:40.84.28.29 ip4:75.78.105.153 ip4:75.78.105.151 ip4:75.78.176.152 ip4:75.78.176.153 include:sendgrid.net include:spfa.navexglobal.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "uhsinc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

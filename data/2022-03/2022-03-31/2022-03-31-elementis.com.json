@@ -1,0 +1,466 @@
+{
+  "domain": "elementis.com",
+  "base_domain": "elementis.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "elementis-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.138",
+          "104.47.59.138"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.elementis.com",
+        "addresses": [
+          "107.1.52.227"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "elementis-com.mail.protection.outlook.com: Connection timed out",
+      "mail.elementis.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:107.1.52.225/28 mx include:spf.protection.outlook.com include:_spf.salesforce.com include:service-now.com include:spf.afas.online ~all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "107.1.52.225/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "elementis-com.mail.protection.outlook.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail.elementis.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "service-now.com",
+          "record": "v=spf1 a:b.spf.service-now.com a:c.spf.service-now.com a:d.spf.service-now.com ~all",
+          "dns_lookups": 3,
+          "parsed": {
+            "pass": [
+              {
+                "value": "149.96.5.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.5.209",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.5.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.5.6",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.5.7",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.6.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.6.209",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.6.3",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.6.6",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.6.7",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.136.28",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.140.28",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.0.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.0.31",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.1.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.1.31",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.2.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.3.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.13.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.14.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.136.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.136.28",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.137.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.137.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.139.145",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.139.22",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.139.23",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.139.24",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.140.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.140.28",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.141.145",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.141.22",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.141.23",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.141.24",
+                "mechanism": "a"
+              },
+              {
+                "value": "37.98.232.12",
+                "mechanism": "a"
+              },
+              {
+                "value": "37.98.232.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "37.98.232.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "37.98.234.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "37.98.235.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "103.23.64.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "103.23.65.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "103.23.66.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "103.23.67.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.104.16",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.104.17",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.105.16",
+                "mechanism": "a"
+              },
+              {
+                "value": "148.139.105.17",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.1.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.132.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.133.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.194.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.195.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.2.26",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.220.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "149.96.221.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.136.28",
+                "mechanism": "a"
+              },
+              {
+                "value": "199.91.140.28",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.afas.online",
+          "record": "v=spf1 ip4:185.46.182.1 ip4:185.46.182.200/29 ip4:185.46.182.208/31 ip4:20.82.87.96/28 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.46.182.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.46.182.200/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.46.182.208/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.82.87.96/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

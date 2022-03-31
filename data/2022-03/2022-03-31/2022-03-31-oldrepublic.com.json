@@ -1,0 +1,222 @@
+{
+  "domain": "oldrepublic.com",
+  "base_domain": "oldrepublic.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.oldrepublic.com",
+      "ns.gwccnet.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00393d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.173.164"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00393d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.173.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00393d01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00393d01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a ip4:209.67.243.0/24 include:spf-00393d01.pphosted.com ip4:149.96.13.2 ip4:149.96.14.2 ip4:149.96.3.26 ip4:149.96.4.26 ip4:199.91.136.26 ip4:199.91.136.28 ip4:199.91.137.26 ip4:199.91.140.26 ip4:199.91.140.28 ip4:205.168.19.16 ip4:205.168.19.24 ip4:63.158.86.82 ip4:205.168.19.94 ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "205.168.19.19",
+          "mechanism": "a"
+        },
+        {
+          "value": "209.67.243.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.96.13.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.96.14.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.96.3.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.96.4.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.91.136.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.91.136.28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.91.137.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.91.140.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.91.140.28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.168.19.16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.168.19.24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "63.158.86.82",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.168.19.94",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00393d01.pphosted.com",
+          "record": "v=spf1 ip4:205.220.173.164 ip4:205.220.161.164",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.173.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.161.164",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:gc-infosecurity@gwccnet.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:gc-infosecurity@gwccnet.com; fo=1",
+    "valid": true,
+    "location": "oldrepublic.com",
+    "warnings": [
+      "gwccnet.com does not indicate that it accepts DMARC reports about oldrepublic.com - Authorization record not found: oldrepublic.com._report._dmarc.gwccnet.com IN TXT \"v=DMARC1\"",
+      "gwccnet.com does not indicate that it accepts DMARC reports about oldrepublic.com - Authorization record not found: oldrepublic.com._report._dmarc.gwccnet.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "gc-infosecurity@gwccnet.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "gc-infosecurity@gwccnet.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

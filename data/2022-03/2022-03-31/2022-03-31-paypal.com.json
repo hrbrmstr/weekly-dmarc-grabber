@@ -1,0 +1,543 @@
+{
+  "domain": "paypal.com",
+  "base_domain": "paypal.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns100.ultradns.net",
+      "pdns100.ultradns.com",
+      "ns1.p57.dynect.net",
+      "ns2.p57.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.paypalcorp.com",
+        "addresses": [
+          "173.224.165.17"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.paypalcorp.com",
+        "addresses": [
+          "173.224.161.141"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.paypalcorp.com",
+      "SSL/TLS is not supported on mx2.paypalcorp.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:pp._spf.paypal.com include:3ph1._spf.paypal.com include:3ph2._spf.paypal.com include:3ph3._spf.paypal.com include:3ph4._spf.paypal.com include:3ph5._spf.paypal.com include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "pp._spf.paypal.com",
+          "record": "v=spf1 ip4:66.211.168.230/31 ip4:173.0.84.224/27 ip4:173.0.94.244/30 ip4:66.211.170.86/31 ip4:66.211.170.88/30 include:ppcorp._spf.paypal.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.211.168.230/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.0.84.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.0.94.244/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.211.170.86/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.211.170.88/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "ppcorp._spf.paypal.com",
+                "record": "v=spf1 ip4:173.224.160.128/25 ip4:173.224.161.128/25 ip4:173.224.165.17/26 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "173.224.160.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "173.224.161.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "173.224.165.17/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "3ph1._spf.paypal.com",
+          "record": "v=spf1 ip4:208.201.241.163 ip4:67.72.99.26 ip4:206.165.246.80/29 ip4:64.127.115.252 ip4:194.64.234.129 ip4:65.110.161.77 ip4:204.13.11.48/29 ip4:63.80.14.0/23 ip4:208.64.132.0/22 ip4:81.223.46.0/27 ip4:216.136.168.80/28 ip4:129.41.77.70 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "208.201.241.163",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.72.99.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "206.165.246.80/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.127.115.252",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.64.234.129",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.110.161.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.13.11.48/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.80.14.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.64.132.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.223.46.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.136.168.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.41.77.70",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "3ph2._spf.paypal.com",
+          "record": "v=spf1 ip4:208.85.50.137 ip4:157.151.208.65 ip4:208.40.232.70 ip4:12.130.86.238 ip4:198.178.234.57 ip4:67.221.168.65 ip4:216.136.162.120/29 ip4:216.136.162.65 ip4:74.112.67.243 ip4:204.92.114.187 ip4:65.212.180.36 ip4:8.20.114.31 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "208.85.50.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "157.151.208.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.40.232.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.130.86.238",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.178.234.57",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.221.168.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.136.162.120/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.136.162.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.112.67.243",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.92.114.187",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.212.180.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "8.20.114.31",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "3ph3._spf.paypal.com",
+          "record": "v=spf1 ip4:8.20.114.31 ip4:108.175.18.45 ip4:108.175.30.45 ip4:54.244.242.0/24 ip4:209.67.98.46 ip4:206.25.247.143 ip4:209.46.117.179 ip4:54.241.16.209 ip4:209.67.98.59 ip4:54.214.39.184 ip4:209.46.117.168 ip4:206.25.247.155 ip4:198.61.254.231 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "8.20.114.31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "108.175.18.45",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "108.175.30.45",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.244.242.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.67.98.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "206.25.247.143",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.46.117.179",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.241.16.209",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.67.98.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.214.39.184",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.46.117.168",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "206.25.247.155",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.61.254.231",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "3ph4._spf.paypal.com",
+          "record": "v=spf1 ip4:182.50.78.64/28 ip4:204.14.232.64/28 ip4:96.43.148.64/28 ip4:96.43.144.64/28 ip4:96.43.151.64/28 ip4:204.14.232.64/28 ip4:204.14.234.64/28 ip4:208.185.229.45 ip4:66.170.126.97 ip4:216.128.126.97 ip4:216.66.217.240/29 ip4:208.72.249.240/29 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "182.50.78.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.14.232.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.148.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.144.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.151.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.14.232.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.14.234.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.185.229.45",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.170.126.97",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.128.126.97",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.66.217.240/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.72.249.240/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "3ph5._spf.paypal.com",
+          "record": "v=spf1 ip4:84.16.77.1 ip4:64.95.144.196 ip4:173.224.160.188/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "84.16.77.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.95.144.196",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.224.160.188/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:d@rua.agari.com; ruf=mailto:d@ruf.agari.com",
+    "valid": true,
+    "location": "paypal.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "d@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
