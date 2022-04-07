@@ -1,0 +1,41 @@
+{
+  "domain": "rwc.com",
+  "base_domain": "rwc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "armando.ns.cloudflare.com",
+      "leah.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "rwc-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.110",
+          "104.47.56.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on rwc-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spf.exclaimer.net include:servers.mcsv.net include:spf1.rwc.com include:spf2.rwc.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "spf2.rwc.com: Expected mechanism at position 256 in: v=spf1 ip4:12.200.149.126 ip4:12.200.149.122 ip4:110.145.193.170 ip4:81.144.129.84 ip4:54.84.224.42 ip4:54.206.40.5 ip4:52.77.43.55 ip4:192.254.121.248 ip4:23.21.109.197 ip4:23.21.109.212 ip4:52.49.201.246 ip4:52.49.235.189 ip4:91.186.188.8 ip4:83.217.246 .72 ip4:81.134.132.89 ip4:104.196.215.101 ip4:52.65.169.211 ip4:13.211.27.254 -all"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

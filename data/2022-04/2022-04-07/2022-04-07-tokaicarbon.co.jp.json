@@ -1,0 +1,128 @@
+{
+  "domain": "tokaicarbon.co.jp",
+  "base_domain": "tokaicarbon.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mns01.ucom.ne.jp",
+      "mns02.ucom.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 ip4:153.127.107.124 include:scorpio.oneoffice.jp include:_spf.ir-navi.jp ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "153.127.107.124",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "scorpio.oneoffice.jp",
+          "record": "v=spf1 include:netblock.oneoffice.jp ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "netblock.oneoffice.jp",
+                "record": "v=spf1 ip4:211.7.82.0/25 ip4:27.121.1.192/26 ip4:27.121.52.192/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "211.7.82.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "27.121.1.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "27.121.52.192/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.ir-navi.jp",
+          "record": "v=spf1 include:u19465820.wl071.sendgrid.net ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "u19465820.wl071.sendgrid.net",
+                "record": "v=spf1 ip4:149.72.226.102 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "149.72.226.102",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

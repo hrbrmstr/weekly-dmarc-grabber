@@ -1,0 +1,264 @@
+{
+  "domain": "intershop.de",
+  "base_domain": "intershop.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "avalon.iks-jena.de",
+      "ns.intershop.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.intershop.de",
+        "addresses": [
+          "195.110.60.59"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.intershop.de",
+        "addresses": [
+          "195.110.60.62"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx3.intershop.de",
+        "addresses": [
+          "195.110.60.3"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.intershop.de",
+      "SSL/TLS is not supported on mx2.intershop.de",
+      "SSL/TLS is not supported on mx3.intershop.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:195.110.60.59 ip4:195.110.60.62 ip4:195.110.60.3 ip4:195.110.61.232 ip4:195.110.61.231 ip4:195.110.61.222 ip4:83.169.51.226 ip4:83.169.51.244 ip4:168.63.65.110 ip4:52.232.0.61 include:4791871.spf10.hubspotemail.net include:spf-inm.eqs-service.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "195.110.60.59",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.110.60.62",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.110.60.3",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.110.61.232",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.110.61.231",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.110.61.222",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "83.169.51.226",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "83.169.51.244",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "168.63.65.110",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.232.0.61",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "4791871.spf10.hubspotemail.net",
+          "record": "v=spf1 ip4:3.93.157.0/24 ip4:3.210.190.0/24 ip4:18.208.124.128/25 ip4:54.174.52.0/24 ip4:54.174.53.128/30 ip4:54.174.57.0/24 ip4:54.174.59.0/24 ip4:54.174.60.0/23 ip4:54.174.63.0/24 ip4:139.180.17.0/24 ip4:143.244.80.0/20 ip4:158.247.16.0/20 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "3.93.157.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.210.190.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.208.124.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.52.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.53.128/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.57.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.59.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.60.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.63.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.180.17.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.244.80.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "158.247.16.0/20",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-inm.eqs-service.com",
+          "record": "v=spf1 ip4:212.18.19.53 ip4:212.18.19.58 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.19.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.19.58",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc-report@intershop.de; ruf=mailto:dmarc-abuse@intershop.de; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400; sp=none",
+    "valid": true,
+    "location": "intershop.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@intershop.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-abuse@intershop.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

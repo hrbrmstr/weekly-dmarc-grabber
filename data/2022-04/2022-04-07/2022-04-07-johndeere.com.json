@@ -1,0 +1,548 @@
+{
+  "domain": "johndeere.com",
+  "base_domain": "johndeere.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.deere.com",
+      "ns3.deere.com",
+      "ns2a.deere.com",
+      "ns1.deere.com",
+      "ns2.deere.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-000e4101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.144.73"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-000e4101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.47"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-000e4101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-000e4101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:204.54.36.127 ip4:204.54.36.126 ip4:192.43.65.150 ip4:166.78.71.196 ip4:68.232.200.69 ip4:198.245.93.166 ip4:208.100.56.210 ip4:65.221.12.148 ip4:65.221.12.128 ip4:198.37.157.254 ip4:167.89.96.224 ip4:167.89.16.245 ip4:167.89.16.183 ip4:103.22.209.1 ip4:103.22.209.2 ip4:103.22.209.3 ip4:103.22.209.4 ip4:103.22.209.5 include:spf-000e4101.pphosted.com include:_spf.salesforce.com include:spf.vop.johndeere.com include:spf2.johndeere.com ~all",
+    "valid": true,
+    "dns_lookups": 10,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "204.54.36.127",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.54.36.126",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.43.65.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "166.78.71.196",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.200.69",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.245.93.166",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.100.56.210",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "65.221.12.148",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "65.221.12.128",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.37.157.254",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "167.89.96.224",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "167.89.16.245",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "167.89.16.183",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.22.209.1",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.22.209.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.22.209.3",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.22.209.4",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.22.209.5",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-000e4101.pphosted.com",
+          "record": "v=spf1 ip4:67.231.152.47 ip4:67.231.144.73",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.152.47",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.144.73",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.vop.johndeere.com",
+          "record": "v=spf1 ip4:192.43.70.16 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "192.43.70.16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.johndeere.com",
+          "record": "v=spf1 include:spf.dynect.net include:amazonses.com include:_spf.q4press.com include:mail.zendesk.com ip4:34.201.81.51 ip4:34.231.38.213 ip4:34.200.23.230 ip4:13.56.167.176 ip4:13.56.177.63 ip4:52.14.244.82 ip4:18.218.19.60 ip4:192.168.117.27 ip4:52.250.10.203 ip4:168.245.17.202 ~all",
+          "dns_lookups": 5,
+          "parsed": {
+            "pass": [
+              {
+                "value": "34.201.81.51",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.231.38.213",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.200.23.230",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.56.167.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.56.177.63",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.14.244.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.218.19.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.168.117.27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.250.10.203",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.17.202",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.dynect.net",
+                "record": "v=spf1 ip4:208.76.56.0/21 ip4:216.146.32.0/20 ip4:80.231.25.0/24 ip4:80.231.219.0/24 ip4:103.11.200.0/22 ip4:199.19.0.0/21 ip4:204.13.248.0/22 ip4:208.78.68.0/22 ip4:162.88.36.0/23 ip4:162.88.4.0/23 ip4:162.88.24.0/24 ip4:162.88.28.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "208.76.56.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.146.32.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "80.231.25.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "80.231.219.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.11.200.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.19.0.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.13.248.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.78.68.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "162.88.36.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "162.88.4.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "162.88.24.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "162.88.28.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.q4press.com",
+                "record": "v=spf1 a:web.q4press.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "13.57.137.3",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.72.142.131",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.72.163.18",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "149.72.240.21",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "168.245.55.252",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "3.208.74.172",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "3.223.8.0",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "35.168.82.240",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "52.23.113.139",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "52.55.39.176",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "54.177.118.13",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "54.208.86.47",
+                      "mechanism": "a"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "mail.zendesk.com",
+                "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.151.192.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.12.80.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "188.172.128.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.161.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.198.0.0/18",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=86400;rua=mailto:dmarc_rua_jd@johndeere.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "johndeere.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua_jd@johndeere.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "domain": "oldrepublic.com",
+  "base_domain": "oldrepublic.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.oldrepublic.com",
+      "ns.gwccnet.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00393d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.161.164"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00393d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.173.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00393d01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00393d01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:gc-infosecurity@gwccnet.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:gc-infosecurity@gwccnet.com; fo=1",
+    "valid": true,
+    "location": "oldrepublic.com",
+    "warnings": [
+      "gwccnet.com does not indicate that it accepts DMARC reports about oldrepublic.com - Authorization record not found: oldrepublic.com._report._dmarc.gwccnet.com IN TXT \"v=DMARC1\"",
+      "gwccnet.com does not indicate that it accepts DMARC reports about oldrepublic.com - Authorization record not found: oldrepublic.com._report._dmarc.gwccnet.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "gc-infosecurity@gwccnet.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "gc-infosecurity@gwccnet.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

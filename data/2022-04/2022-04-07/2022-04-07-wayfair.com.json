@@ -1,0 +1,109 @@
+{
+  "domain": "wayfair.com",
+  "base_domain": "wayfair.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns04.wfrdns.com",
+      "ns03.wfrdns.com",
+      "ns02.wfrdns.com",
+      "ns01.wfrdns.com",
+      "dns4.p02.nsone.net",
+      "dns3.p02.nsone.net",
+      "dns2.p02.nsone.net",
+      "dns1.p02.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00180701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.143.234"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00180701.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.181"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00180701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00180701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.wayfair.com include:spf.protection.outlook.com include:et._spf.pardot.com include:_spf.salesforce.com include:_spf.google.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc@wayfair.com; fo=1; pct=100; adkim=r; aspf=r",
+    "valid": true,
+    "location": "wayfair.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@wayfair.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

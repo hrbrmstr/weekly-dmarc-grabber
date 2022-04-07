@@ -1,0 +1,43 @@
+{
+  "domain": "ludwigbeck.de",
+  "base_domain": "ludwigbeck.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.internett.de",
+      "dns3.internett.de",
+      "dns4.internett.eu",
+      "dns1.internett.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mail.ludwigbeck.de",
+        "addresses": [
+          "217.110.90.234",
+          "80.146.189.250"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "217.110.90.234 does not have any reverse DNS (PTR) records"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.mailjet.com a mx include:auth.msgapp.com include:spf.crsend.com include:utm.loxxess.de include:spf.protection.outlook.de include:email.freshdesk.com include:mail.zendesk.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "utm.loxxess.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "domain": "imperial-tobacco.com",
+  "base_domain": "imperial-tobacco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.ipmanagerinc.net",
+      "dns2.ipmanagerinc.net",
+      "dns1.ipmanagerinc.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.hc1200-83.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.36.123",
+          "139.138.36.75",
+          "139.138.36.76",
+          "139.138.36.77",
+          "139.138.62.254",
+          "139.138.63.101",
+          "139.138.63.102",
+          "139.138.63.11"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc1200-83.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.36.123",
+          "139.138.36.75",
+          "139.138.36.76",
+          "139.138.36.77",
+          "139.138.62.254",
+          "139.138.63.101",
+          "139.138.63.102",
+          "139.138.63.11"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx1.hc1200-83.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx1.hc1200-83.c3s2.iphmx.com",
+      "STARTTLS is not supported on mx2.hc1200-83.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1200-83.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.imptob.com include:spf2.imptob.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.imptob.com",
+          "record": "v=spf1 ip4:139.138.62.254 ip4:216.71.139.148 ip4:139.138.63.11 ip4:216.71.139.149 ip4:139.138.63.101 ip4:216.71.139.150 ip4:139.138.63.102 ip4:216.71.139.151 ip4:213.61.138.197 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "139.138.62.254",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.139.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.63.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.139.149",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.63.101",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.139.150",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.63.102",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.139.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.61.138.197",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.imptob.com",
+          "record": "v=spf1 ip4:139.138.36.75 ip4:68.232.156.82 ip4:139.138.36.76 ip4:139.138.60.11 ip4:139.138.36.77 ip4:139.138.60.19 ip4:139.138.36.123 ip4:139.138.60.22 a:ob1.hc1200-83.c3s2.iphmx.com ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "139.138.36.75",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.232.156.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.36.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.60.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.36.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.60.19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.36.123",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.60.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.60.11",
+                "mechanism": "a"
+              },
+              {
+                "value": "139.138.60.19",
+                "mechanism": "a"
+              },
+              {
+                "value": "139.138.60.22",
+                "mechanism": "a"
+              },
+              {
+                "value": "216.71.139.148",
+                "mechanism": "a"
+              },
+              {
+                "value": "216.71.139.149",
+                "mechanism": "a"
+              },
+              {
+                "value": "216.71.139.150",
+                "mechanism": "a"
+              },
+              {
+                "value": "216.71.139.151",
+                "mechanism": "a"
+              },
+              {
+                "value": "68.232.156.82",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "domain": "agc.com",
+  "base_domain": "agc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.agc.com",
+      "ns1.agc.com",
+      "ns4.ntt-webbp.com",
+      "ns3.ntt-webbp.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster1.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.208",
+          "67.219.246.210",
+          "67.219.246.215",
+          "67.219.247.106",
+          "67.219.247.202",
+          "67.219.247.204",
+          "67.219.250.212",
+          "67.219.250.215",
+          "67.219.250.218"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster1a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster1.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster1a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:153.128.70.108 +ip4:153.128.70.110 +ip4:153.128.70.111 +ip4:68.232.156.65 +ip4:68.232.156.66 +ip4:68.232.159.168 +ip4:68.232.159.169 include:spf.messagelabs.com include:_spf.salesforce.com include:aspmx.pardot.com include:spf.emailsignatures365.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "153.128.70.108",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "153.128.70.110",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "153.128.70.111",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.156.65",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.156.66",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.159.168",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.159.169",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.emailsignatures365.com",
+          "record": "v=spf1 ip4:20.92.116.22 ip4:20.98.33.77 ip4:20.98.2.159 ip4:20.79.222.204 ip4:20.92.233.59 ip4:52.138.216.130 ip4:13.93.42.39 ip4:40.113.3.253 ip4:52.229.64.105 ip4:40.86.165.91 ip4:20.79.220.33 ip4:20.58.22.103 ip4:13.74.137.176 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "20.92.116.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.98.33.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.98.2.159",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.79.222.204",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.92.233.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.138.216.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.93.42.39",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.113.3.253",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.229.64.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.86.165.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.79.220.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.58.22.103",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.74.137.176",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none ; rua=mailto:agc-ml.dmarcreport@agc.com; ruf=mailto:agc-ml.dmarcreport@agc.com",
+    "valid": false,
+    "location": "agc.com",
+    "error": "Tag p must have one of the following values: none,quarantine,reject - not none "
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "paragon.ag",
+  "base_domain": "paragon.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.marcant.net",
+      "ns1.marcant.net",
+      "ns2.marcant.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-in.paragon.ag",
+        "addresses": [
+          "195.243.59.187"
+        ],
+        "tls": true,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "mail4.marcant.net",
+        "addresses": [
+          "217.14.168.74"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail4.marcant.net: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ipv4:195.243.59.187 include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "paragon.ag: Expected mechanism at position 10 in: v=spf1 mx ipv4:195.243.59.187 include:spf.protection.outlook.com -all"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
