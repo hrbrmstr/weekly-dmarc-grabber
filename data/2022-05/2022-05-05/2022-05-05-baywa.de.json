@@ -1,0 +1,124 @@
+{
+  "domain": "baywa.de",
+  "base_domain": "baywa.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.ri-solution.com",
+      "ns3.ri-solution.com",
+      "ns2.ri-solution.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mgate2.ri-solution.com",
+        "addresses": [
+          "194.76.180.122"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mgate1.ri-solution.com",
+        "addresses": [
+          "194.76.180.121"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mgate2.ri-solution.com",
+      "SSL/TLS is not supported on mgate1.ri-solution.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.baywa.de include:spf2.baywa.de include:spf3.baywa.de include:spf4.baywa.de include:spf5.baywa.de include:spf6.baywa.de  ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@baywa.de; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_ruf@baywa.de; fo=1",
+    "valid": true,
+    "location": "baywa.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@baywa.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@baywa.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

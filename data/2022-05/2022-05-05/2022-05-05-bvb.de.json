@@ -1,0 +1,122 @@
+{
+  "domain": "bvb.de",
+  "base_domain": "bvb.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "salvador.ns.cloudflare.com",
+      "elisa.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bvb.de",
+        "addresses": [
+          "5.147.249.215"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.bvb.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:mx4.eventim.de a:admin.bvb.de mx:indivsurvey.de ip4:5.147.249.0/24 include:spf.smtp.net include:_spf.concurcompleat.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "185.109.196.16",
+          "mechanism": "a"
+        },
+        {
+          "value": "37.49.159.213",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail.indivsurvey.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "5.147.249.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.smtp.net",
+          "record": "v=spf1 ip4:185.71.125.0/24 ip4:185.71.127.0/24 ip4:185.71.124.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.71.125.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.71.127.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.71.124.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.concurcompleat.com",
+          "record": "v=spf1 ip4:169.145.39.240/29 ip4:12.129.35.0/27 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "169.145.39.240/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.129.35.0/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

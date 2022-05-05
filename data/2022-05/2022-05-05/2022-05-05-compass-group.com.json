@@ -1,0 +1,104 @@
+{
+  "domain": "compass-group.com",
+  "base_domain": "compass-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.idp365.net",
+      "dns2.idp365.net",
+      "dns1.idp365.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "compassgroup-com01i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.138",
+          "104.47.57.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on compassgroup-com01i.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:80.244.183.47 ip4:212.188.178.246 ip4:52.212.177.196 ip4:18.196.135.46 ip4:18.196.9.16 ip4:54.246.220.150 ip4:54.240.50.159 ip4:54.246.224.90 ip4:85.17.187.195 ip4:18.194.57.1 ip4:3.121.21.74 ip4:34.198.49.212 ip4:18.157.50.0 ip4:62.13.142.38 ip52.212.227.234 ip4:34.252.232.69 ip4:52.205.236.97 ip4:54.89.46.80 ip4:18.208.102.98 ip4:35.170.128.37 ip4:212.188.178.254 ip4:217.158.229.254 ip4:134.213.158.154 include:spf.topdesk.net include:sendgrid.net include:spf.protection.outlook.com include:authsmtp.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "compass-group.com: Expected mechanism at position 254 in: v=spf1 ip4:80.244.183.47 ip4:212.188.178.246 ip4:52.212.177.196 ip4:18.196.135.46 ip4:18.196.9.16 ip4:54.246.220.150 ip4:54.240.50.159 ip4:54.246.224.90 ip4:85.17.187.195 ip4:18.194.57.1 ip4:3.121.21.74 ip4:34.198.49.212 ip4:18.157.50.0 ip4:62.13.142.38 ip52.212.227.234 ip4:34.252.232.69 ip4:52.205.236.97 ip4:54.89.46.80 ip4:18.208.102.98 ip4:35.170.128.37 ip4:212.188.178.254 ip4:217.158.229.254 ip4:134.213.158.154 include:spf.topdesk.net include:sendgrid.net include:spf.protection.outlook.com include:authsmtp.com -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:gxq2lm1e@ag.eu.dmarcadvisor.com; ruf=mailto:gxq2lm1e@fr.eu.dmarcadvisor.com; fo=1; ri=60; sp=none",
+    "valid": true,
+    "location": "compass-group.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "gxq2lm1e@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "gxq2lm1e@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 60,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

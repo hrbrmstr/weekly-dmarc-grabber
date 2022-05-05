@@ -1,0 +1,461 @@
+{
+  "domain": "qualcomm.com",
+  "base_domain": "qualcomm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns1.ultradns.com",
+      "edns1.ultradns.net",
+      "edns1.ultradns.biz",
+      "edns1.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.hc3962-90.iphmx.com",
+        "addresses": [
+          "216.71.140.60",
+          "216.71.142.141"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.hc3962-90.iphmx.com",
+        "addresses": [
+          "216.71.140.60",
+          "216.71.142.141"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc3962-90.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc3962-90.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.qualcomm.com include:_cesspf.qualcomm.com include:_spf.salesforce.com include:spf.protection.outlook.com include:_extspf.qualcomm.com include:mktomail.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.qualcomm.com",
+          "record": "v=spf1 ip4:199.106.114.0/23 ip4:129.46.98.28 ip4:52.183.80.77 ip4:103.229.16.224/28 ip4:199.106.110.90 ip4:13.92.240.105 ip4:129.46.96.20 ip4:199.106.103.254 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.106.114.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.46.98.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.183.80.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.229.16.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.106.110.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.92.240.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.46.96.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.106.103.254",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_cesspf.qualcomm.com",
+          "record": "v=spf1 ip4:216.71.142.141 ip4:216.71.142.165 ip4:216.71.142.166 ip4:216.71.142.181 ip4:216.71.145.13 ip4:216.71.140.60 ip4:216.71.140.77 ip4:216.71.140.213 ip4:216.71.141.32 ip4:139.138.34.93 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.71.142.141",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.142.165",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.142.166",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.142.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.145.13",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.140.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.140.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.140.213",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.141.32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.138.34.93",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_extspf.qualcomm.com",
+          "record": "v=spf1 ip4:107.20.210.250 ip4:52.1.14.157 ip4:72.32.24.120 ip4:40.76.221.254 ip4:13.92.240.105 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "107.20.210.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.1.14.157",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.24.120",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.76.221.254",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.92.240.105",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mktomail.com",
+          "record": "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.15.212.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.185.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.154.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.243.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.236.119.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.188.97.188/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.28.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.28.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.237.104.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.172.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.173.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:e6f4c5b47ba4585@rep.dmarcanalyzer.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:e6f4c5b47ba4585@rep.dmarcanalyzer.com",
+    "valid": true,
+    "location": "qualcomm.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "e6f4c5b47ba4585@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "e6f4c5b47ba4585@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "domain": "costco.com",
+  "base_domain": "costco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a9-66.akam.net",
+      "a6-64.akam.net",
+      "a1-116.akam.net",
+      "a14-67.akam.net",
+      "a5-64.akam.net",
+      "a28-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-001f9d01.pphosted.com",
+        "addresses": [
+          "148.163.156.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-001f9d01.pphosted.com",
+        "addresses": [
+          "148.163.158.49"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-001f9d01.pphosted.com",
+      "SSL/TLS is not supported on mx0b-001f9d01.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.costco.com include:_spf.google.com include:_spf1.costco.com include:_spf2.costco.com include:_spf3.costco.com include:_spf4.costco.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.costco.com",
+          "record": "v=spf1 ip4:170.167.103.1 ip4:170.167.117.0/24 ip4:170.167.192.0/21 ip4:148.163.158.49 ip4:148.163.156.53 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "170.167.103.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.167.117.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.167.192.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.158.49",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.156.53",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.google.com",
+          "record": "v=spf1 include:_netblocks.google.com include:_netblocks2.google.com include:_netblocks3.google.com ~all",
+          "dns_lookups": 3,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_netblocks.google.com",
+                "record": "v=spf1 ip4:35.190.247.0/24 ip4:64.233.160.0/19 ip4:66.102.0.0/20 ip4:66.249.80.0/20 ip4:72.14.192.0/18 ip4:74.125.0.0/16 ip4:108.177.8.0/21 ip4:173.194.0.0/16 ip4:209.85.128.0/17 ip4:216.58.192.0/19 ip4:216.239.32.0/19 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "35.190.247.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.233.160.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.102.0.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.249.80.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "72.14.192.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.125.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "108.177.8.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "173.194.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "209.85.128.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.58.192.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.239.32.0/19",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_netblocks2.google.com",
+                "record": "v=spf1 ip6:2001:4860:4000::/36 ip6:2404:6800:4000::/36 ip6:2607:f8b0:4000::/36 ip6:2800:3f0:4000::/36 ip6:2a00:1450:4000::/36 ip6:2c0f:fb50:4000::/36 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "2001:4860:4000::/36",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2404:6800:4000::/36",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2607:f8b0:4000::/36",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2800:3f0:4000::/36",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a00:1450:4000::/36",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2c0f:fb50:4000::/36",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_netblocks3.google.com",
+                "record": "v=spf1 ip4:172.217.0.0/19 ip4:172.217.32.0/20 ip4:172.217.128.0/19 ip4:172.217.160.0/20 ip4:172.217.192.0/19 ip4:172.253.56.0/21 ip4:172.253.112.0/20 ip4:108.177.96.0/19 ip4:35.191.0.0/16 ip4:130.211.0.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "172.217.0.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.217.32.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.217.128.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.217.160.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.217.192.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.253.56.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "172.253.112.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "108.177.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.191.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.211.0.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf1.costco.com",
+          "record": "v=spf1 ip4:12.104.201.4 ip4:12.104.201.5 ip4:68.233.77.18 ip4:209.34.83.224 ip4:199.91.136.26 ip4:199.91.136.28 ip4:199.91.140.26/31 ip4:199.91.140.28/30 ip4:199.91.140.32/30 ip4:199.91.140.36/32 ip4:198.2.128.0/18 ip4:205.201.134.128/20 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "12.104.201.4",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.104.201.5",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.77.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.34.83.224",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.136.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.136.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.140.26/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.140.28/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.140.32/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.140.36/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.134.128/20",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf2.costco.com",
+          "record": "v=spf1 ip4:96.43.144.64 ip4:96.43.144.65 ip4:96.43.148.64 ip4:96.43.148.65 ip4:202.129.242.64 ip4:202.129.242.65 ip4:204.14.232.64/28 ip4:204.14.234.64/28 ip4:129.146.141.125 ip4:129.146.115.250 ip4:173.226.200.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "96.43.144.64",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.144.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.148.64",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "96.43.148.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.129.242.64",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.129.242.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.14.232.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.14.234.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.146.141.125",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.146.115.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.226.200.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf3.costco.com",
+          "record": "v=spf1 ip4:173.193.210.32/27 ip4:174.37.226.64/27 ip4:180.179.146.74 ip4:184.173.105.0/24 ip4:184.173.153.0/24 ip4:185.255.8.0/23 ip4:192.237.158.0/23 ip4:198.61.254.0/23 ip4:208.43.239.136/30 ip4:209.61.151.0/24 ip4:147.154.97.253 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "173.193.210.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "174.37.226.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.179.146.74",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "184.173.105.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "184.173.153.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.255.8.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.237.158.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.61.254.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.43.239.136/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.61.151.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.154.97.253",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf4.costco.com",
+          "record": "v=spf1 ip4:23.253.182.0/23 ip4:50.23.218.192/27 ip4:62.140.31.30/24 ip4:69.72.32.0/20 ip4:104.130.96.0/28 ip4:104.130.122.0/23 ip4:141.193.32.0/23 ip4:146.20.112.0/26 ip4:146.20.113.0/24 ip4:146.20.191.0/24 ip4:159.135.224.0/20 ip4:166.78.68.0/22 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.253.182.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.23.218.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.140.31.30/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.72.32.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.96.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.130.122.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.193.32.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.112.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.113.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.191.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.135.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "166.78.68.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net",
+    "valid": true,
+    "location": "costco.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

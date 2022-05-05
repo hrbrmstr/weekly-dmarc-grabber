@@ -1,0 +1,153 @@
+{
+  "domain": "procredit-group.com",
+  "base_domain": "procredit-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-09.azure-dns.info",
+      "ns3-09.azure-dns.org",
+      "ns2-09.azure-dns.net",
+      "ns1-09.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.procredit-group.com",
+        "addresses": [
+          "193.58.244.134"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.procredit-group.com",
+        "addresses": [
+          "193.58.244.136"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.procredit-group.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)",
+      "mx2.procredit-group.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:193.58.244.134/32 ip4:193.58.244.136/32 ip4:193.58.244.159/32 ip4:193.58.244.79/32 ip4:193.58.244.105/32 ip4:193.58.244.236/32 ip4:193.58.244.237/32 ip4:185.189.239.13/32 include:_spf.rexx-suite.com -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.procredit-group.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.procredit-group.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "193.58.244.134/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.136/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.159/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.79/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.105/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.236/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.58.244.237/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.189.239.13/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.rexx-suite.com",
+          "record": "v=spf1 a:mx01.rexx-systems.de ip4:92.51.187.64/27 ip4:83.169.51.224/27 ip4:80.237.187.32/28 ip4:91.250.74.128/27 ip4:87.230.74.128/28 ip4:91.250.95.64/26 ip4:85.25.89.0/24 -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.25.89.5",
+                "mechanism": "a"
+              },
+              {
+                "value": "92.51.187.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.169.51.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.237.187.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.74.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "87.230.74.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.95.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.25.89.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

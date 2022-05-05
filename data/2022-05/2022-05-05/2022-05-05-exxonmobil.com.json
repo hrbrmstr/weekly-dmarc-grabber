@@ -1,0 +1,152 @@
+{
+  "domain": "exxonmobil.com",
+  "base_domain": "exxonmobil.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-116.akam.net",
+      "a13-67.akam.net",
+      "a10-67.akam.net",
+      "a14-65.akam.net",
+      "a3-66.akam.net",
+      "a18-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-d.exxonmobil.com",
+        "addresses": [
+          "158.26.70.19"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail-h.exxonmobil.com",
+        "addresses": [
+          "158.26.1.146"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail-d.exxonmobil.com",
+      "SSL/TLS is not supported on mail-h.exxonmobil.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:dalmxp131.exxonmobil.com a:dalmxp132.exxonmobil.com a:hoemxp131.exxonmobil.com a:hoemxp132.exxonmobil.com ip4:158.26.24.0/28 -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "131.126.223.1",
+          "mechanism": "a"
+        },
+        {
+          "value": "131.126.223.2",
+          "mechanism": "a"
+        },
+        {
+          "value": "158.35.223.1",
+          "mechanism": "a"
+        },
+        {
+          "value": "158.35.223.2",
+          "mechanism": "a"
+        },
+        {
+          "value": "158.26.24.0/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarcreports@exxonmobil.com; ruf=mailto:dmarcreports@exxonmobil.com",
+    "valid": true,
+    "location": "exxonmobil.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@exxonmobil.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@exxonmobil.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

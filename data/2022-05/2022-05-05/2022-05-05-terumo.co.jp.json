@@ -1,0 +1,415 @@
+{
+  "domain": "terumo.co.jp",
+  "base_domain": "terumo.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002d7101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.151.228"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002d7101.gslb.pphosted.com",
+        "addresses": [
+          "148.163.155.176"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002d7101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002d7101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-002d7101.pphosted.com include:spf.w2solution.com include:amazonses.com include:kairos3.com include:sharestage.com include:aspmx.pardot.com ip4:210.254.140.102 ip4:114.179.39.91 ip4:210.254.140.100 ip4:210.254.140.103 ip4:153.153.57.216 ip4:210.254.140.101 ip4:153.254.170.182 ip4:203.180.246.123 ip4:203.180.246.39 ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.254.140.102",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "114.179.39.91",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.254.140.100",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.254.140.103",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "153.153.57.216",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.254.140.101",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "153.254.170.182",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.180.246.123",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.180.246.39",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-002d7101.pphosted.com",
+          "record": "v=spf1 ip4:148.163.155.176 ip4:148.163.151.228",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.155.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.151.228",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.w2solution.com",
+          "record": "v=spf1 ip4:124.248.154.32/28 ip4:210.134.62.224/27 ip4:103.3.48.128/25 ip4:124.248.154.0/27 ip4:103.3.48.64/27 ip4:133.18.3.0/26 ip4:13.112.223.174 ip4:54.92.82.253 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "124.248.154.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.62.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.3.48.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.248.154.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.3.48.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.18.3.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.112.223.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.92.82.253",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "amazonses.com",
+          "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.96.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.82.172.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "kairos3.com",
+          "record": "v=spf1 +ip4:54.249.226.178/32 +ip4:46.51.248.56/32 +ip4:52.69.208.146/32 +ip4:13.230.91.18/32 +ip4:54.65.17.160/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.249.226.178/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.51.248.56/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.69.208.146/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.230.91.18/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.65.17.160/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "sharestage.com",
+          "record": "v=spf1 ip4:153.153.160.0/26 ip4:153.153.144.80/26 ip4:210.163.30.216/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "153.153.160.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.153.144.80/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.163.30.216/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "terumo.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

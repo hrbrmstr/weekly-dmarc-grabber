@@ -1,0 +1,85 @@
+{
+  "domain": "woodside.com.au",
+  "base_domain": "woodside.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "hydrogen.woodside.com.au",
+      "ns1.woodside.com.au",
+      "ns2.woodside.com.au",
+      "vm3.is.sydn.nxg.net.au",
+      "carbon.woodside.com.au",
+      "vm3.is.melb.nxg.net.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:158.89.17.12/31 ip4:158.89.1.51 ip4:158.89.1.52 ip4:13.75.216.52 ip4:210.80.140.0 include:servers.mcsv.net include:spf1.fraedom.com include:spf.protection.outlook.com include:amazonses.com include:miraqle.com include:salesforce.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 16/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 16
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "woodside.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}
