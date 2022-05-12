@@ -1,0 +1,105 @@
+{
+  "domain": "graingerplc.co.uk",
+  "base_domain": "graingerplc.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.namecity.com",
+      "ns1.namecity.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail.graingerplc.co.uk",
+        "addresses": [
+          "128.65.102.135"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.graingerplc.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:128.65.102.135 ip4:66.11.149.162 ip4:52.60.66.163 ip4:139.162.244.122 ip4:85.133.123.250 ip4:217.72.254.250 include:servers.mcsv.net -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "128.65.102.135",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.11.149.162",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.60.66.163",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "139.162.244.122",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "85.133.123.250",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.72.254.250",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

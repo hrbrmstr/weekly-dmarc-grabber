@@ -1,0 +1,127 @@
+{
+  "domain": "teamviewer.com",
+  "base_domain": "teamviewer.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "tv-ns1.teamviewer.com",
+      "tv-ns2.teamviewer.com",
+      "tv-ns4.teamviewer.com",
+      "tv-ns5.teamviewer.com",
+      "tv-ns3.teamviewer.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:de._netblocks.mimecast.com include:sendgrid.net include:mktomail.com include:emailus.freshservice.com include:emaileuc.freshservice.com include:emaileuc.freshdesk.com ip4:93.191.162.0/24 ip4:93.191.164.0/24 ip4:46.163.100.196 ip4:46.163.100.194 ip4:178.255.156.110 ip4:188.172.204.21 ip4:178.255.154.52 ip4:188.172.233.6 ip4:37.252.230.29 ip4:217.146.22.37 ip4:208.74.204.0/22 ip4:46.19.168.0/23 ip4:35.158.16.4 ip4:52.28.165.113 ip4:185.245.30.102 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net,mailto:rua_dmarc@teamviewer.com; ruf=mailto:dmarc_afrf@auth.returnpath.net,mailto:ruf_dmarc@teamviewer.com; pct=100;",
+    "valid": true,
+    "location": "teamviewer.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "rua_dmarc@teamviewer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ruf_dmarc@teamviewer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

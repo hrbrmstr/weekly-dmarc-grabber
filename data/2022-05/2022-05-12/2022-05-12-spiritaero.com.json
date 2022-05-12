@@ -1,0 +1,186 @@
+{
+  "domain": "spiritaero.com",
+  "base_domain": "spiritaero.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-004ea501.pphosted.com",
+        "addresses": [
+          "205.220.163.41"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-004ea501.pphosted.com",
+        "addresses": [
+          "205.220.175.40"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-004ea501.pphosted.com",
+      "SSL/TLS is not supported on mx0b-004ea501.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:199.102.254.40 ip4:199.102.254.41 ip4:199.102.254.106 ip4:199.102.254.107 ip4:46.22.189.51 ip4:80.95.173.197 ip4:166.78.69.241 ip4:52.225.252.217 ip4:173.249.144.156 include:spfext.zapproved.com include:spf.protection.office365.us include:spf-004ea501.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "199.102.254.40",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.102.254.41",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.102.254.106",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.102.254.107",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "46.22.189.51",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "80.95.173.197",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "166.78.69.241",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.225.252.217",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "173.249.144.156",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spfext.zapproved.com",
+          "record": "v=spf1 ip4:52.5.134.202 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.5.134.202",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.office365.us",
+          "record": "v=spf1 ip4:23.103.199.0/24 ip4:23.103.205.0/24 ip4:23.103.206.0/24 ip4:23.103.208.0/23 ip6:2001:489a:2202::/61 ip6:2001:489a:2202:8::/61 ip6:2001:489a:2202:2000::/63 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.103.199.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.103.205.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.103.206.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.103.208.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:489a:2202::/61",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:489a:2202:8::/61",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:489a:2202:2000::/63",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-004ea501.pphosted.com",
+          "record": "v=spf1 ip4:205.220.175.40 ip4:205.220.163.41",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.175.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.163.41",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

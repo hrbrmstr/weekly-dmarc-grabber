@@ -1,0 +1,56 @@
+{
+  "domain": "rml.com.au",
+  "base_domain": "rml.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns9.zoneedit.com",
+      "ns6.zoneedit.co.uk",
+      "ns3.zoneedit.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 103.13.69.122 is au-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for au-smtp-inbound-2.mimecast.com do not resolve to 103.13.69.122",
+      "au-smtp-inbound-1.mimecast.com: Connection timed out",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1  ip4:165.228.107.10 ip4:116.212.212.242 ip4:116.212.206.234  ip4:49.255.137.194 ip4:210.80.140.141 ip4:210.80.140.142 include:au._netblocks.mimecast.com include:email.freshservice.com include:partnerspf.rmmservice.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "domain": "usfoods.com",
+  "base_domain": "usfoods.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dbru.br.ns.els-gms.att.net",
+      "dmtu.mt.ns.els-gms.att.net",
+      "pdns71.ultradns.net",
+      "pdns71.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "usfoods-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.138",
+          "104.47.59.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 104.47.59.138 is mail-dm6nam120138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-dm6nam120138.inbound.protection.outlook.com do not resolve to 104.47.59.138",
+      "SSL/TLS is not supported on usfoods-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:205.132.110.2 ip4:205.132.109.88 ip4:206.221.20.1/24 ip4:206.221.28.1/24 a:usfood.com include:spf.protection.outlook.com include:_spf.q4press.com include:mail.zendesk.com include:sendgrid.net include:spf-2248456.jmsend.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "usfoods.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

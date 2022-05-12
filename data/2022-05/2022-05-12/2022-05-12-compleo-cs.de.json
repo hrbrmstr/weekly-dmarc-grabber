@@ -1,0 +1,62 @@
+{
+  "domain": "compleo-cs.de",
+  "base_domain": "compleo-cs.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.inwx.eu",
+      "ns2.inwx.de",
+      "ns.inwx.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx-01-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [
+          "3.121.23.67",
+          "3.127.4.120"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 110,
+        "hostname": "mx-02-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "compleocs-de01i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.18.138",
+          "104.47.18.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx-01-eu-central-1.prod.hydra.sophos.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on mx-02-eu-central-1.prod.hydra.sophos.com",
+      "SSL/TLS is not supported on compleocs-de01i.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a include:spf.emailsignatures365.com include:spf.protection.outlook.com include:customers.prezly.io a:smtp.si.riconnect.de include:_spf.prod.hydra.sophos.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

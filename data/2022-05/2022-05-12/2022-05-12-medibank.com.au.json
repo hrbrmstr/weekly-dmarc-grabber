@@ -1,0 +1,124 @@
+{
+  "domain": "medibank.com.au",
+  "base_domain": "medibank.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.medibank.com.au",
+      "ns4.medibank.com.au",
+      "ns3.medibank.com.au",
+      "ns2.medibank.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.188"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.188"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0021ed01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0021ed01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:202.4.183.0/24 ip4:203.41.57.145 ip4:203.41.57.144 ip4:203.41.57.147 ip4:203.38.232.46 ip4:203.9.146.33 ip4:203.41.198.130 ip4:203.41.252.4 include:amazonses.com include:spf-0021ed01.pphosted.com include:maildelivery.com.au include:prodmail10a.successfactors.com include:prodmail10b.successfactors.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "prodmail10a.successfactors.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:itoperations@medibank.com.au; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:itoperations@medibank.com.au",
+    "valid": true,
+    "location": "medibank.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

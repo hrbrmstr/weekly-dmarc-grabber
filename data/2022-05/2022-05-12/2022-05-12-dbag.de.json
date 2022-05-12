@@ -1,0 +1,55 @@
+{
+  "domain": "dbag.de",
+  "base_domain": "dbag.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "patryk.ns.cloudflare.com",
+      "kate.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.195",
+          "195.245.230.198",
+          "195.245.231.66",
+          "195.245.231.71",
+          "85.158.142.211",
+          "85.158.142.216"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "46.137.95.199"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spf.messagelabs.com a:sma-cust.mpm-portal.de ip4:148.251.113.148 ip4:213.61.240.74 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

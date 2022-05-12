@@ -1,0 +1,567 @@
+{
+  "domain": "merck.com",
+  "base_domain": "merck.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cbru.br.ns.els-gms.att.net",
+      "cmtu.mt.ns.els-gms.att.net",
+      "dbru.br.ns.els-gms.att.net",
+      "dmtu.mt.ns.els-gms.att.net",
+      "ns6.customer.level3.net",
+      "ns9.customer.level3.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.hc4921-56.iphmx.com",
+        "addresses": [
+          "216.71.150.66",
+          "216.71.155.40"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.hc4921-56.iphmx.com",
+        "addresses": [
+          "216.71.150.66",
+          "216.71.155.40"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc4921-56.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc4921-56.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.merck.com include:spf2.merck.com include:spf3.merck.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.merck.com",
+          "record": "v=spf1 ip4:155.91.45.212 ip4:155.91.45.213 ip4:216.71.148.152 ip4:216.71.150.69 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "155.91.45.212",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.91.45.213",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.148.152",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.71.150.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.merck.com",
+          "record": "v=spf1 include:cmail1.com include:mailgun.org include:amazonses.com -all",
+          "dns_lookups": 6,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "cmail1.com",
+                "record": "v=spf1 ip4:103.28.42.0/24 ip4:27.126.146.0/24 ip4:146.88.28.0/24 ip4:163.47.180.0/22 ip4:203.55.21.0/24 ip4:204.75.142.0/24 include:aspmx.sailthru.com ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.28.42.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "27.126.146.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.88.28.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "163.47.180.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.55.21.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.75.142.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "aspmx.sailthru.com",
+                      "record": "v=spf1 ip4:64.34.47.128/27 ip4:64.34.57.192/26 ip4:65.39.215.0/24 ip4:192.64.236.0/24 ip4:163.47.180.0/23 ip4:192.64.237.0/24 ip4:173.228.155.0/24 ip4:204.153.121.0/24 ip4:162.208.119.181 ip4:147.75.65.174 ip4:147.75.65.173 ip4:192.64.238.0/24 ip4:147.75.98.190 ip4:139.178.64.159 ip4:139.178.64.195 ip4:34.194.25.167 ip4:34.194.144.120 -all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "64.34.47.128/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "64.34.57.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "65.39.215.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "192.64.236.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "163.47.180.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "192.64.237.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "173.228.155.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "204.153.121.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "162.208.119.181",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "147.75.65.174",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "147.75.65.173",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "192.64.238.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "147.75.98.190",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "139.178.64.159",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "139.178.64.195",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "34.194.25.167",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "34.194.144.120",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "mailgun.org",
+                "record": "v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all",
+                "dns_lookups": 2,
+                "parsed": {
+                  "pass": [],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "_spf.mailgun.org",
+                      "record": "v=spf1 ip4:209.61.151.0/24 ip4:166.78.68.0/22 ip4:198.61.254.0/23 ip4:192.237.158.0/23 ip4:23.253.182.0/23 ip4:104.130.96.0/28 ip4:146.20.113.0/24 ip4:146.20.191.0/24 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:104.130.122.0/23 ip4:146.20.112.0/26 ip4:161.38.192.0/20 ip4:143.55.224.0/21 ip4:143.55.232.0/22 ip4:159.112.240.0/20 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "209.61.151.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "166.78.68.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "198.61.254.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "192.237.158.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "23.253.182.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "104.130.96.0/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "146.20.113.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "146.20.191.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "159.135.224.0/20",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "69.72.32.0/20",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "104.130.122.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "146.20.112.0/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "161.38.192.0/20",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "143.55.224.0/21",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "143.55.232.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "159.112.240.0/20",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    },
+                    {
+                      "domain": "_spf.eu.mailgun.org",
+                      "record": "v=spf1 ip4:141.193.32.0/23 ip4:159.135.140.80/29 ip4:159.135.132.128/25 ip4:161.38.204.0/22 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ip4:143.55.236.0/22 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "141.193.32.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "159.135.140.80/29",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "159.135.132.128/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "161.38.204.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "87.253.232.0/21",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.189.236.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.211.120.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.250.236.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "143.55.236.0/22",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf3.merck.com",
+          "record": "v=spf1 ip4:72.3.154.154 ip4:74.84.203.40 ip4:52.164.219.227 ip4:52.204.156.226 ip4:167.89.70.174 ip4:192.196.163.72/29 ip4:72.28.124.128/28 ip4:192.196.163.80/28 ip4:192.196.182.160/28 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "72.3.154.154",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.84.203.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.164.219.227",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.204.156.226",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.70.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.196.163.72/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.28.124.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.196.163.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.196.182.160/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:merck@rua.agari.com; ruf=mailto:merck@ruf.agari.com",
+    "valid": true,
+    "location": "merck.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "merck@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "merck@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

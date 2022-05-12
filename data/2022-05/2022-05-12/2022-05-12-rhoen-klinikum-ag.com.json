@@ -1,0 +1,107 @@
+{
+  "domain": "rhoen-klinikum-ag.com",
+  "base_domain": "rhoen-klinikum-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.telekom.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 a mx a:e-learning.rhoen-klinikum-ag.com ip4:52.178.135.21 ip4:185.125.237.64 include:_spf.rexx-suite.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "84.16.246.10",
+          "mechanism": "a"
+        },
+        {
+          "value": "185.125.237.64",
+          "mechanism": "a"
+        },
+        {
+          "value": "52.178.135.21",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.125.237.64",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.rexx-suite.com",
+          "record": "v=spf1 a:mx01.rexx-systems.de ip4:92.51.187.64/27 ip4:83.169.51.224/27 ip4:80.237.187.32/28 ip4:91.250.74.128/27 ip4:87.230.74.128/28 ip4:91.250.95.64/26 ip4:85.25.89.0/24 -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.25.89.5",
+                "mechanism": "a"
+              },
+              {
+                "value": "92.51.187.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.169.51.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.237.187.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.74.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "87.230.74.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.250.95.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.25.89.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

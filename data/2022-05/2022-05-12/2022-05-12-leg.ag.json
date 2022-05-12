@@ -1,0 +1,60 @@
+{
+  "domain": "leg.ag",
+  "base_domain": "leg.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.plusnet.de",
+      "ns03.plusnet.de",
+      "ns02.plusnet.de",
+      "ns04.plusnet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw.immo-nrw.net",
+        "addresses": [
+          "212.202.113.179"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgw-2.immo-nrw.net",
+        "addresses": [
+          "212.202.113.185"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "ms87155315.msv1.invalid",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgw.immo-nrw.net",
+      "SSL/TLS is not supported on mailgw-2.immo-nrw.net",
+      "All nameservers failed to answer the query ms87155315.msv1.invalid. IN A: Server 127.0.0.53 UDP port 53 answered SERVFAIL. Consider using a TXT record to validate domain ownership in Office 365 instead.",
+      "ms87155315.msv1.invalid: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

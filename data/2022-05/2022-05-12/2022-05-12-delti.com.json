@@ -1,0 +1,83 @@
+{
+  "domain": "delti.com",
+  "base_domain": "delti.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "xdns.delti.com",
+      "ns8.colt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp2.delti.com",
+        "addresses": [
+          "2001:67c:568:10::200",
+          "91.231.97.49"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 ip4:91.231.97.0/24 ip6:2001:67c:568::/58 ip4:89.174.250.160/27 ip4:217.153.198.0/27 ip4:94.42.197.128/26 ip4:78.133.157.0/26 ip4:94.40.121.224/27 ip4:188.210.237.75 ip4:81.181.13.175 ip4:194.88.249.0/24 mx ptr ptr:netex.ro ptr:sofex.biz.pl ptr:sofex.info include:_spf.google.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine;",
+    "valid": true,
+    "location": "delti.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

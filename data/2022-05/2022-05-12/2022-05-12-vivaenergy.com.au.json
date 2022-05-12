@@ -1,0 +1,62 @@
+{
+  "domain": "vivaenergy.com.au",
+  "base_domain": "vivaenergy.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.mitdps.net",
+      "ns2.mitdps.net",
+      "ns1.mitdps.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 4,
+        "hostname": "mx1.hc73-88.ap.iphmx.com",
+        "addresses": [
+          "139.138.29.38",
+          "139.138.29.39",
+          "139.138.31.30",
+          "139.138.31.31"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 4,
+        "hostname": "mx2.hc73-88.ap.iphmx.com",
+        "addresses": [
+          "139.138.29.38",
+          "139.138.29.39",
+          "139.138.31.30",
+          "139.138.31.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 139.138.29.38 is esa1.hc73-88.ap.iphmx.com, but the A/AAAA DNS records for esa1.hc73-88.ap.iphmx.com do not resolve to 139.138.29.38",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 139.138.31.30 is esa3.hc73-88.ap.iphmx.com, but the A/AAAA DNS records for esa3.hc73-88.ap.iphmx.com do not resolve to 139.138.31.30",
+      "SSL/TLS is not supported on mx1.hc73-88.ap.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc73-88.ap.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf-a.vivaenergy.com.au include:spf.protection.outlook.com include:_spf.salesforce.com include:34.213.15.121.spf.hc300-86.r1.ces.cisco.com include:34.225.144.121.spf.hc300-86.r1.ces.cisco.com ip4:34.225.144.121 ip4:34.213.15.121 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

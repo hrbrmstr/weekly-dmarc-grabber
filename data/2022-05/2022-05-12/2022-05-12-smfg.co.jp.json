@@ -1,0 +1,57 @@
+{
+  "domain": "smfg.co.jp",
+  "base_domain": "smfg.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns010-k6a450cibrblbedj.k.d-53.info",
+      "ns010-k6a450cibrblbedj.k.d-53.net",
+      "ns010-k6a450cibrblbedj.k.d-53.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.122",
+          "210.130.202.123",
+          "210.130.202.97",
+          "210.130.202.98"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx6.securemx.jp",
+        "addresses": [
+          "2001:240:bb81::4:500",
+          "2001:240:bb81::4:501",
+          "2001:240:bb81::4:520",
+          "2001:240:bb81::4:521"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp",
+      "mx6.securemx.jp: [Errno 101] Network is unreachable"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +include:spf.securemx.jp +include:spf.smbc.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

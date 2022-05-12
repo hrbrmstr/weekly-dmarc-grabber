@@ -1,0 +1,113 @@
+{
+  "domain": "genpt.com",
+  "base_domain": "genpt.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns204.ultradns.net",
+      "pdns204.ultradns.org",
+      "pdns204.ultradns.biz",
+      "pdns204.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "genpt-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.10",
+          "104.47.73.138"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "genpt-com.mail.protection.outlook.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 104.47.73.138 is mail-mw2nam080138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-mw2nam080138.inbound.protection.outlook.com do not resolve to 104.47.73.138",
+      "SSL/TLS is not supported on genpt-com.mail.protection.outlook.com",
+      "Hostname genpt-com.mail.protection.outlook.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc3618-75.iphmx.com include:spf1.genpt.com include:spf2.genpt.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:_demarc@genpt.com; ruf=mailto:_demarc@genpt.com; fo=1; adkim=r; aspf=r; rf=afrf; ri=3600; sp=none",
+    "valid": true,
+    "location": "genpt.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "_demarc@genpt.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "_demarc@genpt.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      }
+    }
+  }
+}

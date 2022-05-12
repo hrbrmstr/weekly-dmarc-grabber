@@ -1,0 +1,104 @@
+{
+  "domain": "cummins.com",
+  "base_domain": "cummins.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns21.cummins.com",
+      "dns2.cummins.com",
+      "dns1.cummins.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "cummins-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.58.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cummins-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spfces.cummins.com include:_spf.salesforce.com include:_spf.atlassian.net exists:%{i}.spf.hc3777-42.iphmx.com ip4:192.158.34.25 ip4:192.158.61.172 ip4:72.32.179.63 ip4:142.0.164.128 ip4:69.20.98.225 ip4:69.25.128.106 ip4:66.129.70.169 ip4:178.255.226.21 ip4:209.167.231.208/28 ip4:204.92.19.160/29 ip4:192.158.61.231 ip4:192.158.61.232 ip4:64.151.119.33 ip4:64.151.112.130 ip4:67.221.239.15 ip4:67.221.239.16 ip4:81.201.100.149 ip4:192.158.61.149 ip4:192.158.41.149 ip4:146.91.48.123 ip4:192.158.40.219 ip4:146.91.48.121 ip4:192.158.40.215 ip4:68.233.76.0/23 ip4:142.0.84.188/31 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@cummins.com;ruf=mailto:dmarc@cummins.com",
+    "valid": true,
+    "location": "cummins.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@cummins.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@cummins.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

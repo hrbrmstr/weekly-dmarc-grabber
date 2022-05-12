@@ -1,0 +1,182 @@
+{
+  "domain": "meiji.com",
+  "base_domain": "meiji.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns102.meiji.co.jp",
+      "ns101.meiji.co.jp",
+      "ns102.sinfony.ad.jp",
+      "ns101.sinfony.ad.jp",
+      "ns01.sinfony.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.175"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.175"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00532c02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00532c02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.217.34.0/26 ip4:202.213.237.64/27 ip4:202.78.217.150 include:spf-00532c02.pphosted.com include:spf.meiji.smtps.jp include:md92.maildealer.jp mx ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.217.34.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.213.237.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.78.217.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "mxa-00532c02.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-00532c02.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00532c02.pphosted.com",
+          "record": "v=spf1 ip4:205.220.177.175 ip4:205.220.165.175",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.177.175",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.175",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.meiji.smtps.jp",
+          "record": "v=spf1 ip4:163.43.136.179 ip4:153.125.144.178 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "163.43.136.179",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.125.144.178",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "md92.maildealer.jp",
+          "record": "v=spf1 a include:spf.maildealer.jp ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "150.66.58.153",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.maildealer.jp",
+                "record": "v=spf1 ip4:150.66.55.197/32 ip4:58.191.47.9/32 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "150.66.55.197/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.191.47.9/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

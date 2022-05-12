@@ -1,0 +1,104 @@
+{
+  "domain": "vodafone.com",
+  "base_domain": "vodafone.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.vodafone.com",
+      "ns3.vodafone.com",
+      "ns1.vodafone.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "vodafone-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.138",
+          "104.47.9.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on vodafone-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:195.232.248.108/30 ip4:178.249.98.16/29 include:spf2.vodafone.com ip4:203.109.136.0/24 ip4:65.254.253.0/24 ip4:195.232.248.240/28 ip4:195.232.245.160/28 include:spf1.vodafone.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:adeeb5c538f9684@rep.dmarcanalyzer.com; ruf=mailto:adeeb5c538f9684@for.dmarcanalyzer.com; pct=100; sp=none; fo=1",
+    "valid": true,
+    "location": "vodafone.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

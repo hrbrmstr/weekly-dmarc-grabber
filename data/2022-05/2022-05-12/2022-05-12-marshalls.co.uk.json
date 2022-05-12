@@ -1,0 +1,73 @@
+{
+  "domain": "marshalls.co.uk",
+  "base_domain": "marshalls.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.phase8.net",
+      "ns1.phase8.net",
+      "ns2.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.241",
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.201 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.201",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.211 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.211",
+      "All nameservers failed to answer the query eu-smtp-inbound-1.mimecast.com. IN A: Server 127.0.0.53 UDP port 53 answered A DNS query response does not respond to the question asked.",
+      "The reverse DNS of 195.130.217.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.241",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.201 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 91.220.42.201",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 91.220.42.211 is eu-smtp-inbound-2.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-2.mimecast.com do not resolve to 91.220.42.211",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:eu._netblocks.mimecast.com include:sendgrid.net include:docebosaas.com ip4:212.139.30.43 ip4:212.139.30.42 ip4:81.142.44.101 ip4 194.72.180.198 ip4 194.72.180.172 include:spf.emailsignatures365.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "marshalls.co.uk: Expected mechanism at position 144 in: v=spf1 include:eu._netblocks.mimecast.com include:sendgrid.net include:docebosaas.com ip4:212.139.30.43 ip4:212.139.30.42 ip4:81.142.44.101 ip4 194.72.180.198 ip4 194.72.180.172 include:spf.emailsignatures365.com -all"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

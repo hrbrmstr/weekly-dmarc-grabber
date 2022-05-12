@@ -1,0 +1,227 @@
+{
+  "domain": "carmax.com",
+  "base_domain": "carmax.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-107.akam.net",
+      "a12-64.akam.net",
+      "a16-66.akam.net",
+      "a4-67.akam.net",
+      "a9-64.akam.net",
+      "a13-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mxa-001ffb01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.40"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mxb-001ffb01.gslb.pphosted.com",
+        "addresses": [
+          "208.84.65.152"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 67.231.152.40 is mx0b-001ffb01.pphosted.com, but the A/AAAA DNS records for mx0b-001ffb01.pphosted.com do not resolve to 67.231.152.40",
+      "mxa-001ffb01.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-001ffb01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:184.73.253.171/32 ip4:216.251.248.18 ip4:165.193.56.42 ip4:69.65.34.50 ip4:69.65.34.61 include:spf-001ffb01.pphosted.com a:b.spf.service-now.com exists:%{i}._spf.mta.salesforce.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "184.73.253.171/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.251.248.18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "165.193.56.42",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "69.65.34.50",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "69.65.34.61",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "149.96.5.2",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.5.209",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.5.3",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.5.6",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.5.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.6.2",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.6.209",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.6.3",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.6.6",
+          "mechanism": "a"
+        },
+        {
+          "value": "149.96.6.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "199.91.136.28",
+          "mechanism": "a"
+        },
+        {
+          "value": "199.91.140.28",
+          "mechanism": "a"
+        },
+        {
+          "value": "%{i}._spf.mta.salesforce.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-001ffb01.pphosted.com",
+          "record": "v=spf1 ip4:67.231.152.40 ip4:208.84.65.152",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.152.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.84.65.152",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "carmax.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

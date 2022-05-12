@@ -1,0 +1,42 @@
+{
+  "domain": "fraport.de",
+  "base_domain": "fraport.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.inwx.eu",
+      "ns2.inwx.de",
+      "ns.inwx.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "fraport-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.5.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on fraport-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:155.56.221.13 ip4:155.56.221.14 ip4:91.203.200.74 ip4:193.201.168.38 ip4:149.72.224.87 ip4:93.240.172.70 ip4:146.234.206.18 include:spf.protection.outlook.com include:mailout-1.fraport.plusline.net mx ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

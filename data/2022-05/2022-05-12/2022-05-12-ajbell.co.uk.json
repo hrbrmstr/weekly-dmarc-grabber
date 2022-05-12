@@ -1,0 +1,450 @@
+{
+  "domain": "ajbell.co.uk",
+  "base_domain": "ajbell.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-197.awsdns-24.com",
+      "ns-980.awsdns-58.net",
+      "ns-1192.awsdns-21.org",
+      "ns-1782.awsdns-30.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.201 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.201",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.211 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.211",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 195.130.217.241 is eu-smtp-inbound-1.mimecast.com, but the A/AAAA DNS records for eu-smtp-inbound-1.mimecast.com do not resolve to 195.130.217.241",
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_netblocks.mimecast.com include:_spf.dayforcehcm.com include:spf.uk.exclaimer.net ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "eu-smtp-inbound-1.mimecast.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "eu-smtp-inbound-2.mimecast.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_netblocks.mimecast.com",
+          "record": "v=spf1 include:eu._netblocks.mimecast.com include:us._netblocks.mimecast.com include:za._netblocks.mimecast.com include:de._netblocks.mimecast.com include:au._netblocks.mimecast.com ~all",
+          "dns_lookups": 5,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "eu._netblocks.mimecast.com",
+                "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "195.130.217.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "91.220.42.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.101.78.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "207.82.80.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "213.167.81.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.7.207.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "213.167.75.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.58.85.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.58.86.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.7.206.0/25",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "us._netblocks.mimecast.com",
+                "record": "v=spf1 ip4:207.211.31.0/25 ip4:205.139.110.0/24 ip4:216.205.24.0/24 ip4:170.10.129.0/24 ip4:63.128.21.0/24 ip4:170.10.133.0/24 ip4:185.58.84.93/32 ip4:207.211.41.113/32 ip4:207.211.30.64/26 ip4:207.211.30.128/25 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "207.211.31.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.139.110.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.205.24.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.10.129.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "63.128.21.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.10.133.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.58.84.93/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "207.211.41.113/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "207.211.30.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "207.211.30.128/25",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "za._netblocks.mimecast.com",
+                "record": "v=spf1 ip4:41.74.192.0/22 ip4:41.74.200.0/23 ip4:41.74.196.0/22 ip4:41.74.204.0/23 ip4:41.74.206.0/24 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "41.74.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "41.74.200.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "41.74.196.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "41.74.204.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "41.74.206.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "de._netblocks.mimecast.com",
+                "record": "v=spf1 ip4:51.163.158.0/24 ip4:194.104.109.0/24 ip4:62.140.7.0/24 ip4:194.104.111.0/24 ip4:51.163.159.21/32 ip4:62.140.10.21/32 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.163.158.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.104.109.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.140.7.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.104.111.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.163.159.21/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.140.10.21/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "au._netblocks.mimecast.com",
+                "record": "v=spf1 ip4:103.13.69.0/24 ip4:124.47.150.0/24 ip4:124.47.189.0/24 ip4:103.96.23.0/24 ip4:103.96.21.0/24 ip4:180.189.28.0/24 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.13.69.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "124.47.150.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "124.47.189.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.96.23.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.96.21.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.189.28.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.dayforcehcm.com",
+          "record": "v=spf1 ip4:67.231.158.158 ip4:67.231.151.29 ip4:170.153.166.12 ip4:170.153.166.13 ip4:170.153.66.12 ip4:170.153.66.13 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.158.158",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.151.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.153.166.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.153.166.13",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.153.66.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.153.66.13",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.uk.exclaimer.net",
+          "record": "v=spf1 ip4:51.140.37.132 ip4:51.141.5.228 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.140.37.132",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.141.5.228",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:DMARCresponses@ajbell.co.uk",
+    "valid": true,
+    "location": "ajbell.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARCresponses@ajbell.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

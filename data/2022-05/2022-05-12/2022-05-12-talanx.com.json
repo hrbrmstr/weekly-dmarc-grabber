@@ -1,0 +1,72 @@
+{
+  "domain": "talanx.com",
+  "base_domain": "talanx.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.eurodns.com",
+      "ns3.eurodns.com",
+      "ns2.eurodns.com",
+      "ns1.eurodns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx19a.antispameurope.com",
+        "addresses": [
+          "83.246.65.85",
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx19b.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx19c.antispameurope.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx19d.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx19a.antispameurope.com: Connection timed out",
+      "SSL/TLS is not supported on mx19b.antispameurope.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on mx19c.antispameurope.com",
+      "SSL/TLS is not supported on mx19d.antispameurope.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.hornetsecurity.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

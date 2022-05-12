@@ -1,0 +1,134 @@
+{
+  "domain": "seqifund.com",
+  "base_domain": "seqifund.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "james.ns.cloudflare.com",
+      "alina.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "seqifund-com.mx1-uk.mailanyone.net",
+        "addresses": [
+          "192.162.217.4"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "seqifund-com.mx2-uk.mailanyone.net",
+        "addresses": [
+          "192.162.216.4"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "seqifund-com.mx3-uk.mailanyone.net",
+        "addresses": [
+          "192.162.217.4"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "seqifund-com.mx1-uk.mailanyone.net: Connection timed out",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 192.162.216.4 is mx4.electric.net, but the A/AAAA DNS records for mx4.electric.net do not resolve to 192.162.216.4",
+      "seqifund-com.mx2-uk.mailanyone.net: Connection timed out",
+      "seqifund-com.mx3-uk.mailanyone.net: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.mailanyone.net -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.mailanyone.net",
+          "record": "v=spf1 ip4:72.35.23.0/24 ip4:72.35.12.0/24 ip4:192.162.216.0/22 ip4:208.70.128.0/21 ip4:185.38.180.0/22 ip4:89.104.206.0/23 ip4:68.71.200.64/27 ip6:2a01:77c0:1180::/46 ip6:2a01:77c0:6::/47 ip6:2001:978:2a01::/48 ip6:2001:978:2a02::/48 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "72.35.23.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.35.12.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.162.216.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.70.128.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.38.180.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.104.206.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.71.200.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:77c0:1180::/46",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:77c0:6::/47",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:978:2a01::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:978:2a02::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

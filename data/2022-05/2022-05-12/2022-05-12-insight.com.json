@@ -1,0 +1,113 @@
+{
+  "domain": "insight.com",
+  "base_domain": "insight.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.insight.com",
+      "ns1.insight.com",
+      "ns2.insight.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3834-14.iphmx.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc3834-14.iphmx.com",
+        "addresses": [
+          "139.138.35.236",
+          "139.138.57.108"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on mx1.hc3834-14.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc3834-14.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:mktomail.com include:authsmtp.com include:spf.protection.outlook.com ip4:13.239.12.29 ip4:52.65.32.49 ip4:54.206.33.55 ip4:52.62.183.227 ip4:52.65.101.124 ip4:13.55.77.144 ip4:54.206.54.103 ip4:54.206.43.60 ip4:54.206.49.244 ip4:54.206.46.146 ip4:52.62.114.118 ip4:52.62.171.197 ip4:139.138.35.239 ip4:139.138.57.127 ip4:98.129.167.74 ip4:98.129.167.75 ip4:72.32.30.224 ip4:204.10.20.27 ip4:216.81.144.165 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; ri=3600; rua=mailto:insight-enterprises@rua.dmp.cisco.com; ruf=mailto:insight-enterprises@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "insight.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "insight-enterprises@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "insight-enterprises@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

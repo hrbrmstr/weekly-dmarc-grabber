@@ -1,0 +1,120 @@
+{
+  "domain": "fmglobal.com",
+  "base_domain": "fmglobal.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cbru.br.ns.els-gms.att.net",
+      "cmtu.mt.ns.els-gms.att.net",
+      "pdns71.ultradns.net",
+      "pdns71.ultradns.com",
+      "pdns71.ultradns.biz",
+      "pdns71.ultradns.co.uk",
+      "pdns71.ultradns.info",
+      "pdns71.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-000c4e02.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.200"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-000c4e02.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.203"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-000c4e02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-000c4e02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com include:spf.protection.outlook.com include:spf-000c4e02.pphosted.com include:_spf.qemailserver.com include:asp-spf1.yardi.com include:asp-spf2.yardi.com ip4:216.205.90.92 ip4:170.52.45.210 ip4:170.52.47.1 ip4:170.52.45.1 ip4:12.130.57.15 ip4:52.52.50.165 ip4:52.52.50.160 ip4:72.32.141.66 ip4:149.72.180.187 ip4:149.72.180.177 include:spf.marriott.com include:marketing.dynamics.com ~all",
+    "valid": false,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com include:spf.protection.outlook.com include:spf-000c4e02.pphosted.com include:_spf.qemailserver.com include:asp-spf1.yardi.com include:asp-spf2.yardi.com ip4:216.205.90.92 ip4:170.52.45.210 ip4:170.52.47. 1 ip4:170.52.45.1 ip4:12.130.57.15 ip4:52.52.50.165 ip4:52.52.50.160 ip4:72.32.141.66 ip4:149.72.180.187 ip4:149.72.180.177 include:spf.marriott.com include:marketing.dynamics.com ~all"
+    ],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "fmglobal.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "domain": "yuden.co.jp",
+  "base_domain": "yuden.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns018-hfutddtqgd2g0ab6.h.d-53.jp",
+      "ns018-hfutddtqgd2g0ab6.h.d-53.info",
+      "ns018-hfutddtqgd2g0ab6.h.d-53.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "gw5013.fortimail.com",
+        "addresses": [
+          "173.243.135.13"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.yuden.co.jp -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.yuden.co.jp",
+          "record": "v=spf1 ip4:210.237.180.192/26 ip4:210.238.12.0/24 ip4:211.127.242.33/29  ip4:173.243.135.13/32 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.237.180.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.238.12.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "211.127.242.33/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.243.135.13/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

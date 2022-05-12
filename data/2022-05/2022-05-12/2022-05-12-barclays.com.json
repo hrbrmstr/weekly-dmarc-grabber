@@ -1,0 +1,122 @@
+{
+  "domain": "barclays.com",
+  "base_domain": "barclays.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.barcap.com",
+      "ns3.barcap.com",
+      "ns7.barcap.com",
+      "a1-71.akam.net",
+      "a12-64.akam.net",
+      "a11-67.akam.net",
+      "a9-66.akam.net",
+      "a18-65.akam.net",
+      "a10-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.193",
+          "195.245.230.199",
+          "195.245.231.64",
+          "195.245.231.73"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3a.eu.messagelabs.com",
+        "addresses": [
+          "46.137.95.199"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster3.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster3a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com include:servers.mcsv.net ip4:160.34.64.28 include:_spf.salesforce.com ip4:208.185.235.45 ip4:212.70.67.12 ip4:213.200.109.65 ip4:205.217.12.155 ip4:180.87.148.12 ip4:89.187.113.3 include:successfactors.eu include:spf1.barclays.com ip4:216.74.162.17 ip4:216.74.162.18 ip4:94.236.35.193 ip4:193.148.38.199 ip4:217.11.0.38 ip4:94.236.35.193 ip4:162.13.228.166 ip4:83.138.173.144 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=none;fo=1;ri=3600;rua=mailto:barclays@rua.agari.com;ruf=mailto:barclays@ruf.agari.com",
+    "valid": true,
+    "location": "barclays.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "barclays@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "barclays@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

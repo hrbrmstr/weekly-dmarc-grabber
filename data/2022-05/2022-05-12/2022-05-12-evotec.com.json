@@ -1,0 +1,104 @@
+{
+  "domain": "evotec.com",
+  "base_domain": "evotec.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.net-server.de",
+      "ns1.net-server.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 15,
+        "hostname": "cellcultureservice.in.tmes.trendmicro.eu",
+        "addresses": [
+          "18.185.115.145",
+          "18.185.115.146",
+          "18.185.115.147"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cellcultureservice.in.tmes.trendmicro.eu"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf2.evotec.com ip4:194.168.179.195 ip4:194.45.20.68 ip4:31.172.110.12 ip4:212.47.230.171 include:spf.protection.outlook.com include:spf.tmes.trendmicro.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.reports@evotec.com; ruf=mailto:dmarc.reports@evotec.com;fo=1",
+    "valid": true,
+    "location": "evotec.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reports@evotec.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reports@evotec.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
