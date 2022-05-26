@@ -1,0 +1,101 @@
+{
+  "domain": "sfc.com",
+  "base_domain": "sfc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "kirk.ns.cloudflare.com",
+      "athena.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw.sfc.com",
+        "addresses": [
+          "212.144.238.73"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mailgw.sfc.com ip4:62.165.65.0/24 ip4:216.123.211.227 ip4:134.119.45.182 include:aspmx.pardot.com include:_spf.salesforce.com include:sendgrid.net include:fdspfus.freshemail.io include:mailing.eqs.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmark-aggregate@sfc.com; ruf=mailto:dmark-forensik@sfc.com; fo=1; adkim=r; aspf=r; pct=100; rf=afrf;",
+    "valid": true,
+    "location": "sfc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmark-aggregate@sfc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmark-forensik@sfc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

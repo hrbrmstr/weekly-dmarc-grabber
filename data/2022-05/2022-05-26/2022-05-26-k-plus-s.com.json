@@ -1,0 +1,354 @@
+{
+  "domain": "k-plus-s.com",
+  "base_domain": "k-plus-s.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.bios-online.de",
+      "ns1.bios-online.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx-in01.eu.retarus.com",
+        "addresses": [
+          "94.199.92.130"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx-in02.eu.retarus.com",
+        "addresses": [
+          "94.199.89.39"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx-in01.eu.retarus.com: Connection timed out",
+      "mx-in02.eu.retarus.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:83.125.118.114 a:mailout.mms-support.de include:_spf.retarus.com include:spfa.myconvento.com include:email.event-hub.ipreo.com include:hosting_spf.hrd-portal.net include:mail.k-plus-s.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "83.125.118.114",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "83.125.118.114",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.retarus.com",
+          "record": "v=spf1 ip4:94.199.88.0/22 ip4:82.135.18.0/23 ip4:62.245.148.0/26 ip4:62.134.45.32/28 ip4:94.199.92.0/23 ip4:185.93.140.0/23 ip4:103.196.252.0/22 ip4:185.215.216.0/26 ip4:207.126.138.0/22 ip4:199.204.13.32/29 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "94.199.88.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.135.18.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.245.148.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.134.45.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.199.92.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.93.140.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.196.252.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.216.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.126.138.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.204.13.32/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfa.myconvento.com",
+          "record": "v=spf1 ip4:46.20.47.88 ip4:46.20.47.90 ip4:46.20.47.91 ip4:46.20.47.92 ip4:46.20.47.93 ip4:46.20.47.94 ip4:85.14.241.66 ip4:85.14.241.67 ip4:85.14.241.68 ip4:85.14.241.69 ip4:85.14.241.70 ip4:5.199.141.69",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "46.20.47.88",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.199.141.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "email.event-hub.ipreo.com",
+          "record": "v=spf1 ip4:54.240.45.174 ip4:69.169.238.206 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.240.45.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.238.206",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "hosting_spf.hrd-portal.net",
+          "record": "v=spf1 include:_spf.bulkmail.m-online.net ip4:212.18.0.9 ip4:212.18.0.10 ip4:195.82.36.52 ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.0.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.0.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "195.82.36.52",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.bulkmail.m-online.net",
+                "record": "v=spf1 ip4:62.245.181.250 ip4:212.114.242.106 ip6:2001:a60:0:1002:5054:ff:fedf:6c4/128 ip6:2001:a60:0:1804:5054:ff:fef8:1983/128",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "62.245.181.250",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "212.114.242.106",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2001:a60:0:1002:5054:ff:fedf:6c4/128",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2001:a60:0:1804:5054:ff:fef8:1983/128",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mail.k-plus-s.com",
+          "record": "v=spf1 include:amazonses.com ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

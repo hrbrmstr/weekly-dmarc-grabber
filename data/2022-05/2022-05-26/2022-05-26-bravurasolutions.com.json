@@ -1,0 +1,63 @@
+{
+  "domain": "bravurasolutions.com",
+  "base_domain": "bravurasolutions.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "augustus.ns.cloudflare.com",
+      "hadlee.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on eu-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.messagelabs.com ip4:202.52.41.1 include:_netblocks.mimecast.com ip4:62.208.155.99 ip4:62.208.155.100 ip4:81.145.193.200/30 ip4:213.86.59.168/30 include:spf.avature.net ip4:89.185.150.0/24 ip4:52.65.40.242 ip4:13.239.44.32 -all",
+    "valid": false,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 include:spf.messagelabs.com ip4:202.52.41.1 ip4:118.127.81.35 ip4:203.213.99.44 include:_netblocks.mimecast.com ip4:62.208.155.99 ip4:62.208.155.100 ip4:81.145.193.200/30 ip4:213.86.59.168/30 include:spf.avature.net ip4:89.185.150.0/24 -all"
+    ],
+    "error": "Parsing the SPF record requires 14/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 14
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "domain": "manpowergroup.com",
+  "base_domain": "manpowergroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "rocky.ns.cloudflare.com",
+      "ulla.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=85gh6fem._spf._d.mim.ec",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:fb26d7ff24f5417@rep.dmarcanalyzer.com; ruf=mailto:fb26d7ff24f5417@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "manpowergroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb26d7ff24f5417@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb26d7ff24f5417@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

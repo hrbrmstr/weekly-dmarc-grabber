@@ -1,0 +1,493 @@
+{
+  "domain": "matthey.com",
+  "base_domain": "matthey.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns8.netnames.net",
+      "ns7.netnames.net",
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns1.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "matthey-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.1.36",
+          "104.47.2.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on matthey-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:mailrelay.crossknowledge.com include:spf.protection.outlook.com include:ipreomail.com include:_spfusa.qmarkets-dns.org include:spf5.matthey.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [
+      "mailrelay.crossknowledge.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "mailrelay.crossknowledge.com",
+          "record": "v=spf1 mx ip4:85.31.192.42/32 ip4:85.31.193.42/32 ip4:85.31.193.7/32 ip4:174.129.245.244/32 include:amazonses.com -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.31.192.42/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.31.193.42/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.31.193.7/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "174.129.245.244/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "mailrelay.crossknowledge.com does not have any MX records"
+          ]
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ipreomail.com",
+          "record": "v=spf1 ip4:66.17.251.47 ip4:80.169.95.198 ip4:80.169.95.218 ip4:66.35.231.0/27 ip4:216.74.162.0/27 ip4:91.209.197.0/28 ip4:91.229.201.7 ip4:122.248.252.54 ip4:54.151.162.172 ip4:178.17.33.133 ip4:216.74.162.151 ip4:34.198.150.124 ip4:18.213.83.215 ip4:4.78.42.137 ip4:4.78.42.147 ip4:65.205.75.147 ip4:65.205.75.148 ip4:170.207.0.0/16 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.17.251.47",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.198",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.35.231.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.209.197.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.229.201.7",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "122.248.252.54",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.151.162.172",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.17.33.133",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.198.150.124",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.213.83.215",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.207.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spfusa.qmarkets-dns.org",
+          "record": "v=spf1 ip4:52.71.173.77/32 ip4:52.70.174.149/32 ip4:18.211.34.117/32 ip4:52.86.162.52/32 ip4:54.174.173.233/32 ip4:18.211.62.184/32 ip4:107.23.117.123/32 ip4:52.211.58.37/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.71.173.77/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.70.174.149/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.211.34.117/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.86.162.52/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.173.233/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.211.62.184/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "107.23.117.123/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.211.58.37/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf5.matthey.com",
+          "record": "v=spf1 ip4:205.182.146.35 ip4:205.182.151.15 ip4:178.21.131.158 ip4:185.136.190.88 ip4:185.136.190.188 ip4:208.185.229.0/24 ip4:208.185.235.0/24 ip4:148.59.108.0/23 ip4:148.59.106.0/23 ip4:62.13.153.174 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.182.146.35",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.182.151.15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.21.131.158",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.136.190.88",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.136.190.188",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.185.229.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.185.235.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.59.108.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.59.106.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.13.153.174",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.matthey@matthey.com",
+    "valid": true,
+    "location": "matthey.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.matthey@matthey.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "domain": "ms-ad-hd.com",
+  "base_domain": "ms-ad-hd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a8-65.akam.net",
+      "a5-64.akam.net",
+      "a1-52.akam.net",
+      "a2-65.akam.net",
+      "a26-66.akam.net",
+      "a3-67.akam.net",
+      "ns3.index.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mskigw06.index.or.jp",
+        "addresses": [
+          "133.250.164.163"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mskigw05.index.or.jp",
+        "addresses": [
+          "133.250.164.162"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mskigw06.index.or.jp",
+      "SSL/TLS is not supported on mskigw05.index.or.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.ms-ins.com include:email.event-hub.ipreo.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.ms-ins.com",
+          "record": "v=spf1 ip4:203.191.250.18/32 ip4:203.191.250.19/32 ip4:203.191.250.22/32 ip4:203.191.250.23/32 ip4:192.50.145.80/28 ip4:133.250.164.160/27 ip4:133.250.169.93 ip4:133.250.169.94 ip4:133.250.188.90 ip4:133.250.188.91 ip4:133.250.188.92 ip4:133.250.188.93 ip4:133.250.188.94 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "203.191.250.18/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.250.19/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.250.22/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.250.23/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.50.145.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.164.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.169.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.169.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.188.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.188.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.188.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.188.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.250.188.94",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "email.event-hub.ipreo.com",
+          "record": "v=spf1 ip4:54.240.45.174 ip4:69.169.238.206 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.240.45.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.238.206",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
