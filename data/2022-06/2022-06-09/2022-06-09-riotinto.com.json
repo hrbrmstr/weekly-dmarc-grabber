@@ -1,0 +1,107 @@
+{
+  "domain": "riotinto.com",
+  "base_domain": "riotinto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns16.domainnetwork.net",
+      "dns15.domainnetwork.net",
+      "dns14.domainnetwork.net",
+      "dns13.domainnetwork.com",
+      "dns12.domainnetwork.com",
+      "dns11.domainnetwork.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "riotinto-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.59.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on riotinto-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:203.15.191.188/32 ip4:203.15.191.189/32 ip4:203.15.191.252/32 ip4:203.15.191.253/32 ip4:203.15.190.226/32 ip4:203.15.190.227/32 ip4:208.185.229.0/24 ip4:208.185.235.0/24 ip4:148.59.108.0/23 ip4:148.59.106.0/23 ip4:148.59.107.25/32 ip4:148.59.109.25/32 ip4:182.160.163.188/32 ip4:157.133.127.52/32 ip4:205.236.155.25/32 ip4:69.20.6.34/32 ip4:210.80.140.141/32 ip4:210.80.140.142/32 ip4:87.253.233.6/32 ip4:3.226.40.151/32 include:spf.protection.outlook.com include:spf.mandrillapp.com include:_spf.salesforce.com include:servers.mcsv.net include:spf1.fraedom.com ip4:159.135.229.88/32 ip4:159.135.237.231/32 ip4:207.134.161.197/32 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc@riotinto.com; ruf=mailto:dmarc@riotinto.com",
+    "valid": true,
+    "location": "riotinto.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@riotinto.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@riotinto.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "fuchs.com",
+  "base_domain": "fuchs.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.manet.de",
+      "ns1.manet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "fuchs-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.6.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on fuchs-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:mailing.eqs.com include:spf.protection.outlook.com include:spf.minicrm.io include:_spf.netigate.se include:_spf.salesforce.com include:successfactors.eu ip4:185.10.195.56 ip4:104.46.53.2 ip4:199.102.84.181 ip4:212.43.65.82 ip4:212.43.65.64/28 ip4:212.65.3.37 ip4:212.65.3.34 ip4:178.77.121.136 ip4:45.55.49.33 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

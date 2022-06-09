@@ -1,0 +1,117 @@
+{
+  "domain": "ulta.com",
+  "base_domain": "ulta.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-188.akam.net",
+      "a4-64.akam.net",
+      "a26-67.akam.net",
+      "a5-65.akam.net",
+      "a10-65.akam.net",
+      "a11-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001e8203.gslb.pphosted.com",
+        "addresses": [
+          "148.163.135.152"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001e8203.gslb.pphosted.com",
+        "addresses": [
+          "148.163.139.152"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-001e8203.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-001e8203.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spf-001e8203.pphosted.com ip4:104.20.91.144/28 ip4:69.84.87.208/28 ip4:38.105.5.96/28 ip4:104.129.65.0/29 ip4:198.207.147.223/26 ip4:205.223.83.136/29 ip4:104.193.232.0/26 ip4:3.208.74.172 ip4:13.57.137.3 ip4:52.23.113.139 ip4:54.177.118.13 ip4:12.47.172.3 ip4:166.78.226.84 ip4:166.78.81.177 ip4:161.47.114.21 ip4:166.78.77.179 ip4:198.61.246.240 ip4:192.243.221.100 ip4:104.46.104.121 ip4:62.216.254.4 ip4:198.61.240.18 include:cust-spf.exacttarget.com include:servers.mcsv.net a:web.q4press.com include:spf.prod.cadienttalent.com include:mailgun.org ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;",
+    "valid": true,
+    "location": "ulta.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

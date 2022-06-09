@@ -1,0 +1,49 @@
+{
+  "domain": "genusplc.com",
+  "base_domain": "genusplc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns14.domaincontrol.com",
+      "pdns13.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004f4302.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.152"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004f4302.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.152"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-004f4302.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-004f4302.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "genusplc.com has multiple SPF TXT records"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; fo=1; ri=3600; rua=mailto:mailto:Security@genusplc.com; ruf=mailto:Security@genusplc.com",
+    "valid": false,
+    "location": "genusplc.com",
+    "error": "mailto:mailto:Security@genusplc.com is not a valid DMARC report URI"
+  }
+}

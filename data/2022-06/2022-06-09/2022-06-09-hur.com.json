@@ -1,0 +1,103 @@
+{
+  "domain": "hur.com",
+  "base_domain": "hur.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.alphacron.de",
+      "ns4.alphacron.de",
+      "ns3.alphacron.de",
+      "ns2.alphacron.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ssecmail01.hur.com",
+        "addresses": [
+          "134.97.2.201"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "ssecmail02.hur.com",
+        "addresses": [
+          "134.97.2.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on ssecmail01.hur.com",
+      "SSL/TLS is not supported on ssecmail02.hur.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "hur.com has multiple SPF TXT records"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:noc@hur.com;",
+    "valid": true,
+    "location": "hur.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "noc@hur.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "domain": "visa.com",
+  "base_domain": "visa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0090.secondary.cloudflare.com",
+      "ns0210.secondary.cloudflare.com",
+      "a9-64.akam.net",
+      "a2-65.akam.net",
+      "a10-64.akam.net",
+      "a1-190.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "portal1i.visa.com",
+        "addresses": [
+          "198.241.159.109"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal2i.visa.com",
+        "addresses": [
+          "198.241.174.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal3i.visa.com",
+        "addresses": [
+          "198.241.159.89"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "portal4i.visa.com",
+        "addresses": [
+          "198.241.174.183"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on portal1i.visa.com",
+      "SSL/TLS is not supported on portal2i.visa.com",
+      "SSL/TLS is not supported on portal3i.visa.com",
+      "SSL/TLS is not supported on portal4i.visa.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:198.241.162.0/24 ip4:198.241.168.0/24 ip4:198.241.159.0/24 ip4:72.46.234.0/24 ip4:66.185.181.0/24 ip4:198.241.174.0/24 ip4:74.116.91.0/24 ip4:198.80.42.3 ip4:69.20.125.232 ip4:198.241.175.106 ip4:216.251.253.98 ip4:67.208.216.61 ip4:198.247.174.175 ip4:67.220.120.24 ip4:66.185.186.2 ip4:198.241.171.12 ip4:204.75.142.27 ip4:66.165.175.189 ip4:67.192.139.34 ip4:67.192.157.83 ip4:174.143.100.191 ip4:198.241.158.43 ip4:128.242.118.200 ip4:198.241.207.0/24 ip4:198.241.206.0/24 exists:%{i}.spf.hc3429-92.iphmx.com exists:%{i}.spf.hc5864-50.iphmx.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "198.241.162.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.168.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.159.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "72.46.234.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.185.181.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.174.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "74.116.91.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.80.42.3",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "69.20.125.232",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.175.106",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.251.253.98",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.208.216.61",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.247.174.175",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.220.120.24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.185.186.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.171.12",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.75.142.27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.165.175.189",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.192.139.34",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.192.157.83",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "174.143.100.191",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.158.43",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "128.242.118.200",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.207.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.241.206.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "%{i}.spf.hc3429-92.iphmx.com",
+          "mechanism": "exists"
+        },
+        {
+          "value": "%{i}.spf.hc5864-50.iphmx.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; fo=1; rua=mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:dmarc_afrf@auth.returnpath.net; rf=afrf;",
+    "valid": true,
+    "location": "visa.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "domain": "compleo-cs.de",
+  "base_domain": "compleo-cs.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.inwx.eu",
+      "ns2.inwx.de",
+      "ns.inwx.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx-01-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [
+          "3.121.23.67",
+          "3.127.4.120"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 110,
+        "hostname": "mx-02-eu-central-1.prod.hydra.sophos.com",
+        "addresses": [
+          "3.121.23.67",
+          "3.127.4.120"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "compleocs-de01i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.18.202",
+          "104.47.22.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx-01-eu-central-1.prod.hydra.sophos.com",
+      "SSL/TLS is not supported on mx-02-eu-central-1.prod.hydra.sophos.com",
+      "SSL/TLS is not supported on compleocs-de01i.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a include:spf.emailsignatures365.com include:spf.protection.outlook.com include:customers.prezly.io a:smtp.si.riconnect.de include:_spf.prod.hydra.sophos.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

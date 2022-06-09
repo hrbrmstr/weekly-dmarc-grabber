@@ -1,0 +1,131 @@
+{
+  "domain": "colgatepalmolive.com",
+  "base_domain": "colgatepalmolive.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns3.ultradns.org",
+      "edns3.ultradns.biz",
+      "edns3.ultradns.com",
+      "edns3.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.zoho.com",
+        "addresses": [
+          "136.143.191.44"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.zoho.com",
+        "addresses": [
+          "204.141.33.44"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 136.143.191.44 is mx2.zohomail.com, but the A/AAAA DNS records for mx2.zohomail.com do not resolve to 136.143.191.44",
+      "The reverse DNS of 136.143.191.44 is mx2.zoho.com, but the A/AAAA DNS records for mx2.zoho.com do not resolve to 136.143.191.44",
+      "SSL/TLS is not supported on mx.zoho.com",
+      "The reverse DNS of 204.141.33.44 is mx.zoho.com, but the A/AAAA DNS records for mx.zoho.com do not resolve to 204.141.33.44",
+      "The reverse DNS of 204.141.33.44 is mx3.zoho.com, but the A/AAAA DNS records for mx3.zoho.com do not resolve to 204.141.33.44",
+      "The reverse DNS of 204.141.33.44 is mx2.zohomail.com, but the A/AAAA DNS records for mx2.zohomail.com do not resolve to 204.141.33.44",
+      "The reverse DNS of 204.141.33.44 is mx3.zohomail.com, but the A/AAAA DNS records for mx3.zohomail.com do not resolve to 204.141.33.44",
+      "The reverse DNS of 204.141.33.44 is mx.zohomail.com, but the A/AAAA DNS records for mx.zohomail.com do not resolve to 204.141.33.44",
+      "SSL/TLS is not supported on mx2.zoho.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "colgatepalmolive.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

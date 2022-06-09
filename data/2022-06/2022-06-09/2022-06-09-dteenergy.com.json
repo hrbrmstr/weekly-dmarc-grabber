@@ -1,0 +1,106 @@
+{
+  "domain": "dteenergy.com",
+  "base_domain": "dteenergy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.dteenergy.com",
+      "ns3.dteenergy.com",
+      "ns1.dteenergy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.218",
+          "67.219.247.197",
+          "67.219.250.214"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:204.124.152.109 ip4:204.124.152.110 ip4:204.124.152.112 ip4:204.124.154.107 ip4:208.185.229.45 ip4:216.70.28.36 ip4:147.187.10.0/24 ip4:12.154.156.38 include:email.opower.com include:spf.messagelabs.com include:_spf.qualtrics.com a:mail.zendesk.com include:_spf.q4press.com include:spf.mandrillapp.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email;",
+    "valid": true,
+    "location": "dteenergy.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
