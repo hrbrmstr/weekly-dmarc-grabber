@@ -1,0 +1,161 @@
+{
+  "domain": "csl.com.au",
+  "base_domain": "csl.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.markmonitor.com",
+      "ns3.markmonitor.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mxa-001a7801.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.218"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mxb-001a7801.gslb.pphosted.com",
+        "addresses": [
+          "208.84.65.170"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-001a7801.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-001a7801.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-001a7801.pphosted.com ip4:205.220.189.169 ip4:205.220.188.142 ip4:205.220.189.159 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "205.220.189.169",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.220.188.142",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.220.189.159",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-001a7801.pphosted.com",
+          "record": "v=spf1 ip4:67.231.156.218 ip4:208.84.65.170",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.156.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.84.65.170",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "csl.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

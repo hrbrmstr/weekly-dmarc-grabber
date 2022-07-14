@@ -1,0 +1,146 @@
+{
+  "domain": "homedepot.com",
+  "base_domain": "homedepot.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a3-64.akam.net",
+      "a18-67.akam.net",
+      "a6-65.akam.net",
+      "a16-66.akam.net",
+      "a7-66.akam.net",
+      "a1-27.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-000e6601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.217"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-000e6601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.149.217"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0a-000e6601.pphosted.com",
+        "addresses": [
+          "148.163.149.217"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0b-000e6601.pphosted.com",
+        "addresses": [
+          "148.163.153.207"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-000e6601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-000e6601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mx0a-000e6601.pphosted.com",
+      "SSL/TLS is not supported on mx0b-000e6601.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ip4:148.163.149.217 ip4:148.163.153.207 include:mail.zendesk.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com, mailto:c12a9-8208@rua.dmarc.emailanalyst.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com, mailto:c12a9-8208@ruf.dmarc.emailanalyst.com; fo=1; rf=afrf; pct=100;",
+    "valid": true,
+    "location": "homedepot.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "c12a9-8208@rua.dmarc.emailanalyst.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "c12a9-8208@ruf.dmarc.emailanalyst.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

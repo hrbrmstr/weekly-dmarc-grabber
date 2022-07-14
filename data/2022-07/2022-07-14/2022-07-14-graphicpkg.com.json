@@ -1,0 +1,46 @@
+{
+  "domain": "graphicpkg.com",
+  "base_domain": "graphicpkg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.graphicpkg.com",
+      "ns2.graphicpkg.com",
+      "ns1.graphicpkg.com",
+      "ns4.graphicpkg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx2.graphicpkg.iphmx.com",
+        "addresses": [
+          "207.54.86.115",
+          "68.232.135.180",
+          "68.232.141.50",
+          "68.232.141.81"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx2.graphicpkg.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:207.54.86.115  ip4:64.95.144.196 ip4:68.232.135.180/32 ip4:68.232.141.50/32 ip4:68.232.141.81/32 ip4:68.232.200.69 ip4:198.245.93.166 ip4:68.232.146.250 ip4:68.232.147.84 ip4:68.232.148.141 ip4:68.232.149.82 ip4:204.153.63.198 ip4:206.208.231.70 ip4:89.202.116.58 include:spf.protection.outlook.com include:aspmx.pardot.com include:authsmtp.com include:spf.mailjet.com include:successfactors.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

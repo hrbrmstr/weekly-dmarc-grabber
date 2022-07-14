@@ -1,0 +1,378 @@
+{
+  "domain": "rheinmetall.com",
+  "base_domain": "rheinmetall.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.xc-ns.de",
+      "ns2.xc-ns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp1.asysbs.services",
+        "addresses": [
+          "213.61.254.52"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "smtp2.asysbs.services",
+        "addresses": [
+          "213.61.254.54"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "smtp1.asysbs.services: Could not connect:  SMTP error code 554 - Not allowed",
+      "smtp2.asysbs.services: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spfa.myconvento.com include:_spf.prod.hydra.sophos.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "smtp1.asysbs.services",
+          "mechanism": "mx"
+        },
+        {
+          "value": "smtp2.asysbs.services",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spfa.myconvento.com",
+          "record": "v=spf1 ip4:46.20.47.88 ip4:46.20.47.90 ip4:46.20.47.91 ip4:46.20.47.92 ip4:46.20.47.93 ip4:46.20.47.94 ip4:85.14.241.66 ip4:85.14.241.67 ip4:85.14.241.68 ip4:85.14.241.69 ip4:85.14.241.70 ip4:5.199.141.69",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "46.20.47.88",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "85.14.241.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.199.141.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.prod.hydra.sophos.com",
+          "record": "v=spf1 include:_spf_uswest2.prod.hydra.sophos.com include:_spf_euwest1.prod.hydra.sophos.com include:_spf_eucentral1.prod.hydra.sophos.com include:_spf_useast2.prod.hydra.sophos.com ~all",
+          "dns_lookups": 4,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf_uswest2.prod.hydra.sophos.com",
+                "record": "v=spf1 ip4:198.154.181.0/24 ip4:64.69.223.0/24 ip4:192.175.3.0/24 ip4:198.160.151.0/24 ip4:34.212.96.64/26 ip4:34.213.30.0/26 ip4:34.213.30.64/26 ip4:34.213.30.128/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.154.181.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.69.223.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.175.3.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.160.151.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.212.96.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.213.30.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.213.30.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.213.30.128/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf_euwest1.prod.hydra.sophos.com",
+                "record": "v=spf1 ip4:198.154.180.0/24 ip4:34.253.219.128/26 ip4:34.253.219.192/26 ip4:34.253.238.0/26 ip4:34.253.238.64/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.154.180.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.219.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.219.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.64/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf_eucentral1.prod.hydra.sophos.com",
+                "record": "v=spf1 ip4:94.140.18.0/24 ip4:35.159.27.0/26 ip4:35.159.27.64/26 ip4:35.159.27.128/26 ip4:35.159.27.192/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "94.140.18.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.159.27.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.159.27.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.159.27.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.159.27.192/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf_useast2.prod.hydra.sophos.com",
+                "record": "v=spf1 ip4:85.113.84.0/24 ip4:103.246.251.0/24 ip4:18.216.13.64/26 ip4:18.216.13.128/26 ip4:18.216.13.192/26 ip4:18.216.23.0/26 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.113.84.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.246.251.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.216.13.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.216.13.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.216.13.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.216.23.0/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:rua@rheinmetall.com; ruf=mailto:ruf@rheinmetall.com; fo=1;",
+    "valid": true,
+    "location": "rheinmetall.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "rua@rheinmetall.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ruf@rheinmetall.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

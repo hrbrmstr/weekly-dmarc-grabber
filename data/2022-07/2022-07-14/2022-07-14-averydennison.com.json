@@ -1,0 +1,161 @@
+{
+  "domain": "averydennison.com",
+  "base_domain": "averydennison.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns6.ultradns.co.uk",
+      "pdns5.ultradns.info",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns4.ultradns.org",
+      "pdns3.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "172.253.115.27",
+          "2607:f8b0:4004:c17::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.27",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 300,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1b",
+          "64.233.184.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 400,
+        "hostname": "aspmx2.googlemail.com",
+        "addresses": [
+          "209.85.202.27",
+          "2a00:1450:400b:c00::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 500,
+        "hostname": "aspmx3.googlemail.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1a",
+          "64.233.184.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 32767,
+        "hostname": "ms30228538.msv1.invalid",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on aspmx2.googlemail.com",
+      "SSL/TLS is not supported on aspmx3.googlemail.com",
+      "All nameservers failed to answer the query ms30228538.msv1.invalid. IN A: Server 127.0.0.53 UDP port 53 answered SERVFAIL. Consider using a TXT record to validate domain ownership in Office 365 instead.",
+      "ms30228538.msv1.invalid: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.google.com ip4:72.46.228.0/24 ip4:72.46.229.0/24 ip4:144.93.0.0/16 ip4:147.121.0.0/16 ip4:205.220.174.18 ip4:205.220.162.19 include:_fwd.averydennison.com include:sendgrid.net include:_spf.salesforce.com include:_spf.act-on.net -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; adkim=r; aspf=r; fo=1; pct=100; ri=3600; rua=mailto:avery-dennison@rua.agari.com; ruf=mailto:avery-dennison@ruf.agari.com",
+    "valid": true,
+    "location": "averydennison.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "avery-dennison@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "avery-dennison@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

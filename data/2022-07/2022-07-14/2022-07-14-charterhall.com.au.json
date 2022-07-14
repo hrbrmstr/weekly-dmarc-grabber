@@ -1,0 +1,110 @@
+{
+  "domain": "charterhall.com.au",
+  "base_domain": "charterhall.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2-01.azure-dns.net",
+      "ns1-01.azure-dns.com",
+      "ns4-01.azure-dns.info",
+      "ns3-01.azure-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "charterhall-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on charterhall-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:20.188.221.251 ip:20.92.101.28 ip4:103.96.20.0/24 ip4:103.96.21.0/24 ip4:103.96.22.0/24 ip4:103.96.23.0/24 ip4:170.10.134.0/24 ip4:170.10.135.0/24 ip4:203.54.145.74 include:spf.protection.outlook.com include:asp-spf1.yardi.com include:asp-spf2.yardi.com include:au._netblocks.mimecast.com include:au._extnetblocks.mimecast.com include:spf-au.emailsignatures365.com -all ",
+    "valid": false,
+    "warnings": [],
+    "error": "charterhall.com.au: Expected mechanism at position 26 in: v=spf1 ip4:20.188.221.251 ip:20.92.101.28 ip4:103.96.20.0/24 ip4:103.96.21.0/24 ip4:103.96.22.0/24 ip4:103.96.23.0/24 ip4:170.10.134.0/24 ip4:170.10.135.0/24 ip4:203.54.145.74 include:spf.protection.outlook.com include:asp-spf1.yardi.com include:asp-spf2.yardi.com include:au._netblocks.mimecast.com include:au._extnetblocks.mimecast.com include:spf-au.emailsignatures365.com -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc@charterhall.com.au;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "charterhall.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@charterhall.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

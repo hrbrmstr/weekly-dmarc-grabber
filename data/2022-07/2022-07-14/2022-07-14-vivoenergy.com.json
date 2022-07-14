@@ -1,0 +1,146 @@
+{
+  "domain": "vivoenergy.com",
+  "base_domain": "vivoenergy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns83.ultradns.org",
+      "pdns83.ultradns.biz",
+      "pdns83.ultradns.com",
+      "pdns83.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.emea.email.fireeyecloud.com",
+        "addresses": [
+          "3.123.5.6",
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.emea.email.fireeyecloud.com",
+        "addresses": [
+          "3.123.5.6",
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.emea.email.fireeyecloud.com",
+        "addresses": [
+          "3.123.5.6",
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.emea.email.fireeyecloud.com",
+        "addresses": [
+          "3.123.5.6",
+          "63.34.218.6",
+          "63.34.218.7",
+          "63.34.218.8"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on primary.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt1.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.emea.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.emea.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a include:_spf.fireeyecloud.com include:spf.protection.outlook.com include:emailstor.co.za -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.500 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@vivoenergy.com; ruf=mailto:dmarcreports@vivoenergy.com; fo=1;",
+    "valid": true,
+    "location": "vivoenergy.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@vivoenergy.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@vivoenergy.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

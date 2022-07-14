@@ -1,0 +1,414 @@
+{
+  "domain": "commbank.com.au",
+  "base_domain": "commbank.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-302.awsdns-37.com",
+      "ns-2013.awsdns-59.co.uk",
+      "ns-1037.awsdns-01.org",
+      "ns-748.awsdns-29.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "commbank-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on commbank-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.cba.com.au include:spf2.cba.com.au ip4:144.49.240.0/21 include:spf.protection.outlook.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "144.49.240.0/21",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.cba.com.au",
+          "record": "v=spf1 ip4:140.168.71.11 ip4:140.168.129.169 ip4:140.168.71.12 ip4:140.168.129.170 ip4:140.168.128.25  ip4:140.168.128.33 ip4:137.236.179.202 ip4:137.236.179.212 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "140.168.71.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.129.169",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.71.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.129.170",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.128.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.128.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "137.236.179.202",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "137.236.179.212",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.cba.com.au",
+          "record": "v=spf1 ip4:140.168.80.65 ip4:140.168.82.33 ip4:140.168.82.34 include:app.aventri.com ~all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "140.168.80.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.82.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "140.168.82.34",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "app.aventri.com",
+                "record": "v=spf1 ip4:146.20.191.16 ip4:146.20.191.20 ip4:146.20.191.235 ip4:159.135.230.3 ip4:159.135.235.2 ip4:159.135.235.3 ip4:159.135.235.4 ip4:159.135.235.90 ip4:159.135.239.142 ip4:166.78.71.49 ip4:161.38.195.161 ip4:104.47.51.46 include:spf.aventri.com ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "146.20.191.16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.191.20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.191.235",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.230.3",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.235.2",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.235.3",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.235.4",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.235.90",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.239.142",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "166.78.71.49",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.195.161",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.51.46",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spf.aventri.com",
+                      "record": "v=spf1 ip4:23.23.239.161/32 ip4:52.48.54.246/32 ip4:52.64.111.139/32 ip4:35.174.145.124/32 ip4:149.72.181.169 ip4:168.245.109.172 ip4:168.245.46.127 ip4:168.245.97.228 ip4:4.7.16.188 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "23.23.239.161/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.48.54.246/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "52.64.111.139/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "35.174.145.124/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "149.72.181.169",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "168.245.109.172",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "168.245.46.127",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "168.245.97.228",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "4.7.16.188",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; pct=100; rua=mailto:dmarc-rua@cba.com.au; ruf=mailto:dmarc-ruf@cba.com.au; adkim=r; aspf=r; fo=1; rf=afrf; ri=86400",
+    "valid": true,
+    "location": "commbank.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@cba.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ruf@cba.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      }
+    }
+  }
+}

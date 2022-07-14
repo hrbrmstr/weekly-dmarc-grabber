@@ -1,0 +1,193 @@
+{
+  "domain": "thea2milkcompany.com",
+  "base_domain": "thea2milkcompany.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "rihana.ns.cloudflare.com",
+      "kai.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.indigitalmedia.com",
+        "addresses": [
+          "208.87.25.2"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail0.myhsphere.cc",
+        "addresses": [
+          "135.125.48.159",
+          "135.148.51.40",
+          "147.135.88.188",
+          "158.69.162.163",
+          "216.194.79.212",
+          "216.234.162.157",
+          "216.234.179.102",
+          "216.234.189.19",
+          "216.234.190.234",
+          "66.51.103.178",
+          "66.51.109.87",
+          "66.51.98.213"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.indigitalmedia.com: Connection timed out",
+      "mail0.myhsphere.cc: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:amazonses.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 include:amazonses.com ~all"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "amazonses.com",
+          "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.96.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.82.172.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "thea2milkcompany.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "domain": "jdwetherspoon.co.uk",
+  "base_domain": "jdwetherspoon.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.cscdns.net",
+      "dns2.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "cust33865-1.in.mailcontrol.com",
+        "addresses": [
+          "85.115.52.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 2,
+        "hostname": "cust33865-2.in.mailcontrol.com",
+        "addresses": [
+          "85.115.54.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cust33865-1.in.mailcontrol.com: Connection timed out",
+      "SSL/TLS is not supported on cust33865-2.in.mailcontrol.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:mailcontrol.com include:txdlimited.co.uk ip4:52.166.124.85 ip4:46.231.191.160/27 ip4:162.13.114.0/24 ip4:35.177.234.114 ip4:208.185.229.0/24 ip4:208.185.235.0/24 ip4:89.30.104.0/24 ?all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [
+      "Duplicate include: mailcontrol.com"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "52.166.124.85",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "46.231.191.160/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.13.114.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "35.177.234.114",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.185.229.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.185.235.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "89.30.104.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "mailcontrol.com",
+          "record": "v=spf1 ip4:85.115.32.0/19 ip4:86.111.216.0/21 ip4:116.50.56.0/21 ip4:208.87.232.0/21 ip4:196.216.238.0/23 ip4:192.151.176.0/20 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.115.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "86.111.216.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "116.50.56.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.87.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "196.216.238.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.151.176.0/20",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "txdlimited.co.uk",
+          "record": "v=spf1 a mx ip4:109.233.117.100 ip4:89.234.11.30 ip4:92.52.87.105 ip4:92.52.87.110 ip4:92.52.87.107 ip4:92.52.80.219 ip4:92.52.80.218 ip4:92.52.80.220 ip4:92.52.80.221 ip4:173.203.70.124 ip4:173.203.66.196 ip4:173.203.64.112 ip4:23.253.248.164 ip4:134.213.154.155 include:mailcontrol.com -all",
+          "dns_lookups": 3,
+          "parsed": {
+            "pass": [
+              {
+                "value": "162.13.150.27",
+                "mechanism": "a"
+              },
+              {
+                "value": "cust32796-1.in.mailcontrol.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "cust32796-2.in.mailcontrol.com",
+                "mechanism": "mx"
+              },
+              {
+                "value": "109.233.117.100",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.234.11.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.87.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.87.110",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.87.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.80.219",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.80.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.80.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.80.221",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.203.70.124",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.203.66.196",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.203.64.112",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.248.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.213.154.155",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "Duplicate include: mailcontrol.com"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; rua=mailto:postmaster@jdwetherspoon.co.uk; ruf=mailto:postmaster@jdwetherspoon.co.uk; rf=afrf; pct=100; ri=86400",
+    "valid": true,
+    "location": "jdwetherspoon.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@jdwetherspoon.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@jdwetherspoon.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

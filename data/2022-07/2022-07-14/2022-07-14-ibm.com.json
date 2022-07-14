@@ -1,0 +1,118 @@
+{
+  "domain": "ibm.com",
+  "base_domain": "ibm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usw2.akam.net",
+      "usc2.akam.net",
+      "eur2.akam.net",
+      "ns1-99.akam.net",
+      "ns1-206.akam.net",
+      "asia3.akam.net",
+      "usc3.akam.net",
+      "eur5.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx0a-001b2d01.pphosted.com",
+        "addresses": [
+          "148.163.156.1"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx0b-001b2d01.pphosted.com",
+        "addresses": [
+          "148.163.158.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-001b2d01.pphosted.com",
+      "SSL/TLS is not supported on mx0b-001b2d01.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ip4:148.163.158.5 ip4:148.163.156.1 ip4:67.231.145.127 ip4:67.231.153.87 ip4:168.245.101.145 mx a:zgateway.zuora.com include:_spf.google.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "ibm.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

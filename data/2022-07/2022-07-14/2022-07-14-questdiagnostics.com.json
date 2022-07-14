@@ -1,0 +1,59 @@
+{
+  "domain": "questdiagnostics.com",
+  "base_domain": "questdiagnostics.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.questdiagnostics.com",
+      "ns3.questdiagnostics.com",
+      "ns2.questdiagnostics.com",
+      "ns1.questdiagnostics.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster4.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.209",
+          "67.219.246.216",
+          "67.219.247.193",
+          "67.219.247.97",
+          "67.219.250.211",
+          "67.219.250.216"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster4a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "cluster4.us.messagelabs.com: Could not connect:  SMTP error code 450",
+      "SSL/TLS is not supported on cluster4a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.questdiagnostics.com include:spf2.questdiagnostics.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

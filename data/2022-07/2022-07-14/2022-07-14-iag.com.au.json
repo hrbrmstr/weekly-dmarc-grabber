@@ -1,0 +1,97 @@
+{
+  "domain": "iag.com.au",
+  "base_domain": "iag.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a5-65.akam.net",
+      "a24-67.akam.net",
+      "a6-66.akam.net",
+      "a1-45.akam.net",
+      "a13-66.akam.net",
+      "a26-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "iag-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on iag-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.iag.com.au include:spf2.iag.com.au include:spf3.iag.com.au ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain _spf.peoplepulse.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc.reporting@iag.com.au",
+    "valid": true,
+    "location": "iag.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reporting@iag.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

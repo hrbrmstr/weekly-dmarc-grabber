@@ -1,0 +1,244 @@
+{
+  "domain": "morganstanley.com",
+  "base_domain": "morganstanley.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ext7.morganstanley.net",
+      "ns-ext7.ms.com",
+      "ns-ext8.morganstanley.net",
+      "ns-ext8.ms.com",
+      "ns-ext9.morganstanley.net",
+      "ns-ext9.ms.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx2.morganstanley.com",
+        "addresses": [
+          "205.228.15.11",
+          "205.228.15.12",
+          "205.228.15.13"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx3.morganstanley.com",
+        "addresses": [
+          "205.228.84.47",
+          "205.228.84.48",
+          "205.228.84.49"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx2.morganstanley.com",
+      "SSL/TLS is not supported on mx3.morganstanley.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:199.89.64.0/18 ip4:205.228.0.0/17 include:_spf.morganstanley.neolane.net include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "199.89.64.0/18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.228.0.0/17",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.morganstanley.neolane.net",
+          "record": "v=spf1 include:us.neolane.net -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "us.neolane.net",
+                "record": "v=spf1 ip4:207.211.34.0/24 ip4:130.248.238.0/24 ip4:192.243.225.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "207.211.34.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.248.238.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.243.225.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;",
+    "valid": true,
+    "location": "morganstanley.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
