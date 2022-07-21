@@ -1,0 +1,389 @@
+{
+  "domain": "gud.com.au",
+  "base_domain": "gud.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.mitdps.net",
+      "ns2.mitdps.net",
+      "ns1.mitdps.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.193.190.195 ip4:210.193.184.42 include:spf.protection.outlook.com include:customer.mailguard.com.au include:au._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.193.190.195",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.193.184.42",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/48 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/48",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "customer.mailguard.com.au",
+          "record": "v=spf1 include:spf_b.mailguard.com.au ip4:3.24.56.135 ip4:52.63.166.203 ip4:3.104.195.181 ip4:52.64.111.90 ip4:54.66.10.162 ip4:13.238.252.82 ip4:54.79.63.66 include:spf_a.mailguard.com.au -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "3.24.56.135",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.63.166.203",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.104.195.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.64.111.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.66.10.162",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.252.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.79.63.66",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf_b.mailguard.com.au",
+                "record": "v=spf1 ip4:34.193.97.194 ip4:34.202.243.228 ip4:34.237.162.207 ip4:34.237.180.102 ip4:34.237.181.146 ip4:20.70.88.141 ip4:13.70.186.218 ip4:52.147.56.124 ip4:52.147.60.132 ip4:20.190.127.76 ip4:3.105.81.69 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "34.193.97.194",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.202.243.228",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.237.162.207",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.237.180.102",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.237.181.146",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.70.88.141",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.70.186.218",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.147.56.124",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.147.60.132",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.190.127.76",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.105.81.69",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf_a.mailguard.com.au",
+                "record": "v=spf1 ip4:203.21.125.32 ip4:203.21.125.33 ip4:50.23.252.166 ip4:50.23.246.238 ip4:108.168.255.216 ip4:108.168.255.217 ip4:20.92.218.92 ip4:20.92.133.122 ip4:20.92.133.252 ip4:20.53.112.187 ip4:20.92.134.58 ip4:13.238.162.196 ip4:13.236.218.216 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "203.21.125.32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.21.125.33",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.23.252.166",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.23.246.238",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "108.168.255.216",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "108.168.255.217",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.92.218.92",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.92.133.122",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.92.133.252",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.53.112.187",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.92.134.58",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.238.162.196",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.236.218.216",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "au._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:103.13.69.0/24 ip4:124.47.150.0/24 ip4:124.47.189.0/24 ip4:103.96.23.0/24 ip4:103.96.21.0/24 ip4:180.189.28.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.13.69.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.150.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.189.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.23.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.189.28.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
