@@ -1,0 +1,42 @@
+{
+  "domain": "dcc.ie",
+  "base_domain": "dcc.ie",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.blacknightdns.com",
+      "ns4.blacknightdns.com",
+      "ns3.blacknightdns.com",
+      "ns2.blacknightdns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "dcc-ie.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.4.36",
+          "104.47.5.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on dcc-ie.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "dcc.ie does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.dcc.ie\n\nv=dmarc1; p=reject; rua=mailto:support@dcc.ie,mailto:dmarc_agg@vali.email; ruf=mailto:support@dcc.ie; sp=none; ri=86400"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "domain": "nexon.co.jp",
+  "base_domain": "nexon.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-67.akam.net",
+      "a7-67.akam.net",
+      "a4-66.akam.net",
+      "a1-110.akam.net",
+      "a2-64.akam.net",
+      "a22-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "nexon-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.110.36",
+          "104.47.26.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "104.47.110.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on nexon-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:125.103.44.163 +ip4:39.110.234.67 +ip4:39.110.234.68 +ip4:124.109.181.7 +ip4:124.146.170.8 +ip4:124.146.170.9 +ip4:153.122.27.123 +ip4:157.7.166.99 +ip4:150.66.59.77 +include:_spf1.nexon.co.jp +include:amazonses.com +include:fc4491.cuenote.jp +include:ipreomail.com +include:spf-bma.mpme.jp +include:spf.protection.outlook.com +include:_smtp-pool-a.nexon.com +include:_spf1.nexon.co.kr -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:nwsys@nexon.co.jp",
+    "valid": true,
+    "location": "nexon.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "nwsys@nexon.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

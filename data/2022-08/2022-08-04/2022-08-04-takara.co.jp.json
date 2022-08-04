@@ -1,0 +1,41 @@
+{
+  "domain": "takara.co.jp",
+  "base_domain": "takara.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.takara.co.jp",
+      "ns1.omp.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "takara-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on takara-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.189.29.0/24 include:spf.mta.hdems.com include:spf.protection.outlook.com include:spf.ecbeing.co.jp include:smp.ne.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

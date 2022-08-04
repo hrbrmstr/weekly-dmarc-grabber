@@ -1,0 +1,212 @@
+{
+  "domain": "dollartree.com",
+  "base_domain": "dollartree.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a26-64.akam.net",
+      "a1-230.akam.net",
+      "a22-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00183e01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.42"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00183e01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.40"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00183e01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00183e01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:144.34.125.53 ip4:67.231.157.40 ip4:67.231.149.42 ip4:216.54.47.139 a:stlmcefg1.equifax.com a:smtp01.sumtotalsystems.com a:mail.officetrax.com a:mx2.corp.core7.com a:mail.microsdc.us ip4:12.129.29.143 include:_spf.atoracle.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [
+      "The domain mx2.corp.core7.com does not exist"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "144.34.125.53",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.231.157.40",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.231.149.42",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.54.47.139",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.104.201.5",
+          "mechanism": "a"
+        },
+        {
+          "value": "199.59.200.201",
+          "mechanism": "a"
+        },
+        {
+          "value": "216.16.244.80",
+          "mechanism": "a"
+        },
+        {
+          "value": "65.221.28.21",
+          "mechanism": "a"
+        },
+        {
+          "value": "12.129.29.143",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.atoracle.com",
+          "record": "v=spf1 ip4:141.146.165.0/27 ip4:141.146.154.96/27 ip4:148.87.89.32/28 ip4:64.181.217.128/27 ip4:143.47.149.160/27 ip4:143.47.167.160/27 ip4:129.91.190.200/29 ip4:129.91.222.0/29 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "141.146.165.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.146.154.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.87.89.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.181.217.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.47.149.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.47.167.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.190.200/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.222.0/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@dollartree.com; ruf=mailto:dmarcforensicsreports@dollartree.com",
+    "valid": true,
+    "location": "dollartree.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@dollartree.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcforensicsreports@dollartree.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

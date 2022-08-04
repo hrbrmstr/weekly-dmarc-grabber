@@ -1,0 +1,228 @@
+{
+  "domain": "appen.com",
+  "base_domain": "appen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1484.awsdns-57.org",
+      "ns-1765.awsdns-28.co.uk",
+      "ns-312.awsdns-39.com",
+      "ns-628.awsdns-14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "appen-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.110",
+          "104.47.57.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on appen-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email include:stspg-customer.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "stspg-customer.com",
+          "record": "v=spf1 ip4:23.253.182.103 ip4:23.253.183.145 ip4:23.253.183.146 ip4:23.253.183.147 ip4:23.253.183.148 ip4:23.253.183.150 ip4:166.78.68.221 ip4:167.89.46.159 ip4:167.89.64.9 ip4:167.89.65.0 ip4:167.89.65.53 ip4:167.89.65.100 ip4:167.89.74.233 ip4:167.89.75.33 ip4:167.89.75.126 ip4:167.89.75.136 ip4:167.89.75.164 ip4:192.237.159.42 ip4:192.237.159.43 ip4:159.112.242.162 ip4:159.135.228.10 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.253.182.103",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.183.145",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.183.146",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.183.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.183.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.253.183.150",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "166.78.68.221",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.46.159",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.64.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.65.0",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.65.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.65.100",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.74.233",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.75.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.75.126",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.75.136",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.75.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.237.159.42",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.237.159.43",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.112.242.162",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.135.228.10",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_agg@vali.email,mailto:dmarc@appen.com; ri=86400",
+    "valid": true,
+    "location": "appen.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@appen.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
