@@ -1,0 +1,219 @@
+{
+  "domain": "saisoncard.co.jp",
+  "base_domain": "saisoncard.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.dhs.jtidc.jp",
+      "ns1.dhs.jtidc.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.211",
+          "67.219.246.212",
+          "67.219.247.195",
+          "67.219.247.99",
+          "67.219.250.217",
+          "67.219.250.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.saisoncard.co.jp include:smp.ne.jp ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.saisoncard.co.jp",
+          "record": "v=spf1 ip4:210.151.8.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.151.8.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "smp.ne.jp",
+          "record": "v=spf1 +ip4:59.106.42.224/28 +ip4:210.188.229.224/27 +ip4:61.211.238.0/27 +ip4:61.211.237.192/26 +ip4:59.106.30.0/26 +ip4:59.106.116.96/27 +ip4:59.106.117.0/26 +ip4:210.188.245.160/27 +ip4:210.188.233.32/27 +ip4:59.106.37.128/26 +ip4:59.106.106.192/26 +ip4:59.106.4.64/26 +ip4:59.106.100.128/25 +ip4:59.106.149.0/26 +ip4:59.106.193.160/27 +ip4:59.106.147.128/27 +ip4:59.106.4.0/26 include:spf01.smp.ne.jp ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "59.106.42.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.229.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.238.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.237.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.30.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.116.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.117.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.245.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.233.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.37.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.106.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.100.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.149.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.193.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.147.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.0/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf01.smp.ne.jp",
+                "record": "v=spf1 +ip4:112.137.190.192/26 +ip4:112.140.38.192/26 +ip4:112.137.187.128/25 +ip4:180.214.52.0/24 +ip4:180.214.56.0/24 +ip4:202.222.20.40/29 +ip4:202.222.20.48/29 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "112.137.190.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.140.38.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.137.187.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.52.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.56.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.40/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.48/29",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.saisoncard.co.jp\n\nv=spf1 include:spf.saisoncard.co.jp ~all"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "domain": "usu-software.de",
+  "base_domain": "usu-software.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.levigo.com",
+      "ns2.levigo.de",
+      "ns1.levigo.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.usu.de",
+        "addresses": [
+          "88.198.238.220"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 88.198.238.220 is cc220.cc-networkx.net, but the A/AAAA DNS records for cc220.cc-networkx.net do not resolve to 88.198.238.220",
+      "mail.usu.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail.usu.de'. (_ssl.c:997)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "usu-software.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

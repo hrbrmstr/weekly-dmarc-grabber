@@ -1,0 +1,437 @@
+{
+  "domain": "allstate.com",
+  "base_domain": "allstate.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.allstate.com",
+      "ns1.allstate.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-00137005.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.72"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-00137005.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.72"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00137005.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00137005.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=spf.allstate.com",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "spf.allstate.com",
+        "record": "v=spf1 include:_internal.allstate.com include:_external1.allstate.com include:_external2.allstate.com ~all",
+        "dns_lookups": 6,
+        "parsed": {
+          "pass": [],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "_internal.allstate.com",
+              "record": "v=spf1 ip4:167.127.130.0/24 ip4:167.127.246.0/24 ip4:32.66.194.205/32 ip4:32.66.194.206/32 ip4:32.66.194.207/32 ip4:32.66.194.208/32 ip4:32.66.194.209/32 ip4:167.127.34.224/28 ip4:205.220.176.72 ip4:205.220.164.72 ip4:167.127.131.0/24 ip4:167.127.192.0/24 ~all",
+              "dns_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "167.127.130.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.127.246.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "32.66.194.205/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "32.66.194.206/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "32.66.194.207/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "32.66.194.208/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "32.66.194.209/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.127.34.224/28",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.220.176.72",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.220.164.72",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.127.131.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.127.192.0/24",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_external1.allstate.com",
+              "record": "v=spf1 ip4:74.217.54.250/32 ip4:70.42.28.27/32 ip4:70.42.28.28/32 ip4:208.75.120.0/22 ip4:66.216.136.0/24 ip4:192.31.208.0/24 ip4:198.207.147.224/27 ip4:204.239.0.0/24 ip4:209.90.227.0/24 ip4:184.185.6.100 ip4:184.185.6.111 ip4:149.72.152.61 ip4:149.72.222.182 ip4:168.245.32.242 ip4:167.89.99.1 ip4:168.245.45.67 ip4:168.245.37.163 ip4:198.21.7.191 ~all",
+              "dns_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "74.217.54.250/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "70.42.28.27/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "70.42.28.28/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "208.75.120.0/22",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "66.216.136.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "192.31.208.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.207.147.224/27",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "204.239.0.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "209.90.227.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "184.185.6.100",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "184.185.6.111",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.72.152.61",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.72.222.182",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.32.242",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.89.99.1",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.45.67",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.37.163",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.21.7.191",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_external2.allstate.com",
+              "record": "v=spf1 ip4:184.185.6.112 ip4:204.77.182.100 ip4:204.77.182.111 ip4:168.245.47.144 ip4:107.20.210.250 ip4:52.1.14.157 ip4:216.251.248.18 ip4:216.205.154.64/26 ip4:208.82.208.0/22 include:authsmtp.com ~all",
+              "dns_lookups": 3,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "184.185.6.112",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "204.77.182.100",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "204.77.182.111",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.47.144",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "107.20.210.250",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "52.1.14.157",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "216.251.248.18",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "216.205.154.64/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "208.82.208.0/22",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "authsmtp.com",
+                    "record": "v=spf1 include:spf-a.authsmtp.com include:spf-b.authsmtp.com -all",
+                    "dns_lookups": 2,
+                    "parsed": {
+                      "pass": [],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [
+                        {
+                          "domain": "spf-a.authsmtp.com",
+                          "record": "v=spf1 ip4:62.13.128.0/24 ip4:62.13.129.128/25 ip4:62.13.136.0/22 ip4:62.13.140.0/22 ip4:62.13.144.0/22 ip4:62.13.148.0/23 ip4:62.13.150.0/23 ip4:62.13.152.0/23 -all",
+                          "dns_lookups": 0,
+                          "parsed": {
+                            "pass": [
+                              {
+                                "value": "62.13.128.0/24",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.129.128/25",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.136.0/22",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.140.0/22",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.144.0/22",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.148.0/23",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.150.0/23",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "62.13.152.0/23",
+                                "mechanism": "ip4"
+                              }
+                            ],
+                            "neutral": [],
+                            "softfail": [],
+                            "fail": [],
+                            "include": [],
+                            "redirect": null,
+                            "exp": null,
+                            "all": "fail"
+                          },
+                          "warnings": []
+                        },
+                        {
+                          "domain": "spf-b.authsmtp.com",
+                          "record": "v=spf1 ip4:72.52.72.32/28 ip4:64.71.149.160/28 -all",
+                          "dns_lookups": 0,
+                          "parsed": {
+                            "pass": [
+                              {
+                                "value": "72.52.72.32/28",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "64.71.149.160/28",
+                                "mechanism": "ip4"
+                              }
+                            ],
+                            "neutral": [],
+                            "softfail": [],
+                            "fail": [],
+                            "include": [],
+                            "redirect": null,
+                            "exp": null,
+                            "all": "fail"
+                          },
+                          "warnings": []
+                        }
+                      ],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "softfail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:5fd5ee16@mxtoolbox.dmarc-report.com; ruf=mailto:5fd5ee16@forensics.dmarc-report.com",
+    "valid": true,
+    "location": "allstate.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "5fd5ee16@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "5fd5ee16@forensics.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
