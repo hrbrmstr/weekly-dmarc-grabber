@@ -1,0 +1,166 @@
+{
+  "domain": "blackrock.com",
+  "base_domain": "blackrock.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.blackrock.com",
+      "ns5.blackrock.com",
+      "ns4.blackrock.com",
+      "ns3.blackrock.com",
+      "ns2.blackrock.com",
+      "ns1.blackrock.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00162b01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.56"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00162b01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.156.56"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00162b01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00162b01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:blackrock.com._nspf.vali.email include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "blackrock.com._nspf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc_agg@vali.email,mailto:60a05830@mxtoolbox.dmarc-report.com,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:blackrock-dmarc@datafeeds.phishlabs.com",
+    "valid": true,
+    "location": "blackrock.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs",
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about blackrock.com - Authorization record not found: blackrock.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "60a05830@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": "mailto:blackrock-dmarc@datafeeds.phishlabs.com",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

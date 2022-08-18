@@ -1,0 +1,117 @@
+{
+  "domain": "boeing.com",
+  "base_domain": "boeing.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cltdnsxp02.dns.boeing.net",
+      "cltdnsxp01.dns.boeing.net",
+      "phxdnsxp01.dns.boeing.net",
+      "qnydnsxp01.dns.boeing.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 a:phx-mbsout-01.mbs.boeing.net a:phx-mbsout-02.mbs.boeing.net a:ewa-mbsout-01.mbs.boeing.net a:ewa-mbsout-02.mbs.boeing.net a:clt-mbsout-01.mbs.boeing.net a:clt-mbsout-02.mbs.boeing.net ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "130.76.184.178",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.184.179",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.20.194",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.20.195",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.144.162",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.144.163",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:dmarcreports@boeing.com",
+    "valid": true,
+    "location": "boeing.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@boeing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

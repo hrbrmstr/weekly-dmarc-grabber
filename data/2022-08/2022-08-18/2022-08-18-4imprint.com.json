@@ -1,0 +1,105 @@
+{
+  "domain": "4imprint.com",
+  "base_domain": "4imprint.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1956.awsdns-52.co.uk",
+      "ns-1225.awsdns-25.org",
+      "ns-828.awsdns-39.net",
+      "ns-127.awsdns-15.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "4imprint-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on 4imprint-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:69.213.9.0/24 ip4:208.85.49.84 ip4:129.33.239.123 ip4:208.73.7.84 ip4:77.243.187.112/28 include:_u.4imprint.com._spf.smart.ondmarc.com include:sendgrid.net include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain _u.4imprint.com._spf.smart.ondmarc.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; pct=100; aspf=r; fo=1; ri=3600; rua=mailto:4cf12e53@inbox.ondmarc.com; ruf=mailto:4cf12e53@inbox.ondmarc.com;",
+    "valid": true,
+    "location": "4imprint.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "4cf12e53@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "4cf12e53@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

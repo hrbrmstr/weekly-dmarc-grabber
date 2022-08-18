@@ -1,0 +1,52 @@
+{
+  "domain": "fortive.com",
+  "base_domain": "fortive.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-634.awsdns-15.net",
+      "ns-1793.awsdns-32.co.uk",
+      "ns-140.awsdns-17.com",
+      "ns-1064.awsdns-05.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001d2f02.gslb.pphosted.com",
+        "addresses": [
+          "148.163.157.190"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001d2f02.gslb.pphosted.com",
+        "addresses": [
+          "148.163.159.190"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-001d2f02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-001d2f02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.fortive.com\n\nv=DMARC"
+  }
+}
