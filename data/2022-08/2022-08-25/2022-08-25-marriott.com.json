@@ -1,0 +1,108 @@
+{
+  "domain": "marriott.com",
+  "base_domain": "marriott.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "usc1.akam.net",
+      "usc2.akam.net",
+      "eur1.akam.net",
+      "ns1-7.akam.net",
+      "ns1-22.akam.net",
+      "use4.akam.net",
+      "eur3.akam.net",
+      "eur4.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.marriott.com",
+        "addresses": [
+          "162.130.196.144"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.marriott.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.marriott.com include:_spf.caspiomail.com include:spf.givex.com include:mail.zendesk.com include:app.sgizmo.com a:c.spf.service-now.com include:spf.protection.outlook.com ip4:65.221.12.128 ip4:65.221.12.148 ip4:70.42.227.151 ip4:70.42.227.152 ip4:68.233.76.14 ip4:68.233.76.20 ip4:68.233.76.41 ip4:216.34.69.5 ip4:34.194.251.20 ip4:74.217.49.0/25 ip4:69.25.227.128/25 ip4:41.138.70.80/29 ip4:52.86.138.215 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "app.sgizmo.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; sp=reject; rua=mailto:ts2wfbhi@ag.dmarcian.com; ruf=mailto:ts2wfbhi@fr.dmarcian.com;",
+    "valid": true,
+    "location": "marriott.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ts2wfbhi@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ts2wfbhi@fr.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "domain": "cmcmarkets.com",
+  "base_domain": "cmcmarkets.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns8.cmcnet.net",
+      "ns7.cmcnet.net",
+      "ns6.cmcnet.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.cmcmarkets.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.43",
+          "68.232.139.35"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.cmcmarkets.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.43",
+          "68.232.139.35"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.cmcmarkets.c3s2.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.cmcmarkets.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:servers.mcsv.net -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.cmcmarkets.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.cmcmarkets.c3s2.iphmx.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "cmcmarkets.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "domain": "charter.com",
+  "base_domain": "charter.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.charter.com",
+      "ns4.charter.com",
+      "ns3.charter.com",
+      "ns2.charter.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "nce.mail.chartercom.com",
+        "addresses": [
+          "142.136.234.134",
+          "142.136.234.135",
+          "142.136.234.136",
+          "142.136.234.137",
+          "142.136.234.138",
+          "142.136.234.139",
+          "142.136.234.142",
+          "142.136.234.143",
+          "142.136.234.144"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "ncw.mail.chartercom.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "nce.mail.chartercom.com: Connection timed out",
+      "The resolution lifetime expired after 3.800 seconds: ",
+      "ncw.mail.chartercom.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:209.225.8.0/24 ip4:209.225.28.0/24 ip4:24.196.48.42/32 ip4:24.217.29.16/32 ip4:24.176.92.28/32 ip4:142.136.234.128/27 ip4:142.136.235.128/27 include:et._spf.pardot.com include:spf-c.usa.striata.com include:everbridge.net ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "209.225.8.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.225.28.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "24.196.48.42/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "24.217.29.16/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "24.176.92.28/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "142.136.234.128/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "142.136.235.128/27",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "et._spf.pardot.com",
+          "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "198.245.81.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "136.147.176.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.111.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "136.147.182.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "136.147.135.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.122.123.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-c.usa.striata.com",
+          "record": "v=spf1 exists:%{ir}.spf.usa.striata.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{ir}.spf.usa.striata.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "everbridge.net",
+          "record": "v=spf1 include:spfprd1.everbridge.net include:spfstg1.everbridge.net -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfprd1.everbridge.net",
+                "record": "v=spf1 ip4:3.132.65.8/32 ip4:52.13.126.222/32 ip4:3.23.36.254/32 ip4:52.13.73.26/32 ip4:3.22.102.251/32 ip4:54.212.187.12/32 ip4:3.21.23.140/32 ip4:52.12.139.153/32 ip4:54.188.101.235/32 ip4:3.23.38.224/32 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "3.132.65.8/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.126.222/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.36.254/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.73.26/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.102.251/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.212.187.12/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.21.23.140/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.12.139.153/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.188.101.235/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.38.224/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spfstg1.everbridge.net",
+                "record": "v=spf1 ip4:54.202.102.78/32 ip4:54.189.43.109/32 ip4:44.224.52.248/32 ip4:54.185.77.73/32 ip4:3.23.73.147/32 ip4:3.137.48.253/32 ip4:3.20.31.152/32 ip4:3.22.59.195/32 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "54.202.102.78/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.189.43.109/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.224.52.248/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.185.77.73/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.73.147/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.137.48.253/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.20.31.152/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.59.195/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

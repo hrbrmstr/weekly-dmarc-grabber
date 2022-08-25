@@ -1,0 +1,41 @@
+{
+  "domain": "taisei.co.jp",
+  "base_domain": "taisei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gate-d.taisei.co.jp",
+      "ns.center.web.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "taisei-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on taisei-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:211.15.49.200 ip4:219.127.91.206 ip4:218.45.216.96/28 ip4:124.146.170.8/32 ip4:124.146.170.9/32 ip4:52.156.53.124 include:spf.spcloud.jp include:spf.protection.outlook.com include:mail.logosware.com include:saaske.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "mail.logosware.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

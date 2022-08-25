@@ -1,0 +1,151 @@
+{
+  "domain": "leg.ag",
+  "base_domain": "leg.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns02.plusnet.de",
+      "ns01.plusnet.de",
+      "ns04.plusnet.de",
+      "ns03.plusnet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw.immo-nrw.net",
+        "addresses": [
+          "212.202.113.179"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgw-2.immo-nrw.net",
+        "addresses": [
+          "212.202.113.185"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "ms87155315.msv1.invalid",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgw.immo-nrw.net",
+      "SSL/TLS is not supported on mailgw-2.immo-nrw.net",
+      "All nameservers failed to answer the query ms87155315.msv1.invalid. IN A: Server 127.0.0.53 UDP port 53 answered SERVFAIL. Consider using a TXT record to validate domain ownership in Office 365 instead.",
+      "ms87155315.msv1.invalid: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:servers.mcsv.net include:mailing.eqs.com ?all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

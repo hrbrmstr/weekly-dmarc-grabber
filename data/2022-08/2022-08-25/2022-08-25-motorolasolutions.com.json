@@ -1,0 +1,112 @@
+{
+  "domain": "motorolasolutions.com",
+  "base_domain": "motorolasolutions.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "todd.ns.cloudflare.com",
+      "lina.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0019e102.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.242"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0019e102.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.237"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0019e102.gslb.pphosted.com: Connection timed out",
+      "mxb-0019e102.gslb.pphosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:spf-info.motorolasolutions.com include:spf-0019e102.pphosted.com include:_spf.google.com include:_spf.salesforce.com include:%{ir}.%{v}.%{d}.spf.has.pphosted.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "motorolasolutions.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

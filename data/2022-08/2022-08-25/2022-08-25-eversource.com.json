@@ -1,0 +1,148 @@
+{
+  "domain": "eversource.com",
+  "base_domain": "eversource.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a1-29.akam.net",
+      "a16-64.akam.net",
+      "a24-66.akam.net",
+      "a9-64.akam.net",
+      "a18-65.akam.net",
+      "a3-67.akam.net",
+      "nubdns2.nu.com",
+      "nuwdns1.nu.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0018e401.gslb.pphosted.com",
+        "addresses": [
+          "67.231.157.114"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0018e401.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0a-0018e401.pphosted.com",
+        "addresses": [
+          "67.231.149.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0b-0018e401.pphosted.com",
+        "addresses": [
+          "67.231.157.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0018e401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0018e401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mx0a-0018e401.pphosted.com",
+      "SSL/TLS is not supported on mx0b-0018e401.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:security_dmarc_rua@eversource.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:security_dmarc_ruf@eversource.com",
+    "valid": true,
+    "location": "eversource.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "security_dmarc_rua@eversource.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "security_dmarc_ruf@eversource.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

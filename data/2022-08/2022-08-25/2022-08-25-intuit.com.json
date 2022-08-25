@@ -1,0 +1,141 @@
+{
+  "domain": "intuit.com",
+  "base_domain": "intuit.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.p01.nsone.net",
+      "dns2.p01.nsone.net",
+      "dns3.p01.nsone.net",
+      "dns4.p01.nsone.net",
+      "a7-66.akam.net",
+      "a24-67.akam.net",
+      "a11-64.akam.net",
+      "a1-182.akam.net",
+      "a18-64.akam.net",
+      "a6-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.intuit.iphmx.com",
+        "addresses": [
+          "207.54.92.90",
+          "207.54.92.93",
+          "216.71.138.61",
+          "216.71.138.62",
+          "216.71.141.216",
+          "216.71.141.217",
+          "68.232.135.147",
+          "68.232.135.250",
+          "68.232.143.160",
+          "68.232.146.251",
+          "68.232.146.61",
+          "68.232.148.142"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.intuit.iphmx.com",
+        "addresses": [
+          "207.54.92.90",
+          "207.54.92.93",
+          "216.71.138.61",
+          "216.71.138.62",
+          "216.71.141.216",
+          "216.71.141.217",
+          "68.232.135.147",
+          "68.232.135.250",
+          "68.232.143.160",
+          "68.232.146.251",
+          "68.232.146.61",
+          "68.232.148.142"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.intuit.iphmx.com: Connection timed out",
+      "mx2.intuit.iphmx.com: encoding with 'idna' codec failed (SMTPError: Connection timed out)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 4.500 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "intuit.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
