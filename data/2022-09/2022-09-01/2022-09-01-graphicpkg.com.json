@@ -1,0 +1,44 @@
+{
+  "domain": "graphicpkg.com",
+  "base_domain": "graphicpkg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.graphicpkg.com",
+      "ns3.graphicpkg.com",
+      "ns2.graphicpkg.com",
+      "ns1.graphicpkg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "graphicpkg-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.59.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on graphicpkg-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:64.95.144.196 ip4:68.232.200.69 ip4:198.245.93.166 ip4:204.153.63.198 ip4:206.208.231.70 ip4:89.202.116.58 ip4:52.247.55.153 ip4:52.252.40.69 ip4:52.167.216.141 ip4:52.147.160.188 include:spf.protection.outlook.com include:aspmx.pardot.com include:authsmtp.com include:spf.mailjet.com include:successfactors.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

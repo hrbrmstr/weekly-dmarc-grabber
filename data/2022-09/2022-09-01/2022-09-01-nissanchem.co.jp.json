@@ -1,0 +1,106 @@
+{
+  "domain": "nissanchem.co.jp",
+  "base_domain": "nissanchem.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.broadline.ne.jp",
+      "dns1.broadline.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:42.127.238.0/28 include:_spf.attovas.com include:justsystem.co.jp ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "42.127.238.0/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.attovas.com",
+          "record": "v=spf1 ip4:101.53.115.64/27 ip4:202.222.76.96/27 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "101.53.115.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.222.76.96/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "justsystem.co.jp",
+          "record": "v=spf1 ip4:43.206.23.152 ip4:52.194.41.140 ip4:210.169.202.0/25 ip4:163.44.192.0/18 mx ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "43.206.23.152",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.194.41.140",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.169.202.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "163.44.192.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "mxmail.justsystem.co.jp",
+                "mechanism": "mx"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

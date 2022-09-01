@@ -1,0 +1,93 @@
+{
+  "domain": "sumitomocorp.com",
+  "base_domain": "sumitomocorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.iij-america.net",
+      "ns0.iij-america.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "sumitomocorp-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on sumitomocorp-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.148.19.203 ip4:210.148.19.204 ip4:210.148.19.205 ip4:216.98.121.112 ip4:216.98.121.113 ip4:216.98.121.114 include:spf.protection.outlook.com include:_subsys.sumitomocorp.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "b.spf.service-now.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:sumitomocorp00001-ra@dmarc25.jp",
+    "valid": true,
+    "location": "sumitomocorp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "sumitomocorp00001-ra@dmarc25.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

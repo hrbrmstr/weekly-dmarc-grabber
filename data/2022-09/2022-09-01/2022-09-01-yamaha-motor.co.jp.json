@@ -1,0 +1,42 @@
+{
+  "domain": "yamaha-motor.co.jp",
+  "base_domain": "yamaha-motor.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 30,
+        "hostname": "yamahamotor-co-jp01e.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on yamahamotor-co-jp01e.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:mktomail.com include:aspmx.pardot.com include:spfdc.yamaha-motor.co.jp include:spfaws.yamaha-motor.co.jp include:amazonses.com include:spf.protection.outlook.com include:spfother.yamaha-motor.co.jp -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

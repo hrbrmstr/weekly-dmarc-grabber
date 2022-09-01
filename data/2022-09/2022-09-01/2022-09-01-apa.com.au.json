@@ -1,0 +1,256 @@
+{
+  "domain": "apa.com.au",
+  "base_domain": "apa.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.domainnetwork.se",
+      "ns2.domainnetwork.se",
+      "ns3.domainnetwork.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0034ef02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.34"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0034ef02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.34"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0034ef02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0034ef02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:117.53.169.76 ip4:203.147.156.0/24 ip4:202.44.98.236 ip4:91.207.212.163 ip4:203.41.57.145 ip4:103.23.65.2 ip4:103.23.64.2 ip4:160.34.63.18 ip4:160.34.63.19  include:_spfinc1.service-now.com include:spf-0034ef02.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "117.53.169.76",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.147.156.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.44.98.236",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "91.207.212.163",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.145",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.65.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.64.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "160.34.63.18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "160.34.63.19",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spfinc1.service-now.com",
+          "record": "v=spf1 ip4:37.98.232.12 ip4:199.91.142.26 ip4:199.91.138.26 ip4:103.23.64.26 ip4:103.23.65.26 ip4:37.98.235.26 ip4:37.98.234.26 ip4:199.91.143.26 ip4:199.91.139.26 ip4:149.96.1.26 ip4:103.23.66.26 ip4:103.23.67.26 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "37.98.232.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.142.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.138.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.23.64.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.23.65.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.98.235.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.98.234.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.143.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.91.139.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.96.1.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.23.66.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.23.67.26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-0034ef02.pphosted.com",
+          "record": "v=spf1 ip4:205.220.177.34 ip4:205.220.165.34",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.177.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.34",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com, mailto:dmarc_agg@vali.email; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "apa.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

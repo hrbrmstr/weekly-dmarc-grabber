@@ -1,0 +1,204 @@
+{
+  "domain": "hsholdings.com",
+  "base_domain": "hsholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1489.awsdns-58.org",
+      "ns-1787.awsdns-31.co.uk",
+      "ns-728.awsdns-27.net",
+      "ns-125.awsdns-15.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-006f6401.gslb.pphosted.com",
+        "addresses": [
+          "205.220.185.60"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-006f6401.gslb.pphosted.com",
+        "addresses": [
+          "143.55.144.12"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-006f6401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-006f6401.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-006f6401.pphosted.com include:spf.eqs-externaladdress.com include:spf.uk.exclaimer.net -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [
+      "spf.eqs-externaladdress.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-006f6401.pphosted.com",
+          "record": "v=spf1 ip4:205.220.185.60 ip4:143.55.144.12",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.185.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.55.144.12",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.eqs-externaladdress.com",
+          "record": "v=spf1 ip4:212.18.1.50 ip4:212.18.21.82 mx -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.1.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.21.82",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "spf.eqs-externaladdress.com does not have any MX records"
+          ]
+        },
+        {
+          "domain": "spf.uk.exclaimer.net",
+          "record": "v=spf1 ip4:51.140.37.132 ip4:51.141.5.228 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.140.37.132",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.141.5.228",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; rf=afrf; pct=100; ri=86400",
+    "valid": true,
+    "location": "hsholdings.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      }
+    }
+  }
+}
