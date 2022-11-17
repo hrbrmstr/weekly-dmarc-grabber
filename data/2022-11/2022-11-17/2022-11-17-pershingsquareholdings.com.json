@@ -1,0 +1,93 @@
+{
+  "domain": "pershingsquareholdings.com",
+  "base_domain": "pershingsquareholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "josh.ns.cloudflare.com",
+      "dina.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mx1.emailsrvr.com",
+        "addresses": [
+          "173.203.187.1"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.emailsrvr.com",
+        "addresses": [
+          "108.166.43.2"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.emailsrvr.com: Connection timed out",
+      "mx2.emailsrvr.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "pershingsquareholdings.com has multiple SPF TXT records"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none",
+    "valid": true,
+    "location": "pershingsquareholdings.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,489 @@
+{
+  "domain": "fbhs.com",
+  "base_domain": "fbhs.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns91.ultradns.org",
+      "pdns91.ultradns.biz",
+      "pdns91.ultradns.com",
+      "pdns91.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001a1201.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.198"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001a1201.gslb.pphosted.com",
+        "addresses": [
+          "67.231.152.198"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-001a1201.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-001a1201.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:67.231.145.159 ip4:67.231.152.198 ip4:204.152.235.220 ip4:204.152.239.220 ip4:107.20.210.250 ip4:52.1.14.157 ip4:107.23.16.222 ip4:54.173.83.138 ip4:52.252.218.54 ip4:52.237.158.82 ip4:50.31.46.70 ip4:192.254.112.23 ip4:18.184.122.101 ip4:35.157.94.240 include:spf-001a1201.pphosted.com include:spf.boardbooks.com include:mail.zendesk.com include:spf.protection.outlook.com include:smtp.wakeflywebsites.com mx:fortunebrands.com mx:fortunebrandsbenefitcenter.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "warnings": [
+      "smtp.wakeflywebsites.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "67.231.145.159",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "67.231.152.198",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.152.235.220",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.152.239.220",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "107.20.210.250",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.1.14.157",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "107.23.16.222",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.173.83.138",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.252.218.54",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.237.158.82",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "50.31.46.70",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.254.112.23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "18.184.122.101",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "35.157.94.240",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "mxa-001a1201.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-001a1201.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxa-001a1201.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-001a1201.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-001a1201.pphosted.com",
+          "record": "v=spf1 ip4:67.231.152.198 ip4:67.231.145.159",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.152.198",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.145.159",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.boardbooks.com",
+          "record": "v=spf1 ip4:74.217.54.250/31 ip4:74.121.167.29 ip4:74.121.167.30 ip4:88.205.100.160/27 ip4:213.9.75.59 ip4:213.9.75.60 ip4:209.236.109.189 ip4:209.236.109.190 ip4:202.58.142.250 ip4:202.58.142.251 ip4:202.58.140.250 ip4:202.58.140.251 ip4:89.187.106.61 ip4:89.187.106.62 ip4:89.21.6.61 ip4:89.21.6.62 ip4:149.97.158.154/31 ip4:62.216.248.221 ip4:62.216.248.222 ip4:88.205.108.64/26 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "74.217.54.250/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.121.167.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.121.167.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.205.100.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.9.75.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.9.75.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.236.109.189",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.236.109.190",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.58.142.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.58.142.251",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.58.140.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.58.140.251",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.187.106.61",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.187.106.62",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.21.6.61",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.21.6.62",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.97.158.154/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.216.248.221",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.216.248.222",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.205.108.64/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mail.zendesk.com",
+          "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.151.192.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.12.80.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.172.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.161.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.198.0.0/18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "smtp.wakeflywebsites.com",
+          "record": "v=spf1 mx ip4:18.214.175.138",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "18.214.175.138",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": [
+            "smtp.wakeflywebsites.com does not have any MX records"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "fbhs.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

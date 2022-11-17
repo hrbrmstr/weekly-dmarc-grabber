@@ -1,0 +1,122 @@
+{
+  "domain": "appliedmaterials.com",
+  "base_domain": "appliedmaterials.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 mx ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx.appliedmaterials.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.appliedmaterials.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; pct=100; ri=3600; sp=none; rua=mailto:appliedmaterials@rua.agari.com,mailto:DMARC_Report@amat.com; ruf=mailto:appliedmaterials@ruf.agari.com,mailto:DMARCFore_Report@amat.com",
+    "valid": true,
+    "location": "appliedmaterials.com",
+    "warnings": [
+      "amat.com does not indicate that it accepts DMARC reports about appliedmaterials.com - Authorization record not found: appliedmaterials.com._report._dmarc.amat.com IN TXT \"v=DMARC1\"",
+      "amat.com does not indicate that it accepts DMARC reports about appliedmaterials.com - Authorization record not found: appliedmaterials.com._report._dmarc.amat.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "appliedmaterials@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "DMARC_Report@amat.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "appliedmaterials@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "DMARCFore_Report@amat.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "domain": "edwardjones.com",
+  "base_domain": "edwardjones.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nspgdns-1.edwardjones.com",
+      "tspgdns-1.edwardjones.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00355d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.176.196"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00355d01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.196"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00355d01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-00355d01.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo1;sp=none;pct=100;rua=mailto:mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": false,
+    "location": "edwardjones.com",
+    "error": "Error: Expected tag_value or end_of_statement at position 16 in: v=DMARC1;p=none;fo1;sp=none;pct=100;rua=mailto:mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:mailto:dmarc_ruf@emaildefense.proofpoint.com"
+  }
+}

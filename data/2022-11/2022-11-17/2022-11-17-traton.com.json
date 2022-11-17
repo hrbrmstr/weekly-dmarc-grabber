@@ -1,0 +1,105 @@
+{
+  "domain": "traton.com",
+  "base_domain": "traton.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns98.irondns.de",
+      "anycast97.irondns.eu",
+      "anycast96.irondns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "traton-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.13.36",
+          "104.47.14.36"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on traton-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.mailjet.com include:mailing.eqs.com include:spf.eqs-externaladdress.com include:spf.protection.outlook.com include:spf1.man.eu include:spf3.man.eu include:_spf.fireeyecloud.com include:_spf-dc12.successfactors.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; rua=mailto:dmarc@traton.com; ruf=mailto:dmarc@traton.com; rf=afrf; ri=86400;",
+    "valid": true,
+    "location": "traton.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@traton.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@traton.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      }
+    }
+  }
+}

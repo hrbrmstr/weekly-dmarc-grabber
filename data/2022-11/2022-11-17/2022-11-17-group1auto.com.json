@@ -1,0 +1,355 @@
+{
+  "domain": "group1auto.com",
+  "base_domain": "group1auto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gp1maindns-c.group1auto.com",
+      "gp1maindns-b.group1auto.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent1.group1auto.com",
+        "addresses": [
+          "50.231.25.154"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent2.group1auto.com",
+        "addresses": [
+          "50.231.25.155"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent3.group1auto.com",
+        "addresses": [
+          "50.231.25.156"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "bsc-ppagent4.group1auto.com",
+        "addresses": [
+          "50.231.25.157"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent1.group1auto.com",
+        "addresses": [
+          "205.251.141.131"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent2.group1auto.com",
+        "addresses": [
+          "205.251.141.132"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent3.group1auto.com",
+        "addresses": [
+          "205.251.141.133"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent4.group1auto.com",
+        "addresses": [
+          "205.251.141.134"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pp-agent5.group1auto.com",
+        "addresses": [
+          "205.251.141.134"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "pp-secure.group1auto.com",
+        "addresses": [
+          "205.251.141.137"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "bsc-ppagent1.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "bsc-ppagent2.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "bsc-ppagent3.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "bsc-ppagent4.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-agent1.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-agent2.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-agent3.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-agent4.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-agent5.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "pp-secure.group1auto.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:205.251.141.130/26 ip4:50.231.25.129/26 ip4:66.129.126.137 ip4:136.179.128.0/23 ip4:170.76.175.0/24 ip4:207.187.164.0/24 include:_spf.hosting.cdkcrm.com include:mail.zendesk.com include:usb._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "205.251.141.130/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "50.231.25.129/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "66.129.126.137",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "136.179.128.0/23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "170.76.175.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "207.187.164.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.hosting.cdkcrm.com",
+          "record": "v=spf1 ip4:207.186.166.0/26 ip4:207.186.148.0/24 ip4:207.186.149.0/26 ip4:192.110.66.96 ip4:192.110.66.97 ip4:192.110.66.98 ip4:192.110.66.99 ip4:192.110.66.104 ip4:192.110.66.105 ip4:192.110.66.106 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "207.186.166.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.186.148.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.186.149.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.96",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.97",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.98",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.99",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.104",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.105",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.110.66.106",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mail.zendesk.com",
+          "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.151.192.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.12.80.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.172.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.161.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.198.0.0/18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "usb._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:170.10.151.0/24 ip4:170.10.153.0/24 ip4:170.10.150.240/29 ip4:170.10.152.240/29 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "170.10.151.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.153.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.150.240/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.10.152.240/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "group1auto.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

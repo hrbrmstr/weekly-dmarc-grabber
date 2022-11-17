@@ -1,0 +1,138 @@
+{
+  "domain": "hpe.com",
+  "base_domain": "hpe.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns7.hpe.com",
+      "ns8.hpe.com",
+      "ns6.hpe.com",
+      "ns5.hpe.com",
+      "ns4.hpe.com",
+      "ns2.hpe.com",
+      "ns1.hpe.com",
+      "ns3.hpe.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx0a-002e3701.pphosted.com",
+        "addresses": [
+          "148.163.147.86"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mx0b-002e3701.pphosted.com",
+        "addresses": [
+          "148.163.143.35"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxa-002e3701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.143.35"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002e3701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.147.86"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0a-002e3701.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx0b-002e3701.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxa-002e3701.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-002e3701.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com include:_spf.hpe.com include:spf-002e3701.pphosted.com include:spf-002e3702.pphosted.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1",
+    "valid": true,
+    "location": "hpe.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

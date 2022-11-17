@@ -1,0 +1,115 @@
+{
+  "domain": "healius.com.au",
+  "base_domain": "healius.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-03.azure-dns.info",
+      "ns1-03.azure-dns.com",
+      "ns2-03.azure-dns.net",
+      "ns3-03.azure-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.126"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.126"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0037a201.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-0037a201.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0037a201.pphosted.com include:_spf.createsend.com include:servers.mcsv.net include:peoplepulse.com.au include:cmail19.com include:spf.surveymonkey.com include:mktomail.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 17/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 17
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@healius.com.au; ruf=mailto:dmarc_ruf@healius.com.au",
+    "valid": true,
+    "location": "healius.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@healius.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@healius.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

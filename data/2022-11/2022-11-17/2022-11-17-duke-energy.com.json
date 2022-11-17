@@ -1,0 +1,119 @@
+{
+  "domain": "duke-energy.com",
+  "base_domain": "duke-energy.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns20.duke-energy.com",
+      "ns10.duke-energy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc5654-71.iphmx.com",
+        "addresses": [
+          "216.71.142.194",
+          "216.71.154.186"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc5654-71.iphmx.com",
+        "addresses": [
+          "216.71.142.194",
+          "216.71.154.186"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc5654-71.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc5654-71.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc5654-71.iphmx.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "%{i}.spf.hc5654-71.iphmx.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:DMARC_Aggregate@duke-energy.com",
+    "valid": true,
+    "location": "duke-energy.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_Aggregate@duke-energy.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

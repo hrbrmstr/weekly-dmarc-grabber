@@ -1,0 +1,300 @@
+{
+  "domain": "pacific-metals.co.jp",
+  "base_domain": "pacific-metals.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.canonet.ne.jp",
+      "ns2.canonet.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.pacific-metals.co.jp",
+        "addresses": [
+          "210.134.168.66"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx.pacific-metals.co.jp",
+      "SSL/TLS is not supported on mx.pacific-metals.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf01.canonet.ne.jp include:spf10.canonet.ne.jp ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf01.canonet.ne.jp",
+          "record": "v=spf1 ip4:210.134.164.0/28 ip4:210.134.165.0/24 ip4:210.134.166.0/25 ip4:210.134.168.0/24 ip4:210.134.169.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.134.164.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.165.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.166.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.168.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.134.169.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf10.canonet.ne.jp",
+          "record": "v=spf1 ip4:150.27.10.0/24 ip4:124.24.48.147 include:_spf.guardianwall.jp include:_bcspf.guardianwall.jp ~all",
+          "dns_lookups": 4,
+          "parsed": {
+            "pass": [
+              {
+                "value": "150.27.10.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.24.48.147",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.guardianwall.jp",
+                "record": "v=spf1  ip4:164.70.18.129 ip4:124.24.62.240 ip4:164.70.18.189 ip4:164.70.1.168 ip4:164.70.21.121 ip4:164.70.15.128 ip4:164.70.18.158 ip4:164.70.2.55 ip4:164.70.21.100 ip4:164.70.2.194 ip4:164.70.21.202 include:_spf2.guardianwall.jp ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "164.70.18.129",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "124.24.62.240",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.18.189",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.1.168",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.21.121",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.15.128",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.18.158",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.2.55",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.21.100",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.2.194",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "164.70.21.202",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "_spf2.guardianwall.jp",
+                      "record": "v=spf1 ip4:164.70.4.164 ip4:164.70.0.60 ip4:124.24.63.218 ip4:164.70.23.34 ip4:164.70.11.68 ip4:164.70.16.50 ip4:164.70.2.40 ip4:121.95.100.83 ip4:164.70.4.101 ip4:164.70.3.209 ip4:164.70.18.231 ip4:164.70.13.166 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "164.70.4.164",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.0.60",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "124.24.63.218",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.23.34",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.11.68",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.16.50",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.2.40",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "121.95.100.83",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.4.101",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.3.209",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.18.231",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.13.166",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_bcspf.guardianwall.jp",
+                "record": "v=spf1 include:_bcspf1.guardianwall.jp ~all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "_bcspf1.guardianwall.jp",
+                      "record": "v=spf1 ip4:164.70.17.203 ip4:164.70.5.87 ip4:164.70.7.120 ip4:164.70.9.130 ip4:164.70.6.237 ip4:164.70.21.202 ~all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "164.70.17.203",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.5.87",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.7.120",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.9.130",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.6.237",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "164.70.21.202",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

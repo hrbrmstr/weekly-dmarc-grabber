@@ -1,0 +1,137 @@
+{
+  "domain": "konicaminolta.jp",
+  "base_domain": "konicaminolta.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-b.iij.ad.jp",
+      "dns-c.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "gw9150.fortimail.com",
+        "addresses": [
+          "82.98.199.150"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "gw9150.fortimail.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:gw9150.fortimail.com include:webcas.net ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "82.98.199.150",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "webcas.net",
+          "record": "v=spf1 ip4:219.101.179.192/27 ip4:203.191.244.128/26 ip4:175.111.83.64/26 ip4:202.143.91.0/25 ip4:115.30.1.0/26 ip4:101.110.14.128/25 ip4:115.30.20.128/26 ip4:115.30.24.0/25 ip4:101.102.234.128/25 ip4:115.30.25.128/25 ip4:118.67.109.0/27 ip4:202.143.89.192/26 ip4:203.191.255.42/32 ip4:165.76.159.0/24 ip4:165.76.182.0/25 ip4:118.67.76.64/27 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "219.101.179.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.244.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "175.111.83.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.143.91.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.1.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "101.110.14.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.20.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.24.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "101.102.234.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "115.30.25.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.67.109.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.143.89.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.191.255.42/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.76.159.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.76.182.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.67.76.64/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

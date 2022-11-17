@@ -1,0 +1,449 @@
+{
+  "domain": "serco.com",
+  "base_domain": "serco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-04.azure-dns.info",
+      "ns3-04.azure-dns.org",
+      "ns2-04.azure-dns.net",
+      "ns1-04.azure-dns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc3707-74.iphmx.com",
+        "addresses": [
+          "139.138.39.143",
+          "139.138.39.171",
+          "139.138.39.172",
+          "139.138.39.86",
+          "139.138.39.87",
+          "139.138.39.95",
+          "139.138.39.96",
+          "139.138.46.123",
+          "139.138.46.130",
+          "139.138.46.159",
+          "139.138.46.180",
+          "139.138.46.181",
+          "139.138.46.182",
+          "139.138.46.183"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc3707-74.iphmx.com",
+        "addresses": [
+          "139.138.39.143",
+          "139.138.39.171",
+          "139.138.39.172",
+          "139.138.39.86",
+          "139.138.39.87",
+          "139.138.39.95",
+          "139.138.39.96",
+          "139.138.46.123",
+          "139.138.46.130",
+          "139.138.46.159",
+          "139.138.46.180",
+          "139.138.46.181",
+          "139.138.46.182",
+          "139.138.46.183"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.hc3707-74.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.hc3707-74.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc3707-74.iphmx.com ip4:168.245.49.105/32 ip4:54.240.30.198/32 ip4:54.240.30.199/32 ip4:52.56.103.10/32 ip4:52.56.102.31/32 ip4:35.177.105.167/32 a:mail.hertfordshire.gov.uk include:_spf-dc2.sapsf.com include:spf.hosted.jaama.co.uk include:spf.topdesk.net include:spf.bananatag.com include:ipreomail.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "%{i}.spf.hc3707-74.iphmx.com",
+          "mechanism": "exists"
+        },
+        {
+          "value": "168.245.49.105/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.240.30.198/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.240.30.199/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.56.103.10/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.56.102.31/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "35.177.105.167/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "46.16.1.250",
+          "mechanism": "a"
+        },
+        {
+          "value": "46.16.5.250",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf-dc2.sapsf.com",
+          "record": "v=spf1 ip4:35.214.208.81/32 ip4:35.214.213.218/32 ip4:35.214.183.81/32 ip4:35.214.212.238/32 ip4:213.52.186.141/32 ip4:213.52.186.142/32 ip4:213.52.186.100/32 ip4:213.52.186.101/32 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "35.214.208.81/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.214.213.218/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.214.183.81/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.214.212.238/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.186.141/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.186.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.186.100/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.186.101/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.hosted.jaama.co.uk",
+          "record": "v=spf1 ip4:185.207.120.2 ip4:185.207.120.6 ip4:185.207.120.5 ip4:185.207.120.4 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.207.120.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.207.120.6",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.207.120.5",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.207.120.4",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.topdesk.net",
+          "record": "v=spf1 ip4:62.204.93.131 ip4:207.244.98.227 ip4:83.149.98.72 ip4:81.17.56.1 ip4:83.149.98.73 ip4:13.88.226.191 ip4:40.115.66.46 ip4:13.94.232.90 ip4:191.238.213.99 ip4:51.13.102.144 ip4:178.162.177.161 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "62.204.93.131",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.244.98.227",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.149.98.72",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.17.56.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.149.98.73",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.88.226.191",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.115.66.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.94.232.90",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "191.238.213.99",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.13.102.144",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.162.177.161",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.bananatag.com",
+          "record": "v=spf1 ip4:23.251.237.159/32 ip4:23.251.237.160/29 ip4:23.251.237.168/30 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.251.237.159/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.160/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.168/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ipreomail.com",
+          "record": "v=spf1 ip4:66.17.251.47 ip4:80.169.95.198 ip4:80.169.95.218 ip4:66.35.231.0/27 ip4:216.74.162.0/27 ip4:91.209.197.0/28 ip4:91.229.201.7 ip4:122.248.252.54 ip4:54.151.162.172 ip4:178.17.33.133 ip4:216.74.162.151 ip4:34.198.150.124 ip4:18.213.83.215 ip4:4.78.42.137 ip4:4.78.42.147 ip4:65.205.75.147 ip4:65.205.75.148 ip4:170.207.0.0/16 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.17.251.47",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.198",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.35.231.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.209.197.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.229.201.7",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "122.248.252.54",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.151.162.172",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.17.33.133",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.198.150.124",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.213.83.215",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.207.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc-uk@serco.com; ruf=mailto:dmarc-uk@serco.com; rf=afrf; pct=100; ri=86400",
+    "valid": true,
+    "location": "serco.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-uk@serco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-uk@serco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

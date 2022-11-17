@@ -1,0 +1,117 @@
+{
+  "domain": "nucor.com",
+  "base_domain": "nucor.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns31.constellix.com",
+      "ns61.constellix.net",
+      "ns21.constellix.com",
+      "ns41.constellix.net",
+      "ns51.constellix.net",
+      "ns11.constellix.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-0022e501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.31"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 6,
+        "hostname": "mxb-0022e501.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.31"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-0022e501.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mxb-0022e501.gslb.pphosted.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:128.136.46.135 ip4:148.66.218.165 ip4:208.70.84.7 ip4:208.70.85.7 ip4:52.24.33.109 include:spf-0022e501.pphosted.com include:customers.clickdimensions.com include:email.freshservice.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 15/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 15
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "nucor.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
