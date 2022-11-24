@@ -1,0 +1,435 @@
+{
+  "domain": "morganstanley.com",
+  "base_domain": "morganstanley.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ext7.morganstanley.net",
+      "ns-ext7.ms.com",
+      "ns-ext8.morganstanley.net",
+      "ns-ext8.ms.com",
+      "ns-ext9.morganstanley.net",
+      "ns-ext9.ms.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.morganstanley.com",
+        "addresses": [
+          "199.89.94.11",
+          "199.89.94.12",
+          "199.89.94.13"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.morganstanley.com",
+        "addresses": [
+          "205.228.15.11",
+          "205.228.15.12",
+          "205.228.15.13"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx3.morganstanley.com",
+        "addresses": [
+          "205.228.84.47",
+          "205.228.84.48",
+          "205.228.84.49"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx4.morganstanley.com",
+        "addresses": [
+          "205.228.84.147",
+          "205.228.84.148",
+          "205.228.84.149"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.morganstanley.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 205.228.15.12 is rrmtaext02-t1.ms.com, but the A/AAAA DNS records for rrmtaext02-t1.ms.com do not resolve to 205.228.15.12",
+      "SSL/TLS is not supported on mx2.morganstanley.com",
+      "SSL/TLS is not supported on mx3.morganstanley.com",
+      "SSL/TLS is not supported on mx4.morganstanley.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:199.89.64.0/18 ip4:205.228.0.0/17 include:_spf.morganstanley.neolane.net include:aspmx.pardot.com include:cust-spf.exacttarget.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "199.89.64.0/18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.228.0.0/17",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.morganstanley.neolane.net",
+          "record": "v=spf1 include:us.neolane.net -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "us.neolane.net",
+                "record": "v=spf1 ip4:207.211.34.0/24 ip4:130.248.238.0/24 ip4:192.243.225.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "207.211.34.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.248.238.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.243.225.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "cust-spf.exacttarget.com",
+          "record": "v=spf1 ip4:64.132.92.0/24 ip4:64.132.88.0/23 ip4:66.231.80.0/20 ip4:68.232.192.0/20 ip4:199.122.120.0/21 ip4:207.67.38.0/24 ip4:128.17.0.0/20 ip4:128.17.64.0/20 ip4:128.17.128.0/20 ip4:128.17.192.0/20 ip4:128.245.0.0/20 ip4:128.245.64.0/20 ip4:128.245.242.0/24 ip4:128.245.243.0/24 ip4:128.245.244.0/24 ip4:128.245.245.0/24 ip4:128.245.246.0/24 ip4:128.245.247.0/24 ip4:128.245.176.0/20 ip4:207.67.98.192/27 ip4:207.250.68.0/24 ip4:209.43.22.0/28 ip4:198.245.80.0/20 ip4:136.147.128.0/20 ip4:136.147.176.0/20 ip4:13.111.0.0/16 ip4:161.71.32.0/19 ip4:161.71.64.0/20 ip4:13.110.208.0/21 ip4:13.110.216.0/22 ip4:13.110.224.0/20 ip4:159.92.157.0/24 ip4:159.92.158.0/24 ip4:159.92.159.0/24 ip4:159.92.160.0/24 ip4:159.92.161.0/24 ip4:159.92.162.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "64.132.92.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.132.88.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.231.80.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.232.192.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.122.120.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.67.38.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.17.0.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.17.64.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.17.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.17.192.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.0.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.64.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.242.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.243.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.244.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.245.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.246.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.247.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "128.245.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.67.98.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.250.68.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.43.22.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.245.80.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "136.147.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "136.147.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.111.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.71.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.71.64.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.110.208.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.110.216.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.110.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.157.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.158.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.159.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.160.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.161.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.92.162.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;",
+    "valid": true,
+    "location": "morganstanley.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "domain": "angloamerican.com",
+  "base_domain": "angloamerican.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.bt.net",
+      "ns1.bt.net",
+      "ns2.bt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-1.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "za-smtp-inbound-2.mimecast.co.za",
+        "addresses": [
+          "41.74.193.201",
+          "41.74.193.210",
+          "41.74.197.201",
+          "41.74.197.210"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on za-smtp-inbound-1.mimecast.co.za",
+      "SSL/TLS is not supported on za-smtp-inbound-2.mimecast.co.za"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:41.74.192.0/20 ip4:169.50.108.34 ip4:5.61.115.80/28 ip4:5.61.115.112/28 ip4:5.61.115.96/28 ip4:196.50.108.34/28 include:za._netblocks.mimecast.com include:eu._netblocks.mimecast.com include:nw010.com include:nw011.com include:nw001.com include:_spf.qualtrics.com include:_spf.vivantio.com -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "41.74.192.0/20",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "169.50.108.34",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "5.61.115.80/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "5.61.115.112/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "5.61.115.96/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "196.50.108.34/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "za._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:41.74.192.0/22 ip4:41.74.200.0/23 ip4:41.74.196.0/22 ip4:41.74.204.0/23 ip4:41.74.206.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "41.74.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.200.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.204.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "41.74.206.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ip4:147.28.36.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.28.36.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "nw010.com",
+          "record": "v=spf1 ip4:5.61.115.80/28 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "5.61.115.80/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "nw011.com",
+          "record": "v=spf1 ip4:5.61.115.96/28 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "5.61.115.96/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "nw001.com",
+          "record": "v=spf1 ip4:5.61.115.112/28 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "5.61.115.112/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.qualtrics.com",
+          "record": "v=spf1 ip4:162.247.216.0/22 ip4:139.60.152.0/22 ip4:98.97.248.0/21 ip4:64.69.212.0/24 ip4:54.186.193.102/32 ip4:52.222.73.120/32 ip4:52.222.73.83 ip4:52.222.62.51 ip4:52.222.75.85 ip4:52.222.89.228 ip4:160.1.62.192 ip4:52.61.91.9 ip4:15.200.21.50 ip4:15.200.201.185 ip4:15.200.44.248 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "162.247.216.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.60.152.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "98.97.248.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.69.212.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.186.193.102/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.73.120/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.73.83",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.62.51",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.75.85",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.89.228",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.1.62.192",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.61.91.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.21.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.201.185",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.44.248",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.vivantio.com",
+          "record": "v=spf1 ip4:5.79.35.45 ip4:5.79.35.44 ip4:198.61.249.60 ip4:31.222.129.238 ip4:198.101.137.221 ip4:168.63.54.71 ip4:40.85.227.239 ip4:20.26.25.169 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "5.79.35.45",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.79.35.44",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.61.249.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "31.222.129.238",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.101.137.221",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.63.54.71",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.85.227.239",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.26.25.169",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:07011f233254679@rep.dmarcanalyzer.com; ruf=mailto:07011f233254679@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "angloamerican.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "07011f233254679@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "07011f233254679@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

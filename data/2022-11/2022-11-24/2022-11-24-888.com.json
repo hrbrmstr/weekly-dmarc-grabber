@@ -1,0 +1,55 @@
+{
+  "domain": "888.com",
+  "base_domain": "888.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "sdns52.ultradns.biz",
+      "sdns52.ultradns.org",
+      "sdns52.ultradns.net",
+      "sdns52.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "smtpdub.888holdings.com",
+        "addresses": [
+          "217.147.127.113"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 9,
+        "hostname": "smtp.888holdings.com",
+        "addresses": [
+          "139.138.37.116",
+          "216.71.139.17"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on smtpdub.888holdings.com",
+      "SSL/TLS is not supported on smtpdub.888holdings.com",
+      "smtp.888holdings.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp.888holdings.com'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:91.109.248.0/21 ip4:66.231.82.234 ip4:193.130.144.38 ip4:217.147.118.0/24 ip4:208.85.53.123 ip4:74.112.66.8 ip4:74.112.67.0/24 ip4:198.37.57.129 ip4:217.147.112.102 include:custhelp.com include:rnmk.com include:amazonses.com include:spf.mandrillapp.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

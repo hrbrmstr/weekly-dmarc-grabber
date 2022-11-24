@@ -1,0 +1,107 @@
+{
+  "domain": "ecotel.de",
+  "base_domain": "ecotel.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "y.ns.ecotel.net",
+      "x.ns.ecotel.net",
+      "c.ns.ecotel.net",
+      "b.ns.ecotel.net",
+      "a.ns.ecotel.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ecotel-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.11.138",
+          "104.47.7.138"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "mx.ecotel.de",
+        "addresses": [
+          "62.26.210.98",
+          "62.26.210.99"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on ecotel-de.mail.protection.outlook.com",
+      "mx.ecotel.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx.ecotel.de'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:62.26.210.0/24 ip4:62.27.91.110/32 include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@ecotel.de; sp=none; fo=1; adkim=r; aspf=r",
+    "valid": true,
+    "location": "ecotel.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@ecotel.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

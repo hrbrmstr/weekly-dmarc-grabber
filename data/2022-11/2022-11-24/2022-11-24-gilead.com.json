@@ -1,0 +1,451 @@
+{
+  "domain": "gilead.com",
+  "base_domain": "gilead.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-002ff601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.142.20"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-002ff601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.146.49"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002ff601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002ff601.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-002ff601.pphosted.com include:mailgun.org include:_spf.salesforce.com include:spf.mandrillapp.com ip4:74.205.242.3 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:162.248.184.0/22 ip4:54.149.21.90 ip4:54.69.114.54 ip4:52.25.122.31 ip4:52.25.145.215 ip4:52.26.192.160 ip4:52.24.91.157 ip4:52.27.126.9 ip4:52.11.152.229 ip4:65.221.12.128 ip4:65.221.12.148 ip4:13.111.105.64 -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "74.205.242.3",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "205.201.128.0/20",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.2.128.0/18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.248.184.0/22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.149.21.90",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.69.114.54",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.25.122.31",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.25.145.215",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.26.192.160",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.24.91.157",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.27.126.9",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.11.152.229",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "65.221.12.128",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "65.221.12.148",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "13.111.105.64",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-002ff601.pphosted.com",
+          "record": "v=spf1 ip4:148.163.142.20 ip4:148.163.146.49",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.142.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.146.49",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailgun.org",
+          "record": "v=spf1 include:_spf.mailgun.org include:_spf.eu.mailgun.org -all",
+          "dns_lookups": 2,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.mailgun.org",
+                "record": "v=spf1 ip4:209.61.151.0/24 ip4:166.78.68.0/22 ip4:198.61.254.0/23 ip4:192.237.158.0/23 ip4:23.253.182.0/23 ip4:104.130.96.0/28 ip4:146.20.113.0/24 ip4:146.20.191.0/24 ip4:159.135.224.0/20 ip4:69.72.32.0/20 ip4:104.130.122.0/23 ip4:146.20.112.0/26 ip4:161.38.192.0/20 ip4:143.55.224.0/21 ip4:143.55.232.0/22 ip4:159.112.240.0/20 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "209.61.151.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "166.78.68.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.61.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.237.158.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.253.182.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.130.96.0/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.113.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.191.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.72.32.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.130.122.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "146.20.112.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.192.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.224.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.112.240.0/20",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.eu.mailgun.org",
+                "record": "v=spf1 ip4:141.193.32.0/23 ip4:159.135.140.80/29 ip4:159.135.132.128/25 ip4:161.38.204.0/22 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ip4:143.55.236.0/22 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "141.193.32.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.140.80/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.132.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.204.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mandrillapp.com",
+          "record": "v=spf1 ip4:198.2.128.0/24 ip4:198.2.132.0/22 ip4:198.2.136.0/23 ip4:198.2.145.0/24 ip4:198.2.186.0/23 ip4:205.201.131.128/25 ip4:205.201.134.128/25 ip4:205.201.136.0/23 ip4:205.201.139.0/24 ip4:198.2.177.0/24 ip4:198.2.178.0/23 ip4:198.2.180.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "198.2.128.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.132.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.136.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.145.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.186.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.131.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.134.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.136.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.139.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.177.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.178.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.180.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; fo=1; rua=mailto:dmarcreport@gilead.com,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "gilead.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreport@gilead.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

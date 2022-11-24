@@ -1,0 +1,43 @@
+{
+  "domain": "gateway-re.de",
+  "base_domain": "gateway-re.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.agenturserver.co",
+      "ns01.agenturserver.de",
+      "ns01.agenturserver.it"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "gatewayre-de01i.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.30.74",
+          "104.47.51.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "104.47.30.74 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on gatewayre-de01i.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

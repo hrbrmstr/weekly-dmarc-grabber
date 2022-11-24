@@ -1,0 +1,124 @@
+{
+  "domain": "lpkf.com",
+  "base_domain": "lpkf.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "d.ns14.net",
+      "c.ns14.net",
+      "b.ns14.net",
+      "a.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx02a.antispameurope.de",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx02b.antispameurope.de",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx02c.antispameurope.de",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "mx02d.antispameurope.de",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx02a.antispameurope.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx02a.antispameurope.de'. (_ssl.c:992)",
+      "mx02b.antispameurope.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx02b.antispameurope.de'. (_ssl.c:992)",
+      "mx02c.antispameurope.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx02c.antispameurope.de'. (_ssl.c:992)",
+      "mx02d.antispameurope.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx02d.antispameurope.de'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.hornetsecurity.com include:mailing.eqs.com include:spf.lamapoll.de include:spf.cloud.ci-solution.com include:spf.protection.outlook.com ip4:85.214.20.86/32 ip4:85.13.154.45/32 ip4:148.251.209.171/32 ip4:212.59.43.3/32 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:dmarc-report@lpkf.com",
+    "valid": true,
+    "location": "lpkf.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@lpkf.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "domain": "agcocorp.com",
+  "base_domain": "agcocorp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns31.constellix.com",
+      "ns61.constellix.net",
+      "ns21.constellix.com",
+      "ns41.constellix.net",
+      "ns51.constellix.net",
+      "ns11.constellix.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "All nameservers failed to answer the query 141.30.211.207.in-addr.arpa. IN PTR: Server 127.0.0.53 UDP port 53 answered SERVFAIL"
+  },
+  "spf": {
+    "record": "v=spf1 include:us._netblocks.mimecast.com include:spf.messagelabs.com include:spf.protection.outlook.com include:spf-a.agcocorp.com include:spf-b.agcocorp.com a:mout.kundenserver.de include:amazonses.com include:_spf.salesforce.com include:wappmail.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:24b43873060d159@rep.dmarcanalyzer.com; ruf=mailto:24b43873060d159@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "agcocorp.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "24b43873060d159@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "24b43873060d159@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

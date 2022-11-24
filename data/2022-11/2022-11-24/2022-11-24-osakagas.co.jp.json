@@ -1,0 +1,82 @@
+{
+  "domain": "osakagas.co.jp",
+  "base_domain": "osakagas.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.osakagas.co.jp",
+      "ns22.inetvass.com",
+      "ns21.inetvass.com",
+      "ns03.osakagas.co.jp",
+      "ns02.osakagas.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on primary.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt1.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.ap.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.osakagas.co.jp include:spf2.osakagas.co.jp include:spf3.osakagas.co.jp include:spf4.osakagas.co.jp ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

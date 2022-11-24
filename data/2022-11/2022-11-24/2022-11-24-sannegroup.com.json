@@ -1,0 +1,106 @@
+{
+  "domain": "sannegroup.com",
+  "base_domain": "sannegroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.phase8.net",
+      "ns1.phase8.net",
+      "ns0.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-1.mimecast-offshore.com",
+        "addresses": [
+          "193.7.206.36",
+          "193.7.207.36"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "je-smtp-inbound-2.mimecast-offshore.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "193.7.206.36 does not have any reverse DNS (PTR) records",
+      "193.7.207.36 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on je-smtp-inbound-1.mimecast-offshore.com",
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on je-smtp-inbound-2.mimecast-offshore.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.exclaimer.net include:eu._netblocks.mimecast.com include:efrontcloud.com include:514f86ea-spf.mta.getcheckrecipient.com include:amazonses.com include:spf.messagelabs.com include:spfhost.messageprovider.com ip4:217.28.140.17 ip4:217.28.140.9 ip4:217.28.138.145 ip4:217.28.130.38 ip4:20.72.164.170 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 15/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 15
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@sannegroup.com",
+    "valid": true,
+    "location": "sannegroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@sannegroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

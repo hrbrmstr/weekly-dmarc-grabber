@@ -1,0 +1,52 @@
+{
+  "domain": "xpo.com",
+  "base_domain": "xpo.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "inpau10267.xpo.com",
+      "inpau3623.xpo.com",
+      "ns2.f5cloudservices.com",
+      "ns1.f5cloudservices.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mxa-002b6701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.246"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxb-002b6701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.154.184"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002b6701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002b6701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{d}.86.spf-protect.agari.com exists:%{i}._i.%{d}._d.espf.agari.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain %{d}.86.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

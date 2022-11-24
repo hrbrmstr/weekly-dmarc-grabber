@@ -1,0 +1,142 @@
+{
+  "domain": "bauer.de",
+  "base_domain": "bauer.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "secondary006.dtag.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bauer.de",
+        "addresses": [
+          "80.154.26.169"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.bauer.de",
+        "addresses": [
+          "195.243.155.198"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.bauer.de",
+      "SSL/TLS is not supported on mail2.bauer.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:62.153.160.162 ip4:185.98.184.0/24 ip4:80.82.206.0/26 ip4:208.185.229.0/24 ip4:208.185.235.0/24 ip4:148.59.108.0/23 ip4:148.59.106.0/23 include:_spf.recruiting-portal.com include:spf.protection.outlook.com include:marketing.dynamics.com include:spf-de.emailsignatures365.com include:cust.wombatsecurity.com ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@bauer.de,mailto:dmarc@bauergroup.uriports.com,mailto:dmarc_agg@vali.email;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_ruf@bauer.de,mailto:dmarc@bauergroup.uriports.com;fo=1",
+    "valid": true,
+    "location": "bauer.de",
+    "warnings": [
+      "bauergroup.uriports.com does not indicate that it accepts DMARC reports about bauer.de - Authorization record not found: bauer.de._report._dmarc.bauergroup.uriports.com IN TXT \"v=DMARC1\"",
+      "Some DMARC reporters might not send to more than two rua URIs",
+      "bauergroup.uriports.com does not indicate that it accepts DMARC reports about bauer.de - Authorization record not found: bauer.de._report._dmarc.bauergroup.uriports.com IN TXT \"v=DMARC1\"",
+      "Some DMARC reporters might not send to more than two ruf URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@bauer.de",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@bauergroup.uriports.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@bauer.de",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@bauergroup.uriports.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
