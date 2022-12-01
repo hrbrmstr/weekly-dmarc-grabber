@@ -1,0 +1,338 @@
+{
+  "domain": "prudential.com",
+  "base_domain": "prudential.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsmn.prudential.com",
+      "ns2.prudential.com",
+      "ns1.prudential.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgate2.prudential.com",
+        "addresses": [
+          "161.151.157.53"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgate6.prudential.com",
+        "addresses": [
+          "161.151.153.47"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgate7.prudential.com",
+        "addresses": [
+          "161.151.153.52"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mailgate8.prudential.com",
+        "addresses": [
+          "161.151.157.61"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "pa-mailgate.prudential.com",
+        "addresses": [
+          "12.42.58.8"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "pa-mailgate2.prudential.com",
+        "addresses": [
+          "12.42.50.176"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 90,
+        "hostname": "mn-mailgate.prudential.com",
+        "addresses": [
+          "161.151.157.64"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailgate2.prudential.com",
+      "mailgate6.prudential.com: Connection refused",
+      "SSL/TLS is not supported on mailgate7.prudential.com",
+      "SSL/TLS is not supported on mailgate8.prudential.com",
+      "pa-mailgate.prudential.com: Connection refused",
+      "SSL/TLS is not supported on pa-mailgate2.prudential.com",
+      "SSL/TLS is not supported on mn-mailgate.prudential.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.prudential.com a:mail.investran.infinity.com include:spf.protection.outlook.com include:spfhost.messageprovider.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "147.249.37.42",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.prudential.com",
+          "record": "v=spf1 ip4:161.151.157.53 ip4:161.151.153.47 ip4:161.151.153.52 ip4:161.151.157.61 ip4:12.42.58.8 ip4:12.42.50.176 ip4:161.151.157.64 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "161.151.157.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.151.153.47",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.151.153.52",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.151.157.61",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.42.58.8",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.42.50.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.151.157.64",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfhost.messageprovider.com",
+          "record": "v=spf1 ip4:156.55.193.212/30 ip4:156.55.203.218/31 ip4:156.55.203.220 ip4:156.55.205.65 ip4:156.55.205.66/31 ip4:199.200.27.18/31 ip4:199.200.27.29 ip4:199.200.27.30 ip4:206.71.18.20/31 ip4:147.249.4.125 ip4:147.249.4.126/31 ip4:147.249.4.128/31 ip4:147.249.4.130 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "156.55.193.212/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "156.55.203.218/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "156.55.203.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "156.55.205.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "156.55.205.66/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.200.27.18/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.200.27.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.200.27.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "206.71.18.20/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.249.4.125",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.249.4.126/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.249.4.128/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.249.4.130",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
