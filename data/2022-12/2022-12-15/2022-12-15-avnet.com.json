@@ -1,0 +1,202 @@
+{
+  "domain": "avnet.com",
+  "base_domain": "avnet.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a14-64.akam.net",
+      "a22-65.akam.net",
+      "a13-67.akam.net",
+      "a5-66.akam.net",
+      "a1-13.akam.net",
+      "a12-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "smtp01.avnet.com",
+        "addresses": [
+          "12.9.139.111"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp02.avnet.com",
+        "addresses": [
+          "12.9.139.112"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp03.avnet.com",
+        "addresses": [
+          "12.9.139.113"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp1.avnet.com",
+        "addresses": [
+          "12.9.139.121"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp2.avnet.com",
+        "addresses": [
+          "12.9.139.122"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "smtp3.avnet.com",
+        "addresses": [
+          "12.9.139.123"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea01.avnet.com",
+        "addresses": [
+          "193.34.102.203"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea02.avnet.com",
+        "addresses": [
+          "193.34.102.204"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea03.avnet.com",
+        "addresses": [
+          "193.34.102.205"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea1.avnet.com",
+        "addresses": [
+          "193.34.102.163"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtpemea2.avnet.com",
+        "addresses": [
+          "193.34.102.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "12.9.139.111 does not have any reverse DNS (PTR) records",
+      "smtp01.avnet.com: Connection timed out",
+      "12.9.139.112 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on smtp02.avnet.com",
+      "12.9.139.113 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on smtp03.avnet.com",
+      "SSL/TLS is not supported on smtp1.avnet.com",
+      "SSL/TLS is not supported on smtp2.avnet.com",
+      "SSL/TLS is not supported on smtp3.avnet.com",
+      "SSL/TLS is not supported on smtpemea01.avnet.com",
+      "SSL/TLS is not supported on smtpemea02.avnet.com",
+      "SSL/TLS is not supported on smtpemea03.avnet.com",
+      "SSL/TLS is not supported on smtpemea1.avnet.com",
+      "SSL/TLS is not supported on smtpemea2.avnet.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mailhost.avnet.com include:_netblocks.eloqua.com include:spf.mandrillapp.com include:mktomail.com ip4:172.79.30.144 ip4:213.61.178.85 ip4:52.0.134.224 ip4:193.34.102.163 ip4:193.34.102.164 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.0.0/16 -all",
+    "valid": false,
+    "warnings": [],
+    "error": "avnet.com has more than 10 MX records - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:dmarc@avnet.eu",
+    "valid": true,
+    "location": "avnet.com",
+    "warnings": [
+      "avnet.eu does not indicate that it accepts DMARC reports about avnet.com - Authorization record not found: avnet.com._report._dmarc.avnet.eu IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@avnet.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

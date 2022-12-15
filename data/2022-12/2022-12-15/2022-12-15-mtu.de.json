@@ -1,0 +1,85 @@
+{
+  "domain": "mtu.de",
+  "base_domain": "mtu.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "d.ns14.net",
+      "b.ns14.net",
+      "a.ns14.net",
+      "c.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0-61.mtu.de",
+        "addresses": [
+          "91.217.214.168"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1-63.mtu.de",
+        "addresses": [
+          "91.217.214.169"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2-63.mtu.de",
+        "addresses": [
+          "91.217.214.186"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0-61.mtu.de",
+      "SSL/TLS is not supported on mx1-63.mtu.de",
+      "SSL/TLS is not supported on mx2-63.mtu.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:mx2-63.mtu.de a:mx0-61.mtu.de a:mx1-63.mtu.de -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "91.217.214.186",
+          "mechanism": "a"
+        },
+        {
+          "value": "91.217.214.168",
+          "mechanism": "a"
+        },
+        {
+          "value": "91.217.214.169",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

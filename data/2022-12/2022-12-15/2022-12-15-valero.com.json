@@ -1,0 +1,127 @@
+{
+  "domain": "valero.com",
+  "base_domain": "valero.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.valero.com",
+      "ns3.valero.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-005ffb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.174.66"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-005ffb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.162.66"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-005ffb01.gslb.pphosted.com: Connection timed out",
+      "mxb-005ffb01.gslb.pphosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-005ffb01.pphosted.com ip4:207.164.125.0/24 ip4:207.107.190.0/24 ip4:216.203.32.208 ip4:216.203.32.207 ip4:209.64.210.30 ip4:82.195.131.41 ip4:82.195.131.44 ip4:82.195.131.98 mx -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "207.164.125.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "207.107.190.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.203.32.208",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.203.32.207",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.64.210.30",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.41",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.98",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "mxa-005ffb01.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-005ffb01.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-005ffb01.pphosted.com",
+          "record": "v=spf1 ip4:205.220.174.66 ip4:205.220.162.66",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.174.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.162.66",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

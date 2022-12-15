@@ -1,0 +1,105 @@
+{
+  "domain": "techdata.com",
+  "base_domain": "techdata.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.techdata.com",
+      "ns1.techdata.com",
+      "pns.dtag.de",
+      "ns1.techdata.ca",
+      "secondary006.dtag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "techdata-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on techdata-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=reject; rua=mailto:o0ljpdxs@ag.eu.dmarcadvisor.com; ruf=mailto:o0ljpdxs@fr.eu.dmarcadvisor.com; fo=1",
+    "valid": true,
+    "location": "techdata.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "o0ljpdxs@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "o0ljpdxs@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

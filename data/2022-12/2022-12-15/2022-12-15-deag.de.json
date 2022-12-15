@@ -1,0 +1,42 @@
+{
+  "domain": "deag.de",
+  "base_domain": "deag.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.arcor-ip.de",
+      "ns2.arcor-ip.de",
+      "ns3.arcor-ip.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "deag-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.11.138",
+          "104.47.7.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on deag-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:mail02.deag.de -all",
+    "valid": false,
+    "warnings": [],
+    "error": "mail02.deag.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

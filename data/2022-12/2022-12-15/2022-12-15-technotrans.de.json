@@ -1,0 +1,317 @@
+{
+  "domain": "technotrans.de",
+  "base_domain": "technotrans.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns16.domserver.de",
+      "ns15.domserver.de",
+      "ns18.domserver.de",
+      "ns17.domserver.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-in01.eu.retarus.com",
+        "addresses": [
+          "94.199.92.130"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-in02.eu.retarus.com",
+        "addresses": [
+          "94.199.89.39"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx-in01.eu.retarus.com: Connection timed out",
+      "mx-in02.eu.retarus.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_spf.retarus.com a:spf.de.umantis.com a:mail1.im-systems.eu a:mail2.im-systems.eu include:spf.protection.outlook.com a:spf.sendinblue.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [
+      "spf.de.umantis.com does not have any A/AAAA records",
+      "spf.sendinblue.com does not have any A/AAAA records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx-in01.eu.retarus.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx-in02.eu.retarus.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "212.83.57.46",
+          "mechanism": "a"
+        },
+        {
+          "value": "212.83.57.47",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.retarus.com",
+          "record": "v=spf1 ip4:94.199.88.0/22 ip4:82.135.18.0/23 ip4:62.245.148.0/26 ip4:62.134.45.32/28 ip4:94.199.92.0/23 ip4:185.93.140.0/23 ip4:103.196.252.0/22 ip4:185.215.216.0/26 ip4:207.126.138.0/22 ip4:199.204.13.32/29 ip4:185.215.217.14/32 ip4:185.215.217.15/32 ip4:185.215.217.16/32 ip4:185.215.217.17/32 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "94.199.88.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.135.18.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.245.148.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.134.45.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.199.92.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.93.140.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.196.252.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.216.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.126.138.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.204.13.32/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.217.14/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.217.15/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.217.16/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.215.217.17/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; pct=100; ruf=mailto:postmaster@technotrans.de; adkim=r; aspf=r",
+    "valid": true,
+    "location": "technotrans.de",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@technotrans.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "domain": "53.com",
+  "base_domain": "53.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a13-66.akam.net",
+      "a10-65.akam.net",
+      "a7-65.akam.net",
+      "a1-80.akam.net",
+      "a14-67.akam.net",
+      "a24-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00642301.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.171"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00642301.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.171"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxa-00642301.gslb.pphosted.com: Connection timed out",
+      "mxb-00642301.gslb.pphosted.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "error": "The resolution lifetime expired after 2.500 seconds: Server 127.0.0.53 UDP port 53 answered ; Server 127.0.0.53 TCP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=none; fo=1; pct=100; ri=3600; rua=mailto:fifththird-dmarc@datafeeds.phishlabs.com; ruf=mailto:fifththird-dmarc@datafeeds.phishlabs.com",
+    "valid": true,
+    "location": "53.com",
+    "warnings": [
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about 53.com - Authorization record not found: 53.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\"",
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about 53.com - Authorization record not found: 53.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fifththird-dmarc@datafeeds.phishlabs.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fifththird-dmarc@datafeeds.phishlabs.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "domain": "games-workshop.com",
+  "base_domain": "games-workshop.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dave.ns.cloudflare.com",
+      "kay.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "smtp.games-workshop.com",
+        "addresses": [
+          "12.9.73.86"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The domain smtp.gamesworkshop.com does not exist",
+      "The reverse DNS of 12.9.73.86 is smtp.gamesworkshop.com, but the A/AAAA DNS records for smtp.gamesworkshop.com do not resolve to 12.9.73.86",
+      "STARTTLS is not supported on smtp.games-workshop.com",
+      "SSL/TLS is not supported on smtp.games-workshop.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:gw-mem-ex01.us.gamesworkshop.com a:smtp.games-workshop.com  a:atgmail.games-workshop.com include:_spf.atoracle.com ip4:81.109.165.114/32 ?all",
+    "valid": true,
+    "dns_lookups": 4,
+    "warnings": [
+      "The domain gw-mem-ex01.us.gamesworkshop.com does not exist"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "12.9.73.86",
+          "mechanism": "a"
+        },
+        {
+          "value": "209.135.50.82",
+          "mechanism": "a"
+        },
+        {
+          "value": "81.109.165.114/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.atoracle.com",
+          "record": "v=spf1 ip4:141.146.165.0/27 ip4:141.146.154.96/27 ip4:148.87.89.32/28 ip4:64.181.217.128/27 ip4:143.47.149.160/27 ip4:143.47.167.160/27 ip4:129.91.190.200/29 ip4:129.91.222.0/29 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "141.146.165.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.146.154.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.87.89.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.181.217.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.47.149.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.47.167.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.190.200/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.91.222.0/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

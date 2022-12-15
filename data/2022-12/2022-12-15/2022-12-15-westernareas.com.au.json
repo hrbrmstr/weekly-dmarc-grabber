@@ -1,0 +1,89 @@
+{
+  "domain": "westernareas.com.au",
+  "base_domain": "westernareas.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.server-cpanel.com",
+      "ns2.server-cpanel.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +a +mx +ip4:203.210.102.62 +mx:mail.westernareas.com.au +ip4:110.145.151.154 -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [
+      "mail.westernareas.com.au does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "110.145.151.154",
+          "mechanism": "a"
+        },
+        {
+          "value": "au-smtp-inbound-1.mimecast.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "au-smtp-inbound-2.mimecast.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "203.210.102.62",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "110.145.151.154",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

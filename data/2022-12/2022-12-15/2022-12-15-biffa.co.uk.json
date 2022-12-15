@@ -1,0 +1,129 @@
+{
+  "domain": "biffa.co.uk",
+  "base_domain": "biffa.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.123-reg.co.uk",
+      "ns.123-reg.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "spf": {
+    "record": "v=spf1 include:eu._netblocks.mimecast.com include:_spf.sidetrade.net ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ip4:147.28.36.0/24 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.28.36.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.sidetrade.net",
+          "record": "v=spf1 ip4:212.99.44.69/32 ip4:212.99.44.71/32 ip4:213.41.92.230/32 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.99.44.69/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.99.44.71/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.41.92.230/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

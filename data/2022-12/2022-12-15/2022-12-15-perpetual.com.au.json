@@ -1,0 +1,57 @@
+{
+  "domain": "perpetual.com.au",
+  "base_domain": "perpetual.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.optus.net.au",
+      "dns0.optus.net.au",
+      "dns4.perpetual.com.au",
+      "dns3.perpetual.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.213",
+          "67.219.246.219",
+          "67.219.247.111",
+          "67.219.247.207",
+          "67.219.250.219",
+          "67.219.250.220"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster9.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster9a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:52.1.235.217 include:spf.messagelabs.com include:_spf.salesforce.com include:spf.protection.outlook.com ip4:136.147.139.117 ip4:173.203.6.131 ip4:203.10.25.254 ip4:193.5.110.18 ip4:203.10.25.0/24 ip4:203.10.31.0/24 ip4:52.20.208.248 ip4:52.113.66.207 include:ivvy.net ip4:23.23.239.161 ip4:54.243.244.199 ip4:52.64.111.139 include:spf2.perpetual.com.au  include:spf-005e7502.pphosted.com -all",
+    "valid": false,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

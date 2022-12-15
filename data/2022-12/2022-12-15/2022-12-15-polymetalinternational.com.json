@@ -1,0 +1,60 @@
+{
+  "domain": "polymetalinternational.com",
+  "base_domain": "polymetalinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.phase8.net",
+      "ns2.phase8.net",
+      "ns1.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxs.polymetal.ru",
+        "addresses": [
+          "91.219.204.104"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mxs.polymetal.ru: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:91.219.204.104 a:smtp.polymetal.ru -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "91.219.204.104",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "91.219.204.104",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

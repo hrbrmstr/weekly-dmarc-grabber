@@ -1,0 +1,439 @@
+{
+  "domain": "simon.com",
+  "base_domain": "simon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "simon-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "simon-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.simon.com include:spf2.simon.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.simon.com",
+          "record": "v=spf1 ip4:72.3.174.40/29 ip4:72.32.10.104/30 ip4:98.129.167.158 ip4:198.101.134.192/27 ip4:199.36.204.8 ip4:199.36.204.9 include:_spf.salesforce.com include:mail.zendesk.com include:spf.protection.outlook.com -all",
+          "dns_lookups": 5,
+          "parsed": {
+            "pass": [
+              {
+                "value": "72.3.174.40/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.10.104/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "98.129.167.158",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.101.134.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.36.204.8",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.36.204.9",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.salesforce.com",
+                "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spf.mta.salesforce.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "mail.zendesk.com",
+                "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.151.192.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.12.80.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "188.172.128.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.161.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.198.0.0/18",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+                "dns_lookups": 1,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spfd.protection.outlook.com",
+                      "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                      "dns_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "51.4.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "20.47.149.138/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.4.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0400::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0400::/64",
+                            "mechanism": "ip6"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.simon.com",
+          "record": "v=spf1 include:outboundmail.convio.net ip4:209.177.165.161 ip4:209.177.171.161 ip4:209.177.164.2 ip4:209.177.167.165 ip4:209.177.173.165 ip4:209.177.166.34 ip4:212.54.152.11 ip4:65.60.45.155 -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "209.177.165.161",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.177.171.161",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.177.164.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.177.167.165",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.177.173.165",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.177.166.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.54.152.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.60.45.155",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "outboundmail.convio.net",
+                "record": "v=spf1 +ip4:216.235.195.0/24 +ip4:74.123.153.0/25 +ip4:74.123.154.128/25 +ip4:64.244.120.32/27 +ip4:64.244.122.192/27 +ip4:216.235.195.128/27 +ip4:216.235.195.160/27 ~all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.235.195.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.123.153.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.123.154.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.244.120.32/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.244.122.192/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.235.195.128/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.235.195.160/27",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_agg@dmarc.250ok.net,mailto:dmarc_simon_domain@simon.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_fr@dmarc.250ok.net,mailto:dmarc_simon_domain@simon.com",
+    "valid": true,
+    "location": "simon.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs",
+      "Some DMARC reporters might not send to more than two ruf URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@dmarc.250ok.net",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_simon_domain@simon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_fr@dmarc.250ok.net",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_simon_domain@simon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

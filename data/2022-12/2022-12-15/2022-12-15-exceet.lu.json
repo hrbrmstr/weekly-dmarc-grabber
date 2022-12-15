@@ -1,0 +1,75 @@
+{
+  "domain": "exceet.lu",
+  "base_domain": "exceet.lu",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsa2.schlundtech.de",
+      "nsc2.schlundtech.de",
+      "nsd2.schlundtech.de",
+      "nsb2.schlundtech.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail11.navaxx.lu",
+        "addresses": [
+          "85.93.220.171"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail21.navaxx.lu",
+        "addresses": [
+          "85.93.220.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail11.navaxx.lu",
+      "SSL/TLS is not supported on mail21.navaxx.lu"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a ip4:212.98.34.14 ip4:212.98.34.2 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "178.16.58.30",
+          "mechanism": "a"
+        },
+        {
+          "value": "212.98.34.14",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.98.34.2",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

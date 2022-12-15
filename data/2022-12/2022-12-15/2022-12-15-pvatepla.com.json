@@ -1,0 +1,60 @@
+{
+  "domain": "pvatepla.com",
+  "base_domain": "pvatepla.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.net",
+      "ns.udag.de",
+      "ns.udag.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "pvatepla.com.snwlhostedeu.com",
+        "addresses": [
+          "173.240.221.30"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "pvatepla.com.snwlhostedeu.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'pvatepla.com.snwlhostedeu.com'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:173.240.221.0/24 ip4:217.243.232.10 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "173.240.221.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.243.232.10",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

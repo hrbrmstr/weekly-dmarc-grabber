@@ -1,0 +1,150 @@
+{
+  "domain": "footlocker-inc.com",
+  "base_domain": "footlocker-inc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns5.ultradns.org",
+      "edns5.ultradns.net",
+      "edns5.ultradns.biz",
+      "edns5.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00014701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.95"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00014701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.150.95"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00014701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00014701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-00014701.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00014701.pphosted.com",
+          "record": "v=spf1 ip4:148.163.154.33 ip4:148.163.150.95",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.154.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.150.95",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; ri=86400; rua=mailto:dmarcreports@footlocker-inc.com; ruf=mailto:dmarcreports@footlocker-inc.com",
+    "valid": true,
+    "location": "footlocker-inc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@footlocker-inc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@footlocker-inc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

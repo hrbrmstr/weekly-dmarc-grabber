@@ -1,0 +1,380 @@
+{
+  "domain": "alstria.de",
+  "base_domain": "alstria.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "adel.ns.cloudflare.com",
+      "josh.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "alstria-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.30.74",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "104.47.30.74 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on alstria-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:2.207.160.17  include:spf.protection.outlook.com include:servers.mcsv.net include:email.event-hub.ipreo.com include:ipreomail.com -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "104.21.94.200",
+          "mechanism": "a"
+        },
+        {
+          "value": "172.67.139.186",
+          "mechanism": "a"
+        },
+        {
+          "value": "2606:4700:3030::6815:5ec8",
+          "mechanism": "a"
+        },
+        {
+          "value": "2606:4700:3031::ac43:8bba",
+          "mechanism": "a"
+        },
+        {
+          "value": "alstria-de.mail.protection.outlook.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "2.207.160.17",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfd.protection.outlook.com",
+                "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                "dns_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "51.4.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.72.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.5.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "20.47.149.138/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "51.4.80.0/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0800::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4051:0400::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:4180:4050:0400::/64",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "email.event-hub.ipreo.com",
+          "record": "v=spf1 ip4:54.240.45.174 ip4:69.169.238.206 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.240.45.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.238.206",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ipreomail.com",
+          "record": "v=spf1 ip4:66.17.251.47 ip4:80.169.95.198 ip4:80.169.95.218 ip4:66.35.231.0/27 ip4:216.74.162.0/27 ip4:91.209.197.0/28 ip4:91.229.201.7 ip4:122.248.252.54 ip4:54.151.162.172 ip4:178.17.33.133 ip4:216.74.162.151 ip4:34.198.150.124 ip4:18.213.83.215 ip4:4.78.42.137 ip4:4.78.42.147 ip4:65.205.75.147 ip4:65.205.75.148 ip4:170.207.0.0/16 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.17.251.47",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.198",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.169.95.218",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.35.231.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.209.197.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.229.201.7",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "122.248.252.54",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.151.162.172",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.17.33.133",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.198.150.124",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.213.83.215",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "4.78.42.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.205.75.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "170.207.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email; sp=none;",
+    "valid": true,
+    "location": "alstria.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

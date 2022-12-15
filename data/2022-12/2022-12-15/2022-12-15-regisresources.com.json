@@ -1,0 +1,280 @@
+{
+  "domain": "regisresources.com",
+  "base_domain": "regisresources.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.melbourneit.net",
+      "ns3.melbourneit.net",
+      "ns1.melbourneit.net",
+      "ns2.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "d147489a.ess.barracudanetworks.com",
+        "addresses": [
+          "209.222.82.252",
+          "209.222.82.253",
+          "209.222.82.255"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 2,
+        "hostname": "d147489b.ess.barracudanetworks.com",
+        "addresses": [
+          "209.222.82.252",
+          "209.222.82.253",
+          "209.222.82.255"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on d147489a.ess.barracudanetworks.com",
+      "SSL/TLS is not supported on d147489b.ess.barracudanetworks.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:101.178.172.16 ip4:54.240.30.12 ip4:54.240.30.13 ip4:60.240.53.157 include:_spf.elasticemail.com include:email-od.com include:spf.ess.barracudanetworks.com include:autotask.net -all",
+    "valid": true,
+    "dns_lookups": 5,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "101.178.172.16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.240.30.12",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.240.30.13",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "60.240.53.157",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.elasticemail.com",
+          "record": "v=spf1 exists:%{i}._spf.elasticemail.info ~all",
+          "dns_lookups": 1,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.elasticemail.info",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "email-od.com",
+          "record": "v=spf1 ip4:142.0.176.0/20 ip4:204.232.162.112/28 ip4:204.232.180.112/29 ip4:204.232.180.128/29 ip4:69.20.119.216/29 ip4:76.12.109.192/27 ip4:67.59.141.128/28 ip4:209.41.176.224/28 ip4:69.48.230.0/25 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "142.0.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.162.112/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.180.112/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.180.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.20.119.216/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.12.109.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.59.141.128/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.41.176.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.48.230.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.ess.barracudanetworks.com",
+          "record": "v=spf1 ip4:209.222.82.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "209.222.82.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "autotask.net",
+          "record": "v=spf1 ip4:8.12.58.0/24 ip4:8.34.161.0/24 ip4:8.224.10.0/24 ip4:213.212.96.64/27 ip4:118.186.64.32/28 ip4:185.217.59.0/24 ip4:162.244.87.54/32 ip4:139.28.144.0/24 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "8.12.58.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "8.34.161.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "8.224.10.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.212.96.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "118.186.64.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.217.59.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.244.87.54/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.28.144.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc@regisresources.com",
+    "valid": true,
+    "location": "regisresources.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@regisresources.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

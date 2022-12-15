@@ -1,0 +1,116 @@
+{
+  "domain": "cardinalhealth.com",
+  "base_domain": "cardinalhealth.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-cloud-e1.googledomains.com",
+      "ns-cloud-e2.googledomains.com",
+      "ns-cloud-e3.googledomains.com",
+      "ns-cloud-e4.googledomains.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2781-64.iphmx.com",
+        "addresses": [
+          "216.71.143.52",
+          "216.71.148.142"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2781-64.iphmx.com",
+        "addresses": [
+          "216.71.143.52",
+          "216.71.148.142"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.hc2781-64.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.hc2781-64.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc2781-64.iphmx.com include:_spf.salesforce.com include:spf.lanyonemail.com include:spf-a.opntxtdns.com include:7698986.spf08.hubspotemail.net include:sendgrid.net include:amazonses.com ip4:72.3.202.3 ip4:198.89.160.32 ip4:198.89.160.35 ~all",
+    "valid": false,
+    "warnings": [],
+    "error": "The domain spf.lanyonemail.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarcreports@cardinalhealth.com; ruf=mailto:dmarcreports@cardinalhealth.com",
+    "valid": true,
+    "location": "cardinalhealth.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@cardinalhealth.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@cardinalhealth.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

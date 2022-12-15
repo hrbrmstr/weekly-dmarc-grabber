@@ -1,0 +1,251 @@
+{
+  "domain": "sap.com",
+  "base_domain": "sap.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.sap-ag.de",
+      "ns.sap-ag.de",
+      "ns2.sap-ag.de",
+      "ns4.sap-ag.de",
+      "ns5.sap.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "sap-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.30.74",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "104.47.30.74 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on sap-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=_spf.sap.com",
+    "valid": true,
+    "dns_lookups": 3,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "_spf.sap.com",
+        "record": "v=spf1 ip4:155.56.66.96/30 ip4:155.56.66.102/31 ip4:155.56.66.104/32 ip4:155.56.66.106/32 ip4:155.56.68.128/26 include:spf.protection.outlook.com -all",
+        "dns_lookups": 2,
+        "parsed": {
+          "pass": [
+            {
+              "value": "155.56.66.96/30",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "155.56.66.102/31",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "155.56.66.104/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "155.56.66.106/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "155.56.68.128/26",
+              "mechanism": "ip4"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "spf.protection.outlook.com",
+              "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+              "dns_lookups": 1,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "40.92.0.0/15",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "40.107.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "52.100.0.0/14",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "104.47.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "2a01:111:f400::/48",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403::/49",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:8000::/50",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:c000::/51",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:f000::/52",
+                    "mechanism": "ip6"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "spfd.protection.outlook.com",
+                    "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                    "dns_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "51.4.72.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.5.72.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.5.80.0/27",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "20.47.149.138/32",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.4.80.0/27",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "2a01:4180:4051:0800::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4050:0800::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4051:0400::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4050:0400::/64",
+                          "mechanism": "ip6"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "fail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; adkim=s; aspf=s; rua=mailto:mailauth-reports@sap.com",
+    "valid": true,
+    "location": "sap.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth-reports@sap.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

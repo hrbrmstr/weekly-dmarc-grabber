@@ -1,0 +1,170 @@
+{
+  "domain": "officedepot.com",
+  "base_domain": "officedepot.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.ultradns.net",
+      "udns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns2.ultradns.net",
+      "pdns3.ultradns.org",
+      "pdns4.ultradns.org",
+      "pdns5.ultradns.info",
+      "pdns6.ultradns.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "officedepot-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.55.110",
+          "104.47.58.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 104.47.55.110 is mail-mw2nam100110.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-mw2nam100110.inbound.protection.outlook.com do not resolve to 104.47.55.110",
+      "SSL/TLS is not supported on officedepot-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email include:mail.zendesk.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mail.zendesk.com",
+          "record": "v=spf1 ip4:103.151.192.0/23 ip4:185.12.80.0/22 ip4:188.172.128.0/20 ip4:192.161.144.0/20 ip4:216.198.0.0/18 ~all",
+          "dns_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.151.192.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.12.80.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.172.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.161.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.198.0.0/18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_agg@vali.email,mailto:oddmarc@officedepot.com",
+    "valid": true,
+    "location": "officedepot.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "oddmarc@officedepot.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
