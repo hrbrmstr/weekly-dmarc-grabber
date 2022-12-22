@@ -1,0 +1,119 @@
+{
+  "domain": "caesars.com",
+  "base_domain": "caesars.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.markmonitor.com",
+      "ns7.markmonitor.com",
+      "ns3.markmonitor.com",
+      "ns2.markmonitor.com",
+      "ns6.markmonitor.com",
+      "ns5.markmonitor.com",
+      "ns1.markmonitor.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mxa-002ece01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.147.172"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-002ece01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.147.172"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002ece01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002ece01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:65.201.41.164 ip4:65.201.41.165 ip4:65.201.41.184 ip4:64.141.208.15 ip4:64.141.208.16 ip4:64.141.233.15 ip4:64.141.233.16 include:spf.emailsignatures365.com include:authsmtp.com include:_spf.salesforce.com include:spf-002ece01.pphosted.com include:spf_c.oraclecloud.com include:spf_c.oracle.com include:spf_a.oracle.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1",
+    "valid": true,
+    "location": "caesars.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

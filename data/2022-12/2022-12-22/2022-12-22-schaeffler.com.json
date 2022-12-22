@@ -1,0 +1,113 @@
+{
+  "domain": "schaeffler.com",
+  "base_domain": "schaeffler.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.ina.de",
+      "ns3.lemarit.net",
+      "ns2.ina.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-1.schaeffler.com",
+        "addresses": [
+          "85.115.60.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail-3.schaeffler.com",
+        "addresses": [
+          "85.115.54.190"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mail-2.schaeffler.com",
+        "addresses": [
+          "85.115.58.190"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail-1.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-1.schaeffler.com'. (_ssl.c:992)",
+      "mail-3.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-3.schaeffler.com'. (_ssl.c:992)",
+      "mail-2.schaeffler.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail-2.schaeffler.com'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:159.51.0.0/16 ip4:85.115.32.0/19 ip4:86.111.216.0/23 ip4:116.50.56.0/21 ip4:208.87.232.0/21 ip4:86.111.220.0/22 ip4:103.1.196.0/22 ip4:177.39.96.0/22 ip4:196.216.238.0/23 ip4:192.151.176.0/20 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "159.51.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "85.115.32.0/19",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "86.111.216.0/23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "116.50.56.0/21",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.87.232.0/21",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "86.111.220.0/22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.1.196.0/22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "177.39.96.0/22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "196.216.238.0/23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.151.176.0/20",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

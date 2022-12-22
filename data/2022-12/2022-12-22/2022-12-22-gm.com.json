@@ -1,0 +1,253 @@
+{
+  "domain": "gm.com",
+  "base_domain": "gm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsx1.gm.com",
+      "nsx2.gm.com",
+      "nsx3.gm.com",
+      "nsx4.gm.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.imr.gm.com",
+        "addresses": [
+          "198.208.68.62",
+          "198.208.68.70",
+          "198.208.69.107",
+          "198.208.69.108",
+          "198.208.69.109"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.imr.gm.com",
+        "addresses": [
+          "198.208.56.255",
+          "198.208.56.35",
+          "198.208.57.85",
+          "198.208.57.86",
+          "198.208.57.87"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.imr.gm.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_spf-a.gm.com include:_spf-b.gm.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.imr.gm.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.imr.gm.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf-a.gm.com",
+          "record": "v=spf1 ip4:66.231.87.48/32 ip4:66.231.87.50/32 ip4:167.89.35.31/32 ip4:208.115.214.220/32 ip4:192.41.90.160/27 ip4:74.206.109.32/27 ip4:162.247.216.0/22 ip4:198.208.68.0/23 ip4:198.208.56.0/23 ip4:198.208.232.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.231.87.48/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.231.87.50/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.35.31/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.115.214.220/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.41.90.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.206.109.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "162.247.216.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.68.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.56.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.232.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-b.gm.com",
+          "record": "v=spf1 ip4:198.208.73.33/32 ip4:198.208.74.69/32 ip4:198.208.73.239/32 ip4:198.208.74.58/32 ip4:198.208.72.240/32 ip4:198.208.62.240/32 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "198.208.73.33/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.74.69/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.73.239/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.74.58/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.72.240/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.208.62.240/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;ri=3600;rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@gm.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_ruf@gm.com",
+    "valid": true,
+    "location": "gm.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@gm.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@gm.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

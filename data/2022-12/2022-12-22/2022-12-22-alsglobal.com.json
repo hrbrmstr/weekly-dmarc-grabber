@@ -1,0 +1,94 @@
+{
+  "domain": "alsglobal.com",
+  "base_domain": "alsglobal.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.easydns.org",
+      "dns1.easydns.com",
+      "dns2.easydns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "alsglobal-com.mail.protection.outlook.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "SSL/TLS is not supported on alsglobal-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:192.139.196.37 ip4:103.134.64.250 ip4:170.153.66.13 ip4:170.153.66.12 ip4:170.153.166.13 ip4:170.153.166.12 ip4:67.231.151.29 ip4:67.231.158.158 ip4:64.18.0.0/20 ip4:136.143.188.0/24 ip4:135.84.80.0/24 ip4:199.67.64.0/24 ip4:136.143.184.0/24 include:spf.protection.outlook.com include:et._spf.pardot.com include:mnb.email include:sabacloud.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "alsglobal.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

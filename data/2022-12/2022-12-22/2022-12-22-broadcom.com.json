@@ -1,0 +1,228 @@
+{
+  "domain": "broadcom.com",
+  "base_domain": "broadcom.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns1.cscdns.net",
+      "pdns2.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.smtp.goog",
+        "addresses": [
+          "2001:4860:4802:32::97",
+          "216.239.32.151"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.smtp.goog",
+        "addresses": [
+          "2001:4860:4802:34::97",
+          "216.239.34.151"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "172.253.115.26",
+          "2607:f8b0:4004:c1b::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.27",
+          "2a00:1450:400b:c00::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1b",
+          "64.233.184.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "mx3.smtp.goog",
+        "addresses": [
+          "2001:4860:4802:36::97",
+          "216.239.36.151"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 60,
+        "hostname": "mx4.smtp.goog",
+        "addresses": [
+          "2001:4860:4802:38::97",
+          "216.239.38.151"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "2001:4860:4802:32::97 does not have any reverse DNS (PTR) records",
+      "216.239.32.151 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mx1.smtp.goog",
+      "2001:4860:4802:34::97 does not have any reverse DNS (PTR) records",
+      "216.239.34.151 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mx2.smtp.goog",
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "2001:4860:4802:36::97 does not have any reverse DNS (PTR) records",
+      "216.239.36.151 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mx3.smtp.goog",
+      "2001:4860:4802:38::97 does not have any reverse DNS (PTR) records",
+      "216.239.38.151 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mx4.smtp.goog"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:broadcom.com._nspf.vali.email include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "broadcom.com._nspf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc_agg@vali.email,mailto:dmarc-admin.pdl-it@broadcom.com; ruf=mailto:dmarc-ruf-admin.pdl@broadcom.com",
+    "valid": true,
+    "location": "broadcom.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc-admin.pdl-it@broadcom.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ruf-admin.pdl@broadcom.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

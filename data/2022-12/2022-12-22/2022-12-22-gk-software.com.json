@@ -1,0 +1,156 @@
+{
+  "domain": "gk-software.com",
+  "base_domain": "gk-software.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "lxa.us.ha-dns.net",
+      "f2.de.ha-dns.net",
+      "ka2.de.ha-dns.net",
+      "m.de.ha-dns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.gk-software.com",
+        "addresses": [
+          "80.146.245.109"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.gk-software.com",
+        "addresses": [
+          "46.4.175.73"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx.gk-software.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)",
+      "mx2.gk-software.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.gk-software.com ip4:51.144.183.77/32 include:_spf.salesforce.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "51.144.183.77/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.gk-software.com",
+          "record": "v=spf1 ip4:80.146.245.112/32 ip4:46.4.175.67/32 ip4:70.62.99.149/32 ip4:80.82.206.0/26 ip4:185.98.184.0/24 include:spf.mailingwork.de ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "80.146.245.112/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.4.175.67/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.62.99.149/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.82.206.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.98.184.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailingwork.de",
+                "record": "v=spf1 ip4:185.98.184.0/24 ip4:80.82.206.0/26 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "185.98.184.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "80.82.206.0/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

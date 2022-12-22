@@ -1,0 +1,143 @@
+{
+  "domain": "dena.com",
+  "base_domain": "dena.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-1275.awsdns-31.org",
+      "ns-1687.awsdns-18.co.uk",
+      "ns-304.awsdns-38.com",
+      "ns-663.awsdns-18.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "142.251.16.26",
+          "2607:f8b0:4004:c1b::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "209.85.202.26",
+          "2a00:1450:400b:c00::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "2a00:1450:400c:c0b::1a",
+          "64.233.184.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "142.250.27.26",
+          "2a00:1450:4025:401::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "142.250.153.26",
+          "2a00:1450:4013:c16::1a"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf1.dena.com include:_spf2.dena.com include:e2r.jp include:spf.mailjet.com include:mail.zendesk.com include:amazonses.com include:digital-knowledge.sm.air.ne.jp ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:security_mailcheck@dena.jp",
+    "valid": true,
+    "location": "dena.com",
+    "warnings": [
+      "dena.jp does not indicate that it accepts DMARC reports about dena.com - Authorization record not found: dena.com._report._dmarc.dena.jp IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "security_mailcheck@dena.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

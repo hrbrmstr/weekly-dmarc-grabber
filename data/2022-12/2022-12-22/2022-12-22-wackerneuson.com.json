@@ -1,0 +1,220 @@
+{
+  "domain": "wackerneuson.com",
+  "base_domain": "wackerneuson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.ganag.com",
+      "ns2.ganag.com",
+      "ns.ganag.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu.wackerneuson.com",
+        "addresses": [
+          "217.239.254.250"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.wackerneuson.com",
+        "addresses": [
+          "62.159.40.19"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "eu.wackerneuson.com: Connection timed out",
+      "mail.wackerneuson.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mail.wackerneuson.com'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:209.83.61.154/32 ip4:80.120.0.128/28 ip4:12.21.94.99/32 ip4:4.16.39.192/26 ip4:217.239.254.250/32 ip4:62.159.40.0/27 ip4:213.155.74.0/24 include:indivsurvey.de include:spf.de.umantis.com include:mailing.eqs.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "209.83.61.154/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "80.120.0.128/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "12.21.94.99/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "4.16.39.192/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.239.254.250/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.159.40.0/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.155.74.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "indivsurvey.de",
+          "record": "v=spf1 a mx a:s1.indivsurvey.de a:s2.indivsurvey.de -all",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.215.3.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "85.215.3.14",
+                "mechanism": "a"
+              },
+              {
+                "value": "mail.indivsurvey.de",
+                "mechanism": "mx"
+              },
+              {
+                "value": "85.215.3.13",
+                "mechanism": "a"
+              },
+              {
+                "value": "85.215.3.14",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.de.umantis.com",
+          "record": "v=spf1 ip4:213.198.99.210 ip4:213.198.99.211 ip4:81.25.202.82 ip4:185.238.12.20 ip4:185.238.12.21 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.198.99.210",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.198.99.211",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.25.202.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
