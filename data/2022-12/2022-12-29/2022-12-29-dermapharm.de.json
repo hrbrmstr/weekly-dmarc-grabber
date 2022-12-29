@@ -1,0 +1,51 @@
+{
+  "domain": "dermapharm.de",
+  "base_domain": "dermapharm.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pri.mordac.de",
+      "sec.mordac.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.dermapharm.de",
+        "addresses": [
+          "178.15.59.66"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.mibegmbh.de",
+        "addresses": [
+          "178.15.59.66"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.dermapharm.de",
+      "SSL/TLS is not supported on mail.mibegmbh.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx include:mordac.selfhost.de include:mailing.eqs.com include:spf.protection.outlook.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "mordac.selfhost.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

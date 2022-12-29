@@ -1,0 +1,167 @@
+{
+  "domain": "isravision.com",
+  "base_domain": "isravision.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.claranet.de",
+      "ns0.claranet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "spamportal.isravision.com",
+        "addresses": [
+          "185.80.187.24"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "spamportal.isravision.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mail.isravision.com ip4:212.82.225.204 ip4:212.82.225.203 include:spf.crsend.com include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "spamportal.isravision.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "213.221.107.146",
+          "mechanism": "a"
+        },
+        {
+          "value": "212.82.225.204",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "212.82.225.203",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.crsend.com",
+          "record": "v=spf1 ip4:178.77.121.128/26 ip4:158.69.163.48/29 ip4:46.4.238.128/29 ip4:194.42.96.0/23 ip6:2607:5300:203:fe1::/112 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "178.77.121.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "158.69.163.48/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.4.238.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.42.96.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2607:5300:203:fe1::/112",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

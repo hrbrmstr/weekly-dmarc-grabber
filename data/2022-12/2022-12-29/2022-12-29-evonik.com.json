@@ -1,0 +1,244 @@
+{
+  "domain": "evonik.com",
+  "base_domain": "evonik.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "qdns2.degussa.de",
+      "dns1.evonik.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 50,
+        "hostname": "mailin-ip2.evonik.com",
+        "addresses": [
+          "149.216.91.185",
+          "2a01:4bc0:900:1000::185"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 50,
+        "hostname": "mailin-ip4.evonik.com",
+        "addresses": [
+          "149.216.91.211",
+          "2a01:4bc0:900:1000::211"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 50,
+        "hostname": "mailin-ip5.evonik.com",
+        "addresses": [
+          "149.216.91.222",
+          "2a01:4bc0:900:1000::222"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mailin-ip2.evonik.com: Connection timed out",
+      "SSL/TLS is not supported on mailin-ip4.evonik.com",
+      "SSL/TLS is not supported on mailin-ip5.evonik.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf1.evonik.com include:spf2.evonik.com include:spf3.evonik.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mailin-ip2.evonik.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mailin-ip4.evonik.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mailin-ip5.evonik.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.evonik.com",
+          "record": "v=spf1 ip4:149.216.91.176 ip4:149.216.91.166 ip4:149.216.91.206 ip4:149.216.91.250 ip4:149.216.91.251 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "149.216.91.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.216.91.166",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.216.91.206",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.216.91.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.216.91.251",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.evonik.com",
+          "record": "v=spf1 ip4:149.216.91.252 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "149.216.91.252",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf3.evonik.com",
+          "record": "v=spf1 ip6:2a01:4bc0:900:1000::166 ip6:2a01:4bc0:900:1000::176 ip6:2a01:4bc0:900:1000::206 ip6:2a01:4bc0:900:1000::250 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "2a01:4bc0:900:1000::166",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:4bc0:900:1000::176",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:4bc0:900:1000::206",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:4bc0:900:1000::250",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; adkim=r; aspf=r; fo=1; pct=100; rf=afrf; ri=86400; rua=mailto:asmphrl1@ag.eu.dmarcadvisor.com; ruf=mailto:asmphrl1@fr.eu.dmarcadvisor.com",
+    "valid": true,
+    "location": "evonik.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "asmphrl1@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "asmphrl1@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      }
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "domain": "nttdata.co.jp",
+  "base_domain": "nttdata.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.via.or.jp",
+      "ns6.intervia.ad.jp",
+      "ms1.nttdata.co.jp",
+      "ms0.nttdata.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004b5d03.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.164"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004b5d03.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.164"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-004b5d03.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-004b5d03.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:163.135.193.192/26 +ip4:122.1.79.160/29 include:spf01.nttdata.co.jp include:mktomail.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "163.135.193.192/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "122.1.79.160/29",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf01.nttdata.co.jp",
+          "record": "v=spf1 +ip4:210.144.81.0/28 +ip4:122.1.62.130 +ip4:210.188.202.36 +ip4:210.114.17.16/28 +ip4:210.160.57.208/28 +ip4:203.182.213.33 +ip4:168.245.70.61 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.144.81.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "122.1.62.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.202.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.114.17.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.160.57.208/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.182.213.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.70.61",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mktomail.com",
+          "record": "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.15.212.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.185.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.154.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.243.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.236.119.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.188.97.188/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.28.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.28.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.237.104.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.172.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.173.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

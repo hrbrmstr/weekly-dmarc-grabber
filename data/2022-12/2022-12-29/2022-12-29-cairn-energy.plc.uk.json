@@ -1,0 +1,119 @@
+{
+  "domain": "cairn-energy.plc.uk",
+  "base_domain": "cairn-energy.plc.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "custmx.cscdns.net",
+        "addresses": [
+          "198.58.121.58"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on custmx.cscdns.net",
+      "SSL/TLS is not supported on custmx.cscdns.net"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "custmx.cscdns.net",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:0b8c0902791a385@rep.dmarcanalyzer.com; ruf=mailto:0b8c0902791a385@for.dmarcanalyzer.com; fo=1",
+    "valid": true,
+    "location": "cairn-energy.plc.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0b8c0902791a385@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0b8c0902791a385@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

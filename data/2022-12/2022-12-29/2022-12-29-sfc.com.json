@@ -1,0 +1,427 @@
+{
+  "domain": "sfc.com",
+  "base_domain": "sfc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "athena.ns.cloudflare.com",
+      "kirk.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw.sfc.com",
+        "addresses": [
+          "212.144.238.73"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailgw.sfc.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:62.165.65.0/24 ip4:216.123.211.227 ip4:134.119.45.182 include:aspmx.pardot.com include:_spf.salesforce.com include:sendgrid.net include:fdspfus.freshemail.io ip4:198.154.181.0/24 ip4:64.69.223.0/24 ip4:192.175.3.0/24 ip4:198.160.151.0/24 ip4:34.212.96.64/26 ip4:34.213.30.0/26 ip4:34.213.30.64/26 ip4:34.213.30.128/26 -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mailgw.sfc.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "62.165.65.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.123.211.227",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "134.119.45.182",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.154.181.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "64.69.223.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.175.3.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.160.151.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.212.96.64/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.213.30.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.213.30.64/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.213.30.128/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "sendgrid.net",
+          "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.89.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.117.48.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.31.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.37.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.21.0.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.254.112.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.72.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.183.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "ab.sendgrid.net",
+                "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "223.165.113.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.115.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.118.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.120.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "fdspfus.freshemail.io",
+          "record": "v=spf1 ip4:34.198.193.174 ip4:34.202.174.188 ip4:34.199.167.230 ip4:52.203.5.138 ip4:3.91.171.64/28 ip4:3.219.176.96/29 ip4:3.222.0.112/29 ip4:3.222.0.24/29 ip4:3.222.0.88/29 ip4:3.235.255.160/29 include:fdspfus2.freshemail.io ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "34.198.193.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.202.174.188",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.199.167.230",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.203.5.138",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.91.171.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.219.176.96/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.222.0.112/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.222.0.24/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.222.0.88/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.235.255.160/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "fdspfus2.freshemail.io",
+                "record": "v=spf1 ip4:3.238.137.128/30 ip4:44.192.35.0/24 ip4:18.235.53.110 ip4:54.159.173.91 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "3.238.137.128/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.192.35.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.235.53.110",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.159.173.91",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; rua=mailto:dmark-aggregate@sfc.com; ruf=mailto:dmark-forensik@sfc.com; fo=1; adkim=r; aspf=r; pct=100; rf=afrf;",
+    "valid": true,
+    "location": "sfc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmark-aggregate@sfc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmark-forensik@sfc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

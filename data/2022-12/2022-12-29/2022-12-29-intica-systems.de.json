@@ -1,0 +1,190 @@
+{
+  "domain": "intica-systems.de",
+  "base_domain": "intica-systems.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.des-ag.net",
+      "ns1.des-ag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx19a.antispameurope.com",
+        "addresses": [
+          "83.246.65.85",
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx19b.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx19c.antispameurope.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx19d.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx19a.antispameurope.com: Connection timed out",
+      "mx19b.antispameurope.com: Connection timed out",
+      "SSL/TLS is not supported on mx19c.antispameurope.com",
+      "SSL/TLS is not supported on mx19d.antispameurope.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a ip4:89.28.138.226 ip4:178.248.247.0/26 include:spf.hornetsecurity.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "178.248.247.46",
+          "mechanism": "a"
+        },
+        {
+          "value": "89.28.138.226",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "178.248.247.0/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.hornetsecurity.com",
+          "record": "v=spf1 ip4:83.246.65.0/24 ip4:185.140.204.0/22 ip4:94.100.128.0/20 ip4:81.20.94.0/24 ip4:173.45.18.0/24 ip4:52.62.123.207/32 ip4:52.62.108.212/32 ip4:129.232.203.80/28 ip4:209.172.38.64/27 ip4:108.163.133.224/27 ip4:193.135.100.0/27 ip4:199.27.221.76 ip4:216.46.11.238 ip4:216.46.11.244 ip4:199.27.221.81 ip4:199.27.221.82 ip4:52.62.114.130 ip4:52.62.125.178 ip4:92.54.27.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "83.246.65.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.140.204.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.100.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.20.94.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.45.18.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.123.207/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.108.212/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.232.203.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.172.38.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "108.163.133.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.135.100.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.27.221.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.46.11.238",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.46.11.244",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.27.221.81",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.27.221.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.114.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.125.178",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.54.27.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

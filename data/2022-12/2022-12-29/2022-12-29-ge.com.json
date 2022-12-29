@@ -1,0 +1,134 @@
+{
+  "domain": "ge.com",
+  "base_domain": "ge.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "blizzard03.ge.com",
+      "blizzard01.ge.com",
+      "blizzard04.ge.com",
+      "blizzard02.ge.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00176a02.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.43"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00176a02.gslb.pphosted.com",
+        "addresses": [
+          "67.231.149.43"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0a-00176a02.pphosted.com",
+        "addresses": [
+          "67.231.149.43"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx0b-00176a02.pphosted.com",
+        "addresses": [
+          "67.231.157.41"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00176a02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00176a02.gslb.pphosted.com",
+      "mx0a-00176a02.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mx0b-00176a02.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "ge.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "ge.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

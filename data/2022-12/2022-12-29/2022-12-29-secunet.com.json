@@ -1,0 +1,163 @@
+{
+  "domain": "secunet.com",
+  "base_domain": "secunet.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.secunet.com",
+      "ns1.secunet.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "a.mx.secunet.com",
+        "addresses": [
+          "62.96.220.36"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "b.mx.secunet.com",
+        "addresses": [
+          "62.96.220.37"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "a.mx.secunet.com: Connection timed out",
+      "b.mx.secunet.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:62.96.220.36 ip4:62.96.220.37 ip4:62.96.220.44 ip4:62.96.220.49 include:agenturserver.de include:spf-inm.eqs-service.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "62.96.220.36",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.37",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "62.96.220.49",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "agenturserver.de",
+          "record": "v=spf1 ip4:188.94.249.240/28 ip4:188.94.250.248/29 ip4:188.94.251.248/29 ip4:188.94.252.252/30 ip4:185.15.192.32/27 ip4:178.16.56.32/27 ip4:185.15.192.32/28 ip4:153.92.196.160/28 ip4:37.202.1.52/30 ip4:37.202.6.52/30 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "188.94.249.240/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.250.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.251.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.252.252/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.16.56.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.92.196.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.1.52/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.6.52/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-inm.eqs-service.com",
+          "record": "v=spf1 ip4:212.18.19.53 ip4:212.18.19.58 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.19.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.19.58",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

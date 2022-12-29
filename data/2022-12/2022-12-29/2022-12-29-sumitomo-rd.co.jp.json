@@ -1,0 +1,53 @@
+{
+  "domain": "sumitomo-rd.co.jp",
+  "base_domain": "sumitomo-rd.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.dns.ne.jp",
+      "ns2.dns.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail-swp1.ddreams.jp",
+        "addresses": [
+          "202.19.224.47"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail-swp2.ddreams.jp",
+        "addresses": [
+          "202.19.224.47"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "202.19.224.47 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mail-swp1.ddreams.jp",
+      "202.19.224.47 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mail-swp2.ddreams.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.sumitomo-rd.co.jp include:mail.ma-jin.jp include:spf.securemx.jp include:spf.repica.jp include:_spf.acquia.com include:webcas.net ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "_spf.acquia.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

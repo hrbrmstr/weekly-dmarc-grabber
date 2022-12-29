@@ -1,0 +1,53 @@
+{
+  "domain": "pfeiffer-vacuum.de",
+  "base_domain": "pfeiffer-vacuum.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.net",
+      "ns.udag.org",
+      "ns.udag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.pfeiffer-vacuum.com",
+        "addresses": [
+          "87.190.28.215"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail3.pfeiffer-vacuum.com",
+        "addresses": [
+          "96.70.194.150"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail1.pfeiffer-vacuum.com: Connection timed out",
+      "mail3.pfeiffer-vacuum.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mx01.sylphen.com a:mx02.sylphen.com include:spfa.myconvento.com include:recruitmail.com include:spf.mailjet.com include:mailing.eqs.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

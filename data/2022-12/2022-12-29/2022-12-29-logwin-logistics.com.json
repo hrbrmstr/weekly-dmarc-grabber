@@ -1,0 +1,114 @@
+{
+  "domain": "logwin-logistics.com",
+  "base_domain": "logwin-logistics.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.knipp.de",
+      "ns3.knipp.de",
+      "ns17.knipp.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-003a9f01.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.25"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-003a9f01.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.25"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-003a9f01.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-003a9f01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:110.79.13.44 ip4:110.79.13.47 ip4:193.109.130.205 ip4:193.109.130.206 a:mailto.thiel-logistik.com a:mailto1.thiel-logistik.com include:spf-003a9f01.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "110.79.13.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "110.79.13.47",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.109.130.205",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.109.130.206",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.109.130.206",
+          "mechanism": "a"
+        },
+        {
+          "value": "193.109.130.205",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-003a9f01.pphosted.com",
+          "record": "v=spf1 ip4:185.132.183.25 ip4:185.183.30.83",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.132.183.25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.30.83",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

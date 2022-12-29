@@ -1,0 +1,106 @@
+{
+  "domain": "softing.com",
+  "base_domain": "softing.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.versatel.de",
+      "ns02.versatel.de",
+      "ns03.versatel.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "softing-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.11.138",
+          "104.47.7.138"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "softing-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:213.30.210.160/27 include:spf.mailingwork.de include:_spf.salesforce.com include:aspmx.pardot.com include:spf.campaigner.com include:ispgateway.de include:spf.crsend.com include:spf.protection.outlook.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:postmaster@softing.com; ruf=mailto:postmaster@softing.com;",
+    "valid": true,
+    "location": "softing.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@softing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@softing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

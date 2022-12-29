@@ -1,0 +1,128 @@
+{
+  "domain": "xing.com",
+  "base_domain": "xing.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a28-66.akam.net",
+      "a10-64.akam.net",
+      "a1-87.akam.net",
+      "a3-67.akam.net",
+      "a5-64.akam.net",
+      "a16-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1-2.xing.com",
+        "addresses": [
+          "109.233.158.6"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1-4.xing.com",
+        "addresses": [
+          "109.233.158.7"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1-2.xing.com: Connection timed out",
+      "mx1-4.xing.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.300 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@new-work-se.uriports.com,mailto:7675016f@in.mailhardener.com,mailto:dmarc_agg@mail.xing.com; ruf=mailto:dmarc_afrf@mail.xing.com; pct=100; rf=afrf",
+    "valid": true,
+    "location": "xing.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@new-work-se.uriports.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "7675016f@in.mailhardener.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@mail.xing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@mail.xing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

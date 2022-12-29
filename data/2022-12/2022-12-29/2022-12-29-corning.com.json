@@ -1,0 +1,109 @@
+{
+  "domain": "corning.com",
+  "base_domain": "corning.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsemea2.corning.com",
+      "nsna2.corning.com",
+      "nsna1.corning.com",
+      "nsap2.corning.com",
+      "nsemea1.corning.com",
+      "nsap1.corning.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster6.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.217",
+          "67.219.247.196",
+          "67.219.250.213"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster6a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster6.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster6a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 8.000 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;rua=mailto:s51qvjvc@ag.us.dmarcian.com;",
+    "valid": true,
+    "location": "corning.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "s51qvjvc@ag.us.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

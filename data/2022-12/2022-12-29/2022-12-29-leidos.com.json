@@ -1,0 +1,113 @@
+{
+  "domain": "leidos.com",
+  "base_domain": "leidos.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.leidos.com",
+      "ns1.leidos.com",
+      "ns2.leidos.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00336402.gslb.gpphosted.com",
+        "addresses": [
+          "67.231.155.131"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00336402.gslb.gpphosted.com",
+        "addresses": [
+          "67.231.155.131"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00336402.gslb.gpphosted.com",
+      "SSL/TLS is not supported on mxb-00336402.gslb.gpphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; sp=none; pct=100; rua=mailto:dmarc_rua@leidos.com; ruf=mailto:dmarc_ruf@leidos.com",
+    "valid": true,
+    "location": "leidos.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@leidos.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@leidos.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

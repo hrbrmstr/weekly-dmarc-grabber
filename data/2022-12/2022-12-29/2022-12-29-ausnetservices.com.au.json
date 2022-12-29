@@ -1,0 +1,126 @@
+{
+  "domain": "ausnetservices.com.au",
+  "base_domain": "ausnetservices.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-02.azure-dns.com",
+      "ns4-02.azure-dns.info",
+      "ns3-02.azure-dns.org",
+      "ns2-02.azure-dns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00555a01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.145"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00555a01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.164.145"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00555a01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00555a01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_spf.salesforce.com ip4:203.14.70.54 ip4:203.14.70.56 include:spf-00555a01.pphosted.com include:spf.protection.outlook.com include:bpopen.capgemini.com include:spf.boreal-is.com include:spf1.fraedom.com include:servers.mcsv.net -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:ausnet-soc@ausnetservices.com.au; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:ausnet-soc@ausnetservices.com.au",
+    "valid": true,
+    "location": "ausnetservices.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ausnet-soc@ausnetservices.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ausnet-soc@ausnetservices.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
