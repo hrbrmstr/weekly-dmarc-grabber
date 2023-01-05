@@ -1,0 +1,449 @@
+{
+  "domain": "tenethealth.com",
+  "base_domain": "tenethealth.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.tenethealth.com",
+      "ns2.tenethealth.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx0a-00259001.pphosted.com",
+        "addresses": [
+          "67.231.144.68"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx0b-00259001.pphosted.com",
+        "addresses": [
+          "67.231.152.155"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-00259001.pphosted.com",
+      "SSL/TLS is not supported on mx0b-00259001.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.tenethealth.com include:_spf2.tenethealth.com include:mktomail.com include:servers.mcsv.net include:sendgrid.net ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.tenethealth.com",
+          "record": "v=spf1 ip4:199.222.14.78 ip4:199.222.14.79 ip4:199.222.14.80 ip4:199.222.14.81 ip4:199.222.14.82 ip4:199.222.14.83 ip4:199.222.14.84 ip4:67.231.144.68 ip4:67.231.152.155 ip4:68.233.76.14 ip4:52.167.47.29 ip4:208.75.120.0/22 ip4:207.200.50.190 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.222.14.78",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.79",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.80",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.81",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.83",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.222.14.84",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.144.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.152.155",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "68.233.76.14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.167.47.29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.75.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.200.50.190",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf2.tenethealth.com",
+          "record": "v=spf1 ip4:168.245.55.252 ip4:146.20.91.152 ip4:146.20.91.153 ip4:52.23.113.139 ip4:54.177.118.13 ip4:13.57.137.3 ip4:3.208.74.172 ip4:142.0.180.67 ip4:69.87.157.215 ip4:63.96.192.8 ip4:63.96.192.9 ip4:74.122.255.236 ip4:74.122.255.237 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "168.245.55.252",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.91.152",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.91.153",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.23.113.139",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.177.118.13",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.57.137.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.208.74.172",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "142.0.180.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.87.157.215",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.96.192.8",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.96.192.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.122.255.236",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.122.255.237",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mktomail.com",
+          "record": "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.15.212.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.185.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.154.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.243.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.236.119.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.188.97.188/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.28.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.28.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.237.104.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.172.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.173.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "sendgrid.net",
+          "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.89.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.117.48.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.31.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.37.144.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.21.0.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.254.112.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.72.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.183.0.0/16",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "ab.sendgrid.net",
+                "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "223.165.113.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.115.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.118.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "223.165.120.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "tenethealth.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

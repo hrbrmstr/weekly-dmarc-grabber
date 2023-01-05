@@ -1,0 +1,98 @@
+{
+  "domain": "comcastcorporation.com",
+  "base_domain": "comcastcorporation.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns101.comcast.net",
+      "dns102.comcast.net",
+      "dns103.comcast.net",
+      "dns104.comcast.net",
+      "dns105.comcast.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;rua=mailto:dmarc-rua@dmarctest.comcast.net;",
+    "valid": true,
+    "location": "comcastcorporation.com",
+    "warnings": [
+      "dmarctest.comcast.net does not indicate that it accepts DMARC reports about comcastcorporation.com - Authorization record not found: comcastcorporation.com._report._dmarc.dmarctest.comcast.net IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@dmarctest.comcast.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

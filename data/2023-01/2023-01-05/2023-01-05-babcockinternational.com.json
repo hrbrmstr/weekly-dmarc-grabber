@@ -1,0 +1,276 @@
+{
+  "domain": "babcockinternational.com",
+  "base_domain": "babcockinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-001c8e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.185"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-001c8e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.185"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-001c8e01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-001c8e01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-001c8e01.pphosted.com include:_spf.newzapp.co.uk include:_spf-dc12.sapsf.com include:tal.net ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-001c8e01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.158.182 ip4:148.163.156.185",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.158.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.156.185",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.newzapp.co.uk",
+          "record": "v=spf1 ip4:185.99.236.0/22 ip4:185.99.239.0/29 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.99.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.99.239.0/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-dc12.sapsf.com",
+          "record": "v=spf1 ip4:155.56.221.13/32 ip4:155.56.221.14/32 ip4:155.56.220.141/32 ip4:155.56.220.142/32 ip4:155.56.221.15/32 ip4:155.56.221.16/32 ip4:155.56.222.26/32 ip4:155.56.222.27/32 ip4:130.214.193.83/32 ip4:130.214.193.93/32 ip4:130.214.193.78/32 ip4:130.214.193.85/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "155.56.221.13/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.14/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.141/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.15/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.16/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.26/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.27/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.83/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.93/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.78/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.85/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "tal.net",
+          "record": "v=spf1 +ip4:213.219.55.0/27 +ip4:213.52.141.128/27 +ip4:37.46.3.168/29 +ip4:62.216.225.64/27 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.219.55.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.141.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.46.3.168/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.216.225.64/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:0fa7d9a808df082@rep.dmarcanalyzer.com; ruf=mailto:0fa7d9a808df082@for.dmarcanalyzer.com",
+    "valid": true,
+    "location": "babcockinternational.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0fa7d9a808df082@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0fa7d9a808df082@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

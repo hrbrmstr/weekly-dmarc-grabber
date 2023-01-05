@@ -1,0 +1,295 @@
+{
+  "domain": "tdk.co.jp",
+  "base_domain": "tdk.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "tdksf2.jp.tdk.com",
+        "addresses": [
+          "211.16.239.3"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "tdksf1.jp.tdk.com",
+        "addresses": [
+          "210.161.158.221"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "tdksf2.jp.tdk.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)",
+      "tdksf1.jp.tdk.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:18.182.88.44 ip4:210.161.158.221 ip4:211.16.239.3 ip4:202.214.163.169 include:_netblocks.eloqua.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "18.182.88.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.161.158.221",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.16.239.3",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.214.163.169",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_netblocks.eloqua.com",
+          "record": "v=spf1 include:_trustedips1.eloqua.com include:_trustedips2.eloqua.com include:_trustedips3.eloqua.com -all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_trustedips1.eloqua.com",
+                "record": "v=spf1 ip4:204.92.19.0/24 ip4:204.92.21.0/25 ip4:204.92.22.0/24 ip4:204.92.26.0/24 ip4:204.92.31.0/24 ip4:204.92.114.0/24 ip4:66.48.80.0/25 ip4:209.167.231.0/24 ip4:129.145.16.0/21 ip4:129.145.76.0/22 ip4:141.145.8.0/21 ip4:129.91.16.0/21",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "204.92.19.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.92.21.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.92.22.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.92.26.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.92.31.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.92.114.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.48.80.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "209.167.231.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "129.145.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "129.145.76.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "141.145.8.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "129.91.16.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_trustedips2.eloqua.com",
+                "record": "v=spf1 ip4:142.0.160.0/20 ip4:138.1.49.41 ip4:147.154.9.180 ip4:138.1.55.48 ip4:130.35.98.1 ip4:209.17.48.0/24 ip4:209.17.49.0/24 ip4:209.17.50.0/24 ip4:129.145.79.0/24 ip4:207.135.30.0/23",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "142.0.160.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "138.1.49.41",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "147.154.9.180",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "138.1.55.48",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.35.98.1",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "209.17.48.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "209.17.49.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "209.17.50.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "129.145.79.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "207.135.30.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_trustedips3.eloqua.com",
+                "record": "v=spf1 ip4:129.145.74.0/23",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "129.145.74.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:8udewbmk@ag.ap.dmarcian.com",
+    "valid": true,
+    "location": "tdk.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "8udewbmk@ag.ap.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

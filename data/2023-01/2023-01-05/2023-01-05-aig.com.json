@@ -1,0 +1,117 @@
+{
+  "domain": "aig.com",
+  "base_domain": "aig.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "d.service.afiliasdns.com",
+      "c.service.afiliasdns.net",
+      "f.service.afiliasdns.net",
+      "a.service.afiliasdns.info",
+      "b.service.afiliasdns.org",
+      "e.service.afiliasdns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0000ed04.gslb.pphosted.com",
+        "addresses": [
+          "205.220.170.21"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0000ed04.gslb.pphosted.com",
+        "addresses": [
+          "205.220.182.21"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0000ed04.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0000ed04.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.ac.spf-protect.agari.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.ac.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:aig@rua.agari.com; ruf=mailto:aig@ruf.agari.com",
+    "valid": true,
+    "location": "aig.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aig@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "aig@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

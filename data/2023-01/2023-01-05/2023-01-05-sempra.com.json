@@ -1,0 +1,477 @@
+{
+  "domain": "sempra.com",
+  "base_domain": "sempra.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns1.ultradns.net",
+      "pdns2.ultradns.net",
+      "pdns3.ultradns.org",
+      "pdns4.ultradns.org",
+      "pdns5.ultradns.info",
+      "pdns6.ultradns.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-000c8601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.146.30"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-000c8601.gslb.pphosted.com",
+        "addresses": [
+          "148.163.146.30"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-000c8601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-000c8601.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.sempra.com include:spfa.sempra.com include:spfa.semprautilities.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.sempra.com",
+          "record": "v=spf1 include:spf-000c8601.pphosted.com include:spf.protection.outlook.com ip4:161.209.206.80 ip4:161.209.96.21 ip4:161.209.96.22 ip4:161.209.96.23 ip4:161.209.96.24 ip4:161.209.206.247 ip4:161.209.206.121 ip4:161.209.206.122 ip4:161.209.206.123 ip4:161.209.206.124 -all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "161.209.206.80",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.96.21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.96.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.96.23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.96.24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.206.247",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.206.121",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.206.122",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.206.123",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.209.206.124",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-000c8601.pphosted.com",
+                "record": "v=spf1 ip4:148.163.146.30 ip4:148.163.143.225",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "148.163.146.30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.143.225",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spfd.protection.outlook.com",
+                      "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "51.4.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "20.47.149.138/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.4.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0400::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0400::/64",
+                            "mechanism": "ip6"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfa.sempra.com",
+          "record": "v=spf1 include:es._spf.adp.com include:spfext.zapproved.com ip4:74.122.255.236 ip4:74.122.255.237 ip4:104.46.104.92 ip4:166.78.81.73 -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "74.122.255.236",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.122.255.237",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.46.104.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "166.78.81.73",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "es._spf.adp.com",
+                "record": "v=spf1 ip4:170.146.220.0/24 ip4:170.146.221.0/24 ip4:170.146.224.15 ip4:170.146.224.16/31 ip4:170.146.226.15 ip4:170.146.226.16/31 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "170.146.220.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.146.221.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.146.224.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.146.224.16/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.146.226.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "170.146.226.16/31",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spfext.zapproved.com",
+                "record": "v=spf1 ip4:52.5.134.202 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "52.5.134.202",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfa.semprautilities.com",
+          "record": "v=spf1 ip4:54.236.128.150 ip4:54.236.109.30 ip4:65.74.135.129 ip4:104.46.104.92 ip4:107.23.16.222 ip4:52.1.14.157 ip4:54.200.217.100 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.236.128.150",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.236.109.30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.74.135.129",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.46.104.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "107.23.16.222",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.1.14.157",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.200.217.100",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarcrua@sempra.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarcruf@sempra.com",
+    "valid": true,
+    "location": "sempra.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcrua@sempra.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarcruf@sempra.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,597 @@
+{
+  "domain": "clarksons.co.uk",
+  "base_domain": "clarksons.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.p23.dynect.net",
+      "ns1.p23.dynect.net",
+      "ns4.p23.dynect.net",
+      "ns3.p23.dynect.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp1.clarksons.co.uk",
+        "addresses": [
+          "213.86.237.113"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp2.clarksons.co.uk",
+        "addresses": [
+          "62.7.69.114"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "213.86.237.113 does not have any reverse DNS (PTR) records",
+      "smtp1.clarksons.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp1.clarksons.co.uk'. (_ssl.c:992)",
+      "62.7.69.114 does not have any reverse DNS (PTR) records",
+      "smtp2.clarksons.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'smtp2.clarksons.co.uk'. (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=clarksons.com",
+    "valid": true,
+    "dns_lookups": 10,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "clarksons.com",
+        "record": "v=spf1 ip4:213.86.237.112 ip4:62.92.61.101 ip4:62.92.61.112 ip4:213.86.237.101 ip4:231.86.237.112 include:_spf1.clarksons.com include:_spf2.clarksons.com include:_spf3.clarksons.com -all",
+        "dns_lookups": 9,
+        "dns_void_lookups": 0,
+        "parsed": {
+          "pass": [
+            {
+              "value": "213.86.237.112",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "62.92.61.101",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "62.92.61.112",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "213.86.237.101",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "231.86.237.112",
+              "mechanism": "ip4"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "_spf1.clarksons.com",
+              "record": "v=spf1 ip4:89.104.224.242 ip4:166.78.71.191/32 ip4:168.245.19.99 ip4:152.114.220.10 ip4:152.114.222.10 ip4:212.20.233.15 include:servers.mcsv.net include:_spf.bluematrix.com include:spf.exclaimer.net ip4:13.111.67.12 ip4:213.86.237.102 -all",
+              "dns_lookups": 3,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "89.104.224.242",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "166.78.71.191/32",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.19.99",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "152.114.220.10",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "152.114.222.10",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "212.20.233.15",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "13.111.67.12",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.86.237.102",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "servers.mcsv.net",
+                    "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+                    "dns_lookups": 0,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "205.201.128.0/20",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "198.2.128.0/18",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "148.105.8.0/21",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  },
+                  {
+                    "domain": "_spf.bluematrix.com",
+                    "record": "v=spf1 ip4:192.33.34.0/24 ip4:108.60.137.125 ip4:185.203.248.0/24 ip4:185.203.249.0/24 ip4:185.203.250.0/24 ip4:69.160.249.192/27 -all",
+                    "dns_lookups": 0,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "192.33.34.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "108.60.137.125",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "185.203.248.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "185.203.249.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "185.203.250.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "69.160.249.192/27",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  },
+                  {
+                    "domain": "spf.exclaimer.net",
+                    "record": "v=spf1 ip4:104.40.229.156 ip4:52.169.0.179 ip4:191.237.4.149 ip4:104.209.35.28 ip4:104.210.80.79 ip4:13.70.157.244 ip4:51.140.37.132 ip4:51.141.5.228 ip4:52.172.222.27 ip4:52.172.38.8 ip4:52.233.37.155 ip4:52.242.32.10 ~all",
+                    "dns_lookups": 0,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "104.40.229.156",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "52.169.0.179",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "191.237.4.149",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "104.209.35.28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "104.210.80.79",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "13.70.157.244",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.140.37.132",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.141.5.228",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "52.172.222.27",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "52.172.38.8",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "52.233.37.155",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "52.242.32.10",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "softfail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_spf2.clarksons.com",
+              "record": "v=spf1 ip4:13.93.122.49 ip4:62.13.141.197 ip4:213.52.186.141 ip4:213.52.186.142 ip4:188.95.96.121 ip4:148.139.2.2 ip4:148.139.3.2 ip4:149.96.3.26 ip4:149.96.4.26 ip4:199.91.136.28 ip4:199.91.140.28 ip4:167.89.82.255 ip4:213.86.237.111 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "13.93.122.49",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.13.141.197",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.52.186.141",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.52.186.142",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "188.95.96.121",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "148.139.2.2",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "148.139.3.2",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.96.3.26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.96.4.26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "199.91.136.28",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "199.91.140.28",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "167.89.82.255",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "213.86.237.111",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_spf3.clarksons.com",
+              "record": "v=spf1 ip4:149.96.5.2/31 ip4:149.96.5.6/31 ip4:149.96.6.2/31 ip4:149.96.6.6/31 ip4:199.91.136.28 ip4:199.91.140.28 ip4:37.98.232.12 ip4:37.98.232.26 ip4:37.98.234.2 ip4:37.98.235.2 ip4:148.139.0.2 ip4:148.139.1.2 include:_spf4.clarksons.com -all",
+              "dns_lookups": 3,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "149.96.5.2/31",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.96.5.6/31",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.96.6.2/31",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.96.6.6/31",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "199.91.136.28",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "199.91.140.28",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "37.98.232.12",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "37.98.232.26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "37.98.234.2",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "37.98.235.2",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "148.139.0.2",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "148.139.1.2",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "_spf4.clarksons.com",
+                    "record": "v=spf1 ip4:149.96.13.2 ip4:149.96.14.2 ip4:199.91.136.26 ip4:199.91.136.28 ip4:199.91.137.26 ip4:199.91.139.22 ip4:199.91.139.23 ip4:199.91.139.24 ip4:199.91.140.26 ip4:199.91.140.28 ip4:199.91.141.22 include:_spf5.clarksons.com -all",
+                    "dns_lookups": 2,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "149.96.13.2",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "149.96.14.2",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.136.26",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.136.28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.137.26",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.139.22",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.139.23",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.139.24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.140.26",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.140.28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "199.91.141.22",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [
+                        {
+                          "domain": "_spf5.clarksons.com",
+                          "record": "v=spf1 ip4:103.23.64.2 ip4:103.23.65.2 ip4:103.23.66.26 ip4:103.23.67.26 ip4:149.96.1.26 ip4:149.96.2.26 ip4:149.96.132.2 ip4:149.96.133.2 ip4:149.96.194.2 ip4:149.96.195.2 ip4:149.96.220.2 ip4:149.96.221.2 include:_spf6.clarksons.com -all",
+                          "dns_lookups": 1,
+                          "dns_void_lookups": 0,
+                          "parsed": {
+                            "pass": [
+                              {
+                                "value": "103.23.64.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "103.23.65.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "103.23.66.26",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "103.23.67.26",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.1.26",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.2.26",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.132.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.133.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.194.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.195.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.220.2",
+                                "mechanism": "ip4"
+                              },
+                              {
+                                "value": "149.96.221.2",
+                                "mechanism": "ip4"
+                              }
+                            ],
+                            "neutral": [],
+                            "softfail": [],
+                            "fail": [],
+                            "include": [
+                              {
+                                "domain": "_spf6.clarksons.com",
+                                "record": "v=spf1 ip4:199.91.141.23 ip4:199.91.141.24 ip4:62.7.69.101 ip4:62.7.69.102 ip4:62.7.69.111 -all",
+                                "dns_lookups": 0,
+                                "dns_void_lookups": 0,
+                                "parsed": {
+                                  "pass": [
+                                    {
+                                      "value": "199.91.141.23",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "199.91.141.24",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "62.7.69.101",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "62.7.69.102",
+                                      "mechanism": "ip4"
+                                    },
+                                    {
+                                      "value": "62.7.69.111",
+                                      "mechanism": "ip4"
+                                    }
+                                  ],
+                                  "neutral": [],
+                                  "softfail": [],
+                                  "fail": [],
+                                  "include": [],
+                                  "redirect": null,
+                                  "exp": null,
+                                  "all": "fail"
+                                },
+                                "warnings": []
+                              }
+                            ],
+                            "redirect": null,
+                            "exp": null,
+                            "all": "fail"
+                          },
+                          "warnings": []
+                        }
+                      ],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "fail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

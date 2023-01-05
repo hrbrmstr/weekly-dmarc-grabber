@@ -1,0 +1,419 @@
+{
+  "domain": "expediagroup.com",
+  "base_domain": "expediagroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.p09.nsone.net",
+      "dns2.p09.nsone.net",
+      "dns3.p09.nsone.net",
+      "dns4.p09.nsone.net",
+      "pdns6.ultradns.co.uk",
+      "pdns5.ultradns.info",
+      "pdns4.ultradns.org",
+      "pdns3.ultradns.org",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailcorp.expedia.com",
+        "addresses": [
+          "173.209.86.18"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1a.expedia.com",
+        "addresses": [
+          "216.251.112.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1b.expedia.com",
+        "addresses": [
+          "216.251.112.223"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mailcorp.expedia.com",
+      "SSL/TLS is not supported on mx1a.expedia.com",
+      "SSL/TLS is not supported on mx1b.expedia.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.expedia.com ip4:198.207.147.224/27 ip4:204.239.0.224/27 ip4:192.28.150.108 ip4:199.15.216.62 ip4:199.15.216.63 include:spf.mandrillapp.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "198.207.147.224/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "204.239.0.224/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.28.150.108",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.15.216.62",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.15.216.63",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.expedia.com",
+          "record": "v=spf1 ip4:216.251.112.0/24 ip4:173.209.81.0/24 ip4:173.209.82.0/24 ip4:173.209.86.0/24 ip4:66.244.67.50 ip4:165.193.56.42 ip4:54.246.138.234 ip4:54.246.188.215 ip4:135.84.216.0/24 ip4:135.84.217.0/24 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 include:spf.protection.outlook.com -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.251.112.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.209.81.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.209.82.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.209.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.244.67.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.193.56.42",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.246.138.234",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.246.188.215",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "135.84.216.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "135.84.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spfd.protection.outlook.com",
+                      "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "51.4.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.72.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.5.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "20.47.149.138/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "51.4.80.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0800::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4051:0400::/64",
+                            "mechanism": "ip6"
+                          },
+                          {
+                            "value": "2a01:4180:4050:0400::/64",
+                            "mechanism": "ip6"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mandrillapp.com",
+          "record": "v=spf1 ip4:198.2.128.0/24 ip4:198.2.132.0/22 ip4:198.2.136.0/23 ip4:198.2.145.0/24 ip4:198.2.186.0/23 ip4:205.201.131.128/25 ip4:205.201.134.128/25 ip4:205.201.136.0/23 ip4:205.201.139.0/24 ip4:198.2.177.0/24 ip4:198.2.178.0/23 ip4:198.2.180.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "198.2.128.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.132.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.136.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.145.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.186.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.131.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.134.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.136.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.139.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.177.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.178.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.180.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:expedia@rua.netcraft.com,mailto:dmarc_agg@dmarc.250ok.net ; ruf=mailto:expedia@ruf.netcraft.com,mailto:dmarc_fr@dmarc.250ok.net; pct=100; rf=afrf",
+    "valid": true,
+    "location": "expediagroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "dmarc1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "expedia@rua.netcraft.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@dmarc.250ok.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "expedia@ruf.netcraft.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_fr@dmarc.250ok.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
