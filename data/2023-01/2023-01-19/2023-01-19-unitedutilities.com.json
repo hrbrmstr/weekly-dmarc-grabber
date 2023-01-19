@@ -1,0 +1,293 @@
+{
+  "domain": "unitedutilities.com",
+  "base_domain": "unitedutilities.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ans1.cw.net",
+      "ans2.cw.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00511701.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.103"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00511701.gslb.pphosted.com",
+        "addresses": [
+          "205.220.184.70"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00511701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00511701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:158.41.32.64 ip4:158.41.32.34 ip4:158.41.32.35 ip4:3.8.231.167 include:everbridge.net include:spf-00511701.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "158.41.32.64",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "158.41.32.34",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "158.41.32.35",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "3.8.231.167",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "everbridge.net",
+          "record": "v=spf1 include:spfprd1.everbridge.net include:spfstg1.everbridge.net -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfprd1.everbridge.net",
+                "record": "v=spf1 ip4:3.132.65.8/32 ip4:52.13.126.222/32 ip4:3.23.36.254/32 ip4:52.13.73.26/32 ip4:3.22.102.251/32 ip4:54.212.187.12/32 ip4:3.21.23.140/32 ip4:52.12.139.153/32 ip4:54.188.101.235/32 ip4:3.23.38.224/32 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "3.132.65.8/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.126.222/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.36.254/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.13.73.26/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.102.251/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.212.187.12/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.21.23.140/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.12.139.153/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.188.101.235/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.38.224/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spfstg1.everbridge.net",
+                "record": "v=spf1 ip4:54.202.102.78/32 ip4:54.189.43.109/32 ip4:44.224.52.248/32 ip4:54.185.77.73/32 ip4:3.23.73.147/32 ip4:3.137.48.253/32 ip4:3.20.31.152/32 ip4:3.22.59.195/32 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "54.202.102.78/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.189.43.109/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.224.52.248/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.185.77.73/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.23.73.147/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.137.48.253/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.20.31.152/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.22.59.195/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-00511701.pphosted.com",
+          "record": "v=spf1 ip4:205.220.184.70 ip4:185.183.31.103",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.184.70",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.31.103",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "unitedutilities.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

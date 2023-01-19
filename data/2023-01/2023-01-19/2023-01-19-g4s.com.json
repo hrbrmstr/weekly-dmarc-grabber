@@ -1,0 +1,163 @@
+{
+  "domain": "g4s.com",
+  "base_domain": "g4s.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.safenames.net",
+      "pdns5.safenames.info",
+      "pdns3.safenames.org",
+      "pdns6.safenames.co.uk",
+      "pdns4.safenames.org",
+      "pdns1.safenames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "aspmx.l.google.com",
+        "addresses": [
+          "2607:f8b0:4023:c03::1a",
+          "74.125.137.27"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": [
+          "2607:f8b0:4003:c15::1a",
+          "64.233.171.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt2.aspmx.l.google.com",
+        "addresses": [
+          "142.250.152.27",
+          "2607:f8b0:4001:c56::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": [
+          "172.253.113.27",
+          "2607:f8b0:4023:1::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "alt13aspmx.l.google.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "alt3.aspmx.l.google.com",
+        "addresses": []
+      },
+      {
+        "preference": 10,
+        "hostname": "alt4.aspmx.l.google.com",
+        "addresses": [
+          "173.194.77.27",
+          "2607:f8b0:4023:401::1b"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 600,
+        "hostname": "alt1.aspmx.l.google.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on aspmx.l.google.com",
+      "SSL/TLS is not supported on alt1.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt2.aspmx.l.google.com",
+      "SSL/TLS is not supported on alt3.aspmx.l.google.com",
+      "The domain alt13aspmx.l.google.com does not exist",
+      "alt13aspmx.l.google.com: DNS resolution failed",
+      "Hostname alt3.aspmx.l.google.com is listed in multiple MX records",
+      "SSL/TLS is not supported on alt4.aspmx.l.google.com",
+      "Hostname alt1.aspmx.l.google.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 IP4:83.231.158.8 IP4:160.34.31.16/28 include:_spf.google.com include:CIPHR247.COM include:spf_c.oraclecloud.com ?all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "spf_s1.oraclecloud.com: Expected mechanism at position 216 in: v=spf1 ip4:216.131.131.240/28 ip4:143.47.193.160/28 ip4:160.34.31.16/28 ip4:160.34.63.16/28 ip4:160.34.47.16/28 ip4:160.34.15.16/28 ip4:141.145.47.16/28 ip4:141.145.63.16/28 ip4:129.152.95.16/28 ip4:129.152.79.16/28 207.127.109.192/26 ip4:151.104.48.26 ip4:151.104.61.235 ip4:147.154.14.34 -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-notify@gapps.g4s.com",
+    "valid": true,
+    "location": "g4s.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-notify@gapps.g4s.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

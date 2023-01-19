@@ -1,0 +1,55 @@
+{
+  "domain": "flutter.com",
+  "base_domain": "flutter.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "edns81.ultradns.org",
+      "edns81.ultradns.biz",
+      "edns81.ultradns.net",
+      "edns81.ultradns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:de._netblocks.mimecast.com ip4:217.112.150.5 ip4:185.20.95.20 ip4:217.112.150.38 ip4:217.112.150.47 ip4:217.112.150.48 ip4:185.20.95.37 ip4:185.20.95.38 ip4:94.236.83.186 -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

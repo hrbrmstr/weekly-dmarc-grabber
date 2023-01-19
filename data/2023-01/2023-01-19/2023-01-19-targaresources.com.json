@@ -1,0 +1,106 @@
+{
+  "domain": "targaresources.com",
+  "base_domain": "targaresources.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.markmonitor.com",
+      "ns2.markmonitor.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "targa.in.tmes.trendmicro.com",
+        "addresses": [
+          "18.208.22.77",
+          "18.208.22.78",
+          "18.208.22.79",
+          "18.208.22.80"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on targa.in.tmes.trendmicro.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:135.84.68.123 ip4:148.51.129.151 ip4:66.18.6.151 ip4:63.123.92.151 include:spf_c.oraclecloud.com include:spf.protection.outlook.com include:spf.tmes.trendmicro.com include:_spf01.mykronos.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "spf_s1.oraclecloud.com: Expected mechanism at position 216 in: v=spf1 ip4:216.131.131.240/28 ip4:143.47.193.160/28 ip4:160.34.31.16/28 ip4:160.34.63.16/28 ip4:160.34.47.16/28 ip4:160.34.15.16/28 ip4:141.145.47.16/28 ip4:141.145.63.16/28 ip4:129.152.95.16/28 ip4:129.152.79.16/28 207.127.109.192/26 ip4:151.104.48.26 ip4:151.104.61.235 ip4:147.154.14.34 -all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:DMARC@targaresources.com;ruf=mailto:DMARC@targaresources.com;aspf=r;adkim=r;fo=0",
+    "valid": true,
+    "location": "targaresources.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC@targaresources.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC@targaresources.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

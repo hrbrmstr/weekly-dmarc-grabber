@@ -1,0 +1,240 @@
+{
+  "domain": "boeing.com",
+  "base_domain": "boeing.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "phxdnsxp01.dns.boeing.net",
+      "cltdnsxp01.dns.boeing.net",
+      "cltdnsxp02.dns.boeing.net",
+      "qnydnsxp01.dns.boeing.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "clt-mbsin-01.mbs.boeing.net",
+        "addresses": [
+          "130.76.144.154"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "clt-mbsin-02.mbs.boeing.net",
+        "addresses": [
+          "130.76.144.155"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "clt-mbsin-03.mbs.boeing.net",
+        "addresses": [
+          "130.76.144.156"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "clt-mbsin-04.mbs.boeing.net",
+        "addresses": [
+          "130.76.144.157"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "ewa-mbsin-01.mbs.boeing.net",
+        "addresses": [
+          "130.76.20.186"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "ewa-mbsin-02.mbs.boeing.net",
+        "addresses": [
+          "130.76.20.187"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "ewa-mbsin-03.mbs.boeing.net",
+        "addresses": [
+          "130.76.20.188"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "ewa-mbsin-04.mbs.boeing.net",
+        "addresses": [
+          "130.76.20.189"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "phx-mbsin-01.mbs.boeing.net",
+        "addresses": [
+          "130.76.184.170"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "phx-mbsin-02.mbs.boeing.net",
+        "addresses": [
+          "130.76.184.171"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "phx-mbsin-03.mbs.boeing.net",
+        "addresses": [
+          "130.76.184.172"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "phx-mbsin-04.mbs.boeing.net",
+        "addresses": [
+          "130.76.184.173"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on clt-mbsin-01.mbs.boeing.net",
+      "SSL/TLS is not supported on clt-mbsin-02.mbs.boeing.net",
+      "SSL/TLS is not supported on clt-mbsin-03.mbs.boeing.net",
+      "SSL/TLS is not supported on clt-mbsin-04.mbs.boeing.net",
+      "SSL/TLS is not supported on ewa-mbsin-01.mbs.boeing.net",
+      "SSL/TLS is not supported on ewa-mbsin-02.mbs.boeing.net",
+      "SSL/TLS is not supported on ewa-mbsin-03.mbs.boeing.net",
+      "SSL/TLS is not supported on ewa-mbsin-04.mbs.boeing.net",
+      "SSL/TLS is not supported on phx-mbsin-01.mbs.boeing.net",
+      "SSL/TLS is not supported on phx-mbsin-02.mbs.boeing.net",
+      "SSL/TLS is not supported on phx-mbsin-03.mbs.boeing.net",
+      "SSL/TLS is not supported on phx-mbsin-04.mbs.boeing.net"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:phx-mbsout-01.mbs.boeing.net a:phx-mbsout-02.mbs.boeing.net a:ewa-mbsout-01.mbs.boeing.net a:ewa-mbsout-02.mbs.boeing.net a:clt-mbsout-01.mbs.boeing.net a:clt-mbsout-02.mbs.boeing.net ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "130.76.184.178",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.184.179",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.20.194",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.20.195",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.144.162",
+          "mechanism": "a"
+        },
+        {
+          "value": "130.76.144.163",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;pct=100;rua=mailto:dmarcreports@boeing.com",
+    "valid": true,
+    "location": "boeing.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcreports@boeing.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

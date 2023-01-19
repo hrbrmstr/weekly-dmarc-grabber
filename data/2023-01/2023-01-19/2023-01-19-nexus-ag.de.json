@@ -1,0 +1,126 @@
+{
+  "domain": "nexus-ag.de",
+  "base_domain": "nexus-ag.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1034.ui-dns.org",
+      "ns1034.ui-dns.biz",
+      "ns1034.ui-dns.com",
+      "ns1034.ui-dns.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.nexus-ag.de",
+        "addresses": [
+          "194.156.232.10"
+        ],
+        "tls": true,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx00.kundenserver.de",
+        "addresses": [
+          "212.227.15.41"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx01.kundenserver.de",
+        "addresses": [
+          "217.72.192.67"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "194.156.232.10 does not have any reverse DNS (PTR) records",
+      "mx00.kundenserver.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx01.kundenserver.de: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:87.106.243.185 include:spf.nl2go.com include:_spf.kundenserver.de a:mout.kundenserver.de a:mout-xforward.kundenserver.de a:mout-bounce.kundenserver.de include:_spf-dc12.successfactors.com ip4:155.56.221.13 ip4:155.56.221.14 ip4:213.160.16.66 ip4:159.100.8.0/26 -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; rua=mailto:mailauth@nexus-ag.de; ruf=mailto:mailauth@nexus-ag.de; fo=0; pct=100;",
+    "valid": true,
+    "location": "nexus-ag.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth@nexus-ag.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth@nexus-ag.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

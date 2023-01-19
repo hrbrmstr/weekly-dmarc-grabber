@@ -1,0 +1,96 @@
+{
+  "domain": "xppower.com",
+  "base_domain": "xppower.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "clarissa.ns.cloudflare.com",
+      "vicky.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mxa-005ff401.gslb.pphosted.com",
+        "addresses": [
+          "205.220.184.196"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mxb-005ff401.gslb.pphosted.com",
+        "addresses": [
+          "205.220.185.3"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-005ff401.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-005ff401.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com ip4:46.236.21.120 ip4:54.177.55.68 ip4:13.52.161.104 ip4:51.105.150.161 ip4:20.191.52.204 ip4:51.105.153.127 ip4:51.105.201.181 ip4:20.61.145.119 include:spf-005ff401.pphosted.com include:aspmx.pardot.com include:_spf.salesforce.com include:u27741033.wl034.sendgrid.net include:mailgun.org -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100;",
+    "valid": true,
+    "location": "xppower.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

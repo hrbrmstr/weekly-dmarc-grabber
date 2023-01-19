@@ -1,0 +1,342 @@
+{
+  "domain": "mckesson.com",
+  "base_domain": "mckesson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ep2ns02.mckesson.net",
+      "ep1ns02.mckesson.net",
+      "ep2ns03.mckesson.org",
+      "ep2ns01.mckesson.com",
+      "ep1ns01.mckesson.com",
+      "ep1ns03.mckesson.org",
+      "ep1ns04.mckesson.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-0016dd01.pphosted.com",
+        "addresses": [
+          "148.163.147.116"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-0016dd01.pphosted.com",
+        "addresses": [
+          "148.163.143.65"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-0016dd01.pphosted.com",
+      "SSL/TLS is not supported on mx0b-0016dd01.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.salesforce.com include:servers.mcsv.net include:_spf1.mckesson.com include:_spf2.mckesson.com include:spf.bananatag.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf1.mckesson.com",
+          "record": "v=spf1 ip4:143.112.129.15/32 ip4:143.112.129.16/31 ip4:143.112.68.13/32 ip4:143.112.68.14/31 ip4:148.163.147.116/32 ip4:148.163.143.65/32 ip4:148.163.140.193/32 ip4:148.163.144.193/32 ip4:67.231.158.115/32 ip4:67.231.151.171/32 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "143.112.129.15/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.112.129.16/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.112.68.13/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.112.68.14/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.147.116/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.143.65/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.140.193/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.144.193/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.158.115/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.151.171/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf2.mckesson.com",
+          "record": "v=spf1 ip4:167.89.10.69/32 ip4:198.2.128.0/18 ip4:205.201.128.0/20 ip4:83.138.165.68/31 ip4:92.52.102.162/32 ip4:212.100.250.11 ip4:212.100.250.18/31 ip4:13.108.254.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.89.10.69/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "83.138.165.68/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.52.102.162/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.100.250.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.100.250.18/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.108.254.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.bananatag.com",
+          "record": "v=spf1 ip4:23.251.237.159/32 ip4:23.251.237.160/29 ip4:23.251.237.168/30 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.251.237.159/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.160/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.168/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none; adkim=r; aspf=r; fo=1; pct=100; rf=afrf; ri=86400; rua=mailto:mckesson@rua.agari.com,mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc@mckesson.com; ruf=mailto:mckesson@ruf.agari.com,mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc@mckesson.com",
+    "valid": true,
+    "location": "mckesson.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs",
+      "Some DMARC reporters might not send to more than two ruf URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mckesson@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@mckesson.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mckesson@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@mckesson.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      }
+    }
+  }
+}
