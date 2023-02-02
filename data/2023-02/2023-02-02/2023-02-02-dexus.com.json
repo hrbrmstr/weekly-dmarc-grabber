@@ -1,0 +1,43 @@
+{
+  "domain": "dexus.com",
+  "base_domain": "dexus.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "dexus-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on dexus-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:203.41.57.145 ip4:203.41.57.144 ip4:203.41.57.147 ip4:203.41.57.186 ip4:203.41.57.187 ip4:203.38.232.46 ip4:210.87.32.165 ip4:210.87.32.162 ip4:118.127.72.237 ip4:20.190.126.98 include:spf.protection.outlook.com include:customerspf.sitecore.net include:asp-spf2.yardi.com include:_spf.createsend.com  include:_spf.qualtrics.com include:asp-spf1.yardi.com include:mail.zendesk.com include:marketing.dynamics.com include:_spf.salesforce.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

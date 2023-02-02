@@ -1,0 +1,94 @@
+{
+  "domain": "tag-ag.com",
+  "base_domain": "tag-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.kcs-netz.de",
+      "ns1.kcs-netz.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailin3.tag-ag.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailin4.tag-ag.com",
+        "addresses": [
+          "217.110.13.18"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "mailin3.tag-ag.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)",
+      "SSL/TLS is not supported on mailin4.tag-ag.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:213.179.66.67 ip4:213.61.90.91 ip4:217.110.13.18 ip4:213.179.68.141 ip4:213.179.68.144 ip4:46.228.205.99 include:spf.eqs-externaladdress.com include:mx-spf.eqs-service.com include:mailing.eqs.com include:agenturserver.de include:spf.mailjet.com -all",
+    "valid": false,
+    "dns_void_lookups": 4,
+    "warnings": [],
+    "error": "Parsing the SPF record has 4/2 maximum void DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100;aspf=s;",
+    "valid": true,
+    "location": "tag-ag.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

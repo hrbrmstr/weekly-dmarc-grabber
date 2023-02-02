@@ -1,0 +1,110 @@
+{
+  "domain": "jetblue.com",
+  "base_domain": "jetblue.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.p08.nsone.net",
+      "dns3.p08.nsone.net",
+      "dns4.p08.nsone.net",
+      "ns01.jetbluedns.com",
+      "ns02.jetbluedns.com",
+      "ns03.jetbluedns.com",
+      "ns04.jetbluedns.com",
+      "dns1.p08.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jetblue-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.138",
+          "104.47.57.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on jetblue-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.e3.spf-protect.agari.com include:servers.mcsv.net include:spf6.jetblue.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.e3.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:jetblue@rua.agari.com; ruf=mailto:jetblue@ruf.agari.com",
+    "valid": true,
+    "location": "jetblue.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

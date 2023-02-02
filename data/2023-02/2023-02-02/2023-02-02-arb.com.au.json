@@ -1,0 +1,120 @@
+{
+  "domain": "arb.com.au",
+  "base_domain": "arb.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cortney.ns.cloudflare.com",
+      "glen.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mxa-00235e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.125"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mxb-00235e01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.125"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxa-00235e01.gslb.pphosted.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00235e01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00235e01.gslb.pphosted.com",
+      "Hostname mxa-00235e01.gslb.pphosted.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:163.53.249.126 ip4:111.67.2.47 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:40.81.59.110 ip4:13.55.44.47 ip4:209.47.1.69 ip4:40.81.63.150 include:_spf.google.com include:spf.protection.outlook.com include:mail.arb.com.au include:shops.shopify.com include:spf-00235e01.pphosted.com include:mail.zendesk.com include:spf.givex.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "arb.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

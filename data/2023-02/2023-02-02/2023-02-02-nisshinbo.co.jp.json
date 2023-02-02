@@ -1,0 +1,44 @@
+{
+  "domain": "nisshinbo.co.jp",
+  "base_domain": "nisshinbo.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.shsvr.net",
+      "ns1.shsvr.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "nisshinbo-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out.",
+      "The reverse DNS of 104.47.23.138 is mail-tycjpn010138.inbound.protection.outlook.com, but the A/AAAA DNS records for mail-tycjpn010138.inbound.protection.outlook.com do not resolve to 104.47.23.138",
+      "SSL/TLS is not supported on nisshinbo-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:210.136.177.230 include:spf.nospamcloud.com ip4:202.32.255.39 include:spfa.nisshinbo.co.jp include:spf.protection.outlook.com include:spf-bma.mpme.jp include:mr01w.nis-md.com include:dococab.jp include:spf1.bcart.jp -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "mr01w.nis-md.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

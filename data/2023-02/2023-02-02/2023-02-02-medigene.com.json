@@ -1,0 +1,148 @@
+{
+  "domain": "medigene.com",
+  "base_domain": "medigene.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a.ns14.net",
+      "b.ns14.net",
+      "c.ns14.net",
+      "d.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail2.medigene.com",
+        "addresses": [
+          "178.15.138.216"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.medigene.com",
+        "addresses": [
+          "178.15.138.216"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail2.medigene.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:992)",
+      "mail.medigene.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "185.64.113.77",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail2.medigene.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail.medigene.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:admin@medigene.com,mailto:025a9155@mxtoolbox.dmarc-report.com; ruf=mailto:admin@medigene.com,mailto:025a9155@forensics.dmarc-report.com; fo=1",
+    "valid": true,
+    "location": "medigene.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin@medigene.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "025a9155@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "admin@medigene.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "025a9155@forensics.dmarc-report.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

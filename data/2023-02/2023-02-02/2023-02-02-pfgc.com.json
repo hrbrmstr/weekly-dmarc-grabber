@@ -1,0 +1,112 @@
+{
+  "domain": "pfgc.com",
+  "base_domain": "pfgc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pfgns2.pfgc.com",
+      "pfgns1.pfgc.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc1981-4.iphmx.com",
+        "addresses": [
+          "216.71.150.113",
+          "216.71.150.114",
+          "216.71.154.191",
+          "216.71.154.192"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc1981-4.iphmx.com",
+        "addresses": [
+          "216.71.150.113",
+          "216.71.150.114",
+          "216.71.154.191",
+          "216.71.154.192"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx1.hc1981-4.iphmx.com",
+      "SSL/TLS is not supported on mx1.hc1981-4.iphmx.com",
+      "STARTTLS is not supported on mx2.hc1981-4.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1981-4.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a include:SPF1.PFGC.COM include:SPF2.PFGC.COM ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:PFGDMARCReports@pfgc.com",
+    "valid": true,
+    "location": "pfgc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "PFGDMARCReports@pfgc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

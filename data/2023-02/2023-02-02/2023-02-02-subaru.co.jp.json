@@ -1,0 +1,241 @@
+{
+  "domain": "subaru.co.jp",
+  "base_domain": "subaru.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a10-66.akam.net",
+      "a9-66.akam.net",
+      "a1-169.akam.net",
+      "a4-67.akam.net",
+      "a8-65.akam.net",
+      "a5-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc973-7.ap.iphmx.com",
+        "addresses": [
+          "23.90.106.42",
+          "23.90.109.169"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc973-7.ap.iphmx.com",
+        "addresses": [
+          "23.90.106.42",
+          "23.90.109.169"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc973-7.ap.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc973-7.ap.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc973-7.ap.iphmx.com +ip4:133.186.32.157 include:_spf.salesforce.com include:spf.tricorn.net include:spf.gigacc.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "%{i}.spf.hc973-7.ap.iphmx.com",
+          "mechanism": "exists"
+        },
+        {
+          "value": "133.186.32.157",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.tricorn.net",
+          "record": "v=spf1 include:spf1.tricorn.net ip4:202.218.77.128/25 ip4:203.183.233.128/25 ip4:203.183.236.0/24 ip4:203.183.137.128/25 ip4:61.195.171.0/27 ip4:202.230.13.128/25 ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "202.218.77.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.183.233.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.183.236.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.183.137.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.195.171.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.230.13.128/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf1.tricorn.net",
+                "record": "v=spf1 ip4:211.10.12.192/26 ip4:202.218.125.64/26 ip4:203.183.50.128/25 ip4:202.234.6.128/25 ip4:210.129.210.0/25 ip4:202.218.77.0/25 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "211.10.12.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.218.125.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.183.50.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.234.6.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.129.210.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.218.77.0/25",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.gigacc.com",
+          "record": "v=spf1 ip4:210.162.8.252 ip4:210.162.8.253 ip4:121.119.252.130 include:spf.gigacc.smtps.jp ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.162.8.252",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.162.8.253",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "121.119.252.130",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.gigacc.smtps.jp",
+                "record": "v=spf1 ip4:163.43.136.149 ip4:153.125.144.148 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "163.43.136.149",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "153.125.144.148",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
