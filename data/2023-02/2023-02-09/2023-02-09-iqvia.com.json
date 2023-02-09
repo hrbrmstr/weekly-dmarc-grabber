@@ -1,0 +1,182 @@
+{
+  "domain": "iqvia.com",
+  "base_domain": "iqvia.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dnsus1.imshealth.com",
+      "dnsuk.imshealth.com",
+      "dnsuk2.imshealth.com",
+      "dnsus2.imshealth.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "iqvia-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.10",
+          "104.47.73.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on iqvia-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "%{i}._ip.%{h}._ehlo.%{d}._spf.vali.email",
+          "record": "v=spf1 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email,mailto:5a4340b5@mxtoolbox.dmarc-report.com,mailto:cf86883e@inbox.ondmarc.com,mailto:dmarc_aggregate_reports@iqvia.com,mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:d@rua.agari.com; ruf=mailto:5a4340b5@forensics.dmarc-report.com,mailto:cf86883e@inbox.ondmarc.com,mailto:dmarc_forensic_reports@iqvia.com,mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:d@ruf.agari.com; fo=1",
+    "valid": true,
+    "location": "iqvia.com",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs",
+      "Some DMARC reporters might not send to more than two ruf URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "5a4340b5@mxtoolbox.dmarc-report.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "cf86883e@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_aggregate_reports@iqvia.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "d@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "5a4340b5@forensics.dmarc-report.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "cf86883e@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_forensic_reports@iqvia.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "d@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

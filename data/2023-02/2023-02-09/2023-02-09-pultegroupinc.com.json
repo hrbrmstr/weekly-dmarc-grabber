@@ -1,0 +1,139 @@
+{
+  "domain": "pultegroupinc.com",
+  "base_domain": "pultegroupinc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.pulte.com",
+      "ns1.pulte.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "pultegroup.com.s9a1.psmtp.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "pultegroup.com.s9a2.psmtp.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "pultegroup.com.s9b1.psmtp.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "pultegroup.com.s9b2.psmtp.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The domain pultegroup.com.s9a1.psmtp.com does not exist",
+      "pultegroup.com.s9a1.psmtp.com: DNS resolution failed",
+      "The domain pultegroup.com.s9a2.psmtp.com does not exist",
+      "pultegroup.com.s9a2.psmtp.com: DNS resolution failed",
+      "The domain pultegroup.com.s9b1.psmtp.com does not exist",
+      "pultegroup.com.s9b1.psmtp.com: DNS resolution failed",
+      "The domain pultegroup.com.s9b2.psmtp.com does not exist",
+      "pultegroup.com.s9b2.psmtp.com: DNS resolution failed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=reject;fo=1;rua=mailto:dmarc_rua@emaildefense.proofpoint.com;ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "pultegroupinc.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

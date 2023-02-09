@@ -1,0 +1,205 @@
+{
+  "domain": "daimler.com",
+  "base_domain": "daimler.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.corpinter.de",
+      "ns3.corpinter.net",
+      "ns1.corpinter.net",
+      "ns4.corpinter.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "one.mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.25"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "two.mail-in.daimler.com",
+        "addresses": [
+          "141.113.8.25"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mail-in.daimler.com",
+        "addresses": [
+          "141.113.0.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on one.mail-in.daimler.com",
+      "SSL/TLS is not supported on two.mail-in.daimler.com",
+      "SSL/TLS is not supported on mail-in.daimler.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.flexmail.eu a:mail-out.emea.daimler.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "141.113.1.131",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.1.132",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.1.133",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.1.134",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.9.131",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.9.132",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.9.133",
+          "mechanism": "a"
+        },
+        {
+          "value": "141.113.9.134",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.flexmail.eu",
+          "record": "v=spf1 ip4:79.174.133.0/26 ip4:185.18.8.192/26 ip4:178.208.63.128/26 ip4:37.148.180.0/25 ip4:37.148.179.0/27 ip4:178.208.61.208/28 ip4:176.62.163.112/28 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "79.174.133.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.18.8.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.208.63.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.148.180.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.148.179.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.208.61.208/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "176.62.163.112/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:weacxe0d@ag.eu.dmarcadvisor.com;",
+    "valid": true,
+    "location": "daimler.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "weacxe0d@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

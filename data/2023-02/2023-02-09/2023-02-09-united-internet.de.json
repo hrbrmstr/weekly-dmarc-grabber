@@ -1,0 +1,426 @@
+{
+  "domain": "united-internet.de",
+  "base_domain": "united-internet.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ui.ui-dns.de",
+      "ns-ui.ui-dns.com",
+      "ns-ui.ui-dns.org",
+      "ns-ui.ui-dns.biz"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxint01.1and1.com",
+        "addresses": [
+          "212.227.126.206",
+          "212.227.17.16"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxint02.1and1.com",
+        "addresses": [
+          "212.227.126.207",
+          "212.227.17.17"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxint01.1and1.com",
+      "SSL/TLS is not supported on mxint02.1and1.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.1und1.de include:spf.mailjet.com include:_uicsspf.1und1.de include:d.spf.avature.net include:_spf.zimpel.de -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.1und1.de",
+          "record": "v=spf1 a:moi.1and1.com a:moint.1and1.com a:mxint.1and1.com a:mbulk.1and1.com ip4:217.72.200.69 -all",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.227.126.208",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.209",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.1",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.2",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.7",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.8",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.27",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.7",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.206",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.207",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.16",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.17.17",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.220",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.221",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.222",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.223",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.224",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.225",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.226",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.126.227",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.47",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.50",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.52",
+                "mechanism": "a"
+              },
+              {
+                "value": "212.227.15.53",
+                "mechanism": "a"
+              },
+              {
+                "value": "217.72.200.69",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mailjet.com",
+          "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "87.253.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.189.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.211.120.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.250.236.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_uicsspf.1und1.de",
+          "record": "v=spf1 ip4:82.165.9.180 ip4:82.165.9.181 ip4:82.165.9.182 ip4:82.165.9.220 ip4:82.165.9.221 ip4:82.165.9.222 ip4:82.165.9.155 ip4:82.165.9.205 ip4:146.0.41.181 ip4:146.0.41.182 ip4:46.20.47.88 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "82.165.9.180",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.221",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.222",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.155",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "82.165.9.205",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.0.41.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.0.41.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.20.47.88",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "d.spf.avature.net",
+          "record": "v=spf1 ip4:209.137.158.247/32 ip4:209.137.158.248/31 ip4:209.137.158.250/32 ip4:51.163.160.180/32 ip4:51.163.163.176/28 ip4:51.163.163.192/31 ip4:51.163.163.249/32 ip4:51.163.163.250/32 ip4:154.59.120.249/32 ip4:154.59.120.250/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "209.137.158.247/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.137.158.248/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "209.137.158.250/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.160.180/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.163.176/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.163.192/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.163.249/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.163.250/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "154.59.120.249/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "154.59.120.250/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.zimpel.de",
+          "record": "v=spf1 ip4:193.201.168.38/32 ip4:193.201.168.170/31",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "193.201.168.38/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.201.168.170/31",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;sp=reject;pct=100;adkim=r;aspf=r;rua=mailto:7f750aff40@rua.easydmarc.eu;ruf=mailto:7f750aff40@ruf.easydmarc.eu;fo=0",
+    "valid": true,
+    "location": "united-internet.de",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "7f750aff40@rua.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "7f750aff40@ruf.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

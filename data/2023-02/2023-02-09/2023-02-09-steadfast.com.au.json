@@ -1,0 +1,496 @@
+{
+  "domain": "steadfast.com.au",
+  "base_domain": "steadfast.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-06.azure-dns.com",
+      "ns4-06.azure-dns.info",
+      "ns2-06.azure-dns.net",
+      "ns3-06.azure-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "steadfast-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on steadfast-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:81.93.173.201 ip4:216.146.32.188 ip4:203.41.57.144 ip4:203.41.57.145 ip4:203.41.57.147 ip4:103.15.210.63 ip4:167.89.60.176 ip4:13.111.111.37 ip4:81.93.164.103 ip4:52.187.195.207 ip4:159.183.147.121 include:aspmx.pardot.com include:_spf.salesforce.com redirect=_spf.steadfast.com.au",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "81.93.173.201",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.146.32.188",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.144",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.145",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.147",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.15.210.63",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "167.89.60.176",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "13.111.111.37",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "81.93.164.103",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.187.195.207",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "159.183.147.121",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": {
+        "domain": "_spf.steadfast.com.au",
+        "record": "v=spf1 include:spf.protection.outlook.com include:sendgrid.net ip4:40.66.63.89/32 ip4:40.66.63.90/32 ip4:40.66.63.91/32 ip4:52.226.140.66 ip4:52.185.66.245 ip4:13.86.124.154 ip4:40.80.240.101/32 ip4:165.22.231.153/32 ip4:165.22.231.150/32 -all",
+        "dns_lookups": 4,
+        "dns_void_lookups": 0,
+        "parsed": {
+          "pass": [
+            {
+              "value": "40.66.63.89/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "40.66.63.90/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "40.66.63.91/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "52.226.140.66",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "52.185.66.245",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "13.86.124.154",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "40.80.240.101/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "165.22.231.153/32",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "165.22.231.150/32",
+              "mechanism": "ip4"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "spf.protection.outlook.com",
+              "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 include:spfd.protection.outlook.com -all",
+              "dns_lookups": 1,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "40.92.0.0/15",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "40.107.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "52.100.0.0/14",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "104.47.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "2a01:111:f400::/48",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403::/49",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:8000::/50",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:c000::/51",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:f000::/52",
+                    "mechanism": "ip6"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "spfd.protection.outlook.com",
+                    "record": "v=spf1 ip4:51.4.72.0/24 ip4:51.5.72.0/24 ip4:51.5.80.0/27 ip4:20.47.149.138/32 ip4:51.4.80.0/27 ip6:2a01:4180:4051:0800::/64 ip6:2a01:4180:4050:0800::/64 ip6:2a01:4180:4051:0400::/64 ip6:2a01:4180:4050:0400::/64 -all",
+                    "dns_lookups": 0,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "51.4.72.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.5.72.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.5.80.0/27",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "20.47.149.138/32",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "51.4.80.0/27",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "2a01:4180:4051:0800::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4050:0800::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4051:0400::/64",
+                          "mechanism": "ip6"
+                        },
+                        {
+                          "value": "2a01:4180:4050:0400::/64",
+                          "mechanism": "ip6"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "fail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "sendgrid.net",
+              "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+              "dns_lookups": 1,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "167.89.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "208.117.48.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "50.31.32.0/19",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.37.144.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.21.0.0/21",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "192.254.112.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "168.245.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "149.72.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "159.183.0.0/16",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "ab.sendgrid.net",
+                    "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                    "dns_lookups": 0,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "223.165.113.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "223.165.115.0/24",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "223.165.118.0/23",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "223.165.120.0/23",
+                          "mechanism": "ip4"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "softfail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "fail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:dmarc_agg@vali.email; ruf=mailto:dmarc_reports@steadfasttech.com.au",
+    "valid": true,
+    "location": "steadfast.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_reports@steadfasttech.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
