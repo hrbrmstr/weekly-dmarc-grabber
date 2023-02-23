@@ -1,0 +1,105 @@
+{
+  "domain": "oreillyauto.com",
+  "base_domain": "oreillyauto.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a2-66.akam.net",
+      "a22-67.akam.net",
+      "a5-66.akam.net",
+      "a24-64.akam.net",
+      "a3-65.akam.net",
+      "a1-49.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00700601.gslb.pphosted.com",
+        "addresses": [
+          "205.220.181.157"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00700601.gslb.pphosted.com",
+        "addresses": [
+          "205.220.169.157"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00700601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00700601.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:208.70.182.0/23 include:spf-00700601.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mxa-00700601.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-00700601.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "208.70.182.0/23",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00700601.pphosted.com",
+          "record": "v=spf1 ip4:205.220.169.157 ip4:205.220.181.157",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.169.157",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.181.157",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

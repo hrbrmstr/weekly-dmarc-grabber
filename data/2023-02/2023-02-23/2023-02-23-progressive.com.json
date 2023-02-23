@@ -1,0 +1,125 @@
+{
+  "domain": "progressive.com",
+  "base_domain": "progressive.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.progressive.com",
+      "ns3.progressive.com",
+      "ns2.progressive.com",
+      "ns1.progressive.com",
+      "ns4.progressive.com",
+      "ns7.progressive.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc4529-39.iphmx.com",
+        "addresses": [
+          "139.138.46.63",
+          "207.54.80.150"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc4529-39.iphmx.com",
+        "addresses": [
+          "139.138.46.63",
+          "207.54.80.150"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc4529-39.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc4529-39.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 17.200 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-reports@progressive.com; ruf=mailto:dmarc-forensic-reports@progressive.com,mailto:progressive-dmarc@datafeeds.phishlabs.com",
+    "valid": true,
+    "location": "progressive.com",
+    "warnings": [
+      "datafeeds.phishlabs.com does not indicate that it accepts DMARC reports about progressive.com - Authorization record not found: progressive.com._report._dmarc.datafeeds.phishlabs.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@progressive.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensic-reports@progressive.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "progressive-dmarc@datafeeds.phishlabs.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

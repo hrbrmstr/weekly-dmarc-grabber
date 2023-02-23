@@ -1,0 +1,72 @@
+{
+  "domain": "freenet.ag",
+  "base_domain": "freenet.ag",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.roka.net",
+      "ns2.roka.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "esa1.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.253"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "esa2.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.150.254"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "esa3.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.90"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "esa4.md.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.151.91"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "esa1.md.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "esa2.md.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "esa3.md.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "esa4.md.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:82.165.148.37 ip4:194.97.44.232/32 ip4:194.97.44.233/32 ip4:194.97.44.248/32 ip4:194.97.44.249/32 include:mailing.eqs.com include:email.event-hub.ipreo.com include:tms.aloom.de -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "domain": "sonichealthcare.com",
+  "base_domain": "sonichealthcare.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "sigatxns1.sonichealthcare.com",
+      "sigtarns1.sonichealthcare.com",
+      "signryns1.sonichealthcare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "signrymx2.sonichealthcare.com",
+        "addresses": [
+          "203.18.34.177"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "sigtarmx2.sonichealthcare.com",
+        "addresses": [
+          "203.18.34.49"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on signrymx2.sonichealthcare.com",
+      "SSL/TLS is not supported on sigtarmx2.sonichealthcare.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "signrymx2.sonichealthcare.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "sigtarmx2.sonichealthcare.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:3732e167466e303@rep.dmarcanalyzer.com,mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:3732e167466e303@for.dmarcanalyzer.com,mailto:dmarc_ruf@emaildefense.proofpoint.com; fo=1;",
+    "valid": true,
+    "location": "sonichealthcare.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3732e167466e303@rep.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "3732e167466e303@for.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

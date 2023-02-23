@@ -1,0 +1,99 @@
+{
+  "domain": "elumeo.com",
+  "base_domain": "elumeo.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns42.domaincontrol.com",
+      "ns41.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx.elumeo.com",
+        "addresses": [
+          "91.203.203.55"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx.elumeo.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.de.umantis.com ip4:91.203.203.55 ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx.elumeo.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "91.203.203.55",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.de.umantis.com",
+          "record": "v=spf1 ip4:213.198.99.210 ip4:213.198.99.211 ip4:81.25.202.82 ip4:185.238.12.20 ip4:185.238.12.21 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.198.99.210",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.198.99.211",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.25.202.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.238.12.21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

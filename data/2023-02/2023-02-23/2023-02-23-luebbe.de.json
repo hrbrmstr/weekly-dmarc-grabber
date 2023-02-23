@@ -1,0 +1,44 @@
+{
+  "domain": "luebbe.de",
+  "base_domain": "luebbe.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.kiagdomain.de",
+      "ns1.kiagdomain.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "relay.mail.sec-provider.de",
+        "addresses": [
+          "2001:14c0:1001:2::10",
+          "2001:14c0:9001:2::10",
+          "88.215.200.10",
+          "88.215.226.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on relay.mail.sec-provider.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:212.18.11.33/27 ip4:130.211.63.211/32 include:mailing.eqs.com include:pallas-security.com include:spf.protection.outlook.com include:_spf.rexx-suite.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

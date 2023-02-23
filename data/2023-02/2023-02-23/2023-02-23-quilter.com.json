@@ -1,0 +1,155 @@
+{
+  "domain": "quilter.com",
+  "base_domain": "quilter.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.netnames.net",
+      "ns1.netnames.net",
+      "ns5.netnames.net",
+      "ns6.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0036ff01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.28.217"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0036ff01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.28.217"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-0036ff01.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-0036ff01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:203.192.70.2/32 ip4:103.3.197.47/32 ip4:103.3.199.47/32 include:spf-0036ff01.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "203.192.70.2/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.3.197.47/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.3.199.47/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0036ff01.pphosted.com",
+          "record": "v=spf1 ip4:185.132.181.78 ip4:185.183.28.217",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.132.181.78",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.28.217",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@quilter.com; sp=reject",
+    "valid": true,
+    "location": "quilter.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@quilter.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

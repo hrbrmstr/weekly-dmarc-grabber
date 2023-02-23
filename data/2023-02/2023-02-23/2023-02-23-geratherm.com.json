@@ -1,0 +1,188 @@
+{
+  "domain": "geratherm.com",
+  "base_domain": "geratherm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.agenturserver.co",
+      "ns01.agenturserver.de",
+      "ns01.agenturserver.it"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx19a.antispameurope.com",
+        "addresses": [
+          "83.246.65.85",
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx19b.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx19c.antispameurope.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx19d.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx19a.antispameurope.com: Connection timed out",
+      "SSL/TLS is not supported on mx19b.antispameurope.com",
+      "SSL/TLS is not supported on mx19c.antispameurope.com",
+      "SSL/TLS is not supported on mx19d.antispameurope.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:agenturserver.de include:antispameurope.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "agenturserver.de",
+          "record": "v=spf1 ip4:188.94.249.240/28 ip4:188.94.250.248/29 ip4:188.94.251.248/29 ip4:188.94.252.252/30 ip4:185.15.192.32/27 ip4:178.16.56.32/27 ip4:185.15.192.32/28 ip4:153.92.196.160/28 ip4:37.202.1.52/30 ip4:37.202.6.52/30 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "188.94.249.240/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.250.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.251.248/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.94.252.252/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.16.56.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.15.192.32/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.92.196.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.1.52/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.202.6.52/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "antispameurope.com",
+          "record": "v=spf1 ip4:83.246.65.0/24 ip4:185.140.204.0/22 ip4:94.100.128.0/20 ip4:81.20.94.0/24 ip4:173.45.18.0/24 ip4:52.62.123.207/32 ip4:52.62.108.212/32 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "83.246.65.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.140.204.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.100.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.20.94.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.45.18.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.123.207/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.62.108.212/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
