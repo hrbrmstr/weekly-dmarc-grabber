@@ -1,0 +1,117 @@
+{
+  "domain": "stryker.com",
+  "base_domain": "stryker.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.cscdns.net",
+      "dns2.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "stryker-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.40.32",
+          "52.101.40.34",
+          "52.101.40.36",
+          "52.101.42.0",
+          "52.101.8.38",
+          "52.101.8.42",
+          "52.101.8.44",
+          "52.101.9.0"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "52.101.40.32 does not have any reverse DNS (PTR) records",
+      "52.101.40.34 does not have any reverse DNS (PTR) records",
+      "52.101.40.36 does not have any reverse DNS (PTR) records",
+      "52.101.42.0 does not have any reverse DNS (PTR) records",
+      "52.101.8.38 does not have any reverse DNS (PTR) records",
+      "52.101.8.42 does not have any reverse DNS (PTR) records",
+      "52.101.8.44 does not have any reverse DNS (PTR) records",
+      "52.101.9.0 does not have any reverse DNS (PTR) records",
+      "stryker-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 3.800 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:spam.dumpster@stryker.com; ruf=mailto:spam.dumpster@stryker.com",
+    "valid": true,
+    "location": "stryker.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "spam.dumpster@stryker.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "spam.dumpster@stryker.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

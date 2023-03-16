@@ -1,0 +1,158 @@
+{
+  "domain": "einhell.de",
+  "base_domain": "einhell.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "odin.ns.cloudflare.com",
+      "aryanna.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0051b601.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.147"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mxb-0051b601.gslb.pphosted.com",
+        "addresses": [
+          "185.183.30.198"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0051b601.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0051b601.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0051b601.pphosted.com ip4:176.95.38.64/26 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "176.95.38.64/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0051b601.pphosted.com",
+          "record": "v=spf1 ip4:185.132.183.147 ip4:185.183.30.198",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.132.183.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.30.198",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;sp=reject;pct=100;adkim=r;aspf=r;rua=mailto:dmarc-rua@einhell.com;ruf=mailto:dmarc-ruf@einhell.com;fo=1",
+    "valid": true,
+    "location": "einhell.de",
+    "warnings": [
+      "einhell.com does not indicate that it accepts DMARC reports about einhell.de - Authorization record not found: einhell.de._report._dmarc.einhell.com IN TXT \"v=DMARC1\"",
+      "einhell.com does not indicate that it accepts DMARC reports about einhell.de - Authorization record not found: einhell.de._report._dmarc.einhell.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@einhell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ruf@einhell.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

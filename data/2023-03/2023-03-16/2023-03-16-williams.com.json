@@ -1,0 +1,246 @@
+{
+  "domain": "williams.com",
+  "base_domain": "williams.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.williams.com",
+      "ns2.williams.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00188a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.158.118"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00188a01.gslb.pphosted.com",
+        "addresses": [
+          "148.163.156.121"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00188a01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00188a01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf-a.williams.com include:_spf-b.williams.com include:spf-00188a01.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf-a.williams.com",
+          "record": "v=spf1 ip4:216.221.31.26 ip4:151.142.248.40 ip4:216.251.248.18 ip4:192.48.98.254 ip4:160.34.15.16/28 ip4:205.220.165.12 ip4:205.220.177.12 ip4:146.126.51.60 ip4:146.126.61.60 ip4:148.163.153.164 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.221.31.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "151.142.248.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.251.248.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.48.98.254",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.34.15.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.177.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.126.51.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.126.61.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.153.164",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-b.williams.com",
+          "record": "v=spf1 ip4:148.163.149.165 ip4:69.20.6.34 ip4:74.209.251.23 ip4:64.154.17.130 ip4:50.172.133.126 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.149.165",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.20.6.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.209.251.23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.154.17.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.172.133.126",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-00188a01.pphosted.com",
+          "record": "v=spf1 ip4:148.163.158.118 ip4:148.163.156.121",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.158.118",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.156.121",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc@williams.com; ruf=mailto:dmarc@williams.com; pct=100",
+    "valid": true,
+    "location": "williams.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@williams.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@williams.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

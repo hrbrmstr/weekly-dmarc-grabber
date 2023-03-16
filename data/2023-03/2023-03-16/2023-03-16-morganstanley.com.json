@@ -1,0 +1,154 @@
+{
+  "domain": "morganstanley.com",
+  "base_domain": "morganstanley.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-ext8.ms.com",
+      "ns-ext8.morganstanley.net",
+      "ns-ext9.ms.com",
+      "ns-ext7.morganstanley.net",
+      "ns-ext7.ms.com",
+      "ns-ext9.morganstanley.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.morganstanley.com",
+        "addresses": [
+          "199.89.94.11",
+          "199.89.94.12",
+          "199.89.94.13"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.morganstanley.com",
+        "addresses": [
+          "205.228.15.11",
+          "205.228.15.12",
+          "205.228.15.13"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx3.morganstanley.com",
+        "addresses": [
+          "205.228.84.47",
+          "205.228.84.48",
+          "205.228.84.49"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 0,
+        "hostname": "mx4.morganstanley.com",
+        "addresses": [
+          "205.228.84.147",
+          "205.228.84.148",
+          "205.228.84.149"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.morganstanley.com: Connection timed out",
+      "mx2.morganstanley.com: Connection timed out",
+      "SSL/TLS is not supported on mx3.morganstanley.com",
+      "SSL/TLS is not supported on mx4.morganstanley.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 3.800 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:morganstanley@rua.netcraft.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:morganstanley@ruf.netcraft.com;",
+    "valid": true,
+    "location": "morganstanley.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "morganstanley@rua.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "morganstanley@ruf.netcraft.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

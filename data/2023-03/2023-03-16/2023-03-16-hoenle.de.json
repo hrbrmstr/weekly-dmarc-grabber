@@ -1,0 +1,83 @@
+{
+  "domain": "hoenle.de",
+  "base_domain": "hoenle.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.netestate.de",
+      "ns1.netestate.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.hoenle.de",
+        "addresses": [
+          "217.239.205.40"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.hoenle.de: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.netestate.de ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.hoenle.de",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.netestate.de",
+          "record": "v=spf1 ip4:81.209.177.0/24 ip4:81.209.178.0/25 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "81.209.177.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "81.209.178.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "domain": "mgmresorts.com",
+  "base_domain": "mgmresorts.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.comlaude-dns.com",
+      "dns2.comlaude-dns.net",
+      "dns3.comlaude-dns.co.uk",
+      "dns4.comlaude-dns.eu"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mgmresorts-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.56.138",
+          "52.101.9.11"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "52.101.9.11 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on mgmresorts-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.300 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; fo=1; ri=3600; rua=mailto:2ceebe6e@inbox.ondmarc.com,mailto:d@rua.agari.com; ruf=mailto:2ceebe6e@inbox.ondmarc.com,mailto:d@ruf.agari.com",
+    "valid": true,
+    "location": "mgmresorts.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "2ceebe6e@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "d@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "2ceebe6e@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "d@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

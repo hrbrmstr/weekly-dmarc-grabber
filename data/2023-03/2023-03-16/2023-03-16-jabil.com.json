@@ -1,0 +1,123 @@
+{
+  "domain": "jabil.com",
+  "base_domain": "jabil.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a16-64.akam.net",
+      "a24-65.akam.net",
+      "a1-9.akam.net",
+      "a9-66.akam.net",
+      "a13-67.akam.net",
+      "a12-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jabil-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.40.0",
+          "52.101.40.34",
+          "52.101.40.38",
+          "52.101.8.32",
+          "52.101.8.44",
+          "52.101.9.11",
+          "52.101.9.2",
+          "52.101.9.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "52.101.40.0 does not have any reverse DNS (PTR) records",
+      "52.101.40.34 does not have any reverse DNS (PTR) records",
+      "52.101.40.38 does not have any reverse DNS (PTR) records",
+      "52.101.8.32 does not have any reverse DNS (PTR) records",
+      "52.101.8.44 does not have any reverse DNS (PTR) records",
+      "52.101.9.11 does not have any reverse DNS (PTR) records",
+      "52.101.9.2 does not have any reverse DNS (PTR) records",
+      "52.101.9.5 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on jabil-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:DMARC_reporting@jabil.com; ruf=mailto:DMARC_reporting@jabil.com; pct=100; fo=1:d:s",
+    "valid": true,
+    "location": "jabil.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_reporting@jabil.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC_reporting@jabil.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1",
+          "d",
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "domain": "abbvie.com",
+  "base_domain": "abbvie.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns11.constellix.com",
+      "ns51.constellix.net",
+      "ns41.constellix.net",
+      "ns21.constellix.com",
+      "ns61.constellix.net",
+      "ns31.constellix.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.hc3464-92.iphmx.com",
+        "addresses": [
+          "68.232.129.132",
+          "68.232.135.112"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.hc3464-92.iphmx.com",
+        "addresses": [
+          "68.232.129.132",
+          "68.232.135.112"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.hc3464-92.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.hc3464-92.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.400 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; pct=100; ri=14400; rua=mailto:abbvie@rua.dmp.cisco.com,mailto:ECS.Messaging.Reports@abbvie.com; ruf=mailto:abbvie@ruf.dmp.cisco.com,mailto:ECS.Messaging.Reports@abbvie.com",
+    "valid": true,
+    "location": "abbvie.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 14400,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "abbvie@rua.dmp.cisco.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ECS.Messaging.Reports@abbvie.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "abbvie@ruf.dmp.cisco.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "ECS.Messaging.Reports@abbvie.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}
