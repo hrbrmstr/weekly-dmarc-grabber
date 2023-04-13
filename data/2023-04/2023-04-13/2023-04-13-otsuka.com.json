@@ -1,0 +1,152 @@
+{
+  "domain": "otsuka.com",
+  "base_domain": "otsuka.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-728.awsdns-27.net",
+      "ns-340.awsdns-42.com",
+      "ns-1782.awsdns-30.co.uk",
+      "ns-1269.awsdns-30.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "otsuka-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "otsuka-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:205.211.91.2 include:spf.protection.outlook.com include:spf.otsuka-com.otsuka-us.com -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "205.211.91.2",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.otsuka-com.otsuka-us.com",
+          "record": "v=spf1 ip4:12.19.100.11 ip4:66.18.116.249 ip4:74.84.203.40 ip4:70.42.227.151 ip4:65.221.12.128 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "12.19.100.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.18.116.249",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "74.84.203.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.42.227.151",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.221.12.128",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; pct=100; p=none; rua=mailto:soc_us@oneotsuka.onmicrosoft.com; ruf=mailto:soc_us@oneotsuka.onmicrosoft.com; fo=1",
+    "valid": false,
+    "location": "otsuka.com",
+    "error": "the p tag must immediately follow the v tag"
+  }
+}

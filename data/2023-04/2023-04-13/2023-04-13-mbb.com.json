@@ -1,0 +1,189 @@
+{
+  "domain": "mbb.com",
+  "base_domain": "mbb.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.dts-online.net",
+      "ns2.dts-online.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smail-shatap2-mta1.dts-security.de",
+        "addresses": [
+          "81.89.246.162"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "smail-shatap2.dts-security.de",
+        "addresses": [
+          "81.89.246.129"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smail-shatap2-mta1.dts-security.de",
+      "SSL/TLS is not supported on smail-shatap2.dts-security.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:mailing.eqs.com include:spf1.dts-security.de ip4:188.94.250.251 ip4:188.94.250.252 ip4:84.201.91.134 -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "smail-shatap2-mta1.dts-security.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "smail-shatap2.dts-security.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "188.94.250.251",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "188.94.250.252",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "84.201.91.134",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf1.dts-security.de",
+          "record": "v=spf1 ip4:81.89.246.0/24 ip4:84.201.116.0/23 ip4:212.101.192.64/26 ip4:212.101.206.64/26 ip4:212.62.68.42/32 ip4:212.62.68.20/32 ip6:2a00:1348::2a:0:0:1 ip6:2a00:1348::20:0:0:1 ip6:2a00:1348::29:0:0:1 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "81.89.246.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "84.201.116.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.101.192.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.101.206.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.62.68.42/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.62.68.20/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a00:1348::2a:0:0:1",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1348::20:0:0:1",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1348::29:0:0:1",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

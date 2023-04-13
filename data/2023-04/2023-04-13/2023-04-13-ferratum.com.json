@@ -1,0 +1,116 @@
+{
+  "domain": "ferratum.com",
+  "base_domain": "ferratum.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns12.dnsmadeeasy.com",
+      "ns10.dnsmadeeasy.com",
+      "ns13.dnsmadeeasy.com",
+      "ns11.dnsmadeeasy.com",
+      "ns14.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.200",
+          "195.245.230.201",
+          "195.245.231.69",
+          "195.245.231.72",
+          "195.245.231.75",
+          "85.158.142.210",
+          "85.158.142.214",
+          "85.158.142.215"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.eu.messagelabs.com",
+        "addresses": [
+          "34.253.63.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:smtp01.ferratum.com a:smtp-01.pre.ferratum.com include:sandbox.ferratum.com ip4:94.103.30.47 ip4:94.103.30.53 ip4:52.169.87.35 ip4:94.103.30.54 ip4:213.86.62.84 ip4:62.192.10.68 ip4:212.187.211.0/24 ip4:185.111.40.0/23 ip4:54.171.142.21 ip4:46.38.161.82 ip4:185.49.234.25 ip4:185.49.234.29 ip4:185.49.234.30 include:spf.protection.outlook.com include:mg.ferratum.com include:mailgun.org include:docebosaas.com include:spf.messagelabs.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine;pct=5;rua=mailto:postmaster@ferratum.com",
+    "valid": true,
+    "location": "ferratum.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 5,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@ferratum.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

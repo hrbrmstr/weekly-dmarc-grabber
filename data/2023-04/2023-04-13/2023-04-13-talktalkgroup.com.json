@@ -1,0 +1,365 @@
+{
+  "domain": "talktalkgroup.com",
+  "base_domain": "talktalkgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ds0.opaltelecom.net",
+      "ds1.opaltelecom.net",
+      "ds2.opaltelecom.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.talktalkplc.com",
+        "addresses": [
+          "62.24.202.82"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.talktalkplc.com",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx3.talktalkplc.com",
+        "addresses": [
+          "62.24.139.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx4.talktalkplc.com",
+        "addresses": [
+          "62.24.139.15"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.talktalkplc.com: Connection timed out",
+      "The resolution lifetime expired after 2.700 seconds: ",
+      "mx2.talktalkplc.com: Connection timed out",
+      "mx3.talktalkplc.com: Connection timed out",
+      "SSL/TLS is not supported on mx4.talktalkplc.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=talktalkplc.com",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "talktalkplc.com",
+        "record": "v=spf1 a include:_netblocks.talktalkplc.com include:_netblocks2.talktalkplc.com include:_spf.salesforce.com include:servers.mcsv.net include:spf.protection.outlook.com -all",
+        "dns_lookups": 7,
+        "dns_void_lookups": 0,
+        "parsed": {
+          "pass": [
+            {
+              "value": "52.17.152.5",
+              "mechanism": "a"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "_netblocks.talktalkplc.com",
+              "record": "v=spf1 ip4:62.24.135.0/24 ip4:62.24.229.0/26 ip4:78.144.6.128/26 ip4:62.24.202.0/24 ip4:62.24.128.0/24 ip4:62.24.206.137 ip4:62.24.206.138 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "62.24.135.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.24.229.0/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "78.144.6.128/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.24.202.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.24.128.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.24.206.137",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.24.206.138",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_netblocks2.talktalkplc.com",
+              "record": "v=spf1 ip4:178.249.98.17 ip4:62.8.100.195 ip4:62.216.254.4 ip4:185.136.188.88 ip4:185.136.189.88 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "178.249.98.17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.8.100.195",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "62.216.254.4",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "185.136.188.88",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "185.136.189.88",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_spf.salesforce.com",
+              "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+              "dns_lookups": 1,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "%{i}._spf.mta.salesforce.com",
+                    "mechanism": "exists"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "servers.mcsv.net",
+              "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "205.201.128.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.128.0/18",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "148.105.8.0/21",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "spf.protection.outlook.com",
+              "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "40.92.0.0/15",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "40.107.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "52.100.0.0/14",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "104.47.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "2a01:111:f400::/48",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403::/49",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:8000::/50",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:c000::/51",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:f000::/52",
+                    "mechanism": "ip6"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "fail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; fo=1; ri=3600; rua=mailto:1cf493e1@inbox.ondmarc.com,mailto:xmjbvred@ag.dmarcian-eu.com; ruf=mailto:1cf493e1@inbox.ondmarc.com,mailto:xmjbvred@fr.dmarcian-eu.com;",
+    "valid": true,
+    "location": "talktalkgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1cf493e1@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "xmjbvred@ag.dmarcian-eu.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "1cf493e1@inbox.ondmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "xmjbvred@fr.dmarcian-eu.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

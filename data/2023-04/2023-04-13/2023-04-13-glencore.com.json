@@ -1,0 +1,259 @@
+{
+  "domain": "glencore.com",
+  "base_domain": "glencore.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.p05.nsone.net",
+      "dns2.p05.nsone.net",
+      "dns3.p05.nsone.net",
+      "dns4.p05.nsone.net",
+      "edns1.ultradns.com",
+      "edns1.ultradns.net",
+      "edns1.ultradns.biz"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.glencore.com",
+        "addresses": [
+          "194.209.182.121"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.glencore.com",
+        "addresses": [
+          "194.209.182.122"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mail1.glencore.com: Connection timed out",
+      "SSL/TLS is not supported on mail2.glencore.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.glencore.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.glencore.com",
+          "record": "v=spf1 include:spf-a.glencore.com include:spf-b.glencore.com include:spf-c.glencore.com include:spf-d.glencore.com ~all",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-a.glencore.com",
+                "record": "v=spf1  ip4:31.10.251.121 ip4:31.10.251.125 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "31.10.251.121",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "31.10.251.125",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-b.glencore.com",
+                "record": "v=spf1  ip4:31.10.251.122 ip4:31.10.251.126 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "31.10.251.122",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "31.10.251.126",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-c.glencore.com",
+                "record": "v=spf1  ip4:144.140.149.241 ip4:203.39.129.148 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "144.140.149.241",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.39.129.148",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-d.glencore.com",
+                "record": "v=spf1  ip4:194.209.182.121 ip4:194.209.182.122 ip4:194.209.182.125 ip4:194.209.182.126 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "194.209.182.121",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.209.182.122",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.209.182.125",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.209.182.126",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=quarantine; pct=100; rua=mailto:zcwvfs9i@ag.eu.dmarcadvisor.com; ruf=mailto:zcwvfs9i@fr.eu.dmarcadvisor.com;",
+    "valid": true,
+    "location": "glencore.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "zcwvfs9i@ag.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "zcwvfs9i@fr.eu.dmarcadvisor.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

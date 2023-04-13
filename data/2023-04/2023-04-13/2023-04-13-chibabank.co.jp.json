@@ -1,0 +1,60 @@
+{
+  "domain": "chibabank.co.jp",
+  "base_domain": "chibabank.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a20-64.akam.net",
+      "a6-66.akam.net",
+      "a3-65.akam.net",
+      "a14-67.akam.net",
+      "a9-67.akam.net",
+      "a1-12.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster5.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.211",
+          "67.219.246.212",
+          "67.219.247.195",
+          "67.219.247.99",
+          "67.219.250.217",
+          "67.219.250.221"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster5a.us.messagelabs.com",
+        "addresses": [
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster5.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster5a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:52.194.121.131 include:spf01.chibabank.co.jp include:spf02.chibabank.co.jp include:spf03.chibabank.co.jp include:spf.nlk.mailds.jp include:cdms.jp include:hagaki.dejibin.com include:mktomail.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

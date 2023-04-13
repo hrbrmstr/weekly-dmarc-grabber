@@ -1,0 +1,611 @@
+{
+  "domain": "fedex.com",
+  "base_domain": "fedex.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-193.akam.net",
+      "pdns1.cscdns.net",
+      "land.fedex.com",
+      "grace.fedex.com",
+      "ns1-244.akam.net",
+      "kate.fedex.com",
+      "pdns2.cscdns.net",
+      "use5.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mapper.gslb.fedex.com",
+        "addresses": [
+          "204.135.36.226"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "mxa-0002ee02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.179.9"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 200,
+        "hostname": "mxb-0002ee02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.167.9"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mapper.gslb.fedex.com: Connection refused",
+      "SSL/TLS is not supported on mxa-0002ee02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0002ee02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=_spf.infosec.fedex.com",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 redirect=_spf.infosec.fedex.com"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "_spf.infosec.fedex.com",
+        "record": "v=spf1 a:smtp.dmz.fedex.com a:smtp-out.dmz.fedex.com a:smtp-out-colo.dmz.fedex.com include:spf-0002ee02.pphosted.com include:_spf2.infosec.fedex.com include:_spf.salesforce.com include:spf.mandrillapp.com  -all",
+        "dns_lookups": 8,
+        "dns_void_lookups": 0,
+        "parsed": {
+          "pass": [
+            {
+              "value": "199.81.193.24",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.25",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.26",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.27",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.28",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.29",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.30",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.31",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.42",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.43",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.44",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.193.45",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.76",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.77",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.78",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.79",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.80",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.81",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.82",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.83",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.84",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.85",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.86",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.199.87",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.145",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.146",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.147",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.148",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.185",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.186",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.187",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.188",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.189",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.190",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.237",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.212.238",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.163",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.164",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.165",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.166",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.215",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.216",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.93",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.94",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.95",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.96",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.97",
+              "mechanism": "a"
+            },
+            {
+              "value": "204.135.8.98",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.204.16",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.204.17",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.204.18",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.204.19",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.205.16",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.205.17",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.205.18",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.205.19",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.206.16",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.206.17",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.206.18",
+              "mechanism": "a"
+            },
+            {
+              "value": "170.170.206.19",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.208.32",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.208.33",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.208.34",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.208.35",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.209.32",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.209.33",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.209.34",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.209.35",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.210.32",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.210.33",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.210.34",
+              "mechanism": "a"
+            },
+            {
+              "value": "199.81.210.35",
+              "mechanism": "a"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "spf-0002ee02.pphosted.com",
+              "record": "v=spf1 ip4:205.220.179.9 ip4:205.220.167.9",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "205.220.179.9",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.220.167.9",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "neutral"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_spf2.infosec.fedex.com",
+              "record": "v=spf1 ip4:216.136.162.64/26 ip4:129.152.44.0/24 ip4:74.117.206.0/24 ip4:68.70.187.4 ip4:72.250.202.21 ip4:209.11.164.39 ip4:69.65.19.64/27 ip4:104.200.24.209 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "216.136.162.64/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "129.152.44.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "74.117.206.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "68.70.187.4",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "72.250.202.21",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "209.11.164.39",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "69.65.19.64/27",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "104.200.24.209",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "_spf.salesforce.com",
+              "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+              "dns_lookups": 1,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "%{i}._spf.mta.salesforce.com",
+                    "mechanism": "exists"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "spf.mandrillapp.com",
+              "record": "v=spf1 ip4:198.2.128.0/24 ip4:198.2.132.0/22 ip4:198.2.136.0/23 ip4:198.2.145.0/24 ip4:198.2.186.0/23 ip4:205.201.131.128/25 ip4:205.201.134.128/25 ip4:205.201.136.0/23 ip4:205.201.139.0/24 ip4:198.2.177.0/24 ip4:198.2.178.0/23 ip4:198.2.180.0/24 ~all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "198.2.128.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.132.0/22",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.136.0/23",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.145.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.186.0/23",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.201.131.128/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.201.134.128/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.201.136.0/23",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "205.201.139.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.177.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.178.0/23",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "198.2.180.0/24",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "fail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:dmarc@fedex.com; ruf=mailto:dmarc@fedex.com; fo=1",
+    "valid": true,
+    "location": "fedex.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@fedex.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@fedex.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

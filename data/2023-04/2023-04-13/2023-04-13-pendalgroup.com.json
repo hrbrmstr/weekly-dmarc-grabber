@@ -1,0 +1,96 @@
+{
+  "domain": "pendalgroup.com",
+  "base_domain": "pendalgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.melbourneit.net",
+      "ns3.melbourneit.net",
+      "ns2.melbourneit.net",
+      "ns1.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "pendalgroup-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.71.138",
+          "104.47.71.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on pendalgroup-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.messagelabs.com include:mktomail.com include:spf.protection.outlook.com include:_spf.dayforcehcm.com include:e2ma.net include:spf.uk.exclaimer.net include:_spf.salesforce.com ip4:103.29.43.3 ip4:119.9.19.176 -all",
+    "valid": false,
+    "dns_void_lookups": 3,
+    "warnings": [],
+    "error": "Parsing the SPF record has 3/2 maximum void DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=100; rua=mailto:quarantine@pendalgroup.com;",
+    "valid": true,
+    "location": "pendalgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "quarantine@pendalgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

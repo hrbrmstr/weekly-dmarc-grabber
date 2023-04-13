@@ -1,0 +1,54 @@
+{
+  "domain": "hvpe.com",
+  "base_domain": "hvpe.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns35.domaincontrol.com",
+      "ns36.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "smtp.secureserver.net",
+        "addresses": [
+          "216.69.141.81",
+          "68.178.213.203",
+          "68.178.213.37"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mailstore1.secureserver.net",
+        "addresses": [
+          "216.69.141.82",
+          "68.178.213.243",
+          "68.178.213.244"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "smtp.secureserver.net: Connection timed out",
+      "mailstore1.secureserver.net: Could not connect:  SMTP error code 421"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "hvpe.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

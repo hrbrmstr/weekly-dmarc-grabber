@@ -1,0 +1,97 @@
+{
+  "domain": "internationalpaper.com",
+  "base_domain": "internationalpaper.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1-09.azure-dns.com",
+      "ns2-09.azure-dns.net",
+      "ns3-09.azure-dns.org",
+      "ns4-09.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx include:spf.anachron.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 2,
+    "warnings": [
+      "internationalpaper.com does not have any MX records"
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "3.88.77.180",
+          "mechanism": "a"
+        },
+        {
+          "value": "52.6.66.73",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.anachron.com",
+          "record": "v=spf1 ip4:62.41.149.10 ip4:192.86.240.3 ip4:194.165.92.59 ip4:145.222.192.5 ip4:213.39.102.1 ip4:213.39.102.2 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "62.41.149.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.86.240.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.165.92.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "145.222.192.5",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.39.102.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.39.102.2",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

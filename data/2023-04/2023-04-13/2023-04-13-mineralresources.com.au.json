@@ -1,0 +1,147 @@
+{
+  "domain": "mineralresources.com.au",
+  "base_domain": "mineralresources.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.melbourneit.net",
+      "ns3.melbourneit.net",
+      "ns4.melbourneit.net",
+      "ns2.melbourneit.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 3,
+        "hostname": "mx01.mrl.com.au",
+        "addresses": [
+          "103.167.67.201"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 4,
+        "hostname": "mx02.mrl.com.au",
+        "addresses": [
+          "103.167.67.202"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.mrl.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:992)",
+      "mx02.mrl.com.au: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:992)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx01.mrl.com.au",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx02.mrl.com.au",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_agg@mrl.com.au; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_ff@mrl.com.au",
+    "valid": true,
+    "location": "mineralresources.com.au",
+    "warnings": [
+      "mrl.com.au does not indicate that it accepts DMARC reports about mineralresources.com.au - Authorization record not found: mineralresources.com.au._report._dmarc.mrl.com.au IN TXT \"v=DMARC1\"",
+      "mrl.com.au does not indicate that it accepts DMARC reports about mineralresources.com.au - Authorization record not found: mineralresources.com.au._report._dmarc.mrl.com.au IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@mrl.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ff@mrl.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

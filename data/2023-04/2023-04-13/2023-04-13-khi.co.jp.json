@@ -1,0 +1,103 @@
+{
+  "domain": "khi.co.jp",
+  "base_domain": "khi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "out9.khi.co.jp",
+      "out2.khi.co.jp",
+      "out-kec20.khi.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "out-c10.khi.co.jp",
+        "addresses": [
+          "210.159.10.143"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "out-c20.khi.co.jp",
+        "addresses": [
+          "61.127.172.197"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on out-c10.khi.co.jp",
+      "SSL/TLS is not supported on out-c20.khi.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:210.159.10.128/25 +ip4:210.159.29.128/26 +ip4:210.237.105.160/27 +ip4:210.255.173.176/28 +ip4:211.12.76.0/24 +ip4:61.122.227.152/29 +ip4:61.127.172.192/26 +ip4:210.161.130.192/26 +ip4:106.180.185.224/27 +ip4:180.43.143.7/32 -all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.159.10.128/25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.159.29.128/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.237.105.160/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.255.173.176/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.12.76.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "61.122.227.152/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "61.127.172.192/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.161.130.192/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "106.180.185.224/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "180.43.143.7/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

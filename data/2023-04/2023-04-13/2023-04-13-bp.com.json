@@ -1,0 +1,116 @@
+{
+  "domain": "bp.com",
+  "base_domain": "bp.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.p08.dynect.net",
+      "ns3.p08.dynect.net",
+      "ns2.p08.dynect.net",
+      "ns4.p08.dynect.net",
+      "ns0065.secondary.cloudflare.com",
+      "ns0226.secondary.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.138",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "bp-com.mail.protection.outlook.com",
+        "addresses": []
+      }
+    ],
+    "warnings": [
+      "bp-com.mail.protection.outlook.com: Connection timed out",
+      "Hostname bp-com.mail.protection.outlook.com is listed in multiple MX records"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.300 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; sp=reject; rua=mailto:a0605431@inbox.ondmarc.com; ruf=mailto:a0605431@inbox.ondmarc.com; adkim=r; aspf=r; fo=0:1; rf=afrf; ri=3600",
+    "valid": true,
+    "location": "bp.com",
+    "warnings": [
+      "Including 0 and 1 fo tag values is redundant"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0605431@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "a0605431@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0",
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      }
+    }
+  }
+}

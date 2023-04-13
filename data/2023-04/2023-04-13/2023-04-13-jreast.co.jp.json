@@ -1,0 +1,107 @@
+{
+  "domain": "jreast.co.jp",
+  "base_domain": "jreast.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a2-65.akam.net",
+      "a11-67.akam.net",
+      "a6-66.akam.net",
+      "a8-66.akam.net",
+      "a1-193.akam.net",
+      "dns1.jregroup.ne.jp",
+      "a13-67.akam.net",
+      "dns3.dion.ne.jp",
+      "dns2.jregroup.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc662-93.ap.iphmx.com",
+        "addresses": [
+          "207.54.75.208",
+          "23.90.107.160"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc662-93.ap.iphmx.com",
+        "addresses": [
+          "207.54.75.208",
+          "23.90.107.160"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc662-93.ap.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc662-93.ap.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.hc662-93.ap.iphmx.com ip4:157.71.0.0/16 ip4:157.72.0.0/16 ip4:157.73.0.0/16 ip4:157.74.0.0/16 ip4:157.75.0.0/16 ip4:20.89.56.151 ip4:52.246.186.246 ip4:210.152.91.74/31 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "%{i}.spf.hc662-93.ap.iphmx.com",
+          "mechanism": "exists"
+        },
+        {
+          "value": "157.71.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "157.72.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "157.73.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "157.74.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "157.75.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "20.89.56.151",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.246.186.246",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.152.91.74/31",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

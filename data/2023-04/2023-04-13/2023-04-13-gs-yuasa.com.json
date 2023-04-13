@@ -1,0 +1,78 @@
+{
+  "domain": "gs-yuasa.com",
+  "base_domain": "gs-yuasa.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.gs-yuasa.com",
+      "ns1.omp.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "primary.ap.email.fireeyecloud.com: Connection timed out",
+      "SSL/TLS is not supported on alt1.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.ap.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "gs-yuasa.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

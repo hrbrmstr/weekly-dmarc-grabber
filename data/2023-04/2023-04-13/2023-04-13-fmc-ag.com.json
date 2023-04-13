@@ -1,0 +1,490 @@
+{
+  "domain": "fmc-ag.com",
+  "base_domain": "fmc-ag.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.knipp.de",
+      "ns17.knipp.net",
+      "ns1.fresenius.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mgw4.fresenius.de",
+        "addresses": [
+          "193.41.37.193"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mgw5.fresenius.de",
+        "addresses": [
+          "193.41.37.194"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mgw6.fresenius.de",
+        "addresses": [
+          "193.41.37.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mgw4.fresenius.de",
+      "SSL/TLS is not supported on mgw5.fresenius.de",
+      "SSL/TLS is not supported on mgw6.fresenius.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.fresenius.com include:spf.fmc-ag.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.fresenius.com",
+          "record": "v=spf1 include:spf.protection.outlook.com ip4:193.41.37.193 ip4:193.41.37.194 ip4:193.41.37.74 ip4:193.41.37.75 ip4:193.41.37.228 -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "193.41.37.193",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.41.37.194",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.41.37.74",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.41.37.75",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.41.37.228",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.fmc-ag.com",
+          "record": "v=spf1 include:hostedoffice.ag include:amazonses.com include:_spf.salesforce.com include:sendgrid.net ip4:216.74.162.13/30 ip4:193.30.121.63 ip4:193.30.121.77 ip4:212.18.1.32/27 ip4:212.18.21.64/27 ip4:54.246.89.35 ip4:12.34.56.78 ip4:168.245.53.222 -all",
+          "dns_lookups": 6,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.74.162.13/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.30.121.63",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.30.121.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.1.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.21.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.246.89.35",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.34.56.78",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.53.222",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "hostedoffice.ag",
+                "record": "v=spf1 ip4:195.234.228.0/24 ip4:81.20.94.192/26 ip4:81.20.94.64/27 ip4:46.235.240.128/25 ip4:10.40.12.1/32 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "195.234.228.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "81.20.94.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "81.20.94.64/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.235.240.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "10.40.12.1/32",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "amazonses.com",
+                "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 ip4:76.223.128.0/19 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.255.192.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.127.232.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.0.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "23.251.224.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.64.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.240.96.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.128.0/19",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.salesforce.com",
+                "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spf.mta.salesforce.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "sendgrid.net",
+                "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "167.89.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.117.48.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.31.32.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.37.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.21.0.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.254.112.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "168.245.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.72.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.183.0.0/16",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "ab.sendgrid.net",
+                      "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "223.165.113.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.115.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.118.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.120.0/23",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;ri=3600;rua=mailto:fresenius-se@rua.dmp.cisco.com;ruf=mailto:fresenius-se@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "fmc-ag.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fresenius-se@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fresenius-se@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

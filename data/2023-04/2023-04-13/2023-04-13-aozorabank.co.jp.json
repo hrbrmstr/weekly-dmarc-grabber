@@ -1,0 +1,305 @@
+{
+  "domain": "aozorabank.co.jp",
+  "base_domain": "aozorabank.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns010-0qel52pk0jfk42jj.0.d-53.info",
+      "ns010-0qel52pk0jfk42jj.0.d-53.jp",
+      "2nd.dnsv.jp",
+      "ns010-0qel52pk0jfk42jj.0.d-53.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.aozorabank.co.jp",
+        "addresses": [
+          "210.188.173.43"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx02.aozorabank.co.jp",
+        "addresses": [
+          "210.188.173.44"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx03.aozorabank.co.jp",
+        "addresses": [
+          "210.175.30.43"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.aozorabank.co.jp: Connection timed out",
+      "STARTTLS is not supported on mx02.aozorabank.co.jp",
+      "SSL/TLS is not supported on mx02.aozorabank.co.jp",
+      "STARTTLS is not supported on mx03.aozorabank.co.jp",
+      "SSL/TLS is not supported on mx03.aozorabank.co.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:210.188.173.0/26 +ip4:210.175.30.0/26 +ip4:210.145.177.0/26 +ip4:210.162.48.0/26 include:tis01-spf.mrs.mpub.ne.jp include:aspmx.pardot.com +ip4:106.186.94.155 +ip4:133.250.190.234 +ip4:133.250.190.196 +ip4:133.250.190.230 +ip4:133.250.190.231 +ip4:180.214.40.5 ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "210.188.173.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.175.30.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.145.177.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.162.48.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "106.186.94.155",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.250.190.234",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.250.190.196",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.250.190.230",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.250.190.231",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "180.214.40.5",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "tis01-spf.mrs.mpub.ne.jp",
+          "record": "v=spf1 include:spf-mrs.mrs.mpub.ne.jp ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-mrs.mrs.mpub.ne.jp",
+                "record": "v=spf1 ip4:106.186.67.0/24 ip4:106.186.92.192/26 ip4:125.29.57.64/26 ip4:106.185.82.0/23 ip4:106.185.84.0/23 ip4:106.185.96.0/22 ip4:106.185.100.0/23 ip4:18.180.53.0/24 ip4:106.184.19.0/26 ip4:35.72.225.0/25 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "106.186.67.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.186.92.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "125.29.57.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.82.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.84.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.96.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.185.100.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.180.53.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "106.184.19.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.72.225.0/25",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_report@aozorabank.co.jp; fo=1",
+    "valid": true,
+    "location": "aozorabank.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_report@aozorabank.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

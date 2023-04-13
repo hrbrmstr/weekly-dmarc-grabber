@@ -1,0 +1,133 @@
+{
+  "domain": "baesystems.com",
+  "base_domain": "baesystems.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "dmzms99901.na.baesystems.com",
+        "addresses": [
+          "149.32.200.65"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "dmzms99902.na.baesystems.com",
+        "addresses": [
+          "149.32.200.66"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "dmzms99801.na.baesystems.com",
+        "addresses": [
+          "149.32.232.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "dmzms99802.na.baesystems.com",
+        "addresses": [
+          "149.32.232.66"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "dmzms99901.na.baesystems.com: Connection timed out",
+      "dmzms99902.na.baesystems.com: Connection timed out",
+      "SSL/TLS is not supported on dmzms99801.na.baesystems.com",
+      "SSL/TLS is not supported on dmzms99802.na.baesystems.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.dmp.cisco.com include:%{d}.54.spf-protect.dmp.cisco.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.54.spf-protect.dmp.cisco.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=none; fo=1; ri=3600; rua=mailto:bae@rua.dmp.cisco.com; ruf=mailto:bae@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "baesystems.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bae@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bae@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

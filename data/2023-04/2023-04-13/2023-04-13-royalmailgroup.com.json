@@ -1,0 +1,104 @@
+{
+  "domain": "royalmailgroup.com",
+  "base_domain": "royalmailgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.bt.net",
+      "dns1.consignia.com",
+      "dns2.consignia.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "royalmailgroup-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.138",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "royalmailgroup-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.300 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:f5755cf71b04029@rep.dmarcanalyzer.com; ruf=mailto:f5755cf71b04029@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "royalmailgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f5755cf71b04029@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "f5755cf71b04029@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
