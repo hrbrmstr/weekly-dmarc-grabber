@@ -1,0 +1,224 @@
+{
+  "domain": "anz.com.au",
+  "base_domain": "anz.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a28-67.akam.net",
+      "a7-66.akam.net",
+      "a9-67.akam.net",
+      "a16-67.akam.net",
+      "a8-67.akam.net",
+      "a1-206.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.fireeyecloud.com ip4:203.18.160.203 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "203.18.160.203",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.fireeyecloud.com",
+          "record": "v=spf1 ip4:34.223.9.0/24 ip4:34.223.11.128/25 ip4:34.223.12.0/25 ip4:38.27.116.128/27 ip4:165.254.91.16/28 ip4:38.27.116.96/27 ip4:165.254.91.96/27 ip4:149.13.95.32/27 ip4:154.57.155.16/28 ip4:100.25.99.0/25 ip4:100.24.127.128/25 ip4:3.122.63.0/24 ip4:52.215.218.128/25 ip4:63.34.31.0/25 ip4:63.34.218.0/24 ip4:3.123.5.0/24 ip4:34.223.36.0/24 ip4:3.93.93.0/24 ip4:3.112.99.0/24 ip4:3.112.100.0/24 ip4:3.97.207.0/24 ip4:3.97.208.0/24 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "34.223.9.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.11.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.12.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.27.116.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.254.91.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.27.116.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.254.91.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.13.95.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "154.57.155.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "100.25.99.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "100.24.127.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.122.63.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.215.218.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.34.31.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.34.218.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.123.5.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.36.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.93.93.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.99.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.100.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.97.207.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.97.208.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@anz.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com;fo=1",
+    "valid": true,
+    "location": "anz.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@anz.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

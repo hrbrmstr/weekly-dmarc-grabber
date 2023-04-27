@@ -1,0 +1,258 @@
+{
+  "domain": "nucor.com",
+  "base_domain": "nucor.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns11.constellix.com",
+      "ns51.constellix.net",
+      "ns41.constellix.net",
+      "ns21.constellix.com",
+      "ns61.constellix.net",
+      "ns31.constellix.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "nucor-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.138",
+          "104.47.74.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on nucor-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:128.136.42.208 ip4:128.136.46.135 ip4:148.66.218.165 include:customers.clickdimensions.com include:spf.protection.outlook.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "128.136.42.208",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "128.136.46.135",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.66.218.165",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "customers.clickdimensions.com",
+          "record": "v=spf1 include:_spf.messagegears.net include:_spf.eu.messagegears.net ~all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.messagegears.net",
+                "record": "v=spf1 ip4:135.84.216.0/22 ip4:66.240.227.0/24 ip4:63.143.59.128/25 ip4:63.143.57.128/25 ip4:216.98.158.0/24 ip4:74.63.212.0/24 ip4:52.200.59.0/24 ip4:34.245.210.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "135.84.216.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.240.227.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "63.143.59.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "63.143.57.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.98.158.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.63.212.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.200.59.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.245.210.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.eu.messagegears.net",
+                "record": "v=spf1 ip4:34.245.210.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "34.245.210.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1;",
+    "valid": true,
+    "location": "nucor.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

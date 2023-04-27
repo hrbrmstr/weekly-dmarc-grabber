@@ -1,0 +1,114 @@
+{
+  "domain": "grandcity.lu",
+  "base_domain": "grandcity.lu",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.org",
+      "ns.udag.de",
+      "ns.udag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-004b4301.gslb.pphosted.com",
+        "addresses": [
+          "185.132.182.245"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-004b4301.gslb.pphosted.com",
+        "addresses": [
+          "185.183.30.50"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-004b4301.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-004b4301.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.protection.outlook.com include:spf-004c0701.pphosted.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain spf-004c0701.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=reject;rua=mailto:ef99b1c7fd@rua.easydmarc.eu;ruf=mailto:ef99b1c7fd@ruf.easydmarc.eu;fo=1",
+    "valid": true,
+    "location": "grandcity.lu",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ef99b1c7fd@rua.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ef99b1c7fd@ruf.easydmarc.eu",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

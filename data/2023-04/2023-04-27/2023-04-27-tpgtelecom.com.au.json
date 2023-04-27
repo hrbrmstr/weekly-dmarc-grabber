@@ -1,0 +1,369 @@
+{
+  "domain": "tpgtelecom.com.au",
+  "base_domain": "tpgtelecom.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.tpgi.com.au",
+      "ns2.tpgi.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 100,
+        "hostname": "asav.tpgtelecom.com.au",
+        "addresses": [
+          "27.32.28.130"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com",
+      "asav.tpgtelecom.com.au: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.tpgtelecom.com.au include:au._netblocks.mimecast.com ip4:119.11.1.10 ip4:27.33.19.2 include:spf.protection.outlook.com include:aspmx.pardot.com include:spf.bananatag.com include:_spf.salesforce.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "119.11.1.10",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "27.33.19.2",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.tpgtelecom.com.au",
+          "record": "v=spf1 ip4:27.32.28.36 ip4:27.32.28.37 ip4:27.32.28.38 ip4:27.32.28.52 ip4:27.32.28.53 ip4:27.32.28.54 ip4:27.32.28.40 ip4:27.32.28.41 ip4:27.32.28.42 ip4:27.32.28.56 ip4:27.32.28.57 ip4:27.32.28.58 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "27.32.28.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.37",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.38",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.52",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.54",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.40",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.41",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.42",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.56",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.57",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.32.28.58",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "au._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:103.13.69.0/24 ip4:124.47.150.0/24 ip4:124.47.189.0/24 ip4:103.96.23.0/24 ip4:103.96.21.0/24 ip4:180.189.28.0/24 ip4:216.145.217.0/24 ip4:103.96.22.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.13.69.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.150.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.189.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.23.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.189.28.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.145.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.22.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.bananatag.com",
+          "record": "v=spf1 ip4:23.251.237.159/32 ip4:23.251.237.160/29 ip4:23.251.237.168/30 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "23.251.237.159/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.160/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.237.168/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

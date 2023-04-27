@@ -1,0 +1,118 @@
+{
+  "domain": "graphicpkg.com",
+  "base_domain": "graphicpkg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.graphicpkg.com",
+      "ns1.graphicpkg.com",
+      "ns3.graphicpkg.com",
+      "ns4.graphicpkg.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.graphicpkg.iphmx.com",
+        "addresses": [
+          "68.232.135.180",
+          "68.232.141.50"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.graphicpkg.iphmx.com",
+        "addresses": [
+          "68.232.135.180",
+          "68.232.141.50"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.graphicpkg.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.graphicpkg.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.graphicpkg.iphmx.com include:spf.protection.outlook.com include:aspmx.pardot.com include:authsmtp.com include:spf.mailjet.com include:successfactors.com include:mercurygate.net ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 14/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 14
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:defender2ironport@graphicpkg.com; ruf=mailto:defender2ironport@graphicpkg.com; fo=1;",
+    "valid": true,
+    "location": "graphicpkg.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "defender2ironport@graphicpkg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "defender2ironport@graphicpkg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

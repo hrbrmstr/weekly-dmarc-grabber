@@ -1,0 +1,107 @@
+{
+  "domain": "bet-at-home.com",
+  "base_domain": "bet-at-home.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns4.ultradns.org",
+      "pdns5.ultradns.info",
+      "pdns2.ultradns.net",
+      "pdns1.ultradns.net",
+      "pdns6.ultradns.co.uk",
+      "pdns3.ultradns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.bet-at-home.com",
+        "addresses": [
+          "185.91.3.2"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.bet-at-home.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:80.243.162.160/27 ip4:80.243.175.192/26 ip4:185.91.0.0/22 include:emarsys.net include:emsmtp.com include:mailing.eqs.com include:comm100.com include:spf.ippx.com include:mail.zendesk.com ~all",
+    "valid": false,
+    "dns_void_lookups": 3,
+    "warnings": [],
+    "error": "Parsing the SPF record has 3/2 maximum void DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; adkim=s; aspf=r; rua=mailto:dmarc-feedback@bet-at-home.com; ruf=mailto:dmarc-forensic@bet-at-home.com; rf=afrf; pct=100;",
+    "valid": true,
+    "location": "bet-at-home.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-feedback@bet-at-home.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensic@bet-at-home.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

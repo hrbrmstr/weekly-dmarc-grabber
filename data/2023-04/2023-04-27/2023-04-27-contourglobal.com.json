@@ -1,0 +1,301 @@
+{
+  "domain": "contourglobal.com",
+  "base_domain": "contourglobal.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns20.domaincontrol.com",
+      "ns19.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc147-99.eu.iphmx.com",
+        "addresses": [
+          "207.54.68.161",
+          "207.54.69.21"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc147-99.eu.iphmx.com",
+        "addresses": [
+          "207.54.68.161",
+          "207.54.69.21"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc147-99.eu.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mx2.hc147-99.eu.iphmx.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:198.37.158.22 ip4:198.37.145.247 ip4:20.119.174.191 a:esg.contourglobal.com a:esg-2.contourglobal.com include:spf.protection.outlook.com include:clientspf.backstopsolutions.com include:_spf.mxhero.com -all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "198.37.158.22",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.37.145.247",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "20.119.174.191",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "13.68.141.150",
+          "mechanism": "a"
+        },
+        {
+          "value": "65.52.22.183",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "clientspf.backstopsolutions.com",
+          "record": "v=spf1 ip4:216.34.183.128/25 ip4:64.27.172.242 ip4:54.76.209.80 ip4:54.73.221.237 ip4:54.147.48.102 ip4:165.117.231.243 ip4:3.131.113.182 ip4:18.190.163.1 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.34.183.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.27.172.242",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.76.209.80",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.73.221.237",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.147.48.102",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.117.231.243",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.131.113.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.190.163.1",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.mxhero.com",
+          "record": "v=spf1 ip4:54.208.111.28 ip4:54.236.184.32 ip4:54.165.252.128 ip4:54.165.253.193 ip4:107.23.152.206 ip4:54.208.51.35 ip4:3.211.77.148 ip4:52.22.51.97 ip4:54.209.222.83 ip4:13.92.100.142 ?all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.208.111.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.236.184.32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.165.252.128",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.165.253.193",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "107.23.152.206",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.208.51.35",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.211.77.148",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.22.51.97",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.209.222.83",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.92.100.142",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; ruf=mailto:dmarcadmin@contourglobal.com",
+    "valid": true,
+    "location": "contourglobal.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarcadmin@contourglobal.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

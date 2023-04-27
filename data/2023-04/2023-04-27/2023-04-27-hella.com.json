@@ -1,0 +1,157 @@
+{
+  "domain": "hella.com",
+  "base_domain": "hella.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pns.dtag.de",
+      "secondary006.dtag.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail4.hella.com",
+        "addresses": [
+          "209.206.38.65"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mail5.hella.com",
+        "addresses": [
+          "209.206.38.67"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mail6.hella.com",
+        "addresses": [
+          "202.136.208.70"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail4.hella.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mail5.hella.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer",
+      "mail6.hella.com: SMTP error code Connection unexpectedly closed: [Errno 104] Connection reset by peer"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:209.206.38.65 ip4:209.206.38.66 ip4:209.206.38.67 ip4:209.206.38.68 ip4:202.136.208.70 ip4:40.68.43.190 ip4:40.113.5.15 ip4:208.185.229.40/29 ip4:148.59.107.25 ip4:148.59.109.25 a:les1.mx.csod.com a:les2.mx.csod.com mx:incony.de include:spf-inm.eqs-service.com mx:tds-sharedservices.de -all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "209.206.38.65",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.206.38.66",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.206.38.67",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.206.38.68",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.136.208.70",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.68.43.190",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.113.5.15",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "208.185.229.40/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.59.107.25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "148.59.109.25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "18.168.51.200",
+          "mechanism": "a"
+        },
+        {
+          "value": "18.168.140.58",
+          "mechanism": "a"
+        },
+        {
+          "value": "proxy.incony.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail.incony.de",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-inm.eqs-service.com",
+          "record": "v=spf1 ip4:212.18.19.53 ip4:212.18.19.58 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.19.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.19.58",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

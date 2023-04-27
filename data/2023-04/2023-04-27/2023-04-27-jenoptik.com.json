@@ -1,0 +1,106 @@
+{
+  "domain": "jenoptik.com",
+  "base_domain": "jenoptik.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.jenoptik.com",
+      "ns2.jenoptik.com",
+      "ns16.domserver.de",
+      "ns17.domserver.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mailgw1.jenoptik.com",
+        "addresses": [
+          "185.116.38.128"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mailgw2.jenoptik.com",
+        "addresses": [
+          "185.116.38.129"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mailgw1.jenoptik.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mailgw2.jenoptik.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:185.116.37.34 include:spf.protection.outlook.com include:spf.myconnectwise.net include:mail.zendesk.com include:mailing.eqs.com include:_spf-dc55.sapsf.eu include:_netblocks.mimecast.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 14/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 14
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; pct=100; rua=mailto:re+zejtmduvhwx@dmarc.postmarkapp.com; sp=none; aspf=r;",
+    "valid": true,
+    "location": "jenoptik.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "re+zejtmduvhwx@dmarc.postmarkapp.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

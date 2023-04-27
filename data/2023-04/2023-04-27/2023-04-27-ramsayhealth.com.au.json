@@ -1,0 +1,315 @@
+{
+  "domain": "ramsayhealth.com.au",
+  "base_domain": "ramsayhealth.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a7-67.akam.net",
+      "a3-65.akam.net",
+      "a10-64.akam.net",
+      "a1-161.akam.net",
+      "a4-66.akam.net",
+      "a8-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.122",
+          "103.13.69.26",
+          "124.47.150.122",
+          "124.47.150.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:au._netblocks.mimecast.com include:spf.protection.outlook.com a:smtp.sendgrid.net ip4:103.230.80.10 -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "107.20.8.136",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.116",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.117",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.145",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.18",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.53",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.115.79",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.149",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.53",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.58",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.82",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.95",
+          "mechanism": "a"
+        },
+        {
+          "value": "167.89.123.97",
+          "mechanism": "a"
+        },
+        {
+          "value": "34.237.250.201",
+          "mechanism": "a"
+        },
+        {
+          "value": "52.0.142.242",
+          "mechanism": "a"
+        },
+        {
+          "value": "52.204.68.213",
+          "mechanism": "a"
+        },
+        {
+          "value": "54.146.218.5",
+          "mechanism": "a"
+        },
+        {
+          "value": "54.157.14.6",
+          "mechanism": "a"
+        },
+        {
+          "value": "103.230.80.10",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "au._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:103.13.69.0/24 ip4:124.47.150.0/24 ip4:124.47.189.0/24 ip4:103.96.23.0/24 ip4:103.96.21.0/24 ip4:180.189.28.0/24 ip4:216.145.217.0/24 ip4:103.96.22.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.13.69.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.150.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "124.47.189.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.23.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "180.189.28.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.145.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.96.22.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:0ab4582d4969955@rep.dmarcanalyzer.com; ruf=mailto:0ab4582d4969955@for.dmarcanalyzer.com; pct=100; fo=1;",
+    "valid": true,
+    "location": "ramsayhealth.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0ab4582d4969955@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0ab4582d4969955@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

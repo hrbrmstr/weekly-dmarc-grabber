@@ -1,0 +1,142 @@
+{
+  "domain": "scottish-southern.co.uk",
+  "base_domain": "scottish-southern.co.uk",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4-08.azure-dns.info",
+      "ns2-08.azure-dns.net",
+      "ns1-08.azure-dns.com",
+      "ns3-08.azure-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx07-002adc01.pphosted.com",
+        "addresses": [
+          "185.132.180.52"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx08-002adc01.pphosted.com",
+        "addresses": [
+          "185.183.28.19"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx07-002adc01.pphosted.com",
+      "SSL/TLS is not supported on mx08-002adc01.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:161.12.6.249/32 ip4:161.12.7.249/32 ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx07-002adc01.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx08-002adc01.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "161.12.6.249/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "161.12.7.249/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "scottish-southern.co.uk",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

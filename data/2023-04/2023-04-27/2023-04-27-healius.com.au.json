@@ -1,0 +1,454 @@
+{
+  "domain": "healius.com.au",
+  "base_domain": "healius.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3-03.azure-dns.org",
+      "ns2-03.azure-dns.net",
+      "ns1-03.azure-dns.com",
+      "ns4-03.azure-dns.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.126"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0037a201.gslb.pphosted.com",
+        "addresses": [
+          "185.183.31.126"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0037a201.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0037a201.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0037a201.pphosted.com include:_spf.createsend.com include:servers.mcsv.net include:cmail19.com include:spf.surveymonkey.com include:mktomail.com -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0037a201.pphosted.com",
+          "record": "v=spf1 ip4:205.220.184.94 ip4:185.183.31.126",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.184.94",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.31.126",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.createsend.com",
+          "record": "v=spf1 ip4:103.28.42.0/24 ip4:146.88.28.0/24 ip4:163.47.180.0/22 ip4:203.55.21.0/24 ip4:204.75.142.0/24 ip4:27.126.146.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.28.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.88.28.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "163.47.180.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.55.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.75.142.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.126.146.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "servers.mcsv.net",
+          "record": "v=spf1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.8.0/21 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "cmail19.com",
+          "record": "v=spf1 ip4:103.28.42.0/24 ip4:27.126.146.0/24 ip4:146.88.28.0/24 ip4:163.47.180.0/22 ip4:203.55.21.0/24 ip4:204.75.142.0/24 include:aspmx.sailthru.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "103.28.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.126.146.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.88.28.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "163.47.180.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.55.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.75.142.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "aspmx.sailthru.com",
+                "record": "v=spf1 ip4:173.228.155.0/24 ip4:204.153.121.0/24 ip4:192.64.236.0/24 ip4:192.64.237.0/24 ip4:192.64.238.0/24 ip4:163.47.180.0/23 ip4:162.208.119.181 ip4:34.202.239.6 ip4:54.221.227.204 ip4:18.234.1.244 ip4:44.209.42.157 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "173.228.155.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.153.121.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.64.236.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.64.237.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.64.238.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "163.47.180.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "162.208.119.181",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.202.239.6",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.221.227.204",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.234.1.244",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.209.42.157",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.surveymonkey.com",
+          "record": "v=spf1 ip4:66.179.50.160/27 ip4:67.217.237.192/27 ip4:75.98.93.0/24 ip4:173.226.199.130 ip4:64.74.209.0/24 ip4:64.191.16.0/24 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "66.179.50.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.217.237.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "75.98.93.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "173.226.199.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.74.209.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.191.16.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mktomail.com",
+          "record": "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.15.212.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.185.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.154.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.32.243.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "94.236.119.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.188.97.188/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.28.196.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.28.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.237.104.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.172.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.248.173.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc_rua@healius.com.au,mailto:dmarc_agg@vali.email; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc_ruf@healius.com.au",
+    "valid": true,
+    "location": "healius.com.au",
+    "warnings": [
+      "Some DMARC reporters might not send to more than two rua URIs"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@healius.com.au",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@healius.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

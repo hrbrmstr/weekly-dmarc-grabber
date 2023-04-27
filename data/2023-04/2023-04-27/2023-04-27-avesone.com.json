@@ -1,0 +1,371 @@
+{
+  "domain": "avesone.com",
+  "base_domain": "avesone.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "anuj.ns.cloudflare.com",
+      "ashley.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail1.donotspam.de",
+        "addresses": [
+          "212.18.1.34"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mail2.donotspam.de",
+        "addresses": [
+          "212.18.21.66"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail3.donotspam.de",
+        "addresses": [
+          "212.18.1.35"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 100,
+        "hostname": "mail4.donotspam.de",
+        "addresses": [
+          "212.18.21.67"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mail1.donotspam.de",
+      "SSL/TLS is not supported on mail1.donotspam.de",
+      "STARTTLS is not supported on mail2.donotspam.de",
+      "SSL/TLS is not supported on mail2.donotspam.de",
+      "STARTTLS is not supported on mail3.donotspam.de",
+      "SSL/TLS is not supported on mail3.donotspam.de",
+      "STARTTLS is not supported on mail4.donotspam.de",
+      "SSL/TLS is not supported on mail4.donotspam.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:eu.mailgun.org mx a include:_spf.donotspam.de include:mailing.eqs.com  include:spf.hosting.de ip4:185.11.139.55 ip4:213.160.71.154 ip4:213.160.71.150 a:mail.ch2-ag.de ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail1.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail2.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail3.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mail4.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "213.160.71.154",
+          "mechanism": "a"
+        },
+        {
+          "value": "185.11.139.55",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.160.71.154",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "213.160.71.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "93.240.100.252",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "eu.mailgun.org",
+          "record": "v=spf1 include:_spf.eu.mailgun.org ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.eu.mailgun.org",
+                "record": "v=spf1 ip4:141.193.32.0/23 ip4:159.135.140.80/29 ip4:159.135.132.128/25 ip4:161.38.204.0/22 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ip4:143.55.236.0/22 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "141.193.32.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.140.80/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.132.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.204.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.donotspam.de",
+          "record": "v=spf1 ip4:212.18.1.32/27 ip4:212.18.21.64/27 ip4:212.18.10.96/27 ip4:62.245.156.160/27 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "212.18.1.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.21.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.18.10.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.245.156.160/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mailing.eqs.com",
+          "record": "v=spf1 include:spf.mailjet.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.mailjet.com",
+                "record": "v=spf1 ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.189.236.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.211.120.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.250.236.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.hosting.de",
+          "record": "v=spf1 ip4:134.0.28.8 ip4:134.0.28.9 ip4:134.0.28.11 ip4:134.0.28.12 ip4:95.129.51.164 ip4:95.129.51.170 ip4:95.129.51.220 ip4:213.160.72.82 ip4:185.11.139.55 ip6:2a03:2900:1:a::8 ip6:2a03:2900:1:a::9 ip6:2a03:2900:1:a::a ip6:2a03:2900:1:a::b ip6:2a03:2900:1:1::6 ip6:2a03:2900:1:1::a ip6:2a03:2900:1:1::b ip6:2a00:17d8:100::261 ip6:2a03:2900:200::101 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "134.0.28.8",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.0.28.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.0.28.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.0.28.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "95.129.51.164",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "95.129.51.170",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "95.129.51.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.160.72.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.11.139.55",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a03:2900:1:a::8",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:a::9",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:a::a",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:a::b",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:1::6",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:1::a",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:1:1::b",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:17d8:100::261",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a03:2900:200::101",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
