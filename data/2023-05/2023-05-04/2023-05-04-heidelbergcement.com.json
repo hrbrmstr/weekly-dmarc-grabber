@@ -1,0 +1,120 @@
+{
+  "domain": "heidelbergcement.com",
+  "base_domain": "heidelbergcement.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.heidelbergcement.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.139.215",
+          "68.232.139.216",
+          "68.232.150.131",
+          "68.232.150.173"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.heidelbergcement.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.139.215",
+          "68.232.139.216",
+          "68.232.150.131",
+          "68.232.150.173"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.heidelbergcement.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.heidelbergcement.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:62.180.140.204/32 ip4:199.87.118.201/32 ip4:203.208.238.73/32 ip4:68.232.150.131/32 ip4:68.232.150.173/32 ip4:68.232.139.215/32 ip4:68.232.139.216/32 include:spf.protection.outlook.com include:spf.de.umantis.com include:spf.afas.online include:aditrocloud.com include:spf.flexmail.eu include:spf.app.jaggaer.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:dmarc_agg@vali.email; ruf=mailto:dmarc-ruf@heidelbergcement.com",
+    "valid": true,
+    "location": "heidelbergcement.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-ruf@heidelbergcement.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

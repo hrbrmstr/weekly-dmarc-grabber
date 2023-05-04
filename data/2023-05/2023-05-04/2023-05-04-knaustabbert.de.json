@@ -1,0 +1,44 @@
+{
+  "domain": "knaustabbert.de",
+  "base_domain": "knaustabbert.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "b.ns14.net",
+      "c.ns14.net",
+      "a.ns14.net",
+      "d.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.knaustabbert.de",
+        "addresses": [
+          "185.210.101.4"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.knaustabbert.de: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a mx ip4:62.156.182.243/32 ip4:84.200.227.130/32 ip4:84.200.227.153/32 ip4:212.18.19.53/32 ip4:212.18.19.58/32 include:mailing.eqs.com include:spf-inm.eqs-service.com include:_spf.firebasemail.com include:spf.protection.outlook.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 13/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 13
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

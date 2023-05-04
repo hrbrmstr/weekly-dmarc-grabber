@@ -1,0 +1,85 @@
+{
+  "domain": "keisei.co.jp",
+  "base_domain": "keisei.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.keisei.co.jp",
+        "addresses": [
+          "202.233.33.62"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.92",
+          "210.130.202.93",
+          "210.130.202.96",
+          "210.130.202.99"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mail.keisei.co.jp: Connection timed out",
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:202.233.3.192/27 +ip4:27.34.140.191 +ip4:202.233.33.62 +ip4:133.144.73.20 +ip4:133.144.73.26 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.233.3.192/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "27.34.140.191",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.233.33.62",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.144.73.20",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "133.144.73.26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

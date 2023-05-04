@@ -1,0 +1,148 @@
+{
+  "domain": "nikon.co.jp",
+  "base_domain": "nikon.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-a.iij.ad.jp",
+      "dns11jp.nikon.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "als1jp.nikon.com",
+        "addresses": [
+          "223.223.167.70"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "als2jp.nikon.com",
+        "addresses": [
+          "223.223.167.71"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "als3jp.nikon.com",
+        "addresses": [
+          "223.223.166.90"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "als4jp.nikon.com",
+        "addresses": [
+          "223.223.166.91"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on als1jp.nikon.com",
+      "SSL/TLS is not supported on als2jp.nikon.com",
+      "SSL/TLS is not supported on als3jp.nikon.com",
+      "SSL/TLS is not supported on als4jp.nikon.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ?all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:nikoncojp.dmarc.rua@nikon.co.jp, mailto:nikon00001-ra@dmarc25.jp; ruf=mailto:nikoncojp.dmarc.ruf@nikon.co.jp",
+    "valid": true,
+    "location": "nikon.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "nikoncojp.dmarc.rua@nikon.co.jp",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "nikon00001-ra@dmarc25.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "nikoncojp.dmarc.ruf@nikon.co.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,1309 @@
+{
+  "domain": "merckgroup.com",
+  "base_domain": "merckgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.brandshelter.com",
+      "ns02.brandshelter.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-005f4802.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.243"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-005f4802.gslb.pphosted.com",
+        "addresses": [
+          "205.220.184.35"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-005f4802.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-005f4802.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:cjzkgd0qut.powerspf.com ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "cjzkgd0qut.powerspf.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 ip4:52.100.0.0/14 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:149.72.0.0/16 ip4:159.183.0.0/16 ip4:54.240.0.0/17 ip4:104.47.0.0/17 ip4:167.89.0.0/17 ip4:168.245.0.0/17 ip4:192.28.128.0/18 ip4:198.2.128.0/18 ip4:23.251.224.0/19 ip4:50.31.32.0/19 ip4:76.223.128.0/19 ip4:198.71.224.0/19 include:_s1.cjzkgd0qut.powerspf.com -all",
+          "dns_lookups": 8,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.72.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "159.183.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.89.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "168.245.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.28.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "50.31.32.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.128.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.71.224.0/19",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_s1.cjzkgd0qut.powerspf.com",
+                "record": "v=spf1 ip4:23.249.208.0/20 ip4:69.72.32.0/20 ip4:69.169.224.0/20 ip4:76.223.176.0/20 ip4:143.55.224.0/20 ip4:159.112.240.0/20 ip4:159.135.224.0/20 ip4:161.38.192.0/20 ip4:192.254.112.0/20 ip4:198.37.144.0/20 ip4:198.244.48.0/20 ip4:205.201.128.0/20 ip4:208.117.48.0/20 ip4:87.253.232.0/21 ip4:94.199.88.0/21 ip4:98.97.248.0/21 ip4:148.105.8.0/21 ip4:198.21.0.0/21 ip4:52.82.172.0/22 ip4:103.196.252.0/22 ip4:103.237.104.0/22 ip4:139.60.152.0/22 include:_s2.cjzkgd0qut.powerspf.com -all",
+                "dns_lookups": 6,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "23.249.208.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.72.32.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "69.169.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "76.223.176.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.112.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.135.224.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "161.38.192.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.254.112.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.37.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.244.48.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.201.128.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.117.48.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.253.232.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "94.199.88.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "98.97.248.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.105.8.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.21.0.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.82.172.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.196.252.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.237.104.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "139.60.152.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "_s2.cjzkgd0qut.powerspf.com",
+                      "record": "v=spf1 ip4:162.247.216.0/22 ip4:166.78.68.0/22 ip4:185.28.196.0/22 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.215.216.0/22 ip4:185.250.236.0/22 ip4:199.15.212.0/22 ip4:199.127.232.0/22 ip4:199.255.192.0/22 ip4:207.126.136.0/22 ip4:208.74.204.0/22 ip4:23.253.182.0/23 ip4:46.19.168.0/23 ip4:82.135.18.0/23 ip4:104.130.122.0/23 ip4:119.254.62.0/23 ip4:130.248.172.0/23 ip4:141.193.32.0/23 ip4:173.201.192.0/23 ip4:185.93.140.0/23 ip4:192.237.158.0/23 include:_s3.cjzkgd0qut.powerspf.com -all",
+                      "dns_lookups": 5,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "162.247.216.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "166.78.68.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.28.196.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.189.236.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.211.120.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.215.216.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.250.236.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "199.15.212.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "199.127.232.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "199.255.192.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "207.126.136.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "208.74.204.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "23.253.182.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "46.19.168.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "82.135.18.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "104.130.122.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "119.254.62.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "130.248.172.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "141.193.32.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "173.201.192.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "185.93.140.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "192.237.158.0/23",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [
+                          {
+                            "domain": "_s3.cjzkgd0qut.powerspf.com",
+                            "record": "v=spf1 ip4:198.61.254.0/23 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ip4:12.129.29.0/24 ip4:50.31.205.0/24 ip4:64.69.212.0/24 ip4:68.178.213.0/24 ip4:68.178.252.0/24 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:72.167.168.0/24 ip4:72.167.172.0/24 ip4:72.167.218.0/24 ip4:72.167.234.0/24 ip4:72.167.238.0/24 ip4:92.204.71.0/24 ip4:92.204.81.0/24 ip4:97.74.135.0/24 ip4:109.234.127.0/24 ip4:119.254.59.0/24 ip4:132.148.124.0/24 include:_s4.cjzkgd0qut.powerspf.com -all",
+                            "dns_lookups": 4,
+                            "dns_void_lookups": 0,
+                            "parsed": {
+                              "pass": [
+                                {
+                                  "value": "198.61.254.0/23",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "223.165.118.0/23",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "223.165.120.0/23",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "12.129.29.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "50.31.205.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "64.69.212.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "68.178.213.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "68.178.252.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.3.185.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.32.154.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.32.217.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.32.243.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.167.168.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.167.172.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.167.218.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.167.234.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "72.167.238.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "92.204.71.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "92.204.81.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "97.74.135.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "109.234.127.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "119.254.59.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "132.148.124.0/24",
+                                  "mechanism": "ip4"
+                                }
+                              ],
+                              "neutral": [],
+                              "softfail": [],
+                              "fail": [],
+                              "include": [
+                                {
+                                  "domain": "_s4.cjzkgd0qut.powerspf.com",
+                                  "record": "v=spf1 ip4:146.20.113.0/24 ip4:146.20.191.0/24 ip4:147.160.158.0/24 ip4:182.50.132.0/24 ip4:184.168.128.0/24 ip4:184.168.131.0/24 ip4:184.168.200.0/24 ip4:184.168.224.0/24 ip4:185.98.184.0/24 ip4:188.121.52.0/24 ip4:207.8.97.0/24 ip4:208.109.80.0/24 ip4:209.61.151.0/24 ip4:216.69.139.0/24 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:159.135.132.128/25 ip4:62.245.148.0/26 ip4:80.82.206.0/26 ip4:94.236.119.0/26 ip4:104.245.209.192/26 ip4:146.20.112.0/26 include:_s5.cjzkgd0qut.powerspf.com -all",
+                                  "dns_lookups": 3,
+                                  "dns_void_lookups": 0,
+                                  "parsed": {
+                                    "pass": [
+                                      {
+                                        "value": "146.20.113.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "146.20.191.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "147.160.158.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "182.50.132.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "184.168.128.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "184.168.131.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "184.168.200.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "184.168.224.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "185.98.184.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "188.121.52.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "207.8.97.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "208.109.80.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "209.61.151.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "216.69.139.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "223.165.113.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "223.165.115.0/24",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "159.135.132.128/25",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "62.245.148.0/26",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "80.82.206.0/26",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "94.236.119.0/26",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "104.245.209.192/26",
+                                        "mechanism": "ip4"
+                                      },
+                                      {
+                                        "value": "146.20.112.0/26",
+                                        "mechanism": "ip4"
+                                      }
+                                    ],
+                                    "neutral": [],
+                                    "softfail": [],
+                                    "fail": [],
+                                    "include": [
+                                      {
+                                        "domain": "_s5.cjzkgd0qut.powerspf.com",
+                                        "record": "v=spf1 ip4:155.56.68.128/26 ip4:50.31.156.96/27 ip4:31.172.237.240/28 ip4:62.134.45.32/28 ip4:92.103.226.80/28 ip4:92.204.65.0/28 ip4:104.130.96.0/28 ip4:119.254.65.32/28 ip4:119.254.178.0/28 ip4:119.254.65.48/29 ip4:159.135.140.80/29 ip4:185.46.182.200/29 ip4:194.6.192.232/29 ip4:199.204.13.32/29 ip4:85.238.136.176/30 ip4:155.56.66.96/30 ip4:134.213.38.184/31 ip4:155.56.66.102/31 ip4:155.56.221.14/31 ip4:155.56.222.26/31 ip4:185.46.182.208/31 include:_s6.cjzkgd0qut.powerspf.com -all",
+                                        "dns_lookups": 2,
+                                        "dns_void_lookups": 0,
+                                        "parsed": {
+                                          "pass": [
+                                            {
+                                              "value": "155.56.68.128/26",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "50.31.156.96/27",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "31.172.237.240/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "62.134.45.32/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "92.103.226.80/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "92.204.65.0/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "104.130.96.0/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "119.254.65.32/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "119.254.178.0/28",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "119.254.65.48/29",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "159.135.140.80/29",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "185.46.182.200/29",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "194.6.192.232/29",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "199.204.13.32/29",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "85.238.136.176/30",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "155.56.66.96/30",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "134.213.38.184/31",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "155.56.66.102/31",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "155.56.221.14/31",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "155.56.222.26/31",
+                                              "mechanism": "ip4"
+                                            },
+                                            {
+                                              "value": "185.46.182.208/31",
+                                              "mechanism": "ip4"
+                                            }
+                                          ],
+                                          "neutral": [],
+                                          "softfail": [],
+                                          "fail": [],
+                                          "include": [
+                                            {
+                                              "domain": "_s6.cjzkgd0qut.powerspf.com",
+                                              "record": "v=spf1 ip4:199.91.139.22/31 ip4:199.91.141.22/31 ip4:3.11.129.102 ip4:3.64.98.8 ip4:3.65.223.48 ip4:3.96.249.213 ip4:3.121.133.156 ip4:3.209.231.65 ip4:3.248.148.18 ip4:5.145.141.152 ip4:14.247.215.92 ip4:15.200.21.50 ip4:15.200.44.248 ip4:15.200.201.185 ip4:15.223.142.138 ip4:18.132.189.127 ip4:18.197.43.76 ip4:18.208.91.46 ip4:34.195.3.229 ip4:34.206.143.108 ip4:34.242.156.53 ip4:34.251.63.7 ip4:35.157.192.122 ip4:35.182.195.41 ip4:37.98.232.2 ip4:37.98.232.12 a:_sa.cjzkgd0qut.powerspf.com -all",
+                                              "dns_lookups": 1,
+                                              "dns_void_lookups": 0,
+                                              "parsed": {
+                                                "pass": [
+                                                  {
+                                                    "value": "199.91.139.22/31",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "199.91.141.22/31",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.11.129.102",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.64.98.8",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.65.223.48",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.96.249.213",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.121.133.156",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.209.231.65",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "3.248.148.18",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "5.145.141.152",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "14.247.215.92",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "15.200.21.50",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "15.200.44.248",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "15.200.201.185",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "15.223.142.138",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "18.132.189.127",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "18.197.43.76",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "18.208.91.46",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "34.195.3.229",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "34.206.143.108",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "34.242.156.53",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "34.251.63.7",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "35.157.192.122",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "35.182.195.41",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "37.98.232.2",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "37.98.232.12",
+                                                    "mechanism": "ip4"
+                                                  },
+                                                  {
+                                                    "value": "104.168.158.126",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "107.20.91.250",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "108.128.240.139",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "130.214.193.78",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "130.214.193.83",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "130.214.193.85",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "130.214.193.93",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "134.213.43.128",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "138.1.67.161",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "142.11.205.8",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.0.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.0.31",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.1.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.1.31",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.2.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "148.139.3.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "149.96.13.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "149.96.14.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "153.126.188.13",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.220.141",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.220.142",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.221.13",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.221.16",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.66.104",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "155.56.66.106",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "160.1.62.192",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "162.55.170.215",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "165.193.56.42",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "174.143.100.191",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "174.143.99.125",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.144.28.81",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.144.29.108",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.183.29.243",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.46.182.1",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.76.230.25",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "185.97.22.3",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "192.69.83.25",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "194.116.128.11",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "195.234.228.220",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "198.101.171.18",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.108.17.100",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.108.17.115",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.136.26",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.136.28",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.137.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.137.26",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.139.145",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.139.24",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.140.26",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.140.28",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.141.145",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "199.91.141.24",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "204.92.22.38",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "205.220.184.35",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "206.16.62.8",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "208.131.143.219",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "210.140.73.163",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "211.255.32.226",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "211.43.203.158",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "213.95.87.62",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "37.188.97.188",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "37.98.232.26",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "37.98.234.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "37.98.235.2",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "46.243.56.31",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "50.112.215.85",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.16.38.44",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.16.49.62",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.16.75.109",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.16.75.118",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.22.249.69",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.222.62.51",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.222.73.120",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.222.73.83",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.222.75.85",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.222.89.228",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.24.113.83",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.4.156.8",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.50.129.119",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.57.26.63",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.58.159.50",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.61.91.9",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.64.32.126",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.65.244.27",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.80.1.243",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "52.80.13.198",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.168.173.8",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.174.209.165",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.186.193.102",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.70.255.16",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.79.0.4",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.85.129.207",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "54.93.104.220",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "66.244.67.50",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "66.45.118.65",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "67.192.139.33",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "67.192.157.83",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "78.129.151.55",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "81.20.87.22",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "81.20.94.76",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "84.14.115.99",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "84.14.175.234",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "87.246.118.35",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "87.246.118.38",
+                                                    "mechanism": "a"
+                                                  },
+                                                  {
+                                                    "value": "95.130.250.126",
+                                                    "mechanism": "a"
+                                                  }
+                                                ],
+                                                "neutral": [],
+                                                "softfail": [],
+                                                "fail": [],
+                                                "include": [],
+                                                "redirect": null,
+                                                "exp": null,
+                                                "all": "fail"
+                                              },
+                                              "warnings": []
+                                            }
+                                          ],
+                                          "redirect": null,
+                                          "exp": null,
+                                          "all": "fail"
+                                        },
+                                        "warnings": []
+                                      }
+                                    ],
+                                    "redirect": null,
+                                    "exp": null,
+                                    "all": "fail"
+                                  },
+                                  "warnings": []
+                                }
+                              ],
+                              "redirect": null,
+                              "exp": null,
+                              "all": "fail"
+                            },
+                            "warnings": []
+                          }
+                        ],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; fo=1; rua=mailto:b4wunsj437@rua.powerdmarc.com, mailto:dmarc-report@merckgroup.com; ruf=mailto:dmarc-report@merckgroup.com",
+    "valid": true,
+    "location": "merckgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "b4wunsj437@rua.powerdmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

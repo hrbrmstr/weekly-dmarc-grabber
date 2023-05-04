@@ -1,0 +1,70 @@
+{
+  "domain": "kubota.co.jp",
+  "base_domain": "kubota.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns4.dion.ne.jp",
+      "ns1.kubota.co.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 100,
+        "hostname": "mx3.kubota.co.jp",
+        "addresses": [
+          "133.253.112.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 200,
+        "hostname": "mx4.kubota.co.jp",
+        "addresses": [
+          "133.253.112.5"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx3.kubota.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1002)",
+      "mx4.kubota.co.jp: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1002)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:133.253.0.0/16 +ip4:211.15.175.0/26 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "133.253.0.0/16",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "211.15.175.0/26",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "Unrelated TXT records were discovered. These should be removed, as some receivers may not expect to find unrelated TXT records at _dmarc.kubota.co.jp\n\nv=spf1 +ip4:133.253.0.0/16 +ip4:211.15.175.0/26 ~all"
+  }
+}

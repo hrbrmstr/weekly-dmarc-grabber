@@ -1,0 +1,527 @@
+{
+  "domain": "shionogi.co.jp",
+  "base_domain": "shionogi.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns018-cjn3uos578svrvpd.c.d-53.jp",
+      "ns018-cjn3uos578svrvpd.c.d-53.net",
+      "ns018-cjn3uos578svrvpd.c.d-53.info"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.92",
+          "210.130.202.93",
+          "210.130.202.96",
+          "210.130.202.99"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.securemx.jp include:spf.protection.outlook.com ip4:202.32.151.64/27 ip4:202.214.8.160/27 include:spf-bma.mpme.jp include:spf.htdb.jp ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.32.151.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.214.8.160/27",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.securemx.jp",
+          "record": "v=spf1 ip4:210.130.202.128/29 ip4:210.130.202.48/29 ip4:210.130.202.152/29 ip4:210.130.202.160/28 ip6:2001:240:bb81::4:1000/119 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.130.202.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.48/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.152/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:240:bb81::4:1000/119",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-bma.mpme.jp",
+          "record": "v=spf1 ip4:106.186.67.0/24 ip4:106.186.92.192/26 ip4:125.29.57.64/26 ip4:106.185.82.0/23 ip4:106.185.84.0/23 ip4:106.185.96.0/22 ip4:106.185.100.0/23 ip4:18.180.53.0/24 ip4:106.184.19.0/26 ip4:165.100.253.1/32 ip4:52.196.174.242/32 ip4:3.114.39.0/32 ip4:35.72.225.0/25 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "106.186.67.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.186.92.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "125.29.57.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.185.82.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.185.84.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.185.96.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.185.100.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.180.53.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.184.19.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.100.253.1/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.196.174.242/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.114.39.0/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.72.225.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.htdb.jp",
+          "record": "v=spf1 include:spf10.htdb.jp include:spf20.htdb.jp include:spf30.htdb.jp ~all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf10.htdb.jp",
+                "record": "v=spf1 ip4:59.106.8.240/29 ip4:59.106.35.64/26 ip4:59.106.59.192/26 ip4:59.106.75.0/26 ip4:59.106.119.64/26 ip4:59.106.126.128/26 ip4:59.106.33.64/26 ip4:59.106.61.64/26 ip4:59.106.164.192/26 ip4:59.106.167.128/26 ip4:59.106.166.128/26 ip4:210.188.234.64/26 ip4:180.147.237.64/32 ip4:59.106.170.64/26 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "59.106.8.240/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.35.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.59.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.75.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.119.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.126.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.33.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.61.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.164.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.167.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.166.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.188.234.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.147.237.64/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.170.64/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf20.htdb.jp",
+                "record": "v=spf1 ip4:210.188.237.248/29 ip4:59.106.75.192/26 ip4:59.106.119.0/26 ip4:59.106.127.192/26 ip4:59.106.154.192/26 ip4:59.106.166.192/26 ip4:210.188.235.128/26 ip4:59.106.126.192/26 ip4:59.106.87.191/29 ip4:59.106.152.128/25 ip4:59.106.43.128/26 ip4:210.188.241.128/26 ip4:59.106.138.0/26 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "210.188.237.248/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.75.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.119.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.127.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.154.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.166.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.188.235.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.126.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.87.191/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.152.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.43.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.188.241.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.138.0/26",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf30.htdb.jp",
+                "record": "v=spf1 ip4:59.106.35.0/26 ip4:59.106.36.0/26 ip4:59.106.36.128/26 ip4:59.106.56.128/26 ip4:61.211.235.192/26 ip4:59.106.146.0/24 ip4:210.188.236.128/26 ip4:210.188.241.192/26 ip4:59.106.44.64/26 ip4:61.211.231.0/25 ip4:202.222.25.0/25 ip4:133.186.32.0/24 ip4:133.186.33.0/24 ip4:133.186.34.0/24 ip4:133.186.35.0/24 ip4:133.186.50.0/24 ip4:133.186.51.0/24 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "59.106.35.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.36.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.36.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.56.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.211.235.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.146.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.188.236.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.188.241.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.106.44.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.211.231.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.25.0/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.32.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.33.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.34.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.35.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.50.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "133.186.51.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-rua@report.securemx.jp",
+    "valid": true,
+    "location": "shionogi.co.jp",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-rua@report.securemx.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

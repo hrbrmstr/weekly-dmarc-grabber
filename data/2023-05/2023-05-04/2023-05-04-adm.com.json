@@ -1,0 +1,437 @@
+{
+  "domain": "adm.com",
+  "base_domain": "adm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dbru.br.ns.els-gms.att.net",
+      "dmtu.mt.ns.els-gms.att.net",
+      "dns1.admworld.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "adm-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.110",
+          "104.47.57.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on adm-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spfsub1.adm.com include:spfsub2.adm.com include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spfsub1.adm.com",
+          "record": "v=spf1 ip4:12.43.88.0/24 ip4:69.41.208.0/20 ip4:207.252.127.0/24 ip4:67.97.112.0/24 ip4:208.3.212.0/24 ip4:216.68.73.5 ip4:193.35.126.41 ip4:193.35.112.21 ip4:107.23.16.222 ip4:54.173.83.138 ip4:63.172.244.174 ip4:63.172.244.228 ip4:66.77.22.217 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "12.43.88.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.41.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.252.127.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.97.112.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.3.212.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.68.73.5",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.35.126.41",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.35.112.21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "107.23.16.222",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.173.83.138",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.172.244.174",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.172.244.228",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.77.22.217",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfsub2.adm.com",
+          "record": "v=spf1 ip4:63.240.136.0/24 ip4:66.77.22.2 ip4:216.52.51.93 ip4:54.149.235.22 ip4:52.11.232.206 ?include:mktomail.com include:wild.de include:spf.protection.outlook.com -all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "63.240.136.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.77.22.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.52.51.93",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.149.235.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.11.232.206",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "mktomail.com",
+                "record": "v=spf1 ip4:199.15.212.0/22 ip4:72.3.185.0/24 ip4:72.32.154.0/24 ip4:72.32.217.0/24 ip4:72.32.243.0/24 ip4:94.236.119.0/26 ip4:37.188.97.188/32 ip4:185.28.196.0/22 ip4:192.28.128.0/18 ip4:103.237.104.0/22 ip4:130.248.172.0/24 ip4:130.248.173.0/24 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.15.212.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "72.3.185.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "72.32.154.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "72.32.217.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "72.32.243.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "94.236.119.0/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "37.188.97.188/32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.28.196.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.28.128.0/18",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.237.104.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.248.172.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "130.248.173.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "wild.de",
+                "record": "v=spf1 ip4:194.49.48.0/24 ip4:213.95.13.133 ip4:213.95.13.132 ip4:10.0.16.103 ip4:10.0.16.104 ip4:10.0.16.108 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "194.49.48.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "213.95.13.133",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "213.95.13.132",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "10.0.16.103",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "10.0.16.104",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "10.0.16.108",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email;",
+    "valid": true,
+    "location": "adm.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "domain": "cgm.com",
+  "base_domain": "cgm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns2.teliko.net",
+      "dns1.teliko.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smxko10.cgm.com",
+        "addresses": [
+          "193.47.161.185"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "smxko11.cgm.com",
+        "addresses": [
+          "193.47.161.186"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "The reverse DNS of 193.47.161.185 is smxko10.compugroup.com, but the A/AAAA DNS records for smxko10.compugroup.com do not resolve to 193.47.161.185",
+      "smxko10.cgm.com: Connection timed out",
+      "The reverse DNS of 193.47.161.186 is smxko11.compugroup.com, but the A/AAAA DNS records for smxko11.compugroup.com do not resolve to 193.47.161.186",
+      "smxko11.cgm.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:193.47.161.177 ip4:193.47.161.188 ip4:185.39.255.179 ip4:193.47.161.71 ip4:185.9.12.101 ip4:185.39.254.134 ip4:193.218.9.101 ip4:192.34.66.23 ip4:193.47.161.183 ip4:193.47.161.178 ip4:193.47.161.69 include:spf.protection.outlook.com include:spf.emailsignatures365.com include:spf6294.smtpeter.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "193.47.161.177",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.47.161.188",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.39.255.179",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.47.161.71",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.9.12.101",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "185.39.254.134",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.218.9.101",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.34.66.23",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.47.161.183",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.47.161.178",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.47.161.69",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.emailsignatures365.com",
+          "record": "v=spf1 ip4:20.92.116.22 ip4:40.86.225.121 ip4:13.74.137.176 ip4:40.113.3.253 ip4:20.49.202.3 ip4:20.98.2.159 ip4:13.93.42.39 ip4:40.86.165.91 ip4:20.79.220.33 ip4:20.92.233.59 ip4:52.138.216.130 ip4:20.98.33.77 ip4:20.93.157.195 ip4:40.86.217.129 ip4:23.100.56.64 ip4:20.58.22.103 ip4:40.86.171.128 ip4:20.79.222.204 ip4:13.77.59.28 ip4:40.114.221.220 ip4:20.97.70.227 ip4:40.69.19.60 ip4:52.170.22.60 ip4:13.94.95.171 ip4:20.116.107.216 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "20.92.116.22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.86.225.121",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.74.137.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.113.3.253",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.49.202.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.98.2.159",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.93.42.39",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.86.165.91",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.79.220.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.92.233.59",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.138.216.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.98.33.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.93.157.195",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.86.217.129",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.100.56.64",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.58.22.103",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.86.171.128",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.79.222.204",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.77.59.28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.114.221.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.97.70.227",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.69.19.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.170.22.60",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.94.95.171",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.116.107.216",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf6294.smtpeter.com",
+          "record": "v=spf1 include:smtpeter.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "smtpeter.com",
+                "record": "v=spf1 ip6:2a03:e280:0:1::/64 ip4:145.255.128.0/21 ip4:185.131.24.0/22 ip4:81.171.16.67 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "2a03:e280:0:1::/64",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "145.255.128.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.131.24.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "81.171.16.67",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; sp=none ;pct=100 ;adkim=r; aspf=r; rua=mailto:dmarc_aggregate.groupit@cgm.com",
+    "valid": true,
+    "location": "cgm.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "sp": {
+        "value": "none ",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_aggregate.groupit@cgm.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

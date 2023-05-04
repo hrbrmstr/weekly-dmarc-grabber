@@ -1,0 +1,529 @@
+{
+  "domain": "ebay.com",
+  "base_domain": "ebay.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns3.p06.nsone.net",
+      "dns2.p06.nsone.net",
+      "ns04.ebaydns.com",
+      "ns02.ebaydns.com",
+      "ns01.ebaydns.com",
+      "dns4.p06.nsone.net",
+      "ns03.ebaydns.com",
+      "dns1.p06.nsone.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2186-24.iphmx.com",
+        "addresses": [
+          "216.71.152.175",
+          "216.71.155.88"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2186-24.iphmx.com",
+        "addresses": [
+          "216.71.152.175",
+          "216.71.155.88"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.hc2186-24.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.hc2186-24.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:c._spf.ebay.com include:p._spf.ebay.com include:p2._spf.ebay.com ~all",
+    "valid": true,
+    "dns_lookups": 10,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "c._spf.ebay.com",
+          "record": "v=spf1 ip4:205.201.137.229 ip4:66.135.215.0/24 ip4:66.211.184.0/23 ip4:66.135.222.1 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:66.135.202.0/27 ip4:216.113.172.0/25 ip4:216.113.160.0/24 ip4:216.113.175.0/24 ip4:148.105.8.0/21 include:ces._spf.ebay.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.201.137.229",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.135.215.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.211.184.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.135.222.1",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.201.128.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.2.128.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "66.135.202.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.113.172.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.113.160.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.113.175.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.105.8.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "ces._spf.ebay.com",
+                "record": "v=spf1 ip4:216.71.155.89 ip4:216.71.152.207 ip4:68.232.157.143 ip4:216.71.154.29 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.71.155.89",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.71.152.207",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "68.232.157.143",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.71.154.29",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "p._spf.ebay.com",
+          "record": "v=spf1 ip4:67.72.99.26 ip4:206.165.246.80/29 ip4:64.127.115.252 ip4:194.64.234.128/27 ip4:65.110.161.77 ip4:204.13.11.48/30 ip4:72.3.237.64/28 ip4:63.111.28.137 ip4:208.74.204.0/22 ip4:46.19.168.0/23 include:emarsys.net include:_spf.salesforce.com",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.72.99.26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "206.165.246.80/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.127.115.252",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.64.234.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "65.110.161.77",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.13.11.48/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.3.237.64/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.111.28.137",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.74.204.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.19.168.0/23",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "emarsys.net",
+                "record": "v=spf1 ip4:91.194.248.0/23 ip4:91.211.240.0/22 ip4:194.113.24.0/22 ip4:195.54.172.0/23 ip4:185.4.120.0/23 ip4:185.4.122.0/24 include:s.emarsys.net ~all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "91.194.248.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "91.211.240.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.113.24.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.54.172.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.4.120.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.4.122.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "s.emarsys.net",
+                      "record": "v=spf1 ip4:185.90.20.0/22 ip4:217.175.194.0/24 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "185.90.20.0/22",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "217.175.194.0/24",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "_spf.salesforce.com",
+                "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spf.mta.salesforce.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "p2._spf.ebay.com",
+          "record": "v=spf1 ip4:203.145.57.160/27 ip4:103.28.42.0/24 ip4:146.88.28.0/24 ip4:163.47.180.0/22 ip4:203.55.21.0/24 ip4:204.75.142.0/24 ip4:216.74.162.13 ip4:216.74.162.14 include:sendgrid.net",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "203.145.57.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.28.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.88.28.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "163.47.180.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.55.21.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.75.142.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.13",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.74.162.14",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "sendgrid.net",
+                "record": "v=spf1 ip4:167.89.0.0/17 ip4:208.117.48.0/20 ip4:50.31.32.0/19 ip4:198.37.144.0/20 ip4:198.21.0.0/21 ip4:192.254.112.0/20 ip4:168.245.0.0/17 ip4:149.72.0.0/16 ip4:159.183.0.0/16 include:ab.sendgrid.net ~all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "167.89.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.117.48.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.31.32.0/19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.37.144.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "198.21.0.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "192.254.112.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "168.245.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "149.72.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "159.183.0.0/16",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "ab.sendgrid.net",
+                      "record": "v=spf1 ip4:223.165.113.0/24 ip4:223.165.115.0/24 ip4:223.165.118.0/23 ip4:223.165.120.0/23 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "223.165.113.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.115.0/24",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.118.0/23",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "223.165.120.0/23",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:ebay@rua.agari.com,mailto:dmarc_agg@auth.returnpath.net; ruf=mailto:ebay@ruf.agari.com,mailto:dmarc_afrf@auth.returnpath.net; fo=1; rf=afrf; pct=100",
+    "valid": true,
+    "location": "ebay.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ebay@rua.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ebay@ruf.agari.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc_afrf@auth.returnpath.net",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
