@@ -1,0 +1,164 @@
+{
+  "domain": "assurant.com",
+  "base_domain": "assurant.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.assurant.com",
+      "ns5.assurant.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "atl0appcp002.assurant.com",
+        "addresses": [
+          "167.79.177.82"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "atl0appcp005.assurant.com",
+        "addresses": [
+          "167.79.177.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "atl0lppp002.etdbw.com",
+        "addresses": [
+          "167.79.177.14"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "msp0lppp001.etdbw.com",
+        "addresses": [
+          "167.79.190.14"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "msp0lppp002.etdbw.com",
+        "addresses": [
+          "167.79.190.15"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "ord3appcp001.assurant.com",
+        "addresses": [
+          "167.79.14.192"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "ord3appcp003.assurant.com",
+        "addresses": [
+          "167.79.14.195"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "atl0appcp002.assurant.com: Connection timed out",
+      "atl0appcp005.assurant.com: Connection timed out",
+      "SSL/TLS is not supported on atl0lppp002.etdbw.com",
+      "msp0lppp001.etdbw.com: Connection timed out",
+      "msp0lppp002.etdbw.com: Connection timed out",
+      "SSL/TLS is not supported on ord3appcp001.assurant.com",
+      "ord3appcp003.assurant.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:167.79.177.0/24 ip4:167.79.190.0/27 ip4:167.79.14.192/29 include:c._spf.assurant.com include:p._spf.assurant.com include:l._spf.assurant.com  include:docebosaas.com include:spf.protection.outlook.com include:aspmx.pardot.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=none;fo=1;rua=mailto:dmarc_rua@assurant.com;ruf=mailto:dmarc_ruf@assurant.com",
+    "valid": true,
+    "location": "assurant.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@assurant.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@assurant.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

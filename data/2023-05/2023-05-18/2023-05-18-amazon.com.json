@@ -1,0 +1,294 @@
+{
+  "domain": "amazon.com",
+  "base_domain": "amazon.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.amzndns.com",
+      "ns1.amzndns.net",
+      "ns2.amzndns.org",
+      "ns1.amzndns.com",
+      "ns1.amzndns.co.uk",
+      "ns2.amzndns.co.uk",
+      "ns1.amzndns.org",
+      "ns2.amzndns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "amazon-smtp.amazon.com",
+        "addresses": [
+          "44.238.46.144"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "amazon-smtp.amazon.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf1.amazon.com include:spf2.amazon.com include:amazonses.com -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf1.amazon.com",
+          "record": "v=spf1 ip4:207.171.160.0/19 ip4:87.238.80.0/21 ip4:72.21.192.0/19 ip4:194.154.193.192/27 ip4:194.7.41.152/28 ip4:212.123.28.40/32 ip4:203.81.17.0/24 ip4:178.236.10.128/26 ip4:52.94.124.0/28 ip4:99.78.197.208/28 ip4:52.119.213.144/28 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "207.171.160.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "87.238.80.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.21.192.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.154.193.192/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.7.41.152/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "212.123.28.40/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.81.17.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "178.236.10.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.94.124.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "99.78.197.208/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.119.213.144/28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.amazon.com",
+          "record": "v=spf1 ip4:176.32.105.0/24 ip4:176.32.127.0/24 ip4:106.50.16.0/28 ip4:205.251.233.32/32 ip4:205.251.233.36/32 ip4:72.21.217.142/32 ip4:52.95.48.152/29 ip4:52.95.49.88/29 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "176.32.105.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "176.32.127.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "106.50.16.0/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.251.233.32/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.251.233.36/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "72.21.217.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.95.48.152/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.95.49.88/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "amazonses.com",
+          "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 ip4:76.223.128.0/19 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.96.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.82.172.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.128.0/19",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:report@dmarc.amazon.com;ruf=mailto:report@dmarc.amazon.com",
+    "valid": true,
+    "location": "amazon.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "report@dmarc.amazon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "report@dmarc.amazon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

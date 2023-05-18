@@ -1,0 +1,140 @@
+{
+  "domain": "mtu.de",
+  "base_domain": "mtu.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a.ns14.net",
+      "c.ns14.net",
+      "d.ns14.net",
+      "b.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0-61.mtu.de",
+        "addresses": [
+          "91.217.214.168"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1-63.mtu.de",
+        "addresses": [
+          "91.217.214.169"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2-63.mtu.de",
+        "addresses": [
+          "91.217.214.186"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx0-61.mtu.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx1-63.mtu.de: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2-63.mtu.de: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:mx2-63.mtu.de a:mx0-61.mtu.de a:mx1-63.mtu.de -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "91.217.214.186",
+          "mechanism": "a"
+        },
+        {
+          "value": "91.217.214.168",
+          "mechanism": "a"
+        },
+        {
+          "value": "91.217.214.169",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; ruf=mailto:dmarc@mtu.de; pct=100; adkim=r; aspf=r",
+    "valid": true,
+    "location": "mtu.de",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@mtu.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

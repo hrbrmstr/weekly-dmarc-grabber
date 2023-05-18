@@ -1,0 +1,256 @@
+{
+  "domain": "ngk.co.jp",
+  "base_domain": "ngk.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns-c.iij.ad.jp",
+      "dns-b.iij.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx.securemx.jp",
+        "addresses": [
+          "210.130.202.92",
+          "210.130.202.93",
+          "210.130.202.96",
+          "210.130.202.99"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx.securemx.jp"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:40.74.86.255 include:spf.securemx.jp include:spf.ngk.co.jp include:spf2.ngk.co.jp include:spf.protection.outlook.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "40.74.86.255",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.securemx.jp",
+          "record": "v=spf1 ip4:210.130.202.128/29 ip4:210.130.202.48/29 ip4:210.130.202.152/29 ip4:210.130.202.160/28 ip6:2001:240:bb81::4:1000/119 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.130.202.128/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.48/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.152/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.202.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:240:bb81::4:1000/119",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.ngk.co.jp",
+          "record": "v=spf1 ip4:210.130.169.136 ip4:203.180.140.23 ip4:210.141.21.100 ip4:210.141.22.113 ip4:221.186.144.199 ip4:210.130.169.4 ip4:203.167.46.146 ip4:203.180.245.157 ip4:202.222.166.85 ip4:133.159.74.170/24 ip4:160.17.14.67 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.130.169.136",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.180.140.23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.141.21.100",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.141.22.113",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "221.186.144.199",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.130.169.4",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.167.46.146",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.180.245.157",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.222.166.85",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "133.159.74.170/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.17.14.67",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.ngk.co.jp",
+          "record": "v=spf1 ip4:52.193.131.61 ip4:3.113.174.73 ip4:18.178.252.182 ip4:203.180.136.190 ip4:210.141.21.99 ip4:210.141.22.118  -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.193.131.61",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.113.174.73",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.178.252.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.180.136.190",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.141.21.99",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.141.22.118",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "domain": "originenergy.com.au",
+  "base_domain": "originenergy.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-998.awsdns-60.net",
+      "ns-54.awsdns-06.com",
+      "ns-1747.awsdns-26.co.uk",
+      "ns-1282.awsdns-32.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "mx1.hc852-37.ap.iphmx.com",
+        "addresses": [
+          "207.54.75.104",
+          "207.54.83.145"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 0,
+        "hostname": "mx2.hc852-37.ap.iphmx.com",
+        "addresses": [
+          "207.54.75.104",
+          "207.54.83.145"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "STARTTLS is not supported on mx1.hc852-37.ap.iphmx.com",
+      "SSL/TLS is not supported on mx1.hc852-37.ap.iphmx.com",
+      "STARTTLS is not supported on mx2.hc852-37.ap.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc852-37.ap.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "originenergy.com.au does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_agg@dmarc.everest.email; ruf=mailto:dmarc_fr@dmarc.everest.email; fo=1; ri=3600; pct=100; rf=afrf",
+    "valid": true,
+    "location": "originenergy.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@dmarc.everest.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_fr@dmarc.everest.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

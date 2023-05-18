@@ -1,0 +1,210 @@
+{
+  "domain": "computershare.com",
+  "base_domain": "computershare.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns5.computershare.com",
+      "ns4.computershare.com",
+      "ns4-au.computershare.com",
+      "ns3-au.computershare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 15,
+        "hostname": "mxa-0012cb01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.153.112"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 15,
+        "hostname": "mxb-0012cb01.gslb.pphosted.com",
+        "addresses": [
+          "67.231.153.112"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0012cb01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0012cb01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0012cb01.pphosted.com include:spf-365inbound.computershare.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0012cb01.pphosted.com",
+          "record": "v=spf1 ip4:67.231.153.112 ip4:67.231.145.124",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.153.112",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.145.124",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-365inbound.computershare.com",
+          "record": "v=spf1 ip4:213.62.25.34 ip4:213.62.25.33 ip4:196.14.50.11 ip4:202.135.122.82 ip4:202.135.122.84 ip4:12.183.17.113 ip4:12.183.17.114 ip4:12.30.10.208 ip4:195.75.210.19 ip4:195.75.210.18 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.62.25.34",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.62.25.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "196.14.50.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.135.122.82",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "202.135.122.84",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.183.17.113",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.183.17.114",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "12.30.10.208",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "195.75.210.19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "195.75.210.18",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "computershare.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "domain": "rolls-royce.com",
+  "base_domain": "rolls-royce.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.bt.net",
+      "ns1.bt.net",
+      "ns2.bt.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.rolls-royce.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.90",
+          "68.232.133.91",
+          "68.232.133.92",
+          "68.232.133.93",
+          "68.232.139.195",
+          "68.232.139.196",
+          "68.232.139.208",
+          "68.232.139.209",
+          "68.232.139.210",
+          "68.232.139.211",
+          "68.232.139.212",
+          "68.232.139.213",
+          "68.232.150.108",
+          "68.232.150.127",
+          "68.232.150.128",
+          "68.232.150.129"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.rolls-royce.c3s2.iphmx.com",
+        "addresses": [
+          "68.232.133.90",
+          "68.232.133.91",
+          "68.232.133.92",
+          "68.232.133.93",
+          "68.232.139.195",
+          "68.232.139.196",
+          "68.232.139.208",
+          "68.232.139.209",
+          "68.232.139.210",
+          "68.232.139.211",
+          "68.232.139.212",
+          "68.232.139.213",
+          "68.232.150.108",
+          "68.232.150.127",
+          "68.232.150.128",
+          "68.232.150.129"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.rolls-royce.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.rolls-royce.c3s2.iphmx.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.rolls-royce.c3s2.iphmx.com ip4:192.40.173.140 ip4:192.40.173.141 ip4:46.235.193.39 ip4:46.235.193.40 ip4:132.244.95.10 ip4:132.244.95.11 ip4:62.13.153.174 IP4:132.244.95.199 IP4:132.44.95.200 IP4:132.244.95.201 IP4:132.244.95.202 IP4:132.244.73.198 IP4:132.244.73.192 IP4:132.244.73.193 IP4:132.244.73.194 IP4:132.244.73.195 IP4:132.244.73.196 IP4:132.244.73.197 IP4:â132.244.213.54 IP4:132.244.213.53â include:spf.protection.outlook.com include:messagelabs.com include:u20095718.wl219.sendgrid.net ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "rolls-royce.com: Expected mechanism or end_of_statement at position 391 in: v=spf1 exists:%{i}.spf.rolls-royce.c3s2.iphmx.com ip4:192.40.173.140 ip4:192.40.173.141 ip4:46.235.193.39 ip4:46.235.193.40 ip4:132.244.95.10 ip4:132.244.95.11 ip4:62.13.153.174 IP4:132.244.95.199 IP4:132.44.95.200 IP4:132.244.95.201 IP4:132.244.95.202 IP4:132.244.73.198 IP4:132.244.73.192 IP4:132.244.73.193 IP4:132.244.73.194 IP4:132.244.73.195 IP4:132.244.73.196 IP4:132.244.73.197 IP4:â132.244.213.54 IP4:132.244.213.53â include:spf.protection.outlook.com include:messagelabs.com include:u20095718.wl219.sendgrid.net ~all"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:35a53a5e09d8012@rep.dmarcanalyzer.com; ruf=mailto:35a53a5e09d8012@for.dmarcanalyzer.com; fo=1;",
+    "valid": true,
+    "location": "rolls-royce.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "35a53a5e09d8012@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "35a53a5e09d8012@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

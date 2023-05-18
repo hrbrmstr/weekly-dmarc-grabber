@@ -1,0 +1,43 @@
+{
+  "domain": "leifheit.com",
+  "base_domain": "leifheit.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.udag.net",
+      "ns.udag.de",
+      "ns.udag.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail02.leifheit.de",
+        "addresses": [
+          "212.185.169.35"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail02.leifheit.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:212.185.169.35 ip4:95.142.67.128 a:mxout29.expurgate.net ip4:62.108.21.13 include:spf.mailjet.com include:_spf.edrone.me include:amazonses.com include:spf-inm.eqs-service.com include:_spf.e-point.pl  ip4:213.198.99.210 ip4:213.198.99.211 ip4:81.25.202.82 ip4:185.238.12.20 ip4:185.238.12.21 ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

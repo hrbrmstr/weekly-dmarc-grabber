@@ -1,0 +1,108 @@
+{
+  "domain": "zooplus.de",
+  "base_domain": "zooplus.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-282.awsdns-35.com",
+      "ns-922.awsdns-51.net",
+      "ns-1251.awsdns-28.org",
+      "ns-1870.awsdns-41.co.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail02.mail-gw.de",
+        "addresses": [
+          "95.130.17.235"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail03.mail-gw.de",
+        "addresses": [
+          "95.130.17.227"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail02.mail-gw.de: Connection timed out",
+      "mail03.mail-gw.de: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:91.223.129.0/24 include:spf.srv2.de include:spf.mailjet.com include:spf.protection.outlook.com include:amazonses.com include:email.freshdesk.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc-reporting@zooplus.com",
+    "valid": true,
+    "location": "zooplus.de",
+    "warnings": [
+      "zooplus.com does not indicate that it accepts DMARC reports about zooplus.de - Authorization record not found: zooplus.de._report._dmarc.zooplus.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reporting@zooplus.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

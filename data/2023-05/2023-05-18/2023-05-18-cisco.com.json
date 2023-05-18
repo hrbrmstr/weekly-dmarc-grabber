@@ -1,0 +1,347 @@
+{
+  "domain": "cisco.com",
+  "base_domain": "cisco.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.cisco.com",
+      "ns1.cisco.com",
+      "ns3.cisco.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "alln-mx-01.cisco.com",
+        "addresses": [
+          "173.37.147.230",
+          "2001:420:1201:6::ad25:93e6"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "rcdn-mx-01.cisco.com",
+        "addresses": [
+          "72.163.7.166"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "aer-mx-01.cisco.com",
+        "addresses": [
+          "173.38.212.150",
+          "2001:420:4621::ad26:d496"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on alln-mx-01.cisco.com",
+      "SSL/TLS is not supported on rcdn-mx-01.cisco.com",
+      "SSL/TLS is not supported on aer-mx-01.cisco.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 redirect=spfa._spf.cisco.com",
+    "valid": true,
+    "dns_lookups": 6,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": {
+        "domain": "spfa._spf.cisco.com",
+        "record": "v=spf1 ip4:173.37.147.224/27 ip4:173.37.142.64/26 ip4:173.38.212.128/27 ip4:173.38.203.0/24 ip4:72.163.7.160/27 ip4:72.163.197.0/24 ip4:66.187.208.0/20 ip4:173.37.86.0/24 include:spf.protection.outlook.com include:spfb._spf.cisco.com ~all",
+        "dns_lookups": 5,
+        "dns_void_lookups": 0,
+        "parsed": {
+          "pass": [
+            {
+              "value": "173.37.147.224/27",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "173.37.142.64/26",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "173.38.212.128/27",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "173.38.203.0/24",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "72.163.7.160/27",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "72.163.197.0/24",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "66.187.208.0/20",
+              "mechanism": "ip4"
+            },
+            {
+              "value": "173.37.86.0/24",
+              "mechanism": "ip4"
+            }
+          ],
+          "neutral": [],
+          "softfail": [],
+          "fail": [],
+          "include": [
+            {
+              "domain": "spf.protection.outlook.com",
+              "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+              "dns_lookups": 0,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "40.92.0.0/15",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "40.107.0.0/16",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "52.100.0.0/14",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "104.47.0.0/17",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "2a01:111:f400::/48",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403::/49",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:8000::/50",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:c000::/51",
+                    "mechanism": "ip6"
+                  },
+                  {
+                    "value": "2a01:111:f403:f000::/52",
+                    "mechanism": "ip6"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [],
+                "redirect": null,
+                "exp": null,
+                "all": "fail"
+              },
+              "warnings": []
+            },
+            {
+              "domain": "spfb._spf.cisco.com",
+              "record": "v=spf1 ip4:64.104.15.96/27 ip4:64.104.3.128/25 ip4:173.36.137.128/26 ip4:64.102.19.192/26 ip4:173.36.136.0/24 ip4:184.94.240.0/20 ip4:68.232.129.181 ip4:68.232.135.80 ip4:208.90.56.0/21 include:spfc._spf.cisco.com ~all",
+              "dns_lookups": 3,
+              "dns_void_lookups": 0,
+              "parsed": {
+                "pass": [
+                  {
+                    "value": "64.104.15.96/27",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "64.104.3.128/25",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "173.36.137.128/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "64.102.19.192/26",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "173.36.136.0/24",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "184.94.240.0/20",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "68.232.129.181",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "68.232.135.80",
+                    "mechanism": "ip4"
+                  },
+                  {
+                    "value": "208.90.56.0/21",
+                    "mechanism": "ip4"
+                  }
+                ],
+                "neutral": [],
+                "softfail": [],
+                "fail": [],
+                "include": [
+                  {
+                    "domain": "spfc._spf.cisco.com",
+                    "record": "v=spf1 ip4:64.101.210.224/28 ip4:173.37.227.240/28 ip4:173.37.135.112/28 mx:res.cisco.com mx:sco.cisco.com ~all",
+                    "dns_lookups": 2,
+                    "dns_void_lookups": 0,
+                    "parsed": {
+                      "pass": [
+                        {
+                          "value": "64.101.210.224/28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "173.37.227.240/28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "173.37.135.112/28",
+                          "mechanism": "ip4"
+                        },
+                        {
+                          "value": "esa1.cres.iphmx.com",
+                          "mechanism": "mx"
+                        },
+                        {
+                          "value": "esa2.cres.iphmx.com",
+                          "mechanism": "mx"
+                        },
+                        {
+                          "value": "esa3.cres.iphmx.com",
+                          "mechanism": "mx"
+                        },
+                        {
+                          "value": "esa4.cres.iphmx.com",
+                          "mechanism": "mx"
+                        },
+                        {
+                          "value": "jira.sco.cisco.com",
+                          "mechanism": "mx"
+                        }
+                      ],
+                      "neutral": [],
+                      "softfail": [],
+                      "fail": [],
+                      "include": [],
+                      "redirect": null,
+                      "exp": null,
+                      "all": "softfail"
+                    },
+                    "warnings": []
+                  }
+                ],
+                "redirect": null,
+                "exp": null,
+                "all": "softfail"
+              },
+              "warnings": []
+            }
+          ],
+          "redirect": null,
+          "exp": null,
+          "all": "softfail"
+        },
+        "warnings": []
+      },
+      "exp": null,
+      "all": "neutral"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; pct=10; sp=none; fo=1; ri=3600; rua=mailto:ynldvgsr@ag.dmarcian.com; ruf=mailto:ynldvgsr@fr.dmarcian.com;",
+    "valid": true,
+    "location": "cisco.com",
+    "warnings": [
+      "pct value is less than 100. This leads to inconsistent and unpredictable policy enforcement. Consider using p=none to monitor results instead"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 10,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ynldvgsr@ag.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ynldvgsr@fr.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

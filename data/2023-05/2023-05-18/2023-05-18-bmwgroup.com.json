@@ -1,0 +1,289 @@
+{
+  "domain": "bmwgroup.com",
+  "base_domain": "bmwgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns4.m-online.net",
+      "ns.bmw.de",
+      "ns2.m-online.net",
+      "ns3.m-online.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc324-48.eu.iphmx.com",
+        "addresses": [
+          "207.54.65.242",
+          "207.54.68.119",
+          "207.54.68.120",
+          "207.54.68.121",
+          "207.54.69.24",
+          "207.54.69.27",
+          "207.54.69.29",
+          "207.54.69.30",
+          "207.54.71.126",
+          "207.54.71.48",
+          "207.54.71.60",
+          "207.54.71.69",
+          "207.54.72.34",
+          "207.54.72.35",
+          "2620:101:2011:300::3f9",
+          "2620:101:2011:300::3fa",
+          "2620:101:2011:300::3fb",
+          "2620:101:2011:300::3fc",
+          "2620:101:2011:300::3fd",
+          "2620:101:2011:300::3fe",
+          "2620:101:2011:300::3ff",
+          "2620:101:2012:300::3f9",
+          "2620:101:2012:300::3fa",
+          "2620:101:2012:300::3fb",
+          "2620:101:2012:300::3fc",
+          "2620:101:2012:300::3fd",
+          "2620:101:2012:300::3fe",
+          "2620:101:2012:300::3ff"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.hc324-48.eu.iphmx.com",
+        "addresses": [
+          "207.54.65.242",
+          "207.54.68.119",
+          "207.54.68.120",
+          "207.54.68.121",
+          "207.54.69.24",
+          "207.54.69.27",
+          "207.54.69.29",
+          "207.54.69.30",
+          "207.54.71.126",
+          "207.54.71.48",
+          "207.54.71.60",
+          "207.54.71.69",
+          "207.54.72.34",
+          "207.54.72.35",
+          "2620:101:2011:300::3f9",
+          "2620:101:2011:300::3fa",
+          "2620:101:2011:300::3fb",
+          "2620:101:2011:300::3fc",
+          "2620:101:2011:300::3fd",
+          "2620:101:2011:300::3fe",
+          "2620:101:2011:300::3ff",
+          "2620:101:2012:300::3f9",
+          "2620:101:2012:300::3fa",
+          "2620:101:2012:300::3fb",
+          "2620:101:2012:300::3fc",
+          "2620:101:2012:300::3fd",
+          "2620:101:2012:300::3fe",
+          "2620:101:2012:300::3ff"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc324-48.eu.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc324-48.eu.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}.spf.bmwgroup.com include:_spf.salesforce.com include:_spf.inbenta.com ~all",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "%{i}.spf.bmwgroup.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.inbenta.com",
+          "record": "v=spf1 include:inbentaspf.smtp.com include:turbo-smtp.com ~all",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "inbentaspf.smtp.com",
+                "record": "v=spf1 ip4:74.91.90.0/24 ip4:74.91.91.0/24 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "74.91.90.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.91.91.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "turbo-smtp.com",
+                "record": "v=spf1 a mx ip4:199.187.172.0/22 ip4:199.244.72.0/22 ip4:185.228.36.0/22 ~all",
+                "dns_lookups": 2,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "199.187.172.31",
+                      "mechanism": "a"
+                    },
+                    {
+                      "value": "mail.turbo-smtp.com",
+                      "mechanism": "mx"
+                    },
+                    {
+                      "value": "199.187.172.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.244.72.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "185.228.36.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:bgm.aggregate@bmwgroup.com; ruf=mailto:bgm.forensic@bmwgroup.com",
+    "valid": true,
+    "location": "bmwgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bgm.aggregate@bmwgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "bgm.forensic@bmwgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

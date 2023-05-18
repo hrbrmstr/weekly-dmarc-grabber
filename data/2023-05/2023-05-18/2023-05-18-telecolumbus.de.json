@@ -1,0 +1,152 @@
+{
+  "domain": "telecolumbus.de",
+  "base_domain": "telecolumbus.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth02.ns.de.uu.net",
+      "auth52.ns.de.uu.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.kabel-tv.de",
+        "addresses": [
+          "85.239.118.208"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.kabel-tv.de",
+        "addresses": [
+          "85.239.118.209"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.kabel-tv.de: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx mx:equitystory.de ip4:85.115.23.238 ip4:88.79.77.142 ip4:145.253.3.216 ip4:145.253.3.217 ip4:217.68.161.155 ip4:217.68.161.146 include:spf2.telecolumbus.de -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.kabel-tv.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.kabel-tv.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "maileqs1.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "maileqs2.donotspam.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "85.115.23.238",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "88.79.77.142",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "145.253.3.216",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "145.253.3.217",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.68.161.155",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "217.68.161.146",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf2.telecolumbus.de",
+          "record": "v=spf1 ip4:86.56.35.67 ip4:86.56.35.68 ip4:217.68.162.12 ip4:217.68.162.15 ip4:89.16.132.39 ip6:2a02:2457:10c:101::12 ip6:2a02:2457:10c:101::15 ip6:2a02:2457:c:101::34 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "86.56.35.67",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "86.56.35.68",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "217.68.162.12",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "217.68.162.15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "89.16.132.39",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a02:2457:10c:101::12",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a02:2457:10c:101::15",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a02:2457:c:101::34",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}
