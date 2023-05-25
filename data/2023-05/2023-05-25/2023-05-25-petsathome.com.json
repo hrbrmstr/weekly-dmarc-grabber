@@ -1,0 +1,367 @@
+{
+  "domain": "petsathome.com",
+  "base_domain": "petsathome.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "vida.ns.cloudflare.com",
+      "zeus.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster8.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.195",
+          "195.245.230.198",
+          "195.245.231.66",
+          "195.245.231.71",
+          "85.158.142.211",
+          "85.158.142.216"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster8a.eu.messagelabs.com",
+        "addresses": [
+          "34.253.63.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster8.eu.messagelabs.com",
+      "SSL/TLS is not supported on cluster8a.eu.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 a:pah1.csiltd.co.uk a:www.petsathome.com mx include:spf.messagelabs.com include:spf.tmes.trendmicro.com -all",
+    "valid": true,
+    "dns_lookups": 8,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "88.211.26.27",
+          "mechanism": "a"
+        },
+        {
+          "value": "104.19.174.9",
+          "mechanism": "a"
+        },
+        {
+          "value": "104.19.175.9",
+          "mechanism": "a"
+        },
+        {
+          "value": "2606:4700::6813:ae09",
+          "mechanism": "a"
+        },
+        {
+          "value": "2606:4700::6813:af09",
+          "mechanism": "a"
+        },
+        {
+          "value": "cluster8.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster8a.eu.messagelabs.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.tmes.trendmicro.com",
+          "record": "v=spf1 ip4:18.208.22.64/26 ip4:18.208.22.128/25 ip4:18.185.115.128/26 ip4:18.185.115.0/25 ip4:13.238.202.0/25 ip4:13.238.202.128/26 ip4:18.176.203.128/25 ip4:13.213.174.128/25 ip4:18.177.156.0/25 ip4:13.213.220.0/25 include:spfb.tmes.trendmicro.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "18.208.22.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.208.22.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.185.115.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.238.202.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.213.174.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.177.156.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.213.220.0/25",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spfb.tmes.trendmicro.com",
+                "record": "v=spf1 ip4:18.188.9.192/26 ip4:18.188.239.128/26 ip4:34.253.238.128/26 ip4:34.253.238.192/26 ip4:52.202.71.114 ip4:54.145.52.119 ip4:35.156.245.132 ip4:18.156.0.20 ip4:3.74.126.139 ip4:3.72.196.143 ip4:3.212.20.253 ip4:34.225.87.138 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "18.188.9.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.188.239.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.253.238.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.202.71.114",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.145.52.119",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "35.156.245.132",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.156.0.20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.74.126.139",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.72.196.143",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.212.20.253",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "34.225.87.138",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:mail_security@petsathome.co.uk; adkim=s; aspf=s",
+    "valid": true,
+    "location": "petsathome.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mail_security@petsathome.co.uk",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

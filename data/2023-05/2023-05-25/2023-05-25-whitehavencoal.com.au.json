@@ -1,0 +1,113 @@
+{
+  "domain": "whitehavencoal.com.au",
+  "base_domain": "whitehavencoal.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns05.domaincontrol.com",
+      "pdns06.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 20,
+        "hostname": "mxa-002e2502.gslb.pphosted.com",
+        "addresses": [
+          "91.207.212.224"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mxb-002e2502.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.235"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-002e2502.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-002e2502.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.v6send.net a:dispatch-us.ppe-hosted.com include:spf.protection.outlook.com include:_spf.salesforce.com include:spf-002e2502.pphosted.com include:_spf.dayforcehcm.com -all",
+    "valid": false,
+    "dns_void_lookups": 3,
+    "warnings": [],
+    "error": "Parsing the SPF record has 3/2 maximum void DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com; adkim=s; aspf=s; sp=reject;",
+    "valid": true,
+    "location": "whitehavencoal.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

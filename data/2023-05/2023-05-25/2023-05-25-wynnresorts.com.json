@@ -1,0 +1,116 @@
+{
+  "domain": "wynnresorts.com",
+  "base_domain": "wynnresorts.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a3-64.akam.net",
+      "a10-65.akam.net",
+      "a28-67.akam.net",
+      "a1-44.akam.net",
+      "a5-65.akam.net",
+      "a2-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0014ad01.gslb.pphosted.com",
+        "addresses": [
+          "208.86.201.182"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0014ad01.gslb.pphosted.com",
+        "addresses": [
+          "208.86.201.182"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mxa-0014ad01.gslb.pphosted.com: Connection timed out",
+      "SSL/TLS is not supported on mxb-0014ad01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 41.600 seconds: Server 127.0.0.53 UDP port 53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;fo=1;rua=mailto:dmarc_rua@wynnresorts.com;ruf=mailto:dmarc_ruf@wynnresorts.com",
+    "valid": true,
+    "location": "wynnresorts.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@wynnresorts.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@wynnresorts.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

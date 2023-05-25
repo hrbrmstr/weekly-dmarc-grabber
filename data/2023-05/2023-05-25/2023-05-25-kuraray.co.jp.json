@@ -1,0 +1,396 @@
+{
+  "domain": "kuraray.co.jp",
+  "base_domain": "kuraray.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns00.vips.ne.jp",
+      "ns01.vips.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "primary.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "alt1.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "alt2.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "alt3.ap.email.fireeyecloud.com",
+        "addresses": [
+          "3.112.99.3",
+          "3.112.99.4",
+          "3.112.99.5"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on primary.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt1.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt2.ap.email.fireeyecloud.com",
+      "SSL/TLS is not supported on alt3.ap.email.fireeyecloud.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 +ip4:219.101.236.160/27 +ip4:61.115.200.64/27 +ip4:219.99.167.107 include:smp.ne.jp include:_spf.fireeyecloud.com include:spf.protection.outlook.com -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "219.101.236.160/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "61.115.200.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "219.99.167.107",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "smp.ne.jp",
+          "record": "v=spf1 +ip4:59.106.42.224/28 +ip4:210.188.229.224/27 +ip4:61.211.238.0/27 +ip4:61.211.237.192/26 +ip4:59.106.30.0/26 +ip4:59.106.116.96/27 +ip4:59.106.117.0/26 +ip4:210.188.245.160/27 +ip4:210.188.233.32/27 +ip4:59.106.37.128/26 +ip4:59.106.106.192/26 +ip4:59.106.4.64/26 +ip4:59.106.100.128/25 +ip4:59.106.149.0/26 +ip4:59.106.193.160/27 +ip4:59.106.147.128/27 +ip4:59.106.4.0/26 include:spf01.smp.ne.jp ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "59.106.42.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.229.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.238.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.237.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.30.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.116.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.117.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.245.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.233.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.37.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.106.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.100.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.149.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.193.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.147.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.0/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf01.smp.ne.jp",
+                "record": "v=spf1 +ip4:112.137.190.192/26 +ip4:112.140.38.192/26 +ip4:112.137.187.128/25 +ip4:180.214.52.0/24 +ip4:180.214.56.0/24 +ip4:202.222.20.40/29 +ip4:202.222.20.48/29 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "112.137.190.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.140.38.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.137.187.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.52.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.56.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.40/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.48/29",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.fireeyecloud.com",
+          "record": "v=spf1 ip4:34.223.9.0/24 ip4:34.223.11.128/25 ip4:34.223.12.0/25 ip4:38.27.116.128/27 ip4:165.254.91.16/28 ip4:38.27.116.96/27 ip4:165.254.91.96/27 ip4:149.13.95.32/27 ip4:154.57.155.16/28 ip4:100.25.99.0/25 ip4:100.24.127.128/25 ip4:3.122.63.0/24 ip4:52.215.218.128/25 ip4:63.34.31.0/25 ip4:63.34.218.0/24 ip4:3.123.5.0/24 ip4:34.223.36.0/24 ip4:3.93.93.0/24 ip4:3.112.99.0/24 ip4:3.112.100.0/24 ip4:3.97.207.0/24 ip4:3.97.208.0/24 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "34.223.9.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.11.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.12.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.27.116.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.254.91.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.27.116.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "165.254.91.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "149.13.95.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "154.57.155.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "100.25.99.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "100.24.127.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.122.63.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.215.218.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.34.31.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "63.34.218.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.123.5.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.223.36.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.93.93.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.99.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.100.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.97.207.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.97.208.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

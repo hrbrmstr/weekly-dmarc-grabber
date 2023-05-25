@@ -1,0 +1,357 @@
+{
+  "domain": "lendlease.com.au",
+  "base_domain": "lendlease.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-cloud-b3.googledomains.com",
+      "ns-cloud-b1.googledomains.com",
+      "ns-cloud-b2.googledomains.com",
+      "ns-cloud-b4.googledomains.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "lendlease-com-au.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.59.138",
+          "104.47.66.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on lendlease-com-au.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.protection.outlook.com include:spf.lendlease.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 2,
+    "warnings": [
+      "spf.buildercms.com does not have any A/AAAA records"
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.lendlease.com",
+          "record": "v=spf1 include:_spf.salesforce.com include:spf.buildercms.com ip4:209.235.109.132 ip4:213.212.75.132 ip4:27.111.245.36 ip4:104.156.181.224 ip4:104.156.181.225 ip4:103.12.5.76 -all",
+          "dns_lookups": 7,
+          "dns_void_lookups": 2,
+          "parsed": {
+            "pass": [
+              {
+                "value": "209.235.109.132",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.212.75.132",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "27.111.245.36",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.156.181.224",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.156.181.225",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.12.5.76",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.salesforce.com",
+                "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "%{i}._spf.mta.salesforce.com",
+                      "mechanism": "exists"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.buildercms.com",
+                "record": "v=spf1 mx a ip4:63.143.55.206 ip4:64.31.50.195 ip4:70.35.204.44 ip4:74.208.129.29 ip4:52.129.117.60 ip4:64.31.50.196 include:_spf.perfora.net include:_spf.kundenserver.de ~all",
+                "dns_lookups": 4,
+                "dns_void_lookups": 2,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "mx00.ionos.com",
+                      "mechanism": "mx"
+                    },
+                    {
+                      "value": "mx01.ionos.com",
+                      "mechanism": "mx"
+                    },
+                    {
+                      "value": "63.143.55.206",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.31.50.195",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "70.35.204.44",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "74.208.129.29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.129.117.60",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.31.50.196",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "_spf.perfora.net",
+                      "record": "v=spf1 ip4:74.208.4.192/26 ip4:82.165.159.128/27 -all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "74.208.4.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "82.165.159.128/27",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    },
+                    {
+                      "domain": "_spf.kundenserver.de",
+                      "record": "v=spf1 ip4:212.227.126.128/25 ip4:82.165.159.0/26 ip4:212.227.15.0/25 ip4:212.227.17.0/27 ip4:217.72.192.64/26 -all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "212.227.126.128/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "82.165.159.0/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "212.227.15.0/25",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "212.227.17.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "217.72.192.64/26",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "fail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": [
+                  "spf.buildercms.com does not have any A/AAAA records"
+                ]
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": [
+            "spf.buildercms.com does not have any A/AAAA records"
+          ]
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "lendlease.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

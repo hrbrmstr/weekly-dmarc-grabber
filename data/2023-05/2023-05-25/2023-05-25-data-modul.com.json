@@ -1,0 +1,110 @@
+{
+  "domain": "data-modul.com",
+  "base_domain": "data-modul.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.telekom.net",
+      "pns.dtag.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "51.163.159.22",
+          "62.140.10.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:de._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "de._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:51.163.158.0/24 ip4:194.104.109.0/24 ip4:62.140.7.0/24 ip4:194.104.111.0/24 ip4:51.163.159.21/32 ip4:62.140.10.21/32 ip4:194.104.110.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.163.158.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.109.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.140.7.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.111.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.159.21/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.140.10.21/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.110.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

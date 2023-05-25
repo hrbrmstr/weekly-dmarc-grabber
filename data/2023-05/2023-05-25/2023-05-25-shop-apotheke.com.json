@@ -1,0 +1,122 @@
+{
+  "domain": "shop-apotheke.com",
+  "base_domain": "shop-apotheke.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.dnsmadeeasy.com",
+      "ns1.dnsmadeeasy.com",
+      "ns3.dnsmadeeasy.com",
+      "ns4.dnsmadeeasy.com",
+      "ns2.dnsmadeeasy.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.europa-apotheek.com",
+        "addresses": [
+          "89.20.86.38"
+        ],
+        "tls": true,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mail2.europa-apotheek.com",
+        "addresses": [
+          "89.20.86.39"
+        ],
+        "tls": true,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mail3.europa-apotheek.com",
+        "addresses": [
+          "89.20.86.35"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.sendinblue.com include:spfa.myconvento.com include:spf.protection.outlook.com include:spf.afas.online include:mailing.eqs.com include:services.jamfcloud.com a:mail.fp-sign.com ip4:83.246.89.68/32 ip4:195.140.184.0/22 ip4:91.192.40.0/22 ip4:153.92.249.141 ip4:89.1.87.140 ip4:89.20.89.131 ip4:84.200.10.30 -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "services.jamfcloud.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; rua=mailto:dmarc@mailinblue.com!10m; ruf=mailto:dmarc@mailinblue.com!10m; rf=afrf; pct=100; ri=86400",
+    "valid": true,
+    "location": "shop-apotheke.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@mailinblue.com",
+            "size_limit": "10m"
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@mailinblue.com",
+            "size_limit": "10m"
+          }
+        ],
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

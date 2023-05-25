@@ -1,0 +1,111 @@
+{
+  "domain": "nufarm.com",
+  "base_domain": "nufarm.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "grace.ns.cloudflare.com",
+      "igor.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "us-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "205.139.110.141",
+          "205.139.110.221",
+          "205.139.110.242",
+          "207.211.30.141",
+          "207.211.30.221",
+          "207.211.30.242"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "207.211.30.141 does not have any reverse DNS (PTR) records",
+      "207.211.30.221 does not have any reverse DNS (PTR) records",
+      "207.211.30.242 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on us-smtp-inbound-1.mimecast.com",
+      "207.211.30.141 does not have any reverse DNS (PTR) records",
+      "207.211.30.221 does not have any reverse DNS (PTR) records",
+      "207.211.30.242 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on us-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.salesforce.com include:servers.mcsv.net include:us._netblocks.mimecast.com include:bpopen.capgemini.com include:_spf.spotler.email include:app.sgizmo.com include:cust-spf.exacttarget.com include:spf1.nufarm.com include:mail.zendesk.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "app.sgizmo.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100;",
+    "valid": true,
+    "location": "nufarm.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

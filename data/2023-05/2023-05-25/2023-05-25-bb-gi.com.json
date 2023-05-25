@@ -1,0 +1,66 @@
+{
+  "domain": "bb-gi.com",
+  "base_domain": "bb-gi.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.eurodns.com",
+      "ns4.eurodns.com",
+      "ns2.eurodns.com",
+      "ns3.eurodns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.mygitscloud.com",
+        "addresses": [
+          "185.44.57.249"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.mygitscloud.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:185.44.57.249 ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mail.mygitscloud.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "52.156.206.29",
+          "mechanism": "a"
+        },
+        {
+          "value": "185.44.57.249",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

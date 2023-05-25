@@ -1,0 +1,116 @@
+{
+  "domain": "chevron.com",
+  "base_domain": "chevron.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nschvpk.chevron.com",
+      "nshou150.chevron.com",
+      "nswfc.chevron.com",
+      "nssghq.chevron.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1.hc2860-13.iphmx.com",
+        "addresses": [
+          "216.71.140.128",
+          "216.71.143.108"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.hc2860-13.iphmx.com",
+        "addresses": [
+          "216.71.140.128",
+          "216.71.143.108"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx1.hc2860-13.iphmx.com: Connection timed out",
+      "SSL/TLS is not supported on mx2.hc2860-13.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.500 seconds: Server 127.0.0.53 UDP port 53 answered ; Server 127.0.0.53 TCP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:chevron@rua.dmp.cisco.com; ruf=mailto:chevron@ruf.dmp.cisco.com",
+    "valid": true,
+    "location": "chevron.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "chevron@rua.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "chevron@ruf.dmp.cisco.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

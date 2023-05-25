@@ -1,0 +1,107 @@
+{
+  "domain": "dpdhl.com",
+  "base_domain": "dpdhl.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.brandshelter.com",
+      "ns.deutschepost.de",
+      "ppd00021.deutschepost.de",
+      "ns02.brandshelter.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.dhl.iphmx.com",
+        "addresses": [
+          "68.232.129.11",
+          "68.232.135.103"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx2.dhl.iphmx.com",
+        "addresses": [
+          "68.232.129.11",
+          "68.232.135.103"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.dhl.iphmx.com",
+      "SSL/TLS is not supported on mx2.dhl.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:dpdhl._spf.dhl.com include:dpdhl-com._spf.dhl.com include:3a._spf.dpdhl.com include:_spf.salesforce.com ip4:208.218.214.19 ip4:216.74.162.13 ip4:216.74.162.14 ip4:193.201.168.0/24 ip4:146.177.46.130 ip4:80.152.172.179 ip4:193.132.52.1 ip4:168.245.95.39 ip4:80.237.221.139 ip4:80.237.221.140 ip4:80.237.207.250 ip4:23.97.247.199 ip4:148.59.107.25 ip4:148.59.109.25 ip4:167.89.70.55 ip4:81.2.228.74 include:spf.survalyzer.eu include:spf.qb-feedback.com include:servers.mcsv.net ip4:87.253.232.0/21 ip4:185.189.236.0/22 ip4:185.211.120.0/22 ip4:185.250.236.0/22 ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "spf.survalyzer.eu does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=0; rua=mailto:dmarc-reports@dhl.com;",
+    "valid": true,
+    "location": "dpdhl.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-reports@dhl.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "domain": "corning.com",
+  "base_domain": "corning.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "nsemea2.corning.com",
+      "nsna1.corning.com",
+      "nsna2.corning.com",
+      "nsap2.corning.com",
+      "nsemea1.corning.com",
+      "nsap1.corning.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster6.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.217",
+          "67.219.247.196",
+          "67.219.250.213"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster6a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster6.us.messagelabs.com",
+      "SSL/TLS is not supported on cluster6a.us.messagelabs.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com include:spf.corning.com include:_spf-dc4.sapsf.com include:spfprd1.everbridge.net ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "nets1.spf.messagelabs.com",
+          "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "85.158.136.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.109.254.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.106.220.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "195.245.230.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "95.131.104.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.226.48.0/21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "nets2.spf.messagelabs.com",
+          "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "216.82.240.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.219.240.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "117.120.16.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.9.96.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.corning.com",
+          "record": "v=spf1 ip4:199.197.128.0/17 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.197.128.0/17",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-dc4.sapsf.com",
+          "record": "v=spf1 ip4:70.42.227.151/32 ip4:70.42.227.152/32 ip4:20.1.128.197/32 ip4:20.10.24.226/32 ip4:20.96.12.43/32 ip4:20.1.130.13/32 ip4:20.119.174.191/32 ip4:20.230.106.230/32 ip4:20.114.186.35/32 ip4:20.119.207.133/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "70.42.227.151/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "70.42.227.152/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.1.128.197/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.10.24.226/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.96.12.43/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.1.130.13/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.119.174.191/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.230.106.230/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.114.186.35/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.119.207.133/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spfprd1.everbridge.net",
+          "record": "v=spf1 ip4:3.132.65.8/32 ip4:52.13.126.222/32 ip4:3.23.36.254/32 ip4:52.13.73.26/32 ip4:3.22.102.251/32 ip4:54.212.187.12/32 ip4:3.21.23.140/32 ip4:52.12.139.153/32 ip4:54.188.101.235/32 ip4:3.23.38.224/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "3.132.65.8/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.13.126.222/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.23.36.254/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.13.73.26/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.22.102.251/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.212.187.12/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.21.23.140/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.12.139.153/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.188.101.235/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.23.38.224/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;sp=reject;rua=mailto:s51qvjvc@ag.us.dmarcian.com;",
+    "valid": true,
+    "location": "corning.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "s51qvjvc@ag.us.dmarcian.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

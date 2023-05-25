@@ -1,0 +1,115 @@
+{
+  "domain": "discovery.com",
+  "base_domain": "discovery.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns-887.awsdns-46.net",
+      "ns-1701.awsdns-20.co.uk",
+      "ns-487.awsdns-60.com",
+      "ns-1029.awsdns-00.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0a-00241e02.pphosted.com",
+        "addresses": [
+          "205.220.160.51"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx0b-00241e02.pphosted.com",
+        "addresses": [
+          "205.220.172.51"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx0a-00241e02.pphosted.com",
+      "SSL/TLS is not supported on mx0b-00241e02.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.bd.spf-protect.agari.com include:spf1.emarketeer.com include:_spf.google.com include:_spf.atlassian.net ?all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.bd.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:discovery@rua.agari.com; ruf=mailto:discovery@ruf.agari.com",
+    "valid": true,
+    "location": "discovery.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "discovery@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "discovery@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

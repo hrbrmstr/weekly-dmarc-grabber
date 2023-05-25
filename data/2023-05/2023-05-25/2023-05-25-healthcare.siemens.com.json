@@ -1,0 +1,88 @@
+{
+  "domain": "healthcare.siemens.com",
+  "base_domain": "siemens.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.f5cloudservices.com",
+      "a10-64.akam.net",
+      "ns2.f5cloudservices.com",
+      "a13-65.akam.net",
+      "a2-67.akam.net",
+      "a28-65.akam.net",
+      "a11-66.akam.net",
+      "a1-16.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [],
+    "warnings": [
+      "No MX records found. Is the domain parked?"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "healthcare.siemens.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; rua=mailto:DMARC.rua@siemens.com; aspf=r",
+    "valid": true,
+    "location": "siemens.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "DMARC.rua@siemens.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

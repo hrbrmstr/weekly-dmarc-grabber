@@ -1,0 +1,191 @@
+{
+  "domain": "valero.com",
+  "base_domain": "valero.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.valero.com",
+      "ns4.valero.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-005ffb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.162.66"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-005ffb01.gslb.pphosted.com",
+        "addresses": [
+          "205.220.174.66"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-005ffb01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-005ffb01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-005ffb01.pphosted.com ip4:207.164.125.0/24 ip4:207.107.190.0/24 ip4:216.203.32.208 ip4:216.203.32.207 ip4:209.64.210.30 ip4:82.195.131.41 ip4:82.195.131.44 ip4:82.195.131.98 mx -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "207.164.125.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "207.107.190.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.203.32.208",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "216.203.32.207",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "209.64.210.30",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.41",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.44",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "82.195.131.98",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "mxa-005ffb01.gslb.pphosted.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mxb-005ffb01.gslb.pphosted.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-005ffb01.pphosted.com",
+          "record": "v=spf1 ip4:205.220.174.66 ip4:205.220.162.66",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.174.66",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.162.66",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "valero.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
