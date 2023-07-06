@@ -1,0 +1,125 @@
+{
+  "domain": "lpkf.com",
+  "base_domain": "lpkf.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a.ns14.net",
+      "d.ns14.net",
+      "c.ns14.net",
+      "b.ns14.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.hornetsecurity.com",
+        "addresses": [
+          "94.100.132.8"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx02.hornetsecurity.com",
+        "addresses": [
+          "94.100.136.8"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx03.hornetsecurity.com",
+        "addresses": [
+          "94.100.134.8"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 40,
+        "hostname": "mx04.hornetsecurity.com",
+        "addresses": [
+          "94.100.136.7"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx01.hornetsecurity.com: Connection timed out",
+      "mx02.hornetsecurity.com: Connection timed out",
+      "mx03.hornetsecurity.com: Connection timed out",
+      "mx04.hornetsecurity.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.hornetsecurity.com include:mailing.eqs.com include:spf.lamapoll.de include:spf.cloud.ci-solution.com include:spf.protection.outlook.com ip4:85.214.20.86/32 ip4:85.13.154.45/32 ip4:148.251.209.171/32 ip4:212.59.43.3/32 -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.400 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:dmarc-report@lpkf.com;sp=none",
+    "valid": true,
+    "location": "lpkf.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@lpkf.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

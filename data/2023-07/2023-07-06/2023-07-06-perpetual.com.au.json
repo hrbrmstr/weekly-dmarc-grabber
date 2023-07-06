@@ -1,0 +1,531 @@
+{
+  "domain": "perpetual.com.au",
+  "base_domain": "perpetual.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns4.perpetual.com.au",
+      "dns1.optus.net.au",
+      "dns3.perpetual.com.au",
+      "dns0.optus.net.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster9.us.messagelabs.com",
+        "addresses": [
+          "67.219.246.213",
+          "67.219.246.219",
+          "67.219.247.111",
+          "67.219.247.207",
+          "67.219.250.219",
+          "67.219.250.220"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster9a.us.messagelabs.com",
+        "addresses": [
+          "52.207.128.88",
+          "54.243.60.31"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on cluster9.us.messagelabs.com",
+      "cluster9a.us.messagelabs.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:52.1.235.217 include:spf.messagelabs.com include:_spf.salesforce.com include:spf.protection.outlook.com ip4:136.147.139.117 ip4:173.203.6.131 ip4:203.10.25.254 ip4:193.5.110.18 ip4:203.10.25.0/24 ip4:203.10.31.0/24 ip4:52.20.208.248 ip4:52.113.66.207 include:ivvy.net ip4:23.23.239.161 ip4:54.243.244.199 ip4:52.64.111.139 include:spf2.perpetual.com.au  include:spf-005e7502.pphosted.com -all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "52.1.235.217",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "136.147.139.117",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "173.203.6.131",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.10.25.254",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "193.5.110.18",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.10.25.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.10.31.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.20.208.248",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.113.66.207",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "23.23.239.161",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "54.243.244.199",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "52.64.111.139",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.messagelabs.com",
+          "record": "v=spf1 include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "nets1.spf.messagelabs.com",
+                "record": "v=spf1 ip4:85.158.136.0/21 ip4:193.109.254.0/23 ip4:194.106.220.0/23 ip4:195.245.230.0/23 ip4:95.131.104.0/21 ip4:46.226.48.0/21",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "85.158.136.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.109.254.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "194.106.220.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.245.230.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "95.131.104.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "46.226.48.0/21",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "nets2.spf.messagelabs.com",
+                "record": "v=spf1 ip4:216.82.240.0/20 ip4:67.219.240.0/20 ip4:117.120.16.0/21 ip4:103.9.96.0/22",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "216.82.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "67.219.240.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.120.16.0/21",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.9.96.0/22",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ivvy.net",
+          "record": "v=spf1 ip4:54.66.228.197 ip4:13.210.25.170 ip4:13.54.77.110 ip4:54.66.152.157 ip4:54.79.44.188 ip4:34.209.80.138 ip4:54.71.142.183 ip4:35.162.173.115 ip4:52.43.18.155 ip4:35.176.180.33 ip4:35.177.65.241 ip4:35.176.55.124 ip4:35.177.198.26 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "54.66.228.197",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.210.25.170",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.54.77.110",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.66.152.157",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.79.44.188",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.209.80.138",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.71.142.183",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.162.173.115",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.43.18.155",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.176.180.33",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.177.65.241",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.176.55.124",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.177.198.26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf2.perpetual.com.au",
+          "record": "v=spf1 ip4:52.1.252.231 ip4:203.41.57.145 ip4:203.41.57.144 ip4:203.41.57.147 ip4:203.38.232.46 ip4:153.254.80.2 ip4:153.254.80.3 ip4:62.190.59.200 ip4:62.73.189.146 ip4:203.110.157.76 ip4:203.110.157.78 ip4:210.8.208.130 ip4:210.8.208.131 ip4:116.213.11.21 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.1.252.231",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.41.57.145",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.41.57.144",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.41.57.147",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.38.232.46",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.254.80.2",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.254.80.3",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.190.59.200",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.73.189.146",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.110.157.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "203.110.157.78",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.8.208.130",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.8.208.131",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "116.213.11.21",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-005e7502.pphosted.com",
+          "record": "v=spf1 ip4:205.220.185.231 ip4:143.55.144.180",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.185.231",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "143.55.144.180",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:dmarc@perpetual.com.au; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc@perpetual.com.au",
+    "valid": true,
+    "location": "perpetual.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@perpetual.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc@perpetual.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

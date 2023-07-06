@@ -1,0 +1,51 @@
+{
+  "domain": "deutsche-wohnen.com",
+  "base_domain": "deutsche-wohnen.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.vonovia.de",
+      "ns2.vonovia.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00271f01.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.129"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00271f01.gslb.pphosted.com",
+        "addresses": [
+          "185.132.183.129"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00271f01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00271f01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:213.160.74.127 include:spf.mailjet.com include:spf.protection.outlook.com a:custmail.immosolve.eu include:spf-00271f01.pphosted.com include:spf.routing.net include:mailing.eqs.com include:spf.crsend.com include:jpberlin.de -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.100 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

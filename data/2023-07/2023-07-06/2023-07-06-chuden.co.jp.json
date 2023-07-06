@@ -1,0 +1,47 @@
+{
+  "domain": "chuden.co.jp",
+  "base_domain": "chuden.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a5-67.akam.net",
+      "a1-47.akam.net",
+      "a26-64.akam.net",
+      "a20-67.akam.net",
+      "a6-67.akam.net",
+      "a11-65.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "chuden-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on chuden-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spfitb.chuden.co.jp include:spfa.chuden.co.jp include:spf.protection.outlook.com include:spf.haihaimail.jp include:spfhng.chuden.co.jp include:biz.chuden.co.jp -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

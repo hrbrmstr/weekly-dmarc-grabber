@@ -1,0 +1,197 @@
+{
+  "domain": "darden.com",
+  "base_domain": "darden.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a18-64.akam.net",
+      "a1-128.akam.net",
+      "a2-64.akam.net",
+      "a24-67.akam.net",
+      "a13-65.akam.net",
+      "a3-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0017e701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.153.173"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0017e701.gslb.pphosted.com",
+        "addresses": [
+          "148.163.153.173"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0017e701.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0017e701.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf-0017e701.pphosted.com include:spf-dp.darden.com ip4:20.242.1.57 -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "20.242.1.57",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-0017e701.pphosted.com",
+          "record": "v=spf1 ip4:148.163.153.173 ip4:148.163.150.43",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "148.163.153.173",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "148.163.150.43",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-dp.darden.com",
+          "record": "v=spf1 ip4:161.47.141.37 ip4:161.47.141.39 ip4:146.20.176.190 ip4:204.232.138.240 ip4:204.232.138.242 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "161.47.141.37",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "161.47.141.39",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.20.176.190",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.138.240",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.232.138.242",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "darden.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

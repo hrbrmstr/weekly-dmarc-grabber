@@ -1,0 +1,222 @@
+{
+  "domain": "tskg-hd.com",
+  "base_domain": "tskg-hd.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.s-idc.net",
+      "ns2.s-idc.net",
+      "ns1.s-idc.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "gw199135.fortimail.com",
+        "addresses": [
+          "82.98.199.135"
+        ],
+        "tls": true,
+        "starttls": true
+      }
+    ],
+    "warnings": []
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.15.39.39 include:spf01.email.s-idc.net include:aspmx.pardot.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.15.39.39",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf01.email.s-idc.net",
+          "record": "v=spf1 include:spf02.email.s-idc.net include:spf01.nmail.s-idc.net ~all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf02.email.s-idc.net",
+                "record": "v=spf1 ip4:58.89.214.200/29 ip4:58.89.214.224/28 ip4:61.208.133.64/29 ip4:210.160.40.34 ip4:210.164.31.112/28 ip4:58.89.214.216/29 ip4:210.161.5.128/28 ip4:211.123.209.24 ip4:58.89.214.152/29 ip4:58.89.214.245 ip4:58.89.214.246 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "58.89.214.200/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.224/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "61.208.133.64/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.160.40.34",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.164.31.112/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.216/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.161.5.128/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "211.123.209.24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.152/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.245",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "58.89.214.246",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf01.nmail.s-idc.net",
+                "record": "v=spf1 ip4:210.162.150.32/27 ip4:210.161.178.0/28 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "210.162.150.32/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "210.161.178.0/28",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "aspmx.pardot.com",
+          "record": "v=spf1 include:et._spf.pardot.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "et._spf.pardot.com",
+                "record": "v=spf1 ip4:198.245.81.0/24 ip4:136.147.176.0/24 ip4:13.111.0.0/16 ip4:136.147.182.0/24 ip4:136.147.135.0/24 ip4:199.122.123.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "198.245.81.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.111.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.182.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "136.147.135.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "199.122.123.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

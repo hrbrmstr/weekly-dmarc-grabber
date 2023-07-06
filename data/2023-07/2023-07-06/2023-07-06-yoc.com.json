@@ -1,0 +1,76 @@
+{
+  "domain": "yoc.com",
+  "base_domain": "yoc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.variomedia.de",
+      "ns1.variomedia.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx14a.antispameurope.com",
+        "addresses": [
+          "83.246.65.100",
+          "83.246.65.85",
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx14b.antispameurope.com",
+        "addresses": [
+          "83.246.65.85"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 30,
+        "hostname": "mx14c.antispameurope.com",
+        "addresses": [
+          "94.100.134.100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx14d.antispameurope.com",
+        "addresses": [
+          "94.100.132.100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "The domain nlb01-hz2.hornetsecurity.com.65.246.83.in-addr.arpa does not exist",
+      "The reverse DNS of 83.246.65.100 is nlb01-hz2.hornetsecurity.com.65.246.83.in-addr.arpa, but the A/AAAA DNS records for nlb01-hz2.hornetsecurity.com.65.246.83.in-addr.arpa do not resolve to 83.246.65.100",
+      "mx14a.antispameurope.com: Connection timed out",
+      "mx14b.antispameurope.com: Connection timed out",
+      "The reverse DNS of 94.100.134.100 is nlb01-hz3.hornetsecurity.com, but the A/AAAA DNS records for nlb01-hz3.hornetsecurity.com do not resolve to 94.100.134.100",
+      "SSL/TLS is not supported on mx14c.antispameurope.com",
+      "SSL/TLS is not supported on mx14d.antispameurope.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:94.100.128.0/20 ip4:83.246.65.0/24 ip4:185.140.204.0/22 ip4:205.201.128.0/20 ip4:198.2.128.0/18 ip4:148.105.0.0/16 include:antispameurope.com include:spf.protection.outlook.com include:spf.nl2go.com include:servers.mcsv.net include:spf.ticketea.net include:_spf.atlassian.net -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.200 seconds: Server 127.0.0.53 UDP port 53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

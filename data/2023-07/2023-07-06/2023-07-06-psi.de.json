@@ -1,0 +1,291 @@
+{
+  "domain": "psi.de",
+  "base_domain": "psi.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "gate2.psi.de",
+      "gate1.psi.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": [
+          "195.245.230.193",
+          "195.245.230.199",
+          "195.245.231.64",
+          "195.245.231.73",
+          "85.158.142.209",
+          "85.158.142.218"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 30,
+        "hostname": "cluster3.eu.messagelabs.com",
+        "addresses": []
+      },
+      {
+        "preference": 90,
+        "hostname": "gate1.psi.de",
+        "addresses": [],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 91,
+        "hostname": "gate2.psi.de",
+        "addresses": [
+          "192.109.111.186"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 92,
+        "hostname": "gate3.psi.de",
+        "addresses": [
+          "194.115.214.186"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "cluster3.eu.messagelabs.com: Connection timed out",
+      "Hostname cluster3.eu.messagelabs.com is listed in multiple MX records",
+      "The resolution lifetime expired after 2.300 seconds: ",
+      "gate1.psi.de: Connection timed out",
+      "192.109.111.186 does not have any reverse DNS (PTR) records",
+      "gate2.psi.de: Connection timed out",
+      "gate3.psi.de: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:194.115.214.186 ip4:192.109.111.186 ip4:194.115.214.187 mx include:spf.academymaker.de include:docebosaas.com -all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "194.115.214.186",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "192.109.111.186",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "194.115.214.187",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "cluster3.eu.messagelabs.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate1.psi.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate2.psi.de",
+          "mechanism": "mx"
+        },
+        {
+          "value": "gate3.psi.de",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.academymaker.de",
+          "record": "v=spf1 ip4:80.82.213.24 ip4:80.82.213.38 ip4:80.82.213.175 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "80.82.213.24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.82.213.38",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.82.213.175",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "docebosaas.com",
+          "record": "v=spf1 ip4:52.50.129.119 ip4:54.174.209.165 ip4:52.16.75.109 ip4:52.16.75.118 ip4:52.16.38.44 ip4:52.16.49.62 ip4:54.79.0.4 ip4:35.182.195.41 ip4:54.85.129.207 ip4:52.22.249.69 ip4:18.197.43.76 ip4:54.93.104.220 ip4:3.209.231.65 ip4:34.206.143.108 ip4:35.157.192.122 ip4:18.132.189.127 ip4:52.65.244.27 ip4:15.223.142.138 ip4:3.248.148.18 ip4:107.20.91.250 ip4:3.96.249.213 ip4:52.58.159.50 ip4:3.11.129.102 ip4:34.242.156.53 ip4:52.4.156.8 ip4:34.251.63.7 ip4:52.64.32.126 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.50.129.119",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.174.209.165",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.16.75.109",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.16.75.118",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.16.38.44",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.16.49.62",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.79.0.4",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.182.195.41",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.85.129.207",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.22.249.69",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.197.43.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.93.104.220",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.209.231.65",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.206.143.108",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.157.192.122",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.132.189.127",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.65.244.27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.223.142.138",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.248.148.18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "107.20.91.250",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.96.249.213",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.58.159.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.11.129.102",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.242.156.53",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.4.156.8",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.251.63.7",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.64.32.126",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

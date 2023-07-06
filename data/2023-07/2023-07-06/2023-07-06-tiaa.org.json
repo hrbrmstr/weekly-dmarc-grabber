@@ -1,0 +1,322 @@
+{
+  "domain": "tiaa.org",
+  "base_domain": "tiaa.org",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a9-67.akam.net",
+      "nsb.tiaa-cref.org",
+      "nss.tiaa-cref.org",
+      "a12-64.akam.net",
+      "a28-65.akam.net",
+      "a10-67.akam.net",
+      "a5-66.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-smtp01.tiaa-cref.org",
+        "addresses": [
+          "143.165.61.75"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp02.tiaa-cref.org",
+        "addresses": [
+          "143.165.61.76"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp03.tiaa-cref.org",
+        "addresses": [
+          "143.165.161.75"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp04.tiaa-cref.org",
+        "addresses": [
+          "143.165.161.76"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "mx-smtp01.tiaa-cref.org: Connection timed out",
+      "SSL/TLS is not supported on mx-smtp02.tiaa-cref.org",
+      "SSL/TLS is not supported on mx-smtp03.tiaa-cref.org",
+      "SSL/TLS is not supported on mx-smtp04.tiaa-cref.org"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:143.165.49.33 ip4:143.165.144.33 ip4:68.233.76.14 ip4:162.218.215.73 ip4:162.218.215.74 ip4:162.218.213.107 ip4:162.218.213.108 ip4:199.200.24.213 ip4:198.245.94.211 ip4:198.245.94.212 ip4:72.55.140.81 ip4:5.61.117.80/28 ip4:5.61.117.96/27 include:_spf.qemailserver.com include:spf-001a3401.pphosted.com ~all",
+    "valid": true,
+    "dns_lookups": 3,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx-smtp01.tiaa-cref.org",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx-smtp02.tiaa-cref.org",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx-smtp03.tiaa-cref.org",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx-smtp04.tiaa-cref.org",
+          "mechanism": "mx"
+        },
+        {
+          "value": "143.165.49.33",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "143.165.144.33",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.233.76.14",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.218.215.73",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.218.215.74",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.218.213.107",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "162.218.213.108",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "199.200.24.213",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.245.94.211",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "198.245.94.212",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "72.55.140.81",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "5.61.117.80/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "5.61.117.96/27",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.qemailserver.com",
+          "record": "v=spf1 ip4:162.247.216.0/22 ip4:139.60.152.0/22 ip4:98.97.248.0/21 ip4:64.69.212.0/24 ip4:54.186.193.102/32 ip4:52.222.73.120/32 ip4:52.222.73.83 ip4:52.222.62.51 ip4:52.222.75.85 ip4:52.222.89.228 ip4:160.1.62.192 ip4:52.61.91.9 ip4:15.200.21.50 ip4:15.200.201.185 ip4:15.200.44.248 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "162.247.216.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "139.60.152.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "98.97.248.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.69.212.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.186.193.102/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.73.120/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.73.83",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.62.51",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.75.85",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.222.89.228",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "160.1.62.192",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.61.91.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.21.50",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.201.185",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "15.200.44.248",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-001a3401.pphosted.com",
+          "record": "v=spf1 ip4:67.231.157.11 ip4:67.231.149.30",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "67.231.157.11",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "67.231.149.30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:tiaa@rua.agari.com; ruf=mailto:tiaa@ruf.agari.com",
+    "valid": true,
+    "location": "tiaa.org",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

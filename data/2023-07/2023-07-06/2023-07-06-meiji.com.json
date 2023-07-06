@@ -1,0 +1,507 @@
+{
+  "domain": "meiji.com",
+  "base_domain": "meiji.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns101.sinfony.ad.jp",
+      "ns102.meiji.co.jp",
+      "ns101.meiji.co.jp",
+      "ns01.sinfony.ad.jp",
+      "ns102.sinfony.ad.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.165.175"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-00532c02.gslb.pphosted.com",
+        "addresses": [
+          "205.220.177.175"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00532c02.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00532c02.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.217.34.0/26 ip4:202.213.237.64/27 ip4:202.78.217.150 include:spf-00532c02.pphosted.com include:spf.meiji.smtps.jp include:mdronnygw.maildealer.jp include:spf.protection.outlook.com include:crmstyle.com ip4:202.219.122.202 ip4:210.144.91.0/24 include:smp.ne.jp ~all",
+    "valid": true,
+    "dns_lookups": 10,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.217.34.0/26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.213.237.64/27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.78.217.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "202.219.122.202",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "210.144.91.0/24",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf-00532c02.pphosted.com",
+          "record": "v=spf1 ip4:205.220.177.175 ip4:205.220.165.175",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "205.220.177.175",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "205.220.165.175",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.meiji.smtps.jp",
+          "record": "v=spf1 ip4:163.43.136.179 ip4:153.125.144.178 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "163.43.136.179",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "153.125.144.178",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "mdronnygw.maildealer.jp",
+          "record": "v=spf1 include:mdronny.maildealer.jp ~all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "mdronny.maildealer.jp",
+                "record": "v=spf1 mx include:spf.maildealer.jp ~all",
+                "dns_lookups": 2,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "mdronnymx.maildealer.jp",
+                      "mechanism": "mx"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "spf.maildealer.jp",
+                      "record": "v=spf1 ip4:150.66.55.197/32 ip4:58.191.47.9/32 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "150.66.55.197/32",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "58.191.47.9/32",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "crmstyle.com",
+          "record": "v=spf1 ip4:210.168.110.0/23 ip4:35.72.25.0/24 ip4:13.114.237.143 ip4:54.95.172.92 ip4:35.72.75.115 ip4:52.69.196.84 ip4:13.112.173.97 ip4:52.198.79.8 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.168.110.0/23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.72.25.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.114.237.143",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.95.172.92",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.72.75.115",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.69.196.84",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.112.173.97",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.198.79.8",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "smp.ne.jp",
+          "record": "v=spf1 +ip4:59.106.42.224/28 +ip4:210.188.229.224/27 +ip4:61.211.238.0/27 +ip4:61.211.237.192/26 +ip4:59.106.30.0/26 +ip4:59.106.116.96/27 +ip4:59.106.117.0/26 +ip4:210.188.245.160/27 +ip4:210.188.233.32/27 +ip4:59.106.37.128/26 +ip4:59.106.106.192/26 +ip4:59.106.4.64/26 +ip4:59.106.100.128/25 +ip4:59.106.149.0/26 +ip4:59.106.193.160/27 +ip4:59.106.147.128/27 +ip4:59.106.4.0/26 include:spf01.smp.ne.jp ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "59.106.42.224/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.229.224/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.238.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "61.211.237.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.30.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.116.96/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.117.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.245.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.188.233.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.37.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.106.192/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.64/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.100.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.149.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.193.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.147.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "59.106.4.0/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf01.smp.ne.jp",
+                "record": "v=spf1 +ip4:112.137.190.192/26 +ip4:112.140.38.192/26 +ip4:112.137.187.128/25 +ip4:180.214.52.0/24 +ip4:180.214.56.0/24 +ip4:202.222.20.40/29 +ip4:202.222.20.48/29 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "112.137.190.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.140.38.192/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "112.137.187.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.52.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "180.214.56.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.40/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "202.222.20.48/29",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@meiji-hpc.jp; ruf=mailto:dmarc@meiji-hpc.jp",
+    "valid": true,
+    "location": "meiji.com",
+    "warnings": [
+      "meiji-hpc.jp does not indicate that it accepts DMARC reports about meiji.com - Authorization record not found: meiji.com._report._dmarc.meiji-hpc.jp IN TXT \"v=DMARC1\"",
+      "meiji-hpc.jp does not indicate that it accepts DMARC reports about meiji.com - Authorization record not found: meiji.com._report._dmarc.meiji-hpc.jp IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@meiji-hpc.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@meiji-hpc.jp",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

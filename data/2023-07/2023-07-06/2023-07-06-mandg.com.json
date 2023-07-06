@@ -1,0 +1,321 @@
+{
+  "domain": "mandg.com",
+  "base_domain": "mandg.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "pdns2.cscdns.net",
+      "pdns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx1.hc1445-87.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.60.53",
+          "68.232.152.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 5,
+        "hostname": "mx2.hc1445-87.c3s2.iphmx.com",
+        "addresses": [
+          "139.138.60.53",
+          "68.232.152.65"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1.hc1445-87.c3s2.iphmx.com",
+      "SSL/TLS is not supported on mx2.hc1445-87.c3s2.iphmx.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a ip4:103.3.197.47 ip4:103.3.199.47 ip4:139.138.37.90 ip4:68.232.152.150 ip4:103.253.166.197 ip4:103.253.167.197 ip4:103.251.228.211 ip4:103.251.229.211 ip4:103.251.228.215 ip4:103.251.229.215 ip4:103.253.166.200 ip4:103.253.167.200 include:authsmtp.com include:eu.zcsend.net exists:%{i}.spf.hc1445-87.c3s2.iphmx.com ~all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1.hc1445-87.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2.hc1445-87.c3s2.iphmx.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "80.247.53.238",
+          "mechanism": "a"
+        },
+        {
+          "value": "103.3.197.47",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.3.199.47",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "139.138.37.90",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "68.232.152.150",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.253.166.197",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.253.167.197",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.251.228.211",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.251.229.211",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.251.228.215",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.251.229.215",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.253.166.200",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.253.167.200",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "%{i}.spf.hc1445-87.c3s2.iphmx.com",
+          "mechanism": "exists"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "authsmtp.com",
+          "record": "v=spf1 include:spf-a.authsmtp.com include:spf-b.authsmtp.com -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf-a.authsmtp.com",
+                "record": "v=spf1 ip4:62.13.128.0/24 ip4:62.13.129.128/25 ip4:62.13.136.0/22 ip4:62.13.140.0/22 ip4:62.13.144.0/22 ip4:62.13.148.0/23 ip4:62.13.150.0/23 ip4:62.13.152.0/23 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "62.13.128.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.129.128/25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.136.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.140.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.144.0/22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.148.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.150.0/23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "62.13.152.0/23",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf-b.authsmtp.com",
+                "record": "v=spf1 ip4:72.52.72.32/28 ip4:64.71.149.160/28 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "72.52.72.32/28",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "64.71.149.160/28",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "eu.zcsend.net",
+          "record": "v=spf1 ip4:31.186.226.160/27 ip4:185.20.211.0/25 ip4:185.172.199.0/25 ip4:91.103.152.0/26 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "31.186.226.160/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.20.211.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.172.199.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.103.152.0/26",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:dmarc.aggregated@mandg.com; ruf=mailto:dmarc.forensics@mandg.com; fo=0:d:s;",
+    "valid": true,
+    "location": "mandg.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.aggregated@mandg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc.forensics@mandg.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0",
+          "d",
+          "s"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

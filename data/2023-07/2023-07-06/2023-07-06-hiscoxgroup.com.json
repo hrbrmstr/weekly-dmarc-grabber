@@ -1,0 +1,52 @@
+{
+  "domain": "hiscoxgroup.com",
+  "base_domain": "hiscoxgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.netnames.net",
+      "ns6.netnames.net",
+      "ns5.netnames.net",
+      "ns2.netnames.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "relay1.netnames.net",
+        "addresses": [
+          "185.26.230.83"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "relay2.netnames.net",
+        "addresses": [
+          "185.26.230.89"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "relay1.netnames.net: Connection timed out",
+      "relay2.netnames.net: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "hiscoxgroup.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

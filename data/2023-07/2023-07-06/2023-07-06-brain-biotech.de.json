@@ -1,0 +1,422 @@
+{
+  "domain": "brain-biotech.de",
+  "base_domain": "brain-biotech.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns82.domaincontrol.com",
+      "ns81.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx1-eu.mtaroutes.com",
+        "addresses": [
+          "130.117.54.106",
+          "2001:978:2:19::e:100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2-eu.mtaroutes.com",
+        "addresses": [
+          "149.13.75.27",
+          "2001:978:2:7::162:100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx3-eu.mtaroutes.com",
+        "addresses": [
+          "130.117.53.188",
+          "2001:978:2:2c::137:100"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx4-eu.mtaroutes.com",
+        "addresses": [
+          "130.117.54.106",
+          "2001:978:2:19::e:100"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx1-eu.mtaroutes.com",
+      "SSL/TLS is not supported on mx2-eu.mtaroutes.com",
+      "SSL/TLS is not supported on mx3-eu.mtaroutes.com",
+      "SSL/TLS is not supported on mx4-eu.mtaroutes.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf.protection.outlook.com include:ispgateway.de include:spf.mtaroutes.com ip4:217.113.177.12 ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mx1-eu.mtaroutes.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx2-eu.mtaroutes.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx3-eu.mtaroutes.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mx4-eu.mtaroutes.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "217.113.177.12",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "ispgateway.de",
+          "record": "v=spf1 ip4:92.204.39.0/24 ip4:92.204.37.0/24 ip4:92.204.43.0/24 ip4:92.205.48.0/21 ip4:80.67.16.0/20 ip4:77.91.232.0/21 ip4:62.67.200.0/24 ip4:93.187.232.0/21 ip4:188.93.8.0/21 ip4:185.21.100.0/22 ip4:93.180.152.0/21 ip4:37.200.96.0/21 ip4:176.221.40.0/21 ip4:141.0.16.0/21 ip4:46.252.16.0/20 ip4:109.239.48.0/20 ip4:134.119.228.0/24 ip4:134.119.0.0/17 ip4:134.119.128.0/19 ip4:134.119.160.0/20 ip4:134.119.224.0/19 ip4:92.204.33.0/24 ip4:92.204.55.0/24 ip4:92.204.58.0/24 ip4:134.119.0.0/24 ip4:92.204.236.0/24 ip4:92.204.239.0/24 ip6:2001:1520:a:0:0:0:0:0/56 ip6:2a00:1158:0:300::/56 ip6:2a00:1158:400:1::/120 ip6:2a00:1158:5::/48 ip4:92.205.64.0/24 ip6:2a00:1158:0005:0800:0000:0000:0000:0000/56 ip6:2a00:1158:5:900::/56 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "92.204.39.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.37.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.43.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.205.48.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "80.67.16.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "77.91.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.67.200.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "93.187.232.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "188.93.8.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.21.100.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "93.180.152.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.200.96.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "176.221.40.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "141.0.16.0/21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.252.16.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "109.239.48.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.228.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.128.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.160.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.33.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.55.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.58.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "134.119.0.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.236.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "92.204.239.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:1520:a:0:0:0:0:0/56",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1158:0:300::/56",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1158:400:1::/120",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1158:5::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "92.205.64.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a00:1158:0005:0800:0000:0000:0000:0000/56",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a00:1158:5:900::/56",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.mtaroutes.com",
+          "record": "v=spf1 ip4:185.201.16.0/22 ip4:130.117.251.9 ip4:130.117.251.10 ip6:2001:1af8:4500:a034:101::2 ip6:2001:1af8:4400:a047:6::1 ip6:2604:9a00:2010:a024:21::1 ip6:2001:978:2:6::20:10 ip6:2001:978:2:6::20:a -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.201.16.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.117.251.9",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.117.251.10",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:1af8:4500:a034:101::2",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:1af8:4400:a047:6::1",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2604:9a00:2010:a024:21::1",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:978:2:6::20:10",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2001:978:2:6::20:a",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine;ruf=mailto:postmaster@brain-biotech.com; sp=none; fo=0:d:s; pct=100; adkim=r; aspf=r",
+    "valid": true,
+    "location": "brain-biotech.de",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found",
+      "brain-biotech.com does not indicate that it accepts DMARC reports about brain-biotech.de - Authorization record not found: brain-biotech.de._report._dmarc.brain-biotech.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "postmaster@brain-biotech.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0",
+          "d",
+          "s"
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}
