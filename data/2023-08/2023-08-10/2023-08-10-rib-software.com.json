@@ -1,0 +1,117 @@
+{
+  "domain": "rib-software.com",
+  "base_domain": "rib-software.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.delink.de",
+      "ns4.delink.de",
+      "ns1.delink.de",
+      "ns2.delink.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "ribsoftware-com0i.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.68.16",
+          "52.101.68.18",
+          "52.101.68.32",
+          "52.101.68.36",
+          "52.101.73.12",
+          "52.101.73.15",
+          "52.101.73.8"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "52.101.68.16 does not have any reverse DNS (PTR) records",
+      "52.101.68.18 does not have any reverse DNS (PTR) records",
+      "52.101.68.32 does not have any reverse DNS (PTR) records",
+      "52.101.68.36 does not have any reverse DNS (PTR) records",
+      "52.101.73.12 does not have any reverse DNS (PTR) records",
+      "52.101.73.15 does not have any reverse DNS (PTR) records",
+      "52.101.73.8 does not have any reverse DNS (PTR) records",
+      "ribsoftware-com0i.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 3.600 seconds: Server Do53:127.0.0.53@53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:dmarc-aggregate@rib-software.com; ruf=mailto:dmarc-forensik@rib-software.com; fo=0; adkim=r; aspf=r; pct=100; rf=afrf; ri=86400",
+    "valid": true,
+    "location": "rib-software.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-aggregate@rib-software.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-forensik@rib-software.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

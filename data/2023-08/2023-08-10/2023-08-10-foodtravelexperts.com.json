@@ -1,0 +1,311 @@
+{
+  "domain": "foodtravelexperts.com",
+  "base_domain": "foodtravelexperts.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1042.ui-dns.biz",
+      "ns1042.ui-dns.com",
+      "ns1042.ui-dns.de",
+      "ns1042.ui-dns.org"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mta-st1.ssp-intl.com",
+        "addresses": [
+          "35.180.153.103"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mta-st2.ssp-intl.com",
+        "addresses": [
+          "35.180.107.254"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mta-st1.ssp-intl.com",
+      "SSL/TLS is not supported on mta-st2.ssp-intl.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mx1.ssp-intl.com a:mx2.ssp-intl.com a:eu-mail.myssp.org include:spf.mercury.ssp-intl.com include:_spf-dc12.successfactors.com include:spf.protection.outlook.com -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "mta-st1.ssp-intl.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "mta-st2.ssp-intl.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "82.71.212.113",
+          "mechanism": "a"
+        },
+        {
+          "value": "82.71.212.114",
+          "mechanism": "a"
+        },
+        {
+          "value": "88.98.183.129",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.mercury.ssp-intl.com",
+          "record": "v=spf1 ip4:51.105.122.76 ip4:51.138.43.55 ip4:51.138.46.146 ip4:20.224.134.206 ip4:51.136.109.191 ip4:51.138.185.181 ip4:51.138.185.176 ip4:20.61.3.217 ip4:51.138.185.170 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.105.122.76",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.138.43.55",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.138.46.146",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.224.134.206",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.136.109.191",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.138.185.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.138.185.176",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.61.3.217",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.138.185.170",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-dc12.successfactors.com",
+          "record": "v=spf1 ip4:155.56.221.13/32 ip4:155.56.221.14/32 ip4:155.56.220.141/32 ip4:155.56.220.142/32 ip4:155.56.221.15/32 ip4:155.56.221.16/32 ip4:155.56.222.26/32 ip4:155.56.222.27/32 ip4:130.214.193.83/32 ip4:130.214.193.93/32 ip4:130.214.193.78/32 ip4:130.214.193.85/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "155.56.221.13/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.14/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.141/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.15/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.16/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.26/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.27/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.83/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.93/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.78/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.85/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_agg@vali.email",
+    "valid": true,
+    "location": "foodtravelexperts.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_agg@vali.email",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "domain": "coats.com",
+  "base_domain": "coats.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.comlaude-dns.com",
+      "dns2.comlaude-dns.net",
+      "dns3.comlaude-dns.co.uk",
+      "dns4.comlaude-dns.eu"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "coats-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.11.10",
+          "52.101.11.7",
+          "52.101.11.9",
+          "52.101.40.2",
+          "52.101.40.24",
+          "52.101.42.10",
+          "52.101.42.13",
+          "52.101.42.4"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "52.101.11.10 does not have any reverse DNS (PTR) records",
+      "52.101.11.7 does not have any reverse DNS (PTR) records",
+      "52.101.11.9 does not have any reverse DNS (PTR) records",
+      "52.101.40.2 does not have any reverse DNS (PTR) records",
+      "52.101.40.24 does not have any reverse DNS (PTR) records",
+      "52.101.42.10 does not have any reverse DNS (PTR) records",
+      "52.101.42.13 does not have any reverse DNS (PTR) records",
+      "52.101.42.4 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on coats-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "coats.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

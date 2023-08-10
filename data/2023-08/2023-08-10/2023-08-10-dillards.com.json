@@ -1,0 +1,119 @@
+{
+  "domain": "dillards.com",
+  "base_domain": "dillards.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a10-66.akam.net",
+      "a1-207.akam.net",
+      "a8-66.akam.net",
+      "a5-65.akam.net",
+      "a13-67.akam.net",
+      "a14-64.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 45,
+        "hostname": "mxa-00085101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.153.65"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 45,
+        "hostname": "mxb-00085101.gslb.pphosted.com",
+        "addresses": [
+          "67.231.145.91"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-00085101.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-00085101.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:199.16.132.249 ip4:199.16.132.250 ip4:199.16.132.252 ip4:67.231.145.91 ip4:67.231.153.65 ip4:199.66.223.0/24 ip4:199.115.76.0/24 include:_spf.google.com include:spf.sabre.com include:_spf.elasticemail.com include:mercurygate.net ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [
+      "SPF type DNS records found. Use of DNS Type SPF has been removed in the standards track version of SPF, RFC 7208. These records should be removed and replaced with TXT records: v=spf1 a mx include:_spf.elasticemail.com -all"
+    ],
+    "error": "The domain %{ir}.%{v}.%{d}.spf.has.pphosted.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "dillards.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

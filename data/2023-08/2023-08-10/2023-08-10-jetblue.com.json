@@ -1,0 +1,124 @@
+{
+  "domain": "jetblue.com",
+  "base_domain": "jetblue.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns04.jetbluedns.com",
+      "ns01.jetbluedns.com",
+      "dns3.p08.nsone.net",
+      "ns03.jetbluedns.com",
+      "dns1.p08.nsone.net",
+      "dns2.p08.nsone.net",
+      "dns4.p08.nsone.net",
+      "ns02.jetbluedns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jetblue-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.11.10",
+          "52.101.11.3",
+          "52.101.11.9",
+          "52.101.40.1",
+          "52.101.40.2",
+          "52.101.40.4",
+          "52.101.42.4",
+          "52.101.42.6"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "52.101.11.10 does not have any reverse DNS (PTR) records",
+      "52.101.11.3 does not have any reverse DNS (PTR) records",
+      "52.101.11.9 does not have any reverse DNS (PTR) records",
+      "52.101.40.1 does not have any reverse DNS (PTR) records",
+      "52.101.40.2 does not have any reverse DNS (PTR) records",
+      "52.101.40.4 does not have any reverse DNS (PTR) records",
+      "52.101.42.4 does not have any reverse DNS (PTR) records",
+      "52.101.42.6 does not have any reverse DNS (PTR) records",
+      "SSL/TLS is not supported on jetblue-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.e3.spf-protect.agari.com include:servers.mcsv.net include:spf6.jetblue.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.e3.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; ri=3600; rua=mailto:jetblue@rua.agari.com; ruf=mailto:jetblue@ruf.agari.com",
+    "valid": true,
+    "location": "jetblue.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "jetblue@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

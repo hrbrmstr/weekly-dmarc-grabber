@@ -1,0 +1,51 @@
+{
+  "domain": "thewosgroupplc.com",
+  "base_domain": "thewosgroupplc.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns71.domaincontrol.com",
+      "ns72.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx0.123-reg.co.uk",
+        "addresses": [
+          "94.136.40.235"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx1.123-reg.co.uk",
+        "addresses": [
+          "94.136.40.236"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "94.136.40.235 does not have any reverse DNS (PTR) records",
+      "mx0.123-reg.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx0.123-reg.co.uk'. (_ssl.c:1002)",
+      "mx1.123-reg.co.uk: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mx1.123-reg.co.uk'. (_ssl.c:1002)"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "thewosgroupplc.com does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

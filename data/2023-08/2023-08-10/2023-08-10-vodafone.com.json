@@ -1,0 +1,288 @@
+{
+  "domain": "vodafone.com",
+  "base_domain": "vodafone.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.vodafone.com",
+      "ns5.vodafone.com",
+      "ns3.vodafone.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "vodafone-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.138",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on vodafone-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:195.232.248.108/30 ip4:178.249.98.16/29 include:spf2.vodafone.com ip4:203.109.136.0/24 ip4:65.254.253.0/24 ip4:195.232.248.240/28 ip4:195.232.245.160/28 include:spf1.vodafone.com ~all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "195.232.248.108/30",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "178.249.98.16/29",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.109.136.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "65.254.253.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.232.248.240/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "195.232.245.160/28",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf2.vodafone.com",
+          "record": "v=spf1 include:spf.protection.outlook.com ip4:195.232.244.46/31 ip4:195.232.244.48/30 ip4:47.73.211.204/30 ip4:47.73.211.208/29 ip4:37.25.165.15 ip4:37.25.165.16/30 ip4:37.25.165.20 ip4:46.108.15.204/30 ip4:46.108.15.208/30 ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.232.244.46/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "195.232.244.48/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "47.73.211.204/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "47.73.211.208/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.25.165.15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.25.165.16/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.25.165.20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.108.15.204/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "46.108.15.208/30",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf1.vodafone.com",
+          "record": "v=spf1 ip4:202.162.224.0/19 ip4:175.158.64.0/19 ip4:38.133.153.128/26 ip4:5.61.115.0/24 exists:%{i}._spf.vodafone.com ~all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "202.162.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "175.158.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "38.133.153.128/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "5.61.115.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "%{i}._spf.vodafone.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; rua=mailto:adeeb5c538f9684@rep.dmarcanalyzer.com; ruf=mailto:adeeb5c538f9684@for.dmarcanalyzer.com; pct=100; sp=none; fo=1",
+    "valid": true,
+    "location": "vodafone.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "adeeb5c538f9684@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "sp": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

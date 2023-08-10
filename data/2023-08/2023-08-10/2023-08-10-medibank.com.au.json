@@ -1,0 +1,361 @@
+{
+  "domain": "medibank.com.au",
+  "base_domain": "medibank.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns3.medibank.com.au",
+      "ns4.medibank.com.au",
+      "ns2.medibank.com.au",
+      "ns1.medibank.com.au"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.188"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-0021ed01.gslb.pphosted.com",
+        "addresses": [
+          "185.132.181.179"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-0021ed01.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-0021ed01.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:202.4.183.0/24 ip4:203.41.57.145 ip4:203.41.57.144 ip4:203.41.57.147 ip4:203.38.232.46 ip4:203.9.146.33 ip4:203.41.198.130 ip4:203.41.252.4 ip4:103.247.118.1 ip4:103.247.118.199 ip4:103.23.65.2 ip4:103.23.66.26 ip4:103.23.67.26 ip4:103.23.64.2 include:amazonses.com include:spf-0021ed01.pphosted.com include:maildelivery.com.au include:_spf-dc10.sapsf.com ip4:140.238.200.94 ip4:168.138.109.26 ip4:146.20.113.19 -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "202.4.183.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.145",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.144",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.57.147",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.38.232.46",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.9.146.33",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.198.130",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "203.41.252.4",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.247.118.1",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.247.118.199",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.65.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.66.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.67.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "103.23.64.2",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "140.238.200.94",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "168.138.109.26",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "146.20.113.19",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "amazonses.com",
+          "record": "v=spf1 ip4:199.255.192.0/22 ip4:199.127.232.0/22 ip4:54.240.0.0/18 ip4:69.169.224.0/20 ip4:23.249.208.0/20 ip4:23.251.224.0/19 ip4:76.223.176.0/20 ip4:54.240.64.0/19 ip4:54.240.96.0/19 ip4:52.82.172.0/22 ip4:76.223.128.0/19 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "199.255.192.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "199.127.232.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.0.0/18",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "69.169.224.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.249.208.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.251.224.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.176.0/20",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.64.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.240.96.0/19",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.82.172.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "76.223.128.0/19",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf-0021ed01.pphosted.com",
+          "record": "v=spf1 ip4:185.132.181.179 ip4:185.183.29.188",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.132.181.179",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.183.29.188",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "maildelivery.com.au",
+          "record": "v=spf1 ip4:118.127.20.128/25 ip4:103.69.164.0/22 ?all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "118.127.20.128/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "103.69.164.0/22",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "neutral"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-dc10.sapsf.com",
+          "record": "v=spf1 ip4:210.80.140.141/32 ip4:210.80.140.142/32 ip4:20.5.80.155/32 ip4:20.5.82.25/32 ip4:20.70.69.44/32 ip4:20.70.71.99/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "210.80.140.141/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "210.80.140.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.5.80.155/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.5.82.25/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.70.69.44/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "20.70.71.99/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:itoperations@medibank.com.au; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:itoperations@medibank.com.au",
+    "valid": true,
+    "location": "medibank.com.au",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "itoperations@medibank.com.au",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

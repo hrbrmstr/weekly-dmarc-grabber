@@ -1,0 +1,124 @@
+{
+  "domain": "cewecolor.de",
+  "base_domain": "cewecolor.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns02.cewedigital.de",
+      "dns01.cewedigital.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx01.hornetsecurity.com",
+        "addresses": [
+          "94.100.132.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 20,
+        "hostname": "mx02.hornetsecurity.com",
+        "addresses": [
+          "94.100.136.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 30,
+        "hostname": "mx03.hornetsecurity.com",
+        "addresses": [
+          "94.100.134.8"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mx04.hornetsecurity.com",
+        "addresses": [
+          "94.100.136.7"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx01.hornetsecurity.com",
+      "SSL/TLS is not supported on mx02.hornetsecurity.com",
+      "SSL/TLS is not supported on mx03.hornetsecurity.com",
+      "SSL/TLS is not supported on mx04.hornetsecurity.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "cewecolor.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": "v=DMARC1;p=quarantine;pct=100;rua=mailto:ol-usa-admins@cewe.de",
+    "valid": true,
+    "location": "cewecolor.de",
+    "warnings": [
+      "cewe.de does not indicate that it accepts DMARC reports about cewecolor.de - Authorization record not found: cewecolor.de._report._dmarc.cewe.de IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "ol-usa-admins@cewe.de",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

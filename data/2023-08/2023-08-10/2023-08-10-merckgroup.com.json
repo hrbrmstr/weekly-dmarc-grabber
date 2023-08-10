@@ -1,0 +1,117 @@
+{
+  "domain": "merckgroup.com",
+  "base_domain": "merckgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns01.brandshelter.com",
+      "ns02.brandshelter.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mxa-005f4802.gslb.pphosted.com",
+        "addresses": [
+          "205.220.184.35"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mxb-005f4802.gslb.pphosted.com",
+        "addresses": [
+          "185.183.29.243"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mxa-005f4802.gslb.pphosted.com",
+      "SSL/TLS is not supported on mxb-005f4802.gslb.pphosted.com"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server Do53:127.0.0.53@53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; sp=quarantine; fo=1; rua=mailto:b4wunsj437@rua.powerdmarc.com, mailto:dmarc-report@merckgroup.com; ruf=mailto:dmarc-report@merckgroup.com",
+    "valid": true,
+    "location": "merckgroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "b4wunsj437@rua.powerdmarc.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc-report@merckgroup.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

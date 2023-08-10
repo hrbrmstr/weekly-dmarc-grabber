@@ -1,0 +1,52 @@
+{
+  "domain": "wackerneuson.com",
+  "base_domain": "wackerneuson.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.ganag.com",
+      "ns2.ganag.com",
+      "ns3.ganag.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu.wackerneuson.com",
+        "addresses": [
+          "217.239.254.250"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mail.wackerneuson.com",
+        "addresses": [
+          "62.159.40.19"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "eu.wackerneuson.com: Connection timed out",
+      "mail.wackerneuson.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:209.83.61.154/32 ip4:80.120.0.128/28 ip4:12.21.94.99/32 ip4:4.16.39.192/26 ip4:217.239.254.250/32 ip4:62.159.40.0/27 ip4:213.155.74.0/24 include:indivsurvey.de include:spf.de.umantis.com include:mailing.eqs.com mx:indivsurvey.de ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The resolution lifetime expired after 2.200 seconds: Server Do53:127.0.0.53@53 answered The DNS operation timed out."
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

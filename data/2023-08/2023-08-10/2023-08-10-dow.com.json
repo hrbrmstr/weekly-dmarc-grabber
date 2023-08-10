@@ -1,0 +1,94 @@
+{
+  "domain": "dow.com",
+  "base_domain": "dow.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mantdnsi1.dow.com",
+      "tnntdnsi1.dow.com",
+      "txntdnsi1.dow.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "dow-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.73.138",
+          "104.47.74.10"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "dow-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 3.500 seconds: Server Do53:127.0.0.53@53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; rua=mailto:fglsmtp@dow.com",
+    "valid": true,
+    "location": "dow.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fglsmtp@dow.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

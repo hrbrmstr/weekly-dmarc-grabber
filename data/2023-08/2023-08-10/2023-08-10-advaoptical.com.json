@@ -1,0 +1,226 @@
+{
+  "domain": "advaoptical.com",
+  "base_domain": "advaoptical.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth04.ns.de.uu.net",
+      "auth54.ns.de.uu.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "194.104.110.22",
+          "51.163.159.22"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "194.104.110.22",
+          "51.163.159.22"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on de-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on de-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:gateway-3.inoc.com a:gateway-4.inoc.com ip4:104.41.226.221 ip4:40.70.147.12 include:_spf.salesforce.com include:de._netblocks.mimecast.com ~all",
+    "valid": true,
+    "dns_lookups": 6,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "de-smtp-inbound-1.mimecast.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "de-smtp-inbound-2.mimecast.com",
+          "mechanism": "mx"
+        },
+        {
+          "value": "208.70.84.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "208.70.85.7",
+          "mechanism": "a"
+        },
+        {
+          "value": "104.41.226.221",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "40.70.147.12",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.salesforce.com",
+          "record": "v=spf1 exists:%{i}._spf.mta.salesforce.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "%{i}._spf.mta.salesforce.com",
+                "mechanism": "exists"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "de._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:51.163.158.0/24 ip4:194.104.109.0/24 ip4:194.104.111.0/24 ip4:51.163.159.21/32 ip4:194.104.110.21/32 ip4:194.104.110.240/28 ip4:62.140.10.21/32 ip4:62.140.7.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "51.163.158.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.109.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.111.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "51.163.159.21/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.110.21/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "194.104.110.240/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.140.10.21/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.140.7.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@adva.com;ruf=mailto:dmarc_ruf@adva.com",
+    "valid": true,
+    "location": "advaoptical.com",
+    "warnings": [
+      "adva.com does not indicate that it accepts DMARC reports about advaoptical.com - Authorization record not found: advaoptical.com._report._dmarc.adva.com IN TXT \"v=DMARC1\"",
+      "adva.com does not indicate that it accepts DMARC reports about advaoptical.com - Authorization record not found: advaoptical.com._report._dmarc.adva.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@adva.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@adva.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

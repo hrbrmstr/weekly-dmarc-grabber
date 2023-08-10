@@ -1,0 +1,124 @@
+{
+  "domain": "manpowergroup.com",
+  "base_domain": "manpowergroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ulla.ns.cloudflare.com",
+      "rocky.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "194.104.110.22",
+          "51.163.159.22"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "de-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "194.104.110.22",
+          "51.163.159.22"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "de-smtp-inbound-1.mimecast.com: Connection timed out",
+      "de-smtp-inbound-2.mimecast.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 16.400 seconds: Server Do53:127.0.0.53@53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:fb26d7ff24f5417@rep.dmarcanalyzer.com,mailto:90a5d11b@inbox.ondmarc.com; ruf=mailto:fb26d7ff24f5417@for.dmarcanalyzer.com,mailto:90a5d11b@inbox.ondmarc.com; fo=1; sp=reject;",
+    "valid": true,
+    "location": "manpowergroup.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb26d7ff24f5417@rep.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "90a5d11b@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "fb26d7ff24f5417@for.dmarcanalyzer.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "90a5d11b@inbox.ondmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      }
+    }
+  }
+}

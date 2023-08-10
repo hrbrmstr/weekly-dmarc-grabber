@@ -1,0 +1,122 @@
+{
+  "domain": "jumbointeractive.com",
+  "base_domain": "jumbointeractive.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns1.benon.com",
+      "ns2.benon.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mail.benon.com",
+        "addresses": [
+          "203.221.177.25"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mail.benon.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:203.221.177.0/24 ip4:34.151.87.27 a mx ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "203.221.177.0/24",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.151.87.27",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "34.151.87.27",
+          "mechanism": "a"
+        },
+        {
+          "value": "mail.benon.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc@benon.com",
+    "valid": true,
+    "location": "jumbointeractive.com",
+    "warnings": [
+      "benon.com does not indicate that it accepts DMARC reports about jumbointeractive.com - Authorization record not found: jumbointeractive.com._report._dmarc.benon.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@benon.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

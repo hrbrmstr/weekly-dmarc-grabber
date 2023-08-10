@@ -1,0 +1,152 @@
+{
+  "domain": "tiaa.org",
+  "base_domain": "tiaa.org",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "a9-67.akam.net",
+      "a28-65.akam.net",
+      "a1-88.akam.net",
+      "cltb.tiaa-cref.org",
+      "nss.tiaa-cref.org",
+      "a5-66.akam.net",
+      "nsb.tiaa-cref.org",
+      "a12-64.akam.net",
+      "a10-67.akam.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx-smtp01.tiaa-cref.org",
+        "addresses": [
+          "143.165.61.75"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp02.tiaa-cref.org",
+        "addresses": [
+          "143.165.61.76"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp03.tiaa-cref.org",
+        "addresses": [
+          "143.165.161.75"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx-smtp04.tiaa-cref.org",
+        "addresses": [
+          "143.165.161.76"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mx-smtp01.tiaa-cref.org",
+      "SSL/TLS is not supported on mx-smtp02.tiaa-cref.org",
+      "SSL/TLS is not supported on mx-smtp03.tiaa-cref.org",
+      "SSL/TLS is not supported on mx-smtp04.tiaa-cref.org"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1mxip4:143.165.49.33ip4:143.165.144.33ip4:68.233.76.14ip4:162.218.215.73ip4:162.218.215.74ip4:162.218.213.107ip4:162.218.213.108ip4:199.200.24.213ip4:198.245.94.211ip4:198.245.94.212ip4:72.55.140.81ip4:5.61.117.80/28ip4:5.61.117.96/27include:_spf.qemailserver.cominclude:spf-001a3401.pphosted.cominclude:cust-spf.exacttarget.com~all",
+    "valid": true,
+    "dns_lookups": 1,
+    "dns_void_lookups": 0,
+    "warnings": [
+      "A DNS name is > 255 octets long."
+    ],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; fo=1; ri=3600; rua=mailto:tiaa@rua.agari.com; ruf=mailto:tiaa@ruf.agari.com",
+    "valid": true,
+    "location": "tiaa.org",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "tiaa@ruf.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "domain": "sap.com",
+  "base_domain": "sap.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns.sap-ag.de",
+      "ns2.sap-ag.de",
+      "ns4.sap-ag.de",
+      "ns5.sap.com",
+      "ns2.sap.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "sap-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.51.138",
+          "104.47.51.202"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "sap-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "The resolution lifetime expired after 14.100 seconds: Server Do53:127.0.0.53@53 answered "
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; pct=100; adkim=s; aspf=s; rua=mailto:mailauth-reports@sap.com",
+    "valid": true,
+    "location": "sap.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "pct": {
+        "value": 100,
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "aspf": {
+        "value": "s",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "mailauth-reports@sap.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}

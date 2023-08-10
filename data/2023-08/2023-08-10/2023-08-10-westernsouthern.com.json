@@ -1,0 +1,240 @@
+{
+  "domain": "westernsouthern.com",
+  "base_domain": "westernsouthern.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "cbru.br.ns.els-gms.att.net",
+      "cmtu.mt.ns.els-gms.att.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "westernsouthern-com.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.58.110",
+          "104.47.70.110"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on westernsouthern-com.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:jcb66cr5mv.powerspf.com ~all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "jcb66cr5mv.powerspf.com",
+          "record": "v=spf1 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 ip4:52.100.0.0/14 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:104.47.0.0/17 ip4:216.230.14.0/24 ip4:208.185.229.0/24 ip4:208.109.80.0/24 ip4:204.239.0.0/24 ip4:198.37.147.0/24 ip4:198.207.147.0/24 ip4:192.235.102.0/24 ip4:147.160.167.14/31 ip4:52.49.235.189 ip4:52.49.201.246 ip4:23.21.109.212 ip4:23.21.109.197 include:_s1.jcb66cr5mv.powerspf.com -all",
+          "dns_lookups": 1,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.230.14.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.185.229.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "208.109.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "204.239.0.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.37.147.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "198.207.147.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "192.235.102.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.160.167.14/31",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.235.189",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.49.201.246",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.21.109.212",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "23.21.109.197",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_s1.jcb66cr5mv.powerspf.com",
+                "record": "v=spf1 ip4:207.242.44.108 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "207.242.44.108",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:46gi71fy8t@rua.powerdmarc.com; ruf=mailto:46gi71fy8t@ruf.powerdmarc.com; fo=1;",
+    "valid": true,
+    "location": "westernsouthern.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "46gi71fy8t@rua.powerdmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "46gi71fy8t@ruf.powerdmarc.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

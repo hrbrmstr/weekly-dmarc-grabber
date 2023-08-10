@@ -1,0 +1,515 @@
+{
+  "domain": "albertsonscompanies.com",
+  "base_domain": "albertsonscompanies.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns6.safeway.com",
+      "ns8.safeway.com",
+      "ns7.safeway.com",
+      "ns5.safeway.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 0,
+        "hostname": "albertsonscompanies-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.11.3",
+          "52.101.40.1",
+          "52.101.40.4",
+          "52.101.40.6",
+          "52.101.42.6",
+          "52.101.42.9"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "52.101.11.3 does not have any reverse DNS (PTR) records",
+      "52.101.40.1 does not have any reverse DNS (PTR) records",
+      "52.101.40.4 does not have any reverse DNS (PTR) records",
+      "52.101.40.6 does not have any reverse DNS (PTR) records",
+      "52.101.42.6 does not have any reverse DNS (PTR) records",
+      "albertsonscompanies-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:_spf-f.safeway.com include:_spf-g.safeway.com -all",
+    "valid": true,
+    "dns_lookups": 7,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "albertsonscompanies-com.mail.protection.outlook.com",
+          "mechanism": "mx"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf-f.safeway.com",
+          "record": "v=spf1 include:spf.protection.outlook.com ip4:167.146.140.73/29 ip4:167.146.43.157/30 ip4:54.203.145.119 ip4:54.214.102.231 ip4:54.70.130.241 ip4:52.154.157.87 ip4:52.177.249.231 include:gateways.firstdata.com ip4:13.83.240.52 -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "167.146.140.73/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "167.146.43.157/30",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.203.145.119",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.214.102.231",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.70.130.241",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.154.157.87",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.177.249.231",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.83.240.52",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "gateways.firstdata.com",
+                "record": "v=spf1 ip4:208.72.249.0/24 ip4:208.72.254.8/29 ip4:216.66.216.4 ip4:216.66.217.0/24 ip4:216.66.222.8/29 ip4:217.73.36.32/27 ip4:217.73.38.56/30 ip4:65.245.16.9 ip4:66.55.99.48 ip4:216.66.216.181 ip4:208.72.254.19 ip4:208.72.254.20 ip4:216.66.222.24/31 ip4:203.17.34.42 ip4:193.254.223.48/31 ip4:195.160.171.121 ip4:193.29.39.1 ip4:193.25.161.182/31 ip4:217.73.38.250/31 ip4:217.73.37.0/29 ip4:8.9.224.25 ip4:8.9.224.26 ip4:50.58.10.176/31 ip4:50.58.10.183 ip4:216.66.216.9 ip4:216.66.216.248 ip4:216.66.219.166 ip4:208.72.254.25 ip4:216.66.222.31 ip4:216.66.222.28/30 ip4:204.95.150.229 ip4:204.95.150.228 ip4:8.9.224.39 ip4:8.9.224.40 ip4:205.220.175.22 ip4:205.220.163.23 ip4:148.163.144.155 ip4:148.163.140.173 ip4:205.220.170.15 ip4:205.220.182.15 ip4:148.163.144.179 ip4:148.163.140.186 ip4:148.163.140.179 ip4:148.163.144.176 ip4:205.220.185.112 ip4:143.55.144.103 ip4:148.163.133.241 ip4:148.163.137.241 ~all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "208.72.249.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.72.254.8/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.216.4",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.217.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.222.8/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "217.73.36.32/27",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "217.73.38.56/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "65.245.16.9",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "66.55.99.48",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.216.181",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.72.254.19",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.72.254.20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.222.24/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "203.17.34.42",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.254.223.48/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "195.160.171.121",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.29.39.1",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "193.25.161.182/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "217.73.38.250/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "217.73.37.0/29",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "8.9.224.25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "8.9.224.26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.58.10.176/31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "50.58.10.183",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.216.9",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.216.248",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.219.166",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "208.72.254.25",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.222.31",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.66.222.28/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.95.150.229",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "204.95.150.228",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "8.9.224.39",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "8.9.224.40",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.220.175.22",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.220.163.23",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.144.155",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.140.173",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.220.170.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.220.182.15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.144.179",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.140.186",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.140.179",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.144.176",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "205.220.185.112",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "143.55.144.103",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.133.241",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "148.163.137.241",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-g.safeway.com",
+          "record": "v=spf1 a:smtp3.corrigo.com a:smtp4.corrigo.com ip4:76.225.28.200/26 ip4:216.39.100.150/28 ip4:64.51.232.251/32 ip4:52.22.5.15 ip4:34.197.206.27 ip4:34.234.7.99 ip4:152.67.231.146 ip4:152.67.229.23 ip4:129.152.47.16/28 ip4:13.83.244.28 -all",
+          "dns_lookups": 2,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "130.250.135.135",
+                "mechanism": "a"
+              },
+              {
+                "value": "130.250.135.134",
+                "mechanism": "a"
+              },
+              {
+                "value": "76.225.28.200/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "216.39.100.150/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "64.51.232.251/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.22.5.15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.197.206.27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "34.234.7.99",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "152.67.231.146",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "152.67.229.23",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "129.152.47.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.83.244.28",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none; rua=mailto:dmarc_rua@Albertsons.com; ruf=mailto:dmarc_ruf@Albertsons.com;fo=1",
+    "valid": true,
+    "location": "albertsonscompanies.com",
+    "warnings": [
+      "albertsons.com does not indicate that it accepts DMARC reports about albertsonscompanies.com - Authorization record not found: albertsonscompanies.com._report._dmarc.albertsons.com IN TXT \"v=DMARC1\"",
+      "albertsons.com does not indicate that it accepts DMARC reports about albertsonscompanies.com - Authorization record not found: albertsonscompanies.com._report._dmarc.albertsons.com IN TXT \"v=DMARC1\""
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@Albertsons.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@Albertsons.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}
