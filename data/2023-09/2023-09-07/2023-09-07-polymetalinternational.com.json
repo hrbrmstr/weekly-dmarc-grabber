@@ -1,0 +1,85 @@
+{
+  "domain": "polymetalinternational.com",
+  "base_domain": "polymetalinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns0.phase8.net",
+      "ns2.phase8.net",
+      "ns1.phase8.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mx.polymetalinternational.com",
+        "addresses": [
+          "91.185.4.46"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx1.polymetalinternational.com",
+        "addresses": [
+          "87.255.220.134"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx.polymetalinternational.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1002)",
+      "mx1.polymetalinternational.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1002)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:91.185.4.46 ip4:87.255.220.134 ip4:91.219.204.104 a:smtp.polymetalinternational.com a:smtp.polymetal.ru -all",
+    "valid": true,
+    "dns_lookups": 2,
+    "dns_void_lookups": 0,
+    "warnings": [
+      "The resolution lifetime expired after 2.100 seconds: Server Do53:127.0.0.53@53 answered The DNS operation timed out."
+    ],
+    "parsed": {
+      "pass": [
+        {
+          "value": "91.185.4.46",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "87.255.220.134",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "91.219.204.104",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "87.255.220.134",
+          "mechanism": "a"
+        },
+        {
+          "value": "91.185.4.46",
+          "mechanism": "a"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

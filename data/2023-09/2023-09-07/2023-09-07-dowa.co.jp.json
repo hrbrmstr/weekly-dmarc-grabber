@@ -1,0 +1,435 @@
+{
+  "domain": "dowa.co.jp",
+  "base_domain": "dowa.co.jp",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "mns02.ucom.ne.jp",
+      "mns01.ucom.ne.jp"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "dowa-co-jp.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.23.138",
+          "104.47.23.74"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on dowa-co-jp.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.mta.hdems.com include:spf.protection.outlook.com include:dowa-electronics.co.jp +ip4:122.210.136.160/19 +ip4:101.102.212.102/32 +ip4:101.102.203.184/25 +ip4:165.76.187.0/19 +ip4:126.249.131.40/19 +ip4:180.131.77.128/28 +ip4:180.131.67.101/32 +ip4:183.181.79.131/32 ~all",
+    "valid": true,
+    "dns_lookups": 9,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "122.210.136.160/19",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "101.102.212.102/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "101.102.203.184/25",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "165.76.187.0/19",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "126.249.131.40/19",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "180.131.77.128/28",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "180.131.67.101/32",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "183.181.79.131/32",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.mta.hdems.com",
+          "record": "v=spf1 ip4:52.199.63.160/28 ip4:52.198.247.240/28 ip4:13.115.104.32/29 ip4:18.179.48.80/29 ip4:3.112.23.16/28 ip4:3.112.23.32/27 ip4:3.113.218.80/28 ip4:18.176.203.64/27 ip4:35.78.62.0/26 ip4:54.248.223.224/29 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "52.199.63.160/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.198.247.240/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "13.115.104.32/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.179.48.80/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.23.16/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.112.23.32/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "3.113.218.80/28",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "18.176.203.64/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "35.78.62.0/26",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "54.248.223.224/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.protection.outlook.com",
+          "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "40.92.0.0/15",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "40.107.0.0/16",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "52.100.0.0/14",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "104.47.0.0/17",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2a01:111:f400::/48",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403::/49",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:8000::/50",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:c000::/51",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "2a01:111:f403:f000::/52",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "dowa-electronics.co.jp",
+          "record": "v=spf1 a include:_spf.bizmw.com ~all",
+          "dns_lookups": 6,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "61.112.37.36",
+                "mechanism": "a"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "_spf.bizmw.com",
+                "record": "v=spf1 include:mailgwmwb-spf.ocn.ad.jp include:spf.moweb.jp ~all",
+                "dns_lookups": 4,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "mailgwmwb-spf.ocn.ad.jp",
+                      "record": "v=spf1 include:mailgwmwb-spf1.ocn.ad.jp include:mailgwmwb-spf2.ocn.ad.jp ~all",
+                      "dns_lookups": 2,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [
+                          {
+                            "domain": "mailgwmwb-spf1.ocn.ad.jp",
+                            "record": "v=spf1 ip4:153.138.237.0/26 ip4:153.138.238.0/26 ip4:210.154.212.0/26 ip4:210.154.213.0/26 ip4:210.154.214.0/26 ip4:210.154.215.0/26 ip4:210.154.224.0/26 ip4:210.154.225.0/26 ip4:210.227.230.0/26 ip4:210.227.231.0/26 ip4:210.154.211.0/27 ip4:210.145.253.128/26 ~all",
+                            "dns_lookups": 0,
+                            "dns_void_lookups": 0,
+                            "parsed": {
+                              "pass": [
+                                {
+                                  "value": "153.138.237.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "153.138.238.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.212.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.213.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.214.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.215.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.224.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.225.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.227.230.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.227.231.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.154.211.0/27",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.145.253.128/26",
+                                  "mechanism": "ip4"
+                                }
+                              ],
+                              "neutral": [],
+                              "softfail": [],
+                              "fail": [],
+                              "include": [],
+                              "redirect": null,
+                              "exp": null,
+                              "all": "softfail"
+                            },
+                            "warnings": []
+                          },
+                          {
+                            "domain": "mailgwmwb-spf2.ocn.ad.jp",
+                            "record": "v=spf1 ip4:153.153.62.0/23 ip4:153.153.66.0/26 ip4:153.153.67.0/26 ip4:180.37.203.0/27 ip4:210.232.239.0/24 ip4:211.129.14.0/24 ip4:122.28.88.128/26 ip4:153.128.188.32/27 ip4:180.55.243.0/26 ip4:180.55.244.0/26 ip4:180.55.251.0/26 ip4:180.55.253.0/26 ~all",
+                            "dns_lookups": 0,
+                            "dns_void_lookups": 0,
+                            "parsed": {
+                              "pass": [
+                                {
+                                  "value": "153.153.62.0/23",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "153.153.66.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "153.153.67.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "180.37.203.0/27",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "210.232.239.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "211.129.14.0/24",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "122.28.88.128/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "153.128.188.32/27",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "180.55.243.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "180.55.244.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "180.55.251.0/26",
+                                  "mechanism": "ip4"
+                                },
+                                {
+                                  "value": "180.55.253.0/26",
+                                  "mechanism": "ip4"
+                                }
+                              ],
+                              "neutral": [],
+                              "softfail": [],
+                              "fail": [],
+                              "include": [],
+                              "redirect": null,
+                              "exp": null,
+                              "all": "softfail"
+                            },
+                            "warnings": []
+                          }
+                        ],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    },
+                    {
+                      "domain": "spf.moweb.jp",
+                      "record": "v=spf1 +ip4:210.153.89.32/28 +ip4:210.136.55.0/26 +ip4:210.136.55.192/26 +ip4:210.136.104.64/26 +ip4:210.136.104.0/28 +ip4:219.101.46.208/28 +ip4:203.82.149.128/26 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "210.153.89.32/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "210.136.55.0/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "210.136.55.192/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "210.136.104.64/26",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "210.136.104.0/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "219.101.46.208/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "203.82.149.128/26",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

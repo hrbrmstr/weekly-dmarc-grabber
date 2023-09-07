@@ -1,0 +1,55 @@
+{
+  "domain": "jetblue.com",
+  "base_domain": "jetblue.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns1.p08.nsone.net",
+      "dns2.p08.nsone.net",
+      "dns3.p08.nsone.net",
+      "dns4.p08.nsone.net",
+      "ns01.jetbluedns.com",
+      "ns02.jetbluedns.com",
+      "ns03.jetbluedns.com",
+      "ns04.jetbluedns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "jetblue-com.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.40.1",
+          "52.101.40.4",
+          "52.101.42.10",
+          "52.101.42.13",
+          "52.101.8.36",
+          "52.101.9.11",
+          "52.101.9.12",
+          "52.101.9.14"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "52.101.8.36 does not have any reverse DNS (PTR) records",
+      "jetblue-com.mail.protection.outlook.com: Connection timed out"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 exists:%{i}._i.%{d}._d.espf.agari.com include:%{d}.e3.spf-protect.agari.com include:servers.mcsv.net include:spf6.jetblue.com -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain %{d}.e3.spf-protect.agari.com does not exist"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.200 seconds: Server Do53:127.0.0.53@53 answered The DNS operation timed out."
+  }
+}

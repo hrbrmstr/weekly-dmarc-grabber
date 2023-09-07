@@ -1,0 +1,42 @@
+{
+  "domain": "kap.de",
+  "base_domain": "kap.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns82.domaincontrol.com",
+      "ns81.domaincontrol.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "kap-de.mail.protection.outlook.com",
+        "addresses": [
+          "104.47.11.138",
+          "104.47.7.138"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on kap-de.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx ip4:195.158.58.128/25 ip4:212.218.126.48/29 ip4:185.64.113.77 ip4:212.91.239.152 include:spf-inm.eqs-service.com include:mailing.eqs.com include:spf.mailjet.com include:spf.protection.outlook.com include:spf.cloud.ci-solution.com include:sslout.de -all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "sslout.de does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "domain": "holidaycheckgroup.com",
+  "base_domain": "holidaycheckgroup.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.noris.ch",
+      "dns.noris.de",
+      "dns.noris.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 5,
+        "hostname": "mail05.hcg.ag",
+        "addresses": [
+          "212.23.252.103"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 40,
+        "hostname": "mail02.hcg.ag",
+        "addresses": [
+          "212.23.252.114"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail05.hcg.ag",
+      "SSL/TLS is not supported on mail02.hcg.ag"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx include:spf1.holidaycheck.com include:mailing.eqs.com -all",
+    "valid": false,
+    "dns_void_lookups": 4,
+    "warnings": [],
+    "error": "Parsing the SPF record has 4/2 maximum void DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

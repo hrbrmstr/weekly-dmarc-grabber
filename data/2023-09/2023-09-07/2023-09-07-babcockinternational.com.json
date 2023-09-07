@@ -1,0 +1,392 @@
+{
+  "domain": "babcockinternational.com",
+  "base_domain": "babcockinternational.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns2.cscdns.uk",
+      "udns1.cscdns.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "eu-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "195.130.217.201",
+          "195.130.217.211",
+          "195.130.217.241",
+          "91.220.42.201",
+          "91.220.42.211",
+          "91.220.42.241"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "eu-smtp-inbound-1.mimecast.com: Connection timed out",
+      "SSL/TLS is not supported on eu-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1  include:_spf.newzapp.co.uk include:_spf-dc12.sapsf.com include:tal.net include:eu._netblocks.mimecast.com include:spf.ssmx.net ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "_spf.newzapp.co.uk",
+          "record": "v=spf1 ip4:185.99.236.0/22 ip4:185.99.239.0/29 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "185.99.236.0/22",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.99.239.0/29",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "_spf-dc12.sapsf.com",
+          "record": "v=spf1 ip4:155.56.221.13/32 ip4:155.56.221.14/32 ip4:155.56.220.141/32 ip4:155.56.220.142/32 ip4:155.56.221.15/32 ip4:155.56.221.16/32 ip4:155.56.222.26/32 ip4:155.56.222.27/32 ip4:130.214.193.83/32 ip4:130.214.193.93/32 ip4:130.214.193.78/32 ip4:130.214.193.85/32 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "155.56.221.13/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.14/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.141/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.220.142/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.15/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.221.16/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.26/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "155.56.222.27/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.83/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.93/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.78/32",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "130.214.193.85/32",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "tal.net",
+          "record": "v=spf1 +ip4:213.219.55.0/27 +ip4:213.52.141.128/27 +ip4:37.46.3.168/29 +ip4:62.216.225.64/27 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "213.219.55.0/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.52.141.128/27",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "37.46.3.168/29",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "62.216.225.64/27",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "eu._netblocks.mimecast.com",
+          "record": "v=spf1 ip4:195.130.217.0/24 ip4:91.220.42.0/24 ip4:146.101.78.0/24 ip4:207.82.80.0/24 ip4:213.167.81.0/25 ip4:193.7.207.0/25 ip4:213.167.75.0/25 ip4:185.58.85.0/24 ip4:185.58.86.0/24 ip4:193.7.206.0/25 ip4:147.28.36.0/24 ~all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "195.130.217.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "91.220.42.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "146.101.78.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "207.82.80.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.81.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.207.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "213.167.75.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.85.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.58.86.0/24",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "193.7.206.0/25",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "147.28.36.0/24",
+                "mechanism": "ip4"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "softfail"
+          },
+          "warnings": []
+        },
+        {
+          "domain": "spf.ssmx.net",
+          "record": "v=spf1 ip4:45.76.140.73 ip4:45.77.59.21 ip4:45.77.56.201 ip4:88.150.154.181 ip4:88.150.154.182 ip4:185.189.237.244 ip4:45.77.58.210 ip4:108.61.174.107 ip6:2001:19f0:7402:947:5400:04ff:fe46:db2d ip4:45.76.132.45 ip6:2001:19f0:7402:efc:5400:04ff:fe46:db40 ip4:88.150.154.126 ip6:2001:19f0:7400:1334:5400:4ff:fe87:1005 -all",
+          "dns_lookups": 0,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [
+              {
+                "value": "45.76.140.73",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "45.77.59.21",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "45.77.56.201",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.150.154.181",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "88.150.154.182",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "185.189.237.244",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "45.77.58.210",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "108.61.174.107",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:19f0:7402:947:5400:04ff:fe46:db2d",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "45.76.132.45",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:19f0:7402:efc:5400:04ff:fe46:db40",
+                "mechanism": "ip6"
+              },
+              {
+                "value": "88.150.154.126",
+                "mechanism": "ip4"
+              },
+              {
+                "value": "2001:19f0:7400:1334:5400:4ff:fe87:1005",
+                "mechanism": "ip6"
+              }
+            ],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; rua=mailto:0fa7d9a808df082@rep.dmarcanalyzer.com; ruf=mailto:0fa7d9a808df082@for.dmarcanalyzer.com",
+    "valid": true,
+    "location": "babcockinternational.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0fa7d9a808df082@rep.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "0fa7d9a808df082@for.dmarcanalyzer.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

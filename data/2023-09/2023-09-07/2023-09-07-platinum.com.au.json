@@ -1,0 +1,54 @@
+{
+  "domain": "platinum.com.au",
+  "base_domain": "platinum.com.au",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "terin.ns.cloudflare.com",
+      "rita.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-1.mimecast.com",
+        "addresses": [
+          "103.13.69.26",
+          "103.96.22.26"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "au-smtp-inbound-2.mimecast.com",
+        "addresses": [
+          "103.13.69.26",
+          "103.96.22.26"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on au-smtp-inbound-1.mimecast.com",
+      "SSL/TLS is not supported on au-smtp-inbound-2.mimecast.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:220.233.231.64/29 ip4:58.96.25.128/27 include:au._netblocks.mimecast.com include:emailsyd.freshservice.com include:emailus.freshservice.com include:spf.mtasv.net include:spf.swiftdigital.com.au ip4:198.207.147.224/27 ip4:204.239.0.224/27 include:spf.yourpayroll.io include:bingmail.com.au ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 12/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 12
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

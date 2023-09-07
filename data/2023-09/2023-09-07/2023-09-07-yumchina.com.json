@@ -1,0 +1,335 @@
+{
+  "domain": "yumchina.com",
+  "base_domain": "yumchina.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "vip3.alidns.com",
+      "vip4.alidns.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mx10.yumchina.com",
+        "addresses": [
+          "122.112.217.37"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx10.yumchina.com: SSL error: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1002)"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.163.com ip4:110.43.128.35 ip4:120.92.179.255 ip4:122.112.217.37 ip4:139.9.164.166 -all",
+    "valid": true,
+    "dns_lookups": 4,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "110.43.128.35",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "120.92.179.255",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "122.112.217.37",
+          "mechanism": "ip4"
+        },
+        {
+          "value": "139.9.164.166",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.163.com",
+          "record": "v=spf1 include:a.spf.163.com include:b.spf.163.com include:wm.spf.163.com -all",
+          "dns_lookups": 3,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "a.spf.163.com",
+                "record": "v=spf1 ip4:123.58.177.0/24 ip4:103.74.28.0/24 ip4:115.236.118.0/24 ip4:115.236.121.128/26 ip4:115.236.127.0/24 ip4:123.58.178.0/24 ip4:220.194.24.0/24 ip4:101.71.155.0/24 ip4:45.254.49.0/24 ip4:103.74.31.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "123.58.177.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.74.28.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "115.236.118.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "115.236.121.128/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "115.236.127.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "123.58.178.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "220.194.24.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "101.71.155.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "45.254.49.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.74.31.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "b.spf.163.com",
+                "record": "v=spf1 ip4:103.129.255.0/24 ip4:52.66.77.116 ip4:13.127.90.24 ip4:18.136.68.67 ip4:18.159.198.32 ip4:3.64.167.198 ip4:54.168.33.103 ip4:54.176.139.60 ip4:54.178.120.186 ip4:54.251.7.240 ip4:54.151.71.235 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "103.129.255.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.66.77.116",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "13.127.90.24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.136.68.67",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "18.159.198.32",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "3.64.167.198",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.168.33.103",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.176.139.60",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.178.120.186",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.251.7.240",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "54.151.71.235",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "wm.spf.163.com",
+                "record": "v=spf1 ip4:210.79.60.0/24 ip4:115.236.112.0/20 ip4:45.254.49.0/24 ip4:117.147.224.0/24 ip4:103.74.28.0/24 ip4:59.111.176.0/24 ip4:45.195.16.0/20 ip4:103.126.92.0/24 ip4:103.129.254.64/26  ip4:103.209.128.0/24 ip4:154.81.10.0/24 ip4:44.216.146.0/24 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "210.79.60.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "115.236.112.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "45.254.49.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "117.147.224.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.74.28.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "59.111.176.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "45.195.16.0/20",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.126.92.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.129.254.64/26",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "103.209.128.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "154.81.10.0/24",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "44.216.146.0/24",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "fail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=quarantine; fo=1; ruf=mailto:dmarc@qiye.163.com; rua=mailto:dmarc_report@qiye.163.com",
+    "valid": true,
+    "location": "yumchina.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "quarantine",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc@qiye.163.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_report@qiye.163.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "quarantine",
+        "explicit": false
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "domain": "pershingsquareholdings.com",
+  "base_domain": "pershingsquareholdings.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dina.ns.cloudflare.com",
+      "josh.ns.cloudflare.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mx1.emailsrvr.com",
+        "addresses": [
+          "108.166.43.1",
+          "146.20.161.1",
+          "173.203.187.1",
+          "184.106.54.1"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 20,
+        "hostname": "mx2.emailsrvr.com",
+        "addresses": [
+          "108.166.43.2",
+          "146.20.161.2",
+          "173.203.187.2",
+          "184.106.54.2"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mx1.emailsrvr.com: Could not connect:  SMTP error code 554 - Not allowed",
+      "mx2.emailsrvr.com: Could not connect:  SMTP error code 554 - Not allowed"
+    ]
+  },
+  "spf": {
+    "record": null,
+    "valid": false,
+    "dns_void_lookups": null,
+    "error": "pershingsquareholdings.com has multiple SPF TXT records"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "The resolution lifetime expired after 2.100 seconds: Server Do53:127.0.0.53@53 answered The DNS operation timed out."
+  }
+}

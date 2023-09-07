@@ -1,0 +1,152 @@
+{
+  "domain": "frontier.com",
+  "base_domain": "frontier.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "auth.roch.ny.frontiernet.net",
+      "auth.dlls.pa.frontiernet.net",
+      "a1-204.akam.net",
+      "a13-67.akam.net",
+      "auth.frontiernet.net"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 1,
+        "hostname": "mta5.am0.yahoodns.net",
+        "addresses": [
+          "67.195.204.74",
+          "67.195.204.79",
+          "67.195.228.106",
+          "67.195.228.109",
+          "67.195.228.111",
+          "67.195.228.94",
+          "98.136.96.74",
+          "98.136.96.91"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 1,
+        "hostname": "mta6.am0.yahoodns.net",
+        "addresses": [
+          "67.195.204.73",
+          "67.195.228.106",
+          "67.195.228.111",
+          "67.195.228.94",
+          "98.136.96.74",
+          "98.136.96.75",
+          "98.136.96.76",
+          "98.136.96.91"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 1,
+        "hostname": "mta7.am0.yahoodns.net",
+        "addresses": [
+          "67.195.204.72",
+          "67.195.204.73",
+          "67.195.204.79",
+          "67.195.228.110",
+          "67.195.228.94",
+          "98.136.96.74",
+          "98.136.96.76",
+          "98.136.96.77"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "mx.dlls.pa.frontiernet.net",
+        "addresses": [
+          "199.224.64.204"
+        ],
+        "tls": false,
+        "starttls": false
+      },
+      {
+        "preference": 10,
+        "hostname": "mx.frontiernet.net",
+        "addresses": [
+          "66.133.129.79"
+        ],
+        "tls": false,
+        "starttls": false
+      }
+    ],
+    "warnings": [
+      "mta5.am0.yahoodns.net: Connection timed out",
+      "mta6.am0.yahoodns.net: Connection timed out",
+      "SSL/TLS is not supported on mta7.am0.yahoodns.net",
+      "STARTTLS is not supported on mx.dlls.pa.frontiernet.net",
+      "SSL/TLS is not supported on mx.dlls.pa.frontiernet.net",
+      "STARTTLS is not supported on mx.frontiernet.net",
+      "SSL/TLS is not supported on mx.frontiernet.net"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:_spf.frontier.com include:_spf.mail.yahoo.com include:sendgrid.net include:mktomail.com include:icpbounce.com include:_spf.act-on.net include:rs-relay.synchronoss.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "Parsing the SPF record requires 11/10 maximum DNS lookups - https://tools.ietf.org/html/rfc7208#section-4.6.4",
+    "dns_lookups": 11
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=none;",
+    "valid": true,
+    "location": "frontier.com",
+    "warnings": [
+      "rua tag (destination for aggregate reports) not found"
+    ],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "none",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "fo": {
+        "value": [
+          "0"
+        ],
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "none",
+        "explicit": false
+      }
+    }
+  }
+}

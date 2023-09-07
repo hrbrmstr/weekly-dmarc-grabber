@@ -1,0 +1,44 @@
+{
+  "domain": "luebbe.de",
+  "base_domain": "luebbe.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns2.kiagdomain.de",
+      "ns1.kiagdomain.de"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "relay.mail.sec-provider.de",
+        "addresses": [
+          "2001:14c0:1001:2::10",
+          "2001:14c0:9001:2::10",
+          "88.215.200.10",
+          "88.215.226.10"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on relay.mail.sec-provider.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:46.20.39.153 ip4:212.18.11.33/27 ip4:80.251.80.0/28 include:spf.mailjet.com include:_spf.rexx-suite.com include:spf.pallas-security.com include:spf.sec-provider.de include:spf.protection.outlook.com include:spf.aspmx.pardot.com ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "The domain spf.aspmx.pardot.com does not exist"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

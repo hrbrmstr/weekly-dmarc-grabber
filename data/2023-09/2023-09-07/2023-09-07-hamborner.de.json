@@ -1,0 +1,42 @@
+{
+  "domain": "hamborner.de",
+  "base_domain": "hamborner.de",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "dns.voerde.globvill.de",
+      "dns.globvill.de",
+      "dns.globvill.ruhr"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "mail.hamborner.de",
+        "addresses": [
+          "80.155.137.230"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on mail.hamborner.de"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 mx a:mail4.bdw-service.de a:mail.bdw-service.de a:mail2.bdw-service.de include:spf.protection.outlook.de include:spf.de.exclaimer.net ~all",
+    "valid": false,
+    "dns_void_lookups": null,
+    "warnings": [],
+    "error": "spf.de.exclaimer.net does not have a SPF TXT record"
+  },
+  "dmarc": {
+    "record": null,
+    "valid": false,
+    "location": null,
+    "error": "A DMARC record does not exist for this domain or its base domain"
+  }
+}

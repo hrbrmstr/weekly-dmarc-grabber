@@ -1,0 +1,186 @@
+{
+  "domain": "db.com",
+  "base_domain": "db.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "ns12.db.com",
+      "ns17.db.com",
+      "ns11.db.com",
+      "ns9.db.com",
+      "ns13.db.com",
+      "ns16.db.com",
+      "ns10.db.com",
+      "ns15.db.com",
+      "ns8.db.com",
+      "ns14.db.com"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "smtp1.db.com",
+        "addresses": [
+          "160.83.92.229"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp14.db.com",
+        "addresses": [
+          "160.83.178.60"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp2.db.com",
+        "addresses": [
+          "160.83.77.88"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp22.db.com",
+        "addresses": [
+          "160.83.179.61"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 10,
+        "hostname": "smtp8.db.com",
+        "addresses": [
+          "160.83.77.87"
+        ],
+        "tls": false,
+        "starttls": true
+      },
+      {
+        "preference": 15,
+        "hostname": "smtp23.db.com",
+        "addresses": [
+          "160.83.179.60"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on smtp1.db.com",
+      "SSL/TLS is not supported on smtp14.db.com",
+      "SSL/TLS is not supported on smtp2.db.com",
+      "SSL/TLS is not supported on smtp22.db.com",
+      "SSL/TLS is not supported on smtp8.db.com",
+      "SSL/TLS is not supported on smtp23.db.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 ip4:160.83.0.0/16 ~all",
+    "valid": true,
+    "dns_lookups": 0,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [
+        {
+          "value": "160.83.0.0/16",
+          "mechanism": "ip4"
+        }
+      ],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; sp=reject; adkim=s; fo=1; ri=3600; rua=mailto:dmarc_rua@emaildefense.proofpoint.com,mailto:deutsche-bank@rua.agari.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com,mailto:dmarc.reports@db.com",
+    "valid": true,
+    "location": "db.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": true
+      },
+      "adkim": {
+        "value": "s",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "ri": {
+        "value": 3600,
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "deutsche-bank@rua.agari.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          },
+          {
+            "scheme": "mailto",
+            "address": "dmarc.reports@db.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      }
+    }
+  }
+}

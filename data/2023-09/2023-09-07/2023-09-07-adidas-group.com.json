@@ -1,0 +1,351 @@
+{
+  "domain": "adidas-group.com",
+  "base_domain": "adidas-group.com",
+  "dnssec": false,
+  "ns": {
+    "hostnames": [
+      "udns1.cscdns.net",
+      "udns2.cscdns.uk"
+    ],
+    "warnings": []
+  },
+  "mx": {
+    "hosts": [
+      {
+        "preference": 10,
+        "hostname": "adidasgroup-com01e.mail.protection.outlook.com",
+        "addresses": [
+          "52.101.68.0",
+          "52.101.68.3",
+          "52.101.68.32",
+          "52.101.73.1",
+          "52.101.73.16",
+          "52.101.73.19",
+          "52.101.73.4"
+        ],
+        "tls": false,
+        "starttls": true
+      }
+    ],
+    "warnings": [
+      "SSL/TLS is not supported on adidasgroup-com01e.mail.protection.outlook.com"
+    ]
+  },
+  "spf": {
+    "record": "v=spf1 include:spf.adidas.com ~all",
+    "valid": true,
+    "dns_lookups": 5,
+    "dns_void_lookups": 0,
+    "warnings": [],
+    "parsed": {
+      "pass": [],
+      "neutral": [],
+      "softfail": [],
+      "fail": [],
+      "include": [
+        {
+          "domain": "spf.adidas.com",
+          "record": "v=spf1 include:spf1.adidas.com include:spf2.adidas.com include:spf.protection.outlook.com -all",
+          "dns_lookups": 4,
+          "dns_void_lookups": 0,
+          "parsed": {
+            "pass": [],
+            "neutral": [],
+            "softfail": [],
+            "fail": [],
+            "include": [
+              {
+                "domain": "spf1.adidas.com",
+                "record": "v=spf1 ip4:87.237.216.252 ip4:87.237.216.48/30 ip4:87.237.217.229/30 ip4:87.237.222.11 ip4:87.237.218.171",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "87.237.216.252",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.237.216.48/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.237.217.229/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.237.222.11",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "87.237.218.171",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "neutral"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf2.adidas.com",
+                "record": "v=spf1 ip4:155.56.221.12/30 include:ipreomail.com ip4:216.74.162.13 ip4:216.74.162.14 ~all",
+                "dns_lookups": 1,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "155.56.221.12/30",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.74.162.13",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "216.74.162.14",
+                      "mechanism": "ip4"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [
+                    {
+                      "domain": "ipreomail.com",
+                      "record": "v=spf1 ip4:66.17.251.47 ip4:80.169.95.198 ip4:80.169.95.218 ip4:66.35.231.0/27 ip4:216.74.162.0/27 ip4:91.209.197.0/28 ip4:91.229.201.7 ip4:122.248.252.54 ip4:54.151.162.172 ip4:178.17.33.133 ip4:216.74.162.151 ip4:34.198.150.124 ip4:18.213.83.215 ip4:4.78.42.137 ip4:4.78.42.147 ip4:65.205.75.147 ip4:65.205.75.148 ip4:170.207.0.0/16 ~all",
+                      "dns_lookups": 0,
+                      "dns_void_lookups": 0,
+                      "parsed": {
+                        "pass": [
+                          {
+                            "value": "66.17.251.47",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "80.169.95.198",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "80.169.95.218",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "66.35.231.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "216.74.162.0/27",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "91.209.197.0/28",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "91.229.201.7",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "122.248.252.54",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "54.151.162.172",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "178.17.33.133",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "216.74.162.151",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "34.198.150.124",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "18.213.83.215",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "4.78.42.137",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "4.78.42.147",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "65.205.75.147",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "65.205.75.148",
+                            "mechanism": "ip4"
+                          },
+                          {
+                            "value": "170.207.0.0/16",
+                            "mechanism": "ip4"
+                          }
+                        ],
+                        "neutral": [],
+                        "softfail": [],
+                        "fail": [],
+                        "include": [],
+                        "redirect": null,
+                        "exp": null,
+                        "all": "softfail"
+                      },
+                      "warnings": []
+                    }
+                  ],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "softfail"
+                },
+                "warnings": []
+              },
+              {
+                "domain": "spf.protection.outlook.com",
+                "record": "v=spf1 ip4:40.92.0.0/15 ip4:40.107.0.0/16 ip4:52.100.0.0/14 ip4:104.47.0.0/17 ip6:2a01:111:f400::/48 ip6:2a01:111:f403::/49 ip6:2a01:111:f403:8000::/50 ip6:2a01:111:f403:c000::/51 ip6:2a01:111:f403:f000::/52 -all",
+                "dns_lookups": 0,
+                "dns_void_lookups": 0,
+                "parsed": {
+                  "pass": [
+                    {
+                      "value": "40.92.0.0/15",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "40.107.0.0/16",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "52.100.0.0/14",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "104.47.0.0/17",
+                      "mechanism": "ip4"
+                    },
+                    {
+                      "value": "2a01:111:f400::/48",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403::/49",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:8000::/50",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:c000::/51",
+                      "mechanism": "ip6"
+                    },
+                    {
+                      "value": "2a01:111:f403:f000::/52",
+                      "mechanism": "ip6"
+                    }
+                  ],
+                  "neutral": [],
+                  "softfail": [],
+                  "fail": [],
+                  "include": [],
+                  "redirect": null,
+                  "exp": null,
+                  "all": "fail"
+                },
+                "warnings": []
+              }
+            ],
+            "redirect": null,
+            "exp": null,
+            "all": "fail"
+          },
+          "warnings": []
+        }
+      ],
+      "redirect": null,
+      "exp": null,
+      "all": "softfail"
+    }
+  },
+  "dmarc": {
+    "record": "v=DMARC1; p=reject; fo=1; rua=mailto:dmarc_rua@emaildefense.proofpoint.com; ruf=mailto:dmarc_ruf@emaildefense.proofpoint.com",
+    "valid": true,
+    "location": "adidas-group.com",
+    "warnings": [],
+    "tags": {
+      "v": {
+        "value": "DMARC1",
+        "explicit": true
+      },
+      "p": {
+        "value": "reject",
+        "explicit": true
+      },
+      "fo": {
+        "value": [
+          "1"
+        ],
+        "explicit": true
+      },
+      "rua": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_rua@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "ruf": {
+        "value": [
+          {
+            "scheme": "mailto",
+            "address": "dmarc_ruf@emaildefense.proofpoint.com",
+            "size_limit": null
+          }
+        ],
+        "explicit": true
+      },
+      "adkim": {
+        "value": "r",
+        "explicit": false
+      },
+      "aspf": {
+        "value": "r",
+        "explicit": false
+      },
+      "pct": {
+        "value": 100,
+        "explicit": false
+      },
+      "rf": {
+        "value": [
+          "afrf"
+        ],
+        "explicit": false
+      },
+      "ri": {
+        "value": 86400,
+        "explicit": false
+      },
+      "sp": {
+        "value": "reject",
+        "explicit": false
+      }
+    }
+  }
+}
